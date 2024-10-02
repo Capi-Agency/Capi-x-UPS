@@ -298,7 +298,7 @@ const Content = (props: Props) => {
               <div className="bg-[#0F1B0E] p-10 rounded-2xl h-[534px]">
                 <div className="relative w-[340px] h-[321px] rounded-br-2xl">
                   <NextImg
-                    src="/assets/icons/illustration-2 1.svg"
+                    src="/assets/icons/illustration-2.svg"
                     alt="Capi"
                     objectFit="cover"
                     className=""
@@ -420,7 +420,7 @@ const Content = (props: Props) => {
                 <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-[50px] rounded-[9px]">
                   <div className="relative w-6 h-6">
                     <NextImg
-                      src="/assets/icons/google-play 1.svg"
+                      src="/assets/icons/google-play1.svg"
                       alt="Capi"
                       objectFit="cover"
                     />
@@ -437,7 +437,7 @@ const Content = (props: Props) => {
                 <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-6 rounded-[9px]">
                   <div className="relative w-6 h-6">
                     <NextImg
-                      src="/assets/icons/apple-logo 1.svg"
+                      src="/assets/icons/apple-logo1.svg"
                       alt="Capi"
                       objectFit="cover"
                     />
@@ -455,7 +455,7 @@ const Content = (props: Props) => {
             </div>
             <div className="relative w-[full] h-[830px]">
               <NextImg
-                src="/assets/icons/Group 47221.svg"
+                src="/assets/icons/Group47221.svg"
                 alt="Capi"
                 objectFit="cover"
                 className="object-top"
