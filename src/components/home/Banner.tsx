@@ -7,12 +7,44 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 type Props = {};
+interface User {
+  name: string;
+  image: string;
+  percentage: string;
+}
 
+const userData: User[] = [
+  {
+    name: "Trần Hoài Trang",
+    image: "/assets/image/user1.jpg",
+    percentage: "+7.90%",
+  },
+  {
+    name: "Phí Ngọc Thắng",
+    image: "/assets/image/user2.jpg",
+    percentage: "+ 8.30%",
+  },
+  {
+    name: "Nguyễn Trung Anh",
+    image: "/assets/image/user3.jpg",
+    percentage: "+ 11.40%",
+  },
+  {
+    name: "Nguyễn Thái Nhi",
+    image: "/assets/image/user4.jpg",
+    percentage: "+ 5.60%",
+  },
+  {
+    name: "Trần Anh Tuấn",
+    image: "/assets/image/user5.jpg",
+    percentage: "+ 6.20%",
+  },
+];
 const Banner = (props: Props) => {
   return (
     <>
       <div className="flex justify-center ">
-        <div className="flex flex-col justify-center items-center w-[808px] mx-auto">
+        <div className="flex flex-col justify-center items-center w-[800px] mx-auto">
           <i>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -77,106 +109,28 @@ const Banner = (props: Props) => {
           }}
           spaceBetween={24}
         >
-          <SwiperSlide>
-            <div className="flex items-center gap-5">
-              <div className="relative w-[54px] h-[54px]">
-                <NextImg
-                  src="/assets/image/user1.jpg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className="rounded-full"
-                />
+          {userData.map((user, index) => (
+            <SwiperSlide key={index}>
+              <div className="flex items-center gap-5">
+                <div className="relative w-[54px] h-[54px]">
+                  <NextImg
+                    src={user.image}
+                    alt={user.name}
+                    objectFit="cover"
+                    className="rounded-full"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[#FFF] text-xl font-medium">
+                    {user.name}
+                  </span>
+                  <span className="text-[#05BE5A] text-base font-medium">
+                    {user.percentage}
+                  </span>
+                </div>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[#FFF] text-xl font-medium">
-                  Trần Hoài Trang
-                </span>
-                <span className="text-[#05BE5A] text-base font-medium">
-                  + 7.90%
-                </span>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex items-center gap-5">
-              <div className="relative w-[54px] h-[54px]">
-                <NextImg
-                  src="/assets/image/user1.jpg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className="rounded-full"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[#FFF] text-xl font-medium">
-                  Trần Hoài Trang
-                </span>
-                <span className="text-[#05BE5A] text-base font-medium">
-                  + 7.90%
-                </span>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex items-center gap-5">
-              <div className="relative w-[54px] h-[54px]">
-                <NextImg
-                  src="/assets/image/user1.jpg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className="rounded-full"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[#FFF] text-xl font-medium">
-                  Trần Hoài Trang
-                </span>
-                <span className="text-[#05BE5A] text-base font-medium">
-                  + 7.90%
-                </span>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex items-center gap-5">
-              <div className="relative w-[54px] h-[54px]">
-                <NextImg
-                  src="/assets/image/user1.jpg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className="rounded-full"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[#FFF] text-xl font-medium">
-                  Trần Hoài Trang
-                </span>
-                <span className="text-[#05BE5A] text-base font-medium">
-                  + 7.90%
-                </span>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex items-center gap-5">
-              <div className="relative w-[54px] h-[54px]">
-                <NextImg
-                  src="/assets/image/user1.jpg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className="rounded-full"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[#FFF] text-xl font-medium">
-                  Trần Hoài Trang
-                </span>
-                <span className="text-[#05BE5A] text-base font-medium">
-                  + 7.90%
-                </span>
-              </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <div>

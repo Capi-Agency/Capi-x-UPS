@@ -25,7 +25,7 @@ const SlideHome = (props: Props) => {
           className="rounded-3xl"
         >
           <SwiperSlide>
-            <div className="w-full h-[560px]">
+            <div className="relative w-full h-[560px]">
               <NextImg
                 src="/assets/image/img-slide.png"
                 alt="Capi"
@@ -35,7 +35,7 @@ const SlideHome = (props: Props) => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="w-full h-[560px]">
+            <div className="relative w-full h-[560px]">
               <NextImg
                 src="/assets/image/img-slide.png"
                 alt="Capi"
@@ -45,7 +45,7 @@ const SlideHome = (props: Props) => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="w-full h-[560px]">
+            <div className="relative w-full h-[560px]">
               <NextImg
                 src="/assets/image/img-slide.png"
                 alt="Capi"
