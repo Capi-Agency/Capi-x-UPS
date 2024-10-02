@@ -393,7 +393,7 @@ const Content = (props: Props) => {
       <div className="bg-[#0F1B0E] mb-[180px] pt-[74px]">
         <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20">
           <div className="px-[130px] grid grid-cols-2 ">
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8 mt-20">
               <div className="flex flex-col gap-1">
                 <div className="relative w-[111px] h-[48px]">
                   <NextImg
@@ -469,7 +469,7 @@ const Content = (props: Props) => {
         <div className="flex flex-col text-center gap-2">
           <div className="relative w-[111px] h-[48px] mx-auto">
             <NextImg
-              src="/assets/icons/Logo-small2.svg"
+              src="/assets/icons/logo-small2.svg"
               alt="Capi"
               objectFit="cover"
               className=""

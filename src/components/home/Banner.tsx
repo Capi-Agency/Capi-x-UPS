@@ -61,7 +61,7 @@ const Banner = (props: Props) => {
             </svg>
           </i>
           <p className="text-white text-center text-base font-medium leading-normal pt-[16px]">
-            UP Secirities
+            UP Securities
           </p>
           <h1 className="text-white text-center text-[76px] font-bold leading-[82px] tracking-[-1.52px] pt-[14px]">
             Chính thức ra mắt dẫn lối hành trình đầu tư của bạn
