@@ -6,6 +6,9 @@ const config = {
 	prefix: "",
 	theme: {
     	extend: {
+			fontFamily: {
+				hanken: ['Hanken Grotesk', 'sans-serif'],
+			  },
     		colors: {
     			error: '#dc2626',
     			label: '#484848',

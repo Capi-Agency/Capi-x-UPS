@@ -3,36 +3,42 @@ import Marquee from "@/components/ui/marquee";
 
 const reviews = [
     {
+        id: 1,
         name: "Ngân hàng Thương Mại ",
         username: "Cổ Phần Á Châu",
         body: "15.00",
         img: "/assets/image/vcb.svg",
     },
     {
+        id: 2,
         name: "Ngân hàng Thương Mại ",
         username: "Cổ Phần Á Châu",
         body: "15.00",
         img: "/assets/image/mb.svg",
     },
     {
+        id: 3,
         name: "Ngân hàng Thương Mại ",
         username: "Cổ Phần Á Châu",
         body: "15.00",
         img: "/assets/image/fpt.svg",
     },
     {
+        id: 4,
         name: "Ngân hàng Thương Mại ",
         username: "Cổ Phần Á Châu",
         body: "15.00",
         img: "/assets/image/aau.svg",
     },
     {
+        id: 5,
         name: "Ngân hàng Thương Mại ",
         username: "Cổ Phần Á Châu",
         body: "15.00",
         img: "/assets/image/petrovn.svg",
     },
     {
+        id: 6,
         name: "Ngân hàng Thương Mại ",
         username: "Cổ Phần Á Châu",
         body: "15.00",
@@ -85,12 +91,12 @@ export function MarqueeDemo() {
         <div className="relative flex h-[500px] w-full flex-col items-center justify-center  rounded-lg  md:shadow-xl overflow-hidden">
             <Marquee pauseOnHover className="[--duration:20s]">
                 {firstRow.map((review) => (
-                    <ReviewCard key={review.username} {...review} />
+                    <ReviewCard key={review.id} {...review} />
                 ))}
             </Marquee>
             <Marquee reverse pauseOnHover className="[--duration:20s]">
                 {secondRow.map((review) => (
-                    <ReviewCard key={review.username} {...review} />
+                    <ReviewCard key={review.id} {...review} />
                 ))}
             </Marquee>
             <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r  dark:from-background"></div>
