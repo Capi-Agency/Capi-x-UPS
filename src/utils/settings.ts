@@ -1,7 +1,7 @@
 export const SETTINGS = {
 	// GENERAL
 	GENERAL: {
-		NAME_PROJECT: "Capi x Work",
+		NAME_PROJECT: "Capi x UPS",
 		ACCOUNT: "Tài khoản",
 		LOGOUT: "Đăng xuất",
 		LOGIN: "Đăng nhập",

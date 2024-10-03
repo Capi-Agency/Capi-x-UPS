@@ -3,6 +3,10 @@ import Image from "next/image";
 import Banner from "@/components/home/Banner";
 import SlideHome from "@/components/home/SlideHome";
 import Content from "@/components/home/Content";
+import UserManual from "@/components/home/UserManual";
+import MobileApp from "@/components/home/MobileApp";
+import Community from "@/components/home/Community";
+import Support from "@/components/home/Support";
 
 export default function HomePage() {
   return (
@@ -11,7 +15,13 @@ export default function HomePage() {
         <Banner />
       </div>
       <SlideHome />
-	  <Content/>
+      <Content />
+      <UserManual />
+      <MobileApp />
+      <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20 mt-[160px]">
+        <Community />
+        <Support />
+      </div>
     </div>
   );
 }
