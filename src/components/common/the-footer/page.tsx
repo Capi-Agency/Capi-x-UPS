@@ -1,13 +1,20 @@
+"use client"
 import Link from "next/link";
 import React from "react";
 import NextImg from "../next-img";
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 type Props = {};
 
 const TheFooter = (props: Props) => {
+  useEffect(() => {
+		AOS.init({ once: true }); 
+	}, []);
   return (
     <div className="relative mt-[115px] bg-[#0F1B0E] text-[#FFF]">
-      <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20 pt-[120px] pb-[72px]">
+      <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20 pt-[120px] pb-[72px]" data-aos="fade-up">
         <div className="grid grid-cols-2">
           <div className="flex flex-col gap-4">
             <span className="text-[#FFF] text-[48px] font-bold leading-[56px] w-[70%]">
@@ -89,8 +96,8 @@ const TheFooter = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="bg-[#014227] w-full h-[1px]"></div>
-      <div className="pt-[120px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20">
+      <div className="bg-[#014227] w-full h-[1px]" data-aos="fade-up"></div>
+      <div className="pt-[120px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20" data-aos="fade-up">
         <div className="grid grid-cols-[35%,65%] gap-5">
           <div className="">
             <Link
@@ -256,7 +263,7 @@ const TheFooter = (props: Props) => {
         </div>
       </div>
       <div className="mt-[120px] bg-[#060B06]">
-        <div className="py-[30px] flex items-center justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20">
+        <div className="py-[30px] flex items-center justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20" >
           <p className="text-[rgba(255,255,255,0.79)] text-sm font-medium leading-normal">
             © 2024 <span className="text-[#02E56A]"> UP Securities</span>. All
             right reserved

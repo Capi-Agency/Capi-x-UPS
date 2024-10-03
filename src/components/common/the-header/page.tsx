@@ -10,7 +10,7 @@ const TheHeader = (props: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="bg-[#0E1A0D]">
-      <div className="px-4 py-[40px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] md:px-24 lg:px-8">
+      <div className="px-4 py-[40px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] md:px-24 lg:px-8" data-aos="fade-up">
         <div className="relative flex items-center justify-between">
           <Link
             href="/"

@@ -23,7 +23,7 @@ const Support = (props: Props) => {
   };
   return (
     <>
-      <div className="px-[160px] mt-[160px]">
+      <div className="px-[160px] mt-[160px]" data-aos="fade-up">
         <div className="grid grid-cols-[600px,auto] gap-20">
           <div>
             <span className="text-[#111013] text-[48px] font-bold leading-[56px]">

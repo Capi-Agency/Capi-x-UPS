@@ -43,7 +43,7 @@ const userData: User[] = [
 const Banner = (props: Props) => {
   return (
     <>
-      <div className="flex justify-center ">
+      <div className="flex justify-center " data-aos="fade-up">
         <div className="flex flex-col justify-center items-center w-[800px] mx-auto">
           <i>
             <svg
@@ -86,7 +86,7 @@ const Banner = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-9 mt-[70px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20">
+      <div className="flex items-center gap-9 mt-[70px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20" data-aos="fade-up">
         <div>
           <p className="text-[#FFF] text-xl font-medium w-[110px]">
             Top đầu tư của tuần
@@ -133,7 +133,7 @@ const Banner = (props: Props) => {
           ))}
         </Swiper>
       </div>
-      <div>
+      <div data-aos="fade-up">
         <MarqueeDemo />
       </div>
     </>

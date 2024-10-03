@@ -7,7 +7,7 @@ const Content = (props: Props) => {
     <>
       <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20 mt-[160px]">
         {/* section 1 */}
-        <div className="grid grid-cols-3 gap-[30px]">
+        <div className="grid grid-cols-3 gap-[30px]" data-aos="fade-up">
           <div className="bg-[url('/assets/image/bg-card.png')] w-full h-[534px] bg-cover bg-center rounded-3xl p-10 flex flex-col justify-between">
             <div className="flex flex-col gap-4">
               <span className="text-[#FFF] text-[40px] font-bold leading-[50px]">
@@ -114,7 +114,7 @@ const Content = (props: Props) => {
           </div>
         </div>
         {/*  section 2*/}
-        <div className="grid grid-cols-2 gap-[30px] mt-[30px]">
+        <div className="grid grid-cols-2 gap-[30px] mt-[30px]" data-aos="fade-up">
           <div className="bg-[url('/assets/image/bg-card3.png')] w-full h-[700px] bg-cover bg-center rounded-3xl pt-10 pl-10 relative">
             <span className="text-[#111013] text-[18px] leading-[28px] font-medium bg-[#02E56A] rounded-[10px] px-2 py-[2px]">
               Giao diện mới
@@ -169,7 +169,7 @@ const Content = (props: Props) => {
           </div>
         </div>
         {/* section 3 */}
-        <div className="grid grid-cols-3 gap-[30px] mt-[30px]">
+        <div className="grid grid-cols-3 gap-[30px] mt-[30px]" data-aos="fade-up">
           <div className="bg-[#F3F3FB] w-full h-[534px] rounded-3xl p-10 relative">
             <div className="flex flex-col gap-4">
               <span className="text-[#111013] text-[140px] font-bold leading-[140px]">
