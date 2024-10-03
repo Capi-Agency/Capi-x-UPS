@@ -52,7 +52,7 @@ const Community = (props: Props) => {
               scale: 1,
               duration: 1.5,
               ease: "bounce.out",
-              stagger: 0.2,
+              stagger: 0.05,
             }
           );
           observer.disconnect(); // Stop observing after the animation
@@ -72,7 +72,11 @@ const Community = (props: Props) => {
   }, []);
   return (
     <>
-      <div className="flex flex-col text-center gap-2" data-aos="fade-up">
+      <div
+        className="flex flex-col text-center gap-2"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         <div className="relative w-[111px] h-[48px] mx-auto">
           <NextImg
             src="/assets/icons/logo-small2.svg"

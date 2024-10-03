@@ -10,7 +10,11 @@ const MobileApp = (props: Props) => {
       <div className="bg-[#0F1B0E] mb-[180px] pt-[74px]">
         <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20">
           <div className="px-[130px] grid grid-cols-2 ">
-            <div className="flex flex-col gap-8 mt-20" data-aos="fade-up">
+            <div
+              className="flex flex-col gap-8 mt-20"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <div className="flex flex-col gap-1">
                 <div className="relative w-[111px] h-[48px]">
                   <NextImg
@@ -70,7 +74,11 @@ const MobileApp = (props: Props) => {
                 </div>
               </div>
             </div>
-            <div className="relative w-[full] h-[830px]" data-aos="fade-up">
+            <div
+              className="relative w-[full] h-[830px]"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <NextImg
                 src="/assets/icons/phone-banner.svg"
                 alt="Capi"

@@ -6,7 +6,7 @@ type Props = {};
 
 const SlideHome = (props: Props) => {
   return (
-    <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20 mt-[120px]" data-aos="fade-up">
+    <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20 mt-[120px]" data-aos="fade-up" data-aos-delay="200">
       <div className="relative rounded-3xl">
         <Swiper
           cssMode={true}

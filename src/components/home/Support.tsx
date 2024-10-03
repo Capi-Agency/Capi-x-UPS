@@ -23,9 +23,9 @@ const Support = (props: Props) => {
   };
   return (
     <>
-      <div className="px-[160px] mt-[160px]" data-aos="fade-up">
+      <div className="px-[160px] mt-[160px]">
         <div className="grid grid-cols-[600px,auto] gap-20">
-          <div>
+          <div data-aos="fade-up" data-aos-delay="200">
             <span className="text-[#111013] text-[48px] font-bold leading-[56px]">
               <span className="text-[#01C159]">Câu hỏi</span> thường gặp
             </span>
@@ -160,7 +160,7 @@ const Support = (props: Props) => {
               </div>
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="400">
             <div className="p-[60px] bg-[#F3F3FB] rounded-3xl">
               <div className="relative w-[324px] h-[350px]">
                 <NextImg
