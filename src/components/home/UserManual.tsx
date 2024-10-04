@@ -42,7 +42,7 @@ const UserManual = (props: Props) => {
                 Tìm kiểu thêm các hướng dẫn khác của{" "}
                 <span className="font-bold">UPS</span>
               </p>
-              <button className="flex items-center bg-[#014227] py-3 px-4 rounded-2xl text-[#02E56A] font-bold text-[18px] leading-normal w-[196px]">
+              <button className="flex items-center bg-[#014227] py-3 px-4 rounded-2xl text-[#02E56A] font-bold text-[18px] leading-normal w-[196px] hover:shadow-[-2px_3px_0px_0px_#00813B]">
                 Hướng dẫn khác
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

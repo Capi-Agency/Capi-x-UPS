@@ -1,63 +1,52 @@
 "use client";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import NextImg from "../common/next-img";
 type Props = {};
 
 const SlideHome = (props: Props) => {
+  const swiperRef = useRef<any>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const slides = [
+    "/assets/image/img-slide.png",
+    "/assets/image/img-slide.png",
+    "/assets/image/img-slide.png",
+  ];
   return (
-    <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20 mt-[120px]" data-aos="fade-up" data-aos-delay="200">
+    <div
+      className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20 mt-[120px]"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
       <div className="relative rounded-3xl">
         <Swiper
+          ref={swiperRef}
           cssMode={true}
           mousewheel={true}
           keyboard={true}
           loop={true}
-          
-          onInit={(swiper) => {
-            document
-              .getElementById("prevBtn")
-              ?.addEventListener("click", () => swiper.slidePrev());
-            document
-              .getElementById("nextBtn")
-              ?.addEventListener("click", () => swiper.slideNext());
-          }}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           className="rounded-3xl"
         >
-          <SwiperSlide>
-            <div className="relative w-full h-[560px]">
-              <NextImg
-                src="/assets/image/img-slide.png"
-                alt="Capi"
-                objectFit="cover"
-                className=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="relative w-full h-[560px]">
-              <NextImg
-                src="/assets/image/img-slide.png"
-                alt="Capi"
-                objectFit="cover"
-                className=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="relative w-full h-[560px]">
-              <NextImg
-                src="/assets/image/img-slide.png"
-                alt="Capi"
-                objectFit="cover"
-                className=""
-              />
-            </div>
-          </SwiperSlide>
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div className="relative w-full h-[560px]">
+                <NextImg src={slide} alt="Capi" objectFit="cover" />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
         <button
           id="prevBtn"
           className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -left-8 z-[10]"
+          onClick={() => {
+            if (swiperRef.current && swiperRef.current.swiper) {
+              swiperRef.current.swiper.slidePrev();
+              setActiveIndex(
+                (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
+              );
+            }
+          }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -76,6 +65,12 @@ const SlideHome = (props: Props) => {
         <button
           id="nextBtn"
           className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -right-8 z-[10]"
+          onClick={() => {
+            if (swiperRef.current && swiperRef.current.swiper) {
+              swiperRef.current.swiper.slideNext();
+              setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
+            }
+          }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -91,6 +86,22 @@ const SlideHome = (props: Props) => {
             />
           </svg>
         </button>
+        <div className="pagination-custom absolute bottom-6 left-1/2 -translate-x-1/2 flex justify-center space-x-3 z-10">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`w-[20px] h-[4px] transition duration-300 rounded-[20px] ${
+                activeIndex === index ? "bg-[#15171E]" : "bg-[rgba(255,255,255,0.50)]"
+              }`}
+              onClick={() => {
+                if (swiperRef.current) {
+                  swiperRef.current.swiper.slideTo(index);
+                  setActiveIndex(index);
+                }
+              }}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
