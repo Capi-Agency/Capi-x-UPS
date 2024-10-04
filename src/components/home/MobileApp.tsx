@@ -13,7 +13,7 @@ const MobileApp = (props: Props) => {
             <div
               className="flex flex-col gap-8 mt-20"
               data-aos="fade-up"
-              data-aos-delay="400"
+              data-aos-delay="100"
             >
               <div className="flex flex-col gap-1">
                 <div className="relative w-[111px] h-[48px]">
@@ -38,7 +38,7 @@ const MobileApp = (props: Props) => {
                 đầu tư thông minh, dễ dàng, và thú vị.
               </p>
               <div className="flex items-center gap-3">
-                <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-[50px] rounded-[9px]">
+                <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-[50px] rounded-[9px] cursor-pointer">
                   <div className="relative w-6 h-6">
                     <NextImg
                       src="/assets/icons/google-play1.svg"
@@ -55,7 +55,7 @@ const MobileApp = (props: Props) => {
                     </span>
                   </div>
                 </div>
-                <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-6 rounded-[9px]">
+                <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-6 rounded-[9px] cursor-pointer">
                   <div className="relative w-6 h-6">
                     <NextImg
                       src="/assets/icons/apple-logo1.svg"
@@ -77,7 +77,7 @@ const MobileApp = (props: Props) => {
             <div
               className="relative w-[full] h-[830px]"
               data-aos="fade-up"
-              data-aos-delay="200"
+              data-aos-delay="400"
             >
               <NextImg
                 src="/assets/icons/phone-banner.svg"

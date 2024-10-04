@@ -113,7 +113,7 @@ const Content = (props: Props) => {
             <span className="text-[#126240] text-[18px] font-medium leading-[28px]">
               Chính thức ra mắt dẫn lỗi hành trình đầu tư của bạn
             </span>
-            <button className="absolute bottom-10 flex items-center bg-[#FFF] py-3 px-6 rounded-2xl text-[#014227] font-bold text-[18px] leading-normal">
+            <button className="absolute bottom-10 flex items-center bg-[#FFF] py-3 px-6 rounded-2xl text-[#014227] font-bold text-[18px] leading-normal hover:shadow-[-2px_3px_0px_0px_#00813B]">
               Mở tài khoản ngay
               <div className="relative w-6 h-6 ml-2">
                 <NextImg

@@ -86,9 +86,9 @@ const TheFooter = (props: Props) => {
               </div>
             </div>
             <div>
-              <button className="flex items-center bg-[#02E56A] py-3 px-6 rounded-2xl text-[#014227] font-bold text-[18px] leading-normal">
+              <button className="btn active">
                 Mở tài khoản ngay
-                <div className="relative w-6 h-6 ml-2">
+                <div className="relative w-6 h-6">
                   <NextImg
                     src="/assets/icons/UPs.svg"
                     alt="Capi"
@@ -236,7 +236,7 @@ const TheFooter = (props: Props) => {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-[50px] rounded-[9px]">
+              <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-[50px] rounded-[9px] cursor-pointer">
                 <div className="relative w-6 h-6">
                   <NextImg
                     src="/assets/icons/google-play1.svg"
@@ -253,7 +253,7 @@ const TheFooter = (props: Props) => {
                   </span>
                 </div>
               </div>
-              <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-6 rounded-[9px]">
+              <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-6 rounded-[9px] cursor-pointer">
                 <div className="relative w-6 h-6">
                   <NextImg
                     src="/assets/icons/apple-logo1.svg"
