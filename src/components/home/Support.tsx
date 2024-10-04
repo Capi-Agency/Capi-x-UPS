@@ -68,15 +68,13 @@ const AccordionItem = (props: AccordionItemProps) => {
 				<span className="text-[#15171E] text-[30px] font-semibold leading-normal mr-8">
 					{question}
 				</span>
-				<p
-					className={` text-[#535662] text-[18px] font-medium leading-[28px] overflow-hidden  ${
-						isOpen
-							? "h-full max-h-full opacity-100 duration-500"
-							: "max-h-0 h-0 opacity-0 duration-900"
-					} transition-[height] `}
+				<div
+					className={`grid text-[#535662] text-[18px] font-medium leading-[28px] overflow-hidden 
+						transition-all duration-500 ease-in-out
+						${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"} `}
 				>
-					{answer}
-				</p>
+					<div className="overflow-hidden">{answer}</div>
+				</div>
 			</div>
 			<div className="absolute top-2 right-0">
 				<div
