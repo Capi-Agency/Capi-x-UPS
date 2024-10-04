@@ -61,14 +61,14 @@ const AccordionItem = (props: AccordionItemProps) => {
           />
         </div>
       </div>
-      <div className={`flex flex-col ${isOpen ? "gap-4" : "gap-0"}`}>
+      <div className={`flex flex-col`}>
         <span className="text-[#15171E] text-[30px] font-semibold leading-normal mr-8">
           {question}
         </span>
         <div
           className={`grid text-[#535662] text-[18px] font-medium leading-[28px] overflow-hidden 
 						transition-all duration-500 ease-in-out
-						${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"} `}
+						${isOpen ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0 mt-0"} `}
         >
           <div className="overflow-hidden">{answer}</div>
         </div>
