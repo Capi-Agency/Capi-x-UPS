@@ -90,10 +90,15 @@
     @apply max-w-[1600px]
   }
 
-  .bg-conic-gradient {
+  .bg-radial-gradient {
     box-sizing: border-box;
     background-size: cover;
     background-position: 0px 0px;
     background-image: radial-gradient(75% 75% at 105% 94%, #01190CFF 0%, #015822FF 0%, #151F15FF 100%);
+  }
+
+  .bg-border-gradient {
+    background-size: cover;
+    background-image: radial-gradient(75% 75% at 105% 94%, #01190CFF 0%, #05BE5A 0%, #151F15FF 100%);
   }
 }
