@@ -87,11 +87,11 @@ const TheHeader = (props: Props) => {
             <li>
               <a
                 href="/"
-                aria-label="Product pricing"
-                title="Product pricing"
+                aria-label="Financial technology"
+                title="Financial technology"
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
-                Trung Tâm hỗ trợ
+                Công nghệ tài chính
               </a>
             </li>
             <li>
@@ -102,6 +102,16 @@ const TheHeader = (props: Props) => {
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
                 Về UPS
+              </a>
+            </li>
+            <li>
+              <a
+                href="/"
+                aria-label="Price list"
+                title="Price list"
+                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+              >
+                Bảng giá
               </a>
             </li>
           </ul>
