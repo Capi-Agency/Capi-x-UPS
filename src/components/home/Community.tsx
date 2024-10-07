@@ -90,7 +90,7 @@ const Community = (props: Props) => {
           <span className="text-[#02E56A]">Nhà đầu tư UPS</span>
         </span>
         <div className="flex items-center gap-4 mx-auto mt-10">
-          <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] hover:shadow-[-2px_3px_0px_0px_#00813B] cursor-pointer">
+          <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] cursor-pointer">
             <div className="relative w-[19px] h-[19px]">
               <NextImg
                 src="/assets/icons/logo-bt.svg"
@@ -103,7 +103,7 @@ const Community = (props: Props) => {
               Cộng đồng
             </span>
           </div>
-          <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] hover:shadow-[-2px_3px_0px_0px_#00813B] cursor-pointer">
+          <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] cursor-pointer">
             <div className="relative w-[16px] h-[31px] place-items-end">
               <NextImg
                 src="/assets/icons/fb2.svg"
@@ -116,7 +116,7 @@ const Community = (props: Props) => {
               Facebook
             </span>
           </div>
-          <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] hover:shadow-[-2px_3px_0px_0px_#00813B] cursor-pointer">
+          <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] cursor-pointer">
             <div className="relative w-[22px] h-[18px]">
               <NextImg
                 src="/assets/icons/Path-3.svg"
@@ -129,7 +129,7 @@ const Community = (props: Props) => {
               Telegram
             </span>
           </div>
-          <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] hover:shadow-[-2px_3px_0px_0px_#00813B] cursor-pointer">
+          <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] cursor-pointer">
             <div className="relative w-[24px] h-[24px]">
               <NextImg
                 src="/assets/image/zalo.png"
