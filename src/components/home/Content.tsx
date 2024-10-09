@@ -135,10 +135,10 @@ const Content = (props: Props) => {
             <span className="text-[#111013] text-[18px] leading-[28px] font-medium bg-[#02E56A] rounded-[10px] px-2 py-[2px]">
               Giao diện mới
             </span>
-            <h3 className="text-[#014227] text-[40px] font-bold leading-[50px] mt-[18px] mb-4 w-[80%]">
+            <h3 className="text-[#111013] text-[40px] font-bold leading-[50px] mt-[18px] mb-4 w-[80%]">
               Mang trải nghiệm tối ưu tới nhà đầu tư của UPS
             </h3>
-            <p className="text-[#126240] text-[18px] font-medium leading-[28px] w-[80%]">
+            <p className="text-[#111013] text-[18px] font-medium leading-[28px] w-[80%]">
               Lời hứa liên tục cập nhật sản phẩm và phát triển không ngừng vì
               trải nghiệm sử dụng của khác hàng
             </p>
@@ -161,17 +161,17 @@ const Content = (props: Props) => {
             <span className="text-[#FFFFFF] text-[18px] leading-[28px] font-medium bg-[#FE3B1F] rounded-[10px] px-2 py-[2px]">
               Khuyến mãi
             </span>
-            <h3 className="text-[#014227] text-[40px] font-bold leading-[50px] mt-[18px] mb-4 w-[70%]">
+            <h3 className="text-[#111013] text-[40px] font-bold leading-[50px] mt-[18px] mb-4 w-[70%]">
               Tạo tài khoản ngay rinh quà liền tay
             </h3>
-            <p className="text-[#126240] text-[18px] font-medium leading-[28px] w-[80%]">
+            <p className="text-[#111013] text-[18px] font-medium leading-[28px] w-[80%]">
               Margin lên tới 8.6% dành riêng cho người dùng mở mới sau
               20/10/2024
             </p>
             <div className="absolute left-10 bottom-0 right-10">
               <div className="relative w-full h-[422px] rounded-br-2xl">
                 <NextImg
-                  src="/assets/image/Frame 47205.png"
+                  src="/assets/image/margincard.svg"
                   alt="Capi"
                   objectFit="cover"
                   className="rounded-t-2xl w-full h-full "
@@ -217,7 +217,7 @@ const Content = (props: Props) => {
           >
             <div className="relative w-[384px] h-[290px] rounded-br-2xl">
               <NextImg
-                src="/assets/image/bieuphi.png"
+                src="/assets/image/bieuphi.svg"
                 alt="Capi"
                 objectFit="cover"
                 className=""
