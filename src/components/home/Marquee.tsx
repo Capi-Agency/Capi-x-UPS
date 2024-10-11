@@ -137,7 +137,7 @@ const ReviewCard = ({
 						{ hidden: !isHovered }
 					)}
 					style={{
-						transform: `translate(${position.x - 75}px, ${position.y - 75}px)`,
+						transform: `translate(${position.x-110}px, ${position.y-110}px)`,
 						background: "radial-gradient(circle, rgba(0,255,0,0.5) 0%, rgba(0,255,0,0) 70%)",
 					}}
 				></div>
