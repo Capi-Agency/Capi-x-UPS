@@ -101,4 +101,29 @@
     background-size: cover;
     background-image: radial-gradient(75% 75% at 105% 94%, #01190CFF 0%, #05BE5A 0%, #151F15FF 100%);
   }
+
+  .typing {
+    color: #fff;
+    /* text-shadow: 0 0 3px #3399FF; */
+    /* font: bold 300% Consolas, Monaco, monospace; */
+    border-right: 5px solid black;
+    width: 100%; 
+    width:595px;
+    /* margin: 2em 1em; */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: tyg 5s steps(21, end) infinite, blink-caret .8s step-end infinite alternate;
+  }
+
+  @keyframes tyg {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
 }
