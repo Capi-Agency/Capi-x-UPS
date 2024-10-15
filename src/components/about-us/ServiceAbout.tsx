@@ -48,7 +48,7 @@ const ServiceAbout = (props: Props) => {
                 <p className="text-[#FFF] text-[18px] font-medium leading-[28px]">
                   Bạn muốn tìm hiểu thêm?
                 </p>
-                <p className="text-[#00D763] text-[18px] font-medium leading-[28px] underline text-right">
+                <p className="text-[#00D763] text-[18px] font-medium leading-[28px] underline text-right cursor-pointer">
                   Tải xuống
                 </p>
               </div>

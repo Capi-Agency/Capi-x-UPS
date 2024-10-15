@@ -50,7 +50,7 @@ const BannerAbout = (props: Props) => {
               khích người trẻ tự tin khám phá thế giới tài chính.
             </p>
           </div>
-          <div>
+          <div className="cursor-pointer">
             <i>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

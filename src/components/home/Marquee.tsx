@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const reviews = [
 	{
@@ -63,28 +63,39 @@ const ReviewCard = ({
 }) => {
 	const [position, setPosition] = useState({ x: 0, y: 0 });
 	const [isHovered, setIsHovered] = useState(false);
-
-	const handleMouseMove = (e: React.MouseEvent) => {
-		const rect = e.currentTarget.getBoundingClientRect();
-		setPosition({
-			x: e.clientX - rect.left,
-			y: e.clientY - rect.top,
-		});
+	const cardRef = useRef<HTMLDivElement>(null); 
+  
+	const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+	  if (!cardRef.current) return;
+  
+	  const rect = cardRef.current.getBoundingClientRect();
+	  const mouseX = e.clientX - rect.left - rect.width / 2;
+	  const mouseY = e.clientY - rect.top - rect.height / 2;
+  
+	  setPosition({
+		x: e.clientX - rect.left,
+		y: e.clientY - rect.top,
+	  });
+  
+	  let angle = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
+	  angle = (angle + 360) % 360;
+  
+	  cardRef.current.style.setProperty("--start", `${angle + 60}`);
 	};
-
+  
 	const handleMouseEnter = () => {
-		setIsHovered(true);
+	  setIsHovered(true);
 	};
-
+  
 	const handleMouseLeave = () => {
-		setIsHovered(false);
+	  setIsHovered(false);
 	};
 
 	return (
 		<div className="relative group/card">
 			<figure
 				className={cn(
-					"relative z-1 cursor-pointer overflow-hidden rounded-xl p-[20px] w-[300px] h-[160px] flex flex-col justify-between",
+					"relative z-1 cursor-pointer overflow-hidden rounded-xl p-[20px] w-[300px] h-[160px] flex flex-col justify-between card",
 					// light styles
 					"rounded-[16px] bg-[#161F15] border-[#161F15]",
 					// dark styles
@@ -93,6 +104,7 @@ const ReviewCard = ({
 				onMouseMove={handleMouseMove}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}
+				ref={cardRef}
 			>
 				<div className="flex flex-row items-center gap-5">
 					<img

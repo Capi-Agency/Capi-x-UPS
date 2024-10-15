@@ -52,26 +52,38 @@ const SlideAbout = (props: Props) => {
         {slides.map((slide, index) => {
           const [position, setPosition] = useState({ x: 0, y: 0 });
           const [isHovered, setIsHovered] = useState(false);
-
-          const handleMouseMove = (e: React.MouseEvent) => {
-            const rect = e.currentTarget.getBoundingClientRect();
+          const cardRef = useRef<HTMLDivElement>(null); 
+        
+          const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+            if (!cardRef.current) return;
+        
+            const rect = cardRef.current.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left - rect.width / 2;
+            const mouseY = e.clientY - rect.top - rect.height / 2;
+        
             setPosition({
               x: e.clientX - rect.left,
               y: e.clientY - rect.top,
             });
+        
+            let angle = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
+            angle = (angle + 360) % 360;
+        
+            cardRef.current.style.setProperty("--start", `${angle + 60}`);
           };
-
+        
           const handleMouseEnter = () => {
             setIsHovered(true);
           };
-
+        
           const handleMouseLeave = () => {
             setIsHovered(false);
           };
           return (
             <SwiperSlide key={index}>
               <div
-                className={`rounded-[16px] p-[32px] flex flex-col justify-between h-[430px] relative overflow-hidden bg-[#2E3036] hover:bg-[#161519]`}
+              ref={cardRef}
+                className={`card rounded-[16px] p-[32px] flex flex-col justify-between h-[430px] relative overflow-hidden bg-[#2E3036] hover:bg-[#161519]`}
                 onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
