@@ -112,7 +112,7 @@
     /* margin: 2em 1em; */
     white-space: nowrap;
     overflow: hidden;
-    animation: tyg 5s steps(21, end) infinite, blink-caret .8s step-end infinite alternate;
+    animation: tyg 3s steps(21, end) infinite, blink-caret .8s step-end infinite alternate;
   }
 
   @keyframes tyg {

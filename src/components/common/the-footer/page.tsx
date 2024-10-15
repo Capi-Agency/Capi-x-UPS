@@ -13,7 +13,7 @@ const TheFooter = (props: Props) => {
     AOS.init({ once: true });
   }, []);
   return (
-    <div className="relative mt-[115px] bg-[#0F1B0E] text-[#FFF]">
+    <div className="relative mt-[160px] bg-[#0F1B0E] text-[#FFF]">
       <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20 pt-[120px] pb-[72px]">
         <div className="grid grid-cols-2">
           <div

@@ -1,11 +1,13 @@
 "use client";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { cn } from "@/lib/utils";
 
 type Props = {};
 
 const SlideAbout = (props: Props) => {
+  const swiperRef = useRef<any>(null);
   const slides = [
     {
       tag: "Connection",
@@ -14,55 +16,100 @@ const SlideAbout = (props: Props) => {
         "We track how people move through an impactful campaign that allows us to discover better others miss.",
     },
     {
-      tag: "Connection",
-      title: "Seamless integration",
+      tag: "Collaboration",
+      title: "Creative networking",
       description:
-        "We offer seamless integration with your existing systems, allowing for a smooth and efficient workflow.",
+        "Creating a higher spacing and how people move through a unique and impactful campaign.",
+    },
+    {
+      tag: "Innovation",
+      title: "Ongoing optimization",
+      description:
+        "We track how people move through an impactful campaign that allows us to discover better others miss.",
+    },
+    {
+      tag: "Experience",
+      title: "Collaborative discovery",
+      description:
+        "Spaces of each debt in the digital world can help you with overall simplest authentic.",
     },
     {
       tag: "Connection",
-      title: "Personalized experience",
+      title: "Highly accessible",
       description:
-        "Our customizable features provide a personalized experience tailored to your unique needs and preferences.",
-    },
-    {
-      tag: "Connection",
-      title: "Personalized experience",
-      description:
-        "Our customizable features provide a personalized experience tailored to your unique needs and preferences.",
-    },
-    {
-      tag: "Connection",
-      title: "Personalized experience",
-      description:
-        "Our customizable features provide a personalized experience tailored to your unique needs and preferences.",
+        "We track how people move through an impactful campaign that allows us to discover better others miss.",
     },
   ];
   return (
-    <>
-      <Swiper slidesPerView={4} spaceBetween={30} className="mySwiper">
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="rounded-[16px] p-[32px] flex flex-col justify-between h-[439px] bg-[#2E3036]">
-              <div className="flex flex-col gap-2">
-                <span className="text-[#FFF] text-[18px] font-medium leading-[28px]">
-                  {slide.tag}
-                </span>
-                <h4 className="text-[#FFF] text-[32px] font-bold leading-[40px]">
-                  {slide.title}
-                </h4>
+    <div>
+      <Swiper
+        ref={swiperRef}
+        slidesPerView={4}
+        spaceBetween={30}
+        className="mySwiper"
+        data-aos="fade-up" data-aos-delay="200"
+      >
+        {slides.map((slide, index) => {
+          const [position, setPosition] = useState({ x: 0, y: 0 });
+          const [isHovered, setIsHovered] = useState(false);
+
+          const handleMouseMove = (e: React.MouseEvent) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            setPosition({
+              x: e.clientX - rect.left,
+              y: e.clientY - rect.top,
+            });
+          };
+
+          const handleMouseEnter = () => {
+            setIsHovered(true);
+          };
+
+          const handleMouseLeave = () => {
+            setIsHovered(false);
+          };
+          return (
+            <SwiperSlide key={index}>
+              <div
+                className={`rounded-[16px] p-[32px] flex flex-col justify-between h-[430px] relative overflow-hidden bg-[#2E3036] hover:bg-[#161519]`}
+                onMouseMove={handleMouseMove}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <div className="flex flex-col gap-2">
+                  <span className="text-[#FFF] text-[18px] font-medium leading-[28px]">
+                    {slide.tag}
+                  </span>
+                  <h4 className="text-[#FFF] text-[32px] font-bold leading-[40px]">
+                    {slide.title}
+                  </h4>
+                </div>
+                <p className="text-[#FFF] text-[18px] font-medium leading-[28px]">
+                  {slide.description}
+                </p>
+                <div
+                  className={cn(
+                    "absolute top-0 left-0 z-[99] w-[250px] h-[250px] rounded-full bg-green-500 opacity-50 pointer-events-none",
+                    { hidden: !isHovered }
+                  )}
+                  style={{
+                    transform: `translate(${position.x - 120}px, ${
+                      position.y - 120
+                    }px)`,
+                    background:
+                      "radial-gradient(circle, rgba(0,255,0,0.5) 0%, rgba(0,255,0,0) 70%)",
+                  }}
+                ></div>
               </div>
-              <p className="text-[#FFF] text-[18px] font-medium leading-[28px]">
-                {slide.description}
-              </p>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
-      <div className="flex items-center gap-2 float-right mt-10">
+      <div className="flex items-center gap-2 float-right mt-10" data-aos="fade-up" data-aos-delay="200">
         <button
           id="prevBtn"
           className="rounded-full bg-[#02E56A] hover:bg-[#15171E] w-[42px] h-[28px] flex justify-center items-center group"
+          onClick={() => swiperRef.current.swiper.slidePrev()}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,6 +129,7 @@ const SlideAbout = (props: Props) => {
         <button
           id="nextBtn"
           className="rounded-full bg-[#02E56A] hover:bg-[#15171E] w-[42px] h-[28px] flex justify-center items-center group"
+          onClick={() => swiperRef.current.swiper.slideNext()}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +147,7 @@ const SlideAbout = (props: Props) => {
           </svg>
         </button>
       </div>
-    </>
+    </div>
   );
 };
 
