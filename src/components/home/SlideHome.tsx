@@ -21,10 +21,11 @@ const SlideHome = (props: Props) => {
       <div className="relative rounded-3xl">
         <Swiper
           ref={swiperRef}
-          cssMode={true}
           mousewheel={true}
           keyboard={true}
           loop={true}
+          freeMode={true}
+          speed={800}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           className="rounded-3xl"
         >

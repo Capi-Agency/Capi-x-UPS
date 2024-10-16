@@ -7,7 +7,7 @@ type Props = {};
 const ServiceAbout = (props: Props) => {
   return (
     <>
-      <div className="bg-[#23252B] py-[160px] mt-[160px]">
+      <div className="bg-[#0D0C10] py-[160px] mt-[160px]">
         <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20">
           <div className="flex flex-col gap-[100px]">
             <div>

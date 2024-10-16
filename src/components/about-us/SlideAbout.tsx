@@ -83,7 +83,7 @@ const SlideAbout = (props: Props) => {
             <SwiperSlide key={index}>
               <div
               ref={cardRef}
-                className={`card rounded-[16px] p-[32px] flex flex-col justify-between h-[430px] relative overflow-hidden bg-[#2E3036] hover:bg-[#161519]`}
+                className={`card rounded-[16px] p-[32px] flex flex-col justify-between h-[430px] relative overflow-hidden bg-[#161519]`}
                 onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
