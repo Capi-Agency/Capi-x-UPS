@@ -65,7 +65,7 @@ const ServiceTech = (props: Props) => {
             src="/assets/image/service-tech.png"
             alt="Capi"
             objectFit="cover"
-            className="rounded-br-3xl"
+            className="rounded-r-3xl"
           />
         </div>
       </div>

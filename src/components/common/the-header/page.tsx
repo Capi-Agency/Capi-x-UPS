@@ -48,8 +48,8 @@ const TheHeader = (props: Props) => {
               <li>
                 <Link
                   href="/"
-                  aria-label="Our product"
-                  title="Our product"
+                  aria-label="Invest with UPS"
+                  title="Invest with UPS"
                   className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                 >
                   Đầu tư cùng UPS
@@ -58,8 +58,8 @@ const TheHeader = (props: Props) => {
               <li>
                 <a
                   href="/"
-                  aria-label="Financial technology"
-                  title="Financial technology"
+                  aria-label="Technology platform"
+                  title="Technology platform"
                   className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                 >
                   Nền tảng công nghệ
@@ -68,8 +68,8 @@ const TheHeader = (props: Props) => {
               <li>
                 <a
                   href="/"
-                  aria-label="About us"
-                  title="About us"
+                  aria-label="News"
+                  title="News"
                   className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                 >
                   Tin tức
@@ -103,8 +103,8 @@ const TheHeader = (props: Props) => {
               <li>
                 <Link
                   href="/"
-                  aria-label="Our product"
-                  title="Our product"
+                  aria-label="Notification"
+                  title="Notification"
                   className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                 >
                   <i>
@@ -141,8 +141,8 @@ const TheHeader = (props: Props) => {
               <li>
                 <Link
                   href="/"
-                  aria-label="Our product"
-                  title="Our product"
+                  aria-label="Search"
+                  title="Search"
                   className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                 >
                   <i>
