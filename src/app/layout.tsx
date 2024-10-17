@@ -35,7 +35,7 @@ export default function RootLayout({
 					enableSystem
 				>
 					<TheHeader/>
-					<div className="pt-[110px]">
+					<div className="pt-[70px]">
 					{children}
 					</div>
 					<TheFooter/>

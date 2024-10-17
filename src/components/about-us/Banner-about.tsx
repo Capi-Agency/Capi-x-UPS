@@ -25,7 +25,7 @@ const BannerAbout = (props: Props) => {
           <div
             className="text-right flex flex-col items-end justify-end absolute right-0 z-10"
             data-aos="fade-up"
-            data-aos-delay="400"
+            data-aos-delay="200"
           >
             <h1 className="text-[#0F1B0E] text-right font-hanken-grotesk text-[100px] font-bold leading-[120px] tracking-[-2px]">
               Tự hào

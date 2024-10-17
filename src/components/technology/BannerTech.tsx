@@ -7,7 +7,10 @@ type Props = {};
 
 const BannerTech = (props: Props) => {
   return (
-    <div className="bg-[url('/assets/image/bg-technology.png')] w-full h-[960px] bg-cover bg-no-repeat relative overflow-hidden">
+    <div
+      className="bg-[url('/assets/image/bg-technology.png')] w-full h-[960px] bg-cover bg-no-repeat relative overflow-hidden"
+      data-aos="fade-up"
+    >
       <div className="flex flex-col gap-5 justify-center items-center pt-11 pb-10">
         <p className="text-[44px] text-[#FFF] font-bold -tracking-[0.88px]">
           Nền tảng công nghệ <span className="text-[#02E56A]">vượt trội.</span>
