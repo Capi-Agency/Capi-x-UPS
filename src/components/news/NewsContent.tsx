@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
 import NextImg from "../common/next-img";
 import NewsContent2 from "./NewsContent2";
+import TagsPage from "../tags/page";
 
 const NewsContent = () => {
   const categories = [
@@ -296,12 +297,12 @@ const NewsContent = () => {
               </div>
             </div>
             <div className="bg-[#150900] rounded-[40px] my-20 flex relative">
-              <div className="relative w-[700px] h-[310px] ">
+              <div className="relative w-[55%] h-[310px] ">
                 <NextImg
                   src="/assets/image/news-banner1.png"
                   alt="Capi"
                   objectFit="cover"
-                  className="rounded-[20px]"
+                  className="rounded-l-[40px]"
                 />
               </div>
               <div className="flex flex-col absolute top-11 right-12 w-[53%]">
@@ -380,14 +381,7 @@ const NewsContent = () => {
             className="border-t-2 border-[#60606B] mt-[6px] pt-11"
           >
             {renderContent()}
-            <div className="flex items-center justify-center gap-10 mt-20 mb-[-60px]">
-              <p className="text-[#15171E] text-[16px] font-bold leading-normal">#tinthitruong</p>
-              <p className="text-[#15171E] text-[16px] font-bold leading-normal">#tinxahoi</p>
-              <p className="text-[#15171E] text-[16px] font-bold leading-normal">#congbomoi</p>
-              <p className="text-[#15171E] text-[16px] font-bold leading-normal">#baocaomoingay</p>
-              <p className="text-[#15171E] text-[16px] font-bold leading-normal">#thegioihanghoa</p>
-              <p className="text-[#15171E] text-[16px] font-bold leading-normal">#phaisinh</p>
-            </div>
+            <TagsPage/>
           </TabsContent>
         ))}
       </Tabs>

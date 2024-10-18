@@ -86,7 +86,10 @@ const Banner = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-9 mt-[70px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20" data-aos="fade-up">
+      <div
+        className="flex items-center gap-9 mt-[70px] mx-auto lg:max-w-[1400px] "
+        data-aos="fade-up"
+      >
         <div>
           <p className="text-[#FFF] text-xl font-medium w-[110px]">
             Top đầu tư của tuần

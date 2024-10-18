@@ -8,7 +8,7 @@ const UserManual = (props: Props) => {
   return (
     <>
       <div className="bg-[linear-gradient(180deg,#FFF_0%,#F3F3FB_100%)] py-[160px]">
-        <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20">
+        <div className="mx-auto lg:max-w-[1400px] ">
           <div className="px-[60px] py-[100px] grid grid-cols-[240px,420px,auto] gap-20 shadow-[0px_4px_54px_0px_rgba(0,0,0,0.05)] rounded-[32px] bg-[#FFF]">
             <div
               className="flex flex-col"

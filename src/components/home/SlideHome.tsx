@@ -14,7 +14,7 @@ const SlideHome = (props: Props) => {
   ];
   return (
     <div
-      className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20 mt-[120px]"
+      className="mx-auto lg:max-w-[1400px]  mt-[120px]"
       data-aos="fade-up"
       data-aos-delay="200"
     >
@@ -92,7 +92,9 @@ const SlideHome = (props: Props) => {
             <button
               key={index}
               className={`w-[20px] h-[4px] transition duration-300 rounded-[20px] ${
-                activeIndex === index ? "bg-[#15171E]" : "bg-[rgba(255,255,255,0.50)]"
+                activeIndex === index
+                  ? "bg-[#15171E]"
+                  : "bg-[rgba(255,255,255,0.50)]"
               }`}
               onClick={() => {
                 if (swiperRef.current) {

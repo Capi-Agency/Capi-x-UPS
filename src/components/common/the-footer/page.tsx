@@ -14,7 +14,7 @@ const TheFooter = (props: Props) => {
   }, []);
   return (
     <div className="relative mt-[160px] bg-[#0F1B0E] text-[#FFF]">
-      <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20 pt-[120px] pb-[72px]">
+      <div className="mx-auto lg:max-w-[1400px]  pt-[120px] pb-[72px]">
         <div className="grid grid-cols-2">
           <div
             className="flex flex-col gap-4"
@@ -104,8 +104,12 @@ const TheFooter = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="bg-[#014227] w-full h-[1px]" data-aos="fade-up" data-aos-delay="200"></div>
-      <div className="pt-[120px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20">
+      <div
+        className="bg-[#014227] w-full h-[1px]"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      ></div>
+      <div className="pt-[120px] mx-auto lg:max-w-[1400px] ">
         <div className="grid grid-cols-[35%,65%] gap-5">
           <div className="" data-aos="fade-up" data-aos-delay="200">
             <Link
@@ -275,7 +279,7 @@ const TheFooter = (props: Props) => {
         </div>
       </div>
       <div className="mt-[120px] bg-[#060B06]">
-        <div className="py-[30px] flex items-center justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20">
+        <div className="py-[30px] flex items-center justify-between mx-auto lg:max-w-[1400px] ">
           <p className="text-[rgba(255,255,255,0.79)] text-sm font-medium leading-normal">
             © 2024 <span className="text-[#02E56A]"> UP Securities</span>. All
             right reserved

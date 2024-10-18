@@ -5,7 +5,7 @@ type Props = {};
 const Content = (props: Props) => {
   return (
     <>
-      <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] px-4 lg:px-20 mt-[160px]">
+      <div className="mx-auto lg:max-w-[1400px]  mt-[160px]">
         {/* section 1 */}
         <div className="grid grid-cols-3 gap-[30px]">
           <div
@@ -126,132 +126,53 @@ const Content = (props: Props) => {
           </div>
         </div>
         {/*  section 2*/}
-        <div className="grid grid-cols-2 gap-[30px] mt-[30px]">
+        <div className="bg-[#150900] rounded-[40px] mt-[160px] flex relative">
           <div
-            className="bg-[url('/assets/image/bg-card3.png')] w-full h-[700px] bg-cover bg-center rounded-3xl pt-10 pl-10 relative"
+            className="relative w-[60%] h-[400px] "
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <span className="text-[#111013] text-[18px] leading-[28px] font-medium bg-[#02E56A] rounded-[10px] px-2 py-[2px]">
-              Giao diện mới
-            </span>
-            <h3 className="text-[#111013] text-[40px] font-bold leading-[50px] mt-[18px] mb-4 w-[80%]">
-              Mang trải nghiệm tối ưu tới nhà đầu tư của UPS
-            </h3>
-            <p className="text-[#111013] text-[18px] font-medium leading-[28px] w-[80%]">
-              Lời hứa liên tục cập nhật sản phẩm và phát triển không ngừng vì
-              trải nghiệm sử dụng của khác hàng
-            </p>
-            <div className="absolute left-10 bottom-0 right-0">
-              <div className="relative w-full h-[422px] rounded-br-2xl">
-                <NextImg
-                  src="/assets/image/b752f4850174e5719c9f1eba8e43d4de.png"
-                  alt="Capi"
-                  objectFit="cover"
-                  className="rounded-br-2xl rounded-tl-2xl object-top"
-                />
-              </div>
-            </div>
+            <NextImg
+              src="/assets/icons/home-banner2.svg"
+              alt="Capi"
+              objectFit="cover"
+              className=""
+            />
           </div>
           <div
-            className="bg-[#F3F3FB] w-full h-[700px] bg-cover bg-center rounded-3xl relative pt-10 pl-10"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <span className="text-[#FFFFFF] text-[18px] leading-[28px] font-medium bg-[#FE3B1F] rounded-[10px] px-2 py-[2px]">
-              Khuyến mãi
-            </span>
-            <h3 className="text-[#111013] text-[40px] font-bold leading-[50px] mt-[18px] mb-4 w-[70%]">
-              Tạo tài khoản ngay rinh quà liền tay
-            </h3>
-            <p className="text-[#111013] text-[18px] font-medium leading-[28px] w-[80%]">
-              Margin lên tới 8.6% dành riêng cho người dùng mở mới sau
-              20/10/2024
-            </p>
-            <div className="absolute left-10 bottom-0 right-10">
-              <div className="relative w-full h-[422px] rounded-br-2xl">
-                <NextImg
-                  src="/assets/image/margincard.svg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className="rounded-t-2xl w-full h-full "
-                />
-                <div className="absolute bottom-7 right-9">
-                  <span className="text-[#FFF] text-[40px] font-medium leading-normal">
-                    Margin
-                  </span>
-                  <span className="text-[#FFF] text-[170px] font-light leading-none">
-                    8.6<span className="text-[40px] font-semibold">%</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* section 3 */}
-        <div className="grid grid-cols-3 gap-[30px] mt-[30px]">
-          <div
-            className="bg-[#F3F3FB] w-full h-[534px] rounded-3xl p-10 relative"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div className="flex flex-col gap-4">
-              <span className="text-[#111013] text-[140px] font-bold leading-[140px]">
-                9
-              </span>
-              <span className="text-[#111013] text-[40px] font-bold leading-[50px]">
-                Dịch vụ tư vấn tài chính doanh nghiệp
-              </span>
-              <span className="text-[#111013] text-[18px] font-medium leading-[28px]">
-                Chính thức ra mắt dẫn lỗi hành trình đầu tư của bạn
-              </span>
-              <div className="bg-[#E7E7EA] rounded-full flex items-center justify-center w-[214px] h-[30px] absolute bottom-10">
-                <div className="bg-[linear-gradient(90deg,#1A4EF8_0%,#1DF553_100%)] w-[194px] h-[10px] rounded-3xl"></div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="bg-[#F3F3FB] w-full h-[534px] rounded-3xl relative p-10"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div className="relative w-[384px] h-[290px] rounded-br-2xl">
-              <NextImg
-                src="/assets/image/bieuphi.svg"
-                alt="Capi"
-                objectFit="cover"
-                className=""
-              />
-            </div>
-            <div className="flex flex-col gap-4 mt-[70px]">
-              <span className="text-[#111013] text-[40px] font-bold leading-[50px]">
-                Biểu phí
-              </span>
-              <span className="text-[#111013] text-[18px] font-medium leading-[28px]">
-                Cập nhật tới 12/20/2024
-              </span>
-            </div>
-          </div>
-          <div
-            className="bg-[url('/assets/image/Frame16.png')] w-full h-[534px] bg-cover bg-center rounded-3xl p-10"
+            className="flex flex-col absolute top-10 right-12 w-[50%]"
             data-aos="fade-up"
             data-aos-delay="600"
           >
-            <div className="bg-[#FFF] w-20 h-20 flex items-center justify-center rounded-[20px]">
-              <div className="relative w-6 h-6">
-                <NextImg
-                  src="/assets/icons/share2.svg"
-                  alt="Capi"
-                  objectFit="cover"
-                />
-              </div>
-            </div>
-            <h3 className="text-[#FFF] text-[40px] font-bold leading-[50px] mt-8 mb-4 w-[90%]">
-              Báo cáo tài chính doanh nghiệp
-            </h3>
-            <span className="text-[#CBC6D6] text-[18px] font-medium leading-[28px]">
-              Liên tục cập nhật thông tin mới nhất
+            <span className="text-[#FFF] text-[18px] font-medium leading-[40px]">
+              #trungtamdaotao
             </span>
+            <p className="text-[#FFBC00] text-[48px] font-bold leading-[54px] mt-2">
+              Trở thành nhà đầu tư chuyên nghiệp với UPS Academy
+            </p>
+            <p className="text-[#FFF] text-[18px] leading-[29px] tracking-[0.276px] my-6 w-[70%]">
+              So how does it work? Let’s check our Getting Started tutorial or
+              choose from pre-made templates.
+            </p>
+            <div>
+              <button className="flex items-center gap-3 bg-[#FF6D00] p-3 pl-4 rounded-2xl text-[#FFF] font-bold text-[18px] leading-normal">
+                Khám phá ngay
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M18.7594 6.48952C18.7594 6.2906 18.6804 6.09984 18.5398 5.95919C18.3991 5.81853 18.2083 5.73952 18.0094 5.73952L9.42515 5.73952C9.01093 5.73952 8.67515 6.0753 8.67515 6.48952C8.67515 6.90373 9.01093 7.23952 9.42515 7.23952L16.1992 7.23952L5.45855 17.9802C5.16566 18.2731 5.16566 18.7479 5.45855 19.0408C5.75145 19.3337 6.22632 19.3337 6.51921 19.0408L17.2594 8.30062V15.0738C17.2594 15.488 17.5952 15.8238 18.0094 15.8238C18.4236 15.8238 18.7594 15.488 18.7594 15.0738L18.7594 6.48952Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
