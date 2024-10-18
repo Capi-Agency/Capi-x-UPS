@@ -87,7 +87,7 @@ const Banner = (props: Props) => {
         </div>
       </div>
       <div
-        className="flex items-center gap-9 mt-[70px] mx-auto lg:max-w-[1400px] "
+        className="flex items-center gap-9 mt-[70px] mx-auto lg:max-w-[1440px]  "
         data-aos="fade-up"
       >
         <div>

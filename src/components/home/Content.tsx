@@ -5,7 +5,7 @@ type Props = {};
 const Content = (props: Props) => {
   return (
     <>
-      <div className="mx-auto lg:max-w-[1400px]  mt-[160px]">
+      <div className="mx-auto lg:max-w-[1440px]   mt-[160px]">
         {/* section 1 */}
         <div className="grid grid-cols-3 gap-[30px]">
           <div

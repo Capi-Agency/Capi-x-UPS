@@ -8,7 +8,7 @@ const MobileApp = (props: Props) => {
     <>
       {/* section 5 */}
       <div className="bg-[#0F1B0E] mb-[180px] pt-[74px]">
-        <div className="mx-auto lg:max-w-[1400px] ">
+        <div className="mx-auto lg:max-w-[1440px]  ">
           <div className="px-[130px] grid grid-cols-2 ">
             <div
               className="flex flex-col gap-8 mt-20"

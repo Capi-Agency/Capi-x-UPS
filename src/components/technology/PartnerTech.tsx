@@ -5,7 +5,7 @@ type Props = {};
 
 const PartnerTech = (props: Props) => {
   return (
-    <div className="mx-auto lg:max-w-[1400px]  mt-[160px]">
+    <div className="mx-auto lg:max-w-[1440px]   mt-[160px]">
       <div className="grid grid-cols-[452px,auto] gap-10">
         <div
           className="flex flex-col gap-2"
