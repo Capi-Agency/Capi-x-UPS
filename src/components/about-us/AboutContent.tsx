@@ -6,7 +6,7 @@ type Props = {};
 const AboutContent = (props: Props) => {
   return (
     <>
-      <div className="mx-auto lg:max-w-[1440px]  ">
+      <div className="custom-container  ">
         <div className="grid grid-cols-2">
           <div
             className="flex flex-col gap-4 place-self-end"
@@ -46,7 +46,7 @@ const AboutContent = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="mx-auto lg:max-w-[1440px]   mt-[160px]">
+      <div className="custom-container   mt-[160px]">
         <div className="grid grid-cols-2 gap-[30px]">
           <div
             data-aos="fade-up"

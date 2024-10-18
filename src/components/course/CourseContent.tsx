@@ -95,7 +95,7 @@ const CourseContent = (props: Props) => {
         data-aos-delay="200"
       >
         <div className="flex flex-col">
-          <div className="flex items-center justify-between gap-[30px] border-y border-[#60606B] border-opacity-65 py-6">
+           <a href="" className="flex items-center justify-between gap-[30px] border-y border-[#60606B] border-opacity-65 py-6">
             <div className="flex items-center gap-5">
               <div className="relative w-[24px] h-[24px] ">
                 <NextImg
@@ -109,18 +109,16 @@ const CourseContent = (props: Props) => {
                 Ba điều cần làm trước khi bạn bắt đầu đầu tư
               </p>
             </div>
-            <a href="">
-              <div className="relative w-[32px] h-[32px] cursor-pointer">
-                <NextImg
-                  src="/assets/icons/chevron-down.svg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className="rotate-90"
-                />
-              </div>
-            </a>
-          </div>
-          <div className="flex items-center justify-between gap-[30px] border-b border-[#60606B] border-opacity-65 py-6">
+            <div className="relative w-[32px] h-[32px] cursor-pointer">
+              <NextImg
+                src="/assets/icons/chevron-down.svg"
+                alt="Capi"
+                objectFit="cover"
+                className="rotate-90"
+              />
+            </div>
+          </a>
+          <a href="" className="flex items-center justify-between gap-[30px] border-b border-[#60606B] border-opacity-65 py-6">
             <div className="flex items-center gap-5">
               <div className="relative w-[24px] h-[24px] ">
                 <NextImg
@@ -134,18 +132,16 @@ const CourseContent = (props: Props) => {
                 Quy tắc 6 túi là gì và cách áp dụng chúng vào đầu tư hiệu quả
               </p>
             </div>
-            <a href="">
-              <div className="relative w-[32px] h-[32px] cursor-pointer">
-                <NextImg
-                  src="/assets/icons/chevron-down.svg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className="rotate-90"
-                />
-              </div>
-            </a>
-          </div>
-          <div className="flex items-center justify-between gap-[30px] border-b border-[#60606B] border-opacity-65 py-6">
+            <div className="relative w-[32px] h-[32px] cursor-pointer">
+              <NextImg
+                src="/assets/icons/chevron-down.svg"
+                alt="Capi"
+                objectFit="cover"
+                className="rotate-90"
+              />
+            </div>
+          </a>
+          <a href="" className="flex items-center justify-between gap-[30px] border-b border-[#60606B] border-opacity-65 py-6">
             <div className="flex items-center gap-5">
               <div className="relative w-[24px] h-[24px] ">
                 <NextImg
@@ -159,17 +155,15 @@ const CourseContent = (props: Props) => {
                 Mở tài khoản UPS qua ứng dụng điện thoại nhanh nhất
               </p>
             </div>
-            <a href="">
-              <div className="relative w-[32px] h-[32px] cursor-pointer">
-                <NextImg
-                  src="/assets/icons/chevron-down.svg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className="rotate-90"
-                />
-              </div>
-            </a>
-          </div>
+            <div className="relative w-[32px] h-[32px] cursor-pointer">
+              <NextImg
+                src="/assets/icons/chevron-down.svg"
+                alt="Capi"
+                objectFit="cover"
+                className="rotate-90"
+              />
+            </div>
+          </a>
         </div>
         <button className="bg-[#15171E] text-[#FFF] text-[18px] font-bold pl-6 pr-4 py-3 rounded-[16px] flex items-center gap-3 mt-[50px] mx-auto">
           Xem tất cả bài viết

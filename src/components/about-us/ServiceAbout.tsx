@@ -8,7 +8,7 @@ const ServiceAbout = (props: Props) => {
   return (
     <>
       <div className="bg-[#0D0C10] py-[160px] mt-[160px]">
-        <div className="mx-auto lg:max-w-[1440px]  ">
+        <div className="custom-container  ">
           <div className="flex flex-col gap-[100px]">
             <div>
               <div className="flex items-center justify-between">

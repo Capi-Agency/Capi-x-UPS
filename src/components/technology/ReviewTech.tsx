@@ -41,7 +41,7 @@ const ReviewTech = (props: Props) => {
     },
   ];
   return (
-    <div className="mx-auto lg:max-w-[1440px]   mt-[160px]">
+    <div className="custom-container   mt-[160px]">
       <div
         className="flex items-center justify-between border-b border-[#60606B] pb-5 mb-10"
         data-aos="fade-up"

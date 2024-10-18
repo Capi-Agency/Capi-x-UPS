@@ -23,7 +23,7 @@ export default function HomePage() {
       <Content />
       <UserManual />
       <MobileApp />
-      <div className="mx-auto lg:max-w-[1440px]   mt-[160px]">
+      <div className="custom-container mt-[160px]">
         <Community />
         <Support />
       </div>

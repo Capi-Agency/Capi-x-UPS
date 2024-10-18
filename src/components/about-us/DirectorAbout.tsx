@@ -6,7 +6,7 @@ type Props = {};
 const DirectorAbout = (props: Props) => {
   return (
     <>
-      <div className="mx-auto lg:max-w-[1440px]   mt-[160px]">
+      <div className="custom-container   mt-[160px]">
         <div className="grid grid-cols-2 gap-[30px]">
           <div
             className="relative w-full h-[700px]"

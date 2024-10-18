@@ -7,7 +7,7 @@ const BannerAbout = (props: Props) => {
   return (
     <>
       <div className="pt-[170px] pb-[70px] bg-[#00D763]">
-        <div className="flex items-center lg:max-w-[1440px] mx-auto relative h-[480px]">
+        <div className="flex items-center custom-container relative h-[480px]">
           <div
             className="absolute left-0 top-[-88px]"
             data-aos="fade-up"
@@ -40,7 +40,7 @@ const BannerAbout = (props: Props) => {
           </div>
         </div>
         <div
-          className="flex lg:max-w-[1440px] mx-auto items-end justify-between mt-[30px]"
+          className="flex custom-container items-end justify-between mt-[30px]"
           data-aos="fade-up"
           data-aos-delay="200"
         >

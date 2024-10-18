@@ -14,7 +14,7 @@ const SlideHome = (props: Props) => {
   ];
   return (
     <div
-      className="mx-auto lg:max-w-[1440px]   mt-[120px]"
+      className="custom-container   mt-[120px]"
       data-aos="fade-up"
       data-aos-delay="200"
     >

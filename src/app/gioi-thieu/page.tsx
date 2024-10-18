@@ -14,7 +14,7 @@ const GioiThieu = (props: Props) => {
       <AboutContent />
       <DirectorAbout />
       <ServiceAbout />
-      <div className="mx-auto lg:max-w-[1440px]   ">
+      <div className="custom-container">
         <Support />
       </div>
     </>
