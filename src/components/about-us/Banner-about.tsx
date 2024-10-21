@@ -1,6 +1,7 @@
+'use client'
 import React from "react";
 import NextImg from "../common/next-img";
-
+import { TypeAnimation } from 'react-type-animation';
 type Props = {};
 
 const BannerAbout = (props: Props) => {
@@ -34,9 +35,27 @@ const BannerAbout = (props: Props) => {
               <br />
               trong trải nghiệm
             </h1>
-            <h3 className="typing text-white text-right font-hanken-grotesk text-[100px] font-bold leading-[120px] tracking-[-2px]">
+            {/* <h3 className="typing text-white text-right font-hanken-grotesk text-[100px] font-bold leading-[120px] tracking-[-2px]">
               chứng khoán
-            </h3>
+            </h3> */}
+            <TypeAnimation
+            className="text-white text-right font-hanken-grotesk text-[100px] font-bold leading-[120px] tracking-[-2px]"
+              sequence={[
+                'chứng khoán', // Types 'One'
+                3000, // Waits 1s
+                'UPS', // Deletes 'One' and types 'Two'
+                3000, // Waits 2s
+                'upsecurities', // Types 'Three' without deleting 'Two'
+                3000,
+                () => {
+                  console.log('Sequence completed');
+                },
+              ]}
+              wrapper="span"
+              cursor={true}
+              repeat={Infinity}
+              style={{display: 'inline-block' }}
+            />
           </div>
         </div>
         <div
