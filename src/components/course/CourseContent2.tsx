@@ -5,9 +5,35 @@ import TagsPage from "../tags/page";
 type Props = {};
 
 const CourseContent2 = (props: Props) => {
+  const courses = [
+    {
+      title: "Margin là gì?",
+      imgSrc: "/assets/image/card-course4.svg",
+    },
+    {
+      title: "Sử dụng Đòn bẩy Margin hiệu quả",
+      imgSrc: "/assets/image/card-course5.svg",
+    },
+    {
+      title: "Phân bổ tài sản hợp lý trong 3 bước",
+      imgSrc: "/assets/image/card-course6.svg",
+    },
+    {
+      title: "Lựa chọn cổ phiếu tiềm năng",
+      imgSrc: "/assets/image/card-course7.svg",
+    },
+    {
+      title: "Bạn có đang đầu tư hiệu quả",
+      imgSrc: "/assets/image/card-course8.svg",
+    },
+    {
+      title: "Nạp rút tiền tối ưu qua đâu?",
+      imgSrc: "/assets/image/card-course9.svg",
+    },
+  ];
   return (
     <div>
-      <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1280px] mt-[120px]">
+      <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1280px] mt-[120px] mb-[150px]">
         {/* banner 2 */}
         <div className="bg-[#000] rounded-[24px]">
           <div className="flex items-center justify-between">
@@ -63,144 +89,36 @@ const CourseContent2 = (props: Props) => {
         </div>
         <div className="mt-20">
           <div className="mt-20 grid grid-cols-3 gap-10">
-            <div
-              className="p-10 rounded-2xl bg-[#FFF1DD] flex flex-col justify-between h-[572px] hover:bg-[#FFAD36] transition-all duration-300 ease-in"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div>
-                <h4 className="text-[#111013] text-[32px] font-bold leading-[40px]">
-                  Margin là gì?
-                </h4>
-                <p className="text-[#111013] text-[18px] font-medium leading-[28px] mt-4">
-                  Creating a higher spacing and how people move through a unique
-                  and impactful campaign.
-                </p>
-              </div>
-              <div className="relative w-full h-[288px]">
-                <NextImg
-                  src="/assets/image/card-course4.svg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className=""
-                />
-              </div>
-            </div>
-            <div
-              className="p-10 rounded-2xl bg-[#FFF1DD] flex flex-col justify-between h-[572px] hover:bg-[#FFAD36] transition-all duration-300 ease-in"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div>
-                <h4 className="text-[#111013] text-[32px] font-bold leading-[40px]">
-                  Sử dụng Đòn bẩy Margin hiệu quả
-                </h4>
-                <p className="text-[#111013] text-[18px] font-medium leading-[28px] mt-4">
-                  Creating a higher spacing and how people move through a unique
-                  and impactful campaign.
-                </p>
-              </div>
-              <div className="relative w-full h-[288px]">
-                <NextImg
-                  src="/assets/image/card-course5.svg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className=""
-                />
-              </div>
-            </div>
-            <div
-              className="p-10 rounded-2xl bg-[#FFF1DD] flex flex-col justify-between h-[572px] hover:bg-[#FFAD36] transition-all duration-300 ease-in"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div>
-                <h4 className="text-[#111013] text-[32px] font-bold leading-[40px]">
-                  Phân bổ tài sản hợp lý trong 3 bước
-                </h4>
-                <p className="text-[#111013] text-[18px] font-medium leading-[28px] mt-4 ">
-                  Creating a higher spacing and how people move through a unique
-                  and impactful campaign.
-                </p>
-              </div>
-              <div className="relative w-full h-[288px]">
-                <NextImg
-                  src="/assets/image/card-course6.svg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className=""
-                />
-              </div>
-            </div>
-            <div
-              className="p-10 rounded-2xl bg-[#FFF1DD] flex flex-col justify-between h-[572px] hover:bg-[#FFAD36] transition-all duration-300 ease-in"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div>
-                <h4 className="text-[#111013] text-[32px] font-bold leading-[40px]">
-                  Lựa chọn cổ phiếu tiềm năng
-                </h4>
-                <p className="text-[#111013] text-[18px] font-medium leading-[28px] mt-4">
-                  Creating a higher spacing and how people move through a unique
-                  and impactful campaign.
-                </p>
-              </div>
-              <div className="relative w-full h-[288px]">
-                <NextImg
-                  src="/assets/image/card-course7.svg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className=""
-                />
-              </div>
-            </div>
-            <div
-              className="p-10 rounded-2xl bg-[#FFF1DD] flex flex-col justify-between h-[572px] hover:bg-[#FFAD36] transition-all duration-300 ease-in"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div>
-                <h4 className="text-[#111013] text-[32px] font-bold leading-[40px]">
-                  Bạn có đang đầu tư hiệu quả
-                </h4>
-                <p className="text-[#111013] text-[18px] font-medium leading-[28px] mt-4">
-                  Creating a higher spacing and how people move through a unique
-                  and impactful campaign.
-                </p>
-              </div>
-              <div className="relative w-full h-[288px]">
-                <NextImg
-                  src="/assets/image/card-course8.svg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className=""
-                />
-              </div>
-            </div>
-            <div
-              className="p-10 rounded-2xl bg-[#FFF1DD] flex flex-col justify-between h-[572px] hover:bg-[#FFAD36] transition-all duration-300 ease-in"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div>
-                <h4 className="text-[#111013] text-[32px] font-bold leading-[40px]">
-                  Nạp rút tiền tối ưu qua đâu?
-                </h4>
-                <p className="text-[#111013] text-[18px] font-medium leading-[28px] mt-4 ">
-                  Creating a higher spacing and how people move through a unique
-                  and impactful campaign.
-                </p>
-              </div>
-              <div className="relative w-full h-[288px]">
-                <NextImg
-                  src="/assets/image/card-course9.svg"
-                  alt="Capi"
-                  objectFit="cover"
-                  className=""
-                />
-              </div>
-            </div>
+            {courses.map((course, index) => {
+              const delay = ((index % 3) + 1) * 200;
+
+              return (
+                <div
+                  key={index}
+                  className="p-10 rounded-2xl bg-[#FFF1DD] flex flex-col justify-between h-[572px] hover:bg-[#FFAD36] transition-all duration-300 ease-in"
+                  data-aos="fade-up"
+                  data-aos-delay={delay}
+                >
+                  <div>
+                    <h4 className="text-[#111013] text-[32px] font-bold leading-[40px]">
+                      {course.title}
+                    </h4>
+                    <p className="text-[#111013] text-[18px] font-medium leading-[28px] mt-4">
+                      Creating a higher spacing and how people move through a
+                      unique and impactful campaign.
+                    </p>
+                  </div>
+                  <div className="relative w-full h-[288px]">
+                    <NextImg
+                      src={course.imgSrc}
+                      alt="Capi"
+                      objectFit="cover"
+                      className=""
+                    />
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
         {/* support */}
@@ -210,7 +128,10 @@ const CourseContent2 = (props: Props) => {
           data-aos-delay="200"
         >
           <div className="flex flex-col">
-            <div className="flex items-center justify-between gap-[30px] border-y border-[#60606B] border-opacity-65 py-6">
+            <a
+              href=""
+              className="flex items-center justify-between gap-[30px] border-y border-[#60606B] border-opacity-65 py-6"
+            >
               <div className="flex items-center gap-5">
                 <div className="relative w-[24px] h-[24px] ">
                   <NextImg
@@ -224,18 +145,19 @@ const CourseContent2 = (props: Props) => {
                   Ba điều cần làm trước khi bạn bắt đầu đầu tư
                 </p>
               </div>
-              <a href="">
-                <div className="relative w-[32px] h-[32px] cursor-pointer">
-                  <NextImg
-                    src="/assets/icons/chevron-down.svg"
-                    alt="Capi"
-                    objectFit="cover"
-                    className="rotate-90"
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="flex items-center justify-between gap-[30px] border-b border-[#60606B] border-opacity-65 py-6">
+              <div className="relative w-[32px] h-[32px] cursor-pointer">
+                <NextImg
+                  src="/assets/icons/chevron-down.svg"
+                  alt="Capi"
+                  objectFit="cover"
+                  className="rotate-90"
+                />
+              </div>
+            </a>
+            <a
+              href=""
+              className="flex items-center justify-between gap-[30px] border-b border-[#60606B] border-opacity-65 py-6"
+            >
               <div className="flex items-center gap-5">
                 <div className="relative w-[24px] h-[24px] ">
                   <NextImg
@@ -249,18 +171,19 @@ const CourseContent2 = (props: Props) => {
                   Quy tắc 6 túi là gì và cách áp dụng chúng vào đầu tư hiệu quả
                 </p>
               </div>
-              <a href="">
-                <div className="relative w-[32px] h-[32px] cursor-pointer">
-                  <NextImg
-                    src="/assets/icons/chevron-down.svg"
-                    alt="Capi"
-                    objectFit="cover"
-                    className="rotate-90"
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="flex items-center justify-between gap-[30px] border-b border-[#60606B] border-opacity-65 py-6">
+              <div className="relative w-[32px] h-[32px] cursor-pointer">
+                <NextImg
+                  src="/assets/icons/chevron-down.svg"
+                  alt="Capi"
+                  objectFit="cover"
+                  className="rotate-90"
+                />
+              </div>
+            </a>
+            <a
+              href=""
+              className="flex items-center justify-between gap-[30px] border-b border-[#60606B] border-opacity-65 py-6"
+            >
               <div className="flex items-center gap-5">
                 <div className="relative w-[24px] h-[24px] ">
                   <NextImg
@@ -274,17 +197,15 @@ const CourseContent2 = (props: Props) => {
                   Mở tài khoản UPS qua ứng dụng điện thoại nhanh nhất
                 </p>
               </div>
-              <a href="">
-                <div className="relative w-[32px] h-[32px] cursor-pointer">
-                  <NextImg
-                    src="/assets/icons/chevron-down.svg"
-                    alt="Capi"
-                    objectFit="cover"
-                    className="rotate-90"
-                  />
-                </div>
-              </a>
-            </div>
+              <div className="relative w-[32px] h-[32px] cursor-pointer">
+                <NextImg
+                  src="/assets/icons/chevron-down.svg"
+                  alt="Capi"
+                  objectFit="cover"
+                  className="rotate-90"
+                />
+              </div>
+            </a>
           </div>
           <button className="bg-[#15171E] text-[#FFF] text-[18px] font-bold pl-6 pr-4 py-3 rounded-[16px] flex items-center gap-3 mt-[50px] mx-auto">
             Xem tất cả bài viết

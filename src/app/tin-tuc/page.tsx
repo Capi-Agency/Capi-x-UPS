@@ -5,7 +5,7 @@ type Props = {}
 
 const NewsPage = (props: Props) => {
   return (
-    <div className='mt-12'>
+    <div className='mt-16'>
         <NewsContent/>
     </div>
   )

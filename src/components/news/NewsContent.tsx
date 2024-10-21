@@ -2,17 +2,14 @@
 import React, { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
 import NextImg from "../common/next-img";
-import NewsContent2 from "./NewsContent2";
 import TagsPage from "../tags/page";
 
 const NewsContent = () => {
   const categories = [
     { id: 1, name: "Biến động thị trường" },
     { id: 2, name: "Báo cáo ngày" },
-    { id: 3, name: "Phân tích từ UPS" },
-    { id: 4, name: "Sự kiện doanh nghiệp" },
-    { id: 5, name: "Tin đấu giá" },
-    { id: 6, name: "Tin nội bộ UPS" },
+    { id: 3, name: "Tin đấu giá" },
+    { id: 4, name: "Tin nội bộ UPS" },
   ];
 
   const [currentCategory, setCurrentCategory] = useState<number>(
@@ -24,280 +21,119 @@ const NewsContent = () => {
   };
 
   const renderContent = () => {
+    const news = [
+      {
+        id: 1,
+        date: "Sep 26, 2023",
+        readTime: "9 min read",
+        title: "Definitive Guide to Make More Productive Flow.",
+        imgSrc: "/assets/image/news.jpg",
+      },
+      {
+        id: 2,
+        date: "Sep 27, 2023",
+        readTime: "9 min read",
+        title: "Definitive Guide to Make More Productive Flow.",
+        imgSrc: "/assets/image/news.jpg",
+      },
+      {
+        id: 3,
+        date: "Sep 27, 2023",
+        readTime: "9 min read",
+        title: "Definitive Guide to Make More Productive Flow.",
+        imgSrc: "/assets/image/news.jpg",
+      },
+      {
+        id: 4,
+        date: "Sep 27, 2023",
+        readTime: "9 min read",
+        title: "Definitive Guide to Make More Productive Flow.",
+        imgSrc: "/assets/image/news.jpg",
+      },
+      {
+        id: 5,
+        date: "Sep 27, 2023",
+        readTime: "9 min read",
+        title: "Definitive Guide to Make More Productive Flow.",
+        imgSrc: "/assets/image/news.jpg",
+      },
+      {
+        id: 6,
+        date: "Sep 27, 2023",
+        readTime: "9 min read",
+        title: "Definitive Guide to Make More Productive Flow.",
+        imgSrc: "/assets/image/news.jpg",
+      },
+      {
+        id: 7,
+        date: "Sep 27, 2023",
+        readTime: "9 min read",
+        title: "Definitive Guide to Make More Productive Flow.",
+        imgSrc: "/assets/image/news.jpg",
+      },
+      {
+        id: 8,
+        date: "Sep 27, 2023",
+        readTime: "9 min read",
+        title: "Definitive Guide to Make More Productive Flow.",
+        imgSrc: "/assets/image/news.jpg",
+      },
+      {
+        id: 9,
+        date: "Sep 27, 2023",
+        readTime: "9 min read",
+        title: "Definitive Guide to Make More Productive Flow.",
+        imgSrc: "/assets/image/news.jpg",
+      },
+    ];
     switch (currentCategory) {
       case 1:
         return (
           <>
-            <div className="grid grid-cols-[786px,auto]">
-              {/* box left */}
-              <div className="flex flex-col">
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="flex flex-col">
-                    <div className="flex flex-col gap-5">
-                      <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </h3>
-                      <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </p>
-                    </div>
-                    <div className="bg-[#C7C7C7] w-full h-[1px] my-6"></div>
-                    <div className="flex flex-col gap-5">
-                      <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </h3>
-                      <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </p>
-                    </div>
-                  </div>
-                  <div className="relative w-full h-full ">
-                    <NextImg
-                      src="/assets/image/news.jpg"
-                      alt="Capi"
-                      objectFit="cover"
-                      className="rounded-[20px]"
-                    />
-                  </div>
-                </div>
-                <div className="bg-[#C7C7C7] w-full h-[1px] my-8"></div>
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="relative w-full h-full ">
-                    <NextImg
-                      src="/assets/image/news.jpg"
-                      alt="Capi"
-                      objectFit="cover"
-                      className="rounded-[20px]"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-6">
-                    <div className="flex flex-col gap-5">
-                      <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </h3>
-                      <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </p>
-                    </div>
-                    <div className="bg-[#C7C7C7] w-full h-[1px]"></div>
-                    <div className="flex flex-col gap-5">
-                      <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </h3>
-                      <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                {/* End news hot */}
-                <div className="bg-[#0F1B0E] rounded-[16px] px-10 py-[30px] mt-8 flex items-center justify-between">
-                  <p className="text-[40px] font-semibold text-[#FFF]">
-                    Kết nối cùng <span className="text-[#02E56A]">UPS!</span>
-                  </p>
-                  <button className="flex items-center gap-3 bg-[#242733] py-4 px-6 rounded-[40px] text-[#02E56A] font-bold text-[18px] leading-normal hover:shadow-[-2px_3px_0px_0px_#00813B]">
-                    Mở tài khoản ngay
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="12"
-                      viewBox="0 0 16 12"
-                      fill="none"
-                    >
-                      <path
-                        d="M0.85791 5.25C0.443697 5.25 0.10791 5.58579 0.10791 6C0.10791 6.41421 0.443697 6.75 0.85791 6.75V5.25ZM15.5304 6.53033C15.8233 6.23744 15.8233 5.76256 15.5304 5.46967L10.7574 0.696699C10.4645 0.403806 9.98964 0.403806 9.69674 0.696699C9.40385 0.989593 9.40385 1.46447 9.69674 1.75736L13.9394 6L9.69674 10.2426C9.40385 10.5355 9.40385 11.0104 9.69674 11.3033C9.98964 11.5962 10.4645 11.5962 10.7574 11.3033L15.5304 6.53033ZM0.85791 6.75H15V5.25H0.85791V6.75Z"
-                        fill="#02E56A"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div className="bg-[#C7C7C7] w-full h-[1px] my-8"></div>
-                <div className="flex flex-col gap-8">
-                  <div className="grid grid-cols-[340px,auto] items-center gap-8">
-                    <div className="relative w-full h-[190px] ">
+            <div className="grid grid-cols-3 gap-8">
+              {news.slice(0, 6).map((newItem, index) => {
+                const delay = ((index % 3) + 1) * 200;
+                return (
+                  <div
+                    key={newItem.id}
+                    className="rounded-t-[8px]"
+                    data-aos="fade-up"
+                    data-aos-delay={delay}
+                  >
+                    <div className="relative w-full h-[351px] ">
                       <NextImg
-                        src="/assets/image/news.jpg"
+                        src={newItem.imgSrc}
                         alt="Capi"
                         objectFit="cover"
-                        className="rounded-[20px]"
+                        className="rounded-[8px]"
                       />
                     </div>
-                    <div className="flex flex-col gap-5">
-                      <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </h3>
-                      <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </p>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-[340px,auto] items-center gap-8">
-                    <div className="relative w-full h-[190px] ">
-                      <NextImg
-                        src="/assets/image/news.jpg"
-                        alt="Capi"
-                        objectFit="cover"
-                        className="rounded-[20px]"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-5">
-                      <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </h3>
-                      <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </p>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-[340px,auto] items-center gap-8">
-                    <div className="relative w-full h-[190px] ">
-                      <NextImg
-                        src="/assets/image/news.jpg"
-                        alt="Capi"
-                        objectFit="cover"
-                        className="rounded-[20px]"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-5">
-                      <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </h3>
-                      <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* box right */}
-              <div className="border-l border-[#C7C7C7] h-full ml-8 pl-8">
-                <div className="flex flex-col">
-                  <div className="relative w-full h-[250px] ">
-                    <NextImg
-                      src="/assets/image/news.jpg"
-                      alt="Capi"
-                      objectFit="cover"
-                      className="rounded-[20px]"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-5 mt-6">
-                    <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                      Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc
-                      vận động tranh cử ở Bắc Carolina
-                    </h3>
-                    <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                      Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc
-                      vận động tranh cử ở Bắc Carolina
+                    <span className="inline-block mt-8 mb-3 text-sm font-medium leading-[16px] tracking-[0.14]">
+                      {newItem.date} · {newItem.readTime}
+                    </span>
+                    <p className="text-[#15171E] text-[30px] font-semibold">
+                      {newItem.title}
                     </p>
-                  </div>
-                </div>
-                {/* End news hot */}
-                <div className="bg-[#C7C7C7] w-full h-[1px] my-8"></div>
-                <div className="grid grid-cols-2 gap-7">
-                  <div className="flex flex-col">
-                    <div className="relative w-full h-[149px] ">
-                      <NextImg
-                        src="/assets/image/news.jpg"
-                        alt="Capi"
-                        objectFit="cover"
-                        className="rounded-[20px]"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-5 mt-6">
-                      <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </h3>
-                      <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </p>
+                    <div className="flex items-center gap-2 mt-4">
+                      <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
+                        App Mobile
+                      </button>
+                      <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
+                        Trải nghiệm
+                      </button>
                     </div>
                   </div>
-                  <div className="flex flex-col">
-                    <div className="relative w-full h-[149px] ">
-                      <NextImg
-                        src="/assets/image/news.jpg"
-                        alt="Capi"
-                        objectFit="cover"
-                        className="rounded-[20px]"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-5 mt-6">
-                      <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </h3>
-                      <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                        Ông Trump nói về lạm phát, chỉ trích bà Harris trong
-                        cuộc vận động tranh cử ở Bắc Carolina
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-[#C7C7C7] w-full h-[1px] my-8"></div>
-                <div className="flex flex-col gap-5">
-                  <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                    Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc
-                    vận động tranh cử ở Bắc Carolina
-                  </h3>
-                  <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                    Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc
-                    vận động tranh cử ở Bắc Carolina
-                  </p>
-                </div>
-                <div className="bg-[#C7C7C7] w-full h-[1px] my-6"></div>
-                <div className="flex flex-col gap-5">
-                  <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                    Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc
-                    vận động tranh cử ở Bắc Carolina
-                  </h3>
-                  <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                    Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc
-                    vận động tranh cử ở Bắc Carolina
-                  </p>
-                </div>
-                <div className="bg-[#C7C7C7] w-full h-[1px] my-6"></div>
-                <div className="flex flex-col gap-5">
-                  <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                    Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc
-                    vận động tranh cử ở Bắc Carolina
-                  </h3>
-                  <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                    Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc
-                    vận động tranh cử ở Bắc Carolina
-                  </p>
-                </div>
-                <div className="bg-[#C7C7C7] w-full h-[1px] my-6"></div>
-                <div className="flex flex-col gap-5">
-                  <h3 className="text-[#15171E] text-[20px] font-semibold leading-normal">
-                    Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc
-                    vận động tranh cử ở Bắc Carolina
-                  </h3>
-                  <p className="text-[#696B75] text-[16px] font-medium leading-normal">
-                    Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc
-                    vận động tranh cử ở Bắc Carolina
-                  </p>
-                </div>
-              </div>
+                );
+              })}
             </div>
+
+            {/* banner */}
             <div className="bg-[#150900] rounded-[40px] my-20 flex relative">
-              <div className="relative w-[55%] h-[310px] ">
+              <div
+                className="relative w-[55%] h-[310px] "
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <NextImg
                   src="/assets/image/news-banner1.png"
                   alt="Capi"
@@ -305,7 +141,11 @@ const NewsContent = () => {
                   className="rounded-l-[40px]"
                 />
               </div>
-              <div className="flex flex-col absolute top-11 right-12 w-[53%]">
+              <div
+                className="flex flex-col absolute top-11 right-12 w-[53%]"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <span className="text-[#FFF] text-[18px] font-medium leading-[40px]">
                   #trungtamdaotao
                 </span>
@@ -333,18 +173,80 @@ const NewsContent = () => {
                 </div>
               </div>
             </div>
-            <NewsContent2/>
+            {/* tin theo ngày */}
+            <div className="mb-[150px]">
+              <h4
+                className="text-[#15171E] font-bold mb-8"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                Tin theo ngày
+              </h4>
+              <div className="grid grid-cols-3 gap-8">
+                {news.map((newItem, index) => {
+                  const delay = ((index % 3) + 1) * 200;
+                  return (
+                    <div
+                      key={newItem.id}
+                      className="rounded-t-[8px]"
+                      data-aos="fade-up"
+                      data-aos-delay={delay}
+                    >
+                      <div className="relative w-full h-[351px] ">
+                        <NextImg
+                          src={newItem.imgSrc}
+                          alt="Capi"
+                          objectFit="cover"
+                          className="rounded-[8px]"
+                        />
+                      </div>
+                      <span className="inline-block mt-8 mb-3 text-sm font-medium leading-[16px] tracking-[0.14]">
+                        {newItem.date} · {newItem.readTime}
+                      </span>
+                      <p className="text-[#15171E] text-[30px] font-semibold">
+                        {newItem.title}
+                      </p>
+                      <div className="flex items-center gap-2 mt-4">
+                        <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
+                          App Mobile
+                        </button>
+                        <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
+                          Trải nghiệm
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <button
+                className="bg-[#15171E] text-[#FFF] text-[18px] font-bold pl-6 pr-4 py-3 rounded-[16px] flex items-center gap-3 mt-[60px] mx-auto"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                Tải thêm
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M19.2594 5.98952C19.2594 5.7906 19.1804 5.59984 19.0398 5.45919C18.8991 5.31853 18.7083 5.23952 18.5094 5.23952L9.92515 5.23952C9.51093 5.23952 9.17515 5.5753 9.17515 5.98952C9.17515 6.40373 9.51093 6.73952 9.92515 6.73952L16.6992 6.73952L5.95855 17.4802C5.66566 17.7731 5.66566 18.2479 5.95855 18.5408C6.25145 18.8337 6.72632 18.8337 7.01921 18.5408L17.7594 7.80062V14.5738C17.7594 14.988 18.0952 15.3238 18.5094 15.3238C18.9236 15.3238 19.2594 14.988 19.2594 14.5738L19.2594 5.98952Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
           </>
         );
       case 2:
         return <div>Báo cáo ngày</div>;
       case 3:
-        return <div>Phân tích từ UPS</div>;
-      case 4:
-        return <div>Sự kiện doanh nghiệp</div>;
-      case 5:
         return <div>Tin đấu giá</div>;
-      case 6:
+      case 4:
         return <div>Tin nội bộ UPS</div>;
       default:
         return null;
@@ -356,32 +258,77 @@ const NewsContent = () => {
         defaultValue={currentCategory.toString()}
         onValueChange={handleCategoryClick}
       >
-        <h1 className="text-[#15171E] text-[40px] font-medium leading-[72px] uppercase text-center mb-5">
-          thời báo đầu tư UPS
+        <h1
+          className="text-[#0C1C28] text-[80px] font-bold leading-[72px] -tracking-[1.6px] mb-8"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Tin tức UPS
         </h1>
-        <TabsList className="flex justify-center items-center gap-10 border-b border-[#60606B] pb-5">
-          {categories.map((category) => (
-            <TabsTrigger
-              key={category.id}
-              value={category.id.toString()}
-              className={`text-base leading-normal transition-all duration-150 ease-in-out ${
-                currentCategory === category.id
-                  ? "text-[#15171E] font-bold"
-                  : "text-[#525358] font-semibold"
-              }`}
-            >
-              {category.name}
-            </TabsTrigger>
-          ))}
+        <TabsList
+          className="flex items-center justify-between "
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div className="flex items-center gap-10">
+            {categories.map((category) => (
+              <TabsTrigger
+                key={category.id}
+                value={category.id.toString()}
+                className={`text-base leading-normal transition-all duration-150 ease-in-out ${
+                  currentCategory === category.id
+                    ? "text-[#15171E] font-bold"
+                    : "text-[#525358] font-semibold"
+                }`}
+              >
+                {category.name}
+              </TabsTrigger>
+            ))}
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="relative cursor-pointer rounded-[6px] bg-[rgba(144,145,156,0.08)]">
+              <select className="appearance-none block pl-2 pr-6 py-1 text-[#525358] font-medium text-sm focus:outline-none bg-transparent cursor-pointer">
+                <option value="1">Tất cả</option>
+                <option value="2">Biến động thị trường</option>
+                <option value="3">Báo cáo ngày</option>
+                <option value="4">Tin đấu giá</option>
+                <option value="5">Tin nội bộ UPS</option>
+              </select>
+              <div className="absolute top-1/2 -translate-y-1/2 right-2 pointer-events-none">
+                <div className="relative w-[10px] h-[6px]">
+                  <NextImg
+                    src="/assets/icons/expand_more.svg"
+                    alt="UPS"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="relative flex items-center gap-2 cursor-pointer rounded-[6px] bg-[rgba(144,145,156,0.08)]">
+              <select className="appearance-none block pl-2 pr-6 py-1 text-[#525358] font-medium text-sm focus:outline-none bg-transparent cursor-pointer">
+                <option value="1">Mới nhất</option>
+                <option value="2">Cũ nhất</option>
+              </select>
+              <div className="absolute top-1/2 -translate-y-1/2 right-2 pointer-events-none">
+                <div className="relative w-[10px] h-[6px]">
+                  <NextImg
+                    src="/assets/icons/expand_more.svg"
+                    alt="UPS"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </TabsList>
         {categories.map((category) => (
           <TabsContent
             key={category.id}
             value={category.id.toString()}
-            className="border-t-2 border-[#60606B] mt-[6px] pt-11"
+            className="mt-8"
           >
             {renderContent()}
-            <TagsPage/>
+            <TagsPage />
           </TabsContent>
         ))}
       </Tabs>
