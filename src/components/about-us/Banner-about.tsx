@@ -42,9 +42,9 @@ const BannerAbout = (props: Props) => {
             className="text-white text-right font-hanken-grotesk text-[100px] font-bold leading-[120px] tracking-[-2px]"
               sequence={[
                 'chứng khoán', // Types 'One'
-                3000, // Waits 1s
+                3000, // Waits 3s
                 'UPS', // Deletes 'One' and types 'Two'
-                3000, // Waits 2s
+                3000, // Waits 3s
                 'upsecurities', // Types 'Three' without deleting 'Two'
                 3000,
                 () => {
