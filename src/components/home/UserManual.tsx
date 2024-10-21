@@ -30,7 +30,7 @@ const UserManual = (props: Props) => {
               data-aos-delay="400"
             >
               <div className="bg-[#0F1B0E] p-10 rounded-2xl h-[534px]">
-                <div className="relative w-[340px] h-[321px] rounded-br-2xl">
+                <div className="relative w-[100px] lg:w-[340px] h-[321px] rounded-br-2xl">
                   <NextImg
                     src="/assets/icons/illustration-2.svg"
                     alt="Capi"
@@ -130,7 +130,7 @@ const UserManual = (props: Props) => {
               data-aos-delay="400"
             >
               <div className="bg-[#0F1B0E] p-10 rounded-2xl h-[534px]">
-                <div className="relative w-[340px] h-[321px] rounded-br-2xl">
+                <div className="relative w-[100px] lg:w-[340px] h-[321px] rounded-br-2xl">
                   <NextImg
                     src="/assets/icons/illustration-2.svg"
                     alt="Capi"
@@ -230,7 +230,7 @@ const UserManual = (props: Props) => {
               data-aos-delay="400"
             >
               <div className="bg-[#0F1B0E] p-10 rounded-2xl h-[534px]">
-                <div className="relative w-[340px] h-[321px] rounded-br-2xl">
+                <div className="relative w-[100px] lg:w-[340px] h-[321px] rounded-br-2xl">
                   <NextImg
                     src="/assets/icons/illustration-2.svg"
                     alt="Capi"
@@ -330,7 +330,7 @@ const UserManual = (props: Props) => {
               data-aos-delay="400"
             >
               <div className="bg-[#0F1B0E] p-10 rounded-2xl h-[534px]">
-                <div className="relative w-[340px] h-[321px] rounded-br-2xl">
+                <div className="relative w-[100px] lg:w-[340px] h-[321px] rounded-br-2xl">
                   <NextImg
                     src="/assets/icons/illustration-2.svg"
                     alt="Capi"
@@ -429,7 +429,7 @@ const UserManual = (props: Props) => {
     <>
       <div className="bg-[linear-gradient(180deg,#FFF_0%,#F3F3FB_100%)] py-[160px]">
         <div className="custom-container  ">
-          <div className="px-[60px] py-[100px] grid grid-cols-[240px,420px,auto] gap-20 shadow-[0px_4px_54px_0px_rgba(0,0,0,0.05)] rounded-[32px] bg-[#FFF]">
+          <div className="px-[60px] py-[100px] lg:grid lg:grid-cols-[240px,420px,auto] gap-20 shadow-[0px_4px_54px_0px_rgba(0,0,0,0.05)] rounded-[32px] bg-[#FFF]">
             <div
               className="flex flex-col"
               data-aos="fade-up"

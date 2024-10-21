@@ -15,7 +15,7 @@ const TheFooter = (props: Props) => {
   return (
     <div className="relative mt-[160px] bg-[#0F1B0E] text-[#FFF]">
       <div className="custom-container   pt-[120px] pb-[72px]">
-        <div className="grid grid-cols-2">
+        <div className="lg:grid lg:grid-cols-2">
           <div
             className="flex flex-col gap-4"
             data-aos="fade-up"
@@ -34,7 +34,7 @@ const TheFooter = (props: Props) => {
             </p>
           </div>
           <div
-            className="grid grid-cols-[auto,230px] gap-[50px]"
+            className="lg:grid lg:grid-cols-[auto,230px] gap-[50px]"
             data-aos="fade-up"
             data-aos-delay="400"
           >
@@ -110,7 +110,7 @@ const TheFooter = (props: Props) => {
         data-aos-delay="200"
       ></div>
       <div className="pt-[120px] custom-container  ">
-        <div className="grid grid-cols-[35%,65%] gap-5">
+        <div className="lg:grid lg:grid-cols-[35%,65%] gap-5">
           <div className="" data-aos="fade-up" data-aos-delay="200">
             <Link
               href="/"

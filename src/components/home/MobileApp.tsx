@@ -9,7 +9,7 @@ const MobileApp = (props: Props) => {
       {/* section 5 */}
       <div className="bg-[#0F1B0E] mb-[180px] pt-[74px]">
         <div className="custom-container  ">
-          <div className="px-[130px] grid grid-cols-2 ">
+          <div className="px-[130px] lg:grid lg:grid-cols-2 ">
             <div
               className="flex flex-col gap-8 mt-20"
               data-aos="fade-up"
@@ -37,7 +37,7 @@ const MobileApp = (props: Props) => {
                 nghệ và tư duy đổi mới, sáng tạo hợp nhất để đem lại trải nghiệm
                 đầu tư thông minh, dễ dàng, và thú vị.
               </p>
-              <div className="flex items-center gap-3">
+              <div className="lg:flex items-center gap-3">
                 <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-[50px] rounded-[9px] cursor-pointer">
                   <div className="relative w-6 h-6">
                     <NextImg

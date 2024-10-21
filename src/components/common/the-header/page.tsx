@@ -12,7 +12,7 @@ const TheHeader = (props: Props) => {
     <div className="fixed w-full z-[999]">
       <div className="bg-[#0E1A0D] rounded-b-[24px]">
         <div
-          className="px-4 py-[20px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] md:px-24 lg:px-8"
+          className="px-4 py-4 md:py-[20px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] md:px-24 lg:px-8"
           data-aos="fade-up"
         >
           <div className="relative flex items-center justify-between">
@@ -22,7 +22,7 @@ const TheHeader = (props: Props) => {
               title="Ups"
               className="inline-flex items-center"
             >
-              <div className="relative w-[184px] h-[44px] rounded-br-2xl">
+              <div className="relative lg:w-[184px] w-[133px] lg:h-[44px] h-[29px] rounded-br-2xl">
                 <NextImg
                   src="/assets/icons/logo-ups.svg"
                   alt="Capi"
@@ -37,10 +37,10 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Our product"
                   title="Our product"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 flex items-center gap-[10px]"
+                  className="font-bold text-gray-100 flex items-center gap-[10px] text-base"
                 >
                   Sản phẩm
-                  <span className="bg-[#AD02C9] text-white text-xs font-medium me-2 px-2 py-1 rounded-[10px] dark:bg-blue-900 dark:text-blue-300">
+                  <span className="bg-[#AD02C9] text-white text-sm uppercase font-bold me-2 px-2 py-1 rounded-[10px]">
                     NEW
                   </span>
                 </Link>
@@ -50,7 +50,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Invest with UPS"
                   title="Invest with UPS"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                  className="font-bold text-gray-100"
                 >
                   Đầu tư cùng UPS
                 </Link>
@@ -60,7 +60,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Technology platform"
                   title="Technology platform"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                  className="font-bold text-gray-100"
                 >
                   Nền tảng công nghệ
                 </a>
@@ -70,7 +70,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="News"
                   title="News"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                  className="font-bold text-gray-100"
                 >
                   Tin tức
                   <span className="rounded-full ml-[10px] bg-[#E50261] px-2 py-1">
@@ -83,7 +83,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="About us"
                   title="About us"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                  className="font-bold text-gray-100"
                 >
                   Về UPS
                 </a>
@@ -93,7 +93,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Price list"
                   title="Price list"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                  className="font-bold text-gray-100"
                 >
                   Bảng giá
                 </a>
@@ -105,7 +105,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Notification"
                   title="Notification"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                  className="font-bold text-gray-100"
                 >
                   <i>
                     <svg
@@ -143,7 +143,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Search"
                   title="Search"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                  className="font-bold text-gray-100"
                 >
                   <i>
                     <svg
@@ -239,7 +239,7 @@ const TheHeader = (props: Props) => {
                             <rect x="14" y="1" width="7" height="6" />
                             <rect x="14" y="11" width="7" height="12" />
                           </svg>
-                          <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                          <span className="ml-2 text-xl font-bold text-gray-800 uppercase">
                             Company
                           </span>
                         </a>
@@ -270,7 +270,7 @@ const TheHeader = (props: Props) => {
                             href="/"
                             aria-label="Our product"
                             title="Our product"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="font-bold text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                           >
                             Product
                           </a>
@@ -280,7 +280,7 @@ const TheHeader = (props: Props) => {
                             href="/"
                             aria-label="Our product"
                             title="Our product"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="font-bold text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                           >
                             Features
                           </a>
@@ -290,7 +290,7 @@ const TheHeader = (props: Props) => {
                             href="/"
                             aria-label="Product pricing"
                             title="Product pricing"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="font-bold text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                           >
                             Pricing
                           </a>
@@ -300,7 +300,7 @@ const TheHeader = (props: Props) => {
                             href="/"
                             aria-label="About us"
                             title="About us"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="font-bold text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                           >
                             About us
                           </a>
@@ -308,7 +308,7 @@ const TheHeader = (props: Props) => {
                         <li>
                           <a
                             href="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:outline-none"
+                            className="inline-flex items-center justify-center w-full h-12 px-6 font-bold text-white transition duration-200 rounded bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:outline-none"
                             aria-label="Sign up"
                             title="Sign up"
                           >

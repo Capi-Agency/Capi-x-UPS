@@ -87,7 +87,7 @@ const Banner = (props: Props) => {
         </div>
       </div>
       <div
-        className="flex items-center gap-9 mt-[70px] custom-container  "
+        className="flex items-center gap-9 mt-[70px] max-w-[1390px] mx-auto"
         data-aos="fade-up"
       >
         <div>
@@ -95,46 +95,28 @@ const Banner = (props: Props) => {
             Top đầu tư của tuần
           </p>
         </div>
-        <Swiper
-          breakpoints={{
-            1600: {
-              slidesPerView: 5,
-            },
-            1440: {
-              slidesPerView: 4,
-            },
-            1280: {
-              slidesPerView: 3,
-            },
-            640: {
-              slidesPerView: 3,
-            },
-          }}
-          spaceBetween={24}
-        >
+        <div className="flex items-center gap-9 whitespace-nowrap overflow-x-auto scrollbar-hidden">
           {userData.map((user, index) => (
-            <SwiperSlide key={index}>
-              <div className="flex items-center gap-5">
-                <div className="relative w-[54px] h-[54px]">
-                  <NextImg
-                    src={user.image}
-                    alt={user.name}
-                    objectFit="cover"
-                    className="rounded-full"
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[#FFF] text-xl font-medium">
-                    {user.name}
-                  </span>
-                  <span className="text-[#05BE5A] text-base font-medium">
-                    {user.percentage}
-                  </span>
-                </div>
+            <div className="flex items-center gap-5" key={index}>
+              <div className="relative w-[54px] h-[54px]">
+                <NextImg
+                  src={user.image}
+                  alt={user.name}
+                  objectFit="cover"
+                  className="rounded-full"
+                />
               </div>
-            </SwiperSlide>
+              <div className="flex flex-col">
+                <span className="text-[#FFF] text-xl font-medium">
+                  {user.name}
+                </span>
+                <span className="text-[#05BE5A] text-base font-medium">
+                  {user.percentage}
+                </span>
+              </div>
+            </div>
           ))}
-        </Swiper>
+        </div>
       </div>
       <div data-aos="fade-up">
         <MarqueeDemo />

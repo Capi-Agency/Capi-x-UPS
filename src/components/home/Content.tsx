@@ -7,7 +7,7 @@ const Content = (props: Props) => {
     <>
       <div className="custom-container   mt-[160px]">
         {/* section 1 */}
-        <div className="grid grid-cols-3 gap-[30px]">
+        <div className="lg:grid lg:grid-cols-3 gap-[30px]">
           <div
             className="bg-[url('/assets/image/bg-card.png')] w-full h-[534px] bg-cover bg-center rounded-3xl p-10 flex flex-col justify-between"
             data-aos="fade-up"

@@ -89,7 +89,7 @@ const Community = (props: Props) => {
           Tham gia ngay cộng đồng <br />
           <span className="text-[#02E56A]">Nhà đầu tư UPS</span>
         </span>
-        <div className="flex items-center gap-4 mx-auto mt-10">
+        <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 mx-auto mt-10">
           <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] cursor-pointer">
             <div className="relative w-[19px] h-[19px]">
               <NextImg
@@ -145,7 +145,7 @@ const Community = (props: Props) => {
         </div>
       </div>
       {/* Trigger element for the animation */}
-      <div ref={triggerRef} className="relative h-[328px] mt-20">
+      <div ref={triggerRef} className="relative h-[328px] mt-20 lg:block hidden">
         {imgData.map((img, index) => (
           <div
             key={index}

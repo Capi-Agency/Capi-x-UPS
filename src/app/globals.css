@@ -74,7 +74,7 @@
   }
 
   .custom-container {
-    @apply 3xl:max-w-[1440px] 2xl:max-w-[1280px] xl:max-w-[1120px] mx-auto;
+    @apply 3xl:max-w-[1440px] 2xl:max-w-[1280px] xl:max-w-[1120px] xl:mx-auto md:mx-8 mx-6;
   }
 
   body {
@@ -167,5 +167,14 @@
 
   .card:hover::before {
     opacity: 0.6; /* Show border on hover */
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  .scrollbar-hidden {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;     
   }
 }
