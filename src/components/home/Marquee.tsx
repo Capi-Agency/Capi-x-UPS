@@ -95,7 +95,7 @@ const ReviewCard = ({
 		<div className="relative group/card">
 			<figure
 				className={cn(
-					"relative z-1 cursor-pointer overflow-hidden rounded-xl p-[20px] w-[300px] h-[160px] flex flex-col justify-between card",
+					"relative z-1 cursor-pointer overflow-hidden rounded-xl px-3 py-2 lg:px-5 lg:py-4 w-[188px] h-[77px] lg:w-[300px] lg:h-[160px] flex flex-col justify-between card",
 					// light styles
 					"rounded-[16px] bg-[#161F15] border-[#161F15]",
 					// dark styles
@@ -108,14 +108,12 @@ const ReviewCard = ({
 			>
 				<div className="flex flex-row items-center gap-5">
 					<img
-						className="rounded-full"
-						width="60"
-						height="60"
+						className="rounded-full w-8 h-8 lg:w-[60px] lg:h-[60px]"
 						alt=""
 						src={img}
 					/>
 					<div className="flex flex-col">
-						<p className="text-base font-medium text-[#8D9595] group-hover/card:text-white">
+						<p className="font-medium text-[#8D9595] group-hover/card:text-white lg:text-base text-xs">
 							{name}
 						</p>
 
@@ -123,7 +121,7 @@ const ReviewCard = ({
 					
 				</div>
 				<div>
-						<span className="mt-2 text-[#075728] group-hover/card:text-[#05BE5A] font-hanken-grotesk text-3xl font-medium leading-normal flex items-start">
+						<span className="mt-2 text-[#075728] group-hover/card:text-[#05BE5A] font-hanken-grotesk text-base lg:text-3xl font-medium leading-normal flex items-start">
 							{body}{" "}
 							<i className="mt-1">
 								<svg
@@ -131,6 +129,7 @@ const ReviewCard = ({
 									width="24"
 									height="24"
 									viewBox="0 0 24 24"
+									className="w-4 h-4 lg:w-6 lg:h-6"
 									fill="none"
 								>
 									<path
@@ -160,7 +159,7 @@ const ReviewCard = ({
 
 export function MarqueeDemo() {
 	return (
-		<div className="relative flex h-[500px] w-full flex-col items-center justify-center  rounded-lg  md:shadow-xl overflow-hidden">
+		<div className="relative flex h-[220px] lg:h-[500px] w-full flex-col items-center justify-center  rounded-lg  md:shadow-xl overflow-hidden">
 			<Marquee
 				pauseOnHover
 				className="[--duration:20s]"

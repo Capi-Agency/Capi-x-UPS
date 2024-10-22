@@ -16,14 +16,14 @@ export default function HomePage() {
   }, []);
   return (
     <div>
-      <div className="relative pt-[79px] mx-auto bg-[linear-gradient(180deg,#0E1A0D_82%,#060B06_100%)] mt-[-15px]">
+      <div className="relative pt-[90px] lg:pt-[79px] mx-auto bg-[linear-gradient(180deg,#0E1A0D_82%,#060B06_100%)] mt-[-15px]">
         <Banner />
       </div>
       <SlideHome />
       <Content />
       <UserManual />
       <MobileApp />
-      <div className="custom-container mt-[160px]">
+      <div className="custom-container">
         <Community />
         <Support />
       </div>

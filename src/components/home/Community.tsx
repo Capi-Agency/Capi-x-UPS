@@ -4,7 +4,7 @@ import NextImg from "../common/next-img";
 import { gsap } from "gsap";
 
 type Props = {};
-const imgData = [
+const imgDataDesktop = [
   { size: 44, imgUrl: "/assets/image/investor1.jpg", left: 4, bottom: 4 },
   { size: 261.2, imgUrl: "/assets/image/investor2.jpg", left: 4, bottom: 4 },
   { size: 65, imgUrl: "/assets/image/investor3.jpg", top: 115, left: 260 },
@@ -34,7 +34,44 @@ const imgData = [
   { size: 207, imgUrl: "/assets/image/investor15.jpg", bottom: 4, right: 4 },
   { size: 41, imgUrl: "/assets/image/investor16.jpg", top: 105, right: 4 },
 ];
+
+const imgDataMobile = [
+  { size: 16, imgUrl: "/assets/image/investor1.jpg", left: 0, bottom: 0 },
+  { size: 99, imgUrl: "/assets/image/investor2.jpg", left: 0, bottom: 0 },
+  { size: 24, imgUrl: "/assets/image/investor10.jpg", top: 42, left: 0 },
+  { size: 14.5, imgUrl: "/assets/image/investor7.jpg", top: 40, left: 46 },
+  { size: 59, imgUrl: "/assets/image/investor15.jpg", left: 59, top: 4 },
+  {
+    size: 25,
+    imgUrl: "/assets/image/investor14.jpg",
+    bottom: 0,
+    left: 89,
+  },
+  { size: 120, imgUrl: "/assets/image/investor6.jpg", left: 99, bottom: 0 },
+  {
+    size: 24.6,
+    imgUrl: "/assets/image/investor3.jpg",
+    left: 117,
+    top: 15.5,
+  },
+  { size: 29, imgUrl: "/assets/icons/svg-investor.svg", right: 124, top: 19 },
+  {
+    size: 45,
+    imgUrl: "/assets/image/investor5.jpg",
+    right: 499,
+    top: 83,
+  },
+  { size: 14.5, imgUrl: "/assets/image/investor4.jpg", right: 108, bottom: 64 },
+  { size: 29, imgUrl: "/assets/image/investor8.jpg", right: 108, bottom: 0 },
+  { size: 88, imgUrl: "/assets/image/investor9.jpg", bottom: 0, right: 27 },
+  { size: 68, imgUrl: "/assets/image/investor11.jpg", top: 0, right: 17 },
+  { size: 36, imgUrl: "/assets/image/investor12.jpg", top: 57, right: 0 },
+  { size: 21, imgUrl: "/assets/image/investor16.jpg", bottom: 31, right: 0 },
+  { size: 31, imgUrl: "/assets/image/investor13.jpg", bottom: 0, right: 0 },
+];
+
 const Community = (props: Props) => {
+  const imgData = window.innerWidth < 768 ? imgDataMobile : imgDataDesktop;
   const imgRef = useRef<HTMLDivElement[]>([]);
   const triggerRef = useRef<HTMLDivElement>(null); // Ref for the trigger element
 
@@ -73,11 +110,11 @@ const Community = (props: Props) => {
   return (
     <>
       <div
-        className="flex flex-col text-center gap-2"
+        className="flex flex-col text-center"
         data-aos="fade-up"
         data-aos-delay="200"
       >
-        <div className="relative w-[111px] h-[48px] mx-auto">
+        <div className="relative w-[74px] h-[32px] lg:w-[111px] lg:h-[48px] mx-auto">
           <NextImg
             src="/assets/icons/logo-small2.svg"
             alt="Capi"
@@ -85,11 +122,11 @@ const Community = (props: Props) => {
             className=""
           />
         </div>
-        <span className="text-[#111013] text-[48px] font-bold leading-[56px]">
+        <span className="text-[#111013] text-[20px] lg:text-[48px] font-bold lg:leading-[56px] mt-2">
           Tham gia ngay cộng đồng <br />
           <span className="text-[#02E56A]">Nhà đầu tư UPS</span>
         </span>
-        <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 mx-auto mt-10">
+        <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 mx-auto mt-6 lg:mt-10">
           <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] cursor-pointer">
             <div className="relative w-[19px] h-[19px]">
               <NextImg
@@ -99,7 +136,7 @@ const Community = (props: Props) => {
                 className=""
               />
             </div>
-            <span className="text-[#FFF] text-[16px] font-bold leading-normal">
+            <span className="text-[#FFF] text-[14px] lg:text-[16px] font-bold leading-normal">
               Cộng đồng
             </span>
           </div>
@@ -112,7 +149,7 @@ const Community = (props: Props) => {
                 className=""
               />
             </div>
-            <span className="text-[#FFF] text-[16px] font-bold leading-normal">
+            <span className="text-[#FFF] text-[14px] lg:text-[16px] font-bold leading-normal">
               Facebook
             </span>
           </div>
@@ -125,7 +162,7 @@ const Community = (props: Props) => {
                 className=""
               />
             </div>
-            <span className="text-[#FFF] text-[16px] font-bold leading-normal">
+            <span className="text-[#FFF] text-[14px] lg:text-[16px] font-bold leading-normal">
               Telegram
             </span>
           </div>
@@ -138,14 +175,17 @@ const Community = (props: Props) => {
                 className=""
               />
             </div>
-            <span className="text-[#FFF] text-[16px] font-bold leading-normal">
+            <span className="text-[#FFF] text-[14px] lg:text-[16px] font-bold leading-normal">
               Zalo
             </span>
           </div>
         </div>
       </div>
       {/* Trigger element for the animation */}
-      <div ref={triggerRef} className="relative h-[328px] mt-20 lg:block hidden">
+      <div
+        ref={triggerRef}
+        className="relative h-[154px] lg:h-[328px] mt-10 lg:mt-20"
+      >
         {imgData.map((img, index) => (
           <div
             key={index}

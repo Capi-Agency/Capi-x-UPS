@@ -14,24 +14,31 @@ const SlideHome = (props: Props) => {
   ];
   return (
     <div
-      className="custom-container   mt-[120px]"
+      className="custom-container mt-6 lg:mt-[120px]"
       data-aos="fade-up"
       data-aos-delay="200"
     >
-      <div className="relative rounded-3xl">
+      <div className="relative rounded-[12px] lg:rounded-3xl">
         <Swiper
           ref={swiperRef}
           mousewheel={true}
           keyboard={true}
           loop={true}
           freeMode={true}
-          speed={800}
+          breakpoints={{
+            1024: {
+              speed: 800,
+            },
+            0: { 
+              speed: 400,
+            },
+          }}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          className="rounded-3xl"
+          className="rounded-[12px] lg:rounded-3xl"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-[560px]">
+              <div className="relative w-full h-[342px] lg:h-[560px]">
                 <NextImg src={slide} alt="Capi" objectFit="cover" />
               </div>
             </SwiperSlide>
@@ -39,7 +46,7 @@ const SlideHome = (props: Props) => {
         </Swiper>
         <button
           id="prevBtn"
-          className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -left-8 z-[10]"
+          className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -left-8 z-[10] lg:block hidden"
           onClick={() => {
             if (swiperRef.current && swiperRef.current.swiper) {
               swiperRef.current.swiper.slidePrev();
@@ -65,7 +72,7 @@ const SlideHome = (props: Props) => {
         </button>
         <button
           id="nextBtn"
-          className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -right-8 z-[10]"
+          className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -right-8 z-[10] lg:block hidden"
           onClick={() => {
             if (swiperRef.current && swiperRef.current.swiper) {
               swiperRef.current.swiper.slideNext();

@@ -44,7 +44,14 @@ const SlideAbout = (props: Props) => {
     <div>
       <Swiper
         ref={swiperRef}
-        slidesPerView={4}
+        breakpoints={{
+          1024: {
+            slidesPerView: 4
+          },
+          0: { 
+            slidesPerView: 1.5
+          },
+        }}
         spaceBetween={30}
         className="mySwiper"
         data-aos="fade-up" data-aos-delay="200"
