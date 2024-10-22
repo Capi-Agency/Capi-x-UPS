@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import NextImg from "../common/next-img";
 import { gsap } from "gsap";
 
@@ -71,7 +71,23 @@ const imgDataMobile = [
 ];
 
 const Community = (props: Props) => {
-  const imgData = window.innerWidth < 768 ? imgDataMobile : imgDataDesktop;
+  const [imgData, setImgData] = useState(imgDataDesktop);
+  useEffect(() => {
+    const handleResize = () => {
+      setImgData(window.innerWidth < 768 ? imgDataMobile : imgDataDesktop);
+    };
+
+    // Thiết lập imgData ban đầu
+    handleResize();
+
+    // Thêm trình lắng nghe sự kiện resize
+    window.addEventListener("resize", handleResize);
+
+    // Dọn dẹp listener khi component bị gỡ
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const imgRef = useRef<HTMLDivElement[]>([]);
   const triggerRef = useRef<HTMLDivElement>(null); // Ref for the trigger element
 
