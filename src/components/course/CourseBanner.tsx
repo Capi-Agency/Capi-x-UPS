@@ -6,8 +6,8 @@ type Props = {};
 const CourseBanner = (props: Props) => {
   return (
     <div className="bg-[#FFECD2]">
-      <div className="pt-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1440px]">
-        <div className="grid grid-cols-[54%,46%] gap-20 items-center">
+      <div className="pt-5 custom-container">
+        <div className="lg:grid grid-cols-[52%,48%] items-center">
           <div className="relative w-full pt-[88%]" data-aos="fade-up"
             data-aos-delay="200">
             <NextImg
@@ -17,7 +17,7 @@ const CourseBanner = (props: Props) => {
               className=""
             />
           </div>
-          <div className="w-[80%]" data-aos="fade-up"
+          <div className="w-[80%] justify-self-end" data-aos="fade-up"
             data-aos-delay="600">
             <span className="text-[#0C1C28] text-lg font-bold leading-[26px]">
               Chuỗi nội dung mới

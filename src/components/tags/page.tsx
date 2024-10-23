@@ -5,7 +5,7 @@ type Props = {};
 const TagsPage = (props: Props) => {
   return (
     <div
-      className="flex items-center justify-center gap-10 mt-[100px] mb-[-60px]"
+      className="custom-container flex items-center flex-wrap justify-center gap-10 mt-[100px] mb-[-60px]"
       data-aos="fade-up"
       data-aos-delay="200"
     >

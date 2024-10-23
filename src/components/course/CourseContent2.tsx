@@ -33,7 +33,7 @@ const CourseContent2 = (props: Props) => {
   ];
   return (
     <div>
-      <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1280px] mt-[120px] mb-[150px]">
+      <div className="custom-container 3xl:!max-w-[1280px] mt-[120px] mb-[150px]">
         {/* banner 2 */}
         <div className="bg-[#000] rounded-[24px]">
           <div className="flex items-center justify-between">

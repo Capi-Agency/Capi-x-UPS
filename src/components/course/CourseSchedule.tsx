@@ -258,11 +258,12 @@ const CourseSchedule = (props: Props) => {
   };
 
   return (
-    <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1280px] mt-[160px]">
+    <div className="custom-container 3xl:!max-w-[1280px] mt-[160px]">
       <Tabs
         defaultValue={currentSchedule.toString()}
         onValueChange={handleScheduleClick}
-        data-aos="fade-up" data-aos-delay="200"
+        data-aos="fade-up"
+        data-aos-delay="200"
       >
         <div>
           <span className="text-[18px] text-[#FF6D00] font-medium leading-[40px]">

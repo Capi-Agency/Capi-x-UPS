@@ -5,7 +5,7 @@ type Props = {};
 
 const CourseContent = (props: Props) => {
   return (
-    <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1280px] pt-[100px]">
+    <div className="custom-container 3xl:!max-w-[1280px] pt-[100px]">
       <div className="flex flex-col" data-aos="fade-up" data-aos-delay="200">
         <span className="text-[#FF6D00] text-[18px] font-medium leading-[40px]">
           #kienthucchungkhoan

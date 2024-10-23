@@ -15,7 +15,7 @@ const BannerTech = (props: Props) => {
             <span className="text-[#02E56A]"><br className="lg:hidden block"/>vượt trội.</span>
           </p>
           <div className="bg-[#60606B] opacity-[0.65] w-[35%] lg:w-[20%] h-[1px]"></div>
-          <p className="text-[#FFF] text-[17px] font-bold -tracking-[0.42px] leading-[140%]">
+          <p className="text-[#FFF] text-sm lg:text-[17px] font-bold -tracking-[0.42px] leading-[140%]">
             Bền bỉ - nhanh chóng - thuận tiện - dễ dàng
           </p>
         </div>
