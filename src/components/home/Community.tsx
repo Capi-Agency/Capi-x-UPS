@@ -4,7 +4,15 @@ import NextImg from "../common/next-img";
 import { gsap } from "gsap";
 
 type Props = {};
-const imgDataDesktop = [
+type ImgData = {
+  size: number;
+  imgUrl: string;
+  left?: number;
+  right?: number;
+  top?: number;
+  bottom?: number;
+};
+const imgDataDesktop: ImgData[] = [
   { size: 44, imgUrl: "/assets/image/investor1.jpg", left: 4, bottom: 4 },
   { size: 261.2, imgUrl: "/assets/image/investor2.jpg", left: 4, bottom: 4 },
   { size: 65, imgUrl: "/assets/image/investor3.jpg", top: 115, left: 260 },
@@ -35,7 +43,7 @@ const imgDataDesktop = [
   { size: 41, imgUrl: "/assets/image/investor16.jpg", top: 105, right: 4 },
 ];
 
-const imgDataMobile = [
+const imgDataMobile: ImgData[] = [
   { size: 16, imgUrl: "/assets/image/investor1.jpg", left: 0, bottom: 0 },
   { size: 99, imgUrl: "/assets/image/investor2.jpg", left: 0, bottom: 0 },
   { size: 24, imgUrl: "/assets/image/investor10.jpg", top: 42, left: 0 },
