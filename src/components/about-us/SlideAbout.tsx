@@ -46,64 +46,66 @@ const SlideAbout = (props: Props) => {
         ref={swiperRef}
         breakpoints={{
           1024: {
-            slidesPerView: 4
+            slidesPerView: 4,
+            spaceBetween: 30,
           },
-          0: { 
-            slidesPerView: 1.5
+          0: {
+            slidesPerView: 1.6,
+            spaceBetween: 12,
           },
         }}
-        spaceBetween={30}
         className="mySwiper"
-        data-aos="fade-up" data-aos-delay="200"
+        data-aos="fade-up"
+        data-aos-delay="200"
       >
         {slides.map((slide, index) => {
           const [position, setPosition] = useState({ x: 0, y: 0 });
           const [isHovered, setIsHovered] = useState(false);
-          const cardRef = useRef<HTMLDivElement>(null); 
-        
+          const cardRef = useRef<HTMLDivElement>(null);
+
           const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
             if (!cardRef.current) return;
-        
+
             const rect = cardRef.current.getBoundingClientRect();
             const mouseX = e.clientX - rect.left - rect.width / 2;
             const mouseY = e.clientY - rect.top - rect.height / 2;
-        
+
             setPosition({
               x: e.clientX - rect.left,
               y: e.clientY - rect.top,
             });
-        
+
             let angle = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
             angle = (angle + 360) % 360;
-        
+
             cardRef.current.style.setProperty("--start", `${angle + 60}`);
           };
-        
+
           const handleMouseEnter = () => {
             setIsHovered(true);
           };
-        
+
           const handleMouseLeave = () => {
             setIsHovered(false);
           };
           return (
             <SwiperSlide key={index}>
               <div
-              ref={cardRef}
-                className={`card rounded-[16px] p-[32px] flex flex-col justify-between h-[430px] relative overflow-hidden bg-[#161519]`}
+                ref={cardRef}
+                className={`card rounded-[12px] lg:rounded-[16px] p-5 lg:p-[32px] flex flex-col justify-between h-[320px] lg:h-[430px] relative overflow-hidden bg-[#161519]`}
                 onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
                 <div className="flex flex-col gap-2">
-                  <span className="text-[#FFF] text-[18px] font-medium leading-[28px]">
+                  <span className="text-[#FFF] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
                     {slide.tag}
                   </span>
-                  <h4 className="text-[#FFF] text-[32px] font-bold leading-[40px]">
+                  <h4 className="text-[#FFF] text-[20px] lg:text-[32px] font-bold lg:leading-[40px]">
                     {slide.title}
                   </h4>
                 </div>
-                <p className="text-[#FFF] text-[18px] font-medium leading-[28px]">
+                <p className="text-[#FFF] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
                   {slide.description}
                 </p>
                 <div
@@ -124,7 +126,11 @@ const SlideAbout = (props: Props) => {
           );
         })}
       </Swiper>
-      <div className="flex items-center gap-2 float-right mt-10" data-aos="fade-up" data-aos-delay="200">
+      <div
+        className="flex items-center gap-2 float-right mt-6 lg:mt-10"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         <button
           id="prevBtn"
           className="rounded-full bg-[#02E56A] hover:bg-[#15171E] w-[42px] h-[28px] flex justify-center items-center group"

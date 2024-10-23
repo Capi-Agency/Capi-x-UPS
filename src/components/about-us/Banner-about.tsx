@@ -7,14 +7,14 @@ type Props = {};
 const BannerAbout = (props: Props) => {
   return (
     <>
-      <div className="pt-[170px] pb-[70px] bg-[#00D763]">
-        <div className="flex items-center custom-container relative h-[480px]">
+      <div className="pt-[76px] lg:pt-[120px] pb-[70px] bg-[#00D763]">
+        <div className="flex lg:flex-row flex-col items-center custom-container relative">
           <div
-            className="absolute left-0 top-[-88px]"
+            className="w-full lg:w-[50%]"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div className="relative w-[796px] h-[607px] z-1">
+            <div className="relative w-full pt-[76%] z-1">
               <NextImg
                 src="/assets/icons/icon-banner-about.svg"
                 alt="Capi"
@@ -24,22 +24,19 @@ const BannerAbout = (props: Props) => {
             </div>
           </div>
           <div
-            className="text-right flex flex-col items-end justify-end absolute right-0 z-10"
+            className="text-right flex flex-col items-end justify-end self-end lg:absolute right-0 z-10"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <h1 className="text-[#0F1B0E] text-right font-hanken-grotesk text-[100px] font-bold leading-[120px] tracking-[-2px]">
+            <h1 className="text-[#0F1B0E] text-right font-hanken-grotesk text-[32px] lg:text-[100px] font-bold lg:leading-[120px] tracking-[-0.64px] lg:tracking-[-2px]">
               Tự hào
               <br />
               tiên phong
               <br />
               trong trải nghiệm
             </h1>
-            {/* <h3 className="typing text-white text-right font-hanken-grotesk text-[100px] font-bold leading-[120px] tracking-[-2px]">
-              chứng khoán
-            </h3> */}
             <TypeAnimation
-            className="text-white text-right font-hanken-grotesk text-[100px] font-bold leading-[120px] tracking-[-2px]"
+            className="text-white text-right font-hanken-grotesk text-[32px] lg:text-[100px] font-bold lg:leading-[120px] tracking-[-0.64px] lg:tracking-[-2px]"
               sequence={[
                 'chứng khoán', // Types 'One'
                 3000, // Waits 3s
@@ -59,17 +56,17 @@ const BannerAbout = (props: Props) => {
           </div>
         </div>
         <div
-          className="flex custom-container items-end justify-between mt-[30px]"
+          className="flex custom-container items-end justify-between mt-6 lg:mt-[30px]"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <div className="border-t-[1px] border-[#000] pt-[40px] w-[400px]">
-            <p className="text-[#074E28] text-[20px] font-medium leading-[28px]">
+          <div className="border-t-[1px] border-[#000] pt-3 lg:pt-[40px] w-full lg:w-[400px]">
+            <p className="text-[#074E28] text-[14px] lg:text-[20px] font-medium leading-[22px] lg:leading-[28px]">
               UPS hướng đến mục tiêu trở thành một điểm tựa vững chắc khuyến
               khích người trẻ tự tin khám phá thế giới tài chính.
             </p>
           </div>
-          <div className="cursor-pointer">
+          <div className="cursor-pointer lg:block hidden">
             <i>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

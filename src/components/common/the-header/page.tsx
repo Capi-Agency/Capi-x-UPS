@@ -85,7 +85,7 @@ const TheHeader = (props: Props) => {
                   className="font-bold text-gray-100"
                 >
                   Tin tức
-                  <span className="rounded-full ml-[10px] bg-[#E50261] px-2 py-1">
+                  <span className="rounded-full ml-[10px] bg-[#E50261] px-2 py-1 text-sm">
                     4
                   </span>
                 </a>
@@ -281,7 +281,7 @@ const TheHeader = (props: Props) => {
       </div>
       {isMenuOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-[#0F1B0E]">
-          <div className="p-5 bg-[#0F1B0E] border rounded w-full h-full">
+          <div className="py-5 px-6 bg-[#0F1B0E] border rounded w-full h-full">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <Link
@@ -304,7 +304,7 @@ const TheHeader = (props: Props) => {
                 <button
                   aria-label="Close Menu"
                   title="Close Menu"
-                  className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none"
+                  className="p-2 -mt-2 -mr-2 transition duration-200 rounded focus:outline-none"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <svg
@@ -368,10 +368,10 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Our product"
                   title="Our product"
-                  className="font-bold text-gray-100 flex items-center gap-[10px] text-base"
+                  className="font-bold text-gray-100 flex items-center gap-[10px] text-sm "
                 >
                   Sản phẩm
-                  <span className="bg-[#AD02C9] text-white text-sm uppercase font-bold me-2 px-2 py-1 rounded-[10px]">
+                  <span className="bg-[#AD02C9] text-white text-xs uppercase font-bold me-2 px-2 py-1 rounded-[10px]">
                     NEW
                   </span>
                 </Link>
@@ -381,7 +381,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Invest with UPS"
                   title="Invest with UPS"
-                  className="font-bold text-gray-100"
+                  className="font-bold text-gray-100 text-sm"
                 >
                   Đầu tư cùng UPS
                 </Link>
@@ -391,7 +391,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Technology platform"
                   title="Technology platform"
-                  className="font-bold text-gray-100"
+                  className="font-bold text-gray-100 text-sm"
                 >
                   Nền tảng công nghệ
                 </a>
@@ -401,7 +401,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="News"
                   title="News"
-                  className="font-bold text-gray-100"
+                  className="font-bold text-gray-100 text-sm" 
                 >
                   Tin tức
                   <span className="rounded-full ml-[10px] bg-[#E50261] px-2 py-1">
@@ -414,7 +414,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="About us"
                   title="About us"
-                  className="font-bold text-gray-100"
+                  className="font-bold text-gray-100 text-sm"
                 >
                   Về UPS
                 </a>
@@ -424,7 +424,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Price list"
                   title="Price list"
-                  className="font-bold text-gray-100"
+                  className="font-bold text-gray-100 text-sm"
                 >
                   Bảng giá
                 </a>

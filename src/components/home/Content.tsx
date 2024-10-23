@@ -90,7 +90,7 @@ const Content = (props: Props) => {
               <span className="text-[#111013] text-[20px] lg:text-[40px] font-bold lg:leading-[50px] ">
                 Nền tảng ứng dụng di động mới
               </span>
-              <span className="text-[#111013] text-[18px] font-medium lg:leading-[28px]">
+              <span className="text-[#111013] text-sm lg:text-[18px] font-medium lg:leading-[28px]">
                 Tải ngay nền tảng di động.
               </span>
             </div>
@@ -128,9 +128,9 @@ const Content = (props: Props) => {
           </div>
         </div>
         {/*  section 2*/}
-        <div className="bg-[#150900] rounded-[20px] lg:rounded-[40px] mt-[40px] lg:mt-[160px] relative lg:grid lg:grid-cols-[auto,50%] items-center flex flex-col lg:px-10 lg:py-0 p-5 gap-5">
+        <div className="bg-[#150900] rounded-[20px] lg:rounded-[40px] mt-[40px] lg:mt-[160px] relative lg:grid lg:grid-cols-[auto,50%] lg:items-center flex flex-col lg:px-10 lg:py-0 p-5 gap-5">
           <div
-            className="relative lg:w-[522px] w-[240px] h-[235px] lg:h-[400px]"
+            className="relative lg:w-[522px] w-[240px] h-[235px] lg:h-[400px] flex justify-start"
             data-aos="fade-up"
             data-aos-delay="200"
           >

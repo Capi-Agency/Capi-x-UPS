@@ -13,7 +13,7 @@ const TheFooter = (props: Props) => {
     AOS.init({ once: true });
   }, []);
   return (
-    <div className="relative mt-5 lg:mt-[160px] bg-[#0F1B0E] text-[#FFF]">
+    <div className="relative mt-10 lg:mt-[160px] bg-[#0F1B0E] text-[#FFF]">
       <div className="custom-container pt-10 lg:pt-[120px] pb-6 lg:pb-[72px]">
         <div className="lg:grid lg:grid-cols-2 flex flex-col lg:gap-0 gap-10">
           <div

@@ -42,11 +42,7 @@ const imgDataMobile = [
   { size: 14.5, imgUrl: "/assets/image/investor7.jpg", top: 40, left: 46 },
   { size: 59, imgUrl: "/assets/image/investor15.jpg", left: 59, top: 4 },
   {
-    size: 25,
-    imgUrl: "/assets/image/investor14.jpg",
-    bottom: 0,
-    left: 89,
-  },
+    size: 25, imgUrl: "/assets/image/investor14.jpg", bottom: 0, left: 89, top: 129},
   { size: 120, imgUrl: "/assets/image/investor6.jpg", left: 99, bottom: 0 },
   {
     size: 24.6,
@@ -58,16 +54,16 @@ const imgDataMobile = [
   {
     size: 45,
     imgUrl: "/assets/image/investor5.jpg",
-    right: 499,
-    top: 83,
+    right: 83,
+    top: 30,
   },
   { size: 14.5, imgUrl: "/assets/image/investor4.jpg", right: 108, bottom: 64 },
   { size: 29, imgUrl: "/assets/image/investor8.jpg", right: 108, bottom: 0 },
-  { size: 88, imgUrl: "/assets/image/investor9.jpg", bottom: 0, right: 27 },
+  { size: 88, imgUrl: "/assets/image/investor9.jpg", bottom: 0, right: 27, top:66 },
   { size: 68, imgUrl: "/assets/image/investor11.jpg", top: 0, right: 17 },
   { size: 36, imgUrl: "/assets/image/investor12.jpg", top: 57, right: 0 },
-  { size: 21, imgUrl: "/assets/image/investor16.jpg", bottom: 31, right: 0 },
-  { size: 31, imgUrl: "/assets/image/investor13.jpg", bottom: 0, right: 0 },
+  { size: 21, imgUrl: "/assets/image/investor16.jpg", bottom: 33, right: 0 },
+  { size: 31, imgUrl: "/assets/image/investor13.jpg", bottom: 0, right: 0, top: 122 },
 ];
 
 const Community = (props: Props) => {
@@ -77,17 +73,13 @@ const Community = (props: Props) => {
       setImgData(window.innerWidth < 768 ? imgDataMobile : imgDataDesktop);
     };
 
-    // Thiết lập imgData ban đầu
     handleResize();
-
-    // Thêm trình lắng nghe sự kiện resize
     window.addEventListener("resize", handleResize);
 
-    // Dọn dẹp listener khi component bị gỡ
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [imgDataDesktop, imgDataMobile]);
   const imgRef = useRef<HTMLDivElement[]>([]);
   const triggerRef = useRef<HTMLDivElement>(null); // Ref for the trigger element
 
@@ -205,7 +197,7 @@ const Community = (props: Props) => {
         {imgData.map((img, index) => (
           <div
             key={index}
-            className={`rounded-full absolute flex items-center justify-center`}
+            className={`rounded-full absolute`}
             style={{
               top: `${img.top}px`,
               left: `${img.left}px`,
