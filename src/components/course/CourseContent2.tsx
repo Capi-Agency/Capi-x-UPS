@@ -51,7 +51,7 @@ const CourseContent2 = (props: Props) => {
         <div className="bg-[#000] rounded-[24px]">
           <div className="flex lg:flex-row lg:items-center lg:justify-between flex-col-reverse lg:gap-0 gap-5">
             <div
-              className="lg:py-[55px] lg:pl-[50px] pr-0 p-5 lg:w-[30%]"
+              className="lg:py-[55px] lg:pl-[50px] lg:pr-0 p-5 lg:w-[30%]"
               data-aos="fade-up"
               data-aos-delay="200"
             >
