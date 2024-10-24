@@ -125,7 +125,8 @@ const Support = (props: Props) => {
             </div>
           </div>
           <div data-aos="fade-up" data-aos-delay="400">
-            <div className="p-5 lg:p-[60px] bg-[#F3F3FB] rounded-3xl">
+            <div className="relative p-5 lg:p-[60px]">
+              <div className="bg-[#F3F3FB] inset-0 w-full h-full absolute -z-10 rounded-3xl"></div>
               <div className="relative w-[240px] h-[260px] lg:w-[324px] lg:h-[350px]">
                 <NextImg
                   src="/assets/icons/group-5.svg"
@@ -137,7 +138,7 @@ const Support = (props: Props) => {
               <p className="text-[#535662] text-[14px] lg:text-[18px] font-semibold leading-[22px] lg:leading-[28px] mt-5 lg:mt-[52px] mb-5 lg:mb-[50px]">
                 Bạn chưa tìm thấy câu trả lời phù hợp? Đi tới trung tâm hỗ trợ
               </p>
-              <button className="!bg-[#014227] !text-[#02E56A] btn active">
+              <button className="btn active !bg-[#014227] !text-[#02E56A]">
                 Trung tâm hỗ trợ
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

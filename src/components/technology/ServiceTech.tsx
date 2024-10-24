@@ -8,7 +8,7 @@ const ServiceTech = (props: Props) => {
     <div className="custom-container mt-[48px] lg:mt-[160px]">
       <div className="bg-[#0D0344] rounded-[24px] lg:grid lg:grid-cols-[341px,auto] lg:pl-[50px] flex flex-col-reverse">
         <div
-          className="flex flex-col mb-5 lg:mb-[50px] lg:place-self-end lg:mt-0 mt-6 lg:pl-0 pl-5"
+          className="flex flex-col mb-5 lg:mb-[50px] lg:place-self-end lg:mt-0 mt-6 lg:px-0 px-5"
           data-aos="fade-up"
           data-aos-delay="200"
         >

@@ -12,6 +12,29 @@ const CourseSchedule = (props: Props) => {
     { id: 3, name: "Thứ 2, 22/12" },
     { id: 4, name: "Thứ 5, 30/12" },
   ];
+  const contentData = [
+    {
+      title: "Tại sao nên nắm giữ ít nhất 1 cổ phiếu BĐS",
+      author: "Nguyễn Tuấn",
+      role: "Chuyên gia đầu tư",
+      duration: "~12 phút",
+      viewers: "140 người đặt lịch xem",
+    },
+    {
+      title: "12 cách thức giúp bạn nhận định mã cổ phiếu tăng trưởng bền vững",
+      author: "Trung Kiên",
+      role: "Chuyên gia đầu tư",
+      duration: "~20 phút",
+      viewers: "241 người đặt lịch xem",
+    },
+    {
+      title: "Vào tiền thế nào, đầu tư ra sao với chuyên gia đặt lệnh",
+      author: "Thái Sơn",
+      role: "Chuyên gia đầu tư",
+      duration: "~30 phút",
+      viewers: "400 người đặt lịch xem",
+    },
+  ];
   const [currentSchedule, setCurrentSchedule] = useState<number>(
     schedules[0].id
   );
@@ -25,232 +48,407 @@ const CourseSchedule = (props: Props) => {
       case 1:
         return (
           <div>
-            <div className="grid grid-cols-10 border-b border-[#60606B] border-opacity-65 py-6 gap-10">
-              <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] col-span-3">
-                Tại sao nên nắm giữ ít nhất 1 cổ phiếu BĐS
-              </p>
-              <div className="flex flex-col col-span-2">
-                <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
-                  Nguyễn Tuấn
-                </p>
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  Chuyên gia đầu tư
-                </p>
-              </div>
-              <div className="flex flex-col col-span-4">
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  ~12 phút,
-                </p>
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  140 người đặt lịch xem
-                </p>
-              </div>
-              <a
-                href=""
-                className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 col-span-1"
+            {contentData.map((item, index) => (
+              <div
+                key={index}
+                className={`lg:grid grid-cols-12 border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full ${
+                  index === contentData.length - 1 ? "border-none" : "border-b"
+                } `}
               >
-                Chi tiết
-                <div className="relative w-[20px] h-[20px]">
-                  <NextImg
-                    src="/assets/icons/arrow_forward-b.svg"
-                    alt="Capi"
-                    objectFit="cover"
-                    className=""
-                  />
+                <div className="flex lg:items-start items-center col-span-4 justify-between gap-4 lg:mb-0 mb-6">
+                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                    {item.title}
+                  </p>
+                  <div className="group lg:hidden block">
+                    <a
+                      href=""
+                      className="text-[#FF6D00] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 text-sm lg:text-base text-nowrap"
+                    >
+                      Chi tiết
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <mask
+                          id="mask0_3803_10961"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="20"
+                          height="20"
+                        >
+                          <rect width="20" height="20" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_3803_10961)">
+                          <path
+                            d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
+                            fill="#FF6D00"
+                          />
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-              </a>
-            </div>
-            <div className="grid grid-cols-10 border-b border-[#60606B] border-opacity-65 py-6 gap-10">
-              <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] col-span-3">
-                12 cách thức giúp bạn nhận định mã cổ phiếu tăng trưởng bền vững
-              </p>
-              <div className="flex flex-col col-span-2">
-                <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
-                  Trung Kiên
-                </p>
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  Chuyên gia đầu tư
-                </p>
-              </div>
-              <div className="flex flex-col col-span-4">
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  ~20 phút,
-                </p>
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  241 người đặt lịch xem
-                </p>
-              </div>
-              <a
-                href=""
-                className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 col-span-1"
-              >
-                Chi tiết
-                <div className="relative w-[20px] h-[20px]">
-                  <NextImg
-                    src="/assets/icons/arrow_forward-b.svg"
-                    alt="Capi"
-                    objectFit="cover"
-                    className=""
-                  />
+                <div className="flex col-span-6 gap-10 lg:justify-evenly justify-between">
+                  <div className="flex flex-col col-span-3">
+                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                      {item.author}
+                    </p>
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                      {item.role}
+                    </p>
+                  </div>
+                  <div className="flex flex-col col-span-3">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                      {item.duration}
+                    </p>
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                      {item.viewers}
+                    </p>
+                  </div>
                 </div>
-              </a>
-            </div>
-            <div className="grid grid-cols-10 border-b border-[#60606B] border-opacity-65 py-6 gap-10">
-              <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] col-span-3">
-                Vào tiền thế nào, đầu tư ra sao với chuyên gia đặt lệnh
-              </p>
-              <div className="flex flex-col col-span-2">
-                <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
-                  Thái Sơn
-                </p>
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  Chuyên gia đầu tư
-                </p>
-              </div>
-              <div className="flex flex-col col-span-4">
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  ~30 phút,
-                </p>
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  400 người đặt lịch xem
-                </p>
-              </div>
-              <a
-                href=""
-                className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 col-span-1"
-              >
-                Chi tiết
-                <div className="relative w-[20px] h-[20px]">
-                  <NextImg
-                    src="/assets/icons/arrow_forward-b.svg"
-                    alt="Capi"
-                    objectFit="cover"
-                    className=""
-                  />
+                <div className="group col-span-2 lg:block hidden justify-self-end">
+                  <a
+                    href=""
+                    className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00]  text-nowrap"
+                  >
+                    Chi tiết
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <mask
+                        id="mask0_3803_10961"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="20"
+                        height="20"
+                      >
+                        <rect width="20" height="20" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_3803_10961)">
+                        <path
+                          d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
+                          fill="#0C1C28"
+                          className="group-hover:fill-[#FF6D00]"
+                        />
+                      </g>
+                    </svg>
+                  </a>
                 </div>
-              </a>
-            </div>
+              </div>
+            ))}
           </div>
         );
       case 2:
         return (
-          <>
-            <div className="grid grid-cols-10 border-b border-[#60606B] border-opacity-65 py-6 gap-10">
-              <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] col-span-3">
-                12 cách thức giúp bạn nhận định mã cổ phiếu tăng trưởng bền vững
-              </p>
-              <div className="flex flex-col col-span-2">
-                <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
-                  Trung Kiên
-                </p>
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  Chuyên gia đầu tư
-                </p>
-              </div>
-              <div className="flex flex-col col-span-4">
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  ~20 phút,
-                </p>
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  241 người đặt lịch xem
-                </p>
-              </div>
-              <a
-                href=""
-                className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 col-span-1"
+          <div>
+            {contentData.map((item, index) => (
+              <div
+                key={index}
+                className="lg:grid grid-cols-12 border-b border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full"
               >
-                Chi tiết
-                <div className="relative w-[20px] h-[20px]">
-                  <NextImg
-                    src="/assets/icons/arrow_forward-b.svg"
-                    alt="Capi"
-                    objectFit="cover"
-                    className=""
-                  />
+                <div className="flex lg:items-start items-center col-span-4 justify-between gap-4 lg:mb-0 mb-6">
+                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
+                    {item.title}
+                  </p>
+                  <div className="group lg:hidden block">
+                    <a
+                      href=""
+                      className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00] text-nowrap"
+                    >
+                      Chi tiết
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <mask
+                          id="mask0_3803_10961"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="20"
+                          height="20"
+                        >
+                          <rect width="20" height="20" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_3803_10961)">
+                          <path
+                            d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
+                            fill="#0C1C28"
+                            className="group-hover:fill-[#FF6D00]"
+                          />
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-              </a>
-            </div>
-          </>
+                <div className="flex col-span-6 gap-10 lg:justify-evenly justify-between">
+                  <div className="flex flex-col col-span-3">
+                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
+                      {item.author}
+                    </p>
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                      {item.role}
+                    </p>
+                  </div>
+                  <div className="flex flex-col col-span-3">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                      {item.duration}
+                    </p>
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                      {item.viewers}
+                    </p>
+                  </div>
+                </div>
+                <div className="group col-span-2 lg:block hidden justify-self-end">
+                  <a
+                    href=""
+                    className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00]  text-nowrap"
+                  >
+                    Chi tiết
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <mask
+                        id="mask0_3803_10961"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="20"
+                        height="20"
+                      >
+                        <rect width="20" height="20" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_3803_10961)">
+                        <path
+                          d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
+                          fill="#0C1C28"
+                          className="group-hover:fill-[#FF6D00]"
+                        />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         );
       case 3:
         return (
-          <>
-            <div className="grid grid-cols-10 border-b border-[#60606B] border-opacity-65 py-6 gap-10">
-              <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] col-span-3">
-                12 cách thức giúp bạn nhận định mã cổ phiếu tăng trưởng bền vững
-              </p>
-              <div className="flex flex-col col-span-2">
-                <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
-                  Văn Thành
-                </p>
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  Chuyên gia đầu tư
-                </p>
-              </div>
-              <div className="flex flex-col col-span-4">
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  ~20 phút,
-                </p>
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  241 người đặt lịch xem
-                </p>
-              </div>
-              <a
-                href=""
-                className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 col-span-1"
+          <div>
+            {contentData.map((item, index) => (
+              <div
+                key={index}
+                className="lg:grid grid-cols-12 border-b border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full"
               >
-                Chi tiết
-                <div className="relative w-[20px] h-[20px]">
-                  <NextImg
-                    src="/assets/icons/arrow_forward-b.svg"
-                    alt="Capi"
-                    objectFit="cover"
-                    className=""
-                  />
+                <div className="flex lg:items-start items-center col-span-4 justify-between gap-4 lg:mb-0 mb-6">
+                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
+                    {item.title}
+                  </p>
+                  <div className="group lg:hidden block">
+                    <a
+                      href=""
+                      className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00] text-nowrap"
+                    >
+                      Chi tiết
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <mask
+                          id="mask0_3803_10961"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="20"
+                          height="20"
+                        >
+                          <rect width="20" height="20" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_3803_10961)">
+                          <path
+                            d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
+                            fill="#0C1C28"
+                            className="group-hover:fill-[#FF6D00]"
+                          />
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-              </a>
-            </div>
-          </>
+                <div className="flex col-span-6 gap-10 lg:justify-evenly justify-between">
+                  <div className="flex flex-col col-span-3">
+                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
+                      {item.author}
+                    </p>
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                      {item.role}
+                    </p>
+                  </div>
+                  <div className="flex flex-col col-span-3">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                      {item.duration}
+                    </p>
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                      {item.viewers}
+                    </p>
+                  </div>
+                </div>
+                <div className="group col-span-2 lg:block hidden justify-self-end">
+                  <a
+                    href=""
+                    className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00]  text-nowrap"
+                  >
+                    Chi tiết
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <mask
+                        id="mask0_3803_10961"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="20"
+                        height="20"
+                      >
+                        <rect width="20" height="20" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_3803_10961)">
+                        <path
+                          d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
+                          fill="#0C1C28"
+                          className="group-hover:fill-[#FF6D00]"
+                        />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         );
       case 4:
         return (
-          <>
-            <div className="grid grid-cols-10 border-b border-[#60606B] border-opacity-65 py-6 gap-10">
-              <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] col-span-3">
-                12 cách thức giúp bạn nhận định mã cổ phiếu tăng trưởng bền vững
-              </p>
-              <div className="flex flex-col col-span-2">
-                <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
-                  Trung Kiên
-                </p>
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  Chuyên gia đầu tư
-                </p>
-              </div>
-              <div className="flex flex-col col-span-4">
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  ~20 phút,
-                </p>
-                <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
-                  241 người đặt lịch xem
-                </p>
-              </div>
-              <a
-                href=""
-                className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 col-span-1"
+          <div>
+            {contentData.map((item, index) => (
+              <div
+                key={index}
+                className="lg:grid grid-cols-12 border-b border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full"
               >
-                Chi tiết
-                <div className="relative w-[20px] h-[20px]">
-                  <NextImg
-                    src="/assets/icons/arrow_forward-b.svg"
-                    alt="Capi"
-                    objectFit="cover"
-                    className=""
-                  />
+                <div className="flex lg:items-start items-center col-span-4 justify-between gap-4 lg:mb-0 mb-6">
+                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
+                    {item.title}
+                  </p>
+                  <div className="group lg:hidden block">
+                    <a
+                      href=""
+                      className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00] text-nowrap"
+                    >
+                      Chi tiết
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <mask
+                          id="mask0_3803_10961"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="20"
+                          height="20"
+                        >
+                          <rect width="20" height="20" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_3803_10961)">
+                          <path
+                            d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
+                            fill="#0C1C28"
+                            className="group-hover:fill-[#FF6D00]"
+                          />
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-              </a>
-            </div>
-          </>
+                <div className="flex col-span-6 gap-10 lg:justify-evenly justify-between">
+                  <div className="flex flex-col col-span-3">
+                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
+                      {item.author}
+                    </p>
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                      {item.role}
+                    </p>
+                  </div>
+                  <div className="flex flex-col col-span-3">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                      {item.duration}
+                    </p>
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                      {item.viewers}
+                    </p>
+                  </div>
+                </div>
+                <div className="group col-span-2 lg:block hidden justify-self-end">
+                  <a
+                    href=""
+                    className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00]  text-nowrap"
+                  >
+                    Chi tiết
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <mask
+                        id="mask0_3803_10961"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="20"
+                        height="20"
+                      >
+                        <rect width="20" height="20" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_3803_10961)">
+                        <path
+                          d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
+                          fill="#0C1C28"
+                          className="group-hover:fill-[#FF6D00]"
+                        />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         );
       default:
         return null;
@@ -258,7 +456,7 @@ const CourseSchedule = (props: Props) => {
   };
 
   return (
-    <div className="custom-container 3xl:!max-w-[1280px] mt-[160px]">
+    <div className="custom-container 3xl:!max-w-[1280px] mt-16 lg:mt-[160px]">
       <Tabs
         defaultValue={currentSchedule.toString()}
         onValueChange={handleScheduleClick}
@@ -266,19 +464,19 @@ const CourseSchedule = (props: Props) => {
         data-aos-delay="200"
       >
         <div>
-          <span className="text-[18px] text-[#FF6D00] font-medium leading-[40px]">
+          <span className="text-[14px] lg:text-[18px] text-[#FF6D00] font-medium leading-[22px] lg:leading-[40px]">
             Quý 4, 2024
           </span>
-          <h2 className="text-[48px] text-[#141414] font-bold leading-[54px] mt-2 mb-5">
+          <h2 className="text-[20px] lg:text-[48px] text-[#141414] font-bold lg:leading-[54px] mt-2 mb-3 lg:mb-5">
             Lịch trình ra mắt
           </h2>
         </div>
-        <TabsList className="flex gap-10">
+        <TabsList className="flex gap-6 lg:gap-10 whitespace-nowrap overflow-x-auto scrollbar-hidden max-w-full">
           {schedules.map((schedule) => (
             <TabsTrigger
               key={schedule.id}
               value={schedule.id.toString()}
-              className={`text-[18px] font-medium pb-[9px] leading-[28px] text-[#111013]  ${
+              className={`text-[14px] lg:text-[18px]  font-medium py-[9px] leading-[22px] lg:leading-[28px] text-[#111013]  ${
                 currentSchedule === schedule.id
                   ? "border-b-2 border-[#0C1C28]"
                   : "border-none"
@@ -292,7 +490,7 @@ const CourseSchedule = (props: Props) => {
           <TabsContent
             key={schedule.id}
             value={schedule.id.toString()}
-            className="mt-[40px]"
+            className="mt-3 lg:mt-[40px]"
           >
             {renderContent()}
           </TabsContent>

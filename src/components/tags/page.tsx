@@ -3,30 +3,28 @@ import React from "react";
 type Props = {};
 
 const TagsPage = (props: Props) => {
+  const tags = [
+    "#tinthitruong",
+    "#tinxahoi",
+    "#congbomoi",
+    "#baocaomoingay",
+    "#thegioihanghoa",
+    "#phaisinh",
+  ];
   return (
     <div
-      className="custom-container flex items-center flex-wrap justify-center gap-10 mt-[100px] mb-[-60px]"
+      className="custom-container flex items-center gap-6 flex-wrap justify-center lg:gap-10 mt-16 lg:mt-[100px] lg:mb-[-60px]"
       data-aos="fade-up"
       data-aos-delay="200"
     >
-      <p className="text-[#15171E] text-[16px] font-bold leading-normal">
-        #tinthitruong
-      </p>
-      <p className="text-[#15171E] text-[16px] font-bold leading-normal">
-        #tinxahoi
-      </p>
-      <p className="text-[#15171E] text-[16px] font-bold leading-normal">
-        #congbomoi
-      </p>
-      <p className="text-[#15171E] text-[16px] font-bold leading-normal">
-        #baocaomoingay
-      </p>
-      <p className="text-[#15171E] text-[16px] font-bold leading-normal">
-        #thegioihanghoa
-      </p>
-      <p className="text-[#15171E] text-[16px] font-bold leading-normal">
-        #phaisinh
-      </p>
+      {tags.map((tag, index) => (
+        <p
+          key={index}
+          className="text-[#15171E] text-[16px] font-bold leading-normal"
+        >
+          {tag}
+        </p>
+      ))}
     </div>
   );
 };

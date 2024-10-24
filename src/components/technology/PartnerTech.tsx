@@ -2,6 +2,45 @@ import React from "react";
 import NextImg from "../common/next-img";
 
 type Props = {};
+const logos = [
+  {
+    src: "/assets/icons/tinder.svg",
+  },
+  {
+    src: "/assets/icons/Electronic-Arts.svg",
+  },
+  {
+    src: "/assets/icons/Amazon.svg",
+  },
+  {
+    src: "/assets/icons/Slack_Technologies.svg",
+  },
+  {
+    src: "/assets/icons/Airbnb.svg",
+  },
+  {
+    src: "/assets/icons/Intel.svg",
+  },
+  {
+    src: "/assets/icons/Walmart.svg",
+  },
+  {
+    src: "/assets/icons/LinkedIn.svg",
+  },
+  {
+    src: "/assets/icons/Google.svg",
+  },
+  {
+    src: "/assets/icons/Lyft.svg",
+
+  },
+  {
+    src: "/assets/icons/Spotify.svg",
+  },
+  {
+    src: "/assets/icons/national-geographic.svg",
+  },
+];
 
 const PartnerTech = (props: Props) => {
   return (
@@ -24,90 +63,14 @@ const PartnerTech = (props: Props) => {
           data-aos="fade-up"
           data-aos-delay="600"
         >
-          <div className="relative w-[64px] h-[24px] lg:w-[86px] lg:h-[32px]">
-            <NextImg
-              src="/assets/icons/tinder.svg"
-              alt="Capi"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[38.5px] h-[38.5px] lg:w-[52px] lg:h-[52px]">
-            <NextImg
-              src="/assets/icons/Electronic-Arts.svg"
-              alt="Capi"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[82px] h-[24px] lg:w-[110px] lg:h-[32px]">
-            <NextImg
-              src="/assets/icons/Amazon.svg"
-              alt="Capi"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[88px] h-[23px] lg:w-[118px] lg:h-[30px]">
-            <NextImg
-              src="/assets/icons/Slack_Technologies.svg"
-              alt="Capi"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[86px] h-[27px] lg:w-[116px] lg:h-[36px]">
-            <NextImg
-              src="/assets/icons/Airbnb.svg"
-              alt="Capi"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[54px] h-[23px] lg:w-[72px] lg:h-[30px]">
-            <NextImg
-              src="/assets/icons/Intel.svg"
-              alt="Capi"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[99px] h-[24px] lg:w-[133px] lg:h-[32px]">
-            <NextImg
-              src="/assets/icons/Walmart.svg"
-              alt="Capi"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[87px] h-[21px] lg:w-[117px] lg:h-[28px]">
-            <NextImg
-              src="/assets/icons/LinkedIn.svg"
-              alt="Capi"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[79px] h-[27px] lg:w-[106px] lg:h-[36px]">
-            <NextImg
-              src="/assets/icons/Google.svg"
-              alt="Capi"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[43px] h-[30px] lg:w-[57px] lg:h-[40px]">
-            <NextImg
-              src="/assets/icons/Lyft.svg"
-              alt="Capi"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[94px] h-[28px] lg:w-[127px] lg:h-[38px]">
-            <NextImg
-              src="/assets/icons/Spotify.svg"
-              alt="Capi"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[91px] h-[27px] lg:w-[122px] lg:h-[36px]">
-            <NextImg 
-              src="/assets/icons/national-geographic.svg"
-              alt="Capi"
-              objectFit="cover"
-            />
-          </div>
+          {logos.map((logo, index) => (
+            <div
+              key={index}
+              className={`relative w-full h-6 lg:h-9`}
+            >
+              <NextImg src={logo.src} alt="Capi" objectFit="contain" />
+            </div>
+          ))}
         </div>
       </div>
     </div>

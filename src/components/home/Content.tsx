@@ -158,7 +158,7 @@ const Content = (props: Props) => {
               choose from pre-made templates.
             </p>
             <div>
-              <button className="flex items-center gap-3 btn active !text-[#FFF] !bg-[#FF6D00]">
+              <button className="btn !text-[#FFF] !bg-[#FF6D00]">
                 Khám phá ngay
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

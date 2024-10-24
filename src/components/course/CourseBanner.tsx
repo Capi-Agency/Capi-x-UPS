@@ -6,10 +6,13 @@ type Props = {};
 const CourseBanner = (props: Props) => {
   return (
     <div className="bg-[#FFECD2]">
-      <div className="pt-5 custom-container">
+      <div className="pt-11 lg:pt-5 lg:pb-0 pb-6 custom-container">
         <div className="lg:grid grid-cols-[52%,48%] items-center">
-          <div className="relative w-full pt-[88%]" data-aos="fade-up"
-            data-aos-delay="200">
+          <div
+            className="relative w-full pt-[88%]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <NextImg
               src="/assets/image/banner-course.svg"
               alt="Capi"
@@ -17,22 +20,25 @@ const CourseBanner = (props: Props) => {
               className=""
             />
           </div>
-          <div className="w-[80%] justify-self-end" data-aos="fade-up"
-            data-aos-delay="600">
-            <span className="text-[#0C1C28] text-lg font-bold leading-[26px]">
+          <div
+            className="lg:w-[80%] lg:justify-self-end lg:mt-0 mt-10"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <span className="text-[#0C1C28] text-[14px] lg:text-lg font-bold leading-[22px] lg:leading-[26px]">
               Chuỗi nội dung mới
             </span>
-            <p className="text-[#0C1C28] text-lg leading-[26px]">
+            <p className="text-[#0C1C28] text-[14px] lg:ext-lg leading-[22px] lg:leading-[26px]">
               Hà Nội, Việt Nam 20-23 tháng 11, 2024
             </p>
-            <h1 className="text-[#0C1C28] text-[80px] font-bold leading-[92%] -tracking-[1.6px] my-2">
+            <h1 className="text-[#0C1C28] text-[32px] lg:text-[80px] font-bold lg:leading-[92%] -tracking-[1.6px] my-1 lg:my-2">
               UPS Academy
             </h1>
-            <h3 className="text-[#0C1C28] text-[48px] font-bold leading-[56px]">
+            <h3 className="text-[#0C1C28] text-[20px] lg:text-[48px] font-bold lg:leading-[56px]">
               Trung tâm đào tạo và chia sẻ kiến thức
             </h3>
-            <div className="grid grid-cols-3 mt-[94px] gap-10">
-              <div className="bg-[#FF6D00] p-6 h-[100px] flex items-end">
+            <div className="grid grid-cols-3 mt-6 lg:mt-[94px] gap-3 lg:gap-10">
+              <div className="bg-[#FF6D00] p-6 flex items-end">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -47,29 +53,29 @@ const CourseBanner = (props: Props) => {
                   />
                 </svg>
               </div>
-              <div className="pt-6 border-t border-[#60606B] flex flex-col gap-2">
+              <div className="pt-3 lg:pt-6 border-t border-[#60606B] flex flex-col gap-2">
                 <p>
-                  <span className="text-[#0C1C28] text-[40px] font-bold leading-[105%] tracking-[0.4px]">
+                  <span className="text-[#0C1C28] text-[20px] lg:text-[40px] font-bold leading-[105%] tracking-[0.4px]">
                     95
                   </span>
-                  <span className="text-[#0C1C28] text-[32px] font-bold leading-[105%]">
+                  <span className="text-[#0C1C28] text-[20px] lg:text-[32px] font-bold leading-[105%]">
                     +
                   </span>
                 </p>
-                <p className="text-[#0C1C28] text-[16px] font-medium leading-[25px] tracking-[0.328px]">
+                <p className="text-[#0C1C28] text-[14px] lg:text-[16px] font-medium leading-[22px] lg:leading-[25px] tracking-[0.28px] lg:tracking-[0.328px]">
                   Video bài giảng
                 </p>
               </div>
-              <div className="pt-6 border-t border-[#60606B] flex flex-col gap-2">
+              <div className="pt-3 lg:pt-6 border-t border-[#60606B] flex flex-col gap-2">
                 <p>
-                  <span className="text-[#0C1C28] text-[40px] font-bold leading-[105%] tracking-[0.4px]">
+                  <span className="text-[#0C1C28] text-[20px] lg:text-[40px] font-bold leading-[105%] tracking-[0.4px]">
                     285
                   </span>
-                  <span className="text-[#0C1C28] text-[32px] font-bold leading-[105%]">
+                  <span className="text-[#0C1C28] text-[20px] lg:text-[32px] font-bold leading-[105%]">
                     +
                   </span>
                 </p>
-                <p className="text-[#0C1C28] text-[16px] font-medium leading-[25px] tracking-[0.328px]">
+                <p className="text-[#0C1C28] text-[14px] lg:text-[16px] font-medium leading-[22px] lg:leading-[25px] tracking-[0.28px] lg:tracking-[0.328px]">
                   Nội dung thiết thực
                 </p>
               </div>
