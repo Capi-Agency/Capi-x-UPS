@@ -38,19 +38,7 @@ const DirectorAbout = (props: Props) => {
             </p>
           </div>
         </div>
-        <div className="lg:grid lg:grid-cols-2 lg:gap-[30px] flex flex-col gap-3 mt-3 lg:mt-[30px]">
-          <div
-            className="relative w-full pt-[100%]"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <NextImg
-              src="/assets/image/director-2.jpg"
-              alt="Capi"
-              objectFit="cover"
-              className="rounded-[24px]"
-            />
-          </div>
+        <div className="lg:grid lg:grid-cols-2 lg:gap-[30px] flex flex-col-reverse gap-3 mt-3 lg:mt-[30px]">
           <div
             className="bg-[#F3F3FB] rounded-[24px] p-5 lg:p-10 pb-[20%]"
             data-aos="fade-up"
@@ -67,6 +55,18 @@ const DirectorAbout = (props: Props) => {
               internal tool to share its brand story with every employee, from
               sales to product…
             </p>
+          </div>
+          <div
+            className="relative w-full pt-[100%]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <NextImg
+              src="/assets/image/director-2.jpg"
+              alt="Capi"
+              objectFit="cover"
+              className="rounded-[24px]"
+            />
           </div>
         </div>
         <div className="lg:grid lg:grid-cols-2 lg:gap-[30px] flex flex-col gap-3 mt-3 lg:mt-[30px]">

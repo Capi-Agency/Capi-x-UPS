@@ -26,7 +26,7 @@ const BannerAbout = (props: Props) => {
           <div
             className="text-right flex flex-col items-end justify-end self-end lg:absolute right-0 z-10"
             data-aos="fade-up"
-            data-aos-delay="200"
+            data-aos-delay="400"
           >
             <h1 className="text-[#0F1B0E] text-right font-hanken-grotesk text-[32px] lg:text-[100px] font-bold lg:leading-[120px] tracking-[-0.64px] lg:tracking-[-2px]">
               Tự hào
@@ -58,7 +58,7 @@ const BannerAbout = (props: Props) => {
         <div
           className="flex custom-container items-end justify-between mt-6 lg:mt-[30px]"
           data-aos="fade-up"
-          data-aos-delay="200"
+          data-aos-delay="400"
         >
           <div className="border-t-[1px] border-[#000] pt-3 lg:pt-[40px] w-full lg:w-[400px]">
             <p className="text-[#074E28] text-[14px] lg:text-[20px] font-medium leading-[22px] lg:leading-[28px]">

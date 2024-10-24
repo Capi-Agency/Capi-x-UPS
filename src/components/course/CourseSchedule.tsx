@@ -153,16 +153,18 @@ const CourseSchedule = (props: Props) => {
             {contentData.map((item, index) => (
               <div
                 key={index}
-                className="lg:grid grid-cols-12 border-b border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full"
+                className={`lg:grid grid-cols-12 border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full ${
+                  index === contentData.length - 1 ? "border-none" : "border-b"
+                } `}
               >
                 <div className="flex lg:items-start items-center col-span-4 justify-between gap-4 lg:mb-0 mb-6">
-                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
+                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                     {item.title}
                   </p>
                   <div className="group lg:hidden block">
                     <a
                       href=""
-                      className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00] text-nowrap"
+                      className="text-[#FF6D00] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 text-sm lg:text-base text-nowrap"
                     >
                       Chi tiết
                       <svg
@@ -185,8 +187,7 @@ const CourseSchedule = (props: Props) => {
                         <g mask="url(#mask0_3803_10961)">
                           <path
                             d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
-                            fill="#0C1C28"
-                            className="group-hover:fill-[#FF6D00]"
+                            fill="#FF6D00"
                           />
                         </g>
                       </svg>
@@ -195,18 +196,18 @@ const CourseSchedule = (props: Props) => {
                 </div>
                 <div className="flex col-span-6 gap-10 lg:justify-evenly justify-between">
                   <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
+                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                       {item.author}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                       {item.role}
                     </p>
                   </div>
                   <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                       {item.duration}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                       {item.viewers}
                     </p>
                   </div>
@@ -254,16 +255,18 @@ const CourseSchedule = (props: Props) => {
             {contentData.map((item, index) => (
               <div
                 key={index}
-                className="lg:grid grid-cols-12 border-b border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full"
+                className={`lg:grid grid-cols-12 border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full ${
+                  index === contentData.length - 1 ? "border-none" : "border-b"
+                } `}
               >
                 <div className="flex lg:items-start items-center col-span-4 justify-between gap-4 lg:mb-0 mb-6">
-                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
+                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                     {item.title}
                   </p>
                   <div className="group lg:hidden block">
                     <a
                       href=""
-                      className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00] text-nowrap"
+                      className="text-[#FF6D00] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 text-sm lg:text-base text-nowrap"
                     >
                       Chi tiết
                       <svg
@@ -286,8 +289,7 @@ const CourseSchedule = (props: Props) => {
                         <g mask="url(#mask0_3803_10961)">
                           <path
                             d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
-                            fill="#0C1C28"
-                            className="group-hover:fill-[#FF6D00]"
+                            fill="#FF6D00"
                           />
                         </g>
                       </svg>
@@ -296,18 +298,18 @@ const CourseSchedule = (props: Props) => {
                 </div>
                 <div className="flex col-span-6 gap-10 lg:justify-evenly justify-between">
                   <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
+                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                       {item.author}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                       {item.role}
                     </p>
                   </div>
                   <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                       {item.duration}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                       {item.viewers}
                     </p>
                   </div>
@@ -355,16 +357,18 @@ const CourseSchedule = (props: Props) => {
             {contentData.map((item, index) => (
               <div
                 key={index}
-                className="lg:grid grid-cols-12 border-b border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full"
+                className={`lg:grid grid-cols-12 border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full ${
+                  index === contentData.length - 1 ? "border-none" : "border-b"
+                } `}
               >
                 <div className="flex lg:items-start items-center col-span-4 justify-between gap-4 lg:mb-0 mb-6">
-                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
+                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                     {item.title}
                   </p>
                   <div className="group lg:hidden block">
                     <a
                       href=""
-                      className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00] text-nowrap"
+                      className="text-[#FF6D00] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 text-sm lg:text-base text-nowrap"
                     >
                       Chi tiết
                       <svg
@@ -387,8 +391,7 @@ const CourseSchedule = (props: Props) => {
                         <g mask="url(#mask0_3803_10961)">
                           <path
                             d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
-                            fill="#0C1C28"
-                            className="group-hover:fill-[#FF6D00]"
+                            fill="#FF6D00"
                           />
                         </g>
                       </svg>
@@ -397,18 +400,18 @@ const CourseSchedule = (props: Props) => {
                 </div>
                 <div className="flex col-span-6 gap-10 lg:justify-evenly justify-between">
                   <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px]">
+                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                       {item.author}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                       {item.role}
                     </p>
                   </div>
                   <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                       {item.duration}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px]">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
                       {item.viewers}
                     </p>
                   </div>

@@ -9,7 +9,7 @@ const CourseBanner = (props: Props) => {
       <div className="pt-11 lg:pt-5 lg:pb-0 pb-6 custom-container">
         <div className="lg:grid grid-cols-[52%,48%] items-center">
           <div
-            className="relative w-full pt-[88%]"
+            className="relative w-full lg:h-[661px] pt-[88%]"
             data-aos="fade-up"
             data-aos-delay="200"
           >
