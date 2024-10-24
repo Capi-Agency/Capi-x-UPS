@@ -20,7 +20,7 @@ const TagsPage = (props: Props) => {
       {tags.map((tag, index) => (
         <p
           key={index}
-          className="text-[#15171E] text-[16px] font-bold leading-normal"
+          className="text-[#15171E] text-sm lg:text-[16px] font-bold leading-normal"
         >
           {tag}
         </p>
