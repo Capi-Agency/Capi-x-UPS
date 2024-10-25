@@ -9,9 +9,9 @@ const MobileApp = (props: Props) => {
       {/* section 5 */}
       <div className="bg-[#0F1B0E] mb-10 lg:mb-[160px] pt-10 lg:pt-[74px]">
         <div className="custom-container  ">
-          <div className="lg:px-[130px] lg:grid lg:grid-cols-2 ">
+          <div className="xl:px-[107px] 3xl:px-[128px] lg:grid lg:grid-cols-2 flex flex-col">
             <div
-              className="flex flex-col gap-5 lg:gap-8 lg:mt-20"
+              className="flex flex-col gap-5 lg:gap-8 lg:my-auto"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -75,15 +75,14 @@ const MobileApp = (props: Props) => {
               </div>
             </div>
             <div
-              className="relative w-[full] h-[470px] lg:h-[830px] lg:mt-0 mt-10"
+              className="w-[full] sm:pt-[70%] pt-[141%] lg:pt-[141%] lg:mt-0 mt-10"
               data-aos="fade-up"
               data-aos-delay="400"
             >
               <NextImg
-                src="/assets/icons/phone-banner.svg"
+                src="/assets/image/phone-home.png"
                 alt="Capi"
-                objectFit="cover"
-                className="object-top"
+                objectFit="contain"
               />
             </div>
           </div>

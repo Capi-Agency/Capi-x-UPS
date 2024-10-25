@@ -77,13 +77,13 @@ const Banner = (props: Props) => {
         </div>
       </div>
       <div
-        className="flex lg:flex-row flex-col items-center gap-4 lg:gap-9 mt-6 lg:mt-[70px] max-w-[1390px] mx-auto"
+        className="flex lg:flex-row flex-col items-center gap-4 lg:gap-9 mt-6 lg:mt-[70px] max-w-[1440px] px-6 mx-auto"
         data-aos="fade-up"
       >
-        <p className="text-[#FFF] text-sm lg:text-xl font-medium lg:w-[110px]">
+        <p className="text-[#FFF] text-sm lg:text-xl font-medium lg:min-w-[110px] lg:w-[110px]">
           Top đầu tư của tuần
         </p>
-        <div className="flex items-center gap-3 lg:gap-9 whitespace-nowrap overflow-x-auto scrollbar-hidden max-w-full lg:px-0 px-6">
+        <div className="flex items-center gap-3 lg:gap-9 whitespace-nowrap overflow-x-auto scrollbar-hidden max-w-full lg:px-0">
           {userData.map((user, index) => (
             <div className="flex items-center gap-5" key={index}>
               <div className="relative w-10 h-10 lg:w-[54px] lg:h-[54px]">

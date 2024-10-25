@@ -45,16 +45,24 @@ const SlideAbout = (props: Props) => {
       <Swiper
         ref={swiperRef}
         breakpoints={{
-          1024: {
+          1600: {
             slidesPerView: 4,
             spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3.6,
+            spaceBetween: 20,
+          },
+          620: {
+            slidesPerView: 2.6,
+            spaceBetween: 16,
           },
           0: {
             slidesPerView: 1.6,
             spaceBetween: 12,
           },
         }}
-        className="mySwiper"
+        className="mySwiper sm:container-slide md:custom-container"
         data-aos="fade-up"
         data-aos-delay="200"
       >
@@ -89,7 +97,7 @@ const SlideAbout = (props: Props) => {
             setIsHovered(false);
           };
           return (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className={`${index === 0 ? 'ml-6 md:ml-0' : ''}`}>
               <div
                 ref={cardRef}
                 className={`card rounded-[12px] lg:rounded-[16px] p-5 lg:p-[32px] flex flex-col justify-between h-[320px] lg:h-[430px] relative overflow-hidden bg-[#161519]`}
@@ -127,7 +135,7 @@ const SlideAbout = (props: Props) => {
         })}
       </Swiper>
       <div
-        className="flex items-center gap-2 float-right mt-6 lg:mt-10"
+        className="flex items-center gap-2 justify-end mt-6 lg:mt-10 custom-container"
         data-aos="fade-up"
         data-aos-delay="200"
       >

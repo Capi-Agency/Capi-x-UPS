@@ -104,7 +104,7 @@ const Support = (props: Props) => {
   return (
     <>
       <div className="max-w-[1120px] mx-auto mt-[48px] lg:mt-[160px]">
-        <div className="lg:grid lg:grid-cols-[600px,auto] flex flex-col gap-6 lg:gap-20">
+        <div className="xl:grid xl:grid-cols-[600px,auto] lg:flex-wrap flex flex-col gap-6 lg:gap-20">
           <div data-aos="fade-up" data-aos-delay="200">
             <span className="text-[#111013] text-[20px] lg:text-[48px] font-bold lg:leading-[56px]">
               <span className="text-[#01C159]">Câu hỏi</span> thường gặp

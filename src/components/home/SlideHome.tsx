@@ -7,6 +7,7 @@ type Props = {};
 const SlideHome = (props: Props) => {
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
   const slides = [
     "/assets/image/img-slide.png",
     "/assets/image/img-slide.png",
@@ -29,7 +30,7 @@ const SlideHome = (props: Props) => {
             1024: {
               speed: 800,
             },
-            0: { 
+            0: {
               speed: 400,
             },
           }}
@@ -49,10 +50,16 @@ const SlideHome = (props: Props) => {
           className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -left-8 z-[10] lg:block hidden"
           onClick={() => {
             if (swiperRef.current && swiperRef.current.swiper) {
-              swiperRef.current.swiper.slidePrev();
-              setActiveIndex(
-                (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
-              );
+              if (!isAnimating) {
+                setIsAnimating(true);
+                swiperRef.current.swiper.slidePrev();
+                setActiveIndex(
+                  (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
+                );
+                setTimeout(() => {
+                  setIsAnimating(false);
+                }, 800);
+              }
             }
           }}
         >
@@ -75,8 +82,15 @@ const SlideHome = (props: Props) => {
           className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -right-8 z-[10] lg:block hidden"
           onClick={() => {
             if (swiperRef.current && swiperRef.current.swiper) {
-              swiperRef.current.swiper.slideNext();
-              setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
+              if (!isAnimating) {
+                setIsAnimating(true);
+                swiperRef.current.swiper.slideNext();
+                setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
+
+                setTimeout(() => {
+                  setIsAnimating(false);
+                }, 800);
+              }
             }
           }}
         >

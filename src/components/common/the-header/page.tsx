@@ -11,13 +11,13 @@ const TheHeader = (props: Props) => {
 
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = "hidden"; // Ẩn cuộn
+      document.body.style.overflow = "hidden"; 
     } else {
-      document.body.style.overflow = "auto"; // Hiện cuộn
+      document.body.style.overflow = "auto"; 
     }
 
     return () => {
-      document.body.style.overflow = "auto"; // Đảm bảo quay về trạng thái ban đầu
+      document.body.style.overflow = "auto"; 
     };
   }, [isMenuOpen]);
   return (
@@ -43,7 +43,7 @@ const TheHeader = (props: Props) => {
                 />
               </div>
             </Link>
-            <ul className="items-center hidden space-x-8 lg:flex">
+            <ul className="items-center hidden space-x-5 2xl:space-x-8 xl:flex">
               <li>
                 <Link
                   href="/"
@@ -111,7 +111,7 @@ const TheHeader = (props: Props) => {
                 </a>
               </li>
             </ul>
-            <ul className="items-center hidden space-x-8 lg:flex">
+            <ul className="items-center hidden space-x-5 2xl:space-x-8 xl:flex">
               <li>
                 <Link
                   href="/"
@@ -203,7 +203,7 @@ const TheHeader = (props: Props) => {
                 </a>
               </li>
             </ul>
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <div className="flex items-center gap-4">
                 <Link
                   href="/"

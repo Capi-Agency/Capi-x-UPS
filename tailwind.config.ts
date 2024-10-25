@@ -11,13 +11,13 @@ const config = {
   prefix: "",
   theme: {
     screens: {
-		'sm': '640px',  // Màn hình nhỏ
-		'md': '768px',  // Màn hình trung bình
-		'lg': '1024px', // Màn hình lớn
-		'xl': '1280px', // Màn hình extra lớn
-		'2xl': '1600px', // Màn hình rất lớn
-		'3xl': '1920px', // Màn hình siêu lớn
-	  },
+      "sm": "375px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1440px",
+      "3xl": "1760px",
+    },
     extend: {
       fontFamily: {
         hanken: ["Hanken Grotesk", "sans-serif"],
