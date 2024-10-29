@@ -7,7 +7,7 @@ type Props = {};
 const BannerAbout = (props: Props) => {
   return (
     <>
-      <div className="pt-[76px] lg:pt-[120px] pb-[70px] bg-[#00D763]">
+      <div className="pt-[76px] lg:pt-[120px] pb-10 lg:pb-[70px] bg-[#00D763]">
         <div className="flex lg:flex-row flex-col items-center custom-container relative">
           <div
             className="w-full lg:w-[50%]"

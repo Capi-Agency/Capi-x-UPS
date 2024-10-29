@@ -62,18 +62,18 @@ const AccordionItem = (props: AccordionItemProps) => {
         </div>
       </div>
       <div className={`flex flex-col`}>
-        <span className="text-[#15171E] text-[18px] lg:text-[30px] font-semibold leading-normal mr-8">
+        <span className="text-[#15171E] text-sm lg:text-base lg2:text-[30px] font-semibold lg:leading-[24px] lg2:leading-9 leading-normal mr-8">
           {question}
         </span>
         <div
-          className={`grid text-[#535662] text-sm lg:text-[18px] font-medium leading-[28px] overflow-hidden 
+          className={`grid text-[#535662] text-sm lg:text-base lg2:text-[18px] font-medium leading-[28px] overflow-hidden 
 						transition-all duration-500 ease-in-out
 						${isOpen ? "grid-rows-[1fr] opacity-100 mt-2 lg:mt-4" : "grid-rows-[0fr] opacity-0 mt-0"} `}
         >
           <div className="overflow-hidden">{answer}</div>
         </div>
       </div>
-      <div className="absolute top-1 lg:top-2 right-0">
+      <div className="absolute top-0 right-0">
         <div
           className={`relative w-6 h-6 lg:w-[32px] lg:h-[32px] cursor-pointer transform duration-300 ease-in-out ${
             isOpen ? "" : "rotate-180"
@@ -103,13 +103,13 @@ const Support = (props: Props) => {
   };
   return (
     <>
-      <div className="max-w-[1120px] mx-auto mt-[48px] lg:mt-[160px]">
-        <div className="xl:grid xl:grid-cols-[600px,auto] lg:flex-wrap flex flex-col gap-6 lg:gap-20">
+      <div className="max-w-[1120px] mx-auto mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
+        <div className="xl:grid xl:grid-cols-[600px,auto] md:flex-row flex flex-col gap-6 lg:gap-10 lg2:gap-20">
           <div data-aos="fade-up" data-aos-delay="200">
-            <span className="text-[#111013] text-[20px] lg:text-[48px] font-bold lg:leading-[56px]">
+            <span className="text-[#111013] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[56px]">
               <span className="text-[#01C159]">Câu hỏi</span> thường gặp
             </span>
-            <p className="text-[#000] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px] mt-3 lg:mt-8">
+            <p className="text-[#000] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px] mt-3 lg:mt-3 lg2:mt-8">
               Cập nhật các sản phẩm, dịch vụ mới nhất cũng như các hoạt động, sự
               kiện của UPS
             </p>
@@ -125,9 +125,9 @@ const Support = (props: Props) => {
             </div>
           </div>
           <div data-aos="fade-up" data-aos-delay="400">
-            <div className="relative p-5 lg:p-[60px]">
+            <div className="relative p-5 lg:p-6 lg2:p-[50px] 3xl:p-[60px]">
               <div className="bg-[#F3F3FB] inset-0 w-full h-full absolute -z-10 rounded-3xl"></div>
-              <div className="relative w-[240px] h-[260px] lg:w-[324px] lg:h-[350px]">
+              <div className="relative w-[240px] h-[260px] lg2:w-[303px] lg2:h-[330px] 3xl:w-[324px] 3xl:h-[350px]">
                 <NextImg
                   src="/assets/icons/group-5.svg"
                   alt="Capi"
@@ -135,7 +135,7 @@ const Support = (props: Props) => {
                   className=""
                 />
               </div>
-              <p className="text-[#535662] text-[14px] lg:text-[18px] font-semibold leading-[22px] lg:leading-[28px] mt-5 lg:mt-[52px] mb-5 lg:mb-[50px]">
+              <p className="text-[#535662] text-[14px] lg:text-base lg2:text-[18px] font-semibold leading-[22px] lg:leading-[28px] mt-5 lg:mt-[52px] mb-5 lg2:mb-[50px]">
                 Bạn chưa tìm thấy câu trả lời phù hợp? Đi tới trung tâm hỗ trợ
               </p>
               <button className="btn active !bg-[#014227] !text-[#02E56A]">

@@ -1,5 +1,4 @@
 "use client";
-import { ModeToggle } from "@/components/admin-panel/mode-toggle";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import NextImg from "../next-img";
@@ -11,20 +10,20 @@ const TheHeader = (props: Props) => {
 
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = "hidden"; 
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto"; 
+      document.body.style.overflow = "auto";
     }
 
     return () => {
-      document.body.style.overflow = "auto"; 
+      document.body.style.overflow = "auto";
     };
   }, [isMenuOpen]);
   return (
     <div className="fixed w-full z-[999]">
       <div className="bg-[#0E1A0D] rounded-b-[24px]">
         <div
-          className="px-6 py-4 md:py-[20px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1600px] md:px-24 lg:px-8"
+          className="py-4 md:py-[20px] mx-auto sm:max-w-full xl:max-w-[1280px] 2xl:max-w-[1440px] 3xl:max-w-[1600px] px-6 md:px-10 xl:px-0"
           data-aos="fade-up"
         >
           <div className="relative flex items-center justify-between">
@@ -34,7 +33,7 @@ const TheHeader = (props: Props) => {
               title="Ups"
               className="inline-flex items-center"
             >
-              <div className="relative lg:w-[184px] w-[133px] lg:h-[44px] h-[29px] rounded-br-2xl">
+              <div className="relative md:w-[184px] w-[133px] md:h-[44px] h-[29px] rounded-br-2xl">
                 <NextImg
                   src="/assets/icons/logo-ups.svg"
                   alt="Capi"
@@ -205,6 +204,23 @@ const TheHeader = (props: Props) => {
             </ul>
             <div className="xl:hidden">
               <div className="flex items-center gap-4">
+                <a
+                  href="/"
+                  className="md:block hidden"
+                  aria-label="Mở tài khoản ngay"
+                  title="Mở tài khoản ngay"
+                >
+                  <button className="btn active">
+                    Mở tài khoản ngay
+                    <div className="relative w-4 h-4 lg:w-6 lg:h-6">
+                      <NextImg
+                        src="/assets/icons/UPs.svg"
+                        alt="Capi"
+                        objectFit="cover"
+                      />
+                    </div>
+                  </button>
+                </a>
                 <Link
                   href="/"
                   aria-label="Notification"
@@ -401,7 +417,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="News"
                   title="News"
-                  className="font-bold text-gray-100 text-sm" 
+                  className="font-bold text-gray-100 text-sm"
                 >
                   Tin tức
                   <span className="rounded-full ml-[10px] bg-[#E50261] px-2 py-1">

@@ -7,11 +7,11 @@ const MobileApp = (props: Props) => {
   return (
     <>
       {/* section 5 */}
-      <div className="bg-[#0F1B0E] mb-10 lg:mb-[160px] pt-10 lg:pt-[74px]">
+      <div className="bg-[#0F1B0E] mb-10 lg:mb-[60px] xl:mb-20 2xl:mb-[100px] 3xl:mb-[160px] pt-10 lg2:pt-16 2xl:pt-[74px]">
         <div className="custom-container  ">
-          <div className="xl:px-[107px] 3xl:px-[128px] lg:grid lg:grid-cols-2 flex flex-col">
+          <div className="lg2:px-[107px] 3xl:px-[128px] md:grid md:grid-cols-2 flex flex-col lg:gap-0 md:gap-10">
             <div
-              className="flex flex-col gap-5 lg:gap-8 lg:my-auto"
+              className="flex flex-col gap-5 lg:gap-8 md:my-auto"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -28,17 +28,17 @@ const MobileApp = (props: Props) => {
                   Mobile App
                 </span>
               </div>
-              <span className="text-[#FFF] text-[20px] lg:text-[60px] font-bold lg:leading-[60px] w-[75%]">
+              <span className="text-[#FFF] text-[20px] lg:text-[40px] lg2:text-[56px] 2xl:text-[58px] 3xl:text-[60px] font-bold lg:leading-[46px] lg2:leading-[58px] 3xl:leading-[60px] lg:w-[80%] lg2:w-[75%]">
                 Trải nghiệm <span className="text-[#02E56A]">tuyệt vời</span>{" "}
                 hơn với ứng dụng
               </span>
-              <p className="text-[#8C9AA4] font-medium leading-[28px] text-[14px] lg:text-[18px] lg:w-[80%]">
+              <p className="text-[#8C9AA4] font-medium lg:leading-[24px] lg2:leading-[28px] text-[14px] lg:text-base lg2:text-[18px] lg:w-[80%]">
                 UPS là công ty chứng khoán đột phá dành cho thế hệ mới, nơi công
                 nghệ và tư duy đổi mới, sáng tạo hợp nhất để đem lại trải nghiệm
                 đầu tư thông minh, dễ dàng, và thú vị.
               </p>
-              <div className="flex items-center gap-3">
-                <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-8 lg:pr-[50px] rounded-[9px] cursor-pointer">
+              <div className="flex items-center flex-wrap gap-3">
+                <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-8 md:pr-6 lg:pr-[50px] rounded-[9px] cursor-pointer">
                   <div className="relative w-6 h-6">
                     <NextImg
                       src="/assets/icons/google-play1.svg"
@@ -75,7 +75,7 @@ const MobileApp = (props: Props) => {
               </div>
             </div>
             <div
-              className="w-[full] sm:pt-[70%] pt-[141%] lg:pt-[141%] lg:mt-0 mt-10"
+              className="relative w-full h-[470px] md:pt-[141%] lg:mt-0 mt-10"
               data-aos="fade-up"
               data-aos-delay="400"
             >

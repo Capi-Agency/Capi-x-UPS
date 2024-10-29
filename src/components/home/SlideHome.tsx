@@ -15,7 +15,7 @@ const SlideHome = (props: Props) => {
   ];
   return (
     <div
-      className="custom-container mt-6 lg:mt-[120px]"
+      className="custom-container mt-6 md:mt-10 lg:mt-11 xl:mt-16 2xl:mt-20 3xl:mt-[120px]"
       data-aos="fade-up"
       data-aos-delay="200"
     >
@@ -39,7 +39,7 @@ const SlideHome = (props: Props) => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-[342px] lg:h-[560px]">
+              <div className="relative w-full h-[342px] md:h-[360px] lg:h-[400px] lg2:h-[440px] 2xl:h-[500px] 3xl:h-[560px]">
                 <NextImg src={slide} alt="Capi" objectFit="cover" />
               </div>
             </SwiperSlide>
@@ -47,7 +47,7 @@ const SlideHome = (props: Props) => {
         </Swiper>
         <button
           id="prevBtn"
-          className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -left-8 z-[10] lg:block hidden"
+          className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -left-8 z-[10] lg2:block hidden"
           onClick={() => {
             if (swiperRef.current && swiperRef.current.swiper) {
               if (!isAnimating) {
@@ -79,7 +79,7 @@ const SlideHome = (props: Props) => {
         </button>
         <button
           id="nextBtn"
-          className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -right-8 z-[10] lg:block hidden"
+          className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -right-8 z-[10] lg2:block hidden"
           onClick={() => {
             if (swiperRef.current && swiperRef.current.swiper) {
               if (!isAnimating) {

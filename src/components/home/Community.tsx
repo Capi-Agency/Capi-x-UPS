@@ -50,7 +50,12 @@ const imgDataMobile: ImgData[] = [
   { size: 14.5, imgUrl: "/assets/image/investor7.jpg", top: 40, left: 46 },
   { size: 59, imgUrl: "/assets/image/investor15.jpg", left: 59, top: 4 },
   {
-    size: 25, imgUrl: "/assets/image/investor14.jpg", bottom: 0, left: 89, top: 129},
+    size: 25,
+    imgUrl: "/assets/image/investor14.jpg",
+    bottom: 0,
+    left: 89,
+    top: 129,
+  },
   { size: 120, imgUrl: "/assets/image/investor6.jpg", left: 99, bottom: 0 },
   {
     size: 24.6,
@@ -67,30 +72,41 @@ const imgDataMobile: ImgData[] = [
   },
   { size: 14.5, imgUrl: "/assets/image/investor4.jpg", right: 108, bottom: 64 },
   { size: 29, imgUrl: "/assets/image/investor8.jpg", right: 108, bottom: 0 },
-  { size: 88, imgUrl: "/assets/image/investor9.jpg", bottom: 0, right: 27, top:66 },
+  {
+    size: 88,
+    imgUrl: "/assets/image/investor9.jpg",
+    bottom: 0,
+    right: 27,
+    top: 66,
+  },
   { size: 68, imgUrl: "/assets/image/investor11.jpg", top: 0, right: 17 },
   { size: 36, imgUrl: "/assets/image/investor12.jpg", top: 57, right: 0 },
   { size: 21, imgUrl: "/assets/image/investor16.jpg", bottom: 33, right: 0 },
-  { size: 31, imgUrl: "/assets/image/investor13.jpg", bottom: 0, right: 0, top: 122 },
+  {
+    size: 31,
+    imgUrl: "/assets/image/investor13.jpg",
+    bottom: 0,
+    right: 0,
+    top: 122,
+  },
 ];
 
 const Community = (props: Props) => {
   const [imgData, setImgData] = useState(imgDataDesktop);
-  useEffect(() => {
-    const handleResize = () => {
-      setImgData(window.innerWidth < 768 ? imgDataMobile : imgDataDesktop);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setImgData(window.innerWidth < 768 ? imgDataMobile : imgDataDesktop);
+  //   };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [imgDataDesktop, imgDataMobile]);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, [imgDataDesktop, imgDataMobile]);
   const imgRef = useRef<HTMLDivElement[]>([]);
-  const triggerRef = useRef<HTMLDivElement>(null); // Ref for the trigger element
-
+  const triggerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -130,7 +146,7 @@ const Community = (props: Props) => {
         data-aos="fade-up"
         data-aos-delay="200"
       >
-        <div className="relative w-[74px] h-[32px] lg:w-[111px] lg:h-[48px] mx-auto">
+        <div className="relative w-[74px] h-[32px] lg:w-[92px] lg:h-[40px] lg2:w-[111px] lg2:h-[48px] mx-auto">
           <NextImg
             src="/assets/icons/logo-small2.svg"
             alt="Capi"
@@ -138,7 +154,7 @@ const Community = (props: Props) => {
             className=""
           />
         </div>
-        <span className="text-[#111013] text-[20px] lg:text-[48px] font-bold lg:leading-[56px] mt-2">
+        <span className="text-[#111013] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[56px] mt-2">
           Tham gia ngay cộng đồng <br />
           <span className="text-[#02E56A]">Nhà đầu tư UPS</span>
         </span>
@@ -200,7 +216,7 @@ const Community = (props: Props) => {
       {/* Trigger element for the animation */}
       <div
         ref={triggerRef}
-        className="relative h-[154px] lg:h-[328px] mt-10 lg:mt-20"
+        className="relative h-[154px] lg:h-[328px] mt-10 xl:mt-[50px] 3xl:mt-20 3xl:block hidden"
       >
         {imgData.map((img, index) => (
           <div
@@ -231,6 +247,18 @@ const Community = (props: Props) => {
             </div>
           </div>
         ))}
+      </div>
+      <div
+        className="relative w-full pt-[22%] 3xl:hidden block mt-10 xl:mt-[50px] 3xl:mt-20"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <NextImg
+          src="/assets/image/Frame 1597881493.png"
+          alt="Capi"
+          objectFit="contain"
+          className=""
+        />
       </div>
     </>
   );

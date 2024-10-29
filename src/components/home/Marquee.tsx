@@ -95,7 +95,7 @@ const ReviewCard = ({
 		<div className="relative group/card">
 			<figure
 				className={cn(
-					"relative z-1 cursor-pointer overflow-hidden rounded-xl px-3 py-2 lg:px-5 lg:py-4 w-[188px] h-[77px] lg:w-[300px] lg:h-[160px] flex flex-col justify-between card",
+					"relative z-1 cursor-pointer overflow-hidden rounded-xl px-3 py-2 lg:px-5 lg:py-4 w-[188px] lg:w-[280px] lg2:w-[300px] h-[77px] lg:h-[113px] lg2:h-[140px] xl:h-[150px] 3xl:h-[160px] flex flex-col justify-between card",
 					// light styles
 					"rounded-[16px] bg-[#161F15] border-[#161F15]",
 					// dark styles
@@ -121,7 +121,7 @@ const ReviewCard = ({
 					
 				</div>
 				<div>
-						<span className="mt-2 text-[#075728] group-hover/card:text-[#05BE5A] font-hanken-grotesk text-base lg:text-3xl font-medium leading-normal flex items-start">
+						<span className="mt-2 text-[#075728] group-hover/card:text-[#05BE5A] font-hanken-grotesk text-base lg:text-2xl lg2:text-3xl font-medium leading-normal flex items-start">
 							{body}{" "}
 							<i className="mt-1">
 								<svg
@@ -159,7 +159,7 @@ const ReviewCard = ({
 
 export function MarqueeDemo() {
 	return (
-		<div className="relative flex h-[220px] lg:h-[500px] w-full flex-col items-center justify-center  rounded-lg  md:shadow-xl overflow-hidden">
+		<div className="relative flex h-auto w-full flex-col items-center justify-center  rounded-lg  md:shadow-xl overflow-hidden mt-[30px] md:mt-10 lg:mt-8 lg2:mt-10 xl:mt-[52px] 2xl:mt-20 3xl:mt-[100px]">
 			<Marquee
 				pauseOnHover
 				className="[--duration:20s]"
@@ -175,7 +175,7 @@ export function MarqueeDemo() {
 			<Marquee
 				reverse
 				pauseOnHover
-				className="[--duration:20s]"
+				className="[--duration:20s] mb-[22px] !md:mb-10 lg:mb-12 lg2:mb-8 xl:mb-[34px] 2xl:mb-11 3xl:mb-[54px]"
 				repeat={10}
 			>
 				{secondRow.map((review) => (
@@ -186,7 +186,7 @@ export function MarqueeDemo() {
 				))}
 			</Marquee>
 			<div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r  dark:from-background"></div>
-			<div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l dark:from-background"></div>
+			<div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l dark:from-background "></div>
 		</div>
 	);
 }

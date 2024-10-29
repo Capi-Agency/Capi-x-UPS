@@ -10,21 +10,18 @@ const ContentTech = (props: Props) => {
       title: "Nền tảng “Lõi”",
       description:
         "Creating a higher spacing and how people move through a unique and impactful campaign.",
-      delay: 200,
     },
     {
       icon: "/assets/icons/tech-icon5.svg",
       title: "Trung tâm dữ liệu",
       description:
         "Creating a higher spacing and how people move through a unique and impactful campaign.",
-      delay: 400,
     },
     {
       icon: "/assets/icons/tech-icon6.svg",
       title: "Hệ thống phần mềm",
       description:
         "Creating a higher spacing and how people move through a unique and impactful campaign.",
-      delay: 600,
     },
   ];
 
@@ -34,21 +31,18 @@ const ContentTech = (props: Props) => {
       description:
         "Create a scalable statistics system that’s accessible for your company.",
       icon: "/assets/icons/tech-icon3.svg",
-      delay: 200,
     },
     {
       title: "Tốc độ",
       description:
         "Packed with API features you will love to collaborate with issues and change business.",
       icon: "/assets/icons/tech-icon1.svg",
-      delay: 400,
     },
     {
       title: "Trải nghiệm",
       description:
         "Get insights from your customers directly using the app API and test funnels earlier.",
       icon: "/assets/icons/tech-icon2.svg",
-      delay: 600,
     },
   ];
 
@@ -107,145 +101,77 @@ const ContentTech = (props: Props) => {
         </div>
         <div className="mt-10 lg:mt-12">
           <div className="lg:grid lg:grid-cols-3 flex flex-col gap-6 lg:gap-10">
-            {features.map((item, index) => (
-              <div
-                key={index}
-                className="border-t border-[#60606B] opacity-[0.65] pt-6 lg:pt-12 flex flex-col gap-3 lg:gap-4"
-                data-aos="fade-up"
-                data-aos-delay={item.delay}
-              >
-                <div className="flex lg:flex-col flex-row lg:items-start items-center lg:gap-4 gap-3">
-                  <div className="w-10 h-10 lg:w-[60px] lg:h-[60px] bg-[#FFF] flex justify-center items-center rounded-full">
-                    <div
-                      className={`relative w-4 h-4 lg:w-6 lg:h-6`}
-                    >
-                      <NextImg src={item.icon} alt="Capi" objectFit="contain" />
+            {features.map((item, index) => {
+              const delay = ((index % 3) + 1) * 200;
+              return (
+                <div
+                  key={index}
+                  className="border-t border-[#60606B] opacity-[0.65] pt-6 lg:pt-12 flex flex-col gap-3 lg:gap-4"
+                  data-aos="fade-up"
+                  data-aos-delay={delay}
+                >
+                  <div className="flex lg:flex-col flex-row lg:items-start items-center lg:gap-4 gap-3">
+                    <div className="w-10 h-10 lg:w-[60px] lg:h-[60px] bg-[#FFF] flex justify-center items-center rounded-full">
+                      <div className={`relative w-4 h-4 lg:w-6 lg:h-6`}>
+                        <NextImg
+                          src={item.icon}
+                          alt="Capi"
+                          objectFit="contain"
+                        />
+                      </div>
                     </div>
+                    <p className="text-[#111013] text-[20px] lg:text-[32px] font-bold leading-[40px]">
+                      {item.title}
+                    </p>
                   </div>
-                  <p className="text-[#111013] text-[20px] lg:text-[32px] font-bold leading-[40px]">
-                    {item.title}
+                  <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                    {item.description}
                   </p>
-                </div>
-                <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
-                  {item.description}
-                </p>
-                <div>
-                  <button className="bg-[#111013] text-sm lg:text-[18px] py-1 px-3 rounded-[8px] text-[#FFF] font-medium leading-[32px] lg:leading-[28px] flex items-center gap-2">
-                    Đọc thêm
-                    <div className="relative w-[20px] h-[20px]">
-                      <NextImg
-                        src="/assets/icons/arrow_forward.svg"
-                        alt="Capi"
-                        objectFit="cover"
-                        className=""
-                      />
-                    </div>
-                  </button>
-                </div>
-              </div>
-            ))}
-            {/* <div
-              className="border-t border-[#60606B] opacity-[0.65] pt-6 lg:pt-12 flex flex-col gap-3 lg:gap-4"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div className="flex lg:flex-col flex-row lg:items-start items-center lg:gap-4 gap-3">
-                <div className="w-10 h-10 lg:w-[60px] lg:h-[60px] bg-[#FFF] flex justify-center items-center rounded-full">
-                  <div className="relative w-[16.5px] h-[16.5px] lg:w-6 lg:h-6">
-                    <NextImg
-                      src="/assets/icons/tech-icon1.svg"
-                      alt="Capi"
-                      objectFit="cover"
-                    />
+                  <div>
+                    <button className="bg-[#111013] text-sm lg:text-[18px] py-1 px-3 rounded-[8px] text-[#FFF] font-medium leading-[32px] lg:leading-[28px] flex items-center gap-2">
+                      Đọc thêm
+                      <div className="relative w-[20px] h-[20px]">
+                        <NextImg
+                          src="/assets/icons/arrow_forward.svg"
+                          alt="Capi"
+                          objectFit="cover"
+                          className=""
+                        />
+                      </div>
+                    </button>
                   </div>
                 </div>
-                <p className="text-[#111013] text-[20px] lg:text-[32px] font-bold leading-[40px]">
-                  Tốc độ
-                </p>
-              </div>
-
-              <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
-                Packed with API features you will love to collaborate with
-                issues and change business.
-              </p>
-              <div>
-                <button className="bg-[#111013] text-sm lg:text-[18px] py-1 px-3 rounded-[8px] text-[#FFF] font-medium leading-[32px] lg:leading-[28px] flex items-center gap-2">
-                  Đọc thêm
-                  <div className="relative w-[20px] h-[20px]">
-                    <NextImg
-                      src="/assets/icons/arrow_forward.svg"
-                      alt="Capi"
-                      objectFit="cover"
-                      className=""
-                    />
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div
-              className="border-t border-[#60606B] opacity-[0.65] pt-6 lg:pt-12 flex flex-col gap-3 lg:gap-4"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div className="flex lg:flex-col flex-row lg:items-start items-center lg:gap-4 gap-3">
-                <div className="w-10 h-10 lg:w-[60px] lg:h-[60px] bg-[#FFF] flex justify-center items-center rounded-full">
-                  <div className="relative w-[19px] h-[16.5px] lg:w-7 lg:h-6">
-                    <NextImg
-                      src="/assets/icons/tech-icon2.svg"
-                      alt="Capi"
-                      objectFit="cover"
-                    />
-                  </div>
-                </div>
-                <p className="text-[#111013] text-[20px] lg:text-[32px] font-bold leading-[40px]">
-                  Trải nghiệm
-                </p>
-              </div>
-
-              <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
-                Get insights from your customers directly using the app API and
-                test funnels earlier.
-              </p>
-              <div>
-                <button className="bg-[#111013] text-sm lg:text-[18px] py-1 px-3 rounded-[8px] text-[#FFF] font-medium leading-[32px] lg:leading-[28px] flex items-center gap-2">
-                  Đọc thêm
-                  <div className="relative w-[20px] h-[20px]">
-                    <NextImg
-                      src="/assets/icons/arrow_forward.svg"
-                      alt="Capi"
-                      objectFit="cover"
-                      className=""
-                    />
-                  </div>
-                </button>
-              </div>
-            </div> */}
+              );
+            })}
           </div>
         </div>
       </div>
       <div className="lg:grid lg:grid-cols-3 flex flex-col gap-3 lg:gap-[30px] mt-6 lg:mt-[30px]">
-        {platforms.map((platform, index) => (
-          <div
-            key={index}
-            className="bg-[#F3F3FB] hover:bg-[#4C35F5] group p-5 lg:p-10 rounded-[16px] flex flex-col items-center justify-center transition-all ease-in-out duration-500"
-            data-aos="fade-up"
-            data-aos-delay={platform.delay}
-          >
-            <div className="relative w-[160px] h-[160px] lg:w-[180px] lg:h-[180px] mx-auto">
-              <NextImg
-                src={platform.icon}
-                alt={platform.title}
-                objectFit="cover"
-              />
+        {platforms.map((platform, index) => {
+          const delay = ((index % 3) + 1) * 200;
+          return (
+            <div
+              key={index}
+              className="bg-[#F3F3FB] hover:bg-[#4C35F5] group p-5 lg:p-10 rounded-[16px] flex flex-col items-center justify-center transition-all ease-in-out duration-500"
+              data-aos="fade-up"
+              data-aos-delay={delay}
+            >
+              <div className="relative w-[160px] h-[160px] lg:w-[180px] lg:h-[180px] mx-auto">
+                <NextImg
+                  src={platform.icon}
+                  alt={platform.title}
+                  objectFit="cover"
+                />
+              </div>
+              <p className="text-[#111013] text-[20px] lg:text-[32px] font-bold lg:leading-[40px] mt-6 mb-2 lg:mb-4 group-hover:text-[#FFF]">
+                {platform.title}
+              </p>
+              <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px] group-hover:text-[#FFF] w-[85%] text-center">
+                {platform.description}
+              </p>
             </div>
-            <p className="text-[#111013] text-[20px] lg:text-[32px] font-bold lg:leading-[40px] mt-6 mb-2 lg:mb-4 group-hover:text-[#FFF]">
-              {platform.title}
-            </p>
-            <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px] group-hover:text-[#FFF] w-[85%] text-center">
-              {platform.description}
-            </p>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

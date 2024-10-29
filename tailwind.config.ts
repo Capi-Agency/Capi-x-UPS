@@ -14,9 +14,10 @@ const config = {
       "sm": "375px",
       "md": "768px",
       "lg": "1024px",
-      "xl": "1280px",
-      "2xl": "1440px",
-      "3xl": "1760px",
+      "lg2": "1280px",
+      "xl": "1440px",
+      "2xl": "1600px",
+      "3xl": "1920px",
     },
     extend: {
       fontFamily: {

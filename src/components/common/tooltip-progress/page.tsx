@@ -5,7 +5,7 @@ const TooltipProgress = ({ percentage }:TooltipProgressProps) => {
     return (
       <div className="bg-[rgba(144,145,156,0.15)] relative h-1 w-full rounded-[2px]">
         <div className="bg-[#00D763] absolute top-0 left-0 h-full rounded-2xl" style={{ width: `${percentage}%` }}>
-          <span className="bg-[#4B4753] absolute -right-4 bottom-4 rounded-[6px] px-[7px] py-1 text-[13px] text-white">
+          <span className="bg-[#4B4753] absolute -right-4 bottom-4 rounded-[6px] px-[7px] py-1 text-xs lg:text-[13px] text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15"

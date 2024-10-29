@@ -13,21 +13,21 @@ const TheFooter = (props: Props) => {
     AOS.init({ once: true });
   }, []);
   return (
-    <div className="relative mt-10 lg:mt-[160px] bg-[#0F1B0E] text-[#FFF]">
-      <div className="custom-container pt-10 lg:pt-[120px] pb-6 lg:pb-[72px]">
-        <div className="lg:grid lg:grid-cols-2 flex flex-col lg:gap-0 gap-10">
+    <div className="relative mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[160px] bg-[#0F1B0E] text-[#FFF]">
+      <div className="custom-container pt-10 md:py-10 lg2:pt-[50px] xl:pt-[70px] 3xl:pt-[120px] pb-6 lg2:pb-[52px] 3xl:pb-[72px]">
+        <div className="lg:grid lg:grid-cols-[40%,60%] xl:grid-cols-[45%,55%] 2xl:grid-cols-[50%,50%] flex flex-col lg:gap-0 gap-10">
           <div
             className="flex flex-col gap-4"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <span className="text-[#FFF] text-[20px] lg:text-[48px] font-bold lg:leading-[56px] w-[90%] lg:w-[70%]">
+            <span className="text-[#FFF] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[56px] w-[90%] lg:w-[80%] 2xl:w-[70%]">
               <span className="text-[#02E56A]">
                 Kiến tạo tương lai vẹn toàn
               </span>{" "}
               với nền tảng đầu tư đột phá
             </span>
-            <p className="text-[#8C9AA4] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px] lg:w-[70%]">
+            <p className="text-[#8C9AA4] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px] lg:w-[80%] 2xl:w-[70%]">
               UPS là công ty chứng khoán đột phá dành cho thế hệ mới, nơi công
               nghệ và tư duy đổi mới, sáng tạo hợp nhất để đem lại trải nghiệm
               đầu tư thông minh, dễ dàng, và thú vị.
