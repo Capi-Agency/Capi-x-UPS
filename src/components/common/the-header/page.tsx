@@ -33,7 +33,7 @@ const TheHeader = (props: Props) => {
               title="Ups"
               className="inline-flex items-center"
             >
-              <div className="relative md:w-[184px] w-[133px] md:h-[44px] h-[29px] rounded-br-2xl">
+              <div className="relative lg:w-[184px] w-[133px] lg:h-[44px] h-[29px] rounded-br-2xl">
                 <NextImg
                   src="/assets/icons/logo-ups.svg"
                   alt="Capi"

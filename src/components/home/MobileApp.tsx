@@ -75,7 +75,7 @@ const MobileApp = (props: Props) => {
               </div>
             </div>
             <div
-              className="relative w-full h-[470px] md:pt-[141%] lg:mt-0 mt-10"
+              className="relative w-full h-[390px] sm:h-[470px] md:pt-[141%] lg:mt-0 mt-10"
               data-aos="fade-up"
               data-aos-delay="400"
             >

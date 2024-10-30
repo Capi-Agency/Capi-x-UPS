@@ -45,24 +45,20 @@ const SlideAbout = (props: Props) => {
       <Swiper
         ref={swiperRef}
         breakpoints={{
-          1600: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
           1024: {
-            slidesPerView: 3.6,
+            slidesPerView: 4,
             spaceBetween: 20,
           },
-          620: {
-            slidesPerView: 2.6,
+          768: {
+            slidesPerView: 3.2,
             spaceBetween: 16,
           },
           0: {
-            slidesPerView: 1.6,
+            slidesPerView: 1.8,
             spaceBetween: 12,
           },
         }}
-        className="mySwiper sm:container-slide md:custom-container"
+        className="mySwiper"
         data-aos="fade-up"
         data-aos-delay="200"
       >
@@ -97,23 +93,23 @@ const SlideAbout = (props: Props) => {
             setIsHovered(false);
           };
           return (
-            <SwiperSlide key={index} className={`${index === 0 ? 'ml-6 md:ml-0' : ''}`}>
+            <SwiperSlide key={index} className={`${index === 0 ? 'ml-6 md:ml-auto' : ''}`}>
               <div
                 ref={cardRef}
-                className={`card rounded-[12px] lg:rounded-[16px] p-5 lg:p-[32px] flex flex-col justify-between h-[320px] lg:h-[430px] relative overflow-hidden bg-[#161519]`}
+                className={`card rounded-[12px] lg:rounded-[16px] p-5 lg:p-6 2xl:p-[32px] flex flex-col justify-between h-[320px] lg:h-[400px] 2xl:h-[430px] relative overflow-hidden bg-[#161519]`}
                 onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
                 <div className="flex flex-col gap-2">
-                  <span className="text-[#FFF] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                  <span className="text-[#FFF] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
                     {slide.tag}
                   </span>
-                  <h4 className="text-[#FFF] text-[20px] lg:text-[32px] font-bold lg:leading-[40px]">
+                  <h4 className="text-[#FFF] text-[20px] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] font-bold 3xl:leading-[40px]">
                     {slide.title}
                   </h4>
                 </div>
-                <p className="text-[#FFF] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                <p className="text-[#FFF] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
                   {slide.description}
                 </p>
                 <div

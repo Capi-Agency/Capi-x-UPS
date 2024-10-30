@@ -15,31 +15,31 @@ const TheFooter = (props: Props) => {
   return (
     <div className="relative mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[160px] bg-[#0F1B0E] text-[#FFF]">
       <div className="custom-container pt-10 md:py-10 lg2:pt-[50px] xl:pt-[70px] 3xl:pt-[120px] pb-6 lg2:pb-[52px] 3xl:pb-[72px]">
-        <div className="lg:grid lg:grid-cols-[40%,60%] xl:grid-cols-[45%,55%] 2xl:grid-cols-[50%,50%] flex flex-col lg:gap-0 gap-10">
+        <div className="lg:grid lg:grid-cols-[40%,60%] lg2:grid-cols-[45%,55%] 2xl:grid-cols-[50%,50%] flex flex-col lg:gap-0 gap-10">
           <div
-            className="flex flex-col gap-4"
+            className="flex lg:flex flex-col lg:gap-4 gap-4 md:grid md:grid-cols-2 md:gap-10"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <span className="text-[#FFF] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[56px] w-[90%] lg:w-[80%] 2xl:w-[70%]">
+            <span className="text-[#FFF] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[56px] w-[90%] lg:w-[85%] 2xl:w-[70%]">
               <span className="text-[#02E56A]">
                 Kiến tạo tương lai vẹn toàn
               </span>{" "}
               với nền tảng đầu tư đột phá
             </span>
-            <p className="text-[#8C9AA4] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px] lg:w-[80%] 2xl:w-[70%]">
+            <p className="text-[#8C9AA4] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px] lg:w-[80%] 2xl:w-[70%]">
               UPS là công ty chứng khoán đột phá dành cho thế hệ mới, nơi công
               nghệ và tư duy đổi mới, sáng tạo hợp nhất để đem lại trải nghiệm
               đầu tư thông minh, dễ dàng, và thú vị.
             </p>
           </div>
           <div
-            className="lg:grid lg:grid-cols-[auto,230px] gap-[50px]"
+            className="grid lg:grid-cols-[auto,230px] md:grid-cols-2 md:gap-10 lg:gap-[50px]"
             data-aos="fade-up"
             data-aos-delay="400"
           >
             <div className="flex flex-col">
-              <p className="text-[#8C9AA4] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px] border-b border-[#8C9AA4] pb-3 mb-3 lg:pb-4 lg:mb-4">
+              <p className="text-[#8C9AA4] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px] border-b border-[#8C9AA4] pb-3 mb-3 lg:pb-4 lg:mb-4">
                 UPS là công ty chứng khoán đột phá dành cho thế hệ mới, nơi công
                 nghệ và tư duy đổi mới, sáng tạo hợp nhất để đem lại trải
               </p>
@@ -53,7 +53,7 @@ const TheFooter = (props: Props) => {
                       className=""
                     />
                   </div>
-                  <p className="text-[#8C9AA4] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                  <p className="text-[#8C9AA4] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
                     Trung tâm hỗ trợ thuận tiện
                   </p>
                 </div>
@@ -66,7 +66,7 @@ const TheFooter = (props: Props) => {
                       className=""
                     />
                   </div>
-                  <p className="text-[#8C9AA4] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                  <p className="text-[#8C9AA4] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
                     Chuyên viên tư vấn chuyên nghiệp
                   </p>
                 </div>
@@ -79,13 +79,13 @@ const TheFooter = (props: Props) => {
                       className=""
                     />
                   </div>
-                  <p className="text-[#8C9AA4] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                  <p className="text-[#8C9AA4] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
                     Phản hồi thông tin nhanh chóng
                   </p>
                 </div>
               </div>
             </div>
-            <div className="lg:mt-0 mt-10">
+            <div className="md:mt-0 mt-10">
               <button className="btn active">
                 Mở tài khoản ngay
                 <div className="relative w-4 h-4 lg:w-6 lg:h-6">
@@ -96,7 +96,7 @@ const TheFooter = (props: Props) => {
                   />
                 </div>
               </button>
-              <p className="text-[#6E767C] text-[16px] font-medium leading-[24px] mt-6 lg:block hidden">
+              <p className="text-[#6E767C] text-[16px] font-medium leading-[24px] mt-6 md:block hidden">
                 Cảm ơn bạn đã tới với nền tảng giao dịch chứng khoán <br /> UP
                 Securities
               </p>
@@ -109,8 +109,8 @@ const TheFooter = (props: Props) => {
         data-aos="fade-up"
         data-aos-delay="200"
       ></div>
-      <div className="pt-6 lg:pt-[120px] custom-container  ">
-        <div className="lg:grid lg:grid-cols-[35%,65%] gap-5">
+      <div className="pt-6 pb-10 lg:pb-[50px] md:py-10 xl:py-[70px] 3xl:py-[120px] custom-container  ">
+        <div className="lg:grid lg:grid-cols-[25%,75%] xl:grid-cols-[32%,68%] gap-5">
           <div className="" data-aos="fade-up" data-aos-delay="200">
             <Link
               href="/"
@@ -118,7 +118,7 @@ const TheFooter = (props: Props) => {
               title="Ups"
               className="inline-flex items-center"
             >
-              <div className="relative w-[167px] h-10 lg:w-[210px] lg:h-[50px] rounded-br-2xl">
+              <div className="relative w-[167px] h-10 lg:w-[184px] lg:h-[44px] rounded-br-2xl">
                 <NextImg
                   src="/assets/icons/logo-ups.svg"
                   alt="Capi"
@@ -133,7 +133,7 @@ const TheFooter = (props: Props) => {
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            <div className="grid grid-cols-2 gap-3 lg:gap-[60px] lg:col-span-4 lg:grid-cols-4 lg:mt-0 mt-10">
+            <div className="grid grid-cols-2 gap-x-3 gap-y-6 lg:flex lg:justify-between lg:mt-0 mt-10">
               <div>
                 <p className="font-bold text-[14px] lg:text-base leading-normal">
                   Khách hàng cá nhân
@@ -239,7 +239,7 @@ const TheFooter = (props: Props) => {
                 </ul>
               </div>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center flex-wrap gap-3">
               <div className="bg-[#111] flex items-center gap-[9px] p-[10px] pr-8 lg:pr-[50px] rounded-[9px] cursor-pointer">
                 <div className="relative w-6 h-6">
                   <NextImg
@@ -278,13 +278,13 @@ const TheFooter = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="mt-10 lg:mt-[120px] bg-[#060B06]">
-        <div className="py-5 lg:py-[30px] flex lg:flex-row flex-col items-center justify-between custom-container  ">
+      <div className="bg-[#060B06]">
+        <div className="py-5 xl:py-[30px] flex md:flex-row flex-col items-center justify-between custom-container  ">
           <p className="text-[rgba(255,255,255,0.79)] text-sm font-medium leading-normal">
             © 2024 <span className="text-[#02E56A]"> UP Securities</span>. All
             right reserved
           </p>
-          <div className="flex lg:flex-row flex-col-reverse items-center gap-[14px] lg:gap-6 lg:mt-0 mt-[14px]">
+          <div className="flex md:flex-row flex-col-reverse items-center gap-[14px] lg:gap-6 md:mt-0 mt-[14px]">
             <span className="text-[rgba(255,255,255,0.79)] text-sm font-medium leading-normal">
               Điều khoản & Quyền hạn
             </span>

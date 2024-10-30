@@ -7,12 +7,12 @@ type Props = {};
 const ServiceAbout = (props: Props) => {
   return (
     <>
-      <div className="bg-[#0D0C10] py-10 lg:py-[160px] mt-10 lg:mt-[160px]">
+      <div className="bg-[#0D0C10] py-10 lg:py-[60px] xl:py-20 2xl:py-[100px] 3xl:py-[160px] mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
         <div className="flex flex-col ">
           <div className="custom-container">
             <div className="flex items-center justify-between">
               <span
-                className="text-[#FFF] text-[20px] lg:text-[30px] font-bold leading-normal"
+                className="text-[#FFF] text-[20px] lg:text-[24px] lg2:text-[30px] font-bold leading-normal"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -23,7 +23,7 @@ const ServiceAbout = (props: Props) => {
                 data-aos="fade-up"
                 data-aos-delay="600"
               >
-                <button className="text-[#FFF] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                <button className="text-[#FFF] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px] text-nowrap">
                   Xem tất cả
                 </button>
                 <div className="relative w-4 h-4 lg:w-[24px] lg:h-[24px]">
@@ -42,20 +42,20 @@ const ServiceAbout = (props: Props) => {
               data-aos-delay="200"
             ></div>
           </div>
-          <div className="">
+          <div className="sm:container-slide md:custom-container">
             <SlideAbout />
           </div>
-          <div className="mt-10 lg:mt-[100px] custom-container">
+          <div className="mt-10 lg2:mt-20 2xl:mt-[100px] custom-container">
             <div className="grid grid-cols-2 ">
               <div
                 className="flex flex-col gap-6"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <h3 className="text-[#FFF] text-[20px] lg:text-[48px] font-bold lg:leading-[56px]">
+                <h3 className="text-[#FFF] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[56px]">
                   Chứng chỉ <br /> & Giấy phép
                 </h3>
-                <p className="text-[#FFF] text-[18px] font-medium leading-[28px] lg:block hidden">
+                <p className="text-[#FFF] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[28px] lg:block hidden">
                   Chúng tôi luôn nỗ lực không ngừng để đạt được những mục tiêu
                   đầy tham vọng và tạo ra những giá trị lâu dài
                 </p>
@@ -65,15 +65,15 @@ const ServiceAbout = (props: Props) => {
                 data-aos="fade-up"
                 data-aos-delay="600"
               >
-                <p className="text-[#FFF] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                <p className="text-[#FFF] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
                   Bạn muốn tìm hiểu thêm?
                 </p>
-                <p className="text-[#00D763] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px] underline text-right cursor-pointer">
+                <p className="text-[#00D763] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px] underline text-right cursor-pointer">
                   Tải xuống
                 </p>
               </div>
             </div>
-            <p className="text-[#FFF] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px] lg:hidden block mt-4">
+            <p className="text-[#FFF] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px] lg:hidden block mt-4">
               Chúng tôi luôn nỗ lực không ngừng để đạt được những mục tiêu đầy
               tham vọng và tạo ra những giá trị lâu dài
             </p>
