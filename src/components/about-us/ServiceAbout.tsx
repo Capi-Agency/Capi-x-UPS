@@ -42,7 +42,7 @@ const ServiceAbout = (props: Props) => {
               data-aos-delay="200"
             ></div>
           </div>
-          <div className="sm:container-slide md:custom-container">
+          <div className="sm:container-slide lg:custom-container">
             <SlideAbout />
           </div>
           <div className="mt-10 lg2:mt-20 2xl:mt-[100px] custom-container">

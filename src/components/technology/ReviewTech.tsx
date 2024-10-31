@@ -105,7 +105,7 @@ const ReviewTech = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="container-slide md:custom-container">
+      <div className="container-slide lg:custom-container">
         <Swiper
           ref={swiperRef}
           breakpoints={{
@@ -134,7 +134,7 @@ const ReviewTech = (props: Props) => {
             return (
               <SwiperSlide
                 key={index}
-                className={`${index === 0 ? "ml-6 md:ml-0" : ""}`}
+                className={`${index === 0 ? "ml-6 lg:ml-0" : ""}`}
               >
                 <div
                   key={index}

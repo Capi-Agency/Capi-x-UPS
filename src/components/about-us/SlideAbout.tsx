@@ -93,7 +93,7 @@ const SlideAbout = (props: Props) => {
             setIsHovered(false);
           };
           return (
-            <SwiperSlide key={index} className={`${index === 0 ? 'ml-6 md:ml-auto' : ''}`}>
+            <SwiperSlide key={index} className={`${index === 0 ? 'ml-6 lg:ml-auto' : ''}`}>
               <div
                 ref={cardRef}
                 className={`card rounded-[12px] lg:rounded-[16px] p-5 lg:p-6 2xl:p-[32px] flex flex-col justify-between h-[320px] lg:h-[400px] 2xl:h-[430px] relative overflow-hidden bg-[#161519]`}
