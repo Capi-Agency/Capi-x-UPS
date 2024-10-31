@@ -13,7 +13,7 @@ const TagsPage = (props: Props) => {
   ];
   return (
     <div
-      className="custom-container flex items-center gap-6 flex-wrap justify-center lg:gap-10 mt-16 lg:mt-[100px] lg:mb-[-60px]"
+      className="custom-container flex items-center gap-6 flex-wrap justify-center lg:gap-10 mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px] 2xl:mb-[-60px]"
       data-aos="fade-up"
       data-aos-delay="200"
     >

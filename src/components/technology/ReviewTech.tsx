@@ -51,17 +51,17 @@ const ReviewTech = (props: Props) => {
     },
   ];
   return (
-    <div className="mt-16 lg:mt-[160px]">
+    <div className="mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
       <div className="custom-container">
         <div
-          className="flex items-center justify-between lg:border-b border-[#60606B] pb-6 lg:pb-5 lg:mb-10"
+          className="flex items-center justify-between md:border-b border-[#60606B] mb-6 md:pb-5 lg:mb-10"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <h4 className="text-[#111013] text-[20px] lg:text-[30px] font-bold">
+          <h4 className="text-[#111013] text-[20px] lg:text-[24px] lg2:text-[30px] font-bold">
             Đánh giá từ khách hàng
           </h4>
-          <div className="items-center gap-2 float-right mt-10 lg:flex hidden">
+          <div className="items-center gap-2 float-right md:flex hidden">
             <button
               id="prevBtn"
               className="rounded-full bg-[#02E56A] hover:bg-[#15171E] w-[42px] h-[28px] flex justify-center items-center group"
@@ -105,72 +105,86 @@ const ReviewTech = (props: Props) => {
           </div>
         </div>
       </div>
-      <Swiper
-        ref={swiperRef}
-        breakpoints={{
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          0: {
-            slidesPerView: 1.3,
-            spaceBetween: 12,
-          },
-        }}
-        className="mySwiper container-slide md:custom-container"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        {articles.map((article, index) => {
-          return (
-            <SwiperSlide key={index} className={`${index === 0 ? 'ml-6 md:ml-0' : ''}`}>
-              <div
+      <div className="container-slide md:custom-container">
+        <Swiper
+          ref={swiperRef}
+          breakpoints={{
+            1920: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 24,
+            },
+            768: {
+              slidesPerView: 2.6,
+              spaceBetween: 12,
+            },
+            0: {
+              slidesPerView: 1.3,
+              spaceBetween: 12,
+            },
+          }}
+          className="mySwiper"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          {articles.map((article, index) => {
+            return (
+              <SwiperSlide
                 key={index}
-                className={`rounded-[16px] p-5 lg:p-10 flex flex-col justify-between h-[327px] lg:h-[460px] bg-[rgba(144,145,156,0.08)]`}
+                className={`${index === 0 ? "ml-6 md:ml-0" : ""}`}
               >
-                <div className="flex items-center gap-4">
-                  <div className="relative w-[56px] h-[56px] rounded-full">
-                    <NextImg
-                      src={article.avatar}
-                      alt={article.author}
-                      objectFit="cover"
-                      className="rounded-full"
-                    />
+                <div
+                  key={index}
+                  className={`rounded-[16px] p-5 lg:p-10 flex flex-col justify-between bg-[rgba(144,145,156,0.08)]`}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="relative w-[56px] h-[56px] rounded-full">
+                      <NextImg
+                        src={article.avatar}
+                        alt={article.author}
+                        objectFit="cover"
+                        className="rounded-full"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[#111013] text-[18px] font-medium leading-[28px]">
+                        Viết bởi
+                      </span>
+                      <span className="text-[#111013] text-[14px] lg:text-base lg2:text-[22px] font-bold leading-normal">
+                        {article.author}
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-[#111013] text-[18px] font-medium leading-[28px]">
-                      Viết bởi
+                  <div className="mt-[60px]">
+                    <span className="text-[#161519] text-[14px] font-medium leading-[22px] lg:leading-[16px] tracking-[0.14px]">
+                      {article.date}
                     </span>
-                    <span className="text-[#111013] text-[14px] lg:text-[22px] font-bold leading-normal">
-                      {article.author}
-                    </span>
+                    <p className="text-[#000] text-[20px] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] font-bold 2xl:leading-[40px] my-2 lg:my-4">
+                      {article.title}
+                    </p>
+                    <p className="text-[#111013] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                      {article.description}
+                    </p>
+                    <div className="flex items-center gap-2 mt-2 lg:mt-4">
+                      <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
+                        App Mobile
+                      </button>
+                      <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
+                        Trải nghiệm
+                      </button>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <span className="text-[#161519] text-[14px] font-medium leading-[22px] lg:leading-[16px] tracking-[0.14px]">
-                    {article.date}
-                  </span>
-                  <p className="text-[#000] text-[20px] lg:text-[32px] font-bold lg:leading-[40px] my-2 lg:my-4">
-                    {article.title}
-                  </p>
-                  <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
-                    {article.description}
-                  </p>
-                  <div className="flex items-center gap-2 mt-2 lg:mt-4">
-                    <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
-                      App Mobile
-                    </button>
-                    <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
-                      Trải nghiệm
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-      <div className="items-center gap-2 mt-6 lg:hidden flex custom-container">
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+
+      <div className="items-center gap-2 mt-6 md:hidden flex custom-container">
         <button
           id="prevBtn"
           className="rounded-full bg-[#02E56A] hover:bg-[#15171E] w-[42px] h-[28px] flex justify-center items-center group"

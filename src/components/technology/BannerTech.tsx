@@ -8,31 +8,31 @@ type Props = {};
 const BannerTech = (props: Props) => {
   return (
     <div className="bg-[#0D0344]">
-      <div className="custom-container pt-10 lg:pt-16 2xl:pt-20 pb-10 lg:pb-12" data-aos="fade-up">
+      <div className="custom-container pt-16 2xl:pt-20 pb-10 lg:pb-12" data-aos="fade-up">
         <div className="flex flex-col gap-3 lg:gap-5 justify-center items-center pb-10 lg:pb-16">
-          <p className="text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] text-[#FFF] font-bold -tracking-[0.88px] text-center">
+          <p className="text-[32px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] text-[#FFF] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[56px] -tracking-[0.88px] text-center">
             Nền tảng công nghệ{" "}
             <span className="text-[#02E56A]"><br className="md:hidden block"/>vượt trội.</span>
           </p>
-          <div className="bg-[#60606B] opacity-[0.65] w-[35%] lg:w-[25%] h-[1px]"></div>
+          <div className="bg-[#60606B] opacity-[0.65] w-[35%] md:w-[28%] lg:w-[25%] h-[1px]"></div>
           <p className="text-[#FFF] text-sm lg:text-[18px] font-bold -tracking-[0.42px] leading-[140%]">
             Bền bỉ - nhanh chóng - thuận tiện - dễ dàng
           </p>
         </div>
-        <div className="relative w-full pt-[46%] mx-auto md:block hidden">
+        <div className="relative w-full pt-[46%] mx-auto">
           <NextImg
             src="/assets/image/banner-tech-img.png"
             alt="Capi"
             objectFit="cover"
           />
         </div>
-        <div className="relative w-full pt-[70%] mx-auto md:hidden block">
+        {/* <div className="relative w-full pt-[70%] mx-auto md:hidden block">
           <NextImg
             src="/assets/image/banner-tech-mb.svg"
             alt="Capi"
             objectFit="cover"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

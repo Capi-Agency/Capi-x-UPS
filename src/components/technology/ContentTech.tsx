@@ -47,9 +47,9 @@ const ContentTech = (props: Props) => {
   ];
 
   return (
-    <div className="custom-container mt-6 lg:mt-[160px]">
-      <div className="bg-[#F3F3FB] rounded-[24px] px-6 py-10 lg:px-[60px] lg:py-[80px] ">
-        <div className="lg:grid grid-cols-[538px,auto] gap-10 flex flex-col">
+    <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
+      <div className="bg-[#F3F3FB] rounded-[12px] md:rounded-[24px] px-6 py-5 lg:px-10 lg:py-10 lg2:px-[60px] lg2:py-[60px] 2xl:py-[80px] ">
+        <div className="md:grid md:grid-cols-[346px,auto] lg2:grid-cols-[435px,auto] 2xl:grid-cols-[520px,auto] gap-10 3xl:gap-14 flex flex-col">
           <div data-aos="fade-up" data-aos-delay="200">
             <div className="bg-[#111013] w-10 h-10 lg:w-[60px] lg:h-[60px] rounded-full flex items-center justify-center filter drop-shadow">
               <div className="relative w-4 h-4 lg:w-[24px] lg:h-[24px] rounded-full">
@@ -60,16 +60,16 @@ const ContentTech = (props: Props) => {
                 />
               </div>
             </div>
-            <p className="mt-5 lg:mt-6 mb-2 text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[40px]">
+            <p className="mt-5 lg:mt-6 mb-2 text-[#111013] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[40px]">
               #datatracking app
             </p>
-            <p className="text-[#141414] text-[20px] lg:text-[48px] font-bold lg:leading-[54px] lg:w-[90%]">
+            <p className="text-[#141414] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[56px] lg:w-[90%]">
               Siêu ứng dụng <br className="lg:block hidden" /> đầu tư tích hợp
               cho mọi nhu cầu của bạn
             </p>
-            <p className="text-[#111013] text-[14px] lg:text-[18px] tracking-[0.3px] leading-[22px] lg:leading-[30px] mt-2 lg:mt-6">
+            <p className="text-[#111013] text-[14px] lg:text-base lg2:text-[18px] leading-[22px] lg2:leading-[28px] xl:leading-[30px] mt-2 lg:mt-6">
               So how does it work? Let’s check our{" "}
-              <span className="font-bold">Getting Started</span> <br />
+              <span className="font-bold">Getting Started</span> <br className="lg2:block hidden"/>
               tutorial or choose from pre-made templates.
             </p>
             <button className="btn active !bg-[#014227] !text-[#02E56A] mt-5 lg:mt-6">
@@ -89,30 +89,30 @@ const ContentTech = (props: Props) => {
               </svg>
             </button>
           </div>
-          <div data-aos="fade-up" data-aos-delay="600">
-            <div className="relative w-full pt-[62.4%] rounded-full">
+          <div data-aos="fade-up" data-aos-delay="600" className="place-content-end">
+            <div className="relative w-full h-[184px] lg:h-[274px] lg2:h-[328px] 2xl:h-[374px] 3xl:h-[464px] rounded-full">
               <NextImg
                 src="/assets/image/content-1.png"
                 alt="Capi"
-                objectFit="cover"
+                objectFit="contain"
               />
             </div>
           </div>
         </div>
         <div className="mt-10 lg:mt-12">
-          <div className="lg:grid lg:grid-cols-3 flex flex-col gap-6 lg:gap-10">
+          <div className="md:grid md:grid-cols-3 flex flex-col gap-6 lg:gap-10">
             {features.map((item, index) => {
               const delay = ((index % 3) + 1) * 200;
               return (
                 <div
                   key={index}
-                  className="border-t border-[#60606B] opacity-[0.65] pt-6 lg:pt-12 flex flex-col gap-3 lg:gap-4"
+                  className="border-t border-[#60606B] opacity-[0.65] pt-6 lg:pt-8 lg2:pt-10 2xl:pt-12 flex flex-col justify-between gap-3 lg:gap-4"
                   data-aos="fade-up"
                   data-aos-delay={delay}
                 >
                   <div className="flex lg:flex-col flex-row lg:items-start items-center lg:gap-4 gap-3">
-                    <div className="w-10 h-10 lg:w-[60px] lg:h-[60px] bg-[#FFF] flex justify-center items-center rounded-full">
-                      <div className={`relative w-4 h-4 lg:w-6 lg:h-6`}>
+                    <div className="w-10 h-10 lg:w-[50px] lg:h-[50px] lg2:w-[60px] lg2:h-[60px] bg-[#FFF] flex justify-center items-center rounded-full">
+                      <div className={`relative w-4 h-4 lg:w-5 lg:h-5 lg2:w-6 lg2:h-6`}>
                         <NextImg
                           src={item.icon}
                           alt="Capi"
@@ -120,15 +120,15 @@ const ContentTech = (props: Props) => {
                         />
                       </div>
                     </div>
-                    <p className="text-[#111013] text-[20px] lg:text-[32px] font-bold leading-[40px]">
+                    <p className="text-[#111013] text-[20px] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] font-bold leading-[40px]">
                       {item.title}
                     </p>
                   </div>
-                  <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                  <p className="text-[#111013] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
                     {item.description}
                   </p>
-                  <div>
-                    <button className="bg-[#111013] text-sm lg:text-[18px] py-1 px-3 rounded-[8px] text-[#FFF] font-medium leading-[32px] lg:leading-[28px] flex items-center gap-2">
+                  <div className="">
+                    <button className="bg-[#111013] text-sm lg:text-[18px] py-1 px-3 rounded-[8px] text-[#FFF] font-medium leading-[28px] flex items-center gap-2">
                       Đọc thêm
                       <div className="relative w-[20px] h-[20px]">
                         <NextImg
@@ -146,27 +146,27 @@ const ContentTech = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="lg:grid lg:grid-cols-3 flex flex-col gap-3 lg:gap-[30px] mt-6 lg:mt-[30px]">
+      <div className="grid md:grid-cols-3 md:grid-rows-none grid-rows-3 gap-3 lg:gap-[30px] mt-6 lg:mt-[30px]">
         {platforms.map((platform, index) => {
           const delay = ((index % 3) + 1) * 200;
           return (
             <div
               key={index}
-              className="bg-[#F3F3FB] hover:bg-[#4C35F5] group p-5 lg:p-10 rounded-[16px] flex flex-col items-center justify-center transition-all ease-in-out duration-500"
+              className="bg-[#F3F3FB] hover:bg-[#4C35F5] group p-5 lg2:p-8 2xl:p-10 rounded-[12px] lg:rounded-[16px] flex flex-col items-center justify-center transition-all ease-in-out duration-500"
               data-aos="fade-up"
               data-aos-delay={delay}
             >
-              <div className="relative w-[160px] h-[160px] lg:w-[180px] lg:h-[180px] mx-auto">
+              <div className="relative w-[160px] h-[160px] lg:w-[160px] lg:h-[160px] md:w-[120px] md:h-[120px] lg2:w-[180px] lg2:h-[180px] mx-auto">
                 <NextImg
                   src={platform.icon}
                   alt={platform.title}
                   objectFit="cover"
                 />
               </div>
-              <p className="text-[#111013] text-[20px] lg:text-[32px] font-bold lg:leading-[40px] mt-6 mb-2 lg:mb-4 group-hover:text-[#FFF]">
+              <p className="text-[#111013] text-[20px] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] font-bold 2xl:leading-[40px] mt-6 mb-2 lg:mb-4 group-hover:text-[#FFF]">
                 {platform.title}
               </p>
-              <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px] group-hover:text-[#FFF] w-[85%] text-center">
+              <p className="text-[#111013] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px] group-hover:text-[#FFF] 3xl:w-[85%] text-center">
                 {platform.description}
               </p>
             </div>

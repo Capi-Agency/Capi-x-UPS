@@ -10,7 +10,6 @@ const courses = [
       "Creating a higher spacing and how people move through a unique and impactful campaign.",
     imageSrc: "/assets/image/card-course1.svg",
     bgColor: "#FFF1DD",
-    aosDelay: 200,
   },
   {
     title: "Cổ phiếu là gì?",
@@ -18,7 +17,6 @@ const courses = [
       "Creating a higher spacing and how people move through a unique and impactful campaign.",
     imageSrc: "/assets/image/card-course2.svg",
     bgColor: "#FFD495",
-    aosDelay: 400,
   },
   {
     title: "Ban kiếm tiền như thế nào?",
@@ -26,52 +24,54 @@ const courses = [
       "Creating a higher spacing and how people move through a unique and impactful campaign.",
     imageSrc: "/assets/image/card-course3.svg",
     bgColor: "#FFAD36",
-    aosDelay: 600,
   },
 ];
 
 const CourseContent = (props: Props) => {
   return (
-    <div className="custom-container 3xl:!max-w-[1280px] pt-10 lg:pt-[100px]">
+    <div className="custom-container 3xl:!max-w-[1280px] mt-10 lg:mt-[60px] lg2:mt-20 2xl:mt-[100px]">
       <div className="flex flex-col" data-aos="fade-up" data-aos-delay="200">
-        <span className="text-[#FF6D00] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[40px]">
+        <span className="text-[#FF6D00] text-[14px] lg:text-[16px] lg2:text-[18px] font-medium leading-[22px] xl:leading-[40px]">
           #kienthucchungkhoan
         </span>
-        <h3 className="text-[#141414] text-[20px] lg:text-[48px] font-bold lg:leading-[54px] mt-2 mb-2 lg:mb-5">
+        <h3 className="text-[#141414] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[54px] mt-2 mb-2 lg2:mb-5">
           Dành cho người mới bắt đầu
         </h3>
-        <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[28px]">
+        <p className="text-[#111013] text-[14px] lg:text-[16px] lg2:text-[18px] font-medium leading-[28px]">
           Tìm hiểu thông tin cơ bản trước khi bạn trở thành một nhà đầu tư hoàn
           hảo.
         </p>
       </div>
-      <div className="mt-6 lg:mt-20 lg:grid lg:grid-cols-3 flex flex-col gap-3 lg:gap-10">
-        {courses.map((course, index) => (
-          <div
-            key={index}
-            className={`p-5 lg:p-10 rounded-2xl flex flex-col justify-between h-[352px] lg:h-[572px]`}
-            style={{ backgroundColor: course.bgColor }}
-            data-aos="fade-up"
-            data-aos-delay={course.aosDelay}
-          >
-            <div>
-              <h4 className="text-[#111013] text-[20px] lg:text-[32px] font-bold lg:leading-[40px]">
-                {course.title}
-              </h4>
-              <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px] mt-2 lg:mt-4">
-                {course.description}
-              </p>
+      <div className="mt-6 lg:mt-10 2xl:mt-20 md:grid md:grid-cols-3 flex flex-col gap-3 lg:gap-6 2xl:gap-10">
+        {courses.map((course, index) => {
+          const delay = ((index % 3) + 1) * 200;
+          return (
+            <div
+              key={index}
+              className={`p-5 lg:p-[30px] lg2:p-10 rounded-[12px] lg:rounded-2xl flex flex-col justify-between gap-10 md:gap-6 lg2:gap-10 2xl:gap-6`}
+              style={{ backgroundColor: course.bgColor }}
+              data-aos="fade-up"
+              data-aos-delay={delay}
+            >
+              <div className="">
+                <h4 className="text-[#111013] text-[20px] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] font-bold lg:leading-[40px]">
+                  {course.title}
+                </h4>
+                <p className="text-[#111013] text-[14px] lg:text-[16px] lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px] mt-2 lg:mt-3 lg2:mt-4">
+                  {course.description}
+                </p>
+              </div>
+              <div className="relative w-full h-[194px] md:h-[160px] lg:h-[240px] 2xl:h-[288px]">
+                <NextImg
+                  src={course.imageSrc}
+                  alt="Capi"
+                  objectFit="contain"
+                  className=""
+                />
+              </div>
             </div>
-            <div className="relative w-full h-[194px] lg:h-[288px]">
-              <NextImg
-                src={course.imageSrc}
-                alt="Capi"
-                objectFit="contain"
-                className=""
-              />
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       <CourseActicle />
     </div>

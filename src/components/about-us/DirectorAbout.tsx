@@ -47,11 +47,11 @@ const DirectorAbout = (props: Props) => {
                 src={director.imageSrc}
                 alt="Capi"
                 objectFit="cover"
-                className="rounded-[24px]"
+                className="rounded-[12px] lg:rounded-[24px]"
               />
             </div>
             <div
-              className={`bg-[#F3F3FB] rounded-[24px] p-5 lg:p-10 pb-[20%] ${
+              className={`bg-[#F3F3FB] rounded-[12px] lg:rounded-[24px] p-5 lg:p-10 pb-[20%] ${
                 index % 2 !== 0 ? "lg:order-1" : "order-2"
               }`}
               data-aos="fade-up"

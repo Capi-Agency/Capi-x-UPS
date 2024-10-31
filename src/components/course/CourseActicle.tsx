@@ -20,11 +20,11 @@ const articles = [
 const CourseActicle = (props: Props) => {
   return (
     <div
-      className="max-w-[1024px] mx-auto mt-10 lg:mt-20"
+      className="md:max-w-[520px] lg:max-w-[700px] lg2:max-w-[820px] xl:max-w-[900px] 2xl:max-w-[1024px] mx-auto mt-10 lg:mt-[60px] lg2:mt-20"
       data-aos="fade-up"
       data-aos-delay="200"
     >
-      <div className="flex flex-col">
+      <div className="grid grid-rows-3">
         {articles.map((article, index) => (
           <a
             key={index}
@@ -37,11 +37,11 @@ const CourseActicle = (props: Props) => {
               <div className="relative min-w-6 w-[24px] h-[24px]">
                 <NextImg src={article.icon} alt="Capi" objectFit="cover" />
               </div>
-              <p className="text-[#15171E] text-[14px] lg:text-[24px] lg:leading-normal leading-[22px] font-medium">
+              <p className="text-[#15171E] text-[14px] lg:text-[18px] lg2:text-[24px] lg:leading-normal leading-[22px] font-medium">
                 {article.title}
               </p>
             </div>
-            <div className="relative w-[24px] h-[24px] lg:w-[32px] lg:h-[32px] cursor-pointer">
+            <div className="relative w-[24px] h-[24px] lg:w-7 lg:h-7 lg2:w-[32px] lg2:h-[32px] cursor-pointer">
               <NextImg
                 src="/assets/icons/chevron-down.svg"
                 alt="Capi"

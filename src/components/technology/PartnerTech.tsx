@@ -44,14 +44,14 @@ const logos = [
 
 const PartnerTech = (props: Props) => {
   return (
-    <div className="custom-container mt-16 lg:mt-[160px]">
-      <div className="lg:grid lg:grid-cols-[452px,auto] gap-10 flex flex-col">
+    <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
+      <div className="md:grid md:grid-cols-[260px,auto] lg:grid-cols-[356px,auto] 2xl:grid-cols-[452px,auto] gap-10 flex flex-col">
         <div
           className="flex flex-col gap-2"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <h3 className="text-[#111013] text-[20px] lg:text-[48px] lg:leading-[54px] font-bold w-[90%]">
+          <h3 className="text-[#111013] text-[20px] lg:text-[32px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[54px] font-bold w-[90%]">
             Đối tác tuyệt vời của <span className="text-[#00D763]">UPS</span>
           </h3>
           <p className="text-[#111013] text-[14px] lg:text-[18px] leading-[22px] lg:leading-[18px] font-medium w-[90%]">
@@ -66,7 +66,7 @@ const PartnerTech = (props: Props) => {
           {logos.map((logo, index) => (
             <div
               key={index}
-              className={`relative w-full h-6 lg:h-9`}
+              className={`relative w-full h-6 lg:h-7 lg2:h-9`}
             >
               <NextImg src={logo.src} alt="Capi" objectFit="contain" />
             </div>

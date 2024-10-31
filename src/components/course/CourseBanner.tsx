@@ -6,39 +6,39 @@ type Props = {};
 const CourseBanner = (props: Props) => {
   return (
     <div className="bg-[#FFECD2]">
-      <div className="pt-11 lg:pt-5 lg:pb-0 pb-6 custom-container">
-        <div className="lg:grid grid-cols-[52%,48%] items-center">
+      <div className="pt-8 md:pt-12 lg:pt-10 lg2:pt-16 2xl:pt-14 3xl:pt-6 md:pb-0 pb-6 custom-container">
+        <div className="md:grid md:grid-cols-[auto,342px] lg:grid-cols-[auto,380px] lg2:grid-cols-[auto,528px] 2xl:grid-cols-[auto,560px] lg:items-center lg2:items-stretch 2xl:items-center md:gap-10 lg:gap-12 lg2:gap-[74px] 2xl:gap-[90px] 3xl:gap-[136px]">
           <div
-            className="relative w-full lg:h-[661px] pt-[88%]"
+            className="relative w-full pt-[85%] lg:h-[380px] lg2:h-[460px] 2xl:h-[560px] 3xl:h-[661px]"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <NextImg
               src="/assets/image/banner-course.svg"
               alt="Capi"
-              objectFit="cover"
+              objectFit="contain"
               className=""
             />
           </div>
           <div
-            className="lg:w-[80%] lg:justify-self-end lg:mt-0 mt-10"
+            className="lg:justify-self-end md:mt-0 mt-10"
             data-aos="fade-up"
             data-aos-delay="600"
           >
-            <span className="text-[#0C1C28] text-[14px] lg:text-lg font-bold leading-[22px] lg:leading-[26px]">
+            <span className="text-[#0C1C28] text-[14px] lg:text-base lg2:text-lg font-bold">
               Chuỗi nội dung mới
             </span>
-            <p className="text-[#0C1C28] text-[14px] lg:ext-lg leading-[22px] lg:leading-[26px]">
+            <p className="text-[#0C1C28] text-[14px] lg:text-base lg2:text-lg">
               Hà Nội, Việt Nam 20-23 tháng 11, 2024
             </p>
-            <h1 className="text-[#0C1C28] text-[32px] lg:text-[80px] font-bold lg:leading-[92%] -tracking-[1.6px] my-1 lg:my-2">
+            <h1 className="text-[#0C1C28] text-[32px] lg:text-[40px] lg2:text-[52px] 2xl:text-[60px] 3xl:text-[80px] font-bold -tracking-[1.6px] my-1 lg:my-2">
               UPS Academy
             </h1>
-            <h3 className="text-[#0C1C28] text-[20px] lg:text-[48px] font-bold lg:leading-[56px]">
+            <h3 className="text-[#0C1C28] text-[20px] lg:text-[24px] lg2:text-[32px] 2xl:text-[40px] 3xl:text-[48px] font-bold 2xl:leading-[54px] 3xl:leading-[56px] md:w-[85%] 2xl:w-full">
               Trung tâm đào tạo và chia sẻ kiến thức
             </h3>
-            <div className="grid grid-cols-3 mt-6 lg:mt-[94px] gap-3 lg:gap-10">
-              <div className="bg-[#FF6D00] p-6 flex items-end">
+            <div className="grid grid-cols-3 mt-6 lg2:mt-20 2xl:mt-[94px] gap-3 lg:gap-6 2xl:gap-10">
+              <div className="bg-[#FF6D00] p-5 lg:p-6 flex items-end">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -53,29 +53,29 @@ const CourseBanner = (props: Props) => {
                   />
                 </svg>
               </div>
-              <div className="pt-3 lg:pt-6 border-t border-[#60606B] flex flex-col gap-2">
+              <div className="pt-3 lg:pt-4 lg2:pt-6 border-t border-[#60606B] flex flex-col gap-2">
                 <p>
-                  <span className="text-[#0C1C28] text-[20px] lg:text-[40px] font-bold leading-[105%] tracking-[0.4px]">
+                  <span className="text-[#0C1C28] text-[20px] lg:text-[24px] lg2:text-[40px] font-bold tracking-[0.4px] leading-none">
                     95
                   </span>
-                  <span className="text-[#0C1C28] text-[20px] lg:text-[32px] font-bold leading-[105%]">
+                  <span className="text-[#0C1C28] text-[20px] lg:text-[24px] lg2:text-[32px] font-bold leading-none">
                     +
                   </span>
                 </p>
-                <p className="text-[#0C1C28] text-[14px] lg:text-[16px] font-medium leading-[22px] lg:leading-[25px] tracking-[0.28px] lg:tracking-[0.328px]">
+                <p className="text-[#0C1C28] text-[14px] lg:text-base 3xl:text-[18px] font-medium tracking-[0.28px] lg:tracking-[0.328px]">
                   Video bài giảng
                 </p>
               </div>
-              <div className="pt-3 lg:pt-6 border-t border-[#60606B] flex flex-col gap-2">
+              <div className="pt-3 lg:pt-4 lg2:pt-6 border-t border-[#60606B] flex flex-col gap-2">
                 <p>
-                  <span className="text-[#0C1C28] text-[20px] lg:text-[40px] font-bold leading-[105%] tracking-[0.4px]">
+                  <span className="text-[#0C1C28] text-[20px] lg:text-[24px] lg2:text-[40px] font-bold leading-none tracking-[0.4px]">
                     285
                   </span>
-                  <span className="text-[#0C1C28] text-[20px] lg:text-[32px] font-bold leading-[105%]">
+                  <span className="text-[#0C1C28] text-[20px] lg:text-[24px] lg2:text-[32px] font-bold leading-none">
                     +
                   </span>
                 </p>
-                <p className="text-[#0C1C28] text-[14px] lg:text-[16px] font-medium leading-[22px] lg:leading-[25px] tracking-[0.28px] lg:tracking-[0.328px]">
+                <p className="text-[#0C1C28] text-[14px] lg:text-base 3xl:text-[18px] font-medium leading-[22px] lg:leading-[25px] tracking-[0.28px] lg:tracking-[0.328px] lg2:w-full w-[80%]">
                   Nội dung thiết thực
                 </p>
               </div>

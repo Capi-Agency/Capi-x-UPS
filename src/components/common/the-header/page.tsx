@@ -23,7 +23,7 @@ const TheHeader = (props: Props) => {
     <div className="fixed w-full z-[999]">
       <div className="bg-[#0E1A0D] rounded-b-[24px]">
         <div
-          className="py-4 md:py-[20px] mx-auto sm:max-w-full xl:max-w-[1280px] 2xl:max-w-[1440px] 3xl:max-w-[1600px] px-6 md:px-10 xl:px-0"
+          className="py-4 lg:py-[20px] mx-auto sm:max-w-full xl:max-w-[1280px] 2xl:max-w-[1440px] 3xl:max-w-[1600px] px-6 md:px-10 xl:px-0"
           data-aos="fade-up"
         >
           <div className="relative flex items-center justify-between">

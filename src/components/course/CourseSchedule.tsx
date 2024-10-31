@@ -51,18 +51,18 @@ const CourseSchedule = (props: Props) => {
             {contentData.map((item, index) => (
               <div
                 key={index}
-                className={`lg:grid grid-cols-12 border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full ${
+                className={`md:grid grid-cols-12 border-[#60606B] border-opacity-65 py-5 md:py-6 gap-10 md:gap-6 lg:gap-10 w-full ${
                   index === contentData.length - 1 ? "border-none" : "border-b"
                 } `}
               >
-                <div className="flex lg:items-start items-center col-span-4 justify-between gap-4 lg:mb-0 mb-6">
-                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                <div className="flex md:items-start items-center col-span-4 justify-between gap-4 md:mb-0 mb-6">
+                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm md:text-base">
                     {item.title}
                   </p>
-                  <div className="group lg:hidden block">
+                  <div className="group md:hidden block">
                     <a
                       href=""
-                      className="text-[#FF6D00] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 text-sm lg:text-base text-nowrap"
+                      className="text-[#FF6D00] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 text-sm md::text-base text-nowrap"
                     >
                       Chi tiết
                       <svg
@@ -92,25 +92,25 @@ const CourseSchedule = (props: Props) => {
                     </a>
                   </div>
                 </div>
-                <div className="flex col-span-6 gap-10 lg:justify-evenly justify-between">
+                <div className="flex col-span-6 gap-10 md:justify-evenly justify-between">
                   <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm md:text-base">
                       {item.author}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm md:text-base">
                       {item.role}
                     </p>
                   </div>
                   <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm md:text-base">
                       {item.duration}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm md:text-base">
                       {item.viewers}
                     </p>
                   </div>
                 </div>
-                <div className="group col-span-2 lg:block hidden justify-self-end">
+                <div className="group col-span-2 md:block hidden justify-self-end">
                   <a
                     href=""
                     className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00]  text-nowrap"
@@ -459,7 +459,7 @@ const CourseSchedule = (props: Props) => {
   };
 
   return (
-    <div className="custom-container 3xl:!max-w-[1280px] mt-16 lg:mt-[160px]">
+    <div className="custom-container 3xl:!max-w-[1280px] mt-16 lg2:mt-20 2xl:mt-[100px] 3xl:mt-[120px]">
       <Tabs
         defaultValue={currentSchedule.toString()}
         onValueChange={handleScheduleClick}
@@ -467,10 +467,10 @@ const CourseSchedule = (props: Props) => {
         data-aos-delay="200"
       >
         <div>
-          <span className="text-[14px] lg:text-[18px] text-[#FF6D00] font-medium leading-[22px] lg:leading-[40px]">
+          <span className="text-[14px] lg:text-[16px] lg2:text-[18px] text-[#FF6D00] font-medium leading-[22px] lg:leading-[40px]">
             Quý 4, 2024
           </span>
-          <h2 className="text-[20px] lg:text-[48px] text-[#141414] font-bold lg:leading-[54px] mt-2 mb-3 lg:mb-5">
+          <h2 className="text-[#141414] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[54px] mt-2 mb-3 lg2:mb-5">
             Lịch trình ra mắt
           </h2>
         </div>
@@ -479,7 +479,7 @@ const CourseSchedule = (props: Props) => {
             <TabsTrigger
               key={schedule.id}
               value={schedule.id.toString()}
-              className={`text-[14px] lg:text-[18px]  font-medium py-[9px] leading-[22px] lg:leading-[28px] text-[#111013]  ${
+              className={`text-[14px] lg:text-[16px] lg2:text-[18px]  font-medium py-[9px] leading-[22px] lg:leading-[28px] text-[#111013]  ${
                 currentSchedule === schedule.id
                   ? "border-b-2 border-[#0C1C28]"
                   : "border-none"
@@ -493,7 +493,7 @@ const CourseSchedule = (props: Props) => {
           <TabsContent
             key={schedule.id}
             value={schedule.id.toString()}
-            className="mt-3 lg:mt-[40px]"
+            className="mt-3 lg:mt-6 lg2:mt-[40px]"
           >
             {renderContent()}
           </TabsContent>
