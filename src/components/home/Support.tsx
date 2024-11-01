@@ -126,7 +126,7 @@ const Support = (props: Props) => {
           </div>
           <div data-aos="fade-up" data-aos-delay="400">
             <div className="relative p-5 lg:p-6 lg2:p-[50px] 3xl:p-[60px]">
-              <div className="bg-[#F3F3FB] inset-0 w-full h-full absolute -z-10 rounded-3xl"></div>
+              <div className="bg-[#F3F3FB] inset-0 w-full h-full absolute -z-10 rounded-[12px] lg:rounded-3xl"></div>
               <div className="relative w-[240px] h-[260px] lg2:w-[303px] lg2:h-[330px] 3xl:w-[324px] 3xl:h-[350px]">
                 <NextImg
                   src="/assets/icons/group-5.svg"

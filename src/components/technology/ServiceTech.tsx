@@ -6,7 +6,7 @@ type Props = {};
 const ServiceTech = (props: Props) => {
   return (
     <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
-      <div className="bg-[#0D0344] rounded-[24px] md:grid md:grid-cols-[214px,auto] lg:grid-cols-[341px,auto] md:pl-5 lg:pl-8 lg2:pl-[50px] md:gap-16 lg:gap-8 lg2:gap-2 flex flex-col-reverse">
+      <div className="bg-[#0D0344] rounded-[12px] md:rounded-[24px] md:grid md:grid-cols-[214px,auto] lg:grid-cols-[341px,auto] md:pl-5 lg:pl-8 lg2:pl-[50px] md:gap-16 lg:gap-8 lg2:gap-2 flex flex-col-reverse">
         <div
           className="flex flex-col mb-5 lg:mb-[50px] md:place-self-end md:mt-0 mt-6 md:px-0 px-5"
           data-aos="fade-up"

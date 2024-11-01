@@ -77,15 +77,15 @@ const Banner = (props: Props) => {
         </div>
       </div>
       <div
-        className="flex md:flex-row flex-col items-center gap-4 md:gap-6 2xl:gap-9 mt-6 md:mt-10 lg:mt-[50px] 2xl:mt-[60px] 3xl:mt-[70px] max-w-full md:max-w-full lg:max-w-[870px] xl:max-w-[1130px] 2xl:max-w-[1390px] px-6 lg:px-0 mx-auto"
+        className="flex md:flex-row flex-col items-center gap-4 md:gap-6 2xl:gap-9 mt-6 md:mt-10 lg:mt-[50px] 2xl:mt-[60px] 3xl:mt-[70px] max-w-full md:max-w-full lg:max-w-[870px] xl:max-w-[1130px] 2xl:max-w-[1390px] md:px-6 lg:px-0 mx-auto"
         data-aos="fade-up"
       >
         <p className="text-[#FFF] text-sm lg:text-xl font-medium md:min-w-20 md:w-20 lg:min-w-[110px] lg:w-[110px]">
           Top đầu tư của tuần
         </p>
-        <div className="flex items-center gap-3 lg:gap-9 whitespace-nowrap overflow-x-auto scrollbar-hidden max-w-full lg:px-0">
+        <div className="flex items-center gap-3 lg:gap-9 whitespace-nowrap overflow-x-auto scrollbar-hidden max-w-full">
           {userData.map((user, index) => (
-            <div className="flex items-center gap-5" key={index}>
+            <div className={`flex items-center gap-5 ${index === 0 ? "pl-6 md:pl-0" : "" }`} key={index}>
               <div className="relative w-10 h-10 lg:w-[54px] lg:h-[54px]">
                 <NextImg
                   src={user.image}

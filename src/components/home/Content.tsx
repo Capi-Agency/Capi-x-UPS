@@ -132,7 +132,7 @@ const Content = (props: Props) => {
           </div>
         </div>
         {/*  section 2*/}
-        <div className="bg-[#150900] rounded-[20px] lg:rounded-[40px] mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px] relative md:grid md:grid-cols-[auto,52%] md:items-center flex flex-col md:px-5 lg:px-10 lg2:px-[50px] md:py-0 p-5 md:gap-10 lg:gap-14 lg2:gap-20 gap-5">
+        <div className="bg-[#150900] rounded-[16px] lg:rounded-[40px] mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px] relative md:grid md:grid-cols-[auto,52%] md:items-center flex flex-col md:px-5 lg:px-10 lg2:px-[50px] md:py-0 p-5 md:gap-10 lg:gap-14 lg2:gap-20 gap-5">
           <div
             className="relative w-[240px] md:w-[273px] lg:w-[340px] lg2:w-[430px] 2xl:w-[482px] 3xl:w-[564px] h-[234px] md:h-[276px] lg:h-[320px] lg2:h-[400px] flex justify-start place-content-start"
             data-aos="fade-up"

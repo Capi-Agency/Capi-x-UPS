@@ -48,7 +48,7 @@ const ContentTech = (props: Props) => {
 
   return (
     <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
-      <div className="bg-[#F3F3FB] rounded-[12px] md:rounded-[24px] px-6 py-5 lg:px-10 lg:py-10 lg2:px-[60px] lg2:py-[60px] 2xl:py-[80px] ">
+      <div className="bg-[#F3F3FB] rounded-[12px] lg:rounded-[24px] px-6 py-5 lg:px-10 lg:py-10 lg2:px-[60px] lg2:py-[60px] 2xl:py-[80px] ">
         <div className="md:grid md:grid-cols-[346px,auto] lg2:grid-cols-[435px,auto] 2xl:grid-cols-[520px,auto] gap-10 3xl:gap-14 flex flex-col">
           <div data-aos="fade-up" data-aos-delay="200">
             <div className="bg-[#111013] w-10 h-10 lg:w-[60px] lg:h-[60px] rounded-full flex items-center justify-center filter drop-shadow">

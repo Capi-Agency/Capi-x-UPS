@@ -48,7 +48,7 @@ const CourseContent2 = (props: Props) => {
     <div>
       <div className="custom-container 3xl:!max-w-[1280px] mt-12 lg2:mt-20 2xl:mt-[100px] 3xl:mt-[120px]">
         {/* banner 2 */}
-        <div className="bg-[#000] rounded-[24px]">
+        <div className="bg-[#000] rounded-[12px] lg:rounded-[24px]">
           <div className="flex flex-col-reverse md:grid md:grid-cols-[40%,auto] lg2:grid-cols-[32%,auto] md:items-center md:justify-between lg:gap-0 gap-5">
             <div
               className="md:py-0 md:pl-5 lg:pl-10 lg2:pl-[50px] md:pr-0 p-5"
