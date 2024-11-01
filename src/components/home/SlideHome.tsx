@@ -2,9 +2,13 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import NextImg from "../common/next-img";
-type Props = {};
+type Props = {
+  slideData:any
+};
 
-const SlideHome = (props: Props) => {
+const SlideHome = ({slideData}: Props) => {
+  console.log(slideData);
+  
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -37,10 +41,10 @@ const SlideHome = (props: Props) => {
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           className="rounded-[12px] lg:rounded-3xl"
         >
-          {slides.map((slide, index) => (
+          {slideData?.items?.map((slide:any, index:any) => (
             <SwiperSlide key={index}>
               <div className="relative w-full h-[342px] md:h-[360px] lg:h-[400px] lg2:h-[440px] 2xl:h-[500px] 3xl:h-[560px]">
-                <NextImg src={slide} alt="Capi" objectFit="cover" />
+                <NextImg src={process.env.REACT_APP_IMG_URL+slide?.item?.cover?.id} alt={slide?.item?.title1} objectFit="cover" />
               </div>
             </SwiperSlide>
           ))}

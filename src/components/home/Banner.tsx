@@ -5,6 +5,7 @@ import NextImg from "../common/next-img";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import Link from "next/link";
 
 type Props = {
   bannerData: any;
@@ -42,16 +43,16 @@ const userData: User[] = [
     percentage: "+ 6.20%",
   },
 ];
-const Banner = ({bannerData}: Props) => {
+const Banner = ({ bannerData }: Props) => {
   console.log(bannerData);
-  
+
   return (
     <div className="relative pt-20 lg:pt-16 2xl:pt-[90px] 3xl:pt-[100px] mx-auto bg-[linear-gradient(180deg,#0E1A0D_82%,#060B06_100%)] mt-[-15px]">
       <div className="flex justify-center custom-container" data-aos="fade-up">
         <div className="flex flex-col justify-center items-center mx-auto">
           <div className="relative w-10 h-10 md:w-[56px] md:h-[56px]">
             <NextImg
-              src="/assets/icons/ups-icon2.svg"
+              src={process.env.REACT_APP_IMG_URL + bannerData?.cover?.id}
               alt="Capi"
               objectFit="cover"
             />
@@ -60,23 +61,29 @@ const Banner = ({bannerData}: Props) => {
             UP Securities
           </p>
           <h1 className="text-[#FFF] text-center text-[32px] md:text-[40px] lg:text-[46px] xl:text-[56px] 2xl:text-[66px] 3xl:text-[76px] font-bold leading-normal lg:leading-[52px] xl:leading-[62px] 2xl:leading-[72px] 3xl:leading-[82px] -tracking-[0.64px] md:tracking-[-0.8px] lg:tracking-[-0.92px] xl:tracking-[-1.12px] 2xl:tracking-[-1.32px] 3xl:tracking-[-1.52px] mt-[14px]">
-            Chính thức ra mắt <br /> dẫn lối hành trình đầu tư <br className="md:block hidden"/> của bạn
+            {bannerData?.blurb}
           </h1>
           <div className="flex items-center pt-6 md:pt-8 lg:pt-[52px] gap-[20px]">
-            <button className="btn active">
-              Mở tài khoản ngay
-              <div className="relative w-4 h-4 lg:w-6 lg:h-6">
-                <NextImg
-                  src={process.env.REACT_APP_IMG_URL+bannerData.cover.id}
-                  alt="Capi"
-                  objectFit="cover"
-                />
-              </div>
-            </button>
-            <p className="text-[#8C9AA4] text-base font-medium leading-normal md:block hidden">
-              Nền tảng đầu tư đột phá <br />
-              về trải nghiệm người dùng
-            </p>
+            {bannerData?.items?.map((item: any) => {
+              return (
+                <>
+                  <Link href={item.item.url1} className="btn active">
+                    {item.item.cta1}
+                    <div className="relative w-4 h-4 lg:w-6 lg:h-6">
+                      <NextImg
+                        src="/assets/icons/UPs.svg"
+                        alt="Capi"
+                        objectFit="cover"
+                      />
+                    </div>
+                  </Link>
+                  <p className="text-[#8C9AA4] text-base font-medium leading-normal md:block hidden">
+                    {item.item.cta2}
+                  </p>
+                </>
+              )
+            })}
+
           </div>
         </div>
       </div>
@@ -89,7 +96,7 @@ const Banner = ({bannerData}: Props) => {
         </p>
         <div className="flex items-center gap-3 lg:gap-9 whitespace-nowrap overflow-x-auto scrollbar-hidden max-w-full">
           {userData.map((user, index) => (
-            <div className={`flex items-center gap-5 ${index === 0 ? "pl-6 md:pl-0" : "" }`} key={index}>
+            <div className={`flex items-center gap-5 ${index === 0 ? "pl-6 md:pl-0" : ""}`} key={index}>
               <div className="relative w-10 h-10 lg:w-[54px] lg:h-[54px]">
                 <NextImg
                   src={user.image}

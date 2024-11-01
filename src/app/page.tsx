@@ -15,28 +15,28 @@ export default async function HomePage() {
   console.log(data.data?.data?.pages_by_id?.raw_content);
   return (
     <div>
-      {data?.data?.data?.pages_by_id?.raw_content&&data?.data?.data?.pages_by_id?.raw_content?.sections.map((datasection:any)=>{
+      {data?.data?.data?.pages_by_id?.raw_content&&data?.data?.data?.pages_by_id?.raw_content?.sections.map((datasection:any,index:any)=>{
         return (
-          <div key={datasection.id}>
+          <div key={index}>
             {datasection.section.type === 'banner' && <Banner bannerData={datasection.section} />}
-            {/* {datasection.section_type === 'slide_home' && <SlideHome slideData={datasection} />}
-            {datasection.section_type === 'content' && <Content contentData={datasection} />}
-            {datasection.section_type === 'user_manual' && <UserManual manualData={datasection} />}
-            {datasection.section_type === 'mobile_app' && <MobileApp appData={datasection} />}
-            {datasection.section_type === 'community' && <Community communityData={datasection} />}
-            {datasection.section_type === 'support' && <Support supportData={datasection} />} */}
+            {datasection.section.type === 'slide quảng cáo' && <SlideHome slideData={datasection.section} />}
+            {/* {datasection.section_type === 'content' && <Content contentData={datasection} />} */}
+            {/* {datasection.section_type === 'user_manual' && <UserManual manualData={datasection} />} */}
+            {/* {datasection.section_type === 'mobile_app' && <MobileApp appData={datasection} />} */}
+            {/* {datasection.section_type === 'community' && <Community communityData={datasection} />} */}
+            {/* {datasection.section_type === 'support' && <Support supportData={datasection} />} */}
           </div>
         )
       }) }
-      {/* <Banner bannerData={data.data?.data?.pages_by_id?.raw_content}/>
-      <SlideHome />
+      {/* <Banner bannerData={data.data?.data?.pages_by_id?.raw_content}/> */}
+      {/* <SlideHome /> */}
       <Content />
       <UserManual />
       <MobileApp />
       <div className="custom-container">
         <Community />
         <Support />
-      </div> */}
+      </div>
     </div>
   );
 }
