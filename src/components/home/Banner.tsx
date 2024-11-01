@@ -6,7 +6,9 @@ import NextImg from "../common/next-img";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-type Props = {};
+type Props = {
+  bannerData: any;
+};
 interface User {
   name: string;
   image: string;
@@ -40,7 +42,9 @@ const userData: User[] = [
     percentage: "+ 6.20%",
   },
 ];
-const Banner = (props: Props) => {
+const Banner = ({bannerData}: Props) => {
+  console.log(bannerData);
+  
   return (
     <div className="relative pt-20 lg:pt-16 2xl:pt-[90px] 3xl:pt-[100px] mx-auto bg-[linear-gradient(180deg,#0E1A0D_82%,#060B06_100%)] mt-[-15px]">
       <div className="flex justify-center custom-container" data-aos="fade-up">
@@ -63,7 +67,7 @@ const Banner = (props: Props) => {
               Mở tài khoản ngay
               <div className="relative w-4 h-4 lg:w-6 lg:h-6">
                 <NextImg
-                  src="/assets/icons/UPs.svg"
+                  src={process.env.REACT_APP_IMG_URL+bannerData.cover.id}
                   alt="Capi"
                   objectFit="cover"
                 />

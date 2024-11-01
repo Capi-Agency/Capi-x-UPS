@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: false,
     images: {
-        // domains: ['agiler.space', 'admin.thm.capi.work', 'thm.truecms.io'],
+        domains: ['cms.upse.vn'],
     },
     env: {
         REACT_APP_API_MODULE_URL: process.env.REACT_APP_API_MODULE_URL,

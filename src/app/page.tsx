@@ -15,7 +15,20 @@ export default async function HomePage() {
   console.log(data.data?.data?.pages_by_id?.raw_content);
   return (
     <div>
-      <Banner />
+      {data?.data?.data?.pages_by_id?.raw_content&&data?.data?.data?.pages_by_id?.raw_content?.sections.map((datasection:any)=>{
+        return (
+          <div key={datasection.id}>
+            {datasection.section.type === 'banner' && <Banner bannerData={datasection.section} />}
+            {/* {datasection.section_type === 'slide_home' && <SlideHome slideData={datasection} />}
+            {datasection.section_type === 'content' && <Content contentData={datasection} />}
+            {datasection.section_type === 'user_manual' && <UserManual manualData={datasection} />}
+            {datasection.section_type === 'mobile_app' && <MobileApp appData={datasection} />}
+            {datasection.section_type === 'community' && <Community communityData={datasection} />}
+            {datasection.section_type === 'support' && <Support supportData={datasection} />} */}
+          </div>
+        )
+      }) }
+      {/* <Banner bannerData={data.data?.data?.pages_by_id?.raw_content}/>
       <SlideHome />
       <Content />
       <UserManual />
@@ -23,7 +36,7 @@ export default async function HomePage() {
       <div className="custom-container">
         <Community />
         <Support />
-      </div>
+      </div> */}
     </div>
   );
 }
