@@ -471,16 +471,7 @@ export const fnGetPage = async (slug: string) => {
     const query = `
         query {
             pages_by_id(id: "${slug}") {
-                name
-                slug
-                blurb
                 raw_content
-                cover {
-                    id
-                }
-                meta_title
-                meta_keyword
-                meta_description
             }
         }
     `;

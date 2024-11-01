@@ -3,10 +3,14 @@ import BannerAbout from "@/components/about-us/Banner-about";
 import DirectorAbout from "@/components/about-us/DirectorAbout";
 import ServiceAbout from "@/components/about-us/ServiceAbout";
 import Support from "@/components/home/Support";
+import { fnGetPage } from "@/services/page";
 
 type Props = {};
 
-const GioiThieu = (props: Props) => {
+ const GioiThieu = async() => {
+  const data = await fnGetPage('ve-chung-toi-L7')
+    console.log(data?.data?.data?.pages_by_id?.raw_content);
+    
   return (
     <>
       {/* Banner Giới thiệu */}
