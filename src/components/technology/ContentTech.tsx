@@ -48,11 +48,11 @@ const ContentTech = (props: Props) => {
 
   return (
     <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
-      <div className="bg-[#F3F3FB] rounded-[12px] lg:rounded-[24px] px-6 py-5 lg:px-10 lg:py-10 lg2:px-[60px] lg2:py-[60px] 2xl:py-[80px] ">
-        <div className="md:grid md:grid-cols-[346px,auto] lg2:grid-cols-[435px,auto] 2xl:grid-cols-[520px,auto] gap-10 3xl:gap-14 flex flex-col">
+      <div className="rounded-[12px] bg-[#F3F3FB] px-6 py-5 lg:rounded-[24px] lg:px-10 lg:py-10 lg2:px-[60px] lg2:py-[60px] 2xl:py-[80px]">
+        <div className="flex flex-col gap-10 md:grid md:grid-cols-[346px,auto] lg2:grid-cols-[435px,auto] 2xl:grid-cols-[520px,auto] 3xl:gap-14">
           <div data-aos="fade-up" data-aos-delay="200">
-            <div className="bg-[#111013] w-10 h-10 lg:w-[60px] lg:h-[60px] rounded-full flex items-center justify-center filter drop-shadow">
-              <div className="relative w-4 h-4 lg:w-[24px] lg:h-[24px] rounded-full">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#111013] drop-shadow filter lg:h-[60px] lg:w-[60px]">
+              <div className="relative h-4 w-4 rounded-full lg:h-[24px] lg:w-[24px]">
                 <NextImg
                   src="/assets/icons/stop.svg"
                   alt="Capi"
@@ -60,25 +60,26 @@ const ContentTech = (props: Props) => {
                 />
               </div>
             </div>
-            <p className="mt-5 lg:mt-6 mb-2 text-[#111013] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[40px]">
+            <p className="mb-2 mt-5 text-[14px] font-medium leading-[22px] text-[#111013] lg:mt-6 lg:text-base lg:leading-[40px] lg2:text-[18px]">
               #datatracking app
             </p>
-            <p className="text-[#141414] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[56px] lg:w-[90%]">
-              Siêu ứng dụng <br className="lg:block hidden" /> đầu tư tích hợp
+            <p className="text-[20px] font-bold text-[#141414] lg:w-[90%] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[56px]">
+              Siêu ứng dụng <br className="hidden lg:block" /> đầu tư tích hợp
               cho mọi nhu cầu của bạn
             </p>
-            <p className="text-[#111013] text-[14px] lg:text-base lg2:text-[18px] leading-[22px] lg2:leading-[28px] xl:leading-[30px] mt-2 lg:mt-6">
+            <p className="mt-2 text-[14px] leading-[22px] text-[#111013] lg:mt-6 lg:text-base lg2:text-[18px] lg2:leading-[28px] xl:leading-[30px]">
               So how does it work? Let’s check our{" "}
-              <span className="font-bold">Getting Started</span> <br className="lg2:block hidden"/>
+              <span className="font-bold">Getting Started</span>{" "}
+              <br className="hidden lg2:block" />
               tutorial or choose from pre-made templates.
             </p>
-            <button className="btn active !bg-[#014227] !text-[#02E56A] mt-5 lg:mt-6">
+            <button className="btn active mt-5 !bg-[#014227] !text-[#02E56A] lg:mt-6">
               Khám phá ngay
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
-                className="lg:w-6 lg:h-6 w-4 h-4"
+                className="h-4 w-4 lg:h-6 lg:w-6"
               >
                 <path
                   fillRule="evenodd"
@@ -89,8 +90,12 @@ const ContentTech = (props: Props) => {
               </svg>
             </button>
           </div>
-          <div data-aos="fade-up" data-aos-delay="600" className="place-content-end">
-            <div className="relative w-full h-[184px] lg:h-[274px] lg2:h-[328px] 2xl:h-[374px] 3xl:h-[464px] rounded-full">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="600"
+            className="place-content-end"
+          >
+            <div className="relative h-[184px] w-full rounded-full lg:h-[274px] lg2:h-[328px] 2xl:h-[374px] 3xl:h-[464px]">
               <NextImg
                 src="/assets/image/content-1.png"
                 alt="Capi"
@@ -100,19 +105,21 @@ const ContentTech = (props: Props) => {
           </div>
         </div>
         <div className="mt-10 lg:mt-12">
-          <div className="md:grid md:grid-cols-3 flex flex-col gap-6 lg:gap-10">
+          <div className="flex flex-col gap-6 md:grid md:grid-cols-3 lg:gap-10">
             {features.map((item, index) => {
               const delay = ((index % 3) + 1) * 200;
               return (
                 <div
                   key={index}
-                  className="border-t border-[#60606B] opacity-[0.65] pt-6 lg:pt-8 lg2:pt-10 2xl:pt-12 flex flex-col justify-between gap-3 lg:gap-4"
+                  className="flex flex-col justify-between gap-3 border-t border-[#60606B] pt-6 opacity-[0.65] lg:gap-4 lg:pt-8 lg2:pt-10 2xl:pt-12"
                   data-aos="fade-up"
                   data-aos-delay={delay}
                 >
-                  <div className="flex lg:flex-col flex-row lg:items-start items-center lg:gap-4 gap-3">
-                    <div className="w-10 h-10 lg:w-[50px] lg:h-[50px] lg2:w-[60px] lg2:h-[60px] bg-[#FFF] flex justify-center items-center rounded-full">
-                      <div className={`relative w-4 h-4 lg:w-5 lg:h-5 lg2:w-6 lg2:h-6`}>
+                  <div className="flex flex-row items-center gap-3 lg:flex-col lg:items-start lg:gap-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF] lg:h-[50px] lg:w-[50px] lg2:h-[60px] lg2:w-[60px]">
+                      <div
+                        className={`relative h-4 w-4 lg:h-5 lg:w-5 lg2:h-6 lg2:w-6`}
+                      >
                         <NextImg
                           src={item.icon}
                           alt="Capi"
@@ -120,17 +127,17 @@ const ContentTech = (props: Props) => {
                         />
                       </div>
                     </div>
-                    <p className="text-[#111013] text-[20px] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] font-bold leading-[40px]">
+                    <p className="text-[20px] font-bold leading-[40px] text-[#111013] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px]">
                       {item.title}
                     </p>
                   </div>
-                  <p className="text-[#111013] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                  <p className="text-[14px] font-medium leading-[22px] text-[#111013] lg:text-base lg:leading-[28px] lg2:text-[18px]">
                     {item.description}
                   </p>
                   <div className="">
-                    <button className="bg-[#111013] text-sm lg:text-[18px] py-1 px-3 rounded-[8px] text-[#FFF] font-medium leading-[28px] flex items-center gap-2">
+                    <button className="flex items-center gap-2 rounded-[8px] bg-[#111013] px-3 py-1 text-sm font-medium leading-[28px] text-[#FFF] lg:text-[18px]">
                       Đọc thêm
-                      <div className="relative w-[20px] h-[20px]">
+                      <div className="relative h-[20px] w-[20px]">
                         <NextImg
                           src="/assets/icons/arrow_forward.svg"
                           alt="Capi"
@@ -146,27 +153,27 @@ const ContentTech = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="grid md:grid-cols-3 md:grid-rows-none grid-rows-3 gap-3 lg:gap-[30px] mt-6 lg:mt-[30px]">
+      <div className="mt-6 grid grid-rows-3 gap-3 md:grid-cols-3 md:grid-rows-none lg:mt-[30px] lg:gap-[30px]">
         {platforms.map((platform, index) => {
           const delay = ((index % 3) + 1) * 200;
           return (
             <div
               key={index}
-              className="bg-[#F3F3FB] hover:bg-[#4C35F5] group p-5 lg2:p-8 2xl:p-10 rounded-[12px] lg:rounded-[16px] flex flex-col items-center justify-center transition-all ease-in-out duration-500"
+              className="group flex flex-col items-center justify-center rounded-[12px] bg-[#F3F3FB] p-5 transition-all duration-500 ease-in-out hover:bg-[#4C35F5] lg:rounded-[16px] lg2:p-8 2xl:p-10"
               data-aos="fade-up"
               data-aos-delay={delay}
             >
-              <div className="relative w-[160px] h-[160px] lg:w-[160px] lg:h-[160px] md:w-[120px] md:h-[120px] lg2:w-[180px] lg2:h-[180px] mx-auto">
+              <div className="relative mx-auto h-[160px] w-[160px] md:h-[120px] md:w-[120px] lg:h-[160px] lg:w-[160px] lg2:h-[180px] lg2:w-[180px]">
                 <NextImg
                   src={platform.icon}
                   alt={platform.title}
                   objectFit="cover"
                 />
               </div>
-              <p className="text-[#111013] text-[20px] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] font-bold 2xl:leading-[40px] mt-6 mb-2 lg:mb-4 group-hover:text-[#FFF]">
+              <p className="mb-2 mt-6 text-[20px] font-bold text-[#111013] group-hover:text-[#FFF] lg:mb-4 lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] 2xl:leading-[40px]">
                 {platform.title}
               </p>
-              <p className="text-[#111013] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px] group-hover:text-[#FFF] 3xl:w-[85%] text-center">
+              <p className="text-center text-[14px] font-medium leading-[22px] text-[#111013] group-hover:text-[#FFF] lg:text-base lg:leading-[28px] lg2:text-[18px] 3xl:w-[85%]">
                 {platform.description}
               </p>
             </div>

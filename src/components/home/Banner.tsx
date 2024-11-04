@@ -47,29 +47,29 @@ const Banner = ({ bannerData }: Props) => {
   console.log(bannerData);
 
   return (
-    <div className="relative pt-20 lg:pt-16 2xl:pt-[90px] 3xl:pt-[100px] mx-auto bg-[linear-gradient(180deg,#0E1A0D_82%,#060B06_100%)] mt-[-15px]">
-      <div className="flex justify-center custom-container" data-aos="fade-up">
-        <div className="flex flex-col justify-center items-center mx-auto">
-          <div className="relative w-10 h-10 md:w-[56px] md:h-[56px]">
+    <div className="relative mx-auto mt-[-15px] bg-[linear-gradient(180deg,#0E1A0D_82%,#060B06_100%)] pt-20 lg:pt-16 2xl:pt-[90px] 3xl:pt-[100px]">
+      <div className="custom-container flex justify-center" data-aos="fade-up">
+        <div className="mx-auto flex flex-col items-center justify-center">
+          <div className="relative h-10 w-10 md:h-[56px] md:w-[56px]">
             <NextImg
               src={process.env.REACT_APP_IMG_URL + bannerData?.cover?.id}
               alt="Capi"
               objectFit="cover"
             />
           </div>
-          <p className="text-[#FFF] text-center text-[14px] lg:text-base font-medium leading-normal pt-2 md:pt-[16px]">
+          <p className="pt-2 text-center text-[14px] font-medium leading-normal text-[#FFF] md:pt-[16px] lg:text-base">
             UP Securities
           </p>
-          <h1 className="text-[#FFF] text-center text-[32px] md:text-[40px] lg:text-[46px] xl:text-[56px] 2xl:text-[66px] 3xl:text-[76px] font-bold leading-normal lg:leading-[52px] xl:leading-[62px] 2xl:leading-[72px] 3xl:leading-[82px] -tracking-[0.64px] md:tracking-[-0.8px] lg:tracking-[-0.92px] xl:tracking-[-1.12px] 2xl:tracking-[-1.32px] 3xl:tracking-[-1.52px] mt-[14px]">
+          <h1 className="mt-[14px] text-center text-[32px] font-bold leading-normal -tracking-[0.64px] text-[#FFF] md:text-[40px] md:tracking-[-0.8px] lg:text-[46px] lg:leading-[52px] lg:tracking-[-0.92px] xl:text-[56px] xl:leading-[62px] xl:tracking-[-1.12px] 2xl:text-[66px] 2xl:leading-[72px] 2xl:tracking-[-1.32px] 3xl:text-[76px] 3xl:leading-[82px] 3xl:tracking-[-1.52px]">
             {bannerData?.blurb}
           </h1>
-          <div className="flex items-center pt-6 md:pt-8 lg:pt-[52px] gap-[20px]">
+          <div className="flex items-center gap-[20px] pt-6 md:pt-8 lg:pt-[52px]">
             {bannerData?.items?.map((item: any) => {
               return (
                 <>
                   <Link href={item.item.url1} className="btn active">
                     {item.item.cta1}
-                    <div className="relative w-4 h-4 lg:w-6 lg:h-6">
+                    <div className="relative h-4 w-4 lg:h-6 lg:w-6">
                       <NextImg
                         src="/assets/icons/UPs.svg"
                         alt="Capi"
@@ -77,27 +77,29 @@ const Banner = ({ bannerData }: Props) => {
                       />
                     </div>
                   </Link>
-                  <p className="text-[#8C9AA4] text-base font-medium leading-normal md:block hidden">
+                  <p className="hidden text-base font-medium leading-normal text-[#8C9AA4] md:block">
                     {item.item.cta2}
                   </p>
                 </>
-              )
+              );
             })}
-
           </div>
         </div>
       </div>
       <div
-        className="flex md:flex-row flex-col items-center gap-4 md:gap-6 2xl:gap-9 mt-6 md:mt-10 lg:mt-[50px] 2xl:mt-[60px] 3xl:mt-[70px] max-w-full md:max-w-full lg:max-w-[870px] xl:max-w-[1130px] 2xl:max-w-[1390px] md:px-6 lg:px-0 mx-auto"
+        className="mx-auto mt-6 flex max-w-full flex-col items-center gap-4 md:mt-10 md:max-w-full md:flex-row md:gap-6 md:px-6 lg:mt-[50px] lg:max-w-[870px] lg:px-0 xl:max-w-[1130px] 2xl:mt-[60px] 2xl:max-w-[1390px] 2xl:gap-9 3xl:mt-[70px]"
         data-aos="fade-up"
       >
-        <p className="text-[#FFF] text-sm lg:text-xl font-medium md:min-w-20 md:w-20 lg:min-w-[110px] lg:w-[110px]">
+        <p className="text-sm font-medium text-[#FFF] md:w-20 md:min-w-20 lg:w-[110px] lg:min-w-[110px] lg:text-xl">
           Top đầu tư của tuần
         </p>
-        <div className="flex items-center gap-3 lg:gap-9 whitespace-nowrap overflow-x-auto scrollbar-hidden max-w-full">
+        <div className="scrollbar-hidden flex max-w-full items-center gap-3 overflow-x-auto whitespace-nowrap lg:gap-9">
           {userData.map((user, index) => (
-            <div className={`flex items-center gap-5 ${index === 0 ? "pl-6 md:pl-0" : ""}`} key={index}>
-              <div className="relative w-10 h-10 lg:w-[54px] lg:h-[54px]">
+            <div
+              className={`flex items-center gap-5 ${index === 0 ? "pl-6 md:pl-0" : ""}`}
+              key={index}
+            >
+              <div className="relative h-10 w-10 lg:h-[54px] lg:w-[54px]">
                 <NextImg
                   src={user.image}
                   alt={user.name}
@@ -106,10 +108,10 @@ const Banner = ({ bannerData }: Props) => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-[#FFF] text-sm lg:text-xl font-medium">
+                <span className="text-sm font-medium text-[#FFF] lg:text-xl">
                   {user.name}
                 </span>
-                <span className="text-[#05BE5A] text-xs lg:text-base font-medium">
+                <span className="text-xs font-medium text-[#05BE5A] lg:text-base">
                   {user.percentage}
                 </span>
               </div>

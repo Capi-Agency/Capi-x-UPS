@@ -50,9 +50,9 @@ const AccordionItem = (props: AccordionItemProps) => {
     handleOnClick,
   } = props;
   return (
-    <div key={id} className="flex gap-3 lg:gap-5 relative">
-      <div className="bg-[#F3F3FB] w-10 h-10 min-w-10 lg:w-[50px] lg:h-[50px] lg:min-w-[50px] flex items-center justify-center rounded-[10px]">
-        <div className="relative w-[19px] h-[19px] lg:w-[24px] lg:h-[24px]">
+    <div key={id} className="relative flex gap-3 lg:gap-5">
+      <div className="flex h-10 w-10 min-w-10 items-center justify-center rounded-[10px] bg-[#F3F3FB] lg:h-[50px] lg:w-[50px] lg:min-w-[50px]">
+        <div className="relative h-[19px] w-[19px] lg:h-[24px] lg:w-[24px]">
           <NextImg
             src="/assets/icons/document-text.svg"
             alt="Capi"
@@ -62,20 +62,18 @@ const AccordionItem = (props: AccordionItemProps) => {
         </div>
       </div>
       <div className={`flex flex-col`}>
-        <span className="text-[#15171E] text-sm lg:text-base lg2:text-[30px] font-semibold lg:leading-[24px] lg2:leading-9 leading-normal mr-8">
+        <span className="mr-8 text-sm font-semibold leading-normal text-[#15171E] lg:text-base lg:leading-[24px] lg2:text-[30px] lg2:leading-9">
           {question}
         </span>
         <div
-          className={`grid text-[#535662] text-sm lg:text-base lg2:text-[18px] font-medium leading-[28px] overflow-hidden 
-						transition-all duration-500 ease-in-out
-						${isOpen ? "grid-rows-[1fr] opacity-100 mt-2 lg:mt-4" : "grid-rows-[0fr] opacity-0 mt-0"} `}
+          className={`grid overflow-hidden text-sm font-medium leading-[28px] text-[#535662] transition-all duration-500 ease-in-out lg:text-base lg2:text-[18px] ${isOpen ? "mt-2 grid-rows-[1fr] opacity-100 lg:mt-4" : "mt-0 grid-rows-[0fr] opacity-0"} `}
         >
           <div className="overflow-hidden">{answer}</div>
         </div>
       </div>
-      <div className="absolute top-0 right-0">
+      <div className="absolute right-0 top-0">
         <div
-          className={`relative w-6 h-6 lg:w-[32px] lg:h-[32px] cursor-pointer transform duration-300 ease-in-out ${
+          className={`relative h-6 w-6 transform cursor-pointer duration-300 ease-in-out lg:h-[32px] lg:w-[32px] ${
             isOpen ? "" : "rotate-180"
           }`}
           onClick={handleOnClick}
@@ -84,7 +82,7 @@ const AccordionItem = (props: AccordionItemProps) => {
             src="/assets/icons/chevron-down.svg"
             alt="Capi"
             objectFit="cover"
-            className="w-full h-full"
+            className="h-full w-full"
           />
         </div>
       </div>
@@ -103,17 +101,17 @@ const Support = (props: Props) => {
   };
   return (
     <>
-      <div className="max-w-[1120px] mx-auto mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
-        <div className="xl:grid xl:grid-cols-[600px,auto] md:flex-row flex flex-col gap-6 lg:gap-10 lg2:gap-20">
+      <div className="mx-auto mt-10 max-w-[1120px] lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
+        <div className="flex flex-col gap-6 md:flex-row lg:gap-10 lg2:gap-20 xl:grid xl:grid-cols-[600px,auto]">
           <div data-aos="fade-up" data-aos-delay="200">
-            <span className="text-[#111013] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[56px]">
+            <span className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[56px]">
               <span className="text-[#01C159]">Câu hỏi</span> thường gặp
             </span>
-            <p className="text-[#000] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px] mt-3 lg:mt-3 lg2:mt-8">
+            <p className="mt-3 text-[14px] font-medium leading-[22px] text-[#000] lg:mt-3 lg:text-base lg:leading-[28px] lg2:mt-8 lg2:text-[18px]">
               Cập nhật các sản phẩm, dịch vụ mới nhất cũng như các hoạt động, sự
               kiện của UPS
             </p>
-            <div className="mt-6 lg:mt-[60px] flex flex-col gap-5 lg:gap-[70px]">
+            <div className="mt-6 flex flex-col gap-5 lg:mt-[60px] lg:gap-[70px]">
               {QnAItems.map((item) => (
                 <AccordionItem
                   key={item.id}
@@ -126,8 +124,8 @@ const Support = (props: Props) => {
           </div>
           <div data-aos="fade-up" data-aos-delay="400">
             <div className="relative p-5 lg:p-6 lg2:p-[50px] 3xl:p-[60px]">
-              <div className="bg-[#F3F3FB] inset-0 w-full h-full absolute -z-10 rounded-[12px] lg:rounded-3xl"></div>
-              <div className="relative w-[240px] h-[260px] lg2:w-[303px] lg2:h-[330px] 3xl:w-[324px] 3xl:h-[350px]">
+              <div className="absolute inset-0 -z-10 h-full w-full rounded-[12px] bg-[#F3F3FB] lg:rounded-3xl"></div>
+              <div className="relative h-[260px] w-[240px] lg2:h-[330px] lg2:w-[303px] 3xl:h-[350px] 3xl:w-[324px]">
                 <NextImg
                   src="/assets/icons/group-5.svg"
                   alt="Capi"
@@ -135,7 +133,7 @@ const Support = (props: Props) => {
                   className=""
                 />
               </div>
-              <p className="text-[#535662] text-[14px] lg:text-base lg2:text-[18px] font-semibold leading-[22px] lg:leading-[28px] mt-5 lg:mt-[52px] mb-5 lg2:mb-[50px]">
+              <p className="mb-5 mt-5 text-[14px] font-semibold leading-[22px] text-[#535662] lg:mt-[52px] lg:text-base lg:leading-[28px] lg2:mb-[50px] lg2:text-[18px]">
                 Bạn chưa tìm thấy câu trả lời phù hợp? Đi tới trung tâm hỗ trợ
               </p>
               <button className="btn active !bg-[#014227] !text-[#02E56A]">
@@ -144,7 +142,7 @@ const Support = (props: Props) => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
-                  className="w-4 h-4 lg:w-6 lg:h-6"
+                  className="h-4 w-4 lg:h-6 lg:w-6"
                 >
                   <path
                     fillRule="evenodd"

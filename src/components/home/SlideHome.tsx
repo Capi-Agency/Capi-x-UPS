@@ -3,12 +3,12 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import NextImg from "../common/next-img";
 type Props = {
-  slideData:any
+  slideData: any;
 };
 
-const SlideHome = ({slideData}: Props) => {
+const SlideHome = ({ slideData }: Props) => {
   console.log(slideData);
-  
+
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -41,24 +41,29 @@ const SlideHome = ({slideData}: Props) => {
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           className="rounded-[12px] lg:rounded-3xl"
         >
-          {slideData?.items?.map((slide:any, index:any) => (
+          {slideData?.items?.map((slide: any, index: any) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-[342px] md:h-[360px] lg:h-[400px] lg2:h-[440px] 2xl:h-[500px] 3xl:h-[560px]">
-                <NextImg src={process.env.REACT_APP_IMG_URL+slide?.item?.cover?.id} alt={slide?.item?.title1} objectFit="cover" />
+              <div className="relative h-[342px] w-full md:h-[360px] lg:h-[400px] lg2:h-[440px] 2xl:h-[500px] 3xl:h-[560px]">
+                <NextImg
+                  src={process.env.REACT_APP_IMG_URL + slide?.item?.cover?.id}
+                  alt={slide?.item?.title1}
+                  objectFit="cover"
+                />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
         <button
           id="prevBtn"
-          className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -left-8 z-[10] lg2:block hidden"
+          className="group absolute -left-8 top-1/2 z-[10] hidden -translate-y-1/2 rounded-full bg-[#02E56A] p-6 hover:bg-[#15171E] lg2:block"
           onClick={() => {
             if (swiperRef.current && swiperRef.current.swiper) {
               if (!isAnimating) {
                 setIsAnimating(true);
                 swiperRef.current.swiper.slidePrev();
                 setActiveIndex(
-                  (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
+                  (prevIndex) =>
+                    (prevIndex - 1 + slides.length) % slides.length,
                 );
                 setTimeout(() => {
                   setIsAnimating(false);
@@ -83,7 +88,7 @@ const SlideHome = ({slideData}: Props) => {
         </button>
         <button
           id="nextBtn"
-          className="rounded-full bg-[#02E56A] hover:bg-[#15171E] p-6 group absolute top-1/2 -translate-y-1/2 -right-8 z-[10] lg2:block hidden"
+          className="group absolute -right-8 top-1/2 z-[10] hidden -translate-y-1/2 rounded-full bg-[#02E56A] p-6 hover:bg-[#15171E] lg2:block"
           onClick={() => {
             if (swiperRef.current && swiperRef.current.swiper) {
               if (!isAnimating) {
@@ -112,11 +117,11 @@ const SlideHome = ({slideData}: Props) => {
             />
           </svg>
         </button>
-        <div className="pagination-custom absolute bottom-6 left-1/2 -translate-x-1/2 flex justify-center space-x-3 z-10">
+        <div className="pagination-custom absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 justify-center space-x-3">
           {slides.map((_, index) => (
             <button
               key={index}
-              className={`w-[20px] h-[4px] transition duration-300 rounded-[20px] ${
+              className={`h-[4px] w-[20px] rounded-[20px] transition duration-300 ${
                 activeIndex === index
                   ? "bg-[#15171E]"
                   : "bg-[rgba(255,255,255,0.50)]"

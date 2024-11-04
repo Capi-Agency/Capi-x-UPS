@@ -6,22 +6,22 @@ type Props = {};
 const ServiceTech = (props: Props) => {
   return (
     <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
-      <div className="bg-[#0D0344] rounded-[12px] md:rounded-[24px] md:grid md:grid-cols-[214px,auto] lg:grid-cols-[341px,auto] md:pl-5 lg:pl-8 lg2:pl-[50px] md:gap-16 lg:gap-8 lg2:gap-2 flex flex-col-reverse">
+      <div className="flex flex-col-reverse rounded-[12px] bg-[#0D0344] md:grid md:grid-cols-[214px,auto] md:gap-16 md:rounded-[24px] md:pl-5 lg:grid-cols-[341px,auto] lg:gap-8 lg:pl-8 lg2:gap-2 lg2:pl-[50px]">
         <div
-          className="flex flex-col mb-5 lg:mb-[50px] md:place-self-end md:mt-0 mt-6 md:px-0 px-5"
+          className="mb-5 mt-6 flex flex-col px-5 md:mt-0 md:place-self-end md:px-0 lg:mb-[50px]"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <h4 className="text-[20px] lg:text-[32px] lg2:text-[40px] text-[#FFF] font-bold lg:leading-[46px] xl:leading-[54px]">
+          <h4 className="text-[20px] font-bold text-[#FFF] lg:text-[32px] lg:leading-[46px] lg2:text-[40px] xl:leading-[54px]">
             Hơn cả một trải nghiệm đầu tư
           </h4>
-          <p className="text-[14px] lg:text-base lg2:text-[18px] text-[#FFF] font-medium leading-[22px] lg:leading-[28px] mt-2 lg:mt-4">
+          <p className="mt-2 text-[14px] font-medium leading-[22px] text-[#FFF] lg:mt-4 lg:text-base lg:leading-[28px] lg2:text-[18px]">
             Tăng tốc giao dịch nhanh chóng với ứng dụng di động cá nhân hoá
             riêng cho bạn.
           </p>
-          <div className="flex flex-col gap-3 mt-5 lg:mt-6">
-            <div className="bg-[#111] flex items-center gap-[9px] p-[10px] lg:pr-[50px] rounded-[9px] cursor-pointer w-[180px] lg:w-[60%]">
-              <div className="relative w-6 h-6">
+          <div className="mt-5 flex flex-col gap-3 lg:mt-6">
+            <div className="flex w-[180px] cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] lg:w-[60%] lg:pr-[50px]">
+              <div className="relative h-6 w-6">
                 <NextImg
                   src="/assets/icons/google-play1.svg"
                   alt="Capi"
@@ -29,16 +29,16 @@ const ServiceTech = (props: Props) => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-[rgba(255,255,255,0.79)] text-xs font-medium leading-normal uppercase">
+                <span className="text-xs font-medium uppercase leading-normal text-[rgba(255,255,255,0.79)]">
                   Get it on
                 </span>
-                <span className="text-[#FFF] text-[14px] lg:text-base font-semibold leading-[21px]">
+                <span className="text-[14px] font-semibold leading-[21px] text-[#FFF] lg:text-base">
                   Google Play
                 </span>
               </div>
             </div>
-            <div className="bg-[#111] flex items-center gap-[9px] p-[10px] lg:pr-6 rounded-[9px] cursor-pointer w-[180px] lg:w-[60%]">
-              <div className="relative w-6 h-6">
+            <div className="flex w-[180px] cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] lg:w-[60%] lg:pr-6">
+              <div className="relative h-6 w-6">
                 <NextImg
                   src="/assets/icons/apple-logo1.svg"
                   alt="Capi"
@@ -46,10 +46,10 @@ const ServiceTech = (props: Props) => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-[rgba(255,255,255,0.79)] font-medium leading-normal text-xs uppercase">
+                <span className="text-xs font-medium uppercase leading-normal text-[rgba(255,255,255,0.79)]">
                   Download on the
                 </span>
-                <span className="text-[14px] lg:text-base text-[#FFF]  font-semibold leading-[21px]">
+                <span className="text-[14px] font-semibold leading-[21px] text-[#FFF] lg:text-base">
                   App Store
                 </span>
               </div>
@@ -57,7 +57,7 @@ const ServiceTech = (props: Props) => {
           </div>
         </div>
         <div
-          className="relative w-full h-[316px] md:h-[380px] lg:h-[450px] lg2:h-[600px] 2xl:h-[700px] 3xl:h-[790px]"
+          className="relative h-[316px] w-full md:h-[380px] lg:h-[450px] lg2:h-[600px] 2xl:h-[700px] 3xl:h-[790px]"
           data-aos="fade-up"
           data-aos-delay="200"
         >

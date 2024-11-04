@@ -54,17 +54,17 @@ const ReviewTech = (props: Props) => {
     <div className="mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
       <div className="custom-container">
         <div
-          className="flex items-center justify-between md:border-b border-[#60606B] mb-6 md:pb-5 lg:mb-10"
+          className="mb-6 flex items-center justify-between border-[#60606B] md:border-b md:pb-5 lg:mb-10"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <h4 className="text-[#111013] text-[20px] lg:text-[24px] lg2:text-[30px] font-bold">
+          <h4 className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[30px]">
             Đánh giá từ khách hàng
           </h4>
-          <div className="items-center gap-2 float-right md:flex hidden">
+          <div className="float-right hidden items-center gap-2 md:flex">
             <button
               id="prevBtn"
-              className="rounded-full bg-[#02E56A] hover:bg-[#15171E] w-[42px] h-[28px] flex justify-center items-center group"
+              className="group flex h-[28px] w-[42px] items-center justify-center rounded-full bg-[#02E56A] hover:bg-[#15171E]"
               onClick={() => swiperRef.current.swiper.slidePrev()}
             >
               <svg
@@ -84,7 +84,7 @@ const ReviewTech = (props: Props) => {
             </button>
             <button
               id="nextBtn"
-              className="rounded-full bg-[#02E56A] hover:bg-[#15171E] w-[42px] h-[28px] flex justify-center items-center group"
+              className="group flex h-[28px] w-[42px] items-center justify-center rounded-full bg-[#02E56A] hover:bg-[#15171E]"
               onClick={() => swiperRef.current.swiper.slideNext()}
             >
               <svg
@@ -138,10 +138,10 @@ const ReviewTech = (props: Props) => {
               >
                 <div
                   key={index}
-                  className={`rounded-[16px] p-5 lg:p-10 flex flex-col justify-between bg-[rgba(144,145,156,0.08)]`}
+                  className={`flex flex-col justify-between rounded-[16px] bg-[rgba(144,145,156,0.08)] p-5 lg:p-10`}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="relative w-[56px] h-[56px] rounded-full">
+                    <div className="relative h-[56px] w-[56px] rounded-full">
                       <NextImg
                         src={article.avatar}
                         alt={article.author}
@@ -150,29 +150,29 @@ const ReviewTech = (props: Props) => {
                       />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[#111013] text-[18px] font-medium leading-[28px]">
+                      <span className="text-[18px] font-medium leading-[28px] text-[#111013]">
                         Viết bởi
                       </span>
-                      <span className="text-[#111013] text-[14px] lg:text-base lg2:text-[22px] font-bold leading-normal">
+                      <span className="text-[14px] font-bold leading-normal text-[#111013] lg:text-base lg2:text-[22px]">
                         {article.author}
                       </span>
                     </div>
                   </div>
                   <div className="mt-[60px]">
-                    <span className="text-[#161519] text-[14px] font-medium leading-[22px] lg:leading-[16px] tracking-[0.14px]">
+                    <span className="text-[14px] font-medium leading-[22px] tracking-[0.14px] text-[#161519] lg:leading-[16px]">
                       {article.date}
                     </span>
-                    <p className="text-[#000] text-[20px] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] font-bold 2xl:leading-[40px] my-2 lg:my-4">
+                    <p className="my-2 text-[20px] font-bold text-[#000] lg:my-4 lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] 2xl:leading-[40px]">
                       {article.title}
                     </p>
-                    <p className="text-[#111013] text-[14px] lg:text-base lg2:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                    <p className="text-[14px] font-medium leading-[22px] text-[#111013] lg:text-base lg:leading-[28px] lg2:text-[18px]">
                       {article.description}
                     </p>
-                    <div className="flex items-center gap-2 mt-2 lg:mt-4">
-                      <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
+                    <div className="mt-2 flex items-center gap-2 lg:mt-4">
+                      <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-[14px] font-medium leading-normal text-[#111013]">
                         App Mobile
                       </button>
-                      <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
+                      <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-[14px] font-medium leading-normal text-[#111013]">
                         Trải nghiệm
                       </button>
                     </div>
@@ -184,10 +184,10 @@ const ReviewTech = (props: Props) => {
         </Swiper>
       </div>
 
-      <div className="items-center gap-2 mt-6 md:hidden flex custom-container">
+      <div className="custom-container mt-6 flex items-center gap-2 md:hidden">
         <button
           id="prevBtn"
-          className="rounded-full bg-[#02E56A] hover:bg-[#15171E] w-[42px] h-[28px] flex justify-center items-center group"
+          className="group flex h-[28px] w-[42px] items-center justify-center rounded-full bg-[#02E56A] hover:bg-[#15171E]"
           onClick={() => swiperRef.current.swiper.slidePrev()}
         >
           <svg
@@ -207,7 +207,7 @@ const ReviewTech = (props: Props) => {
         </button>
         <button
           id="nextBtn"
-          className="rounded-full bg-[#02E56A] hover:bg-[#15171E] w-[42px] h-[28px] flex justify-center items-center group"
+          className="group flex h-[28px] w-[42px] items-center justify-center rounded-full bg-[#02E56A] hover:bg-[#15171E]"
           onClick={() => swiperRef.current.swiper.slideNext()}
         >
           <svg

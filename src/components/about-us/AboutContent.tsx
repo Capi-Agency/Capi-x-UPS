@@ -26,28 +26,28 @@ const features = [
 const AboutContent = (props: Props) => {
   return (
     <>
-      <div className="custom-container  ">
-        <div className="md:grid md:grid-cols-2 md:gap-0 gap-6 flex flex-col md:mt-0 mt-10">
+      <div className="custom-container">
+        <div className="mt-10 flex flex-col gap-6 md:mt-0 md:grid md:grid-cols-2 md:gap-0">
           <div
             className="flex flex-col gap-4 place-self-end"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <span className="text-[#00D763] text-[14px] lg:text-base lg2:text-[18px] 3xl:text-2xl font-semibold uppercase leading-normal">
+            <span className="text-[14px] font-semibold uppercase leading-normal text-[#00D763] lg:text-base lg2:text-[18px] 3xl:text-2xl">
               Tầm nhìn
             </span>
-            <p className="text-[#141414] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[54px]">
+            <p className="text-[20px] font-bold text-[#141414] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[54px]">
               Trở thành Công ty chứng khoán bán lẻ hàng đầu cung cấp các giải
               pháp tài chính đầu tư cá nhân dành cho thế hệ trẻ
             </p>
           </div>
           <div
-            className="bg-[#23252B] p-5 lg:p-10 lg2:p-[50px] 2xl:p-[60px] w-full md:w-[340px] md:h-[320px] lg:w-[380px] lg:h-[360px] lg2:w-[450px] lg2:h-[460px] 2xl:h-[492px] place-content-end justify-self-end "
+            className="w-full place-content-end justify-self-end bg-[#23252B] p-5 md:h-[320px] md:w-[340px] lg:h-[360px] lg:w-[380px] lg:p-10 lg2:h-[460px] lg2:w-[450px] lg2:p-[50px] 2xl:h-[492px] 2xl:p-[60px]"
             data-aos="fade-up"
             data-aos-delay="600"
           >
-            <div className="bg-[#33363F] w-10 h-10 lg:w-[60px] lg:h-[60px] 2xl:w-20 2xl:h-20 flex items-center justify-center">
-              <div className="relative w-3 h-3 lg:w-[18px] lg:h-[18px] 2xl:w-6 2xl:h-6">
+            <div className="flex h-10 w-10 items-center justify-center bg-[#33363F] lg:h-[60px] lg:w-[60px] 2xl:h-20 2xl:w-20">
+              <div className="relative h-3 w-3 lg:h-[18px] lg:w-[18px] 2xl:h-6 2xl:w-6">
                 <NextImg
                   src="/assets/icons/share2.svg"
                   alt="Capi"
@@ -55,34 +55,34 @@ const AboutContent = (props: Props) => {
                 />
               </div>
             </div>
-            <p className="text-[14px] lg:text-base lg2:text-[18px] 3xl:text-[20px] font-medium tracking-[0.28px] lg:tracking-[0.4px] leading-[22px] lg2:leading-[28px] 3xl:leading-[30px] text-[#FFF] mt-3 lg:mt-[32px] mb-4">
+            <p className="mb-4 mt-3 text-[14px] font-medium leading-[22px] tracking-[0.28px] text-[#FFF] lg:mt-[32px] lg:text-base lg:tracking-[0.4px] lg2:text-[18px] lg2:leading-[28px] 3xl:text-[20px] 3xl:leading-[30px]">
               Tạo ra không gian đầu tư độc đáo, mới mẻ tràn đầy hứng khởi, từ đó
               định hình lại cách nhà đầu tư tiếp cận và trải nghiệm đầu tư tài
               chính cá nhân.
             </p>
-            <span className="text-[#00D763] text-[14px] lg:text-base lg2:text-[18px] 3xl:text-2xl font-semibold lg2:leading-[28px] 3xl:leading-normal uppercase">
+            <span className="text-[14px] font-semibold uppercase text-[#00D763] lg:text-base lg2:text-[18px] lg2:leading-[28px] 3xl:text-2xl 3xl:leading-normal">
               Sứ mệnh
             </span>
           </div>
         </div>
       </div>
       <div className="custom-container mt-10 md:mt-20 lg:mt-[100px] 3xl:mt-[130px]">
-        <div className="md:grid md:grid-cols-[278px,auto] lg:grid-cols-2 lg:gap-[30px] flex flex-col gap-10">
+        <div className="flex flex-col gap-10 md:grid md:grid-cols-[278px,auto] lg:grid-cols-2 lg:gap-[30px]">
           <div
             data-aos="fade-up"
             data-aos-delay="200"
             className="flex flex-col justify-between"
           >
             <div>
-              <span className="text-[#111013] text-[14px] md:text-[20px] lg:text-[30px] 2xl:text-[32px] font-bold leading-[40px]">
+              <span className="text-[14px] font-bold leading-[40px] text-[#111013] md:text-[20px] lg:text-[30px] 2xl:text-[32px]">
                 Giá trị cốt lõi
               </span>
-              <div className="bg-[#60606B] w-full h-[1px] my-3 md:my-2 lg:my-4 lg:mb-8"></div>
-              <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[28px]">
+              <div className="my-3 h-[1px] w-full bg-[#60606B] md:my-2 lg:my-4 lg:mb-8"></div>
+              <p className="text-[14px] font-medium leading-[28px] text-[#111013] lg:text-[18px]">
                 Chúng tôi không ngừng nỗ lực cho mục tiêu
               </p>
             </div>
-            <div className="relative w-[186px] h-[200px] lg:w-[233px] lg:h-[250px] lg:mt-0 mt-10">
+            <div className="relative mt-10 h-[200px] w-[186px] lg:mt-0 lg:h-[250px] lg:w-[233px]">
               <NextImg
                 src="/assets/image/ups-box.png"
                 alt="Capi"
@@ -91,17 +91,17 @@ const AboutContent = (props: Props) => {
             </div>
           </div>
           <div data-aos="fade-up" data-aos-delay="600">
-            <div className="md:grid md:grid-cols-2 md:gap-x-6 md:gap-y-6 lg:gap-x-[30px] lg:gap-y-[50px] flex flex-col gap-10">
+            <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:gap-x-6 md:gap-y-6 lg:gap-x-[30px] lg:gap-y-[50px]">
               {features.map(({ id, title, description }) => (
                 <div key={id} className="col-span-1">
-                  <span className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[40px]">
+                  <span className="text-[14px] font-medium leading-[40px] text-[#111013] lg:text-[18px]">
                     #{id}
                   </span>
-                  <div className="w-full bg-[#60606B] h-[1px] my-3 md:my-2 lg:my-4"></div>
-                  <h4 className="text-[#111013] text-[20px] lg:text-[30px] 2xl:text-[32px] font-bold 2xl:leading-[40px] lg2:mb-5 mb-2">
+                  <div className="my-3 h-[1px] w-full bg-[#60606B] md:my-2 lg:my-4"></div>
+                  <h4 className="mb-2 text-[20px] font-bold text-[#111013] lg:text-[30px] lg2:mb-5 2xl:text-[32px] 2xl:leading-[40px]">
                     {title}
                   </h4>
-                  <p className="text-[#111013] text-[14px] lg:text-[18px] font-medium leading-[22px] lg:leading-[28px]">
+                  <p className="text-[14px] font-medium leading-[22px] text-[#111013] lg:text-[18px] lg:leading-[28px]">
                     {description}
                   </p>
                 </div>

@@ -36,7 +36,7 @@ const CourseSchedule = (props: Props) => {
     },
   ];
   const [currentSchedule, setCurrentSchedule] = useState<number>(
-    schedules[0].id
+    schedules[0].id,
   );
 
   const handleScheduleClick = (value: string) => {
@@ -51,18 +51,18 @@ const CourseSchedule = (props: Props) => {
             {contentData.map((item, index) => (
               <div
                 key={index}
-                className={`md:grid grid-cols-12 border-[#60606B] border-opacity-65 py-5 md:py-6 gap-10 md:gap-6 lg:gap-10 w-full ${
+                className={`w-full grid-cols-12 gap-10 border-[#60606B] border-opacity-65 py-5 md:grid md:gap-6 md:py-6 lg:gap-10 ${
                   index === contentData.length - 1 ? "border-none" : "border-b"
                 } `}
               >
-                <div className="flex md:items-start items-center col-span-4 justify-between gap-4 md:mb-0 mb-6">
-                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm md:text-base">
+                <div className="col-span-4 mb-6 flex items-center justify-between gap-4 md:mb-0 md:items-start">
+                  <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
                     {item.title}
                   </p>
-                  <div className="group md:hidden block">
+                  <div className="group block md:hidden">
                     <a
                       href=""
-                      className="text-[#FF6D00] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 text-sm md::text-base text-nowrap"
+                      className="md::text-base flex items-center gap-2 text-nowrap text-sm font-bold leading-[27px] tracking-[0.328px] text-[#FF6D00]"
                     >
                       Chi tiết
                       <svg
@@ -92,28 +92,28 @@ const CourseSchedule = (props: Props) => {
                     </a>
                   </div>
                 </div>
-                <div className="flex col-span-6 gap-10 md:justify-evenly justify-between">
-                  <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm md:text-base">
+                <div className="col-span-6 flex justify-between gap-10 md:justify-evenly">
+                  <div className="col-span-3 flex flex-col">
+                    <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
                       {item.author}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm md:text-base">
+                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
                       {item.role}
                     </p>
                   </div>
-                  <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm md:text-base">
+                  <div className="col-span-3 flex flex-col">
+                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
                       {item.duration}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm md:text-base">
+                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
                       {item.viewers}
                     </p>
                   </div>
                 </div>
-                <div className="group col-span-2 md:block hidden justify-self-end">
+                <div className="group col-span-2 hidden justify-self-end md:block">
                   <a
                     href=""
-                    className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00]  text-nowrap"
+                    className="flex items-center gap-2 text-nowrap font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] group-hover:text-[#FF6D00]"
                   >
                     Chi tiết
                     <svg
@@ -153,18 +153,18 @@ const CourseSchedule = (props: Props) => {
             {contentData.map((item, index) => (
               <div
                 key={index}
-                className={`lg:grid grid-cols-12 border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full ${
+                className={`w-full grid-cols-12 gap-10 border-[#60606B] border-opacity-65 py-5 lg:grid lg:py-6 ${
                   index === contentData.length - 1 ? "border-none" : "border-b"
                 } `}
               >
-                <div className="flex lg:items-start items-center col-span-4 justify-between gap-4 lg:mb-0 mb-6">
-                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                <div className="col-span-4 mb-6 flex items-center justify-between gap-4 lg:mb-0 lg:items-start">
+                  <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                     {item.title}
                   </p>
-                  <div className="group lg:hidden block">
+                  <div className="group block lg:hidden">
                     <a
                       href=""
-                      className="text-[#FF6D00] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 text-sm lg:text-base text-nowrap"
+                      className="flex items-center gap-2 text-nowrap text-sm font-bold leading-[27px] tracking-[0.328px] text-[#FF6D00] lg:text-base"
                     >
                       Chi tiết
                       <svg
@@ -194,28 +194,28 @@ const CourseSchedule = (props: Props) => {
                     </a>
                   </div>
                 </div>
-                <div className="flex col-span-6 gap-10 lg:justify-evenly justify-between">
-                  <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                <div className="col-span-6 flex justify-between gap-10 lg:justify-evenly">
+                  <div className="col-span-3 flex flex-col">
+                    <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                       {item.author}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                       {item.role}
                     </p>
                   </div>
-                  <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                  <div className="col-span-3 flex flex-col">
+                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                       {item.duration}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                       {item.viewers}
                     </p>
                   </div>
                 </div>
-                <div className="group col-span-2 lg:block hidden justify-self-end">
+                <div className="group col-span-2 hidden justify-self-end lg:block">
                   <a
                     href=""
-                    className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00]  text-nowrap"
+                    className="flex items-center gap-2 text-nowrap font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] group-hover:text-[#FF6D00]"
                   >
                     Chi tiết
                     <svg
@@ -255,18 +255,18 @@ const CourseSchedule = (props: Props) => {
             {contentData.map((item, index) => (
               <div
                 key={index}
-                className={`lg:grid grid-cols-12 border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full ${
+                className={`w-full grid-cols-12 gap-10 border-[#60606B] border-opacity-65 py-5 lg:grid lg:py-6 ${
                   index === contentData.length - 1 ? "border-none" : "border-b"
                 } `}
               >
-                <div className="flex lg:items-start items-center col-span-4 justify-between gap-4 lg:mb-0 mb-6">
-                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                <div className="col-span-4 mb-6 flex items-center justify-between gap-4 lg:mb-0 lg:items-start">
+                  <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                     {item.title}
                   </p>
-                  <div className="group lg:hidden block">
+                  <div className="group block lg:hidden">
                     <a
                       href=""
-                      className="text-[#FF6D00] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 text-sm lg:text-base text-nowrap"
+                      className="flex items-center gap-2 text-nowrap text-sm font-bold leading-[27px] tracking-[0.328px] text-[#FF6D00] lg:text-base"
                     >
                       Chi tiết
                       <svg
@@ -296,28 +296,28 @@ const CourseSchedule = (props: Props) => {
                     </a>
                   </div>
                 </div>
-                <div className="flex col-span-6 gap-10 lg:justify-evenly justify-between">
-                  <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                <div className="col-span-6 flex justify-between gap-10 lg:justify-evenly">
+                  <div className="col-span-3 flex flex-col">
+                    <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                       {item.author}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                       {item.role}
                     </p>
                   </div>
-                  <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                  <div className="col-span-3 flex flex-col">
+                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                       {item.duration}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                       {item.viewers}
                     </p>
                   </div>
                 </div>
-                <div className="group col-span-2 lg:block hidden justify-self-end">
+                <div className="group col-span-2 hidden justify-self-end lg:block">
                   <a
                     href=""
-                    className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00]  text-nowrap"
+                    className="flex items-center gap-2 text-nowrap font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] group-hover:text-[#FF6D00]"
                   >
                     Chi tiết
                     <svg
@@ -357,18 +357,18 @@ const CourseSchedule = (props: Props) => {
             {contentData.map((item, index) => (
               <div
                 key={index}
-                className={`lg:grid grid-cols-12 border-[#60606B] border-opacity-65 py-5 lg:py-6 gap-10 w-full ${
+                className={`w-full grid-cols-12 gap-10 border-[#60606B] border-opacity-65 py-5 lg:grid lg:py-6 ${
                   index === contentData.length - 1 ? "border-none" : "border-b"
                 } `}
               >
-                <div className="flex lg:items-start items-center col-span-4 justify-between gap-4 lg:mb-0 mb-6">
-                  <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                <div className="col-span-4 mb-6 flex items-center justify-between gap-4 lg:mb-0 lg:items-start">
+                  <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                     {item.title}
                   </p>
-                  <div className="group lg:hidden block">
+                  <div className="group block lg:hidden">
                     <a
                       href=""
-                      className="text-[#FF6D00] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 text-sm lg:text-base text-nowrap"
+                      className="flex items-center gap-2 text-nowrap text-sm font-bold leading-[27px] tracking-[0.328px] text-[#FF6D00] lg:text-base"
                     >
                       Chi tiết
                       <svg
@@ -398,28 +398,28 @@ const CourseSchedule = (props: Props) => {
                     </a>
                   </div>
                 </div>
-                <div className="flex col-span-6 gap-10 lg:justify-evenly justify-between">
-                  <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                <div className="col-span-6 flex justify-between gap-10 lg:justify-evenly">
+                  <div className="col-span-3 flex flex-col">
+                    <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                       {item.author}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                       {item.role}
                     </p>
                   </div>
-                  <div className="flex flex-col col-span-3">
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                  <div className="col-span-3 flex flex-col">
+                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                       {item.duration}
                     </p>
-                    <p className="text-[#0C1C28] leading-[27px] tracking-[0.328px] text-sm lg:text-base">
+                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] lg:text-base">
                       {item.viewers}
                     </p>
                   </div>
                 </div>
-                <div className="group col-span-2 lg:block hidden justify-self-end">
+                <div className="group col-span-2 hidden justify-self-end lg:block">
                   <a
                     href=""
-                    className="text-[#0C1C28] font-bold leading-[27px] tracking-[0.328px] flex items-center gap-2 group-hover:text-[#FF6D00]  text-nowrap"
+                    className="flex items-center gap-2 text-nowrap font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] group-hover:text-[#FF6D00]"
                   >
                     Chi tiết
                     <svg
@@ -459,7 +459,7 @@ const CourseSchedule = (props: Props) => {
   };
 
   return (
-    <div className="custom-container 3xl:!max-w-[1280px] mt-16 lg2:mt-20 2xl:mt-[100px] 3xl:mt-[120px]">
+    <div className="custom-container mt-16 lg2:mt-20 2xl:mt-[100px] 3xl:mt-[120px] 3xl:!max-w-[1280px]">
       <Tabs
         defaultValue={currentSchedule.toString()}
         onValueChange={handleScheduleClick}
@@ -467,19 +467,19 @@ const CourseSchedule = (props: Props) => {
         data-aos-delay="200"
       >
         <div>
-          <span className="text-[14px] lg:text-[16px] lg2:text-[18px] text-[#FF6D00] font-medium leading-[22px] lg:leading-[40px]">
+          <span className="text-[14px] font-medium leading-[22px] text-[#FF6D00] lg:text-[16px] lg:leading-[40px] lg2:text-[18px]">
             Quý 4, 2024
           </span>
-          <h2 className="text-[#141414] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[54px] mt-2 mb-3 lg2:mb-5">
+          <h2 className="mb-3 mt-2 text-[20px] font-bold text-[#141414] lg:text-[24px] lg2:mb-5 lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[54px]">
             Lịch trình ra mắt
           </h2>
         </div>
-        <TabsList className="flex gap-6 lg:gap-10 whitespace-nowrap overflow-x-auto scrollbar-hidden max-w-full">
+        <TabsList className="scrollbar-hidden flex max-w-full gap-6 overflow-x-auto whitespace-nowrap lg:gap-10">
           {schedules.map((schedule) => (
             <TabsTrigger
               key={schedule.id}
               value={schedule.id.toString()}
-              className={`text-[14px] lg:text-[16px] lg2:text-[18px]  font-medium py-[9px] leading-[22px] lg:leading-[28px] text-[#111013]  ${
+              className={`py-[9px] text-[14px] font-medium leading-[22px] text-[#111013] lg:text-[16px] lg:leading-[28px] lg2:text-[18px] ${
                 currentSchedule === schedule.id
                   ? "border-b-2 border-[#0C1C28]"
                   : "border-none"

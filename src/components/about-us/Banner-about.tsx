@@ -1,20 +1,20 @@
-'use client'
+"use client";
 import React from "react";
 import NextImg from "../common/next-img";
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from "react-type-animation";
 type Props = {};
 
 const BannerAbout = (props: Props) => {
   return (
     <>
-      <div className="pt-16 md:pt-12 lg:pt-[76px] 3xl:pt-[100px] pb-10 lg:pb-[60px] xl:pb-[70px] bg-[#00D763]">
-        <div className="flex md:flex-row flex-col items-center custom-container relative">
+      <div className="bg-[#00D763] pb-10 pt-16 md:pt-12 lg:pb-[60px] lg:pt-[76px] xl:pb-[70px] 3xl:pt-[100px]">
+        <div className="custom-container relative flex flex-col items-center md:flex-row">
           <div
             className="w-full md:w-[55%] lg2:w-[50%]"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div className="relative w-full h-[240px] sm:h-[261px] md:h-[320px] lg:h-[430px] xl:h-[450px] 2xl-h-[520px]  3xl:h-[550px] z-1">
+            <div className="2xl-h-[520px] z-1 relative h-[240px] w-full sm:h-[261px] md:h-[320px] lg:h-[430px] xl:h-[450px] 3xl:h-[550px]">
               <NextImg
                 src="/assets/icons/icon-banner-about.svg"
                 alt="Capi"
@@ -24,11 +24,11 @@ const BannerAbout = (props: Props) => {
             </div>
           </div>
           <div
-            className="text-right flex flex-col items-end justify-end self-end md:absolute right-6 z-10"
+            className="right-6 z-10 flex flex-col items-end justify-end self-end text-right md:absolute"
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            <h1 className="text-[#0F1B0E] text-right font-hanken-grotesk text-[32px] md:text-[40px] lg:text-[56px] lg2:text-[64px] xl:text-[70px] 2xl:text-[80px] 3xl:text-[100px] font-bold lg:leading-[70px] lg2:leading-[80px] xl:leading-[86px] 2xl:leading-[96px] 3xl:leading-[120px] tracking-[-0.64px] md:tracking-[-0.8px] lg:tracking-[-1.08px] lg2:tracking-[-1.28px] xl:tracking-[-1.4px] 2xl:tracking-[-1.6px] 3xl:tracking-[-2px]">
+            <h1 className="font-hanken-grotesk text-right text-[32px] font-bold tracking-[-0.64px] text-[#0F1B0E] md:text-[40px] md:tracking-[-0.8px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-1.08px] lg2:text-[64px] lg2:leading-[80px] lg2:tracking-[-1.28px] xl:text-[70px] xl:leading-[86px] xl:tracking-[-1.4px] 2xl:text-[80px] 2xl:leading-[96px] 2xl:tracking-[-1.6px] 3xl:text-[100px] 3xl:leading-[120px] 3xl:tracking-[-2px]">
               Tự hào
               <br />
               tiên phong
@@ -36,37 +36,37 @@ const BannerAbout = (props: Props) => {
               trong trải nghiệm
             </h1>
             <TypeAnimation
-            className="text-white text-right font-hanken-grotesk text-[32px] md:text-[40px] lg:text-[56px] lg2:text-[64px] xl:text-[70px] 2xl:text-[80px] 3xl:text-[100px] font-bold lg:leading-[70px] lg2:leading-[80px] xl:leading-[86px] 2xl:leading-[96px] 3xl:leading-[120px] tracking-[-0.64px] md:tracking-[-0.8px] lg:tracking-[-1.08px] lg2:tracking-[-1.28px] xl:tracking-[-1.4px] 2xl:tracking-[-1.6px] 3xl:tracking-[-2px]"
+              className="font-hanken-grotesk text-right text-[32px] font-bold tracking-[-0.64px] text-white md:text-[40px] md:tracking-[-0.8px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-1.08px] lg2:text-[64px] lg2:leading-[80px] lg2:tracking-[-1.28px] xl:text-[70px] xl:leading-[86px] xl:tracking-[-1.4px] 2xl:text-[80px] 2xl:leading-[96px] 2xl:tracking-[-1.6px] 3xl:text-[100px] 3xl:leading-[120px] 3xl:tracking-[-2px]"
               sequence={[
-                'chứng khoán', // Types 'One'
+                "chứng khoán", // Types 'One'
                 3000, // Waits 3s
-                'UPS', // Deletes 'One' and types 'Two'
+                "UPS", // Deletes 'One' and types 'Two'
                 3000, // Waits 3s
-                'upsecurities', // Types 'Three' without deleting 'Two'
+                "upsecurities", // Types 'Three' without deleting 'Two'
                 3000,
                 () => {
-                  console.log('Sequence completed');
+                  console.log("Sequence completed");
                 },
               ]}
               wrapper="span"
               cursor={true}
               repeat={Infinity}
-              style={{display: 'inline-block' }}
+              style={{ display: "inline-block" }}
             />
           </div>
         </div>
         <div
-          className="flex custom-container items-end justify-between mt-6 lg:mt-[30px]"
+          className="custom-container mt-6 flex items-end justify-between lg:mt-[30px]"
           data-aos="fade-up"
           data-aos-delay="400"
         >
-          <div className="border-t-[1px] border-[#000] pt-3 md:pt-6 lg:pt-[40px] w-full lg:w-[400px]">
-            <p className="text-[#074E28] text-[14px] lg:text-[20px] font-medium leading-[22px] lg:leading-[28px]">
+          <div className="w-full border-t-[1px] border-[#000] pt-3 md:pt-6 lg:w-[400px] lg:pt-[40px]">
+            <p className="text-[14px] font-medium leading-[22px] text-[#074E28] lg:text-[20px] lg:leading-[28px]">
               UPS hướng đến mục tiêu trở thành một điểm tựa vững chắc khuyến
               khích người trẻ tự tin khám phá thế giới tài chính.
             </p>
           </div>
-          <div className="cursor-pointer lg:block hidden">
+          <div className="hidden cursor-pointer lg:block">
             <i>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

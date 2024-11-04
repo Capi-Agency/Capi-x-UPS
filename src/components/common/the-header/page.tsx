@@ -20,10 +20,10 @@ const TheHeader = (props: Props) => {
     };
   }, [isMenuOpen]);
   return (
-    <div className="fixed w-full z-[999]">
-      <div className="bg-[#0E1A0D] rounded-b-[24px]">
+    <div className="fixed z-[999] w-full">
+      <div className="rounded-b-[24px] bg-[#0E1A0D]">
         <div
-          className="py-4 lg:py-[20px] mx-auto sm:max-w-full xl:max-w-[1280px] 2xl:max-w-[1440px] 3xl:max-w-[1600px] px-6 md:px-10 xl:px-0"
+          className="mx-auto px-6 py-4 sm:max-w-full md:px-10 lg:py-[20px] xl:max-w-[1280px] xl:px-0 2xl:max-w-[1440px] 3xl:max-w-[1600px]"
           data-aos="fade-up"
         >
           <div className="relative flex items-center justify-between">
@@ -33,7 +33,7 @@ const TheHeader = (props: Props) => {
               title="Ups"
               className="inline-flex items-center"
             >
-              <div className="relative lg:w-[184px] w-[133px] lg:h-[44px] h-[29px] rounded-br-2xl">
+              <div className="relative h-[29px] w-[133px] rounded-br-2xl lg:h-[44px] lg:w-[184px]">
                 <NextImg
                   src="/assets/icons/logo-ups.svg"
                   alt="Capi"
@@ -42,16 +42,16 @@ const TheHeader = (props: Props) => {
                 />
               </div>
             </Link>
-            <ul className="items-center hidden space-x-5 2xl:space-x-8 xl:flex">
+            <ul className="hidden items-center space-x-5 xl:flex 2xl:space-x-8">
               <li>
                 <Link
                   href="/"
                   aria-label="Our product"
                   title="Our product"
-                  className="font-bold text-gray-100 flex items-center gap-[10px] text-base"
+                  className="flex items-center gap-[10px] text-base font-bold text-gray-100"
                 >
                   Sản phẩm
-                  <span className="bg-[#AD02C9] text-white text-sm uppercase font-bold me-2 px-2 py-1 rounded-[10px]">
+                  <span className="me-2 rounded-[10px] bg-[#AD02C9] px-2 py-1 text-sm font-bold uppercase text-white">
                     NEW
                   </span>
                 </Link>
@@ -84,7 +84,7 @@ const TheHeader = (props: Props) => {
                   className="font-bold text-gray-100"
                 >
                   Tin tức
-                  <span className="rounded-full ml-[10px] bg-[#E50261] px-2 py-1 text-sm">
+                  <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1 text-sm">
                     4
                   </span>
                 </a>
@@ -110,7 +110,7 @@ const TheHeader = (props: Props) => {
                 </a>
               </li>
             </ul>
-            <ul className="items-center hidden space-x-5 2xl:space-x-8 xl:flex">
+            <ul className="hidden items-center space-x-5 xl:flex 2xl:space-x-8">
               <li>
                 <Link
                   href="/"
@@ -191,7 +191,7 @@ const TheHeader = (props: Props) => {
                 >
                   <button className="btn active">
                     Mở tài khoản ngay
-                    <div className="relative w-6 h-6">
+                    <div className="relative h-6 w-6">
                       <NextImg
                         src="/assets/icons/UPs.svg"
                         alt="Capi"
@@ -206,13 +206,13 @@ const TheHeader = (props: Props) => {
               <div className="flex items-center gap-4">
                 <a
                   href="/"
-                  className="md:block hidden"
+                  className="hidden md:block"
                   aria-label="Mở tài khoản ngay"
                   title="Mở tài khoản ngay"
                 >
                   <button className="btn active">
                     Mở tài khoản ngay
-                    <div className="relative w-4 h-4 lg:w-6 lg:h-6">
+                    <div className="relative h-4 w-4 lg:h-6 lg:w-6">
                       <NextImg
                         src="/assets/icons/UPs.svg"
                         alt="Capi"
@@ -260,7 +260,7 @@ const TheHeader = (props: Props) => {
                 <button
                   aria-label="Open Menu"
                   title="Open Menu"
-                  className="p-2 -mr-1 transition duration-100000 ease-in rounded focus:outline-none"
+                  className="duration-100000 -mr-1 rounded p-2 transition ease-in focus:outline-none"
                   onClick={() => setIsMenuOpen(true)}
                 >
                   <svg
@@ -296,9 +296,9 @@ const TheHeader = (props: Props) => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-[#0F1B0E]">
-          <div className="py-5 px-6 bg-[#0F1B0E] border rounded w-full h-full">
-            <div className="flex items-center justify-between mb-4">
+        <div className="fixed left-0 top-0 h-full w-full bg-[#0F1B0E]">
+          <div className="h-full w-full rounded border bg-[#0F1B0E] px-6 py-5">
+            <div className="mb-4 flex items-center justify-between">
               <div>
                 <Link
                   href="/"
@@ -306,7 +306,7 @@ const TheHeader = (props: Props) => {
                   title="Ups"
                   className="inline-flex items-center"
                 >
-                  <div className="relative lg:w-[184px] w-[133px] lg:h-[44px] h-[29px] rounded-br-2xl">
+                  <div className="relative h-[29px] w-[133px] rounded-br-2xl lg:h-[44px] lg:w-[184px]">
                     <NextImg
                       src="/assets/icons/logo-ups.svg"
                       alt="Capi"
@@ -320,7 +320,7 @@ const TheHeader = (props: Props) => {
                 <button
                   aria-label="Close Menu"
                   title="Close Menu"
-                  className="p-2 -mt-2 -mr-2 transition duration-200 rounded focus:outline-none"
+                  className="-mr-2 -mt-2 rounded p-2 transition duration-200 focus:outline-none"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <svg
@@ -348,14 +348,14 @@ const TheHeader = (props: Props) => {
                 </button>
               </div>
             </div>
-            <form action="" className="relative border-b border-[#1D2C1C] ">
+            <form action="" className="relative border-b border-[#1D2C1C]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="25"
                 viewBox="0 0 24 25"
                 fill="none"
-                className="absolute top-1/2 left-0 -translate-y-1/2"
+                className="absolute left-0 top-1/2 -translate-y-1/2"
               >
                 <path
                   d="M11.5 21.5C16.7467 21.5 21 17.2467 21 12C21 6.75329 16.7467 2.5 11.5 2.5C6.25329 2.5 2 6.75329 2 12C2 17.2467 6.25329 21.5 11.5 21.5Z"
@@ -375,19 +375,19 @@ const TheHeader = (props: Props) => {
               <input
                 type="text"
                 placeholder="Tìm kiếm"
-                className="text-sm bg-transparent text-[#FFF] placeholder:text-[#E7E9EF] placeholder:text-sm font-semibold py-4 pl-9 outline-none"
+                className="bg-transparent py-4 pl-9 text-sm font-semibold text-[#FFF] outline-none placeholder:text-sm placeholder:text-[#E7E9EF]"
               />
             </form>
-            <ul className="flex flex-col gap-8 mt-7">
+            <ul className="mt-7 flex flex-col gap-8">
               <li>
                 <Link
                   href="/"
                   aria-label="Our product"
                   title="Our product"
-                  className="font-bold text-gray-100 flex items-center gap-[10px] text-sm "
+                  className="flex items-center gap-[10px] text-sm font-bold text-gray-100"
                 >
                   Sản phẩm
-                  <span className="bg-[#AD02C9] text-white text-xs uppercase font-bold me-2 px-2 py-1 rounded-[10px]">
+                  <span className="me-2 rounded-[10px] bg-[#AD02C9] px-2 py-1 text-xs font-bold uppercase text-white">
                     NEW
                   </span>
                 </Link>
@@ -397,7 +397,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Invest with UPS"
                   title="Invest with UPS"
-                  className="font-bold text-gray-100 text-sm"
+                  className="text-sm font-bold text-gray-100"
                 >
                   Đầu tư cùng UPS
                 </Link>
@@ -407,7 +407,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Technology platform"
                   title="Technology platform"
-                  className="font-bold text-gray-100 text-sm"
+                  className="text-sm font-bold text-gray-100"
                 >
                   Nền tảng công nghệ
                 </a>
@@ -417,10 +417,10 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="News"
                   title="News"
-                  className="font-bold text-gray-100 text-sm"
+                  className="text-sm font-bold text-gray-100"
                 >
                   Tin tức
-                  <span className="rounded-full ml-[10px] bg-[#E50261] px-2 py-1">
+                  <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1">
                     4
                   </span>
                 </a>
@@ -430,7 +430,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="About us"
                   title="About us"
-                  className="font-bold text-gray-100 text-sm"
+                  className="text-sm font-bold text-gray-100"
                 >
                   Về UPS
                 </a>
@@ -440,7 +440,7 @@ const TheHeader = (props: Props) => {
                   href="/"
                   aria-label="Price list"
                   title="Price list"
-                  className="font-bold text-gray-100 text-sm"
+                  className="text-sm font-bold text-gray-100"
                 >
                   Bảng giá
                 </a>
@@ -454,7 +454,7 @@ const TheHeader = (props: Props) => {
                 >
                   <button className="btn active">
                     Mở tài khoản ngay
-                    <div className="relative w-4 h-4 lg:w-6 lg:h-6">
+                    <div className="relative h-4 w-4 lg:h-6 lg:w-6">
                       <NextImg
                         src="/assets/icons/UPs.svg"
                         alt="Capi"

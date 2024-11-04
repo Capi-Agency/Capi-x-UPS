@@ -122,7 +122,7 @@ const Community = (props: Props) => {
               duration: 1.5,
               ease: "bounce.out",
               stagger: 0.05,
-            }
+            },
           );
           observer.disconnect(); // Stop observing after the animation
         }
@@ -146,7 +146,7 @@ const Community = (props: Props) => {
         data-aos="fade-up"
         data-aos-delay="200"
       >
-        <div className="relative w-[74px] h-[32px] lg:w-[92px] lg:h-[40px] lg2:w-[111px] lg2:h-[48px] mx-auto">
+        <div className="relative mx-auto h-[32px] w-[74px] lg:h-[40px] lg:w-[92px] lg2:h-[48px] lg2:w-[111px]">
           <NextImg
             src="/assets/icons/logo-small2.svg"
             alt="Capi"
@@ -154,13 +154,13 @@ const Community = (props: Props) => {
             className=""
           />
         </div>
-        <span className="text-[#111013] text-[20px] lg:text-[24px] lg2:text-[40px] 2xl:text-[44px] 3xl:text-[48px] font-bold lg2:leading-[46px] 2xl:leading-[52px] 3xl:leading-[56px] mt-2">
+        <span className="mt-2 text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[56px]">
           Tham gia ngay cộng đồng <br />
           <span className="text-[#02E56A]">Nhà đầu tư UPS</span>
         </span>
-        <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 mx-auto mt-6 lg:mt-10">
-          <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] cursor-pointer">
-            <div className="relative w-[19px] h-[19px]">
+        <div className="mx-auto mt-6 grid grid-cols-2 gap-4 lg:mt-10 lg:grid-cols-4">
+          <div className="flex h-10 w-[140px] cursor-pointer items-center gap-3 rounded-xl bg-[#002013] pl-[14px]">
+            <div className="relative h-[19px] w-[19px]">
               <NextImg
                 src="/assets/icons/logo-bt.svg"
                 alt="Capi"
@@ -168,12 +168,12 @@ const Community = (props: Props) => {
                 className=""
               />
             </div>
-            <span className="text-[#FFF] text-[14px] lg:text-[16px] font-bold leading-normal">
+            <span className="text-[14px] font-bold leading-normal text-[#FFF] lg:text-[16px]">
               Cộng đồng
             </span>
           </div>
-          <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] cursor-pointer">
-            <div className="relative w-[16px] h-[31px] place-items-end">
+          <div className="flex h-10 w-[140px] cursor-pointer items-center gap-3 rounded-xl bg-[#002013] pl-[14px]">
+            <div className="relative h-[31px] w-[16px] place-items-end">
               <NextImg
                 src="/assets/icons/fb2.svg"
                 alt="Capi"
@@ -181,12 +181,12 @@ const Community = (props: Props) => {
                 className=""
               />
             </div>
-            <span className="text-[#FFF] text-[14px] lg:text-[16px] font-bold leading-normal">
+            <span className="text-[14px] font-bold leading-normal text-[#FFF] lg:text-[16px]">
               Facebook
             </span>
           </div>
-          <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] cursor-pointer">
-            <div className="relative w-[22px] h-[18px]">
+          <div className="flex h-10 w-[140px] cursor-pointer items-center gap-3 rounded-xl bg-[#002013] pl-[14px]">
+            <div className="relative h-[18px] w-[22px]">
               <NextImg
                 src="/assets/icons/Path-3.svg"
                 alt="Capi"
@@ -194,12 +194,12 @@ const Community = (props: Props) => {
                 className=""
               />
             </div>
-            <span className="text-[#FFF] text-[14px] lg:text-[16px] font-bold leading-normal">
+            <span className="text-[14px] font-bold leading-normal text-[#FFF] lg:text-[16px]">
               Telegram
             </span>
           </div>
-          <div className="flex items-center bg-[#002013] rounded-xl gap-3 w-[140px] h-10 pl-[14px] cursor-pointer">
-            <div className="relative w-[24px] h-[24px]">
+          <div className="flex h-10 w-[140px] cursor-pointer items-center gap-3 rounded-xl bg-[#002013] pl-[14px]">
+            <div className="relative h-[24px] w-[24px]">
               <NextImg
                 src="/assets/image/zalo.png"
                 alt="Capi"
@@ -207,7 +207,7 @@ const Community = (props: Props) => {
                 className=""
               />
             </div>
-            <span className="text-[#FFF] text-[14px] lg:text-[16px] font-bold leading-normal">
+            <span className="text-[14px] font-bold leading-normal text-[#FFF] lg:text-[16px]">
               Zalo
             </span>
           </div>
@@ -216,12 +216,12 @@ const Community = (props: Props) => {
       {/* Trigger element for the animation */}
       <div
         ref={triggerRef}
-        className="relative h-[154px] lg:h-[328px] mt-10 xl:mt-[50px] 3xl:mt-20 3xl:block hidden"
+        className="relative mt-10 hidden h-[154px] lg:h-[328px] xl:mt-[50px] 3xl:mt-20 3xl:block"
       >
         {imgData.map((img, index) => (
           <div
             key={index}
-            className={`rounded-full absolute`}
+            className={`absolute rounded-full`}
             style={{
               top: `${img.top}px`,
               left: `${img.left}px`,
@@ -249,7 +249,7 @@ const Community = (props: Props) => {
         ))}
       </div>
       <div
-        className="relative w-full pt-[22%] 3xl:hidden block mt-10 xl:mt-[50px] 3xl:mt-20"
+        className="relative mt-10 block w-full pt-[22%] xl:mt-[50px] 3xl:mt-20 3xl:hidden"
         data-aos="fade-up"
         data-aos-delay="200"
       >

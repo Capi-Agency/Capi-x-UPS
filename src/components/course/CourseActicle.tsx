@@ -20,7 +20,7 @@ const articles = [
 const CourseActicle = (props: Props) => {
   return (
     <div
-      className="md:max-w-[520px] lg:max-w-[700px] lg2:max-w-[820px] xl:max-w-[900px] 2xl:max-w-[1024px] mx-auto mt-10 lg:mt-[60px] lg2:mt-20"
+      className="mx-auto mt-10 md:max-w-[520px] lg:mt-[60px] lg:max-w-[700px] lg2:mt-20 lg2:max-w-[820px] xl:max-w-[900px] 2xl:max-w-[1024px]"
       data-aos="fade-up"
       data-aos-delay="200"
     >
@@ -34,14 +34,14 @@ const CourseActicle = (props: Props) => {
             } `}
           >
             <div className="flex items-center gap-3 lg:gap-5">
-              <div className="relative min-w-6 w-[24px] h-[24px]">
+              <div className="relative h-[24px] w-[24px] min-w-6">
                 <NextImg src={article.icon} alt="Capi" objectFit="cover" />
               </div>
-              <p className="text-[#15171E] text-[14px] lg:text-[18px] lg2:text-[24px] lg:leading-normal leading-[22px] font-medium">
+              <p className="text-[14px] font-medium leading-[22px] text-[#15171E] lg:text-[18px] lg:leading-normal lg2:text-[24px]">
                 {article.title}
               </p>
             </div>
-            <div className="relative w-[24px] h-[24px] lg:w-7 lg:h-7 lg2:w-[32px] lg2:h-[32px] cursor-pointer">
+            <div className="relative h-[24px] w-[24px] cursor-pointer lg:h-7 lg:w-7 lg2:h-[32px] lg2:w-[32px]">
               <NextImg
                 src="/assets/icons/chevron-down.svg"
                 alt="Capi"
@@ -52,13 +52,13 @@ const CourseActicle = (props: Props) => {
           </a>
         ))}
       </div>
-      <button className="!bg-[#15171E] !text-[#FFF] btn active1 mt-6 lg:mt-[50px] mx-auto">
+      <button className="btn active1 mx-auto mt-6 !bg-[#15171E] !text-[#FFF] lg:mt-[50px]">
         Xem tất cả bài viết
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 25 24"
           fill="none"
-          className="w-4 h-4 lg:w-6 lg:h-6"
+          className="h-4 w-4 lg:h-6 lg:w-6"
         >
           <path
             fillRule="evenodd"
