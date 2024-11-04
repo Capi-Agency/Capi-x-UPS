@@ -5,11 +5,8 @@ import NextImg from '../common/next-img';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import Link from 'next/link';
 
-type Props = {
-  bannerData: any;
-};
+type Props = {};
 interface User {
   name: string;
   image: string;
@@ -43,16 +40,14 @@ const userData: User[] = [
     percentage: '+ 6.20%',
   },
 ];
-const Banner = ({ bannerData }: Props) => {
-  console.log(bannerData);
-
+const Banner = (props: Props) => {
   return (
     <div className="relative mx-auto mt-[-15px] bg-[linear-gradient(180deg,#0E1A0D_82%,#060B06_100%)] pt-20 lg:pt-16 2xl:pt-[90px] 3xl:pt-[100px]">
       <div className="custom-container flex justify-center" data-aos="fade-up">
         <div className="mx-auto flex flex-col items-center justify-center">
           <div className="relative h-10 w-10 md:h-[56px] md:w-[56px]">
             <NextImg
-              src={process.env.REACT_APP_IMG_URL + bannerData?.cover?.id}
+              src="/assets/icons/ups-icon2.svg"
               alt="Capi"
               objectFit="cover"
             />
@@ -61,44 +56,37 @@ const Banner = ({ bannerData }: Props) => {
             UP Securities
           </p>
           <h1 className="mt-[14px] text-center text-[32px] font-bold leading-normal -tracking-[0.64px] text-[#FFF] md:text-[40px] md:tracking-[-0.8px] lg:text-[46px] lg:leading-[52px] lg:tracking-[-0.92px] xl:text-[56px] xl:leading-[62px] xl:tracking-[-1.12px] 2xl:text-[66px] 2xl:leading-[72px] 2xl:tracking-[-1.32px] 3xl:text-[76px] 3xl:leading-[82px] 3xl:tracking-[-1.52px]">
-            {bannerData?.blurb}
+            Chính thức ra mắt <br /> dẫn lối hành trình đầu tư{' '}
+            <br className="hidden md:block" /> của bạn
           </h1>
           <div className="flex items-center gap-[20px] pt-6 md:pt-8 lg:pt-[52px]">
-            {bannerData?.items?.map((item: any) => {
-              return (
-                <>
-                  <Link href={item.item.url1} className="btn active">
-                    {item.item.cta1}
-                    <div className="relative h-4 w-4 lg:h-6 lg:w-6">
-                      <NextImg
-                        src="/assets/icons/UPs.svg"
-                        alt="Capi"
-                        objectFit="cover"
-                      />
-                    </div>
-                  </Link>
-                  <p className="hidden text-base font-medium leading-normal text-[#8C9AA4] md:block">
-                    {item.item.cta2}
-                  </p>
-                </>
-              );
-            })}
+            <button className="btn active">
+              Mở tài khoản ngay
+              <div className="relative h-4 w-4 lg:h-6 lg:w-6">
+                <NextImg
+                  src="/assets/icons/UPs.svg"
+                  alt="Capi"
+                  objectFit="cover"
+                />
+              </div>
+            </button>
+            <p className="hidden text-base font-medium leading-normal text-[#8C9AA4] md:block">
+              Nền tảng đầu tư đột phá <br />
+              về trải nghiệm người dùng
+            </p>
           </div>
         </div>
       </div>
       <div
-        className="mx-auto mt-6 flex max-w-full flex-col items-center gap-4 md:mt-10 md:max-w-full md:flex-row md:gap-6 md:px-6 lg:mt-[50px] lg:max-w-[870px] lg:px-0 xl:max-w-[1130px] 2xl:mt-[60px] 2xl:max-w-[1390px] 2xl:gap-9 3xl:mt-[70px]"
+        className="mx-auto mt-6 flex max-w-full flex-col items-center gap-4 px-6 md:mt-10 md:max-w-full md:flex-row md:gap-6 lg:mt-[50px] lg:max-w-[870px] lg:px-0 xl:max-w-[1130px] 2xl:mt-[60px] 2xl:max-w-[1390px] 2xl:gap-9 3xl:mt-[70px]"
         data-aos="fade-up"
       >
         <p className="text-sm font-medium text-[#FFF] md:w-20 md:min-w-20 lg:w-[110px] lg:min-w-[110px] lg:text-xl">
           Top đầu tư của tuần
         </p>
-        <div className="scrollbar-hidden flex max-w-full items-center gap-3 overflow-x-auto whitespace-nowrap lg:gap-9">
+        <div className="scrollbar-hidden flex max-w-full items-center gap-3 overflow-x-auto whitespace-nowrap lg:gap-9 lg:px-0">
           {userData.map((user, index) => (
-            <div
-              className={`flex items-center gap-5 ${index === 0 ? 'pl-6 md:pl-0' : ''}`}
-              key={index}
-            >
+            <div className="flex items-center gap-5" key={index}>
               <div className="relative h-10 w-10 lg:h-[54px] lg:w-[54px]">
                 <NextImg
                   src={user.image}
