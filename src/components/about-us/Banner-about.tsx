@@ -1,7 +1,7 @@
-"use client";
-import React from "react";
-import NextImg from "../common/next-img";
-import { TypeAnimation } from "react-type-animation";
+'use client';
+import React from 'react';
+import NextImg from '../common/next-img';
+import { TypeAnimation } from 'react-type-animation';
 type Props = {};
 
 const BannerAbout = (props: Props) => {
@@ -38,20 +38,20 @@ const BannerAbout = (props: Props) => {
             <TypeAnimation
               className="font-hanken-grotesk text-right text-[32px] font-bold tracking-[-0.64px] text-white md:text-[40px] md:tracking-[-0.8px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-1.08px] lg2:text-[64px] lg2:leading-[80px] lg2:tracking-[-1.28px] xl:text-[70px] xl:leading-[86px] xl:tracking-[-1.4px] 2xl:text-[80px] 2xl:leading-[96px] 2xl:tracking-[-1.6px] 3xl:text-[100px] 3xl:leading-[120px] 3xl:tracking-[-2px]"
               sequence={[
-                "chứng khoán", // Types 'One'
+                'chứng khoán', // Types 'One'
                 3000, // Waits 3s
-                "UPS", // Deletes 'One' and types 'Two'
+                'UPS', // Deletes 'One' and types 'Two'
                 3000, // Waits 3s
-                "upsecurities", // Types 'Three' without deleting 'Two'
+                'upsecurities', // Types 'Three' without deleting 'Two'
                 3000,
                 () => {
-                  console.log("Sequence completed");
+                  console.log('Sequence completed');
                 },
               ]}
               wrapper="span"
               cursor={true}
               repeat={Infinity}
-              style={{ display: "inline-block" }}
+              style={{ display: 'inline-block' }}
             />
           </div>
         </div>

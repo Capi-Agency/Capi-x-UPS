@@ -1,7 +1,7 @@
-"use client";
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import NextImg from "../common/next-img";
+'use client';
+import React, { useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import NextImg from '../common/next-img';
 type Props = {
   slideData: any;
 };
@@ -13,9 +13,9 @@ const SlideHome = ({ slideData }: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const slides = [
-    "/assets/image/img-slide.png",
-    "/assets/image/img-slide.png",
-    "/assets/image/img-slide.png",
+    '/assets/image/img-slide.png',
+    '/assets/image/img-slide.png',
+    '/assets/image/img-slide.png',
   ];
   return (
     <div
@@ -123,8 +123,8 @@ const SlideHome = ({ slideData }: Props) => {
               key={index}
               className={`h-[4px] w-[20px] rounded-[20px] transition duration-300 ${
                 activeIndex === index
-                  ? "bg-[#15171E]"
-                  : "bg-[rgba(255,255,255,0.50)]"
+                  ? 'bg-[#15171E]'
+                  : 'bg-[rgba(255,255,255,0.50)]'
               }`}
               onClick={() => {
                 if (swiperRef.current) {

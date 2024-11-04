@@ -1,5 +1,5 @@
-import React from "react";
-import NextImg from "../common/next-img";
+import React from 'react';
+import NextImg from '../common/next-img';
 
 type Props = {};
 
@@ -29,7 +29,7 @@ const MobileApp = (props: Props) => {
                 </span>
               </div>
               <span className="text-[20px] font-bold text-[#FFF] lg:w-[80%] lg:text-[40px] lg:leading-[46px] lg2:w-[75%] lg2:text-[56px] lg2:leading-[58px] 2xl:text-[58px] 3xl:text-[60px] 3xl:leading-[60px]">
-                Trải nghiệm <span className="text-[#02E56A]">tuyệt vời</span>{" "}
+                Trải nghiệm <span className="text-[#02E56A]">tuyệt vời</span>{' '}
                 hơn với ứng dụng
               </span>
               <p className="text-[14px] font-medium text-[#8C9AA4] lg:w-[80%] lg:text-base lg:leading-[24px] lg2:text-[18px] lg2:leading-[28px]">

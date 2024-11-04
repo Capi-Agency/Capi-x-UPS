@@ -1,25 +1,25 @@
-import React from "react";
-import NextImg from "../common/next-img";
+import React from 'react';
+import NextImg from '../common/next-img';
 
 type Props = {};
 const features = [
   {
     id: 1,
-    title: "Sáng tạo",
+    title: 'Sáng tạo',
     description:
-      "Tiên phong trong công nghệ tài chính, mang đến giải pháp đầu tư đột phá và khác biệt, giúp khách hàng trải nghiệm đầu tư một cách dễ dàng và thú vị.",
+      'Tiên phong trong công nghệ tài chính, mang đến giải pháp đầu tư đột phá và khác biệt, giúp khách hàng trải nghiệm đầu tư một cách dễ dàng và thú vị.',
   },
   {
     id: 2,
-    title: "Tin cậy",
+    title: 'Tin cậy',
     description:
-      "Xây dựng niềm tin vững chắc qua sự trung thực và minh bạch trong mọi hoạt động, luôn đặt lợi ích và trải nghiệm của khách hàng lên hàng đầu.",
+      'Xây dựng niềm tin vững chắc qua sự trung thực và minh bạch trong mọi hoạt động, luôn đặt lợi ích và trải nghiệm của khách hàng lên hàng đầu.',
   },
   {
     id: 3,
-    title: "Hiệu quả",
+    title: 'Hiệu quả',
     description:
-      "Tập trung tối ưu hóa kết quả đầu tư, tạo ra giá trị thực và cộng đồng đầu tư bền vững cho khách hàng.",
+      'Tập trung tối ưu hóa kết quả đầu tư, tạo ra giá trị thực và cộng đồng đầu tư bền vững cho khách hàng.',
   },
 ];
 

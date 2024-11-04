@@ -1,49 +1,49 @@
-import { cn } from "@/lib/utils";
-import Marquee from "@/components/ui/marquee";
-import { useRef, useState } from "react";
+import { cn } from '@/lib/utils';
+import Marquee from '@/components/ui/marquee';
+import { useRef, useState } from 'react';
 
 const reviews = [
   {
     id: 1,
-    name: "Ngân hàng Thương Mại ",
-    username: "Cổ Phần Á Châu",
-    body: "15.00",
-    img: "/assets/image/vcb.svg",
+    name: 'Ngân hàng Thương Mại ',
+    username: 'Cổ Phần Á Châu',
+    body: '15.00',
+    img: '/assets/image/vcb.svg',
   },
   {
     id: 2,
-    name: "Ngân hàng Thương Mại ",
-    username: "Cổ Phần Á Châu",
-    body: "15.00",
-    img: "/assets/image/mb.svg",
+    name: 'Ngân hàng Thương Mại ',
+    username: 'Cổ Phần Á Châu',
+    body: '15.00',
+    img: '/assets/image/mb.svg',
   },
   {
     id: 3,
-    name: "Ngân hàng Thương Mại ",
-    username: "Cổ Phần Á Châu",
-    body: "15.00",
-    img: "/assets/image/fpt.svg",
+    name: 'Ngân hàng Thương Mại ',
+    username: 'Cổ Phần Á Châu',
+    body: '15.00',
+    img: '/assets/image/fpt.svg',
   },
   {
     id: 4,
-    name: "Ngân hàng Thương Mại ",
-    username: "Cổ Phần Á Châu",
-    body: "15.00",
-    img: "/assets/image/aau.svg",
+    name: 'Ngân hàng Thương Mại ',
+    username: 'Cổ Phần Á Châu',
+    body: '15.00',
+    img: '/assets/image/aau.svg',
   },
   {
     id: 5,
-    name: "Ngân hàng Thương Mại ",
-    username: "Cổ Phần Á Châu",
-    body: "15.00",
-    img: "/assets/image/petrovn.svg",
+    name: 'Ngân hàng Thương Mại ',
+    username: 'Cổ Phần Á Châu',
+    body: '15.00',
+    img: '/assets/image/petrovn.svg',
   },
   {
     id: 6,
-    name: "Ngân hàng Thương Mại ",
-    username: "Cổ Phần Á Châu",
-    body: "15.00",
-    img: "/assets/image/chaua.svg",
+    name: 'Ngân hàng Thương Mại ',
+    username: 'Cổ Phần Á Châu',
+    body: '15.00',
+    img: '/assets/image/chaua.svg',
   },
 ];
 
@@ -80,7 +80,7 @@ const ReviewCard = ({
     let angle = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
     angle = (angle + 360) % 360;
 
-    cardRef.current.style.setProperty("--start", `${angle + 60}`);
+    cardRef.current.style.setProperty('--start', `${angle + 60}`);
   };
 
   const handleMouseEnter = () => {
@@ -95,11 +95,11 @@ const ReviewCard = ({
     <div className="group/card relative">
       <figure
         className={cn(
-          "z-1 card relative flex h-[77px] w-[188px] cursor-pointer flex-col justify-between overflow-hidden rounded-xl px-3 py-2 lg:h-[113px] lg:w-[280px] lg:px-5 lg:py-4 lg2:h-[140px] lg2:w-[300px] xl:h-[150px] 3xl:h-[160px]",
+          'z-1 card relative flex h-[77px] w-[188px] cursor-pointer flex-col justify-between overflow-hidden rounded-xl px-3 py-2 lg:h-[113px] lg:w-[280px] lg:px-5 lg:py-4 lg2:h-[140px] lg2:w-[300px] xl:h-[150px] 3xl:h-[160px]',
           // light styles
-          "rounded-[16px] border-[#161F15] bg-[#161F15]",
+          'rounded-[16px] border-[#161F15] bg-[#161F15]',
           // dark styles
-          "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+          'dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]',
         )}
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
@@ -120,7 +120,7 @@ const ReviewCard = ({
         </div>
         <div>
           <span className="font-hanken-grotesk mt-2 flex items-start text-base font-medium leading-normal text-[#075728] group-hover/card:text-[#05BE5A] lg:text-2xl lg2:text-3xl">
-            {body}{" "}
+            {body}{' '}
             <i className="mt-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -142,13 +142,13 @@ const ReviewCard = ({
         </div>
         <div
           className={cn(
-            "pointer-events-none absolute left-0 top-0 z-[99] h-[250px] w-[250px] rounded-full bg-green-500 opacity-50",
+            'pointer-events-none absolute left-0 top-0 z-[99] h-[250px] w-[250px] rounded-full bg-green-500 opacity-50',
             { hidden: !isHovered },
           )}
           style={{
             transform: `translate(${position.x - 120}px, ${position.y - 120}px)`,
             background:
-              "radial-gradient(circle, rgba(0,255,0,0.5) 0%, rgba(0,255,0,0) 70%)",
+              'radial-gradient(circle, rgba(0,255,0,0.5) 0%, rgba(0,255,0,0) 70%)',
           }}
         ></div>
       </figure>

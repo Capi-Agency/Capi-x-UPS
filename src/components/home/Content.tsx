@@ -1,4 +1,4 @@
-import NextImg from "../common/next-img";
+import NextImg from '../common/next-img';
 
 type Props = {};
 
@@ -157,8 +157,8 @@ const Content = (props: Props) => {
               Trở thành nhà đầu tư chuyên nghiệp với UPS Academy
             </p>
             <p className="mb-5 mt-2 text-[14px] leading-[22px] tracking-[0.276px] text-[#FFF] lg:my-6 lg:text-base lg:leading-[29px] lg2:text-[18px]">
-              So how does it work? Let’s check our{" "}
-              <span className="font-bold">Getting Started</span>{" "}
+              So how does it work? Let’s check our{' '}
+              <span className="font-bold">Getting Started</span>{' '}
               <br className="hidden lg:block" /> tutorial or choose from
               pre-made templates.
             </p>

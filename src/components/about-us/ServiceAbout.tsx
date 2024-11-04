@@ -1,6 +1,6 @@
-import React from "react";
-import NextImg from "../common/next-img";
-import SlideAbout from "./SlideAbout";
+import React from 'react';
+import NextImg from '../common/next-img';
+import SlideAbout from './SlideAbout';
 
 type Props = {};
 

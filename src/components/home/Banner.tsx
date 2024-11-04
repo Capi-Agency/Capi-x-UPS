@@ -1,11 +1,11 @@
-"use client";
-import React from "react";
-import { MarqueeDemo } from "./Marquee";
-import NextImg from "../common/next-img";
+'use client';
+import React from 'react';
+import { MarqueeDemo } from './Marquee';
+import NextImg from '../common/next-img';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import Link from "next/link";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import Link from 'next/link';
 
 type Props = {
   bannerData: any;
@@ -18,29 +18,29 @@ interface User {
 
 const userData: User[] = [
   {
-    name: "Trần Hoài Trang",
-    image: "/assets/image/user1.jpg",
-    percentage: "+7.90%",
+    name: 'Trần Hoài Trang',
+    image: '/assets/image/user1.jpg',
+    percentage: '+7.90%',
   },
   {
-    name: "Phí Ngọc Thắng",
-    image: "/assets/image/user2.jpg",
-    percentage: "+ 8.30%",
+    name: 'Phí Ngọc Thắng',
+    image: '/assets/image/user2.jpg',
+    percentage: '+ 8.30%',
   },
   {
-    name: "Nguyễn Trung Anh",
-    image: "/assets/image/user3.jpg",
-    percentage: "+ 11.40%",
+    name: 'Nguyễn Trung Anh',
+    image: '/assets/image/user3.jpg',
+    percentage: '+ 11.40%',
   },
   {
-    name: "Nguyễn Thái Nhi",
-    image: "/assets/image/user4.jpg",
-    percentage: "+ 5.60%",
+    name: 'Nguyễn Thái Nhi',
+    image: '/assets/image/user4.jpg',
+    percentage: '+ 5.60%',
   },
   {
-    name: "Trần Anh Tuấn",
-    image: "/assets/image/user5.jpg",
-    percentage: "+ 6.20%",
+    name: 'Trần Anh Tuấn',
+    image: '/assets/image/user5.jpg',
+    percentage: '+ 6.20%',
   },
 ];
 const Banner = ({ bannerData }: Props) => {
@@ -96,7 +96,7 @@ const Banner = ({ bannerData }: Props) => {
         <div className="scrollbar-hidden flex max-w-full items-center gap-3 overflow-x-auto whitespace-nowrap lg:gap-9">
           {userData.map((user, index) => (
             <div
-              className={`flex items-center gap-5 ${index === 0 ? "pl-6 md:pl-0" : ""}`}
+              className={`flex items-center gap-5 ${index === 0 ? 'pl-6 md:pl-0' : ''}`}
               key={index}
             >
               <div className="relative h-10 w-10 lg:h-[54px] lg:w-[54px]">

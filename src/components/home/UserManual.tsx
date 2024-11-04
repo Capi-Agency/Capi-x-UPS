@@ -1,23 +1,23 @@
-"use client";
-import React, { useState } from "react";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
-import NextImg from "../common/next-img";
-import TooltipProgress from "../common/tooltip-progress/page";
+'use client';
+import React, { useState } from 'react';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@radix-ui/react-tabs';
+import NextImg from '../common/next-img';
+import TooltipProgress from '../common/tooltip-progress/page';
 
 type Props = {};
 
 const UserManual = (props: Props) => {
   const apps = [
-    { id: 1, name: "Nền tảng Website" },
-    { id: 2, name: "Nền tảng App Di động" },
-    { id: 3, name: "Nạp tiền đầu tư" },
-    { id: 4, name: "Đặt lệnh đầu tư" },
+    { id: 1, name: 'Nền tảng Website' },
+    { id: 2, name: 'Nền tảng App Di động' },
+    { id: 3, name: 'Nạp tiền đầu tư' },
+    { id: 4, name: 'Đặt lệnh đầu tư' },
   ];
 
   const steps = [
     {
-      icon: "/assets/icons/vantay.svg",
-      title: "1. Tạo tài khoản tức thì với UPS",
+      icon: '/assets/icons/vantay.svg',
+      title: '1. Tạo tài khoản tức thì với UPS',
       description: (
         <>
           <span className="font-bold">UPS</span> giúp bạn trở thành nhà đầu tư
@@ -27,22 +27,22 @@ const UserManual = (props: Props) => {
       ),
     },
     {
-      icon: "/assets/icons/TreeStructure.svg",
-      title: "2. Nạp tiền đầu tư",
+      icon: '/assets/icons/TreeStructure.svg',
+      title: '2. Nạp tiền đầu tư',
       description: (
         <>
           Thao tác nạp tiền nhanh chóng vào tài khoản đầu tư chỉ với 1 bước đơn
-          giản ngay trên{" "}
+          giản ngay trên{' '}
           <span className="font-bold">trang nạp tiền đầu tư</span>
         </>
       ),
     },
     {
-      icon: "/assets/icons/FlagBanner.svg",
-      title: "3. Đặt lệnh đầu tư",
+      icon: '/assets/icons/FlagBanner.svg',
+      title: '3. Đặt lệnh đầu tư',
       description: (
         <>
-          Bắt đầu mua bán các sản phẩm cổ phiếu mà bạn yêu thích.{" "}
+          Bắt đầu mua bán các sản phẩm cổ phiếu mà bạn yêu thích.{' '}
           <span className="font-bold">Tới trang đặt lệnh đầu tư</span>
         </>
       ),
@@ -88,7 +88,7 @@ const UserManual = (props: Props) => {
               </div>
               <div className="rounded-2xl bg-[#0F1B0E] py-5 sm:px-5 lg2:px-8 2xl:px-10">
                 <p className="leading-[27px] tracking-[0.32px] text-[#FFF] md:text-sm lg:text-base">
-                  Hoặc đăng ký qua{" "}
+                  Hoặc đăng ký qua{' '}
                   <span className="font-bold text-[#02E56A]">Tổng đài UPS</span>
                 </p>
               </div>
@@ -108,7 +108,7 @@ const UserManual = (props: Props) => {
                       <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#F3F3FB] lg:h-[50px] lg:w-[50px] lg2:h-[60px] lg2:w-[60px]">
                         <div
                           className={`relative w-9 lg2:h-6 ${
-                            index === 0 ? "h-5" : "h-4"
+                            index === 0 ? 'h-5' : 'h-4'
                           }`}
                         >
                           <NextImg
@@ -130,7 +130,7 @@ const UserManual = (props: Props) => {
               </div>
               <div className="mt-6 flex flex-col gap-3 md:hidden">
                 <p className="text-[14px] tracking-[0.28px] text-[#161519]">
-                  Tìm kiểu thêm các hướng dẫn khác của{" "}
+                  Tìm kiểu thêm các hướng dẫn khác của{' '}
                   <span className="font-bold">UPS</span>
                 </p>
                 <div>
@@ -187,7 +187,7 @@ const UserManual = (props: Props) => {
               </div>
               <div className="rounded-2xl bg-[#0F1B0E] py-5 sm:px-5 lg2:px-8 2xl:px-10">
                 <p className="leading-[27px] tracking-[0.32px] text-[#FFF] md:text-sm lg:text-base">
-                  Hoặc đăng ký qua{" "}
+                  Hoặc đăng ký qua{' '}
                   <span className="font-bold text-[#02E56A]">Tổng đài UPS</span>
                 </p>
               </div>
@@ -207,7 +207,7 @@ const UserManual = (props: Props) => {
                       <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#F3F3FB] lg:h-[50px] lg:w-[50px] lg2:h-[60px] lg2:w-[60px]">
                         <div
                           className={`relative w-9 lg2:h-6 ${
-                            index === 0 ? "h-5" : "h-4"
+                            index === 0 ? 'h-5' : 'h-4'
                           }`}
                         >
                           <NextImg
@@ -229,7 +229,7 @@ const UserManual = (props: Props) => {
               </div>
               <div className="mt-6 flex flex-col gap-3 md:hidden">
                 <p className="text-[14px] tracking-[0.28px] text-[#161519]">
-                  Tìm kiểu thêm các hướng dẫn khác của{" "}
+                  Tìm kiểu thêm các hướng dẫn khác của{' '}
                   <span className="font-bold">UPS</span>
                 </p>
                 <div>
@@ -286,7 +286,7 @@ const UserManual = (props: Props) => {
               </div>
               <div className="rounded-2xl bg-[#0F1B0E] py-5 sm:px-5 lg2:px-8 2xl:px-10">
                 <p className="leading-[27px] tracking-[0.32px] text-[#FFF] md:text-sm lg:text-base">
-                  Hoặc đăng ký qua{" "}
+                  Hoặc đăng ký qua{' '}
                   <span className="font-bold text-[#02E56A]">Tổng đài UPS</span>
                 </p>
               </div>
@@ -306,7 +306,7 @@ const UserManual = (props: Props) => {
                       <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#F3F3FB] lg:h-[50px] lg:w-[50px] lg2:h-[60px] lg2:w-[60px]">
                         <div
                           className={`relative w-9 lg2:h-6 ${
-                            index === 0 ? "h-5" : "h-4"
+                            index === 0 ? 'h-5' : 'h-4'
                           }`}
                         >
                           <NextImg
@@ -328,7 +328,7 @@ const UserManual = (props: Props) => {
               </div>
               <div className="mt-6 flex flex-col gap-3 md:hidden">
                 <p className="text-[14px] tracking-[0.28px] text-[#161519]">
-                  Tìm kiểu thêm các hướng dẫn khác của{" "}
+                  Tìm kiểu thêm các hướng dẫn khác của{' '}
                   <span className="font-bold">UPS</span>
                 </p>
                 <div>
@@ -385,7 +385,7 @@ const UserManual = (props: Props) => {
               </div>
               <div className="rounded-2xl bg-[#0F1B0E] py-5 sm:px-5 lg2:px-8 2xl:px-10">
                 <p className="leading-[27px] tracking-[0.32px] text-[#FFF] md:text-sm lg:text-base">
-                  Hoặc đăng ký qua{" "}
+                  Hoặc đăng ký qua{' '}
                   <span className="font-bold text-[#02E56A]">Tổng đài UPS</span>
                 </p>
               </div>
@@ -405,7 +405,7 @@ const UserManual = (props: Props) => {
                       <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#F3F3FB] lg:h-[50px] lg:w-[50px] lg2:h-[60px] lg2:w-[60px]">
                         <div
                           className={`relative w-9 lg2:h-6 ${
-                            index === 0 ? "h-5" : "h-4"
+                            index === 0 ? 'h-5' : 'h-4'
                           }`}
                         >
                           <NextImg
@@ -427,7 +427,7 @@ const UserManual = (props: Props) => {
               </div>
               <div className="mt-6 flex flex-col gap-3 md:hidden">
                 <p className="text-[14px] tracking-[0.28px] text-[#161519]">
-                  Tìm kiểu thêm các hướng dẫn khác của{" "}
+                  Tìm kiểu thêm các hướng dẫn khác của{' '}
                   <span className="font-bold">UPS</span>
                 </p>
                 <div>
@@ -471,7 +471,7 @@ const UserManual = (props: Props) => {
                   #HDSD
                 </span>
                 <span className="text-[20px] font-bold leading-normal text-[#111013] md:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[54px]">
-                  3 bước trở thành{" "}
+                  3 bước trở thành{' '}
                   <span className="text-[#00D763]">nhà đầu tư.</span>
                 </span>
               </div>
@@ -486,8 +486,8 @@ const UserManual = (props: Props) => {
                       value={app.id.toString()}
                       className={`pb-[6px] text-start text-[14px] font-bold text-[#111013] md:text-base lg:pb-0 lg:text-[18px] lg:leading-[28px] ${
                         currentApp === app.id
-                          ? "border-b border-[#111013] md:border-b-0 md:border-r-2"
-                          : "border-none"
+                          ? 'border-b border-[#111013] md:border-b-0 md:border-r-2'
+                          : 'border-none'
                       }`}
                     >
                       {app.name}
@@ -497,7 +497,7 @@ const UserManual = (props: Props) => {
               </Tabs>
               <div className="hidden md:block">
                 <p className="leading-[28px] tracking-[0.36px] text-[#161519] md:mb-6 md:text-base lg:text-[18px] 2xl:mb-8 3xl:mb-[42px]">
-                  Tìm kiểu thêm các hướng dẫn khác của{" "}
+                  Tìm kiểu thêm các hướng dẫn khác của{' '}
                   <span className="font-bold">UPS</span>
                 </p>
                 <button className="btn active !bg-[#014227] !text-[#02E56A]">

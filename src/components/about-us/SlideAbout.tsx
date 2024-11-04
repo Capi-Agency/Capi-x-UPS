@@ -1,8 +1,8 @@
-"use client";
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { cn } from "@/lib/utils";
+'use client';
+import React, { useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { cn } from '@/lib/utils';
 
 type Props = {};
 
@@ -10,34 +10,34 @@ const SlideAbout = (props: Props) => {
   const swiperRef = useRef<any>(null);
   const slides = [
     {
-      tag: "Connection",
-      title: "Highly accessible",
+      tag: 'Connection',
+      title: 'Highly accessible',
       description:
-        "We track how people move through an impactful campaign that allows us to discover better others miss.",
+        'We track how people move through an impactful campaign that allows us to discover better others miss.',
     },
     {
-      tag: "Collaboration",
-      title: "Creative networking",
+      tag: 'Collaboration',
+      title: 'Creative networking',
       description:
-        "Creating a higher spacing and how people move through a unique and impactful campaign.",
+        'Creating a higher spacing and how people move through a unique and impactful campaign.',
     },
     {
-      tag: "Innovation",
-      title: "Ongoing optimization",
+      tag: 'Innovation',
+      title: 'Ongoing optimization',
       description:
-        "We track how people move through an impactful campaign that allows us to discover better others miss.",
+        'We track how people move through an impactful campaign that allows us to discover better others miss.',
     },
     {
-      tag: "Experience",
-      title: "Collaborative discovery",
+      tag: 'Experience',
+      title: 'Collaborative discovery',
       description:
-        "Spaces of each debt in the digital world can help you with overall simplest authentic.",
+        'Spaces of each debt in the digital world can help you with overall simplest authentic.',
     },
     {
-      tag: "Connection",
-      title: "Highly accessible",
+      tag: 'Connection',
+      title: 'Highly accessible',
       description:
-        "We track how people move through an impactful campaign that allows us to discover better others miss.",
+        'We track how people move through an impactful campaign that allows us to discover better others miss.',
     },
   ];
   return (
@@ -82,7 +82,7 @@ const SlideAbout = (props: Props) => {
             let angle = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
             angle = (angle + 360) % 360;
 
-            cardRef.current.style.setProperty("--start", `${angle + 60}`);
+            cardRef.current.style.setProperty('--start', `${angle + 60}`);
           };
 
           const handleMouseEnter = () => {
@@ -95,7 +95,7 @@ const SlideAbout = (props: Props) => {
           return (
             <SwiperSlide
               key={index}
-              className={`${index === 0 ? "ml-6 lg:ml-auto" : ""}`}
+              className={`${index === 0 ? 'ml-6 lg:ml-auto' : ''}`}
             >
               <div
                 ref={cardRef}
@@ -117,15 +117,13 @@ const SlideAbout = (props: Props) => {
                 </p>
                 <div
                   className={cn(
-                    "pointer-events-none absolute left-0 top-0 z-[99] h-[250px] w-[250px] rounded-full bg-green-500 opacity-50",
+                    'pointer-events-none absolute left-0 top-0 z-[99] h-[250px] w-[250px] rounded-full bg-green-500 opacity-50',
                     { hidden: !isHovered },
                   )}
                   style={{
-                    transform: `translate(${position.x - 120}px, ${
-                      position.y - 120
-                    }px)`,
+                    transform: `translate(${position.x - 120}px, ${position.y - 120}px)`,
                     background:
-                      "radial-gradient(circle, rgba(0,255,0,0.5) 0%, rgba(0,255,0,0) 70%)",
+                      'radial-gradient(circle, rgba(0,255,0,0.5) 0%, rgba(0,255,0,0) 70%)',
                   }}
                 ></div>
               </div>

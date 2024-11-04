@@ -1,7 +1,7 @@
-"use client";
-import React, { useEffect, useRef, useState } from "react";
-import NextImg from "../common/next-img";
-import { gsap } from "gsap";
+'use client';
+import React, { useEffect, useRef, useState } from 'react';
+import NextImg from '../common/next-img';
+import { gsap } from 'gsap';
 
 type Props = {};
 type ImgData = {
@@ -13,78 +13,78 @@ type ImgData = {
   bottom?: number;
 };
 const imgDataDesktop: ImgData[] = [
-  { size: 44, imgUrl: "/assets/image/investor1.jpg", left: 4, bottom: 4 },
-  { size: 261.2, imgUrl: "/assets/image/investor2.jpg", left: 4, bottom: 4 },
-  { size: 65, imgUrl: "/assets/image/investor3.jpg", top: 115, left: 260 },
-  { size: 38.5, imgUrl: "/assets/image/investor4.jpg", top: 167, left: 308 },
-  { size: 119, imgUrl: "/assets/image/investor5.jpg", left: 251, bottom: 4 },
+  { size: 44, imgUrl: '/assets/image/investor1.jpg', left: 4, bottom: 4 },
+  { size: 261.2, imgUrl: '/assets/image/investor2.jpg', left: 4, bottom: 4 },
+  { size: 65, imgUrl: '/assets/image/investor3.jpg', top: 115, left: 260 },
+  { size: 38.5, imgUrl: '/assets/image/investor4.jpg', top: 167, left: 308 },
+  { size: 119, imgUrl: '/assets/image/investor5.jpg', left: 251, bottom: 4 },
   {
     size: 317,
-    imgUrl: "/assets/image/investor6.jpg",
+    imgUrl: '/assets/image/investor6.jpg',
     top: 7,
     bottom: 4,
     left: 347,
   },
-  { size: 38.5, imgUrl: "/assets/image/investor7.jpg", left: 663, bottom: 175 },
-  { size: 77, imgUrl: "/assets/image/investor8.jpg", left: 624.6, bottom: 4 },
-  { size: 233, imgUrl: "/assets/image/investor9.jpg", right: 524, bottom: 4 },
+  { size: 38.5, imgUrl: '/assets/image/investor7.jpg', left: 663, bottom: 175 },
+  { size: 77, imgUrl: '/assets/image/investor8.jpg', left: 624.6, bottom: 4 },
+  { size: 233, imgUrl: '/assets/image/investor9.jpg', right: 524, bottom: 4 },
   {
     size: 77,
-    imgUrl: "/assets/icons/svg-investor.svg",
+    imgUrl: '/assets/icons/svg-investor.svg',
     right: 499,
     top: 50,
   },
-  { size: 64, imgUrl: "/assets/image/investor10.jpg", right: 485, bottom: 4 },
-  { size: 281, imgUrl: "/assets/image/investor11.jpg", right: 242, bottom: 4 },
-  { size: 77, imgUrl: "/assets/image/investor12.jpg", top: 82, right: 174.5 },
-  { size: 41, imgUrl: "/assets/image/investor13.jpg", bottom: 70, right: 210 },
-  { size: 67, imgUrl: "/assets/image/investor14.jpg", bottom: 4, right: 208 },
-  { size: 207, imgUrl: "/assets/image/investor15.jpg", bottom: 4, right: 4 },
-  { size: 41, imgUrl: "/assets/image/investor16.jpg", top: 105, right: 4 },
+  { size: 64, imgUrl: '/assets/image/investor10.jpg', right: 485, bottom: 4 },
+  { size: 281, imgUrl: '/assets/image/investor11.jpg', right: 242, bottom: 4 },
+  { size: 77, imgUrl: '/assets/image/investor12.jpg', top: 82, right: 174.5 },
+  { size: 41, imgUrl: '/assets/image/investor13.jpg', bottom: 70, right: 210 },
+  { size: 67, imgUrl: '/assets/image/investor14.jpg', bottom: 4, right: 208 },
+  { size: 207, imgUrl: '/assets/image/investor15.jpg', bottom: 4, right: 4 },
+  { size: 41, imgUrl: '/assets/image/investor16.jpg', top: 105, right: 4 },
 ];
 
 const imgDataMobile: ImgData[] = [
-  { size: 16, imgUrl: "/assets/image/investor1.jpg", left: 0, bottom: 0 },
-  { size: 99, imgUrl: "/assets/image/investor2.jpg", left: 0, bottom: 0 },
-  { size: 24, imgUrl: "/assets/image/investor10.jpg", top: 42, left: 0 },
-  { size: 14.5, imgUrl: "/assets/image/investor7.jpg", top: 40, left: 46 },
-  { size: 59, imgUrl: "/assets/image/investor15.jpg", left: 59, top: 4 },
+  { size: 16, imgUrl: '/assets/image/investor1.jpg', left: 0, bottom: 0 },
+  { size: 99, imgUrl: '/assets/image/investor2.jpg', left: 0, bottom: 0 },
+  { size: 24, imgUrl: '/assets/image/investor10.jpg', top: 42, left: 0 },
+  { size: 14.5, imgUrl: '/assets/image/investor7.jpg', top: 40, left: 46 },
+  { size: 59, imgUrl: '/assets/image/investor15.jpg', left: 59, top: 4 },
   {
     size: 25,
-    imgUrl: "/assets/image/investor14.jpg",
+    imgUrl: '/assets/image/investor14.jpg',
     bottom: 0,
     left: 89,
     top: 129,
   },
-  { size: 120, imgUrl: "/assets/image/investor6.jpg", left: 99, bottom: 0 },
+  { size: 120, imgUrl: '/assets/image/investor6.jpg', left: 99, bottom: 0 },
   {
     size: 24.6,
-    imgUrl: "/assets/image/investor3.jpg",
+    imgUrl: '/assets/image/investor3.jpg',
     left: 117,
     top: 15.5,
   },
-  { size: 29, imgUrl: "/assets/icons/svg-investor.svg", right: 124, top: 19 },
+  { size: 29, imgUrl: '/assets/icons/svg-investor.svg', right: 124, top: 19 },
   {
     size: 45,
-    imgUrl: "/assets/image/investor5.jpg",
+    imgUrl: '/assets/image/investor5.jpg',
     right: 83,
     top: 30,
   },
-  { size: 14.5, imgUrl: "/assets/image/investor4.jpg", right: 108, bottom: 64 },
-  { size: 29, imgUrl: "/assets/image/investor8.jpg", right: 108, bottom: 0 },
+  { size: 14.5, imgUrl: '/assets/image/investor4.jpg', right: 108, bottom: 64 },
+  { size: 29, imgUrl: '/assets/image/investor8.jpg', right: 108, bottom: 0 },
   {
     size: 88,
-    imgUrl: "/assets/image/investor9.jpg",
+    imgUrl: '/assets/image/investor9.jpg',
     bottom: 0,
     right: 27,
     top: 66,
   },
-  { size: 68, imgUrl: "/assets/image/investor11.jpg", top: 0, right: 17 },
-  { size: 36, imgUrl: "/assets/image/investor12.jpg", top: 57, right: 0 },
-  { size: 21, imgUrl: "/assets/image/investor16.jpg", bottom: 33, right: 0 },
+  { size: 68, imgUrl: '/assets/image/investor11.jpg', top: 0, right: 17 },
+  { size: 36, imgUrl: '/assets/image/investor12.jpg', top: 57, right: 0 },
+  { size: 21, imgUrl: '/assets/image/investor16.jpg', bottom: 33, right: 0 },
   {
     size: 31,
-    imgUrl: "/assets/image/investor13.jpg",
+    imgUrl: '/assets/image/investor13.jpg',
     bottom: 0,
     right: 0,
     top: 122,
@@ -120,7 +120,7 @@ const Community = (props: Props) => {
               opacity: 1,
               scale: 1,
               duration: 1.5,
-              ease: "bounce.out",
+              ease: 'bounce.out',
               stagger: 0.05,
             },
           );

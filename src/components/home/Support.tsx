@@ -1,6 +1,6 @@
-"use client";
-import React, { useState } from "react";
-import NextImg from "../common/next-img";
+'use client';
+import React, { useState } from 'react';
+import NextImg from '../common/next-img';
 
 type Props = {};
 const QnAItems = [
@@ -66,7 +66,7 @@ const AccordionItem = (props: AccordionItemProps) => {
           {question}
         </span>
         <div
-          className={`grid overflow-hidden text-sm font-medium leading-[28px] text-[#535662] transition-all duration-500 ease-in-out lg:text-base lg2:text-[18px] ${isOpen ? "mt-2 grid-rows-[1fr] opacity-100 lg:mt-4" : "mt-0 grid-rows-[0fr] opacity-0"} `}
+          className={`grid overflow-hidden text-sm font-medium leading-[28px] text-[#535662] transition-all duration-500 ease-in-out lg:text-base lg2:text-[18px] ${isOpen ? 'mt-2 grid-rows-[1fr] opacity-100 lg:mt-4' : 'mt-0 grid-rows-[0fr] opacity-0'} `}
         >
           <div className="overflow-hidden">{answer}</div>
         </div>
@@ -74,7 +74,7 @@ const AccordionItem = (props: AccordionItemProps) => {
       <div className="absolute right-0 top-0">
         <div
           className={`relative h-6 w-6 transform cursor-pointer duration-300 ease-in-out lg:h-[32px] lg:w-[32px] ${
-            isOpen ? "" : "rotate-180"
+            isOpen ? '' : 'rotate-180'
           }`}
           onClick={handleOnClick}
         >

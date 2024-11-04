@@ -1,28 +1,28 @@
-import React from "react";
-import NextImg from "../common/next-img";
+import React from 'react';
+import NextImg from '../common/next-img';
 
 type Props = {};
 const directors = [
   {
-    name: "Ông Nguyễn Quang Đạt",
-    position: "Tổng giám đốc",
+    name: 'Ông Nguyễn Quang Đạt',
+    position: 'Tổng giám đốc',
     description:
-      "A global brand entrusted us with a unique challenge: crafting an internal tool to share its brand story with every employee, from sales to product…",
-    imageSrc: "/assets/image/director-1.jpg",
+      'A global brand entrusted us with a unique challenge: crafting an internal tool to share its brand story with every employee, from sales to product…',
+    imageSrc: '/assets/image/director-1.jpg',
   },
   {
-    name: "Ông Nguyễn Quang Đạt",
-    position: "Tổng giám đốc",
+    name: 'Ông Nguyễn Quang Đạt',
+    position: 'Tổng giám đốc',
     description:
-      "A global brand entrusted us with a unique challenge: crafting an internal tool to share its brand story with every employee, from sales to product…",
-    imageSrc: "/assets/image/director-2.jpg",
+      'A global brand entrusted us with a unique challenge: crafting an internal tool to share its brand story with every employee, from sales to product…',
+    imageSrc: '/assets/image/director-2.jpg',
   },
   {
-    name: "Ông Nguyễn Quang Đạt",
-    position: "Tổng giám đốc",
+    name: 'Ông Nguyễn Quang Đạt',
+    position: 'Tổng giám đốc',
     description:
-      "A global brand entrusted us with a unique challenge: crafting an internal tool to share its brand story with every employee, from sales to product…",
-    imageSrc: "/assets/image/director-3.jpg",
+      'A global brand entrusted us with a unique challenge: crafting an internal tool to share its brand story with every employee, from sales to product…',
+    imageSrc: '/assets/image/director-3.jpg',
   },
 ];
 const DirectorAbout = (props: Props) => {
@@ -33,12 +33,12 @@ const DirectorAbout = (props: Props) => {
           <div
             key={index}
             className={`flex flex-col gap-3 md:grid md:grid-cols-2 md:gap-3 lg:gap-6 3xl:gap-[30px] ${
-              index === 0 ? "mt-0" : "mt-6 md:mt-3 3xl:mt-[30px]"
+              index === 0 ? 'mt-0' : 'mt-6 md:mt-3 3xl:mt-[30px]'
             }`}
           >
             <div
               className={`relative w-full pt-[100%] ${
-                index % 2 !== 0 ? "md:order-2" : "order-1"
+                index % 2 !== 0 ? 'md:order-2' : 'order-1'
               }`}
               data-aos="fade-up"
               data-aos-delay="200"
@@ -52,7 +52,7 @@ const DirectorAbout = (props: Props) => {
             </div>
             <div
               className={`rounded-[12px] bg-[#F3F3FB] p-5 pb-[20%] lg:rounded-[24px] lg:p-10 ${
-                index % 2 !== 0 ? "lg:order-1" : "order-2"
+                index % 2 !== 0 ? 'lg:order-1' : 'order-2'
               }`}
               data-aos="fade-up"
               data-aos-delay="600"
