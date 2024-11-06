@@ -1,11 +1,11 @@
 'use client';
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import { CaretDownIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 import NextImg from '../next-img';
 
-type Props = {};
-
-const TheHeader = (props: Props) => {
+const TheHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleClose = () => {
     setIsMenuOpen(false);
@@ -22,7 +22,7 @@ const TheHeader = (props: Props) => {
     };
   }, [isMenuOpen]);
   return (
-    <div className="fixed z-[999] w-full">
+    <NavigationMenu.Root className="fixed z-[999] w-full">
       <div className="rounded-b-[24px] bg-[#0E1A0D]">
         <div
           className="mx-auto px-6 py-4 sm:max-w-full md:px-10 lg:py-[20px] xl:max-w-[1280px] xl:px-0 2xl:max-w-[1440px] 3xl:max-w-[1600px]"
@@ -44,64 +44,294 @@ const TheHeader = (props: Props) => {
                 />
               </div>
             </Link>
-            <ul className="hidden items-center space-x-5 xl:flex 2xl:space-x-8">
-              <li>
-                <Link
-                  href="/"
-                  aria-label="Our product"
-                  title="Our product"
-                  className="flex items-center gap-[10px] text-base font-bold text-gray-100"
-                >
-                  Sản phẩm
-                  <span className="me-2 rounded-[10px] bg-[#AD02C9] px-2 py-1 text-sm font-bold uppercase text-white">
-                    NEW
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  aria-label="Invest with UPS"
-                  title="Invest with UPS"
-                  className="font-bold text-gray-100"
-                >
-                  Đầu tư cùng UPS
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/nen-tang-cong-nghe"
-                  aria-label="Technology platform"
-                  title="Technology platform"
-                  className="font-bold text-gray-100"
-                >
-                  Nền tảng công nghệ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/tin-tuc"
-                  aria-label="News"
-                  title="News"
-                  className="font-bold text-gray-100"
-                >
-                  Tin tức
-                  <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1 text-sm">
-                    4
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/gioi-thieu"
-                  aria-label="About us"
-                  title="About us"
-                  className="font-bold text-gray-100"
-                >
-                  Về UPS
-                </Link>
-              </li>
-              <li>
+            <NavigationMenu.List className="hidden items-center space-x-5 xl:flex 2xl:space-x-8">
+              <NavigationMenu.Item>
+                <NavigationMenu.Trigger className="flex items-center gap-[10px] text-base font-bold text-gray-100">
+                  <Link
+                    href="/"
+                    aria-label="Our product"
+                    title="Our product"
+                    className="flex items-center gap-[10px] text-base font-bold text-gray-100"
+                  >
+                    Sản phẩm
+                    <span className="me-2 rounded-[10px] bg-[#AD02C9] px-2 py-1 text-sm font-bold uppercase text-white">
+                      NEW
+                    </span>
+                  </Link>
+                  {/* <CaretDownIcon
+							className="relative top-px text-violet10 transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
+							aria-hidden
+						/> */}
+                </NavigationMenu.Trigger>
+                <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
+                  <ul className="one m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
+                    <li className="row-span-3 grid">
+                      <NavigationMenu.Link asChild>
+                        <Link
+                          className="from-purple9 to-indigo9 focus:shadow-violet7 flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-[25px] no-underline outline-none focus:shadow-[0_0_0_2px]"
+                          href="/"
+                        >
+                          <svg
+                            aria-hidden
+                            width="38"
+                            height="38"
+                            viewBox="0 0 25 25"
+                            fill="white"
+                          >
+                            <path d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"></path>
+                            <path d="M12 0H4V8H12V0Z"></path>
+                            <path d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z"></path>
+                          </svg>
+                          <div className="mb-[7px] mt-4 text-[18px] font-medium leading-[1.2] text-white">
+                            Radix Primitives
+                          </div>
+                          <p className="text-mauve4 text-[14px] leading-[1.3]">
+                            Unstyled, accessible components for React.
+                          </p>
+                        </Link>
+                      </NavigationMenu.Link>
+                    </li>
+
+                    <ListItem href="https://stitches.dev/" title="Stitches">
+                      CSS-in-JS with best-in-class developer experience.
+                    </ListItem>
+                    <ListItem href="/colors" title="Colors">
+                      Beautiful, thought-out palettes with auto dark mode.
+                    </ListItem>
+                    <ListItem href="https://icons.radix-ui.com/" title="Icons">
+                      A crisp set of 15x15 icons, balanced and consistent.
+                    </ListItem>
+                  </ul>
+                </NavigationMenu.Content>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item>
+                <NavigationMenu.Trigger className="flex items-center gap-[10px] text-base font-bold text-gray-100">
+                  <Link
+                    href="/"
+                    aria-label="Invest with UPS"
+                    title="Invest with UPS"
+                    className="font-bold text-gray-100"
+                  >
+                    Đầu tư cùng UPS
+                  </Link>
+                  {/* <CaretDownIcon
+							className="relative top-px text-violet10 transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
+							aria-hidden
+						/> */}
+                </NavigationMenu.Trigger>
+                <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
+                  <ul className="one m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
+                    <li className="row-span-3 grid">
+                      <NavigationMenu.Link asChild>
+                        <Link
+                          className="from-purple9 to-indigo9 focus:shadow-violet7 flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-[25px] no-underline outline-none focus:shadow-[0_0_0_2px]"
+                          href="/"
+                        >
+                          <svg
+                            aria-hidden
+                            width="38"
+                            height="38"
+                            viewBox="0 0 25 25"
+                            fill="white"
+                          >
+                            <path d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"></path>
+                            <path d="M12 0H4V8H12V0Z"></path>
+                            <path d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z"></path>
+                          </svg>
+                          <div className="mb-[7px] mt-4 text-[18px] font-medium leading-[1.2] text-white">
+                            Radix Primitives
+                          </div>
+                          <p className="text-mauve4 text-[14px] leading-[1.3]">
+                            Unstyled, accessible components for React.
+                          </p>
+                        </Link>
+                      </NavigationMenu.Link>
+                    </li>
+
+                    <ListItem href="https://stitches.dev/" title="Stitches">
+                      CSS-in-JS with best-in-class developer experience.
+                    </ListItem>
+                    <ListItem href="/colors" title="Colors">
+                      Beautiful, thought-out palettes with auto dark mode.
+                    </ListItem>
+                    <ListItem href="https://icons.radix-ui.com/" title="Icons">
+                      A crisp set of 15x15 icons, balanced and consistent.
+                    </ListItem>
+                  </ul>
+                </NavigationMenu.Content>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item>
+                <NavigationMenu.Trigger className="flex items-center gap-[10px] text-base font-bold text-gray-100">
+                  <Link
+                    href="/nen-tang-cong-nghe"
+                    aria-label="Technology platform"
+                    title="Technology platform"
+                    className="font-bold text-gray-100"
+                  >
+                    Nền tảng công nghệ
+                  </Link>
+                  {/* <CaretDownIcon
+							className="relative top-px text-violet10 transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
+							aria-hidden
+						/> */}
+                </NavigationMenu.Trigger>
+                <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
+                  <ul className="one m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
+                    <li className="row-span-3 grid">
+                      <NavigationMenu.Link asChild>
+                        <Link
+                          className="from-purple9 to-indigo9 focus:shadow-violet7 flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-[25px] no-underline outline-none focus:shadow-[0_0_0_2px]"
+                          href="/"
+                        >
+                          <svg
+                            aria-hidden
+                            width="38"
+                            height="38"
+                            viewBox="0 0 25 25"
+                            fill="white"
+                          >
+                            <path d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"></path>
+                            <path d="M12 0H4V8H12V0Z"></path>
+                            <path d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z"></path>
+                          </svg>
+                          <div className="mb-[7px] mt-4 text-[18px] font-medium leading-[1.2] text-white">
+                            Radix Primitives
+                          </div>
+                          <p className="text-mauve4 text-[14px] leading-[1.3]">
+                            Unstyled, accessible components for React.
+                          </p>
+                        </Link>
+                      </NavigationMenu.Link>
+                    </li>
+
+                    <ListItem href="https://stitches.dev/" title="Stitches">
+                      CSS-in-JS with best-in-class developer experience.
+                    </ListItem>
+                    <ListItem href="/colors" title="Colors">
+                      Beautiful, thought-out palettes with auto dark mode.
+                    </ListItem>
+                    <ListItem href="https://icons.radix-ui.com/" title="Icons">
+                      A crisp set of 15x15 icons, balanced and consistent.
+                    </ListItem>
+                  </ul>
+                </NavigationMenu.Content>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item>
+                <NavigationMenu.Trigger className="flex items-center gap-[10px] text-base font-bold text-gray-100">
+                  <Link
+                    href="/tin-tuc"
+                    aria-label="News"
+                    title="News"
+                    className="font-bold text-gray-100"
+                  >
+                    Tin tức
+                    <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1 text-sm">
+                      4
+                    </span>
+                  </Link>
+                  {/* <CaretDownIcon
+							className="relative top-px text-violet10 transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
+							aria-hidden
+						/> */}
+                </NavigationMenu.Trigger>
+                <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
+                  <ul className="one m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
+                    <li className="row-span-3 grid">
+                      <NavigationMenu.Link asChild>
+                        <Link
+                          className="from-purple9 to-indigo9 focus:shadow-violet7 flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-[25px] no-underline outline-none focus:shadow-[0_0_0_2px]"
+                          href="/"
+                        >
+                          <svg
+                            aria-hidden
+                            width="38"
+                            height="38"
+                            viewBox="0 0 25 25"
+                            fill="white"
+                          >
+                            <path d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"></path>
+                            <path d="M12 0H4V8H12V0Z"></path>
+                            <path d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z"></path>
+                          </svg>
+                          <div className="mb-[7px] mt-4 text-[18px] font-medium leading-[1.2] text-white">
+                            Radix Primitives
+                          </div>
+                          <p className="text-mauve4 text-[14px] leading-[1.3]">
+                            Unstyled, accessible components for React.
+                          </p>
+                        </Link>
+                      </NavigationMenu.Link>
+                    </li>
+
+                    <ListItem href="https://stitches.dev/" title="Stitches">
+                      CSS-in-JS with best-in-class developer experience.
+                    </ListItem>
+                    <ListItem href="/colors" title="Colors">
+                      Beautiful, thought-out palettes with auto dark mode.
+                    </ListItem>
+                    <ListItem href="https://icons.radix-ui.com/" title="Icons">
+                      A crisp set of 15x15 icons, balanced and consistent.
+                    </ListItem>
+                  </ul>
+                </NavigationMenu.Content>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item>
+                <NavigationMenu.Trigger className="flex items-center gap-[10px] text-base font-bold text-gray-100">
+                  <Link
+                    href="/gioi-thieu"
+                    aria-label="About us"
+                    title="About us"
+                    className="font-bold text-gray-100"
+                  >
+                    Về UPS
+                  </Link>
+                  {/* <CaretDownIcon
+							className="relative top-px text-violet10 transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
+							aria-hidden
+						/> */}
+                </NavigationMenu.Trigger>
+                <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
+                  <ul className="one m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
+                    <li className="row-span-3 grid">
+                      <NavigationMenu.Link asChild>
+                        <Link
+                          className="from-purple9 to-indigo9 focus:shadow-violet7 flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-[25px] no-underline outline-none focus:shadow-[0_0_0_2px]"
+                          href="/"
+                        >
+                          <svg
+                            aria-hidden
+                            width="38"
+                            height="38"
+                            viewBox="0 0 25 25"
+                            fill="white"
+                          >
+                            <path d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"></path>
+                            <path d="M12 0H4V8H12V0Z"></path>
+                            <path d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z"></path>
+                          </svg>
+                          <div className="mb-[7px] mt-4 text-[18px] font-medium leading-[1.2] text-white">
+                            Radix Primitives
+                          </div>
+                          <p className="text-mauve4 text-[14px] leading-[1.3]">
+                            Unstyled, accessible components for React.
+                          </p>
+                        </Link>
+                      </NavigationMenu.Link>
+                    </li>
+
+                    <ListItem href="https://stitches.dev/" title="Stitches">
+                      CSS-in-JS with best-in-class developer experience.
+                    </ListItem>
+                    <ListItem href="/colors" title="Colors">
+                      Beautiful, thought-out palettes with auto dark mode.
+                    </ListItem>
+                    <ListItem href="https://icons.radix-ui.com/" title="Icons">
+                      A crisp set of 15x15 icons, balanced and consistent.
+                    </ListItem>
+                  </ul>
+                </NavigationMenu.Content>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item>
                 <Link
                   href="/"
                   aria-label="Price list"
@@ -110,8 +340,12 @@ const TheHeader = (props: Props) => {
                 >
                   Bảng giá
                 </Link>
-              </li>
-            </ul>
+              </NavigationMenu.Item>
+
+              <NavigationMenu.Indicator className="data-[state=hidden]:animate-fadeOut data-[state=visible]:animate-fadeIn top-full z-10 flex h-2.5 items-end justify-center overflow-hidden transition-[width,transform_250ms_ease]">
+                <div className="relative top-[70%] size-2.5 rotate-45 rounded-tl-sm bg-white" />
+              </NavigationMenu.Indicator>
+            </NavigationMenu.List>
             <ul className="hidden items-center space-x-5 xl:flex 2xl:space-x-8">
               <li>
                 <Link
@@ -297,188 +531,31 @@ const TheHeader = (props: Props) => {
           </div>
         </div>
       </div>
-      {isMenuOpen && (
-        <div className="fixed left-0 top-0 h-full w-full bg-[#0F1B0E]">
-          <div className="h-full w-full rounded border bg-[#0F1B0E] px-6 py-5">
-            <div className="mb-4 flex items-center justify-between">
-              <div>
-                <Link
-                  href="/"
-                  aria-label="Ups"
-                  title="Ups"
-                  className="inline-flex items-center"
-                >
-                  <div className="relative h-[29px] w-[133px] rounded-br-2xl lg:h-[44px] lg:w-[184px]">
-                    <NextImg
-                      src="/assets/icons/logo-ups.svg"
-                      alt="Capi"
-                      objectFit="cover"
-                      className=""
-                    />
-                  </div>
-                </Link>
-              </div>
-              <div>
-                <button
-                  aria-label="Close Menu"
-                  title="Close Menu"
-                  className="-mr-2 -mt-2 rounded p-2 transition duration-200 focus:outline-none"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M5.00098 5L19 18.9991"
-                      stroke="white"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M4.99996 18.9991L18.999 5"
-                      stroke="white"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <form action="" className="relative border-b border-[#1D2C1C]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="25"
-                viewBox="0 0 24 25"
-                fill="none"
-                className="absolute left-0 top-1/2 -translate-y-1/2"
-              >
-                <path
-                  d="M11.5 21.5C16.7467 21.5 21 17.2467 21 12C21 6.75329 16.7467 2.5 11.5 2.5C6.25329 2.5 2 6.75329 2 12C2 17.2467 6.25329 21.5 11.5 21.5Z"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M22 22.5L20 20.5"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <input
-                type="text"
-                placeholder="Tìm kiếm"
-                className="bg-transparent py-4 pl-9 text-sm font-semibold text-[#FFF] outline-none placeholder:text-sm placeholder:text-[#E7E9EF]"
-              />
-            </form>
-            <ul className="mt-7 flex flex-col gap-8">
-              <li>
-                <Link
-                  href="/"
-                  onClick={handleClose}
-                  aria-label="Our product"
-                  title="Our product"
-                  className="flex items-center gap-[10px] text-sm font-bold text-gray-100"
-                >
-                  Sản phẩm
-                  <span className="me-2 rounded-[10px] bg-[#AD02C9] px-2 py-1 text-xs font-bold uppercase text-white">
-                    NEW
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  onClick={handleClose}
-                  aria-label="Invest with UPS"
-                  title="Invest with UPS"
-                  className="text-sm font-bold text-gray-100"
-                >
-                  Đầu tư cùng UPS
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/nen-tang-cong-nghe"
-                  onClick={handleClose}
-                  aria-label="Technology platform"
-                  title="Technology platform"
-                  className="text-sm font-bold text-gray-100"
-                >
-                  Nền tảng công nghệ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/tin-tuc"
-                  onClick={handleClose}
-                  aria-label="News"
-                  title="News"
-                  className="text-sm font-bold text-gray-100"
-                >
-                  Tin tức
-                  <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1">
-                    4
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={handleClose}
-                  href="/gioi-thieu"
-                  aria-label="About us"
-                  title="About us"
-                  className="text-sm font-bold text-gray-100"
-                >
-                  Về UPS
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={handleClose}
-                  href="/"
-                  aria-label="Price list"
-                  title="Price list"
-                  className="text-sm font-bold text-gray-100"
-                >
-                  Bảng giá
-                </Link>
-              </li>
-              <li>
-                <a
-                  onClick={handleClose}
-                  href="/"
-                  className=""
-                  aria-label="Mở tài khoản ngay"
-                  title="Mở tài khoản ngay"
-                >
-                  <button className="btn active">
-                    Mở tài khoản ngay
-                    <div className="relative h-4 w-4 lg:h-6 lg:w-6">
-                      <NextImg
-                        src="/assets/icons/UPs.svg"
-                        alt="Capi"
-                        objectFit="cover"
-                      />
-                    </div>
-                  </button>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      )}
-    </div>
+
+      <div className="perspective-[2000px] absolute left-0 top-full flex w-full justify-center">
+        <NavigationMenu.Viewport className="data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn relative mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-md bg-white transition-[width,_height] duration-300 sm:w-[var(--radix-navigation-menu-viewport-width)]" />
+      </div>
+    </NavigationMenu.Root>
   );
 };
+
+const ListItem = React.forwardRef(
+  ({ className, children, title, ...props }: any, forwardedRef) => (
+    <li>
+      <NavigationMenu.Link asChild>
+        <a
+          className={`( "block hover:bg-mauve3 focus:shadow-violet7", className, ) select-none rounded-md p-3 text-[15px] leading-none no-underline outline-none transition-colors focus:shadow-[0_0_0_2px]`}
+          {...props}
+          ref={forwardedRef}
+        >
+          <div className="text-violet12 mb-[5px] font-medium leading-[1.2]">
+            {title}
+          </div>
+          <p className="text-mauve11 leading-[1.4]">{children}</p>
+        </a>
+      </NavigationMenu.Link>
+    </li>
+  ),
+);
 
 export default TheHeader;
