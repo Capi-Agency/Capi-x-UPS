@@ -1,22 +1,24 @@
-"use client";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import NextImg from "../next-img";
+'use client';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import NextImg from '../next-img';
 
 type Props = {};
 
 const TheHeader = (props: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const handleClose = () => {
+    setIsMenuOpen(false);
+  };
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = 'auto';
     }
 
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = 'auto';
     };
   }, [isMenuOpen]);
   return (
@@ -67,18 +69,18 @@ const TheHeader = (props: Props) => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  href="/nen-tang-cong-nghe"
                   aria-label="Technology platform"
                   title="Technology platform"
                   className="font-bold text-gray-100"
                 >
                   Nền tảng công nghệ
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  href="/tin-tuc"
                   aria-label="News"
                   title="News"
                   className="font-bold text-gray-100"
@@ -87,27 +89,27 @@ const TheHeader = (props: Props) => {
                   <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1 text-sm">
                     4
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  href="/gioi-thieu"
                   aria-label="About us"
                   title="About us"
                   className="font-bold text-gray-100"
                 >
                   Về UPS
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/"
                   aria-label="Price list"
                   title="Price list"
                   className="font-bold text-gray-100"
                 >
                   Bảng giá
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className="hidden items-center space-x-5 xl:flex 2xl:space-x-8">
@@ -382,6 +384,7 @@ const TheHeader = (props: Props) => {
               <li>
                 <Link
                   href="/"
+                  onClick={handleClose}
                   aria-label="Our product"
                   title="Our product"
                   className="flex items-center gap-[10px] text-sm font-bold text-gray-100"
@@ -395,6 +398,7 @@ const TheHeader = (props: Props) => {
               <li>
                 <Link
                   href="/"
+                  onClick={handleClose}
                   aria-label="Invest with UPS"
                   title="Invest with UPS"
                   className="text-sm font-bold text-gray-100"
@@ -403,18 +407,20 @@ const TheHeader = (props: Props) => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  href="/nen-tang-cong-nghe"
+                  onClick={handleClose}
                   aria-label="Technology platform"
                   title="Technology platform"
                   className="text-sm font-bold text-gray-100"
                 >
                   Nền tảng công nghệ
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  href="/tin-tuc"
+                  onClick={handleClose}
                   aria-label="News"
                   title="News"
                   className="text-sm font-bold text-gray-100"
@@ -423,30 +429,33 @@ const TheHeader = (props: Props) => {
                   <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1">
                     4
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  onClick={handleClose}
+                  href="/gioi-thieu"
                   aria-label="About us"
                   title="About us"
                   className="text-sm font-bold text-gray-100"
                 >
                   Về UPS
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
+                  onClick={handleClose}
                   href="/"
                   aria-label="Price list"
                   title="Price list"
                   className="text-sm font-bold text-gray-100"
                 >
                   Bảng giá
-                </a>
+                </Link>
               </li>
               <li>
                 <a
+                  onClick={handleClose}
                   href="/"
                   className=""
                   aria-label="Mở tài khoản ngay"
