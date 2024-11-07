@@ -4,9 +4,12 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@radix-ui/react-tabs';
 import NextImg from '../common/next-img';
 import TooltipProgress from '../common/tooltip-progress/page';
 
-type Props = {};
+type Props = {
+  data: any;
+};
 
-const UserManual = (props: Props) => {
+const UserManual = ({ data }: Props) => {
+  // console.log('🚀 ~ UserManual ~ data:', data);
   const apps = [
     { id: 1, name: 'Nền tảng Website' },
     { id: 2, name: 'Nền tảng App Di động' },

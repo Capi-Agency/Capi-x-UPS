@@ -140,7 +140,7 @@ const Community = (props: Props) => {
     };
   }, []);
   return (
-    <>
+    <div className="custom-container">
       <div
         className="flex flex-col text-center"
         data-aos="fade-up"
@@ -260,7 +260,7 @@ const Community = (props: Props) => {
           className=""
         />
       </div>
-    </>
+    </div>
   );
 };
 

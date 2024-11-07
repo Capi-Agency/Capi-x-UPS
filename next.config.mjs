@@ -3,6 +3,7 @@ const nextConfig = {
     reactStrictMode: false,
     images: {
         domains: ['cms.upse.vn'],
+        dangerouslyAllowSVG: true
     },
     env: {
         REACT_APP_API_MODULE_URL: process.env.REACT_APP_API_MODULE_URL,

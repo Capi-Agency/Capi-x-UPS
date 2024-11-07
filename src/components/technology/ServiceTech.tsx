@@ -1,9 +1,12 @@
-import React from "react";
-import NextImg from "../common/next-img";
+'use client';
+import React from 'react';
+import NextImg from '../common/next-img';
 
-type Props = {};
+type Props = {
+  data: any;
+};
 
-const ServiceTech = (props: Props) => {
+const ServiceTech = ({ data }: Props) => {
   return (
     <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
       <div className="flex flex-col-reverse rounded-[12px] bg-[#0D0344] md:grid md:grid-cols-[214px,auto] md:gap-16 md:rounded-[24px] md:pl-5 lg:grid-cols-[341px,auto] lg:gap-8 lg:pl-8 lg2:gap-2 lg2:pl-[50px]">
@@ -13,11 +16,10 @@ const ServiceTech = (props: Props) => {
           data-aos-delay="200"
         >
           <h4 className="text-[20px] font-bold text-[#FFF] lg:text-[32px] lg:leading-[46px] lg2:text-[40px] xl:leading-[54px]">
-            Hơn cả một trải nghiệm đầu tư
+            {data?.title}
           </h4>
           <p className="mt-2 text-[14px] font-medium leading-[22px] text-[#FFF] lg:mt-4 lg:text-base lg:leading-[28px] lg2:text-[18px]">
-            Tăng tốc giao dịch nhanh chóng với ứng dụng di động cá nhân hoá
-            riêng cho bạn.
+            {data?.sub_title}
           </p>
           <div className="mt-5 flex flex-col gap-3 lg:mt-6">
             <div className="flex w-[180px] cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] lg:w-[60%] lg:pr-[50px]">
@@ -62,7 +64,7 @@ const ServiceTech = (props: Props) => {
           data-aos-delay="200"
         >
           <NextImg
-            src="/assets/image/service-tech.png"
+            src={process.env.REACT_APP_IMG_URL + data.cover}
             alt="Capi"
             objectFit="cover"
             className="rounded-r-3xl"

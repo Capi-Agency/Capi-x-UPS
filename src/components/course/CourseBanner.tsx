@@ -1,5 +1,5 @@
-import React from "react";
-import NextImg from "../common/next-img";
+import React from 'react';
+import NextImg from '../common/next-img';
 
 type Props = {};
 
@@ -7,9 +7,9 @@ const CourseBanner = (props: Props) => {
   return (
     <div className="bg-[#FFECD2]">
       <div className="custom-container pb-6 pt-8 md:pb-0 md:pt-12 lg:pt-10 lg2:pt-16 2xl:pt-14 3xl:pt-6">
-        <div className="md:grid md:grid-cols-[auto,342px] md:gap-10 lg:grid-cols-[auto,380px] lg:items-center lg:gap-12 lg2:grid-cols-[auto,528px] lg2:items-stretch lg2:gap-[74px] 2xl:grid-cols-[auto,560px] 2xl:items-center 2xl:gap-[90px] 3xl:gap-[136px]">
+        <div className="md:grid md:grid-cols-[auto,342px] md:gap-10 lg:grid-cols-[auto,420px] lg:items-center lg:gap-12 lg2:grid-cols-[auto,528px] lg2:items-stretch lg2:gap-[74px] 2xl:grid-cols-[auto,560px] 2xl:items-center 2xl:gap-[90px] 3xl:gap-[136px]">
           <div
-            className="relative w-full pt-[85%] lg:h-[380px] lg2:h-[460px] 2xl:h-[560px] 3xl:h-[661px]"
+            className="relative w-full pt-[85%] md:h-[300px] lg:h-[380px] lg2:h-[460px] 2xl:h-[560px] 3xl:h-[661px]"
             data-aos="fade-up"
             data-aos-delay="200"
           >

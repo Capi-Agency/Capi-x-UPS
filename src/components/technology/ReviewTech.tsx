@@ -1,53 +1,56 @@
-"use client";
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import NextImg from "../common/next-img";
+'use client';
+import React, { useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import NextImg from '../common/next-img';
 
-type Props = {};
+type Props = {
+  data: any;
+};
 
-const ReviewTech = (props: Props) => {
+const ReviewTech = ({ data }: Props) => {
+  console.log('🚀 ~ ReviewTech ~ data:', data);
   const swiperRef = useRef<any>(null);
   const articles = [
     {
-      author: "Colin Lucido",
-      date: "26 Tháng 3, 2023 · 9 phút trước",
-      title: "Ứng dụng tuyệt vời cho người mới",
+      author: 'Colin Lucido',
+      date: '26 Tháng 3, 2023 · 9 phút trước',
+      title: 'Ứng dụng tuyệt vời cho người mới',
       description:
-        "Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này",
-      avatar: "/assets/image/avatar.jpg",
+        'Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này',
+      avatar: '/assets/image/avatar.jpg',
     },
     {
-      author: "Colin Lucido",
-      date: "26 Tháng 3, 2023 · 9 phút trước",
-      title: "Ứng dụng tuyệt vời cho người mới",
+      author: 'Colin Lucido',
+      date: '26 Tháng 3, 2023 · 9 phút trước',
+      title: 'Ứng dụng tuyệt vời cho người mới',
       description:
-        "Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này",
-      avatar: "/assets/image/avatar.jpg",
+        'Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này',
+      avatar: '/assets/image/avatar.jpg',
     },
     {
-      author: "Colin Lucido",
-      date: "26 Tháng 3, 2023 · 9 phút trước",
-      title: "Ứng dụng tuyệt vời cho người mới",
+      author: 'Colin Lucido',
+      date: '26 Tháng 3, 2023 · 9 phút trước',
+      title: 'Ứng dụng tuyệt vời cho người mới',
       description:
-        "Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này",
-      avatar: "/assets/image/avatar.jpg",
+        'Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này',
+      avatar: '/assets/image/avatar.jpg',
     },
     {
-      author: "Colin Lucido",
-      date: "26 Tháng 3, 2023 · 9 phút trước",
-      title: "Ứng dụng tuyệt vời cho người mới",
+      author: 'Colin Lucido',
+      date: '26 Tháng 3, 2023 · 9 phút trước',
+      title: 'Ứng dụng tuyệt vời cho người mới',
       description:
-        "Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này",
-      avatar: "/assets/image/avatar.jpg",
+        'Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này',
+      avatar: '/assets/image/avatar.jpg',
     },
     {
-      author: "Colin Lucido",
-      date: "26 Tháng 3, 2023 · 9 phút trước",
-      title: "Ứng dụng tuyệt vời cho người mới",
+      author: 'Colin Lucido',
+      date: '26 Tháng 3, 2023 · 9 phút trước',
+      title: 'Ứng dụng tuyệt vời cho người mới',
       description:
-        "Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này",
-      avatar: "/assets/image/avatar.jpg",
+        'Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này',
+      avatar: '/assets/image/avatar.jpg',
     },
   ];
   return (
@@ -134,7 +137,7 @@ const ReviewTech = (props: Props) => {
             return (
               <SwiperSlide
                 key={index}
-                className={`${index === 0 ? "ml-6 lg:ml-0" : ""}`}
+                className={`${index === 0 ? 'ml-6 lg:ml-0' : ''}`}
               >
                 <div
                   key={index}

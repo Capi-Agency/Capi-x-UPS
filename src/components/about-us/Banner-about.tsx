@@ -2,9 +2,12 @@
 import React from 'react';
 import NextImg from '../common/next-img';
 import { TypeAnimation } from 'react-type-animation';
-type Props = {};
+type Props = {
+  data: any;
+};
 
-const BannerAbout = (props: Props) => {
+const BannerAbout = ({ data }: Props) => {
+  // console.log('🚀 ~ BannerAbout ~ data:', data);
   return (
     <>
       <div className="bg-[#00D763] pb-10 pt-16 md:pt-12 lg:pb-[60px] lg:pt-[76px] xl:pb-[70px] 3xl:pt-[100px]">
@@ -16,7 +19,7 @@ const BannerAbout = (props: Props) => {
           >
             <div className="2xl-h-[520px] z-1 relative h-[240px] w-full sm:h-[261px] md:h-[320px] lg:h-[430px] xl:h-[450px] 3xl:h-[550px]">
               <NextImg
-                src="/assets/icons/icon-banner-about.svg"
+                src={process.env.REACT_APP_IMG_URL + data.cover}
                 alt="Capi"
                 objectFit="contain"
                 className=""
@@ -29,21 +32,21 @@ const BannerAbout = (props: Props) => {
             data-aos-delay="400"
           >
             <h1 className="font-hanken-grotesk text-right text-[32px] font-bold tracking-[-0.64px] text-[#0F1B0E] md:text-[40px] md:tracking-[-0.8px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-1.08px] lg2:text-[64px] lg2:leading-[80px] lg2:tracking-[-1.28px] xl:text-[70px] xl:leading-[86px] xl:tracking-[-1.4px] 2xl:text-[80px] 2xl:leading-[96px] 2xl:tracking-[-1.6px] 3xl:text-[100px] 3xl:leading-[120px] 3xl:tracking-[-2px]">
-              Tự hào
-              <br />
-              tiên phong
-              <br />
-              trong trải nghiệm
+              {data.titles.title.map(({ text }: any, index: number) => {
+                return (
+                  <p key={index}>
+                    {text} <br />
+                  </p>
+                );
+              })}
             </h1>
             <TypeAnimation
               className="font-hanken-grotesk text-right text-[32px] font-bold tracking-[-0.64px] text-white md:text-[40px] md:tracking-[-0.8px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-1.08px] lg2:text-[64px] lg2:leading-[80px] lg2:tracking-[-1.28px] xl:text-[70px] xl:leading-[86px] xl:tracking-[-1.4px] 2xl:text-[80px] 2xl:leading-[96px] 2xl:tracking-[-1.6px] 3xl:text-[100px] 3xl:leading-[120px] 3xl:tracking-[-2px]"
               sequence={[
-                'chứng khoán', // Types 'One'
+                `${data.titles.change_text[0].text}`, // Types 'One'
                 3000, // Waits 3s
-                'UPS', // Deletes 'One' and types 'Two'
+                `${data.titles.change_text[1].text}`, // Deletes 'One' and types 'Two'
                 3000, // Waits 3s
-                'upsecurities', // Types 'Three' without deleting 'Two'
-                3000,
                 () => {
                   console.log('Sequence completed');
                 },
@@ -62,8 +65,7 @@ const BannerAbout = (props: Props) => {
         >
           <div className="w-full border-t-[1px] border-[#000] pt-3 md:pt-6 lg:w-[400px] lg:pt-[40px]">
             <p className="text-[14px] font-medium leading-[22px] text-[#074E28] lg:text-[20px] lg:leading-[28px]">
-              UPS hướng đến mục tiêu trở thành một điểm tựa vững chắc khuyến
-              khích người trẻ tự tin khám phá thế giới tài chính.
+              {data.sub_title}
             </p>
           </div>
           <div className="hidden cursor-pointer lg:block">

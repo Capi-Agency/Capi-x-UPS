@@ -1,5 +1,7 @@
 import AboutContent from '@/components/about-us/AboutContent';
 import BannerAbout from '@/components/about-us/Banner-about';
+import Chungchi from '@/components/about-us/Chungchi';
+import CoreValue from '@/components/about-us/CoreValue';
 import DirectorAbout from '@/components/about-us/DirectorAbout';
 import ServiceAbout from '@/components/about-us/ServiceAbout';
 import Support from '@/components/home/Support';
@@ -15,35 +17,32 @@ const GioiThieu = async () => {
   return (
     <>
       {/* Banner Giới thiệu */}
-      {/* {dataAbout &&
-        dataAbout?.map((datasection: any, index: number) => {
+      {dataAbout &&
+        dataAbout?.contents.map((datasection: any, index: number) => {
           return (
             <div key={index}>
-              {datasection.section.type === "banner" && (
-                <BannerAbout data={datasection.section} />
+              {datasection.banner && <BannerAbout data={datasection.banner} />}
+              {datasection.tam_nhin && (
+                <AboutContent data={datasection.tam_nhin} />
               )}
-              {datasection.section.type === "tầm nhìn" && (
-                <VisionAbout data={datasection.section} />
+              {datasection.gia_tri_cot_loi && (
+                <CoreValue data={datasection.gia_tri_cot_loi} />
               )}
-              {datasection.section.type === "giá trị cốt lõi" && (
-                <CoreValueAbout data={datasection.section} />
+              {datasection.ban_dieu_hanh && (
+                <DirectorAbout data={datasection.ban_dieu_hanh} />
               )}
-              {datasection.section.type === "ban điều hành" && (
-                <DirectorAbout data={datasection.section} />
+              {datasection.dich_vu && (
+                <ServiceAbout data={datasection.dich_vu} />
               )}
-              {datasection.section.type === "dịch vụ" && (
-                <ServiceAbout data={datasection.section} />
+              {datasection.chung_chi && (
+                <Chungchi data={datasection.chung_chi} />
+              )}
+              {datasection.ups_question && (
+                <Support data={datasection.ups_question} />
               )}
             </div>
           );
-        })} */}
-      <BannerAbout />
-      <AboutContent />
-      <DirectorAbout />
-      <ServiceAbout />
-      <div className="custom-container">
-        <Support />
-      </div>
+        })}
     </>
   );
 };

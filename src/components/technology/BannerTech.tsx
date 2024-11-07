@@ -1,11 +1,13 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
-import NextImg from "../common/next-img";
+import NextImg from '../common/next-img';
 
-type Props = {};
+type Props = {
+  data: any;
+};
 
-const BannerTech = (props: Props) => {
+const BannerTech = ({ data }: Props) => {
   return (
     <div className="bg-[#0D0344]">
       <div
@@ -14,31 +16,24 @@ const BannerTech = (props: Props) => {
       >
         <div className="flex flex-col items-center justify-center gap-3 pb-10 lg:gap-5 lg:pb-16">
           <p className="text-center text-[32px] font-bold -tracking-[0.88px] text-[#FFF] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[56px]">
-            Nền tảng công nghệ{" "}
+            {data.titles[0].title}{' '}
             <span className="text-[#02E56A]">
               <br className="block md:hidden" />
-              vượt trội.
+              {data.titles[1].title}
             </span>
           </p>
           <div className="h-[1px] w-[35%] bg-[#60606B] opacity-[0.65] md:w-[28%] lg:w-[25%]"></div>
           <p className="text-sm font-bold leading-[140%] -tracking-[0.42px] text-[#FFF] lg:text-[18px]">
-            Bền bỉ - nhanh chóng - thuận tiện - dễ dàng
+            {data.sub_title}
           </p>
         </div>
         <div className="relative mx-auto w-full pt-[46%]">
           <NextImg
-            src="/assets/image/banner-tech-img.png"
+            src={process.env.REACT_APP_IMG_URL + data.cover}
             alt="Capi"
             objectFit="cover"
           />
         </div>
-        {/* <div className="relative w-full pt-[70%] mx-auto md:hidden block">
-          <NextImg
-            src="/assets/image/banner-tech-mb.svg"
-            alt="Capi"
-            objectFit="cover"
-          />
-        </div> */}
       </div>
     </div>
   );

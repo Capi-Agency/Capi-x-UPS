@@ -4,42 +4,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { cn } from '@/lib/utils';
 
-type Props = {};
+type Props = {
+  data: any;
+};
 
-const SlideAbout = (props: Props) => {
+const SlideAbout = ({ data }: Props) => {
   const swiperRef = useRef<any>(null);
-  const slides = [
-    {
-      tag: 'Connection',
-      title: 'Highly accessible',
-      description:
-        'We track how people move through an impactful campaign that allows us to discover better others miss.',
-    },
-    {
-      tag: 'Collaboration',
-      title: 'Creative networking',
-      description:
-        'Creating a higher spacing and how people move through a unique and impactful campaign.',
-    },
-    {
-      tag: 'Innovation',
-      title: 'Ongoing optimization',
-      description:
-        'We track how people move through an impactful campaign that allows us to discover better others miss.',
-    },
-    {
-      tag: 'Experience',
-      title: 'Collaborative discovery',
-      description:
-        'Spaces of each debt in the digital world can help you with overall simplest authentic.',
-    },
-    {
-      tag: 'Connection',
-      title: 'Highly accessible',
-      description:
-        'We track how people move through an impactful campaign that allows us to discover better others miss.',
-    },
-  ];
+
   return (
     <div>
       <Swiper
@@ -62,7 +33,7 @@ const SlideAbout = (props: Props) => {
         data-aos="fade-up"
         data-aos-delay="200"
       >
-        {slides.map((slide, index) => {
+        {data?.map(({ item }: any, index: number) => {
           const [position, setPosition] = useState({ x: 0, y: 0 });
           const [isHovered, setIsHovered] = useState(false);
           const cardRef = useRef<HTMLDivElement>(null);
@@ -106,14 +77,14 @@ const SlideAbout = (props: Props) => {
               >
                 <div className="flex flex-col gap-2">
                   <span className="text-[14px] font-medium leading-[22px] text-[#FFF] lg:text-base lg:leading-[28px] lg2:text-[18px]">
-                    {slide.tag}
+                    {item.service}
                   </span>
                   <h4 className="text-[20px] font-bold text-[#FFF] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] 3xl:leading-[40px]">
-                    {slide.title}
+                    {item.title}
                   </h4>
                 </div>
                 <p className="text-[14px] font-medium leading-[22px] text-[#FFF] lg:text-base lg:leading-[28px] lg2:text-[18px]">
-                  {slide.description}
+                  {item.content}
                 </p>
                 <div
                   className={cn(

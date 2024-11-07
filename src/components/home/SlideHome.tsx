@@ -2,17 +2,16 @@
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import NextImg from '../common/next-img';
-type Props = {};
+import Link from 'next/link';
+type Props = {
+  data: any;
+};
 
-const SlideHome = (props: Props) => {
+const SlideHome = ({ data }: Props) => {
+  // console.log('🚀 ~ SlideHome ~ data:', data);
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const slides = [
-    '/assets/image/img-slide.png',
-    '/assets/image/img-slide.png',
-    '/assets/image/img-slide.png',
-  ];
   return (
     <div
       className="custom-container mt-6 md:mt-10 lg:mt-11 xl:mt-16 2xl:mt-20 3xl:mt-[120px]"
@@ -37,13 +36,23 @@ const SlideHome = (props: Props) => {
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           className="rounded-[12px] lg:rounded-3xl"
         >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative h-[342px] w-full md:h-[360px] lg:h-[400px] lg2:h-[440px] 2xl:h-[500px] 3xl:h-[560px]">
-                <NextImg src={slide} alt="Capi" objectFit="cover" />
-              </div>
-            </SwiperSlide>
-          ))}
+          {data.map((slide: any, index: number) => {
+            return (
+              <SwiperSlide key={index}>
+                <Link href={slide?.image_ads.url}>
+                  <div className="relative h-[342px] w-full md:h-[360px] lg:h-[400px] lg2:h-[440px] 2xl:h-[500px] 3xl:h-[560px]">
+                    <NextImg
+                      src={
+                        process.env.REACT_APP_IMG_URL + slide?.image_ads.cover
+                      }
+                      alt="Capi"
+                      objectFit="cover"
+                    />
+                  </div>
+                </Link>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
         <button
           id="prevBtn"
@@ -54,8 +63,7 @@ const SlideHome = (props: Props) => {
                 setIsAnimating(true);
                 swiperRef.current.swiper.slidePrev();
                 setActiveIndex(
-                  (prevIndex) =>
-                    (prevIndex - 1 + slides.length) % slides.length,
+                  (prevIndex) => (prevIndex - 1 + data.length) % data.length,
                 );
                 setTimeout(() => {
                   setIsAnimating(false);
@@ -86,7 +94,7 @@ const SlideHome = (props: Props) => {
               if (!isAnimating) {
                 setIsAnimating(true);
                 swiperRef.current.swiper.slideNext();
-                setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
+                setActiveIndex((prevIndex) => (prevIndex + 1) % data.length);
 
                 setTimeout(() => {
                   setIsAnimating(false);
@@ -110,7 +118,7 @@ const SlideHome = (props: Props) => {
           </svg>
         </button>
         <div className="pagination-custom absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 justify-center space-x-3">
-          {slides.map((_, index) => (
+          {data.map((_: any, index: number) => (
             <button
               key={index}
               className={`h-[4px] w-[20px] rounded-[20px] transition duration-300 ${

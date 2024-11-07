@@ -1,9 +1,13 @@
+'use client';
 import React from 'react';
 import NextImg from '../common/next-img';
+import Link from 'next/link';
 
-type Props = {};
+type Props = {
+  data: any;
+};
 
-const MobileApp = (props: Props) => {
+const MobileApp = ({ data }: Props) => {
   return (
     <>
       {/* section 5 */}
@@ -28,17 +32,19 @@ const MobileApp = (props: Props) => {
                   Mobile App
                 </span>
               </div>
-              <span className="text-[20px] font-bold text-[#FFF] lg:w-[80%] lg:text-[40px] lg:leading-[46px] lg2:w-[75%] lg2:text-[56px] lg2:leading-[58px] 2xl:text-[58px] 3xl:text-[60px] 3xl:leading-[60px]">
-                Trải nghiệm <span className="text-[#02E56A]">tuyệt vời</span>{' '}
-                hơn với ứng dụng
-              </span>
+              <h3 className="text-[20px] font-bold text-[#FFF] lg:w-[80%] lg:text-[40px] lg:leading-[46px] lg2:w-[75%] lg2:text-[56px] lg2:leading-[58px] 2xl:text-[58px] 3xl:text-[60px] 3xl:leading-[60px]">
+                {data.titles[0].title}{' '}
+                <span className="text-[#02E56A]">{data.titles[1].title} </span>
+                {data.titles[2].title}
+              </h3>
               <p className="text-[14px] font-medium text-[#8C9AA4] lg:w-[80%] lg:text-base lg:leading-[24px] lg2:text-[18px] lg2:leading-[28px]">
-                UPS là công ty chứng khoán đột phá dành cho thế hệ mới, nơi công
-                nghệ và tư duy đổi mới, sáng tạo hợp nhất để đem lại trải nghiệm
-                đầu tư thông minh, dễ dàng, và thú vị.
+                {data.description}
               </p>
               <div className="flex flex-wrap items-center gap-3">
-                <div className="flex cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] pr-8 md:pr-6 lg:pr-[50px]">
+                <Link
+                  href={data.ctas.gg_play}
+                  className="flex cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] pr-8 md:pr-6 lg:pr-[50px]"
+                >
                   <div className="relative h-6 w-6">
                     <NextImg
                       src="/assets/icons/google-play1.svg"
@@ -54,8 +60,11 @@ const MobileApp = (props: Props) => {
                       Google Play
                     </span>
                   </div>
-                </div>
-                <div className="flex cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] pr-6">
+                </Link>
+                <Link
+                  href={data.ctas.app_store}
+                  className="flex cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] pr-6"
+                >
                   <div className="relative h-6 w-6">
                     <NextImg
                       src="/assets/icons/apple-logo1.svg"
@@ -71,7 +80,7 @@ const MobileApp = (props: Props) => {
                       App Store
                     </span>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
             <div
@@ -80,7 +89,7 @@ const MobileApp = (props: Props) => {
               data-aos-delay="400"
             >
               <NextImg
-                src="/assets/image/phone-home.png"
+                src={process.env.REACT_APP_IMG_URL + data.cover}
                 alt="Capi"
                 objectFit="contain"
               />

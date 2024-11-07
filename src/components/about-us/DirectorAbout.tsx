@@ -1,34 +1,14 @@
+'use client';
 import React from 'react';
 import NextImg from '../common/next-img';
 
-type Props = {};
-const directors = [
-  {
-    name: 'Ông Nguyễn Quang Đạt',
-    position: 'Tổng giám đốc',
-    description:
-      'A global brand entrusted us with a unique challenge: crafting an internal tool to share its brand story with every employee, from sales to product…',
-    imageSrc: '/assets/image/director-1.jpg',
-  },
-  {
-    name: 'Ông Nguyễn Quang Đạt',
-    position: 'Tổng giám đốc',
-    description:
-      'A global brand entrusted us with a unique challenge: crafting an internal tool to share its brand story with every employee, from sales to product…',
-    imageSrc: '/assets/image/director-2.jpg',
-  },
-  {
-    name: 'Ông Nguyễn Quang Đạt',
-    position: 'Tổng giám đốc',
-    description:
-      'A global brand entrusted us with a unique challenge: crafting an internal tool to share its brand story with every employee, from sales to product…',
-    imageSrc: '/assets/image/director-3.jpg',
-  },
-];
-const DirectorAbout = (props: Props) => {
+type Props = {
+  data: any;
+};
+const DirectorAbout = ({ data }: Props) => {
   return (
     <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
-      {directors.map((director, index) => {
+      {data.map(({ item }: any, index: number) => {
         return (
           <div
             key={index}
@@ -44,7 +24,7 @@ const DirectorAbout = (props: Props) => {
               data-aos-delay="200"
             >
               <NextImg
-                src={director.imageSrc}
+                src={process.env.REACT_APP_IMG_URL + item.cover}
                 alt="Capi"
                 objectFit="cover"
                 className="rounded-[12px] lg:rounded-[24px]"
@@ -58,13 +38,13 @@ const DirectorAbout = (props: Props) => {
               data-aos-delay="600"
             >
               <span className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] 2xl:leading-[40px] 3xl:text-[40px] 3xl:leading-[54px]">
-                {director.name}
+                {item.profile.name}
               </span>
               <p className="my-2 text-[14px] font-bold uppercase leading-[22px] tracking-[0.28px] text-[#161519] md:text-[16px] lg:my-4 lg:leading-[26px] lg:tracking-[0.32px]">
-                {director.position}
+                {item.profile.position}
               </p>
               <p className="text-[14px] font-medium leading-[22px] text-[#111013] lg:text-[18px] lg:leading-[26px]">
-                {director.description}
+                {item.profile.description}
               </p>
             </div>
           </div>
