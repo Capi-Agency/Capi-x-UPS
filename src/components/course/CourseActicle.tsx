@@ -1,23 +1,12 @@
-import React from "react";
-import NextImg from "../common/next-img";
+'use client';
+import React from 'react';
+import NextImg from '../common/next-img';
 
-type Props = {};
-const articles = [
-  {
-    title: "Ba điều cần làm trước khi bạn bắt đầu đầu tư",
-    icon: "/assets/icons/document-text2.svg",
-  },
-  {
-    title: "Quy tắc 6 túi là gì và cách áp dụng chúng vào đầu tư hiệu quả",
-    icon: "/assets/icons/document-text2.svg",
-  },
-  {
-    title: "Mở tài khoản UPS qua ứng dụng điện thoại nhanh nhất",
-    icon: "/assets/icons/document-text2.svg",
-  },
-];
+type Props = {
+  data: any;
+};
 
-const CourseActicle = (props: Props) => {
+const CourseActicle = ({ data }: Props) => {
   return (
     <div
       className="mx-auto mt-10 md:max-w-[520px] lg:mt-[60px] lg:max-w-[700px] lg2:mt-20 lg2:max-w-[820px] xl:max-w-[900px] 2xl:max-w-[1024px]"
@@ -25,20 +14,24 @@ const CourseActicle = (props: Props) => {
       data-aos-delay="200"
     >
       <div className="grid grid-rows-3">
-        {articles.map((article, index) => (
+        {data.question.map(({ item }: any, index: any) => (
           <a
             key={index}
             href=""
             className={`flex items-center justify-between gap-[30px] border-[#60606B] border-opacity-65 py-3 lg:py-6 ${
-              index === 0 ? "border-y" : "border-b"
+              index === 0 ? 'border-y' : 'border-b'
             } `}
           >
             <div className="flex items-center gap-3 lg:gap-5">
               <div className="relative h-[24px] w-[24px] min-w-6">
-                <NextImg src={article.icon} alt="Capi" objectFit="cover" />
+                <NextImg
+                  src="/assets/icons/document-text2.svg"
+                  alt="Capi"
+                  objectFit="cover"
+                />
               </div>
               <p className="text-[14px] font-medium leading-[22px] text-[#15171E] lg:text-[18px] lg:leading-normal lg2:text-[24px]">
-                {article.title}
+                {item.ask}
               </p>
             </div>
             <div className="relative h-[24px] w-[24px] cursor-pointer lg:h-7 lg:w-7 lg2:h-[32px] lg2:w-[32px]">

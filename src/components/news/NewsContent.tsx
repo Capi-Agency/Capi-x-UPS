@@ -1,19 +1,19 @@
-"use client";
-import React, { useState } from "react";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
-import NextImg from "../common/next-img";
-import TagsPage from "../tags/page";
+'use client';
+import React, { useState } from 'react';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@radix-ui/react-tabs';
+import NextImg from '../common/next-img';
+import TagsPage from '../tags/page';
 
 const NewsContent = () => {
   const categories = [
-    { id: 1, name: "Biến động thị trường" },
-    { id: 2, name: "Báo cáo ngày" },
-    { id: 3, name: "Tin đấu giá" },
-    { id: 4, name: "Tin nội bộ UPS" },
+    { id: 1, name: 'Biến động thị trường' },
+    { id: 2, name: 'Báo cáo ngày' },
+    { id: 3, name: 'Tin đấu giá' },
+    { id: 4, name: 'Tin nội bộ UPS' },
   ];
 
   const [currentCategory, setCurrentCategory] = useState<number>(
-    categories[0].id
+    categories[0].id,
   );
 
   const handleCategoryClick = (value: string) => {
@@ -24,66 +24,66 @@ const NewsContent = () => {
     const news = [
       {
         id: 1,
-        date: "Sep 26, 2023",
-        readTime: "9 min read",
-        title: "Definitive Guide to Make More Productive Flow.",
-        imgSrc: "/assets/image/news.jpg",
+        date: 'Sep 26, 2023',
+        readTime: '9 min read',
+        title: 'Definitive Guide to Make More Productive Flow.',
+        imgSrc: '/assets/image/news.jpg',
       },
       {
         id: 2,
-        date: "Sep 27, 2023",
-        readTime: "9 min read",
-        title: "Definitive Guide to Make More Productive Flow.",
-        imgSrc: "/assets/image/news.jpg",
+        date: 'Sep 27, 2023',
+        readTime: '9 min read',
+        title: 'Definitive Guide to Make More Productive Flow.',
+        imgSrc: '/assets/image/news.jpg',
       },
       {
         id: 3,
-        date: "Sep 27, 2023",
-        readTime: "9 min read",
-        title: "Definitive Guide to Make More Productive Flow.",
-        imgSrc: "/assets/image/news.jpg",
+        date: 'Sep 27, 2023',
+        readTime: '9 min read',
+        title: 'Definitive Guide to Make More Productive Flow.',
+        imgSrc: '/assets/image/news.jpg',
       },
       {
         id: 4,
-        date: "Sep 27, 2023",
-        readTime: "9 min read",
-        title: "Definitive Guide to Make More Productive Flow.",
-        imgSrc: "/assets/image/news.jpg",
+        date: 'Sep 27, 2023',
+        readTime: '9 min read',
+        title: 'Definitive Guide to Make More Productive Flow.',
+        imgSrc: '/assets/image/news.jpg',
       },
       {
         id: 5,
-        date: "Sep 27, 2023",
-        readTime: "9 min read",
-        title: "Definitive Guide to Make More Productive Flow.",
-        imgSrc: "/assets/image/news.jpg",
+        date: 'Sep 27, 2023',
+        readTime: '9 min read',
+        title: 'Definitive Guide to Make More Productive Flow.',
+        imgSrc: '/assets/image/news.jpg',
       },
       {
         id: 6,
-        date: "Sep 27, 2023",
-        readTime: "9 min read",
-        title: "Definitive Guide to Make More Productive Flow.",
-        imgSrc: "/assets/image/news.jpg",
+        date: 'Sep 27, 2023',
+        readTime: '9 min read',
+        title: 'Definitive Guide to Make More Productive Flow.',
+        imgSrc: '/assets/image/news.jpg',
       },
       {
         id: 7,
-        date: "Sep 27, 2023",
-        readTime: "9 min read",
-        title: "Definitive Guide to Make More Productive Flow.",
-        imgSrc: "/assets/image/news.jpg",
+        date: 'Sep 27, 2023',
+        readTime: '9 min read',
+        title: 'Definitive Guide to Make More Productive Flow.',
+        imgSrc: '/assets/image/news.jpg',
       },
       {
         id: 8,
-        date: "Sep 27, 2023",
-        readTime: "9 min read",
-        title: "Definitive Guide to Make More Productive Flow.",
-        imgSrc: "/assets/image/news.jpg",
+        date: 'Sep 27, 2023',
+        readTime: '9 min read',
+        title: 'Definitive Guide to Make More Productive Flow.',
+        imgSrc: '/assets/image/news.jpg',
       },
       {
         id: 9,
-        date: "Sep 27, 2023",
-        readTime: "9 min read",
-        title: "Definitive Guide to Make More Productive Flow.",
-        imgSrc: "/assets/image/news.jpg",
+        date: 'Sep 27, 2023',
+        readTime: '9 min read',
+        title: 'Definitive Guide to Make More Productive Flow.',
+        imgSrc: '/assets/image/news.jpg',
       },
     ];
     switch (currentCategory) {
@@ -100,7 +100,7 @@ const NewsContent = () => {
                     data-aos="fade-up"
                     data-aos-delay={delay}
                   >
-                    <div className="relative w-full h-[351px] ">
+                    <div className="relative h-[351px] w-full">
                       <NextImg
                         src={newItem.imgSrc}
                         alt="Capi"
@@ -108,17 +108,17 @@ const NewsContent = () => {
                         className="rounded-[8px]"
                       />
                     </div>
-                    <span className="inline-block mt-8 mb-3 text-sm font-medium leading-[16px] tracking-[0.14]">
+                    <span className="mb-3 mt-8 inline-block text-sm font-medium leading-[16px] tracking-[0.14]">
                       {newItem.date} · {newItem.readTime}
                     </span>
-                    <p className="text-[#15171E] text-[30px] font-semibold">
+                    <p className="text-[30px] font-semibold text-[#15171E]">
                       {newItem.title}
                     </p>
-                    <div className="flex items-center gap-2 mt-4">
-                      <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
+                    <div className="mt-4 flex items-center gap-2">
+                      <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-[14px] font-medium leading-normal text-[#111013]">
                         App Mobile
                       </button>
-                      <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
+                      <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-[14px] font-medium leading-normal text-[#111013]">
                         Trải nghiệm
                       </button>
                     </div>
@@ -128,9 +128,9 @@ const NewsContent = () => {
             </div>
 
             {/* banner */}
-            <div className="bg-[#150900] rounded-[40px] my-20 flex relative">
+            <div className="relative my-20 flex rounded-[40px] bg-[#150900]">
               <div
-                className="relative w-[55%] h-[310px] "
+                className="relative h-[310px] w-[55%]"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -142,18 +142,18 @@ const NewsContent = () => {
                 />
               </div>
               <div
-                className="flex flex-col absolute top-11 right-12 w-[53%]"
+                className="absolute right-12 top-11 flex w-[53%] flex-col"
                 data-aos="fade-up"
                 data-aos-delay="400"
               >
-                <span className="text-[#FFF] text-[18px] font-medium leading-[40px]">
+                <span className="text-[18px] font-medium leading-[40px] text-[#FFF]">
                   #trungtamdaotao
                 </span>
-                <p className="text-[#FFBC00] text-[40px] font-bold leading-[49px] mb-6 mt-2">
+                <p className="mb-6 mt-2 text-[40px] font-bold leading-[49px] text-[#FFBC00]">
                   Trở thành nhà đầu tư chuyên nghiệp với UPS Academy
                 </p>
                 <div>
-                  <button className="flex items-center gap-3 bg-[#FF6D00] p-3 pl-4 rounded-2xl text-[#FFF] font-bold text-[18px] leading-normal hover:shadow-[-2px_3px_0px_0px_#00813B]">
+                  <button className="flex items-center gap-3 rounded-2xl bg-[#FF6D00] p-3 pl-4 text-[18px] font-bold leading-normal text-[#FFF] hover:shadow-[-2px_3px_0px_0px_#00813B]">
                     Khám phá ngay
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +176,7 @@ const NewsContent = () => {
             {/* tin theo ngày */}
             <div className="mb-[150px]">
               <h4
-                className="text-[#15171E] font-bold mb-8"
+                className="mb-8 font-bold text-[#15171E]"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -192,7 +192,7 @@ const NewsContent = () => {
                       data-aos="fade-up"
                       data-aos-delay={delay}
                     >
-                      <div className="relative w-full h-[351px] ">
+                      <div className="relative h-[351px] w-full">
                         <NextImg
                           src={newItem.imgSrc}
                           alt="Capi"
@@ -200,17 +200,17 @@ const NewsContent = () => {
                           className="rounded-[8px]"
                         />
                       </div>
-                      <span className="inline-block mt-8 mb-3 text-sm font-medium leading-[16px] tracking-[0.14]">
+                      <span className="mb-3 mt-8 inline-block text-sm font-medium leading-[16px] tracking-[0.14]">
                         {newItem.date} · {newItem.readTime}
                       </span>
-                      <p className="text-[#15171E] text-[30px] font-semibold">
+                      <p className="text-[30px] font-semibold text-[#15171E]">
                         {newItem.title}
                       </p>
-                      <div className="flex items-center gap-2 mt-4">
-                        <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
+                      <div className="mt-4 flex items-center gap-2">
+                        <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-[14px] font-medium leading-normal text-[#111013]">
                           App Mobile
                         </button>
-                        <button className="text-[#111013] text-[14px] font-medium leading-normal px-2 py-[5px] rounded-[8px] bg-[rgba(144,145,156,0.15)]">
+                        <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-[14px] font-medium leading-normal text-[#111013]">
                           Trải nghiệm
                         </button>
                       </div>
@@ -219,7 +219,7 @@ const NewsContent = () => {
                 })}
               </div>
               <button
-                className="bg-[#15171E] text-[#FFF] text-[18px] font-bold pl-6 pr-4 py-3 rounded-[16px] flex items-center gap-3 mt-[60px] mx-auto"
+                className="mx-auto mt-[60px] flex items-center gap-3 rounded-[16px] bg-[#15171E] py-3 pl-6 pr-4 text-[18px] font-bold text-[#FFF]"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -259,14 +259,14 @@ const NewsContent = () => {
         onValueChange={handleCategoryClick}
       >
         <h1
-          className="text-[#0C1C28] text-[80px] font-bold leading-[72px] -tracking-[1.6px] mb-8"
+          className="mb-8 text-[80px] font-bold leading-[72px] -tracking-[1.6px] text-[#0C1C28]"
           data-aos="fade-up"
           data-aos-delay="200"
         >
           Tin tức UPS
         </h1>
         <TabsList
-          className="flex items-center justify-between "
+          className="flex items-center justify-between"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -277,8 +277,8 @@ const NewsContent = () => {
                 value={category.id.toString()}
                 className={`text-base leading-normal transition-all duration-150 ease-in-out ${
                   currentCategory === category.id
-                    ? "text-[#15171E] font-bold"
-                    : "text-[#525358] font-semibold"
+                    ? 'font-bold text-[#15171E]'
+                    : 'font-semibold text-[#525358]'
                 }`}
               >
                 {category.name}
@@ -287,15 +287,15 @@ const NewsContent = () => {
           </div>
           <div className="flex items-center gap-3">
             <div className="relative cursor-pointer rounded-[6px] bg-[rgba(144,145,156,0.08)]">
-              <select className="appearance-none block pl-2 pr-6 py-1 text-[#525358] font-medium text-sm focus:outline-none bg-transparent cursor-pointer">
+              <select className="block cursor-pointer appearance-none bg-transparent py-1 pl-2 pr-6 text-sm font-medium text-[#525358] focus:outline-none">
                 <option value="1">Tất cả</option>
                 <option value="2">Biến động thị trường</option>
                 <option value="3">Báo cáo ngày</option>
                 <option value="4">Tin đấu giá</option>
                 <option value="5">Tin nội bộ UPS</option>
               </select>
-              <div className="absolute top-1/2 -translate-y-1/2 right-2 pointer-events-none">
-                <div className="relative w-[10px] h-[6px]">
+              <div className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2">
+                <div className="relative h-[6px] w-[10px]">
                   <NextImg
                     src="/assets/icons/expand_more.svg"
                     alt="UPS"
@@ -304,13 +304,13 @@ const NewsContent = () => {
                 </div>
               </div>
             </div>
-            <div className="relative flex items-center gap-2 cursor-pointer rounded-[6px] bg-[rgba(144,145,156,0.08)]">
-              <select className="appearance-none block pl-2 pr-6 py-1 text-[#525358] font-medium text-sm focus:outline-none bg-transparent cursor-pointer">
+            <div className="relative flex cursor-pointer items-center gap-2 rounded-[6px] bg-[rgba(144,145,156,0.08)]">
+              <select className="block cursor-pointer appearance-none bg-transparent py-1 pl-2 pr-6 text-sm font-medium text-[#525358] focus:outline-none">
                 <option value="1">Mới nhất</option>
                 <option value="2">Cũ nhất</option>
               </select>
-              <div className="absolute top-1/2 -translate-y-1/2 right-2 pointer-events-none">
-                <div className="relative w-[10px] h-[6px]">
+              <div className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2">
+                <div className="relative h-[6px] w-[10px]">
                   <NextImg
                     src="/assets/icons/expand_more.svg"
                     alt="UPS"
@@ -328,7 +328,7 @@ const NewsContent = () => {
             className="mt-8"
           >
             {renderContent()}
-            <TagsPage />
+            {/* <TagsPage /> */}
           </TabsContent>
         ))}
       </Tabs>

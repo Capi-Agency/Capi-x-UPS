@@ -7,7 +7,6 @@ type Props = {
 };
 
 const PartnerTech = ({ data }: Props) => {
-  console.log('🚀 ~ PartnerTech ~ data:', data);
   return (
     <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
       <div className="flex flex-col gap-10 md:grid md:grid-cols-[260px,auto] lg:grid-cols-[356px,auto] 2xl:grid-cols-[452px,auto]">
