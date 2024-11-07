@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import { CaretDownIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import NextImg from '../next-img';
 
@@ -49,8 +48,8 @@ const TheHeader = () => {
                 <NavigationMenu.Trigger className="flex items-center gap-[10px] text-base font-bold text-gray-100">
                   <Link
                     href="/"
-                    aria-label="Our product"
-                    title="Our product"
+                    aria-label="Sản phẩm"
+                    title="Sản phẩm"
                     className="flex items-center gap-[10px] text-base font-bold text-gray-100"
                   >
                     Sản phẩm
@@ -63,7 +62,7 @@ const TheHeader = () => {
 							aria-hidden
 						/> */}
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
+                <NavigationMenu.Content className="absolute left-0 top-0 w-full data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
                   <ul className="one m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
                     <li className="row-span-3 grid">
                       <NavigationMenu.Link asChild>
@@ -119,7 +118,7 @@ const TheHeader = () => {
 							aria-hidden
 						/> */}
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
+                {/* <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
                   <ul className="one m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
                     <li className="row-span-3 grid">
                       <NavigationMenu.Link asChild>
@@ -158,7 +157,7 @@ const TheHeader = () => {
                       A crisp set of 15x15 icons, balanced and consistent.
                     </ListItem>
                   </ul>
-                </NavigationMenu.Content>
+                </NavigationMenu.Content> */}
               </NavigationMenu.Item>
               <NavigationMenu.Item>
                 <NavigationMenu.Trigger className="flex items-center gap-[10px] text-base font-bold text-gray-100">
@@ -175,7 +174,7 @@ const TheHeader = () => {
 							aria-hidden
 						/> */}
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
+                {/* <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
                   <ul className="one m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
                     <li className="row-span-3 grid">
                       <NavigationMenu.Link asChild>
@@ -214,7 +213,7 @@ const TheHeader = () => {
                       A crisp set of 15x15 icons, balanced and consistent.
                     </ListItem>
                   </ul>
-                </NavigationMenu.Content>
+                </NavigationMenu.Content> */}
               </NavigationMenu.Item>
               <NavigationMenu.Item>
                 <NavigationMenu.Trigger className="flex items-center gap-[10px] text-base font-bold text-gray-100">
@@ -234,7 +233,7 @@ const TheHeader = () => {
 							aria-hidden
 						/> */}
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
+                {/* <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
                   <ul className="one m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
                     <li className="row-span-3 grid">
                       <NavigationMenu.Link asChild>
@@ -273,7 +272,7 @@ const TheHeader = () => {
                       A crisp set of 15x15 icons, balanced and consistent.
                     </ListItem>
                   </ul>
-                </NavigationMenu.Content>
+                </NavigationMenu.Content> */}
               </NavigationMenu.Item>
               <NavigationMenu.Item>
                 <NavigationMenu.Trigger className="flex items-center gap-[10px] text-base font-bold text-gray-100">
@@ -290,7 +289,7 @@ const TheHeader = () => {
 							aria-hidden
 						/> */}
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
+                {/* <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
                   <ul className="one m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
                     <li className="row-span-3 grid">
                       <NavigationMenu.Link asChild>
@@ -329,7 +328,7 @@ const TheHeader = () => {
                       A crisp set of 15x15 icons, balanced and consistent.
                     </ListItem>
                   </ul>
-                </NavigationMenu.Content>
+                </NavigationMenu.Content> */}
               </NavigationMenu.Item>
               <NavigationMenu.Item>
                 <Link
@@ -342,7 +341,7 @@ const TheHeader = () => {
                 </Link>
               </NavigationMenu.Item>
 
-              <NavigationMenu.Indicator className="data-[state=hidden]:animate-fadeOut data-[state=visible]:animate-fadeIn top-full z-10 flex h-2.5 items-end justify-center overflow-hidden transition-[width,transform_250ms_ease]">
+              <NavigationMenu.Indicator className="top-full z-10 flex h-2.5 items-end justify-center overflow-hidden transition-[width,transform_250ms_ease] data-[state=hidden]:animate-fadeOut data-[state=visible]:animate-fadeIn">
                 <div className="relative top-[70%] size-2.5 rotate-45 rounded-tl-sm bg-white" />
               </NavigationMenu.Indicator>
             </NavigationMenu.List>
@@ -533,8 +532,188 @@ const TheHeader = () => {
       </div>
 
       <div className="perspective-[2000px] absolute left-0 top-full flex w-full justify-center">
-        <NavigationMenu.Viewport className="data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn relative mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-md bg-white transition-[width,_height] duration-300 sm:w-[var(--radix-navigation-menu-viewport-width)]" />
+        <NavigationMenu.Viewport className="relative mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-md bg-white transition-[width,_height] duration-300 data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn sm:w-[var(--radix-navigation-menu-viewport-width)]" />
       </div>
+      {isMenuOpen && (
+        <div className="fixed left-0 top-0 h-full w-full bg-[#0F1B0E]">
+          <div className="h-full w-full rounded border bg-[#0F1B0E] px-6 py-5">
+            <div className="mb-4 flex items-center justify-between">
+              <div>
+                <Link
+                  href="/"
+                  aria-label="Ups"
+                  title="Ups"
+                  className="inline-flex items-center"
+                >
+                  <div className="relative h-[29px] w-[133px] rounded-br-2xl lg:h-[44px] lg:w-[184px]">
+                    <NextImg
+                      src="/assets/icons/logo-ups.svg"
+                      alt="Capi"
+                      objectFit="cover"
+                      className=""
+                    />
+                  </div>
+                </Link>
+              </div>
+              <div>
+                <button
+                  aria-label="Close Menu"
+                  title="Close Menu"
+                  className="-mr-2 -mt-2 rounded p-2 transition duration-200 focus:outline-none"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M5.00098 5L19 18.9991"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M4.99996 18.9991L18.999 5"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <form action="" className="relative border-b border-[#1D2C1C]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                className="absolute left-0 top-1/2 -translate-y-1/2"
+              >
+                <path
+                  d="M11.5 21.5C16.7467 21.5 21 17.2467 21 12C21 6.75329 16.7467 2.5 11.5 2.5C6.25329 2.5 2 6.75329 2 12C2 17.2467 6.25329 21.5 11.5 21.5Z"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M22 22.5L20 20.5"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <input
+                type="text"
+                placeholder="Tìm kiếm"
+                className="bg-transparent py-4 pl-9 text-sm font-semibold text-[#FFF] outline-none placeholder:text-sm placeholder:text-[#E7E9EF]"
+              />
+            </form>
+            <ul className="mt-7 flex flex-col gap-8">
+              <li>
+                <Link
+                  href="/"
+                  onClick={handleClose}
+                  aria-label="Our product"
+                  title="Our product"
+                  className="flex items-center gap-[10px] text-sm font-bold text-gray-100"
+                >
+                  Sản phẩm
+                  <span className="me-2 rounded-[10px] bg-[#AD02C9] px-2 py-1 text-xs font-bold uppercase text-white">
+                    NEW
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/"
+                  onClick={handleClose}
+                  aria-label="Invest with UPS"
+                  title="Invest with UPS"
+                  className="text-sm font-bold text-gray-100"
+                >
+                  Đầu tư cùng UPS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/nen-tang-cong-nghe"
+                  onClick={handleClose}
+                  aria-label="Technology platform"
+                  title="Technology platform"
+                  className="text-sm font-bold text-gray-100"
+                >
+                  Nền tảng công nghệ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tin-tuc"
+                  onClick={handleClose}
+                  aria-label="News"
+                  title="News"
+                  className="text-sm font-bold text-gray-100"
+                >
+                  Tin tức
+                  <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1">
+                    4
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={handleClose}
+                  href="/gioi-thieu"
+                  aria-label="About us"
+                  title="About us"
+                  className="text-sm font-bold text-gray-100"
+                >
+                  Về UPS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={handleClose}
+                  href="/"
+                  aria-label="Price list"
+                  title="Price list"
+                  className="text-sm font-bold text-gray-100"
+                >
+                  Bảng giá
+                </Link>
+              </li>
+              <li>
+                <a
+                  onClick={handleClose}
+                  href="/"
+                  className=""
+                  aria-label="Mở tài khoản ngay"
+                  title="Mở tài khoản ngay"
+                >
+                  <button className="btn active">
+                    Mở tài khoản ngay
+                    <div className="relative h-4 w-4 lg:h-6 lg:w-6">
+                      <NextImg
+                        src="/assets/icons/UPs.svg"
+                        alt="Capi"
+                        objectFit="cover"
+                      />
+                    </div>
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
     </NavigationMenu.Root>
   );
 };
