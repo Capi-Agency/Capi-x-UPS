@@ -30,7 +30,7 @@ const TheHeader = () => {
   }, [isMenuOpen]);
   return (
     <>
-      {/* <NavigationMenu.Root className="fixed z-[999] w-full">
+      <NavigationMenu.Root className="fixed z-[999] w-full">
         <div className="rounded-b-[24px] bg-[#0E1A0D]">
           <div
             className="mx-auto px-6 py-4 sm:max-w-full md:px-10 lg:py-[20px] xl:max-w-[1280px] xl:px-0 2xl:max-w-[1440px] 3xl:max-w-[1600px]"
@@ -55,26 +55,23 @@ const TheHeader = () => {
               <NavigationMenu.List className="hidden items-center space-x-5 xl:flex 2xl:space-x-8">
                 <NavigationMenu.Item>
                   <NavigationMenu.Trigger>
-                    <li>
-                      <Link
-                        href="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="flex items-center gap-[10px] text-base font-bold text-gray-100"
-                      >
-                        Sản phẩm
-                        <span className="me-2 rounded-[10px] bg-[#AD02C9] px-2 py-1 text-sm font-bold uppercase text-white">
-                          NEW
-                        </span>
-                      </Link>
-                    </li>
+                    <div
+                      aria-label="Our product"
+                      title="Our product"
+                      className="flex items-center gap-[10px] text-base font-bold text-gray-100"
+                    >
+                      Sản phẩm
+                      <span className="me-2 rounded-[10px] bg-[#AD02C9] px-2 py-1 text-sm font-bold uppercase text-white">
+                        NEW
+                      </span>
+                    </div>
                   </NavigationMenu.Trigger>
-                  <NavigationMenu.Content className="data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft absolute left-0 top-0 w-full sm:w-auto">
+                  <NavigationMenu.Content className="absolute left-0 top-0 w-full data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
                     <ul className="one m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
-                      <li className="row-span-3 grid">
+                      <div className="row-span-3 grid">
                         <NavigationMenu.Link asChild>
                           <a
-                            className="from-purple9 to-indigo9 focus:shadow-violet7 flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-[25px] no-underline outline-none focus:shadow-[0_0_0_2px]"
+                            className="from-purple9 to-indigo9  flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-[25px] no-underline outline-none"
                             href="/"
                           >
                             <svg
@@ -96,7 +93,7 @@ const TheHeader = () => {
                             </p>
                           </a>
                         </NavigationMenu.Link>
-                      </li>
+                      </div>
 
                       <ListItem href="https://stitches.dev/" title="Stitches">
                         CSS-in-JS with best-in-class developer experience.
@@ -116,16 +113,13 @@ const TheHeader = () => {
 
                 <NavigationMenu.Item>
                   <NavigationMenu.Trigger>
-                    <li>
-                      <Link
-                        href="/"
-                        aria-label="Invest with UPS"
-                        title="Invest with UPS"
-                        className="font-bold text-gray-100"
-                      >
-                        Đầu tư cùng UPS
-                      </Link>
-                    </li>
+                    <div
+                      aria-label="Invest with UPS"
+                      title="Invest with UPS"
+                      className="font-bold text-gray-100"
+                    >
+                      Đầu tư cùng UPS
+                    </div>
                   </NavigationMenu.Trigger>
                   <NavigationMenu.Content className="absolute left-0 top-0 w-full sm:w-auto">
                     <ul className="m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-3">
@@ -174,85 +168,73 @@ const TheHeader = () => {
                 </NavigationMenu.Item>
 
                 <NavigationMenu.Item>
-                  <NavigationMenu.Link
-                    className="text-violet11 hover:bg-violet3 focus:shadow-violet7 block select-none rounded px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px]"
-                    href="https://github.com/radix-ui"
+                  <Link
+                    className="text-violet11 hover:bg-violet3  block select-none rounded px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none"
+                    href="/nen-tang-cong-nghe"
                   >
-                    <li>
-                      <Link
-                        href="/nen-tang-cong-nghe"
-                        aria-label="Technology platform"
-                        title="Technology platform"
-                        className="font-bold text-gray-100"
-                      >
-                        Nền tảng công nghệ
-                      </Link>
-                    </li>
-                  </NavigationMenu.Link>
+                    <div
+                      aria-label="Technology platform"
+                      title="Technology platform"
+                      className="font-bold text-gray-100"
+                    >
+                      Nền tảng công nghệ
+                    </div>
+                  </Link>
+                </NavigationMenu.Item>
+
+                <NavigationMenu.Item>
+                  <Link
+                    className="text-violet11 hover:bg-violet3  block select-none rounded px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none"
+                    href="/tin-tuc"
+                  >
+                    <div
+                      aria-label="News"
+                      title="News"
+                      className="font-bold text-gray-100"
+                    >
+                      Tin tức
+                      <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1 text-sm">
+                        4
+                      </span>
+                    </div>
+                  </Link>
+                </NavigationMenu.Item>
+
+                <NavigationMenu.Item>
+                  <Link
+                    className="text-violet11 hover:bg-violet3  block select-none rounded px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none"
+                    href="/gioi-thieu"
+                  >
+                    <div
+                      aria-label="About us"
+                      title="About us"
+                      className="font-bold text-gray-100"
+                    >
+                      Về UPS
+                    </div>
+                  </Link>
                 </NavigationMenu.Item>
 
                 <NavigationMenu.Item>
                   <NavigationMenu.Link
-                    className="text-violet11 hover:bg-violet3 focus:shadow-violet7 block select-none rounded px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px]"
+                    className="text-violet11 hover:bg-violet3  block select-none rounded px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none"
                     href="https://github.com/radix-ui"
                   >
-                    <li>
-                      <Link
-                        href="/tin-tuc"
-                        aria-label="News"
-                        title="News"
-                        className="font-bold text-gray-100"
-                      >
-                        Tin tức
-                        <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1 text-sm">
-                          4
-                        </span>
-                      </Link>
-                    </li>
+                    <div
+                      aria-label="Price list"
+                      title="Price list"
+                      className="font-bold text-gray-100"
+                    >
+                      Bảng giá
+                    </div>
                   </NavigationMenu.Link>
                 </NavigationMenu.Item>
-
-                <NavigationMenu.Item>
-                  <NavigationMenu.Link
-                    className="text-violet11 hover:bg-violet3 focus:shadow-violet7 block select-none rounded px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px]"
-                    href="https://github.com/radix-ui"
-                  >
-                    <li>
-                      <Link
-                        href="/gioi-thieu"
-                        aria-label="About us"
-                        title="About us"
-                        className="font-bold text-gray-100"
-                      >
-                        Về UPS
-                      </Link>
-                    </li>
-                  </NavigationMenu.Link>
-                </NavigationMenu.Item>
-
-                <NavigationMenu.Item>
-                  <NavigationMenu.Link
-                    className="text-violet11 hover:bg-violet3 focus:shadow-violet7 block select-none rounded px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px]"
-                    href="https://github.com/radix-ui"
-                  >
-                    <li>
-                      <Link
-                        href="/"
-                        aria-label="Price list"
-                        title="Price list"
-                        className="font-bold text-gray-100"
-                      >
-                        Bảng giá
-                      </Link>
-                    </li>
-                  </NavigationMenu.Link>
-                </NavigationMenu.Item>
-                <NavigationMenu.Indicator className="data-[state=hidden]:animate-fadeOut data-[state=visible]:animate-fadeIn top-full z-10 flex h-2.5 items-end justify-center overflow-hidden transition-[width,transform_250ms_ease]">
+                <NavigationMenu.Indicator className="top-full z-10 flex h-2.5 items-end justify-center overflow-hidden transition-[width,transform_250ms_ease] data-[state=hidden]:animate-fadeOut data-[state=visible]:animate-fadeIn">
                   <div className="relative top-[70%] size-2.5 rotate-45 rounded-tl-sm bg-white" />
                 </NavigationMenu.Indicator>
               </NavigationMenu.List>
               <ul className="hidden items-center space-x-5 xl:flex 2xl:space-x-8">
-                <li>
+                <div>
                   <Link
                     href="/"
                     aria-label="Notification"
@@ -289,8 +271,8 @@ const TheHeader = () => {
                       </svg>
                     </i>
                   </Link>
-                </li>
-                <li>
+                </div>
+                <div>
                   <Link
                     href="/"
                     aria-label="Search"
@@ -322,7 +304,7 @@ const TheHeader = () => {
                       </svg>
                     </i>
                   </Link>
-                </li>
+                </div>
                 <li>
                   <a
                     href="/"
@@ -347,11 +329,11 @@ const TheHeader = () => {
           </div>
         </div>
         <div className="perspective-[1600px] absolute top-full flex w-full justify-center">
-          <NavigationMenu.Viewport className="data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn relative mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-md bg-white transition-[width,_height] duration-300 sm:w-[var(--radix-navigation-menu-viewport-width)]" />
+          <NavigationMenu.Viewport className="relative mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-md bg-white transition-[width,_height] duration-300 data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn sm:w-[var(--radix-navigation-menu-viewport-width)]" />
         </div>
-      </NavigationMenu.Root> */}
+      </NavigationMenu.Root>
 
-      <div className="fixed z-[999] w-full">
+      {/* <div className="fixed z-[999] w-full">
         <div className="rounded-b-[24px] bg-[#0E1A0D]">
           <div
             className="mx-auto px-6 py-4 sm:max-w-full md:px-10 lg:py-[20px] xl:max-w-[1280px] xl:px-0 2xl:max-w-[1440px] 3xl:max-w-[1600px]"
@@ -806,29 +788,27 @@ const TheHeader = () => {
             </div>
           </div>
         )}
-      </div>
+      </div> */}
     </>
   );
 };
 
 const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
   ({ className, children, title, href, ...props }, forwardedRef) => (
-    <li>
-      <NavigationMenu.Link asChild>
-        <a
-          className={cn(
-            'hover:bg-mauve3 focus:shadow-violet7 block select-none rounded-md p-3 text-[15px] leading-none no-underline outline-none transition-colors focus:shadow-[0_0_0_2px]',
-            className,
-          )}
-          href={href}
-          ref={forwardedRef}
-          {...props}
-        >
-          <div className="text-violet12 font-medium leading-[1.2]">{title}</div>
-          <p className="text-mauve11 leading-[1.4]">{children}</p>
-        </a>
-      </NavigationMenu.Link>
-    </li>
+    <NavigationMenu.Link asChild>
+      <Link
+        className={cn(
+          'hover:bg-mauve3  block select-none rounded-md p-3 text-[15px] leading-none no-underline outline-none transition-colors',
+          className,
+        )}
+        href={href}
+        ref={forwardedRef}
+        {...props}
+      >
+        <div className="text-violet12 font-medium leading-[1.2]">{title}</div>
+        <p className="text-mauve11 leading-[1.4]">{children}</p>
+      </Link>
+    </NavigationMenu.Link>
   ),
 );
 
