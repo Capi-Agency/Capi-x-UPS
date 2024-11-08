@@ -2,9 +2,9 @@
 <g id="Frame 47223">
 <g id="Group">
 <path id="Vector" d="M90.4885 160.649L21.6801 120.928L9 128.254L90.4885 175.301L171.977 128.254L159.286 120.928L90.4885 160.649Z" fill="#0F1B0E"/>
-<path id="Vector_2" d="M122.162 142.26L134.853 149.586" stroke="#02E56A" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M122.162 142.26L134.853 149.586" stroke="#02E56A" strokeLinecap="round" strokeLinejoin="round"/>
 <path id="Vector_3" d="M90.4885 66.5562L9 113.603L90.4885 160.649L171.977 113.603L90.4885 66.5562Z" fill="url(#paint0_linear_3535_3771)"/>
-<path id="Vector_4" d="M9 113.603L90.4885 160.649L171.977 113.603" stroke="#5D688C" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M9 113.603L90.4885 160.649L171.977 113.603" stroke="#5D688C" strokeLinecap="round" strokeLinejoin="round"/>
 <g id="Group_2">
 <path id="Vector_5" d="M90.9488 109.604C91.3575 109.604 91.6887 109.273 91.6887 108.864C91.6887 108.456 91.3575 108.124 90.9488 108.124C90.5402 108.124 90.209 108.456 90.209 108.864C90.209 109.273 90.5402 109.604 90.9488 109.604Z" fill="#02E56A"/>
 <path id="Vector_6" d="M99.4469 114.508C99.8555 114.508 100.187 114.177 100.187 113.768C100.187 113.359 99.8555 113.028 99.4469 113.028C99.0383 113.028 98.707 113.359 98.707 113.768C98.707 114.177 99.0383 114.508 99.4469 114.508Z" fill="#02E56A"/>
@@ -73,67 +73,67 @@
 </g>
 <g id="Group_3">
 <path id="Vector_69" d="M67.3691 117.912L112.326 143.864L142.577 126.401L97.6203 100.448" fill="#1B1D21"/>
-<path id="Vector_70" d="M81.2864 113.323L72.0215 118.677" stroke="#040919" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_70" d="M81.2864 113.323L72.0215 118.677" stroke="#040919" strokeLinecap="round" strokeLinejoin="round"/>
 <g id="Group_4">
 <path id="Vector_71" d="M45.8652 105.49L67.3685 117.912V60.5768L45.8652 48.1553V105.49Z" fill="#4331E8"/>
 <path id="Vector_72" d="M45.8652 48.1552L67.3685 60.5767L97.6197 43.1134L76.1056 30.6919L45.8652 48.1552Z" fill="#666BFF"/>
 <path id="Vector_73" d="M97.6203 100.449L67.3691 117.912V60.5771L97.6203 43.1138V100.449Z" fill="#040919"/>
-<path id="Vector_74" d="M67.3691 117.912V60.5771L97.6203 43.1138" stroke="#666BFF" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_74" d="M67.3691 117.912V60.5771L97.6203 43.1138" stroke="#666BFF" strokeLinecap="round" strokeLinejoin="round"/>
 <path id="Vector_75" d="M48.5898 54.2424L64.6419 63.5074V71.0055L48.5898 61.7406V54.2424Z" fill="#040919"/>
 <path id="Vector_76" d="M48.5898 64.6602L64.6419 73.9251V81.4232L48.5898 72.1583V64.6602Z" fill="#040919"/>
 <path id="Vector_77" d="M48.5898 75.0881L64.6419 84.3531V91.8404L48.5898 82.5755V75.0881Z" fill="#040919"/>
-<path id="Vector_78" d="M51.0137 58.3467L52.7805 59.3701" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_79" d="M58.5996 62.7212L60.3664 63.7447" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_80" d="M62.3809 64.9072L64.1477 65.9307" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_81" d="M54.8066 70.9724L56.5734 71.9851" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_82" d="M58.5996 73.1597L60.3664 74.1724" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_83" d="M62.3809 75.3469L64.1477 76.3596" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_84" d="M51.0137 79.2144L52.7805 80.2378" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_85" d="M54.8066 81.4016L56.5734 82.4251" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_86" d="M62.3809 85.7751L64.1477 86.7986" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_78" d="M51.0137 58.3467L52.7805 59.3701" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_79" d="M58.5996 62.7212L60.3664 63.7447" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_80" d="M62.3809 64.9072L64.1477 65.9307" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_81" d="M54.8066 70.9724L56.5734 71.9851" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_82" d="M58.5996 73.1597L60.3664 74.1724" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_83" d="M62.3809 75.3469L64.1477 76.3596" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_84" d="M51.0137 79.2144L52.7805 80.2378" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_85" d="M54.8066 81.4016L56.5734 82.4251" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_86" d="M62.3809 85.7751L64.1477 86.7986" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
 </g>
 <g id="Group_5">
 <path id="Vector_87" d="M76.6543 123.266L98.1576 135.688V78.3526L76.6543 65.9312V123.266Z" fill="#02E56A"/>
 <path id="Vector_88" d="M76.6543 65.9311L98.1576 78.3526L128.409 60.8893L106.895 48.4678L76.6543 65.9311Z" fill="#040919"/>
 <path id="Vector_89" d="M128.409 118.225L98.1582 135.688V78.353L128.409 60.8896V118.225Z" fill="#040919"/>
-<path id="Vector_90" d="M98.1582 135.688V78.353L128.409 60.8896" stroke="#02E56A" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_90" d="M98.1582 135.688V78.353L128.409 60.8896" stroke="#02E56A" strokeLinecap="round" strokeLinejoin="round"/>
 <path id="Vector_91" d="M79.3789 72.0186L95.431 81.2835V88.7816L79.3789 79.5167V72.0186Z" fill="#040919"/>
 <path id="Vector_92" d="M79.3789 82.436L95.431 91.701V99.1991L79.3789 89.9342V82.436Z" fill="#040919"/>
 <path id="Vector_93" d="M79.3789 92.8643L95.431 102.129V109.617L79.3789 100.362V92.8643Z" fill="#040919"/>
-<path id="Vector_94" d="M81.8027 76.1226L83.5803 77.146" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_95" d="M89.3887 80.4971L91.1555 81.5205" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_96" d="M93.1699 82.6833L94.9475 83.7068" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_97" d="M85.5957 88.7485L87.3625 89.7612" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_98" d="M89.3887 90.9358L91.1555 91.9485" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_99" d="M93.1699 93.123L94.9475 94.1357" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_100" d="M81.8027 96.9905L83.5803 98.0139" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_101" d="M85.5957 99.1777L87.3625 100.201" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_102" d="M93.1699 103.551L94.9475 104.574" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_94" d="M81.8027 76.1226L83.5803 77.146" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_95" d="M89.3887 80.4971L91.1555 81.5205" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_96" d="M93.1699 82.6833L94.9475 83.7068" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_97" d="M85.5957 88.7485L87.3625 89.7612" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_98" d="M89.3887 90.9358L91.1555 91.9485" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_99" d="M93.1699 93.123L94.9475 94.1357" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_100" d="M81.8027 96.9905L83.5803 98.0139" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_101" d="M85.5957 99.1777L87.3625 100.201" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_102" d="M93.1699 103.551L94.9475 104.574" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
 </g>
 <g id="Group_6">
 <path id="Vector_103" d="M76.6543 61.3743L98.1576 73.785V35.8741L76.6543 23.4634V61.3743Z" fill="#4331E8"/>
 <path id="Vector_104" d="M76.6543 23.4633L98.1576 35.8741L128.409 18.4215L106.895 6L76.6543 23.4633Z" fill="#666BFF"/>
 <path id="Vector_105" d="M128.409 56.3328L98.1582 73.7854V35.8745L128.409 18.4219V56.3328Z" fill="#040919"/>
-<path id="Vector_106" d="M98.1582 73.7854V35.8745L128.409 18.4219" stroke="#666BFF" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_106" d="M98.1582 73.7854V35.8745L128.409 18.4219" stroke="#666BFF" strokeLinecap="round" strokeLinejoin="round"/>
 <path id="Vector_107" d="M79.3789 29.5505L95.431 38.8155V46.3137L79.3789 37.0487V29.5505Z" fill="#040919"/>
 <path id="Vector_108" d="M79.3789 39.9683L95.431 49.2332V56.7314L79.3789 47.4664V39.9683Z" fill="#040919"/>
 <path id="Vector_109" d="M79.3789 50.3962L95.431 59.6504V67.1486L79.3789 57.8836V50.3962Z" fill="#040919"/>
-<path id="Vector_110" d="M81.8027 33.6548L83.5803 34.6782" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_111" d="M89.3887 38.0293L91.1555 39.0527" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_112" d="M93.1699 40.2153L94.9475 41.2388" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_113" d="M85.5957 46.27L87.3625 47.2935" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_114" d="M89.3887 48.4573L91.1555 49.4807" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_115" d="M93.1699 50.6445L94.9475 51.668" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_116" d="M81.8027 54.5225L83.5803 55.5351" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_117" d="M85.5957 56.7097L87.3625 57.7332" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_118" d="M93.1699 61.0833L94.9475 62.1067" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_110" d="M81.8027 33.6548L83.5803 34.6782" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_111" d="M89.3887 38.0293L91.1555 39.0527" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_112" d="M93.1699 40.2153L94.9475 41.2388" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_113" d="M85.5957 46.27L87.3625 47.2935" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_114" d="M89.3887 48.4573L91.1555 49.4807" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_115" d="M93.1699 50.6445L94.9475 51.668" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_116" d="M81.8027 54.5225L83.5803 55.5351" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_117" d="M85.5957 56.7097L87.3625 57.7332" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_118" d="M93.1699 61.0833L94.9475 62.1067" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
 </g>
-<path id="Vector_119" d="M74.7801 117.083L72.0222 118.677C64.6749 122.922 64.6749 129.86 72.0222 134.104L85.855 142.087C92.222 145.761 102.629 145.761 108.996 142.087L111.581 140.59C114.522 138.888 116.925 134.718 116.925 131.325V107.419C116.925 104.026 114.555 99.7917 111.668 98.0142" stroke="#040919" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_120" d="M116.925 124.85V107.408C116.925 104.015 114.555 99.781 111.668 98.0034" stroke="#02E56A" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_121" d="M121.58 122.168V104.726C121.58 101.332 119.209 97.0984 116.322 95.3208" stroke="#02E56A" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_122" d="M126.234 119.485V102.043C126.234 98.6494 123.864 94.4155 120.977 92.6379" stroke="#02E56A" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_123" d="M121.578 122.167V129.192C121.578 131.734 123.377 134.848 125.575 136.119L129.27 138.252" stroke="#040919" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_124" d="M126.234 119.485V126.509C126.234 129.051 128.033 132.165 130.231 133.436L133.926 135.569" stroke="#040919" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_119" d="M74.7801 117.083L72.0222 118.677C64.6749 122.922 64.6749 129.86 72.0222 134.104L85.855 142.087C92.222 145.761 102.629 145.761 108.996 142.087L111.581 140.59C114.522 138.888 116.925 134.718 116.925 131.325V107.419C116.925 104.026 114.555 99.7917 111.668 98.0142" stroke="#040919" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_120" d="M116.925 124.85V107.408C116.925 104.015 114.555 99.781 111.668 98.0034" stroke="#02E56A" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_121" d="M121.58 122.168V104.726C121.58 101.332 119.209 97.0984 116.322 95.3208" stroke="#02E56A" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_122" d="M126.234 119.485V102.043C126.234 98.6494 123.864 94.4155 120.977 92.6379" stroke="#02E56A" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_123" d="M121.578 122.167V129.192C121.578 131.734 123.377 134.848 125.575 136.119L129.27 138.252" stroke="#040919" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_124" d="M126.234 119.485V126.509C126.234 129.051 128.033 132.165 130.231 133.436L133.926 135.569" stroke="#040919" strokeLinecap="round" strokeLinejoin="round"/>
 </g>
 </g>
 </g>

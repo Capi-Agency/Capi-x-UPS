@@ -7,7 +7,6 @@ type Props = {
 };
 
 const Content = ({ data }: Props) => {
-  console.log('🚀 ~ Content ~ data:', data);
   return (
     <>
       <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">

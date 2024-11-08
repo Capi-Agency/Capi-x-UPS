@@ -12,7 +12,6 @@ type Props = {};
 const TechnologyPlatform = async (props: Props) => {
   const data = await fnGetPage('nen-tang-cong-nghe-vuot-troi-6X');
   const dataTech = data?.data?.data?.pages_by_id?.raw_content;
-  console.log('🚀 ~ TechnologyPlatform ~ dataTech:', dataTech);
   return (
     <div>
       {dataTech &&

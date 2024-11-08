@@ -62,7 +62,7 @@ const Banner = ({ data }: Props) => {
             {data?.title.map((item: any, index: number) => {
               return (
                 <span key={index}>
-                  {item.title} <br className="hidden md:block" />
+                  {item.title} <br className="hidden sm:block" />
                 </span>
               );
             })}

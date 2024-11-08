@@ -5,8 +5,8 @@
 <path id="Vector_2" d="M89.9493 161.926L22.4511 122.956L10 130.143L89.9493 176.301L169.899 130.143L157.447 122.956L89.9493 161.926Z" fill="#0F1B0E"/>
 <path id="Vector_3" d="M89.9493 69.6094L10 115.767L89.9493 161.925L169.899 115.767L89.9493 69.6094Z" fill="url(#paint0_linear_3535_3676)"/>
 <path id="Vector_4" d="M79.9295 88.3076L43.6543 109.246L101.449 142.615L137.714 121.676L79.9295 88.3076Z" fill="#BCC0E5"/>
-<path id="Vector_5" d="M89.9492 161.925L169.899 115.767" stroke="#5D688C" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_6" d="M10 115.767L89.9493 161.925" stroke="#5D688C" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M89.9492 161.925L169.899 115.767" stroke="#5D688C" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_6" d="M10 115.767L89.9493 161.925" stroke="#5D688C" strokeLinecap="round" strokeLinejoin="round"/>
 <g id="Group">
 <path id="Vector_7" d="M89.9488 111.604C90.3575 111.604 90.6887 111.273 90.6887 110.864C90.6887 110.455 90.3575 110.124 89.9488 110.124C89.5402 110.124 89.209 110.455 89.209 110.864C89.209 111.273 89.5402 111.604 89.9488 111.604Z" fill="#02E56A"/>
 <path id="Vector_8" d="M98.4469 116.508C98.8555 116.508 99.1868 116.176 99.1868 115.768C99.1868 115.359 98.8555 115.028 98.4469 115.028C98.0383 115.028 97.707 115.359 97.707 115.768C97.707 116.176 98.0383 116.508 98.4469 116.508Z" fill="#02E56A"/>
@@ -81,7 +81,7 @@
 <path id="Vector_74" d="M97.5488 76.7763L64.4551 57.6663V104.934L97.5488 124.044C99.9904 125.45 101.988 124.298 101.988 121.486V84.471C101.988 81.6489 99.9904 78.1926 97.5488 76.7869V76.7763Z" fill="#4331E8"/>
 <path id="Vector_75" d="M48.2518 48.3125C45.8102 46.9067 43.8125 48.0588 43.8125 50.8703V87.8855C43.8125 90.7076 45.8102 94.1639 48.2518 95.5696L64.4446 104.924V57.6561L48.2518 48.3019V48.3125Z" fill="#666BFF"/>
 </g>
-<path id="Vector_76" d="M82.8047 47.9734L110.254 63.8174" stroke="#040919" stroke-miterlimit="10" stroke-linecap="round"/>
+<path id="Vector_76" d="M82.8047 47.9734L110.254 63.8174" stroke="#040919" stroke-miterlimit="10" strokeLinecap="round"/>
 <path id="Vector_77" d="M82.5195 88.4553L92.6559 94.3215V103.2L82.5195 97.3445V88.4553Z" fill="white"/>
 <path id="Vector_78" d="M53.5684 62.6121L59.6248 66.1001" stroke="white" stroke-miterlimit="10"/>
 <path id="Vector_79" d="M63.1133 68.1189L69.1592 71.6069" stroke="white" stroke-miterlimit="10"/>

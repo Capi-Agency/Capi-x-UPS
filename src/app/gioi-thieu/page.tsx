@@ -12,7 +12,6 @@ type Props = {};
 const GioiThieu = async () => {
   const data = await fnGetPage('ve-chung-toi-L7');
   const dataAbout = data?.data?.data?.pages_by_id?.raw_content;
-  console.log(dataAbout);
 
   return (
     <>

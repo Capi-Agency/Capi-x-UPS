@@ -9,7 +9,6 @@ type Props = {
 };
 
 const ReviewTech = ({ data }: Props) => {
-  console.log('🚀 ~ ReviewTech ~ data:', data);
   const swiperRef = useRef<any>(null);
   return (
     <div className="mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">

@@ -12,7 +12,6 @@ type Props = {};
 const CoursePage = async (props: Props) => {
   const data = await fnGetPage('ups-academy-GK');
   const dataCourse = data?.data?.data?.pages_by_id?.raw_content;
-  console.log(dataCourse);
   return (
     <div>
       {dataCourse &&
