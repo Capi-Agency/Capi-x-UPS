@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import NextImg from '../next-img';
 import MenuMobile from '@/components/common/menu-mobile/page';
+import { usePathname } from 'next/navigation';
 
 interface ListItemProps {
   className?: string;
@@ -15,6 +16,8 @@ interface ListItemProps {
 }
 const TheHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [bgColor, setBgColor] = useState('#0E1A0D');
+  const pathname = usePathname();
   const handleClose = () => {
     setIsMenuOpen(false);
   };
@@ -36,10 +39,23 @@ const TheHeader = () => {
       document.body.style.overflow = 'auto';
     };
   }, [isMenuOpen]);
+  useEffect(() => {
+    switch (pathname) {
+      case '/khoa-hoc':
+        setBgColor('bg-[#1B0C01]');
+        break;
+      case '/tu-van':
+        setBgColor('bg-[#080F25]');
+        break;
+      default:
+        setBgColor('bg-[#0F1B0E]');
+        break;
+    }
+  }, [pathname]);
   return (
     <>
       <NavigationMenu.Root className="fixed z-[999] w-full">
-        <div className="rounded-b-[24px] bg-[#0E1A0D]">
+        <div className={bgColor + ` rounded-b-[24px]`}>
           <div
             className="mx-auto px-6 py-4 sm:max-w-full md:px-10 lg:py-[20px] xl:max-w-[1280px] xl:px-0 2xl:max-w-[1440px] 3xl:max-w-[1600px]"
             data-aos="fade-up"
