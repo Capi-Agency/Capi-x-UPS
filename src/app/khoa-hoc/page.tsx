@@ -22,6 +22,7 @@ const CoursePage = async (props: Props) => {
               {datasection.newbie && (
                 <CourseContent data={datasection.newbie} />
               )}
+              {datasection.newbie && <CourseSchedule />}
               {datasection.academy_service && (
                 <CourseService data={datasection.academy_service} />
               )}
@@ -32,7 +33,6 @@ const CoursePage = async (props: Props) => {
             </div>
           );
         })}
-      <CourseSchedule />
     </div>
   );
 };
