@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useRef, useState } from 'react';
 import NextImg from '../common/next-img';
 import { cn } from '@/lib/utils';
 
@@ -62,94 +63,104 @@ const NetworkAdvise = (props: Props) => {
       </div>
       <div className="mt-10">
         <div className="flex gap-6">
-          {cardsData.map((card, index) => (
-            <div
-              key={index}
-              className={cn('group', {
-                'mt-[128px]': index === 1,
-                'mt-[222px]': index === 2,
-                'mt-[51px]': index === 3,
-              })}
-            >
-              <div className="relative rounded-[32px] border border-[rgba(115,97,249,0.20)] p-5">
-                <div className="relative h-[303px] w-full">
-                  <NextImg src={card.imgSrc} alt="Capi" objectFit="contain" />
-                </div>
-                <p className="mb-6 mt-[10px] text-[20px] font-semibold text-[#040919]">
-                  {card.title}
-                </p>
-                <div className="flex flex-col gap-[6px]">
-                  {card.items.map((item, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <div className="size-2 min-h-2 min-w-2 rotate-45 bg-[#4331E8]"></div>
-                      <span className="text-base font-medium text-[#040919]">
-                        {item}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-0 h-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:mt-6 group-hover:h-[50px]">
-                  <button className="btn bg-[#F51666] text-[#FFF]">
-                    Liên hệ tư vấn
-                    <i>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M18.7594 5.98952C18.7594 5.7906 18.6804 5.59984 18.5398 5.45919C18.3991 5.31853 18.2083 5.23952 18.0094 5.23952L9.42515 5.23952C9.01093 5.23952 8.67515 5.5753 8.67515 5.98952C8.67515 6.40373 9.01093 6.73952 9.42515 6.73952L16.1992 6.73952L5.45855 17.4802C5.16566 17.7731 5.16566 18.2479 5.45855 18.5408C5.75145 18.8337 6.22632 18.8337 6.51921 18.5408L17.2594 7.80062V14.5738C17.2594 14.988 17.5952 15.3238 18.0094 15.3238C18.4236 15.3238 18.7594 14.988 18.7594 14.5738L18.7594 5.98952Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </i>
-                  </button>
-                </div>
+          {cardsData.map((card, index) => {
+            const [position, setPosition] = useState({ x: 0, y: 0 });
+            const [isHovered, setIsHovered] = useState(false);
+            const cardRef = useRef<HTMLDivElement>(null);
 
-                <i>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="196"
-                    height="190"
-                    viewBox="0 0 196 190"
-                    fill="none"
-                    className="absolute bottom-0 right-0 hidden rounded-br-[32px] group-hover:block"
-                  >
-                    <g filter="url(#filter0_f_4334_24314)">
-                      <circle cx="189" cy="189.789" r="55" fill="#4C35F5" />
-                    </g>
-                    <defs>
-                      <filter
-                        id="filter0_f_4334_24314"
-                        x="0"
-                        y="0.789062"
-                        width="378"
-                        height="378"
-                        filterUnits="userSpaceOnUse"
-                        colorInterpolationFilters="sRGB"
-                      >
-                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                        <feBlend
-                          mode="normal"
-                          in="SourceGraphic"
-                          in2="BackgroundImageFix"
-                          result="shape"
-                        />
-                        <feGaussianBlur
-                          stdDeviation="67"
-                          result="effect1_foregroundBlur_4334_24314"
-                        />
-                      </filter>
-                    </defs>
-                  </svg>
-                </i>
+            const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+              if (!cardRef.current) return;
+
+              const rect = cardRef.current.getBoundingClientRect();
+              const mouseX = e.clientX - rect.left - rect.width / 2;
+              const mouseY = e.clientY - rect.top - rect.height / 2;
+
+              setPosition({
+                x: e.clientX - rect.left,
+                y: e.clientY - rect.top,
+              });
+
+              let angle = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
+              angle = (angle + 360) % 360;
+
+              cardRef.current.style.setProperty('--start', `${angle + 60}`);
+            };
+
+            const handleMouseEnter = () => {
+              setIsHovered(true);
+            };
+
+            const handleMouseLeave = () => {
+              setIsHovered(false);
+            };
+            return (
+              <div
+                key={index}
+                className={cn('group', {
+                  'mt-[128px]': index === 1,
+                  'mt-[222px]': index === 2,
+                  'mt-[51px]': index === 3,
+                })}
+              >
+                <div
+                  className="card2 relative overflow-hidden rounded-[32px] border border-[rgba(115,97,249,0.20)] p-5"
+                  ref={cardRef}
+                  onMouseMove={handleMouseMove}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="relative h-[303px] w-full">
+                    <NextImg src={card.imgSrc} alt="Capi" objectFit="contain" />
+                  </div>
+                  <p className="mb-6 mt-[10px] text-[20px] font-semibold text-[#040919]">
+                    {card.title}
+                  </p>
+                  <div className="flex flex-col gap-[6px]">
+                    {card.items.map((item, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <div className="size-2 min-h-2 min-w-2 rotate-45 bg-[#4331E8]"></div>
+                        <span className="text-base font-medium text-[#040919]">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-0 h-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:mt-6 group-hover:h-[50px]">
+                    <button className="btn bg-[#F51666] text-[#FFF]">
+                      Liên hệ tư vấn
+                      <i>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M18.7594 5.98952C18.7594 5.7906 18.6804 5.59984 18.5398 5.45919C18.3991 5.31853 18.2083 5.23952 18.0094 5.23952L9.42515 5.23952C9.01093 5.23952 8.67515 5.5753 8.67515 5.98952C8.67515 6.40373 9.01093 6.73952 9.42515 6.73952L16.1992 6.73952L5.45855 17.4802C5.16566 17.7731 5.16566 18.2479 5.45855 18.5408C5.75145 18.8337 6.22632 18.8337 6.51921 18.5408L17.2594 7.80062V14.5738C17.2594 14.988 17.5952 15.3238 18.0094 15.3238C18.4236 15.3238 18.7594 14.988 18.7594 14.5738L18.7594 5.98952Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </i>
+                    </button>
+                  </div>
+                  <div
+                    className={cn(
+                      'pointer-events-none absolute left-0 top-0 z-[99] h-[250px] w-[250px] rounded-full bg-[#4C35F5] opacity-50',
+                      { hidden: !isHovered },
+                    )}
+                    style={{
+                      transform: `translate(${position.x - 120}px, ${position.y - 120}px)`,
+                      background:
+                        'radial-gradient(circle, rgba(76, 53, 245, 0.5) 0%, rgba(76, 53, 245, 0) 70%)',
+                    }}
+                  ></div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
