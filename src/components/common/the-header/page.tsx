@@ -766,7 +766,7 @@ const TheHeader = () => {
         {/* Mobile */}
         {isMenuOpen && (
           <div className="fixed left-0 top-0 h-full w-full overflow-y-scroll bg-[#0F1B0E]">
-            <div className="h-full w-full rounded border bg-[#0F1B0E] px-6 py-5">
+            <div className="h-full w-full rounded border bg-[#0F1B0E] px-6 py-5 overflow-y-auto">
               <div className="mb-4 flex items-center justify-between">
                 <div>
                   <Link
