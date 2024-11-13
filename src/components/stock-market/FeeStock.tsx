@@ -64,7 +64,7 @@ const FeeStock = (props: Props) => {
                     viewBox="0 0 18 19"
                     fill="none"
                   >
-                    <g clip-path="url(#clip0_4320_96161)">
+                    <g clipPath="url(#clip0_4320_96161)">
                       <path
                         d="M6.7498 13.1199L3.5998 9.96992L2.5498 11.0199L6.7498 15.2199L15.7498 6.21992L14.6998 5.16992L6.7498 13.1199Z"
                         fill="#FE4A23"
@@ -95,7 +95,7 @@ const FeeStock = (props: Props) => {
                     viewBox="0 0 18 19"
                     fill="none"
                   >
-                    <g clip-path="url(#clip0_4320_96161)">
+                    <g clipPath="url(#clip0_4320_96161)">
                       <path
                         d="M6.7498 13.1199L3.5998 9.96992L2.5498 11.0199L6.7498 15.2199L15.7498 6.21992L14.6998 5.16992L6.7498 13.1199Z"
                         fill="#FE4A23"
@@ -177,7 +177,7 @@ const FeeStock = (props: Props) => {
                     viewBox="0 0 18 19"
                     fill="none"
                   >
-                    <g clip-path="url(#clip0_4320_96161)">
+                    <g clipPath="url(#clip0_4320_96161)">
                       <path
                         d="M6.7498 13.1199L3.5998 9.96992L2.5498 11.0199L6.7498 15.2199L15.7498 6.21992L14.6998 5.16992L6.7498 13.1199Z"
                         fill="#FE4A23"
@@ -206,7 +206,7 @@ const FeeStock = (props: Props) => {
                     viewBox="0 0 18 19"
                     fill="none"
                   >
-                    <g clip-path="url(#clip0_4320_96161)">
+                    <g clipPath="url(#clip0_4320_96161)">
                       <path
                         d="M6.7498 13.1199L3.5998 9.96992L2.5498 11.0199L6.7498 15.2199L15.7498 6.21992L14.6998 5.16992L6.7498 13.1199Z"
                         fill="#FE4A23"

@@ -44,17 +44,18 @@ const TheHeader = () => {
       case '/khoa-hoc':
         setBgColor('bg-[#1B0C01]');
         break;
-      case '/chung-khoan':
-        setBgColor('bg-[#000]');
-        break;
       case '/tu-van':
         setBgColor('bg-[#080F25]');
+        break;
+      case '/chung-khoan':
+        setBgColor('border-b-[1px] border-[#D0F500] bg-black');
         break;
       default:
         setBgColor('bg-[#0F1B0E]');
         break;
     }
   }, [pathname]);
+
   return (
     <>
       <NavigationMenu.Root className="fixed z-[999] w-full">

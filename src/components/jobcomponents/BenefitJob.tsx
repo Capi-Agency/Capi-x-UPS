@@ -12,25 +12,25 @@ const BenefitJob = (props: Props) => {
         'UPS trao cơ hội để bạn được làm việc trong một cộng đồng năng động, sáng tạo, nơi mọi ý tưởng đều được trân trọng, mang lại nhiều giá trị phát triển bền vững, tạo sự gắn kết',
     },
     {
-      cover: '/assets/icons/personalcard.svg',
+      cover: '/assets/image/card-job-2.png',
       title: 'Sứ mệnh tầm nhìn',
       description:
         'UPS trao cơ hội để bạn được làm việc trong một cộng đồng năng động, sáng tạo, nơi mọi ý tưởng đều được trân trọng, mang lại nhiều giá trị phát triển bền vững, tạo sự gắn kết',
     },
     {
-      cover: '/assets/icons/personalcard.svg',
+      cover: '/assets/image/card-job-3.png',
       title: 'Sứ mệnh tầm nhìn',
       description:
         'UPS trao cơ hội để bạn được làm việc trong một cộng đồng năng động, sáng tạo, nơi mọi ý tưởng đều được trân trọng, mang lại nhiều giá trị phát triển bền vững, tạo sự gắn kết',
     },
     {
-      cover: '/assets/icons/personalcard.svg',
+      cover: '/assets/image/card-job-4.png',
       title: 'Sứ mệnh tầm nhìn',
       description:
         'UPS trao cơ hội để bạn được làm việc trong một cộng đồng năng động, sáng tạo, nơi mọi ý tưởng đều được trân trọng, mang lại nhiều giá trị phát triển bền vững, tạo sự gắn kết',
     },
     {
-      cover: '/assets/icons/personalcard.svg',
+      cover: '/assets/image/card-job-5.png',
       title: 'Sứ mệnh tầm nhìn',
       description:
         'UPS trao cơ hội để bạn được làm việc trong một cộng đồng năng động, sáng tạo, nơi mọi ý tưởng đều được trân trọng, mang lại nhiều giá trị phát triển bền vững, tạo sự gắn kết',
@@ -90,19 +90,19 @@ const BenefitJob = (props: Props) => {
         </div>
       </div>
       {/* lists */}
-      <div className="mt-[60px] grid grid-cols-3 gap-[40px]">
+      <div className="mt-[60px] pb-[40px] grid grid-cols-3 gap-[40px]">
         {lists.map((item: any, index: any) => {
           return (
             <div
               key={index}
-              className={`flex h-[430px] flex-col gap-[16px] justify-end p-[16px]  ${index === 0 ? 'col-span-2' : 'col-span-1'}`}
+              className={`flex h-[430px] flex-col gap-[16px] justify-end p-[16px] bg-center bg-no-repeat bg-cover rounded-2xl ${index === 0 ? 'col-span-2' : 'col-span-1'}`}
               style={{ backgroundImage: `url('${item.cover}')` }}
             >
               <div className='rounded-[12px] bg-[rgba(0,0,0,0.5)] px-[24px] py-[20px]'>
-                <h3 className="font-hanken text-[24px] font-bold leading-[32px] text-[#161519]">
+                <h3 className="text-white font-hanken-grotesk text-2xl font-semibold leading-[40px]">
                   {item.title}
                 </h3>
-                <p className="font-hanken text-[18px] font-normal leading-[28px] text-[#161519]">
+                <p className={`overflow-hidden text-white/80  font-hanken-grotesk text-base font-normal leading-6 trun-cate line-clamp-2 pt-[8px]`}>
                   {item.description}
                 </p>
               </div>
