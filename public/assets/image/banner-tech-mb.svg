@@ -23,8 +23,8 @@
 <rect x="5.08008" y="15.3994" width="339.755" height="218.575" rx="2.26629" fill="url(#pattern0_3720_20386)"/>
 <rect x="5.08008" y="15.3994" width="339.755" height="218.575" rx="2.26629" fill="url(#pattern1_3720_20386)"/>
 <defs>
-<filter id="filter0_b_3720_20386" x="-34.3072" y="-34.3072" width="418.614" height="307.035" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_b_3720_20386" x="-34.3072" y="-34.3072" width="418.614" height="307.035" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feGaussianBlur in="BackgroundImageFix" stdDeviation="17.1536"/>
 <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_3720_20386"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_3720_20386" result="shape"/>

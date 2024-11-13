@@ -8,7 +8,7 @@ const BannerStock = (props: Props) => {
     <div className="bg-[#000] pb-10 pt-16">
       <div className="custom-container">
         <div className="flex h-[658px] w-full items-center justify-center bg-[url('/assets/image/banner-stock.png')] bg-cover bg-center">
-          <div className="">
+          <div className="" data-aos="fade-up" data-aos-delay="200">
             <h1 className="text-[72px] font-bold leading-[80px] text-[#D0F500]">
               Cổ Phiếu
             </h1>
@@ -17,14 +17,18 @@ const BannerStock = (props: Props) => {
             </p>
           </div>
         </div>
-        <div className="mx-auto mt-[60px] w-[47%] text-center">
+        <div
+          className="mx-auto mt-[60px] w-[47%] text-center"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <p className="mt-4 text-base font-bold text-[#FFF]">
             Tham gia giao dịch Cổ phiếu là giải pháp đơn giản và dễ dàng giúp
             bạn hiện thực hóa ước mơ tăng trưởng tài chính và chinh phục những
             đỉnh cao cuộc sống.
           </p>
           <div className="mx-auto my-5 h-[1px] w-[370px] bg-[#60606B] bg-opacity-65"></div>
-          <button className="btn active mx-auto !bg-[#A66CFF] !text-[#FFF]">
+          <button className="btn mx-auto !bg-[#A66CFF] !text-[#FFF]">
             Mở tài khoản ngay
             <i>
               <svg

@@ -44,6 +44,9 @@ const TheHeader = () => {
       case '/khoa-hoc':
         setBgColor('bg-[#1B0C01]');
         break;
+      case '/chung-khoan':
+        setBgColor('bg-[#000]');
+        break;
       case '/tu-van':
         setBgColor('bg-[#080F25]');
         break;
@@ -56,10 +59,7 @@ const TheHeader = () => {
     <>
       <NavigationMenu.Root className="fixed z-[999] w-full">
         <div className={bgColor + ` rounded-b-[24px]`}>
-          <div
-            className="mx-auto px-6 py-4 sm:max-w-full md:px-10 lg:py-[20px] xl:max-w-[1280px] xl:px-0 2xl:max-w-[1440px] 3xl:max-w-[1600px]"
-            data-aos="fade-up"
-          >
+          <div className="mx-auto px-6 py-4 sm:max-w-full md:px-10 lg:py-[20px] xl:max-w-[1280px] xl:px-0 2xl:max-w-[1440px] 3xl:max-w-[1600px]">
             <div className="relative flex items-center justify-between">
               <Link
                 href="/"
@@ -750,8 +750,8 @@ const TheHeader = () => {
                 {
                   'left-[30%]': activeIndex === 0,
                   'left-[38%]': activeIndex === 1,
-                  'left-[50%]': activeIndex === 2,
-                  'left-[55%]': activeIndex === 3,
+                  'left-[39%]': activeIndex === 2,
+                  'left-[63%]': activeIndex === 3,
                   'left-[64%]': activeIndex === 4,
                   'left-[65%]': activeIndex === 5,
                 },

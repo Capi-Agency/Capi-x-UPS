@@ -22,7 +22,7 @@ const ServiceStock = (props: Props) => {
                 riêng cho bạn.
               </p>
 
-              <button className="btn active !bg-[#D0F500]">
+              <button className="btn !bg-[#D0F500]">
                 Mở tài khoản ngay
                 <div className="relative h-4 w-4 lg:h-6 lg:w-6">
                   <NextImg

@@ -8,8 +8,8 @@
 <path d="M22.8504 31.0871C22.4864 29.3071 22.8064 27.3951 23.7584 25.8451C24.7984 24.1111 26.5884 22.8491 28.5784 22.4651C30.3904 22.1031 32.3344 22.4531 33.8964 23.4451C35.6944 24.5671 36.9584 26.5071 37.2364 28.6071C37.4984 30.4391 37.0364 32.3631 35.9524 33.8651C34.8584 35.4091 33.1444 36.4991 31.2744 36.8171C29.5024 37.1311 27.6184 36.7691 26.1004 35.7971C24.4404 34.7531 23.2324 33.0131 22.8504 31.0871Z" fill="#00AEEF"/>
 </g>
 <defs>
-<filter id="filter0_ii_3084_21971" x="-132" y="-132" width="324" height="324" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_ii_3084_21971" x="-132" y="-132" width="324" height="324" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="-12" dy="-12"/>
