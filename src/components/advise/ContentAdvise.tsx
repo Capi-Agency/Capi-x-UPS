@@ -34,7 +34,7 @@ const ContentAdvise = (props: Props) => {
             </div>
           </div>
           <div>
-            <button className="text-base font-bold text-[#020D31] underline">
+            <button className="text-base font-bold text-[#020D31] link-effect-b">
               Xem thêm
             </button>
           </div>
@@ -75,7 +75,7 @@ const ContentAdvise = (props: Props) => {
             </div>
           </div>
           <div>
-            <button className="text-base font-bold text-[#020D31] underline">
+            <button className="text-base font-bold text-[#020D31] link-effect-b">
               Xem thêm
             </button>
           </div>
@@ -116,7 +116,7 @@ const ContentAdvise = (props: Props) => {
             </div>
           </div>
           <div>
-            <button className="text-base font-bold text-[#020D31] underline">
+            <button className="text-base font-bold text-[#020D31] link-effect-b">
               Xem thêm
             </button>
           </div>
@@ -157,7 +157,7 @@ const ContentAdvise = (props: Props) => {
             </div>
           </div>
           <div>
-            <button className="text-base font-bold text-[#FFF] underline">
+            <button className="text-base font-bold text-[#FFF] link-effect">
               Xem thêm
             </button>
           </div>

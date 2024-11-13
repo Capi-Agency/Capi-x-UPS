@@ -8,7 +8,7 @@ const ServiceStock = (props: Props) => {
     <div className="mt-[-1px] bg-[#000] pb-[120px] pt-[61px]">
       <div className="custom-container">
         <div className="rounded-[12px] bg-[#1A1711] lg:rounded-[24px]">
-          <div className="flex flex-col-reverse gap-5 md:grid md:grid-cols-[40%,auto] md:items-center md:justify-between lg:gap-0 lg2:grid-cols-[28%,auto]">
+          <div className="flex flex-col-reverse gap-5 overflow-hidden md:grid md:grid-cols-[40%,auto] md:items-center md:justify-between lg:gap-0 lg2:grid-cols-[28%,auto]">
             <div
               className="p-5 md:py-0 md:pl-5 md:pr-0 lg:pl-10 lg2:pl-[50px]"
               data-aos="fade-up"

@@ -2,7 +2,6 @@
 import React from 'react';
 import { MarqueeDemo } from './Marquee';
 import NextImg from '../common/next-img';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Link from 'next/link';
@@ -120,6 +119,60 @@ const Banner = ({ data }: Props) => {
           ))}
         </div>
       </div>
+      {/* <div
+        className="mx-auto mt-6 flex max-w-full flex-col items-center gap-4 px-0 md:mt-10 md:max-w-[700px] md:flex-row md:gap-6 md:px-6 lg:mt-[50px] lg:max-w-[870px] lg:px-0 xl:max-w-[1130px] 2xl:mt-[60px] 2xl:max-w-[1390px] 2xl:gap-9 3xl:mt-[70px]"
+        data-aos="fade-up"
+      >
+        <p className="text-sm font-medium text-[#FFF] md:w-20 md:min-w-20 lg:w-[110px] lg:min-w-[110px] lg:text-xl">
+          Top đầu tư của tuần
+        </p>
+        <Swiper
+          breakpoints={{
+            1600: {
+              slidesPerView: 5,
+              spaceBetween: 30,
+            },
+            1440: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            0: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+          }}
+          className="mySwiper"
+        >
+          {userData.map((user, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className={`flex items-center gap-3 md:gap-5 ${index === 0 ? 'ml-6 md:ml-auto' : ''}`}
+              >
+                <div className="relative h-10 w-10 flex-shrink-0 lg:h-[54px] lg:w-[54px]">
+                  <NextImg
+                    src={user.image}
+                    alt={user.name}
+                    objectFit="cover"
+                    className="rounded-full"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-nowrap text-sm font-medium text-[#FFF] lg:text-xl">
+                    {user.name}
+                  </span>
+                  <span className="text-xs font-medium text-[#05BE5A] lg:text-base">
+                    {user.percentage}
+                  </span>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div> */}
       <div data-aos="fade-up">
         <MarqueeDemo />
       </div>

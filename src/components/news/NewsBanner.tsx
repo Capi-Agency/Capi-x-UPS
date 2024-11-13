@@ -1,5 +1,6 @@
 import React from 'react';
 import NextImg from '../common/next-img';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -26,23 +27,25 @@ const NewsBanner = (props: Props) => {
             tranh cử ở Bắc Carolina
           </p>
         </div>
-        <button className="flex items-center gap-3 font-bold">
-          Xem chi tiết
-          <i>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="12"
-              viewBox="0 0 16 12"
-              fill="none"
-            >
-              <path
-                d="M1 5.40234C0.585786 5.40234 0.25 5.73813 0.25 6.15234C0.25 6.56656 0.585786 6.90234 1 6.90234V5.40234ZM15.6725 6.68267C15.9654 6.38978 15.9654 5.91491 15.6725 5.62201L10.8995 0.849043C10.6066 0.556149 10.1317 0.556149 9.83883 0.849043C9.54594 1.14194 9.54594 1.61681 9.83883 1.9097L14.0815 6.15234L9.83883 10.395C9.54594 10.6879 9.54594 11.1628 9.83883 11.4556C10.1317 11.7485 10.6066 11.7485 10.8995 11.4556L15.6725 6.68267ZM1 6.90234H15.1421V5.40234H1V6.90234Z"
-                fill="white"
-              />
-            </svg>
-          </i>
-        </button>
+        <Link href={'/tin-tuc/chi-tiet-tin-tuc'}>
+          <button className="flex items-center gap-3 font-bold">
+            Xem chi tiết
+            <i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="12"
+                viewBox="0 0 16 12"
+                fill="none"
+              >
+                <path
+                  d="M1 5.40234C0.585786 5.40234 0.25 5.73813 0.25 6.15234C0.25 6.56656 0.585786 6.90234 1 6.90234V5.40234ZM15.6725 6.68267C15.9654 6.38978 15.9654 5.91491 15.6725 5.62201L10.8995 0.849043C10.6066 0.556149 10.1317 0.556149 9.83883 0.849043C9.54594 1.14194 9.54594 1.61681 9.83883 1.9097L14.0815 6.15234L9.83883 10.395C9.54594 10.6879 9.54594 11.1628 9.83883 11.4556C10.1317 11.7485 10.6066 11.7485 10.8995 11.4556L15.6725 6.68267ZM1 6.90234H15.1421V5.40234H1V6.90234Z"
+                  fill="white"
+                />
+              </svg>
+            </i>
+          </button>
+        </Link>
       </div>
       <div className="relative h-full w-full">
         <NextImg

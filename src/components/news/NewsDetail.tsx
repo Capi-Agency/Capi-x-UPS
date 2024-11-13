@@ -104,7 +104,7 @@ const news = [
 const NewsDetail = (props: Props) => {
   return (
     <div>
-      <section className="custom-container 3xl:!max-w-[calc(1280px+48px)] mt-16">
+      <section className="custom-container mt-16 3xl:!max-w-[calc(1280px+48px)]">
         <div
           className="relative h-[400px] w-full"
           data-aos="fade-up"
@@ -118,7 +118,7 @@ const NewsDetail = (props: Props) => {
           />
         </div>
       </section>
-      <section className="custom-container 2xl:!max-w-[calc(1120px+48px)] mt-10">
+      <section className="custom-container mt-10 2xl:!max-w-[calc(1120px+48px)]">
         <div className="grid grid-cols-[auto,260px] gap-[60px]">
           <div data-aos="fade-up" data-aos-delay="200">
             <h1 className="text-[32px] font-semibold leading-[40px] text-[#15171E]">
@@ -257,7 +257,7 @@ const NewsDetail = (props: Props) => {
         </div>
       </section>
       {/* Cùng chuyên mục */}
-      <section className="custom-container 3xl:!max-w-[calc(1280px+48px)] mt-[60px]">
+      <section className="custom-container mt-[60px] 3xl:!max-w-[calc(1280px+48px)]">
         <h2
           className="text-[40px] font-bold text-[#0C1C28]"
           data-aos="fade-up"
@@ -270,7 +270,8 @@ const NewsDetail = (props: Props) => {
           {news.slice(0, 4).map((newItem, index) => {
             const delay = ((index % 4) + 1) * 200;
             return (
-              <div
+              <Link
+                href={'/tin-tuc/chi-tiet-tin-tuc'}
                 key={newItem.id}
                 className="rounded-t-[8px]"
                 data-aos="fade-up"
@@ -298,7 +299,7 @@ const NewsDetail = (props: Props) => {
                     Trải nghiệm
                   </button>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

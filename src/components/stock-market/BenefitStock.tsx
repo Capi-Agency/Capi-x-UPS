@@ -77,7 +77,11 @@ const BenefitStock = (props: Props) => {
             );
           })}
         </div>
-        <button className="btn mx-auto mt-[60px] !bg-[#D0F500]">
+        <button
+          className="btn mx-auto mt-[60px] !bg-[#D0F500]"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           Mở tài khoản ngay
           <div className="relative h-4 w-4 lg:h-6 lg:w-6">
             <NextImg src="/assets/icons/UPs.svg" alt="Capi" objectFit="cover" />

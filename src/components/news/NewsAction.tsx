@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import NextImg from '../common/next-img';
 import NewsBanner from './NewsBanner';
 import Link from 'next/link';
+import HeaderNews from './HeaderNews';
 type Props = {};
 const news = [
   {
@@ -106,105 +107,8 @@ const news = [
 const NewsAction = (props: Props) => {
   return (
     <div>
-      <div className="mx-auto mt-16 custom-container 3xl:!max-w-[calc(1280px+48px)]">
-        <h1 className="mb-7 text-[40px] font-bold leading-[54px] text-[#0C1C28]">
-          Tin tức UPS
-        </h1>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-10">
-            <Link
-              href={'tin-tuc'}
-              className={`pb-[7px] text-base font-bold leading-normal text-[#525358] transition-all duration-150 ease-in-out`}
-            >
-              Tất cả
-            </Link>
-            <Link
-              href={'tin-hoat-dong'}
-              className={`border-b border-[#E50261] pb-[7px] text-base font-bold leading-normal text-[#15171E] transition-all duration-150 ease-in-out`}
-            >
-              Tin hoạt động
-            </Link>
-            <Link
-              href={'tin-dau-gia'}
-              className={`pb-[7px] text-base font-bold leading-normal text-[#525358] transition-all duration-150 ease-in-out`}
-            >
-              Tin đấu giá
-            </Link>
-            <Link
-              href={'cong-bo-thong-tin'}
-              className={`pb-[7px] text-base font-bold leading-normal text-[#525358] transition-all duration-150 ease-in-out`}
-            >
-              Công bố thông tin
-            </Link>
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Tìm kiếm"
-                className="w-[250px] rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-[7px] outline-none placeholder:text-sm placeholder:font-medium placeholder:leading-none placeholder:text-[#525358]"
-              />
-              <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
-                <i>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="25"
-                    viewBox="0 0 24 25"
-                    fill="none"
-                  >
-                    <path
-                      d="M11.5 21.5C16.7467 21.5 21 17.2467 21 12C21 6.75329 16.7467 2.5 11.5 2.5C6.25329 2.5 2 6.75329 2 12C2 17.2467 6.25329 21.5 11.5 21.5Z"
-                      stroke="#161519"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M22 22.5L20 20.5"
-                      stroke="#161519"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </i>
-              </div>
-            </div>
-            <div className="relative cursor-pointer rounded-[6px] bg-[rgba(144,145,156,0.08)]">
-              <select className="block cursor-pointer appearance-none bg-transparent py-2 pl-3 pr-7 text-sm font-medium text-[#525358] focus:outline-none">
-                <option value="1">Tất cả danh mục</option>
-                <option value="2">Tin hoạt động</option>
-                <option value="3">Tin đấu giá</option>
-                <option value="5">Công bố thông tin</option>
-              </select>
-              <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
-                <div className="relative h-[6px] w-[10px]">
-                  <NextImg
-                    src="/assets/icons/expand_more.svg"
-                    alt="UPS"
-                    objectFit="cover"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="relative flex cursor-pointer items-center gap-2 rounded-[6px] bg-[rgba(144,145,156,0.08)]">
-              <select className="block cursor-pointer appearance-none bg-transparent py-2 pl-3 pr-7 text-sm font-medium text-[#525358] focus:outline-none">
-                <option value="1">Mới nhất</option>
-                <option value="2">Cũ nhất</option>
-              </select>
-              <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
-                <div className="relative h-[6px] w-[10px]">
-                  <NextImg
-                    src="/assets/icons/expand_more.svg"
-                    alt="UPS"
-                    objectFit="cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="custom-container mx-auto mt-16 3xl:!max-w-[calc(1280px+48px)]">
+        <HeaderNews />
         <NewsBanner />
         {/* Tin hoạt động */}
         <section>
@@ -254,7 +158,8 @@ const NewsAction = (props: Props) => {
               news.map((newItem: any, index: number) => {
                 const delay = ((index % 4) + 1) * 200;
                 return (
-                  <div
+                  <Link
+                    href={'/tin-tuc/chi-tiet-tin-tuc'}
                     key={newItem.id}
                     className="rounded-t-[8px]"
                     data-aos="fade-up"
@@ -282,7 +187,7 @@ const NewsAction = (props: Props) => {
                         Trải nghiệm
                       </button>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
           </div>

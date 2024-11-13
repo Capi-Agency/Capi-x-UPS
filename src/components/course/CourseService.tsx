@@ -11,7 +11,7 @@ const CourseService = ({ data }: Props) => {
   return (
     <div className="custom-container mt-12 lg2:mt-20 2xl:mt-[100px] 3xl:mt-[120px] 3xl:!max-w-[1280px]">
       {/* banner 2 */}
-      <div className="rounded-[12px] bg-[#000] lg:rounded-[24px]">
+      <div className="overflow-hidden rounded-[12px] bg-[#000] lg:rounded-[24px]">
         <div className="flex flex-col-reverse gap-5 md:grid md:grid-cols-[40%,auto] md:items-center md:justify-between lg:gap-0 lg2:grid-cols-[34%,auto]">
           <div
             className="p-5 md:py-0 md:pl-5 md:pr-0 lg:pl-10 lg2:pl-[50px]"

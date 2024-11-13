@@ -7,8 +7,22 @@ const BannerStock = (props: Props) => {
   return (
     <div className="bg-[#000] pb-10 pt-16">
       <div className="custom-container">
-        <div className="flex h-[658px] w-full items-center justify-center bg-[url('/assets/image/banner-stock.png')] bg-cover bg-center">
-          <div className="" data-aos="fade-up" data-aos-delay="200">
+        <div className="relative flex h-[658px] w-full items-center justify-center">
+          <div
+            className="absolute inset-0"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div className="relative mx-auto h-[658px] w-full">
+              <NextImg
+                src="/assets/image/banner-stock.png"
+                alt="Capi"
+                objectFit="contain"
+                className=""
+              />
+            </div>
+          </div>
+          <div className="" data-aos="fade-up" data-aos-delay="400">
             <h1 className="text-[72px] font-bold leading-[80px] text-[#D0F500]">
               Cổ Phiếu
             </h1>

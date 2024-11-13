@@ -1,10 +1,10 @@
-"use client";
-import Link from "next/link";
-import React from "react";
-import NextImg from "../next-img";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+'use client';
+import Link from 'next/link';
+import React from 'react';
+import NextImg from '../next-img';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 type Props = {};
 
@@ -24,7 +24,7 @@ const TheFooter = (props: Props) => {
             <span className="w-[90%] text-[20px] font-bold text-[#FFF] lg:w-[85%] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:w-[70%] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[56px]">
               <span className="text-[#02E56A]">
                 Kiến tạo tương lai vẹn toàn
-              </span>{" "}
+              </span>{' '}
               với nền tảng đầu tư đột phá
             </span>
             <p className="text-[14px] font-medium leading-[22px] text-[#8C9AA4] lg:w-[80%] lg:text-base lg:leading-[28px] lg2:text-[18px] 2xl:w-[70%]">
@@ -145,7 +145,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/"
-                      className="text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Ưu đãi
                     </a>
@@ -153,7 +153,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/"
-                      className="text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Biểu phí giao dịch
                     </a>
@@ -171,7 +171,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/"
-                      className="text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Tư vấn tài chính
                     </a>
@@ -179,7 +179,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/"
-                      className="text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Tin đấu giá
                     </a>
@@ -197,7 +197,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/"
-                      className="text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Nhận định thị trường
                     </a>
@@ -205,7 +205,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/"
-                      className="text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Hướng dẫn sử dụng
                     </a>
@@ -223,7 +223,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/"
-                      className="text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Công bố thông tin
                     </a>
@@ -231,7 +231,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/"
-                      className="text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Gia nhập UPS
                     </a>

@@ -6,8 +6,12 @@ type Props = {};
 const BannerAdvise = (props: Props) => {
   return (
     <div className="custom-container">
-      <div className="relative flex justify-end rounded-b-[40px] bg-[#0D0D59] p-[60px]">
-        <div className="absolute bottom-[60px] left-[60px]">
+      <div className="relative flex justify-end overflow-hidden rounded-b-[40px] bg-[#0D0D59] p-[60px]">
+        <div
+          className="absolute bottom-[60px] left-[60px]"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <span className="leading- text-[18px] font-medium text-[#F51666]">
             #UPS
           </span>
@@ -40,7 +44,11 @@ const BannerAdvise = (props: Props) => {
             </i>
           </button>
         </div>
-        <div className="relative -mb-6 h-[693px] w-[782px]">
+        <div
+          className="relative -mb-6 h-[693px] w-[782px]"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
           <NextImg
             src="/assets/image/banner-tuvan.png"
             alt="Capi"

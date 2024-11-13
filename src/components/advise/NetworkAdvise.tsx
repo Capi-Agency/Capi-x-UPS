@@ -50,7 +50,7 @@ const cardsData = [
 const NetworkAdvise = (props: Props) => {
   return (
     <div className="custom-container mt-[120px]">
-      <div className="text-center">
+      <div className="text-center" data-aos="fade-up" data-aos-delay="200">
         <h3 className="text-[40px] font-semibold text-[#1D1E22]">
           Cổ phần hóa và phát hành chứng khoán
         </h3>
@@ -64,6 +64,7 @@ const NetworkAdvise = (props: Props) => {
       <div className="mt-10">
         <div className="flex gap-6">
           {cardsData.map((card, index) => {
+            const delay = ((index % 4) + 1) * 200;
             const [position, setPosition] = useState({ x: 0, y: 0 });
             const [isHovered, setIsHovered] = useState(false);
             const cardRef = useRef<HTMLDivElement>(null);
@@ -108,6 +109,8 @@ const NetworkAdvise = (props: Props) => {
                   onMouseMove={handleMouseMove}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
+                  data-aos="fade-up"
+                  data-aos-delay={delay}
                 >
                   <div className="relative h-[303px] w-full">
                     <NextImg src={card.imgSrc} alt="Capi" objectFit="contain" />
