@@ -44,7 +44,7 @@ const Navigation = () => {
             <input
               type="text"
               placeholder="Tìm kiếm"
-              className="w-[250px] rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-[7px] outline-none placeholder:text-sm placeholder:font-medium placeholder:leading-none placeholder:text-[#525358]"
+              className="w-[250px] rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-[7px] text-sm font-medium text-[#525358] outline-none placeholder:text-sm placeholder:font-medium placeholder:leading-none placeholder:text-[#525358]"
             />
             <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
               <i>

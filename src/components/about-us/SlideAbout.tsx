@@ -30,8 +30,6 @@ const SlideAbout = ({ data }: Props) => {
           },
         }}
         className="mySwiper"
-        data-aos="fade-up"
-        data-aos-delay="200"
       >
         {data?.map(({ item }: any, index: number) => {
           const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -63,6 +61,7 @@ const SlideAbout = ({ data }: Props) => {
           const handleMouseLeave = () => {
             setIsHovered(false);
           };
+          const delay = ((index % 4) + 1) * 200;
           return (
             <SwiperSlide
               key={index}
@@ -74,6 +73,8 @@ const SlideAbout = ({ data }: Props) => {
                 onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                data-aos="fade-up"
+                data-aos-delay={delay}
               >
                 <div className="flex flex-col gap-2">
                   <span className="text-[14px] font-medium leading-[22px] text-[#FFF] lg:text-base lg:leading-[28px] lg2:text-[18px]">

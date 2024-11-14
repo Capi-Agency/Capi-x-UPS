@@ -8,44 +8,49 @@ type Props = {
 
 const CourseActicle = ({ data }: Props) => {
   return (
-    <div
-      className="mx-auto mt-10 md:max-w-[520px] lg:mt-[60px] lg:max-w-[700px] lg2:mt-20 lg2:max-w-[820px] xl:max-w-[900px] 2xl:max-w-[1024px]"
-      data-aos="fade-up"
-      data-aos-delay="200"
-    >
+    <div className="mx-auto mt-10 md:max-w-[520px] lg:mt-[60px] lg:max-w-[700px] lg2:mt-20 lg2:max-w-[820px] xl:max-w-[900px] 2xl:max-w-[1024px]">
       <div className="grid grid-rows-3">
-        {data.question.map(({ item }: any, index: any) => (
-          <a
-            key={index}
-            href=""
-            className={`flex items-center justify-between gap-[30px] border-[#60606B] border-opacity-65 py-3 lg:py-6 ${
-              index === 0 ? 'border-y' : 'border-b'
-            } `}
-          >
-            <div className="flex items-center gap-3 lg:gap-5">
-              <div className="relative h-[24px] w-[24px] min-w-6">
+        {data.question.map(({ item }: any, index: any) => {
+          const delay = ((index % 3) + 1) * 200;
+          return (
+            <a
+              key={index}
+              href=""
+              className={`flex items-center justify-between gap-[30px] border-[#60606B] border-opacity-65 py-3 lg:py-6 ${
+                index === 0 ? 'border-y' : 'border-b'
+              } `}
+              data-aos="fade-up"
+              data-aos-delay={delay}
+            >
+              <div className="flex items-center gap-3 lg:gap-5">
+                <div className="relative h-[24px] w-[24px] min-w-6">
+                  <NextImg
+                    src="/assets/icons/document-text2.svg"
+                    alt="Capi"
+                    objectFit="cover"
+                  />
+                </div>
+                <p className="text-[14px] font-medium leading-[22px] text-[#15171E] lg:text-[18px] lg:leading-normal lg2:text-[24px]">
+                  {item.ask}
+                </p>
+              </div>
+              <div className="relative h-[24px] w-[24px] cursor-pointer lg:h-7 lg:w-7 lg2:h-[32px] lg2:w-[32px]">
                 <NextImg
-                  src="/assets/icons/document-text2.svg"
+                  src="/assets/icons/chevron-down.svg"
                   alt="Capi"
                   objectFit="cover"
+                  className="rotate-90"
                 />
               </div>
-              <p className="text-[14px] font-medium leading-[22px] text-[#15171E] lg:text-[18px] lg:leading-normal lg2:text-[24px]">
-                {item.ask}
-              </p>
-            </div>
-            <div className="relative h-[24px] w-[24px] cursor-pointer lg:h-7 lg:w-7 lg2:h-[32px] lg2:w-[32px]">
-              <NextImg
-                src="/assets/icons/chevron-down.svg"
-                alt="Capi"
-                objectFit="cover"
-                className="rotate-90"
-              />
-            </div>
-          </a>
-        ))}
+            </a>
+          );
+        })}
       </div>
-      <button className="btn active1 mx-auto mt-6 !bg-[#15171E] !text-[#FFF] lg:mt-[50px]">
+      <button
+        className="btn active1 mx-auto mt-6 !bg-[#15171E] !text-[#FFF] lg:mt-[50px]"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
         Xem tất cả bài viết
         <svg
           xmlns="http://www.w3.org/2000/svg"

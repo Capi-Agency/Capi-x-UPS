@@ -26,35 +26,35 @@ const data = [
 
 const BenefitStock = (props: Props) => {
   return (
-    <div className="bg-[#1A1711] py-[90px]">
+    <div className="mt-[-1px] bg-[#1A1711] py-6 md:py-10 lg2:py-[50px] xl:py-[60px] 2xl:py-20 3xl:py-[90px]">
       <div className="custom-container 3xl:!max-w-[calc(1280px+48px)]">
         <div
           className="flex flex-col text-center"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <span className="text-[18px] font-medium leading-[40px] text-[#A66CFF]">
+          <span className="text-base font-medium leading-[24px] text-[#A66CFF] lg2:text-[18px] lg2:leading-[40px]">
             #kienthucchungkhoan
           </span>
-          <h3 className="mb-6 mt-2 text-[48px] font-bold leading-[54px] text-[#FFF]">
+          <h3 className="mb-3 mt-2 text-[24px] font-bold text-[#FFF] md:mb-4 lg:mb-5 lg:text-[40px] lg:leading-[46px] 2xl:mb-6 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[54px]">
             Lợi ích khi giao dịch cổ phiếu cùng{' '}
             <span className="text-[#D0F500]">UPS</span>
           </h3>
-          <p className="text-[18px] font-medium leading-[28px] text-[#FFF]">
+          <p className="text-base font-medium leading-[28px] text-[#FFF] lg2:text-[18px]">
             Chuyên nghiệp hơn nữa, tự do tài chính hơn nữa
           </p>
         </div>
-        <div className="mt-[60px] flex flex-col gap-[140px] md:grid md:grid-cols-3">
+        <div className="my-[26px] flex flex-col gap-[26px] md:my-5 md:grid md:grid-cols-3 md:gap-[44px] lg:gap-[52px] lg2:gap-[80px] 2xl:my-10 2xl:gap-[100px] 3xl:my-[60px] 3xl:gap-[140px]">
           {data.map((item: any, index: number) => {
             const delay = ((index % 3) + 1) * 200;
             return (
               <div
                 key={index}
-                className={`flex flex-col justify-between`}
+                className={`flex flex-col gap-3 md:gap-2 lg2:gap-4 2xl:gap-5`}
                 data-aos="fade-up"
                 data-aos-delay={delay}
               >
-                <div className="relative mx-auto h-[220px] w-[220px]">
+                <div className="relative mx-auto size-[100px] md:size-20 lg:size-[120px] lg2:size-[160px] xl:size-[180px] 2xl:size-[200px] 3xl:size-[220px]">
                   <NextImg
                     src={item.imageSrc}
                     alt="Capi"
@@ -62,23 +62,23 @@ const BenefitStock = (props: Props) => {
                     className=""
                   />
                 </div>
-                <div className="mx-auto mt-5 text-center">
-                  <span className="text-[18px] font-medium leading-[40px] text-[#FFF]">
+                <div className="mx-auto text-center">
+                  <span className="text-base font-medium leading-[24px] text-[#FFF] lg:text-[18px] lg:leading-[40px]">
                     #{index + 1}
                   </span>
-                  <h4 className="mx-auto mb-5 mt-2 w-[70%] text-[20px] font-bold text-[#FFF] lg:text-[24px] lg:leading-[40px] lg2:text-[30px] 2xl:text-[32px]">
+                  <h4 className="mx-auto w-[70%] text-[24px] md:text-[20px] font-bold text-[#FFF] lg:text-[24px] lg:leading-[40px] lg2:text-[30px] 2xl:text-[32px]">
                     {item.title}
                   </h4>
-                  <p className="text-[14px] font-medium leading-[22px] text-[rgba(255,255,255,0.75)] lg:text-[16px] lg:leading-[28px] lg2:text-[18px]">
-                    {item.description}
-                  </p>
                 </div>
+                <p className="mx-auto text-center text-base font-medium leading-[22px] text-[rgba(255,255,255,0.75)] md:text-[14px] lg:text-[16px] lg:leading-[28px] lg2:text-[18px]">
+                  {item.description}
+                </p>
               </div>
             );
           })}
         </div>
         <button
-          className="btn mx-auto mt-[60px] !bg-[#D0F500]"
+          className="btn mx-auto !bg-[#D0F500]"
           data-aos="fade-up"
           data-aos-delay="200"
         >

@@ -25,7 +25,7 @@ const ServiceAbout = ({ data }: Props) => {
               <div
                 className="flex cursor-pointer items-center gap-2"
                 data-aos="fade-up"
-                data-aos-delay="600"
+                data-aos-delay="400"
               >
                 <button className="text-nowrap text-[14px] font-medium leading-[22px] text-[#FFF] lg:text-[18px] lg:leading-[28px]">
                   Xem tất cả

@@ -13,15 +13,19 @@ const ReviewTech = ({ data }: Props) => {
   return (
     <div className="mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
       <div className="custom-container">
-        <div
-          className="mb-6 flex items-center justify-between border-[#60606B] md:border-b md:pb-5 lg:mb-10"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <h4 className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[30px]">
+        <div className="mb-6 flex items-center justify-between border-[#60606B] md:border-b md:pb-5 lg:mb-10">
+          <h4
+            className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[30px]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             Đánh giá từ khách hàng
           </h4>
-          <div className="float-right hidden items-center gap-2 md:flex">
+          <div
+            className="float-right hidden items-center gap-2 md:flex"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <button
               id="prevBtn"
               className="group flex h-[28px] w-[42px] items-center justify-center rounded-full bg-[#02E56A] hover:bg-[#15171E]"
@@ -87,18 +91,18 @@ const ReviewTech = ({ data }: Props) => {
             },
           }}
           className="mySwiper"
-          data-aos="fade-up"
-          data-aos-delay="200"
         >
           {data.map(({ item }: any, index: any) => {
+            const delay = ((index % 3) + 1) * 200;
             return (
               <SwiperSlide
                 key={index}
                 className={`${index === 0 ? 'ml-6 lg:ml-0' : ''}`}
               >
                 <div
-                  key={index}
                   className={`flex flex-col justify-between rounded-[16px] bg-[rgba(144,145,156,0.08)] p-5 lg:p-10`}
+                  data-aos="fade-up"
+                  data-aos-delay={delay}
                 >
                   <div className="flex items-center gap-4">
                     <div className="relative h-[56px] w-[56px] rounded-full">

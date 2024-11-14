@@ -58,17 +58,21 @@ const BannerAbout = ({ data }: Props) => {
             />
           </div>
         </div>
-        <div
-          className="custom-container mt-6 flex items-end justify-between lg:mt-[30px]"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
-          <div className="w-full border-t-[1px] border-[#000] pt-3 md:pt-6 lg:w-[400px] lg:pt-[40px]">
+        <div className="custom-container mt-6 flex items-end justify-between lg:mt-[30px]">
+          <div
+            className="w-full border-t-[1px] border-[#000] pt-3 md:pt-6 lg:w-[400px] lg:pt-[40px]"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <p className="text-[14px] font-medium leading-[22px] text-[#074E28] lg:text-[20px] lg:leading-[28px]">
               {data.sub_title}
             </p>
           </div>
-          <div className="hidden cursor-pointer lg:block">
+          <div
+            className="hidden cursor-pointer lg:block"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <i>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

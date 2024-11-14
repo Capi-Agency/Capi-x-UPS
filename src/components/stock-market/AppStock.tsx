@@ -7,9 +7,9 @@ const AppStock = (props: Props) => {
   return (
     <div className="custom-container">
       <div className="mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
-        <div className="flex flex-col-reverse rounded-[12px] bg-[#D0F500] md:grid md:grid-cols-[214px,auto] md:gap-16 md:rounded-[24px] md:pl-5 lg:grid-cols-[341px,auto] lg:gap-8 lg:pl-8 lg2:gap-2 lg2:pl-[50px]">
+        <div className="flex flex-col-reverse gap-5 rounded-[12px] bg-[#D0F500] md:grid md:grid-cols-[251px,auto] md:gap-8 md:rounded-[24px] md:pl-5 lg:grid-cols-[300px,auto] lg:gap-[60px] lg:pl-8 lg2:grid-cols-[330px,auto] lg2:gap-[20px] lg2:pl-[50px] 2xl:gap-[60px] 3xl:gap-[99px]">
           <div
-            className="mb-5 mt-6 flex flex-col px-5 md:mt-0 md:place-self-end md:px-0 lg:mb-[50px]"
+            className="mb-5 mt-6 flex flex-col px-5 md:mt-0 md:place-self-end md:px-0 lg:mb-6 lg2:mb-[50px]"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -58,15 +58,15 @@ const AppStock = (props: Props) => {
             </div>
           </div>
           <div
-            className="relative h-[316px] w-full md:h-[380px] lg:h-[450px] lg2:h-[600px] 2xl:h-[700px] 3xl:h-[790px]"
+            className="relative h-[356px] w-full md:h-[380px] lg:h-[460px] lg2:h-[600px] 2xl:h-[700px] 3xl:h-[790px]"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <NextImg
               src="/assets/image/app-stock.png"
               alt="Capi"
-              objectFit="contain"
-              className="rounded-r-3xl"
+              objectFit="cover"
+              className="object-left-top"
             />
           </div>
         </div>

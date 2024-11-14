@@ -1,38 +1,38 @@
-"use client";
-import React, { useState } from "react";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
-import NextImg from "../common/next-img";
+'use client';
+import React, { useState } from 'react';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@radix-ui/react-tabs';
+import NextImg from '../common/next-img';
 
 type Props = {};
 
 const CourseSchedule = (props: Props) => {
   const schedules = [
-    { id: 1, name: "Thứ 3, 15/12" },
-    { id: 2, name: "Thứ 7, 18/12" },
-    { id: 3, name: "Thứ 2, 22/12" },
-    { id: 4, name: "Thứ 5, 30/12" },
+    { id: 1, name: 'Thứ 3, 15/12' },
+    { id: 2, name: 'Thứ 7, 18/12' },
+    { id: 3, name: 'Thứ 2, 22/12' },
+    { id: 4, name: 'Thứ 5, 30/12' },
   ];
   const contentData = [
     {
-      title: "Tại sao nên nắm giữ ít nhất 1 cổ phiếu BĐS",
-      author: "Nguyễn Tuấn",
-      role: "Chuyên gia đầu tư",
-      duration: "~12 phút",
-      viewers: "140 người đặt lịch xem",
+      title: 'Tại sao nên nắm giữ ít nhất 1 cổ phiếu BĐS',
+      author: 'Nguyễn Tuấn',
+      role: 'Chuyên gia đầu tư',
+      duration: '~12 phút',
+      viewers: '140 người đặt lịch xem',
     },
     {
-      title: "12 cách thức giúp bạn nhận định mã cổ phiếu tăng trưởng bền vững",
-      author: "Trung Kiên",
-      role: "Chuyên gia đầu tư",
-      duration: "~20 phút",
-      viewers: "241 người đặt lịch xem",
+      title: '12 cách thức giúp bạn nhận định mã cổ phiếu tăng trưởng bền vững',
+      author: 'Trung Kiên',
+      role: 'Chuyên gia đầu tư',
+      duration: '~20 phút',
+      viewers: '241 người đặt lịch xem',
     },
     {
-      title: "Vào tiền thế nào, đầu tư ra sao với chuyên gia đặt lệnh",
-      author: "Thái Sơn",
-      role: "Chuyên gia đầu tư",
-      duration: "~30 phút",
-      viewers: "400 người đặt lịch xem",
+      title: 'Vào tiền thế nào, đầu tư ra sao với chuyên gia đặt lệnh',
+      author: 'Thái Sơn',
+      role: 'Chuyên gia đầu tư',
+      duration: '~30 phút',
+      viewers: '400 người đặt lịch xem',
     },
   ];
   const [currentSchedule, setCurrentSchedule] = useState<number>(
@@ -48,21 +48,78 @@ const CourseSchedule = (props: Props) => {
       case 1:
         return (
           <div>
-            {contentData.map((item, index) => (
-              <div
-                key={index}
-                className={`w-full grid-cols-12 gap-10 border-[#60606B] border-opacity-65 py-5 md:grid md:gap-6 md:py-6 lg:gap-10 ${
-                  index === contentData.length - 1 ? "border-none" : "border-b"
-                } `}
-              >
-                <div className="col-span-4 mb-6 flex items-center justify-between gap-4 md:mb-0 md:items-start">
-                  <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
-                    {item.title}
-                  </p>
-                  <div className="group block md:hidden">
+            {contentData.map((item, index) => {
+              const delay = ((index % 3) + 1) * 200;
+              return (
+                <div
+                  key={index}
+                  className={`w-full grid-cols-12 gap-10 border-[#60606B] border-opacity-65 py-5 md:grid md:gap-6 md:py-6 lg:gap-10 ${
+                    index === contentData.length - 1
+                      ? 'border-none'
+                      : 'border-b'
+                  } `}
+                  data-aos="fade-up"
+                  data-aos-delay={delay}
+                >
+                  <div className="col-span-4 mb-6 flex items-center justify-between gap-4 md:mb-0 md:items-start">
+                    <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
+                      {item.title}
+                    </p>
+                    <div className="group block md:hidden">
+                      <a
+                        href=""
+                        className="md::text-base flex items-center gap-2 text-nowrap text-sm font-bold leading-[27px] tracking-[0.328px] text-[#FF6D00]"
+                      >
+                        Chi tiết
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <mask
+                            id="mask0_3803_10961"
+                            maskUnits="userSpaceOnUse"
+                            x="0"
+                            y="0"
+                            width="20"
+                            height="20"
+                          >
+                            <rect width="20" height="20" fill="#D9D9D9" />
+                          </mask>
+                          <g mask="url(#mask0_3803_10961)">
+                            <path
+                              d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
+                              fill="#FF6D00"
+                            />
+                          </g>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-span-6 flex justify-between gap-10 md:justify-evenly">
+                    <div className="col-span-3 flex flex-col">
+                      <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
+                        {item.author}
+                      </p>
+                      <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
+                        {item.role}
+                      </p>
+                    </div>
+                    <div className="col-span-3 flex flex-col">
+                      <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
+                        {item.duration}
+                      </p>
+                      <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
+                        {item.viewers}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="group col-span-2 hidden justify-self-end md:block">
                     <a
                       href=""
-                      className="md::text-base flex items-center gap-2 text-nowrap text-sm font-bold leading-[27px] tracking-[0.328px] text-[#FF6D00]"
+                      className="flex items-center gap-2 text-nowrap font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] group-hover:text-[#FF6D00]"
                     >
                       Chi tiết
                       <svg
@@ -85,66 +142,16 @@ const CourseSchedule = (props: Props) => {
                         <g mask="url(#mask0_3803_10961)">
                           <path
                             d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
-                            fill="#FF6D00"
+                            fill="#0C1C28"
+                            className="group-hover:fill-[#FF6D00]"
                           />
                         </g>
                       </svg>
                     </a>
                   </div>
                 </div>
-                <div className="col-span-6 flex justify-between gap-10 md:justify-evenly">
-                  <div className="col-span-3 flex flex-col">
-                    <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
-                      {item.author}
-                    </p>
-                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
-                      {item.role}
-                    </p>
-                  </div>
-                  <div className="col-span-3 flex flex-col">
-                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
-                      {item.duration}
-                    </p>
-                    <p className="text-sm leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
-                      {item.viewers}
-                    </p>
-                  </div>
-                </div>
-                <div className="group col-span-2 hidden justify-self-end md:block">
-                  <a
-                    href=""
-                    className="flex items-center gap-2 text-nowrap font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] group-hover:text-[#FF6D00]"
-                  >
-                    Chi tiết
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <mask
-                        id="mask0_3803_10961"
-                        maskUnits="userSpaceOnUse"
-                        x="0"
-                        y="0"
-                        width="20"
-                        height="20"
-                      >
-                        <rect width="20" height="20" fill="#D9D9D9" />
-                      </mask>
-                      <g mask="url(#mask0_3803_10961)">
-                        <path
-                          d="M13.125 10.75H4V9.25H13.125L8.9375 5.0625L10 4L16 10L10 16L8.9375 14.9375L13.125 10.75Z"
-                          fill="#0C1C28"
-                          className="group-hover:fill-[#FF6D00]"
-                        />
-                      </g>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         );
       case 2:
@@ -154,7 +161,7 @@ const CourseSchedule = (props: Props) => {
               <div
                 key={index}
                 className={`w-full grid-cols-12 gap-10 border-[#60606B] border-opacity-65 py-5 lg:grid lg:py-6 ${
-                  index === contentData.length - 1 ? "border-none" : "border-b"
+                  index === contentData.length - 1 ? 'border-none' : 'border-b'
                 } `}
               >
                 <div className="col-span-4 mb-6 flex items-center justify-between gap-4 lg:mb-0 lg:items-start">
@@ -256,7 +263,7 @@ const CourseSchedule = (props: Props) => {
               <div
                 key={index}
                 className={`w-full grid-cols-12 gap-10 border-[#60606B] border-opacity-65 py-5 lg:grid lg:py-6 ${
-                  index === contentData.length - 1 ? "border-none" : "border-b"
+                  index === contentData.length - 1 ? 'border-none' : 'border-b'
                 } `}
               >
                 <div className="col-span-4 mb-6 flex items-center justify-between gap-4 lg:mb-0 lg:items-start">
@@ -358,7 +365,7 @@ const CourseSchedule = (props: Props) => {
               <div
                 key={index}
                 className={`w-full grid-cols-12 gap-10 border-[#60606B] border-opacity-65 py-5 lg:grid lg:py-6 ${
-                  index === contentData.length - 1 ? "border-none" : "border-b"
+                  index === contentData.length - 1 ? 'border-none' : 'border-b'
                 } `}
               >
                 <div className="col-span-4 mb-6 flex items-center justify-between gap-4 lg:mb-0 lg:items-start">
@@ -481,8 +488,8 @@ const CourseSchedule = (props: Props) => {
               value={schedule.id.toString()}
               className={`py-[9px] text-[14px] font-medium leading-[22px] text-[#111013] lg:text-[16px] lg:leading-[28px] lg2:text-[18px] ${
                 currentSchedule === schedule.id
-                  ? "border-b-2 border-[#0C1C28]"
-                  : "border-none"
+                  ? 'border-b-2 border-[#0C1C28]'
+                  : 'border-none'
               }`}
             >
               {schedule.name}
