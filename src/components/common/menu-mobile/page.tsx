@@ -134,7 +134,7 @@ const MenuMobile = ({ handleClose }: Props) => (
 
                     <div className="ml-5">
                       <p className="text-sm font-semibold text-gray-100">
-                        Tư vấn tài chính
+                        Dịch vụ Ngân hàng đầu tư
                       </p>
                       <p className="text-sm font-medium text-gray-100">
                         Cùng doanh nghiệp phát triển bền vững
@@ -610,7 +610,7 @@ const AccordionContent = React.forwardRef(
   ({ children, className, ...props }: any, forwardedRef) => (
     <Accordion.Content
       className={cn(
-        'bg-mauve2 text-mauve11 data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown overflow-hidden text-[15px]',
+        'bg-mauve2 text-mauve11 overflow-hidden text-[15px] data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown',
         className,
       )}
       {...props}

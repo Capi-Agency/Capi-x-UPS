@@ -173,7 +173,7 @@ const TheFooter = (props: Props) => {
                       href="/"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
-                      Tư vấn tài chính
+                      Dịch vụ Ngân hàng đầu tư
                     </a>
                   </li>
                   <li>

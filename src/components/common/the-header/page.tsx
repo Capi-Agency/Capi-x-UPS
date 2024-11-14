@@ -152,7 +152,7 @@ const TheHeader = () => {
 
                               <div className="ml-5">
                                 <p className="text-base font-semibold text-[#000]">
-                                  Tư vấn tài chính
+                                  Dịch vụ Ngân hàng đầu tư
                                 </p>
                                 <p className="text-sm font-medium text-[rgba(0,0,0,0.68)]">
                                   Cùng doanh nghiệp phát triển bền vững
@@ -766,7 +766,7 @@ const TheHeader = () => {
         {/* Mobile */}
         {isMenuOpen && (
           <div className="fixed left-0 top-0 h-full w-full overflow-y-scroll bg-[#0F1B0E]">
-            <div className="h-full w-full rounded border bg-[#0F1B0E] px-6 py-5 overflow-y-auto">
+            <div className="h-full w-full overflow-y-auto rounded border bg-[#0F1B0E] px-6 py-5">
               <div className="mb-4 flex items-center justify-between">
                 <div>
                   <Link
