@@ -1,12 +1,19 @@
 'use client';
 import Link from 'next/link';
 import NextImg from '../common/next-img';
+import { useEffect, useState } from 'react';
 
 type Props = {
   data: any;
 };
 
 const Content = ({ data }: Props) => {
+  const [render, setRender] = useState(false);
+
+  useEffect(() => {
+    setRender(true);
+  }, []);
+
   return (
     <>
       <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
@@ -18,9 +25,12 @@ const Content = ({ data }: Props) => {
             data-aos-delay="200"
           >
             <div className="flex flex-col gap-1 md:gap-2 lg:gap-3 2xl:gap-4">
-              <span className="text-[20px] font-bold leading-normal text-[#FFF] lg:text-[24px] lg:leading-[40px] lg2:text-[32px] 2xl:text-[38px] 2xl:leading-[48px] 3xl:text-[40px] 3xl:leading-[50px]">
-                {data.card1.content_card.title}
-              </span>
+              <span
+                className="text-[20px] font-bold leading-normal text-[#FFF] lg:text-[24px] lg:leading-[40px] lg2:text-[32px] 2xl:text-[38px] 2xl:leading-[48px] 3xl:text-[40px] 3xl:leading-[50px]"
+                dangerouslySetInnerHTML={{
+                  __html: render && data.card1.content_card.title,
+                }}
+              ></span>
               <span className="text-[14px] font-medium leading-[22px] text-[#FFF] lg:text-[18px] lg:leading-[28px]">
                 {data.card1.content_card.sub_title}
               </span>
