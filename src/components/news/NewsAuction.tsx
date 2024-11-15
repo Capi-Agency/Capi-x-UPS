@@ -1,9 +1,9 @@
-'use client';
 import Link from 'next/link';
 import NextImg from '../common/next-img';
+
 type Props = {};
 
-const NewsAction = (props: Props) => {
+const NewsAuction = (props: Props) => {
   const news = [
     {
       id: 1,
@@ -106,9 +106,9 @@ const NewsAction = (props: Props) => {
     <section className="custom-container 3xl:!max-w-[calc(1280px+48px)]">
       <div className="mb-4 flex items-center justify-between lg:mb-6 2xl:mb-8 3xl:mb-10">
         <h2 className="text-[18px] font-bold text-[#141414] lg:text-[20px] lg2:text-[24px] 2xl:text-[28px] 3xl:text-[32px] 3xl:leading-[40px]">
-          Tin hoạt động
+          Tin đấu giá
         </h2>
-        <Link href={'/tin-tuc/tin-hoat-dong'}>
+        <Link href={'/tin-tuc/tin-dau-gia'}>
           <button className="flex items-center gap-2 text-sm font-bold text-[#E50261] lg:gap-3 lg:text-[18px]">
             Xem tất cả
             <i>
@@ -131,8 +131,8 @@ const NewsAction = (props: Props) => {
           </button>
         </Link>
       </div>
-      <div className="grid grid-cols-2 gap-x-3 gap-y-4 lg:gap-y-6 2xl:gap-y-10 md:grid-cols-4 lg:gap-x-5 lg2:gap-x-6 2xl:gap-x-8">
-        {news.map((newItem, index) => {
+      <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-5 lg:gap-y-6 lg2:gap-x-6 2xl:gap-x-8 2xl:gap-y-10">
+        {news.slice(0, 4).map((newItem, index) => {
           const delay = ((index % 4) + 1) * 200;
           return (
             <Link
@@ -155,7 +155,7 @@ const NewsAction = (props: Props) => {
               <p className="line-clamp-3 text-sm font-semibold text-[#15171E] lg:text-base lg2:text-[18px]">
                 {newItem.title}
               </p>
-              <div className="mt-2 lg:mt-3 2xl:mt-4 flex items-center gap-2">
+              <div className="mt-2 flex items-center gap-2 lg:mt-3 2xl:mt-4">
                 <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
                   App Mobile
                 </button>
@@ -171,4 +171,4 @@ const NewsAction = (props: Props) => {
   );
 };
 
-export default NewsAction;
+export default NewsAuction;

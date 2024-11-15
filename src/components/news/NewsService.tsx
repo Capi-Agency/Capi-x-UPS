@@ -1,24 +1,19 @@
-'use client';
 import React from 'react';
 import NextImg from '../common/next-img';
-import Link from 'next/link';
 
-type Props = {
-  data: any;
-};
+type Props = {};
 
-const UdemyHome = ({ data }: Props) => {
+const NewsService = (props: Props) => {
   return (
-    <div className="custom-container">
-      {/*  section 2*/}
-      <div className="relative mt-10 flex flex-col gap-5 overflow-hidden rounded-[16px] bg-[#150900] p-5 md:grid md:grid-cols-[auto,52%] md:items-center md:gap-10 md:px-5 md:py-0 lg:mt-[60px] lg:gap-14 lg:rounded-[40px] lg:px-10 lg2:gap-20 lg2:px-[50px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
+    <div className="custom-container my-9 lg:my-12 lg2:my-14 2xl:my-16 3xl:my-20 3xl:!max-w-[calc(1280px+48px)]">
+      <div className="relative flex flex-col gap-5 overflow-hidden rounded-[16px] bg-[#150900] p-5 md:grid md:grid-cols-[auto,52%] md:items-center md:gap-10 md:px-5 md:py-0 lg:gap-14 lg:rounded-[40px] lg:px-10 lg2:gap-20 lg2:px-[50px]">
         <div
-          className="relative flex h-[234px] w-[240px] place-content-start justify-start md:h-[276px] md:w-[273px] lg:h-[320px] lg:w-[340px] lg2:h-[400px] lg2:w-[430px] 2xl:w-[482px] 3xl:w-[564px]"
+          className="relative flex h-[234px] w-[240px] place-content-start justify-start md:h-[276px] md:w-[273px] lg:h-[320px] lg:w-[340px] lg2:h-[400px] lg2:w-[430px] 2xl:w-[482px]"
           data-aos="fade-up"
           data-aos-delay="200"
         >
           <NextImg
-            src={process.env.REACT_APP_IMG_URL + data.cover}
+            src="/assets/icons/home-banner2.svg"
             alt="Capi"
             objectFit="cover"
             className=""
@@ -26,21 +21,20 @@ const UdemyHome = ({ data }: Props) => {
         </div>
         <div className="flex flex-col" data-aos="fade-up" data-aos-delay="600">
           <span className="text-[14px] font-medium text-[#FFF] lg:text-base lg:leading-[40px] lg2:text-[18px]">
-            {data.tag}
+            #trungtamdaotao
           </span>
-          <p className="mt-1 text-[20px] font-bold leading-normal text-[#FFBC00] lg:mt-2 lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[54px]">
-            {data.title}
+          <p className="mt-1 text-[20px] font-bold leading-normal text-[#FFBC00] lg:mt-2 lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px]">
+            Trở thành nhà đầu tư chuyên nghiệp với UPS Academy
           </p>
           <p className="mb-5 mt-2 text-[14px] leading-[22px] tracking-[0.276px] text-[#FFF] lg:my-6 lg:text-base lg:leading-[29px] lg2:text-[18px]">
-            {/* So how does it work? Let’s check our{' '}
+            So how does it work? Let’s check our{' '}
             <span className="font-bold">Getting Started</span>{' '}
             <br className="hidden lg:block" /> tutorial or choose from pre-made
-            templates. */}
-            {data.content}
+            templates.
           </p>
-          <Link href={data.cta.url}>
+          <div>
             <button className="btn !bg-[#FF6D00] !text-[#FFF]">
-              {data.cta.text}
+              Khám phá ngay
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 lg:h-6 lg:w-6"
@@ -55,11 +49,11 @@ const UdemyHome = ({ data }: Props) => {
                 />
               </svg>
             </button>
-          </Link>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default UdemyHome;
+export default NewsService;

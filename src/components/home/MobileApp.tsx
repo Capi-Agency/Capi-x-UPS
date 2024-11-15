@@ -43,7 +43,7 @@ const MobileApp = ({ data }: Props) => {
               <div className="flex flex-wrap items-center gap-3">
                 <Link
                   href={data.ctas.gg_play}
-                  className="flex cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] pr-8 md:pr-6 lg:pr-[50px]"
+                  className="flex cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] px-[10px] py-[6px] pr-8 md:pr-6 lg:pr-[50px]"
                 >
                   <div className="relative h-6 w-6">
                     <NextImg
@@ -63,7 +63,7 @@ const MobileApp = ({ data }: Props) => {
                 </Link>
                 <Link
                   href={data.ctas.app_store}
-                  className="flex cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] pr-6"
+                  className="flex cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] px-[10px] py-[6px] pr-6"
                 >
                   <div className="relative h-6 w-6">
                     <NextImg

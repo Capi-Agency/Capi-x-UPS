@@ -1,4 +1,7 @@
-import AuctionNews from '@/components/news/AuctionNews'
+import AuctionNewsPage from '@/components/news/AuctionNewsPage'
+import AuctionNews from '@/components/news/AuctionNewsPage'
+import HeaderNews from '@/components/news/HeaderNews'
+import NewsBanner from '@/components/news/NewsBanner'
 import React from 'react'
 
 type Props = {}
@@ -6,7 +9,9 @@ type Props = {}
 const TinDauGia = (props: Props) => {
   return (
     <div>
-        <AuctionNews/>
+         <HeaderNews />
+         <NewsBanner />
+         <AuctionNewsPage/>
     </div>
   )
 }

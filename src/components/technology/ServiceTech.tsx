@@ -22,7 +22,7 @@ const ServiceTech = ({ data }: Props) => {
             {data?.sub_title}
           </p>
           <div className="mt-5 flex flex-col gap-3 lg:mt-6">
-            <div className="flex w-[180px] cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] lg:w-[60%] lg:pr-[50px]">
+            <div className="flex w-[180px] cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] px-[10px] py-[6px] lg:w-[60%] lg:pr-[50px]">
               <div className="relative h-6 w-6">
                 <NextImg
                   src="/assets/icons/google-play1.svg"
@@ -39,7 +39,7 @@ const ServiceTech = ({ data }: Props) => {
                 </span>
               </div>
             </div>
-            <div className="flex w-[180px] cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] lg:w-[60%] lg:pr-6">
+            <div className="flex w-[180px] cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] px-[10px] py-[6px] lg:w-[60%] lg:pr-6">
               <div className="relative h-6 w-6">
                 <NextImg
                   src="/assets/icons/apple-logo1.svg"

@@ -1,9 +1,6 @@
 'use client';
-import React, { useState } from 'react';
-import NextImg from '../common/next-img';
-import NewsBanner from './NewsBanner';
 import Link from 'next/link';
-import HeaderNews from './HeaderNews';
+import NextImg from '../common/next-img';
 type Props = {};
 const news = [
   {
@@ -104,13 +101,11 @@ const news = [
   },
 ];
 
-const InformationDisclosure = (props: Props) => {
+const AuctionNewsPage = (props: Props) => {
   return (
     <div>
-      <div className="custom-container mx-auto mt-16 3xl:!max-w-[calc(1280px+48px)]">
-        <HeaderNews />
-        <NewsBanner />
-        {/* Công bố thông tin */}
+      <div className="custom-container mx-auto 3xl:!max-w-[calc(1280px+48px)]">
+        {/* Tin đấu giá */}
         <section>
           <div className="mb-10 flex items-center gap-4">
             <div>
@@ -219,4 +214,4 @@ const InformationDisclosure = (props: Props) => {
   );
 };
 
-export default InformationDisclosure;
+export default AuctionNewsPage;

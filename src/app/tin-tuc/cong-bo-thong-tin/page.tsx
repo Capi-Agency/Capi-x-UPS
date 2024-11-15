@@ -1,12 +1,15 @@
-import InformationDisclosure from '@/components/news/InformationDisclosure';
-import React from 'react';
+import HeaderNews from '@/components/news/HeaderNews';
+import InformationDisclosurePage from '@/components/news/InformationDisclosurePage';
+import NewsBanner from '@/components/news/NewsBanner';
 
 type Props = {};
 
 const CongBoThongTin = (props: Props) => {
   return (
     <div>
-      <InformationDisclosure />
+      <HeaderNews />
+      <NewsBanner />
+      <InformationDisclosurePage />
     </div>
   );
 };

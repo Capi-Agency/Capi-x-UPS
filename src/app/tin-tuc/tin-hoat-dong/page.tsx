@@ -1,4 +1,6 @@
-import NewsAction from '@/components/news/NewsAction'
+import HeaderNews from '@/components/news/HeaderNews'
+import NewsActionPage from '@/components/news/NewsActionPage'
+import NewsBanner from '@/components/news/NewsBanner'
 import React from 'react'
 
 type Props = {}
@@ -6,7 +8,9 @@ type Props = {}
 const TinHoatDong = (props: Props) => {
   return (
     <div>
-        <NewsAction/>
+         <HeaderNews />
+         <NewsBanner />
+         <NewsActionPage/>
     </div>
   )
 }

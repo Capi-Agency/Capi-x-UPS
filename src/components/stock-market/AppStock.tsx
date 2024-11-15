@@ -1,27 +1,33 @@
+'use client';
 import React from 'react';
 import NextImg from '../common/next-img';
+import Link from 'next/link';
 
-type Props = {};
+type Props = {
+  data: any;
+};
 
-const AppStock = (props: Props) => {
+const AppStock = ({ data }: Props) => {
   return (
     <div className="custom-container">
       <div className="mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
-        <div className="flex flex-col-reverse gap-5 rounded-[12px] bg-[#D0F500] md:grid md:grid-cols-[251px,auto] md:gap-8 md:rounded-[24px] md:pl-5 lg:grid-cols-[300px,auto] lg:gap-[60px] lg:pl-8 lg2:grid-cols-[330px,auto] lg2:gap-[20px] lg2:pl-[50px] 2xl:gap-[60px] 3xl:gap-[99px]">
+        <div className="flex flex-col-reverse gap-5 rounded-[12px] bg-[#D0F500] md:grid md:grid-cols-[251px,auto] md:gap-8 md:rounded-[24px] md:pl-5 lg:grid-cols-[290px,auto] lg:gap-[90px] lg:pl-8 lg2:grid-cols-[341px,auto] lg2:gap-[45px] lg2:pl-[50px] 2xl:gap-[85px] 3xl:gap-[99px]">
           <div
-            className="mb-5 mt-6 flex flex-col px-5 md:mt-0 md:place-self-end md:px-0 lg:mb-6 lg2:mb-[50px]"
+            className="mb-5 flex flex-col px-5 md:place-self-end md:px-0 lg:mb-6 lg2:mb-[50px]"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <h4 className="text-[20px] font-bold text-[#000] lg:text-[32px] lg:leading-[46px] lg2:text-[40px] xl:leading-[54px]">
-              Cùng UPS chạm tới mục tiêu đầu tư của bạn
+              {data?.title}
             </h4>
             <p className="mt-2 text-[14px] font-medium leading-[22px] text-[#000] lg:mt-4 lg:text-base lg:leading-[28px] lg2:text-[18px]">
-              Tăng tốc giao dịch nhanh chóng với ứng dụng di động cá nhân hoá
-              riêng cho bạn.
+              {data?.sub_title}
             </p>
             <div className="mt-5 flex flex-col gap-3 lg:mt-6">
-              <div className="flex w-[180px] cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] lg:w-[60%] lg:pr-[50px]">
+              <Link
+                href={data?.cta?.url}
+                className="flex w-[180px] cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] px-[10px] py-[6px] lg:w-[65%] lg:pr-[50px] lg2:w-[60%]"
+              >
                 <div className="relative h-6 w-6">
                   <NextImg
                     src="/assets/icons/google-play1.svg"
@@ -37,8 +43,11 @@ const AppStock = (props: Props) => {
                     Google Play
                   </span>
                 </div>
-              </div>
-              <div className="flex w-[180px] cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] lg:w-[60%] lg:pr-6">
+              </Link>
+              <Link
+                href={data?.cta?.url}
+                className="flex w-[180px] cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] px-[10px] py-[6px] lg:w-[65%] lg:pr-6 lg2:w-[60%]"
+              >
                 <div className="relative h-6 w-6">
                   <NextImg
                     src="/assets/icons/apple-logo1.svg"
@@ -54,7 +63,7 @@ const AppStock = (props: Props) => {
                     App Store
                   </span>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
           <div
@@ -63,7 +72,7 @@ const AppStock = (props: Props) => {
             data-aos-delay="200"
           >
             <NextImg
-              src="/assets/image/app-stock.png"
+              src={process.env.REACT_APP_IMG_URL + data.cover}
               alt="Capi"
               objectFit="cover"
               className="object-left-top"

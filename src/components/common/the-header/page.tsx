@@ -17,6 +17,7 @@ interface ListItemProps {
 const TheHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [bgColor, setBgColor] = useState('#0E1A0D');
+  const [bgBtn, setbgBtn] = useState('#02E56A');
   const pathname = usePathname();
   const handleClose = () => {
     setIsMenuOpen(false);
@@ -43,15 +44,19 @@ const TheHeader = () => {
     switch (pathname) {
       case '/khoa-hoc':
         setBgColor('bg-[#1B0C01]');
+        setbgBtn('#02E56A');
         break;
       case '/tu-van':
         setBgColor('bg-[#080F25]');
+        setbgBtn('#02E56A');
         break;
       case '/chung-khoan':
         setBgColor('border-b-[1px] border-[#D0F500] bg-black');
+        setbgBtn('#D0F500');
         break;
       default:
         setBgColor('bg-[#0F1B0E]');
+        setbgBtn('#02E56A');
         break;
     }
   }, [pathname]);
@@ -602,11 +607,10 @@ const TheHeader = () => {
                   </Link>
                 </div>
                 <div>
-                  <Link
-                    href="/"
+                  <div
                     aria-label="Search"
                     title="Search"
-                    className="font-bold text-gray-100"
+                    className="cursor-pointer font-bold text-gray-100"
                   >
                     <i>
                       <svg
@@ -632,16 +636,16 @@ const TheHeader = () => {
                         />
                       </svg>
                     </i>
-                  </Link>
+                  </div>
                 </div>
                 <li>
-                  <a
+                  <Link
                     href="/"
                     className=""
                     aria-label="Mở tài khoản ngay"
                     title="Mở tài khoản ngay"
                   >
-                    <button className="btn active">
+                    <button className={`btn active !bg-[${bgBtn}]`}>
                       Mở tài khoản ngay
                       <div className="relative h-6 w-6">
                         <NextImg
@@ -651,18 +655,18 @@ const TheHeader = () => {
                         />
                       </div>
                     </button>
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <div className="xl:hidden">
                 <div className="flex items-center gap-4">
-                  <a
+                  <Link
                     href="/"
                     className="hidden md:block"
                     aria-label="Mở tài khoản ngay"
                     title="Mở tài khoản ngay"
                   >
-                    <button className="btn active">
+                    <button className={`btn active !bg-[${bgBtn}]`}>
                       Mở tài khoản ngay
                       <div className="relative h-4 w-4 lg:h-6 lg:w-6">
                         <NextImg
@@ -672,7 +676,7 @@ const TheHeader = () => {
                         />
                       </div>
                     </button>
-                  </a>
+                  </Link>
                   <Link
                     href="/"
                     aria-label="Notification"

@@ -240,7 +240,7 @@ const TheFooter = (props: Props) => {
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-3">
-              <div className="flex cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] pr-8 lg:pr-[50px]">
+              <div className="flex cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] px-[10px] py-[6px] pr-8 lg:pr-[50px]">
                 <div className="relative h-6 w-6">
                   <NextImg
                     src="/assets/icons/google-play1.svg"
@@ -257,7 +257,7 @@ const TheFooter = (props: Props) => {
                   </span>
                 </div>
               </div>
-              <div className="flex cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] p-[10px] pr-6">
+              <div className="flex cursor-pointer items-center gap-[9px] rounded-[9px] bg-[#111] px-[10px] py-[6px] pr-6">
                 <div className="relative h-6 w-6">
                   <NextImg
                     src="/assets/icons/apple-logo1.svg"
