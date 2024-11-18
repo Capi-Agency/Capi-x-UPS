@@ -1,47 +1,14 @@
 'use client';
 import React from 'react';
-import { MarqueeDemo } from './Marquee';
 import NextImg from '../common/next-img';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Link from 'next/link';
+import MarqueeDemo from './Marquee';
 
 type Props = {
   data: any;
 };
-interface User {
-  name: string;
-  image: string;
-  percentage: string;
-}
-
-const userData: User[] = [
-  {
-    name: 'Trần Hoài Trang',
-    image: '/assets/image/user1.jpg',
-    percentage: '+7.90%',
-  },
-  {
-    name: 'Phí Ngọc Thắng',
-    image: '/assets/image/user2.jpg',
-    percentage: '+ 8.30%',
-  },
-  {
-    name: 'Nguyễn Trung Anh',
-    image: '/assets/image/user3.jpg',
-    percentage: '+ 11.40%',
-  },
-  {
-    name: 'Nguyễn Thái Nhi',
-    image: '/assets/image/user4.jpg',
-    percentage: '+ 5.60%',
-  },
-  {
-    name: 'Trần Anh Tuấn',
-    image: '/assets/image/user5.jpg',
-    percentage: '+ 6.20%',
-  },
-];
 const Banner = ({ data }: Props) => {
   return (
     <div className="relative mx-auto mt-[-15px] bg-[linear-gradient(180deg,#0E1A0D_82%,#060B06_100%)] pt-20 lg:pt-16 2xl:pt-[90px] 3xl:pt-[100px]">
@@ -94,25 +61,25 @@ const Banner = ({ data }: Props) => {
           Top đầu tư của tuần
         </p>
         <div className="scrollbar-hidden flex max-w-full items-center gap-3 overflow-x-auto whitespace-nowrap md:gap-6 lg:px-0 xl:gap-9">
-          {userData.map((user, index) => (
+          {data.top_user.map(({ item }: any, index: number) => (
             <div
               className={`flex items-center gap-3 md:gap-5 ${index === 0 ? 'ml-6 md:ml-auto' : ''}`}
               key={index}
             >
               <div className="relative h-10 w-10 lg:h-[54px] lg:w-[54px]">
                 <NextImg
-                  src={user.image}
-                  alt={user.name}
+                  src={process.env.REACT_APP_IMG_URL + item.avatar}
+                  alt={item.name}
                   objectFit="cover"
                   className="rounded-full"
                 />
               </div>
               <div className="flex flex-col">
                 <span className="text-sm font-medium text-[#FFF] lg:text-xl">
-                  {user.name}
+                  {item.name}
                 </span>
                 <span className="text-xs font-medium text-[#05BE5A] lg:text-base">
-                  {user.percentage}
+                  {item.count}
                 </span>
               </div>
             </div>
@@ -174,7 +141,7 @@ const Banner = ({ data }: Props) => {
         </Swiper>
       </div> */}
       <div data-aos="fade-up">
-        <MarqueeDemo />
+        <MarqueeDemo data={data} />
       </div>
     </div>
   );

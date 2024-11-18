@@ -109,7 +109,7 @@ const NewsAction = (props: Props) => {
           Tin hoạt động
         </h2>
         <Link href={'/tin-tuc/tin-hoat-dong'}>
-          <button className="flex items-center gap-2 text-sm font-bold text-[#E50261] lg:gap-3 lg:text-[18px]">
+          <button className="flex items-center gap-1 text-sm font-bold text-[#E50261] lg:gap-2 lg:text-[18px]">
             Xem tất cả
             <i>
               <svg
@@ -131,7 +131,7 @@ const NewsAction = (props: Props) => {
           </button>
         </Link>
       </div>
-      <div className="grid grid-cols-2 gap-x-3 gap-y-4 lg:gap-y-6 2xl:gap-y-10 md:grid-cols-4 lg:gap-x-5 lg2:gap-x-6 2xl:gap-x-8">
+      <div className="grid grid-cols-2 gap-x-3 gap-y-4 lg:gap-y-6 2xl:gap-y-10 md:grid-cols-4 lg:gap-x-4 lg2:gap-x-5 2xl:gap-x-8">
         {news.map((newItem, index) => {
           const delay = ((index % 4) + 1) * 200;
           return (
@@ -141,7 +141,7 @@ const NewsAction = (props: Props) => {
               data-aos="fade-up"
               data-aos-delay={delay}
             >
-              <div className="relative h-[165px] w-full md:h-[171px] lg:h-[221px] lg2:h-[262px] 2xl:h-[296px]">
+              <div className="relative h-[165px] w-full md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
                 <NextImg
                   src={newItem.imgSrc}
                   alt="Capi"

@@ -1,12 +1,12 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="vuesax/linear/personalcard">
 <g id="personalcard">
-<path id="Vector" d="M22.667 28H9.33366C4.00033 28 2.66699 26.6667 2.66699 21.3333V10.6667C2.66699 5.33333 4.00033 4 9.33366 4H22.667C28.0003 4 29.3337 5.33333 29.3337 10.6667V21.3333C29.3337 26.6667 28.0003 28 22.667 28Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_2" d="M18.667 10.668H25.3337" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_3" d="M20 16H25.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_4" d="M22.667 21.332H25.3337" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_5" d="M11.3342 15.0532C12.6671 15.0532 13.7476 13.9727 13.7476 12.6399C13.7476 11.307 12.6671 10.2266 11.3342 10.2266C10.0014 10.2266 8.9209 11.307 8.9209 12.6399C8.9209 13.9727 10.0014 15.0532 11.3342 15.0532Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_6" d="M16.0003 21.7743C15.8137 19.841 14.2803 18.321 12.347 18.1477C11.6803 18.081 11.0003 18.081 10.3203 18.1477C8.38699 18.3343 6.85366 19.841 6.66699 21.7743" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector" d="M22.667 28H9.33366C4.00033 28 2.66699 26.6667 2.66699 21.3333V10.6667C2.66699 5.33333 4.00033 4 9.33366 4H22.667C28.0003 4 29.3337 5.33333 29.3337 10.6667V21.3333C29.3337 26.6667 28.0003 28 22.667 28Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_2" d="M18.667 10.668H25.3337" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_3" d="M20 16H25.3333" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_4" d="M22.667 21.332H25.3337" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_5" d="M11.3342 15.0532C12.6671 15.0532 13.7476 13.9727 13.7476 12.6399C13.7476 11.307 12.6671 10.2266 11.3342 10.2266C10.0014 10.2266 8.9209 11.307 8.9209 12.6399C8.9209 13.9727 10.0014 15.0532 11.3342 15.0532Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Vector_6" d="M16.0003 21.7743C15.8137 19.841 14.2803 18.321 12.347 18.1477C11.6803 18.081 11.0003 18.081 10.3203 18.1477C8.38699 18.3343 6.85366 19.841 6.66699 21.7743" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </g>
 </g>
 </svg>

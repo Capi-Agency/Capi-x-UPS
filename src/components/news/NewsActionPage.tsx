@@ -148,7 +148,7 @@ const NewsActionPage = (props: Props) => {
               </h4>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-5 lg:gap-y-6 lg2:gap-x-6 2xl:gap-x-8 2xl:gap-y-10">
+          <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-4 lg:gap-y-6 lg2:gap-x-5 2xl:gap-x-8 2xl:gap-y-10">
             {news &&
               news.map((newItem: any, index: number) => {
                 const delay = ((index % 4) + 1) * 200;
@@ -159,7 +159,7 @@ const NewsActionPage = (props: Props) => {
                     data-aos="fade-up"
                     data-aos-delay={delay}
                   >
-                    <div className="relative h-[165px] w-full md:h-[171px] lg:h-[221px] lg2:h-[262px] 2xl:h-[296px]">
+                    <div className="relative h-[165px] w-full md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
                       <NextImg
                         src={newItem.imgSrc}
                         alt="Capi"
