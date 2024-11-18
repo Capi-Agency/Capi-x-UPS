@@ -5,7 +5,7 @@ type Props = {};
 
 const NewsService = (props: Props) => {
   return (
-    <div className="custom-container my-9 lg:my-12 lg2:my-14 2xl:my-16 3xl:my-20 3xl:!max-w-[calc(1280px+48px)]">
+    <div className="custom-container mt-9 lg:mt-12 lg2:mt-14 2xl:mt-16 3xl:mt-20 3xl:!max-w-[calc(1280px+48px)]">
       <div className="relative flex flex-col gap-5 overflow-hidden rounded-[16px] bg-[#150900] p-5 md:grid md:grid-cols-[auto,52%] md:items-center md:gap-10 md:px-5 md:py-0 lg:gap-14 lg:rounded-[40px] lg:px-10 lg2:gap-20 lg2:px-[50px]">
         <div
           className="relative flex h-[234px] w-[240px] place-content-start justify-start md:h-[276px] md:w-[273px] lg:h-[320px] lg:w-[340px] lg2:h-[400px] lg2:w-[430px] 2xl:w-[482px]"

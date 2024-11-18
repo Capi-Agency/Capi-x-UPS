@@ -1,7 +1,10 @@
 'use client';
 import Link from 'next/link';
 import NextImg from '../common/next-img';
-type Props = {};
+type Props = {
+  news: any;
+  url: any;
+};
 const news = [
   {
     id: 1,
@@ -101,11 +104,10 @@ const news = [
   },
 ];
 
-const NewsActionPage = (props: Props) => {
+const NewsActionPage = ({ news, url }: Props) => {
   return (
     <div>
       <div className="custom-container mx-auto mt-16 3xl:!max-w-[calc(1280px+48px)]">
-        {/* Tin hoạt động */}
         <section>
           <div className="scrollbar-hidden mb-10 flex items-center gap-4 overflow-x-auto whitespace-nowrap">
             <div>
@@ -149,41 +151,43 @@ const NewsActionPage = (props: Props) => {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-4 lg:gap-y-6 lg2:gap-x-5 2xl:gap-x-8 2xl:gap-y-10">
-            {news &&
-              news.map((newItem: any, index: number) => {
-                const delay = ((index % 4) + 1) * 200;
-                return (
-                  <Link
-                    href={'/tin-tuc/chi-tiet-tin-tuc'}
-                    key={newItem.id}
-                    data-aos="fade-up"
-                    data-aos-delay={delay}
-                  >
-                    <div className="relative h-[165px] w-full md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
-                      <NextImg
-                        src={newItem.imgSrc}
-                        alt="Capi"
-                        objectFit="cover"
-                        className="rounded-[16px]"
-                      />
-                    </div>
-                    <span className="mb-1 mt-2 inline-block text-xs font-medium leading-[16px] tracking-[0.14] lg:mb-2 lg:mt-4 lg:text-sm 2xl:mb-3 3xl:mt-5">
-                      {newItem.date} · {newItem.readTime}
-                    </span>
-                    <p className="line-clamp-3 text-sm font-semibold text-[#15171E] lg:text-base lg2:text-[18px]">
-                      {newItem.title}
-                    </p>
-                    <div className="mt-2 flex items-center gap-2 lg:mt-3 2xl:mt-4">
-                      <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
-                        App Mobile
-                      </button>
-                      <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
-                        Trải nghiệm
-                      </button>
-                    </div>
-                  </Link>
-                );
-              })}
+            {news?.map((newItem: any, index: any) => {
+              const delay = ((index % 4) + 1) * 200;
+              return (
+                <Link
+                  href={`${url}${newItem?.short_content?.slug}`}
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={delay}
+                >
+                  <div className="relative h-[165px] w-full md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
+                    <NextImg
+                      src={
+                        process.env.REACT_APP_IMG_URL +
+                        newItem?.short_content?.cover?.id
+                      }
+                      alt="Capi"
+                      objectFit="cover"
+                      className="rounded-[16px]"
+                    />
+                  </div>
+                  <span className="mb-1 mt-2 inline-block text-xs font-medium leading-[16px] tracking-[0.14] lg:mb-2 lg:mt-4 lg:text-sm 2xl:mb-3 3xl:mt-5">
+                    {newItem?.short_content?.date_published}
+                  </span>
+                  <p className="line-clamp-3 h-[60px] text-sm font-semibold text-[#15171E] lg:h-[72px] lg:text-base lg2:text-[18px]">
+                    {newItem?.short_content?.title}
+                  </p>
+                  <div className="mt-2 flex items-center gap-2 lg:mt-3 2xl:mt-4">
+                    <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
+                      App Mobile
+                    </button>
+                    <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
+                      Trải nghiệm
+                    </button>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </section>
         <button
@@ -207,7 +211,6 @@ const NewsActionPage = (props: Props) => {
             />
           </svg>
         </button>
-        {/* <TagsPage /> */}
       </div>
     </div>
   );

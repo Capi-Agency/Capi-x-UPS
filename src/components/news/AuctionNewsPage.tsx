@@ -1,116 +1,20 @@
 'use client';
 import Link from 'next/link';
 import NextImg from '../common/next-img';
-type Props = {};
-const news = [
-  {
-    id: 1,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 2,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 3,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 4,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 5,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 6,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 7,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 8,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 9,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 10,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 11,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 12,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-];
+type Props = {
+  news: any;
+  url: any;
+};
 
-const AuctionNewsPage = (props: Props) => {
+const AuctionNewsPage = ({ news, url }: Props) => {
   return (
     <div>
-      <div className="custom-container mx-auto 3xl:!max-w-[calc(1280px+48px)]">
-        {/* Tin đấu giá */}
+      <div className="custom-container mx-auto mt-16 3xl:!max-w-[calc(1280px+48px)]">
         <section>
-          <div className="mb-10 flex items-center gap-4">
+          <div className="scrollbar-hidden mb-10 flex items-center gap-4 overflow-x-auto whitespace-nowrap">
             <div>
               <h4
-                className={`flex items-center gap-4 text-base font-bold text-[#0C1C28] underline`}
+                className={`flex items-center gap-4 text-sm font-bold text-[#0C1C28] underline lg:text-base`}
               >
                 Tin cổ đông
                 <div className={`size-1 rounded-full bg-black`}></div>
@@ -118,7 +22,7 @@ const AuctionNewsPage = (props: Props) => {
             </div>
             <div>
               <h4
-                className={`flex items-center gap-4 text-base font-bold text-[#525358]`}
+                className={`flex items-center gap-4 text-sm font-bold text-[#525358] lg:text-base`}
               >
                 Báo cáo tài chính
                 <div className={`size-1 rounded-full bg-black`}></div>
@@ -126,7 +30,7 @@ const AuctionNewsPage = (props: Props) => {
             </div>
             <div>
               <h4
-                className={`flex items-center gap-4 text-base font-bold text-[#525358]`}
+                className={`flex items-center gap-4 text-sm font-bold text-[#525358] lg:text-base`}
               >
                 Quan hệ cổ đông
                 <div className={`size-1 rounded-full bg-black`}></div>
@@ -134,7 +38,7 @@ const AuctionNewsPage = (props: Props) => {
             </div>
             <div>
               <h4
-                className={`flex items-center gap-4 text-base font-bold text-[#525358]`}
+                className={`flex items-center gap-4 text-sm font-bold text-[#525358] lg:text-base`}
               >
                 Thông tin Quản trị
                 <div className={`size-1 rounded-full bg-black`}></div>
@@ -142,49 +46,50 @@ const AuctionNewsPage = (props: Props) => {
             </div>
             <div>
               <h4
-                className={`flex items-center gap-4 text-base font-bold text-[#525358]`}
+                className={`flex items-center gap-4 text-sm font-bold text-[#525358] lg:text-base`}
               >
                 Báo cáo thường niên
               </h4>
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-x-8 gap-y-10">
-            {news &&
-              news.map((newItem: any, index: number) => {
-                const delay = ((index % 4) + 1) * 200;
-                return (
-                  <Link
-                    href={'/tin-tuc/chi-tiet-tin-tuc'}
-                    key={newItem.id}
-                    className="rounded-t-[8px]"
-                    data-aos="fade-up"
-                    data-aos-delay={delay}
-                  >
-                    <div className="relative h-[296px] w-full">
-                      <NextImg
-                        src={newItem.imgSrc}
-                        alt="Capi"
-                        objectFit="cover"
-                        className="rounded-[8px]"
-                      />
-                    </div>
-                    <span className="mb-3 mt-8 inline-block text-sm font-medium leading-[16px] tracking-[0.14]">
-                      {newItem.date} · {newItem.readTime}
-                    </span>
-                    <p className="line-clamp-3 text-[18px] font-semibold text-[#15171E]">
-                      {newItem.title}
-                    </p>
-                    <div className="mt-4 flex items-center gap-2">
-                      <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-[14px] font-medium leading-normal text-[#111013]">
-                        App Mobile
-                      </button>
-                      <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-[14px] font-medium leading-normal text-[#111013]">
-                        Trải nghiệm
-                      </button>
-                    </div>
-                  </Link>
-                );
-              })}
+          <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-4 lg:gap-y-6 lg2:gap-x-5 2xl:gap-x-8 2xl:gap-y-10">
+            {news?.map((newItem: any, index: any) => {
+              const delay = ((index % 4) + 1) * 200;
+              return (
+                <Link
+                  href={`${url}${newItem?.short_content?.slug}`}
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={delay}
+                >
+                  <div className="relative h-[165px] w-full md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
+                    <NextImg
+                      src={
+                        process.env.REACT_APP_IMG_URL +
+                        newItem?.short_content?.cover?.id
+                      }
+                      alt="Capi"
+                      objectFit="cover"
+                      className="rounded-[16px]"
+                    />
+                  </div>
+                  <span className="mb-1 mt-2 inline-block text-xs font-medium leading-[16px] tracking-[0.14] lg:mb-2 lg:mt-4 lg:text-sm 2xl:mb-3 3xl:mt-5">
+                    {newItem?.short_content?.date_published}
+                  </span>
+                  <p className="line-clamp-3 h-[60px] text-sm font-semibold text-[#15171E] lg:h-[72px] lg:text-base lg2:text-[18px]">
+                    {newItem?.short_content?.title}
+                  </p>
+                  <div className="mt-2 flex items-center gap-2 lg:mt-3 2xl:mt-4">
+                    <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
+                      App Mobile
+                    </button>
+                    <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
+                      Trải nghiệm
+                    </button>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </section>
         <button
@@ -208,7 +113,6 @@ const AuctionNewsPage = (props: Props) => {
             />
           </svg>
         </button>
-        {/* <TagsPage /> */}
       </div>
     </div>
   );
