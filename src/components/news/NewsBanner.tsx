@@ -7,7 +7,6 @@ type Props = {
 };
 
 const NewsBanner = ({ dataNew }: Props) => {
-  console.log(dataNew);
 
   return (
     <div className="custom-container 3xl:!max-w-[calc(1280px+48px)]">

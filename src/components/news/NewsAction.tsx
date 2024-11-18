@@ -3,16 +3,17 @@ import Link from 'next/link';
 import NextImg from '../common/next-img';
 type Props = {
   news:any
+  url?:string
+  title:string
 };
 
-const NewsAction = ({news}: Props) => {
-  console.log(news);
+const NewsAction = ({news, url, title}: Props) => {
   
   return (
     <section className="custom-container 3xl:!max-w-[calc(1280px+48px)]">
       <div className="mb-4 flex items-center justify-between lg:mb-6 2xl:mb-8 3xl:mb-10">
         <h2 className="text-[18px] font-bold text-[#141414] lg:text-[20px] lg2:text-[24px] 2xl:text-[28px] 3xl:text-[32px] 3xl:leading-[40px]">
-          Tin hoạt động
+          {title}
         </h2>
         <Link href={'/tin-tuc/tin-hoat-dong'}>
           <button className="flex items-center gap-1 text-sm font-bold text-[#E50261] lg:gap-2 lg:text-[18px]">
@@ -42,7 +43,7 @@ const NewsAction = ({news}: Props) => {
           const delay = ((index % 4) + 1) * 200;
           return (
             <Link
-              href={`/tin-tuc/chi-tiet-tin-tuc/${newItem?.short_content?.slug}`}
+              href={`${url}${newItem?.short_content?.slug}`}
               key={index}
               data-aos="fade-up"
               data-aos-delay={delay}
