@@ -1,107 +1,13 @@
 'use client';
 import Link from 'next/link';
 import NextImg from '../common/next-img';
-type Props = {};
+type Props = {
+  news:any
+};
 
-const NewsAction = (props: Props) => {
-  const news = [
-    {
-      id: 1,
-      date: 'Ngày 26, 2023',
-      readTime: '9 phút đọc',
-      title:
-        'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-      imgSrc: '/assets/image/news.jpg',
-    },
-    {
-      id: 2,
-      date: 'Ngày 26, 2023',
-      readTime: '9 phút đọc',
-      title:
-        'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-      imgSrc: '/assets/image/news.jpg',
-    },
-    {
-      id: 3,
-      date: 'Ngày 26, 2023',
-      readTime: '9 phút đọc',
-      title:
-        'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-      imgSrc: '/assets/image/news.jpg',
-    },
-    {
-      id: 4,
-      date: 'Ngày 26, 2023',
-      readTime: '9 phút đọc',
-      title:
-        'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-      imgSrc: '/assets/image/news.jpg',
-    },
-    {
-      id: 5,
-      date: 'Ngày 26, 2023',
-      readTime: '9 phút đọc',
-      title:
-        'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-      imgSrc: '/assets/image/news.jpg',
-    },
-    {
-      id: 6,
-      date: 'Ngày 26, 2023',
-      readTime: '9 phút đọc',
-      title:
-        'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-      imgSrc: '/assets/image/news.jpg',
-    },
-    {
-      id: 7,
-      date: 'Ngày 26, 2023',
-      readTime: '9 phút đọc',
-      title:
-        'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-      imgSrc: '/assets/image/news.jpg',
-    },
-    {
-      id: 8,
-      date: 'Ngày 26, 2023',
-      readTime: '9 phút đọc',
-      title:
-        'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-      imgSrc: '/assets/image/news.jpg',
-    },
-    {
-      id: 9,
-      date: 'Ngày 26, 2023',
-      readTime: '9 phút đọc',
-      title:
-        'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-      imgSrc: '/assets/image/news.jpg',
-    },
-    {
-      id: 10,
-      date: 'Ngày 26, 2023',
-      readTime: '9 phút đọc',
-      title:
-        'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-      imgSrc: '/assets/image/news.jpg',
-    },
-    {
-      id: 11,
-      date: 'Ngày 26, 2023',
-      readTime: '9 phút đọc',
-      title:
-        'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-      imgSrc: '/assets/image/news.jpg',
-    },
-    {
-      id: 12,
-      date: 'Ngày 26, 2023',
-      readTime: '9 phút đọc',
-      title:
-        'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-      imgSrc: '/assets/image/news.jpg',
-    },
-  ];
+const NewsAction = ({news}: Props) => {
+  console.log(news);
+  
   return (
     <section className="custom-container 3xl:!max-w-[calc(1280px+48px)]">
       <div className="mb-4 flex items-center justify-between lg:mb-6 2xl:mb-8 3xl:mb-10">
@@ -132,28 +38,28 @@ const NewsAction = (props: Props) => {
         </Link>
       </div>
       <div className="grid grid-cols-2 gap-x-3 gap-y-4 lg:gap-y-6 2xl:gap-y-10 md:grid-cols-4 lg:gap-x-4 lg2:gap-x-5 2xl:gap-x-8">
-        {news.map((newItem, index) => {
+        {news?.map((newItem:any, index:any) => {
           const delay = ((index % 4) + 1) * 200;
           return (
             <Link
-              href={'/tin-tuc/chi-tiet-tin-tuc'}
-              key={newItem.id}
+              href={`/tin-tuc/chi-tiet-tin-tuc/${newItem?.short_content?.slug}`}
+              key={index}
               data-aos="fade-up"
               data-aos-delay={delay}
             >
               <div className="relative h-[165px] w-full md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
                 <NextImg
-                  src={newItem.imgSrc}
+                  src={process.env.REACT_APP_IMG_URL+newItem?.short_content?.cover?.id}
                   alt="Capi"
                   objectFit="cover"
                   className="rounded-[16px]"
                 />
               </div>
               <span className="mb-1 mt-2 inline-block text-xs font-medium leading-[16px] tracking-[0.14] lg:mb-2 lg:mt-4 lg:text-sm 2xl:mb-3 3xl:mt-5">
-                {newItem.date} · {newItem.readTime}
+                {newItem?.short_content?.date_published} 
               </span>
               <p className="line-clamp-3 text-sm font-semibold text-[#15171E] lg:text-base lg2:text-[18px]">
-                {newItem.title}
+                {newItem?.short_content?.title}
               </p>
               <div className="mt-2 lg:mt-3 2xl:mt-4 flex items-center gap-2">
                 <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">

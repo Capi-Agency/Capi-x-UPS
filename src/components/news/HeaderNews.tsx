@@ -5,7 +5,7 @@ import Link from 'next/link';
 import NextImg from '../common/next-img';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 
-const HeaderNews = () => {
+const HeaderNews = ({dataNew}:any) => {
   const pathname = usePathname();
 
   return (

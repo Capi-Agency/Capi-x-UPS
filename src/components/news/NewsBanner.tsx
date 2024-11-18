@@ -2,9 +2,13 @@ import React from 'react';
 import NextImg from '../common/next-img';
 import Link from 'next/link';
 
-type Props = {};
+type Props = {
+  dataNew: any;
+};
 
-const NewsBanner = (props: Props) => {
+const NewsBanner = ({ dataNew }: Props) => {
+  console.log(dataNew);
+
   return (
     <div className="custom-container 3xl:!max-w-[calc(1280px+48px)]">
       <div className="mb-6 mt-[18px] flex flex-col-reverse md:grid md:grid-cols-[46%,auto] lg:mb-7 lg:mt-6 lg2:mt-7 xl:mb-8 2xl:mb-9 2xl:mt-8 3xl:mb-[52px] 3xl:mt-[60px]">
@@ -19,16 +23,14 @@ const NewsBanner = (props: Props) => {
           </div>
           <div>
             <p className="text-[18px] font-medium lg:text-[20px] lg2:text-[24px] lg2:leading-[40px] 2xl:text-[28px] 3xl:text-[32px]">
-              Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc vận động
-              tranh cử ở Bắc Carolina
+              {dataNew?.short_content?.title}
             </p>
             <div className="my-2 h-[2px] w-[140px] bg-[#02E56A] md:my-3 lg:my-4 lg2:my-5 2xl:my-6"></div>
             <p className="text-sm font-medium text-[#8C9AA4] lg:text-base">
-              Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc vận động
-              tranh cử ở Bắc Carolina
+              {dataNew?.short_content?.blurb}
             </p>
           </div>
-          <Link href={'/tin-tuc/chi-tiet-tin-tuc'}>
+          <Link href={'/tin-tuc/chi-tiet-tin-tuc/'+dataNew?.short_content?.slug}>
             <button className="flex items-center gap-2 text-sm font-bold lg:gap-3 lg:text-base">
               Xem chi tiết
               <i>
@@ -51,9 +53,9 @@ const NewsBanner = (props: Props) => {
         </div>
         <div className="relative h-[300px] w-full md:h-full">
           <NextImg
-            src="/assets/image/banner-news.jpg"
+            src={process.env.REACT_APP_IMG_URL+dataNew?.short_content?.cover?.id}
             alt="Capi"
-            objectFit="cover"
+            objectFit="contain"
             className="rounded-r-none rounded-t-[20px] md:rounded-r-[20px] md:rounded-tl-none"
           />
         </div>
