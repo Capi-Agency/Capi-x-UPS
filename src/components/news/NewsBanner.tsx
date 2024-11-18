@@ -3,7 +3,7 @@ import NextImg from '../common/next-img';
 import Link from 'next/link';
 
 type Props = {
-  dataNew: any;
+  dataNew?: any;
 };
 
 const NewsBanner = ({ dataNew }: Props) => {

@@ -22,7 +22,7 @@ const NewsPage = async (props: Props) => {
         <NewsContent
           title="Tin hoạt động"
           news={data?.data?.data?.posts}
-          url="/tin-tuc/chi-tiet-tin-tuc/"
+          url="tin-tuc/"
         />
         <NewsService />
         <NewsContent
