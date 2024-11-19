@@ -1,12 +1,19 @@
 import NewsDetail from '@/components/news/NewsDetail';
+import { fnGetNewDetail } from '@/services/news';
 import React from 'react';
 
-type Props = {};
+type Props = {
+  params: {
+    slug: string;
+  };
+};
 
-const ChiTietTinTucHd = (props: Props) => {
+const ChiTietTinTucHd = async ({ params }: Props) => {
+  const { slug } = params;
+  const data = await fnGetNewDetail(slug);
   return (
     <>
-      <NewsDetail />
+      <NewsDetail data={data?.data?.data?.posts_by_id?.raw_content} />
     </>
   );
 };

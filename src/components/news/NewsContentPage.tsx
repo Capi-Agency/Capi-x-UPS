@@ -6,15 +6,15 @@ type Props = {
   url: any;
 };
 
-const AuctionNewsPage = ({ news, url }: Props) => {
+const NewsContentPage = ({ news, url }: Props) => {
   return (
     <div>
-      <div className="custom-container mx-auto mt-16 3xl:!max-w-[calc(1280px+48px)]">
+      <div className="custom-container mx-auto mt-9 lg:mt-12 lg2:mt-14 2xl:mt-16 3xl:!max-w-[calc(1280px+48px)]">
         <section>
-          <div className="scrollbar-hidden mb-10 flex items-center gap-4 overflow-x-auto whitespace-nowrap">
+          <div className="scrollbar-hidden mb-4 flex items-center gap-3 overflow-x-auto whitespace-nowrap lg:mb-6 lg:gap-4 2xl:mb-8 3xl:mb-10">
             <div>
               <h4
-                className={`flex items-center gap-4 text-sm font-bold text-[#0C1C28] underline lg:text-base`}
+                className={`flex items-center gap-3 text-sm font-bold text-[#0C1C28] underline lg:gap-4 lg:text-base`}
               >
                 Tin cổ đông
                 <div className={`size-1 rounded-full bg-black`}></div>
@@ -22,7 +22,7 @@ const AuctionNewsPage = ({ news, url }: Props) => {
             </div>
             <div>
               <h4
-                className={`flex items-center gap-4 text-sm font-bold text-[#525358] lg:text-base`}
+                className={`flex items-center gap-3 text-sm font-bold text-[#525358] lg:gap-4 lg:text-base`}
               >
                 Báo cáo tài chính
                 <div className={`size-1 rounded-full bg-black`}></div>
@@ -30,7 +30,7 @@ const AuctionNewsPage = ({ news, url }: Props) => {
             </div>
             <div>
               <h4
-                className={`flex items-center gap-4 text-sm font-bold text-[#525358] lg:text-base`}
+                className={`flex items-center gap-3 text-sm font-bold text-[#525358] lg:gap-4 lg:text-base`}
               >
                 Quan hệ cổ đông
                 <div className={`size-1 rounded-full bg-black`}></div>
@@ -38,7 +38,7 @@ const AuctionNewsPage = ({ news, url }: Props) => {
             </div>
             <div>
               <h4
-                className={`flex items-center gap-4 text-sm font-bold text-[#525358] lg:text-base`}
+                className={`flex items-center gap-3 text-sm font-bold text-[#525358] lg:gap-4 lg:text-base`}
               >
                 Thông tin Quản trị
                 <div className={`size-1 rounded-full bg-black`}></div>
@@ -46,7 +46,7 @@ const AuctionNewsPage = ({ news, url }: Props) => {
             </div>
             <div>
               <h4
-                className={`flex items-center gap-4 text-sm font-bold text-[#525358] lg:text-base`}
+                className={`flex items-center gap-3 text-sm font-bold text-[#525358] lg:gap-4 lg:text-base`}
               >
                 Báo cáo thường niên
               </h4>
@@ -61,8 +61,9 @@ const AuctionNewsPage = ({ news, url }: Props) => {
                   key={index}
                   data-aos="fade-up"
                   data-aos-delay={delay}
+                  className="group"
                 >
-                  <div className="relative h-[165px] w-full md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
+                  <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
                     <NextImg
                       src={
                         process.env.REACT_APP_IMG_URL +
@@ -70,7 +71,7 @@ const AuctionNewsPage = ({ news, url }: Props) => {
                       }
                       alt="Capi"
                       objectFit="cover"
-                      className="rounded-[16px]"
+                      className="rounded-[16px] transition-all duration-300 group-hover:scale-110"
                     />
                   </div>
                   <span className="mb-1 mt-2 inline-block text-xs font-medium leading-[16px] tracking-[0.14] lg:mb-2 lg:mt-4 lg:text-sm 2xl:mb-3 3xl:mt-5">
@@ -93,7 +94,7 @@ const AuctionNewsPage = ({ news, url }: Props) => {
           </div>
         </section>
         <button
-          className="mx-auto mt-[60px] flex items-center gap-3 rounded-[16px] bg-[#15171E] py-3 pl-6 pr-4 text-[18px] font-bold text-[#FFF]"
+          className="btn mx-auto mt-[18px] bg-[#15171E] font-bold text-[#FFF] lg:mt-6 lg2:mt-7 2xl:mt-8 3xl:mt-[60px]"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -104,6 +105,7 @@ const AuctionNewsPage = ({ news, url }: Props) => {
             height="24"
             viewBox="0 0 25 24"
             fill="none"
+            className="h-4 w-4 lg:h-6 lg:w-6"
           >
             <path
               fillRule="evenodd"
@@ -118,4 +120,4 @@ const AuctionNewsPage = ({ news, url }: Props) => {
   );
 };
 
-export default AuctionNewsPage;
+export default NewsContentPage;

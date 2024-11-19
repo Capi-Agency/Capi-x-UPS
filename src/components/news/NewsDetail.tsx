@@ -1,8 +1,11 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 import NextImg from '../common/next-img';
 import Link from 'next/link';
 
-type Props = {};
+type Props = {
+  data: any;
+};
 const news = [
   {
     id: 1,
@@ -101,7 +104,13 @@ const news = [
     imgSrc: '/assets/image/news.jpg',
   },
 ];
-const NewsDetail = (props: Props) => {
+const NewsDetail = ({ data }: Props) => {
+  console.log('🚀 ~ NewsDetail ~ data:', data);
+  const [render, setRender] = useState(false);
+
+  useEffect(() => {
+    setRender(true);
+  }, []);
   return (
     <div>
       <section className="custom-container mt-16 3xl:!max-w-[calc(1280px+48px)]">
@@ -111,7 +120,7 @@ const NewsDetail = (props: Props) => {
           data-aos-delay="200"
         >
           <NextImg
-            src="/assets/image/banner-new-detail.jpg"
+            src={process.env.REACT_APP_IMG_URL + data?.cover?.id}
             alt="Capi"
             objectFit="cover"
             className="rounded-[20px]"
@@ -122,8 +131,7 @@ const NewsDetail = (props: Props) => {
         <div className="grid grid-cols-[auto,260px] gap-[60px]">
           <div data-aos="fade-up" data-aos-delay="200">
             <h1 className="text-[32px] font-semibold leading-[40px] text-[#15171E]">
-              Ông Trump nói về lạm phát, chỉ trích bà Harris trong cuộc vận động
-              tranh cử ở Bắc Carolina
+              {data.title}
             </h1>
             <div className="mb-8 mt-[18px] flex items-center gap-4">
               <span className="text-base font-bold text-[#525358]">
@@ -147,21 +155,11 @@ const NewsDetail = (props: Props) => {
                 Báo cáo tài chính
               </span>
             </div>
-            <p className="text-base leading-[26px] text-[#696B75]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: render && data?.content,
+              }}
+            ></div>
             <div className="mt-[18px] w-full rounded-[20px] border border-[#ECECEC] bg-[#F6F6F7] p-5">
               <div className="mb-5">
                 <p className="text-base font-medium text-[#535662]">
@@ -185,7 +183,7 @@ const NewsDetail = (props: Props) => {
               </div>
             </div>
             <p className="mt-[30px] text-center text-base font-medium text-[#535662]">
-              Cập nhật mới nhất: 20/08/2024
+              Cập nhật mới nhất: {data?.date_published}
             </p>
           </div>
           <div data-aos="fade-up" data-aos-delay="600">
@@ -194,22 +192,22 @@ const NewsDetail = (props: Props) => {
             </h4>
             <ul>
               <li className="border-b border-[#E7E9EF] py-3 text-[18px] font-medium text-[#15171E]">
-                Báo cáo ngày
+                <Link href={`#`}>Báo cáo ngày</Link>
               </li>
               <li className="border-b border-[#E7E9EF] py-3 text-[18px] font-medium text-[#15171E]">
-                Phân tích từ UPS
+                <Link href={`#`}>Phân tích từ UPS</Link>
               </li>
               <li className="border-b border-[#E7E9EF] py-3 text-[18px] font-medium text-[#15171E]">
-                Sản phẩm đầu tư mới
+                <Link href={`#`}>Sản phẩm đầu tư mới</Link>
               </li>
               <li className="border-b border-[#E7E9EF] py-3 text-[18px] font-medium text-[#15171E]">
-                Về UPS
+                <Link href={`/gioi-thieu`}>Về UPS</Link>
               </li>
               <li className="border-b border-[#E7E9EF] py-3 text-[18px] font-medium text-[#15171E]">
-                Sự kiện doanh nghiệp
+                <Link href={`#`}>Sự kiện doanh nghiệp</Link>
               </li>
               <li className="border-b border-[#E7E9EF] py-3 text-[18px] font-medium text-[#15171E]">
-                Nội bộ UPS
+                <Link href={`#`}>Nội bộ UPS</Link>
               </li>
             </ul>
             <div className="mt-[40px] rounded-[10px] border border-[#C1C7DD] bg-[#F3F5FB] p-[16px]">
@@ -230,7 +228,7 @@ const NewsDetail = (props: Props) => {
                 <div className="hidden xl:inline-flex">
                   <Link
                     href="/"
-                    className="btn active group !bg-[#15171E] !text-[#02E56A]"
+                    className="btn group bg-[#15171E] text-[#02E56A]"
                   >
                     Đăng ký
                     <i>
@@ -239,6 +237,7 @@ const NewsDetail = (props: Props) => {
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
+                        className="h-4 w-4 lg:h-6 lg:w-6"
                         fill="none"
                       >
                         <path
@@ -273,16 +272,16 @@ const NewsDetail = (props: Props) => {
               <Link
                 href={'/tin-tuc/chi-tiet-tin-tuc'}
                 key={newItem.id}
-                className="rounded-t-[8px]"
+                className="group"
                 data-aos="fade-up"
                 data-aos-delay={delay}
               >
-                <div className="relative h-[296px] w-full">
+                <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
                   <NextImg
                     src={newItem.imgSrc}
                     alt="Capi"
                     objectFit="cover"
-                    className="rounded-[8px]"
+                    className="rounded-[16px] transition-all duration-300 group-hover:scale-110"
                   />
                 </div>
                 <span className="mb-3 mt-8 inline-block text-sm font-medium leading-[16px] tracking-[0.14]">

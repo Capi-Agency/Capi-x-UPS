@@ -14,7 +14,7 @@ const NewsAction = ({ news, url, title }: Props) => {
         <h2 className="text-[18px] font-bold text-[#141414] lg:text-[20px] lg2:text-[24px] 2xl:text-[28px] 3xl:text-[32px] 3xl:leading-[40px]">
           {title}
         </h2>
-        <Link href={'/tin-tuc/tin-hoat-dong'}>
+        <Link href={`${url}`}>
           <button className="flex items-center gap-1 text-sm font-bold text-[#E50261] lg:gap-2 lg:text-[18px]">
             Xem tất cả
             <i>
@@ -46,8 +46,9 @@ const NewsAction = ({ news, url, title }: Props) => {
               key={index}
               data-aos="fade-up"
               data-aos-delay={delay}
+              className="group"
             >
-              <div className="relative h-[165px] w-full md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
+              <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
                 <NextImg
                   src={
                     process.env.REACT_APP_IMG_URL +
@@ -55,7 +56,7 @@ const NewsAction = ({ news, url, title }: Props) => {
                   }
                   alt="Capi"
                   objectFit="cover"
-                  className="rounded-[16px]"
+                  className="rounded-[16px] transition-all duration-300 group-hover:scale-110"
                 />
               </div>
               <span className="mb-1 mt-2 inline-block text-xs font-medium leading-[16px] tracking-[0.14] lg:mb-2 lg:mt-4 lg:text-sm 2xl:mb-3 3xl:mt-5">

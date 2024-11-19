@@ -28,9 +28,7 @@ const NewsBanner = ({ dataNew }: Props) => {
               {dataNew?.short_content?.blurb}
             </p>
           </div>
-          <Link
-            href={'/tin-tuc/chi-tiet-tin-tuc/' + dataNew?.short_content?.slug}
-          >
+          <Link href={'/tin-tuc/tin-hoat-dong/' + dataNew?.short_content?.slug}>
             <button className="flex items-center gap-2 text-sm font-bold lg:gap-3 lg:text-base">
               Xem chi tiết
               <i>

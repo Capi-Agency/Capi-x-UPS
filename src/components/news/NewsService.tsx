@@ -1,5 +1,6 @@
 import React from 'react';
 import NextImg from '../common/next-img';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -32,7 +33,7 @@ const NewsService = (props: Props) => {
             <br className="hidden lg:block" /> tutorial or choose from pre-made
             templates.
           </p>
-          <div>
+          <Link href={`#`}>
             <button className="btn !bg-[#FF6D00] !text-[#FFF]">
               Khám phá ngay
               <svg
@@ -49,7 +50,7 @@ const NewsService = (props: Props) => {
                 />
               </svg>
             </button>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

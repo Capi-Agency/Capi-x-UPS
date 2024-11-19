@@ -1,6 +1,6 @@
 import HeaderNews from '@/components/news/HeaderNews';
-import InformationDisclosurePage from '@/components/news/InformationDisclosurePage';
 import NewsBanner from '@/components/news/NewsBanner';
+import NewsContentPage from '@/components/news/NewsContentPage';
 import { fnGetListAnnounce } from '@/services/announce';
 import { fnGetListNews } from '@/services/news';
 
@@ -15,8 +15,10 @@ const CongBoThongTin = async (props: Props) => {
       <NewsBanner
         dataNew={data?.data?.data?.posts[data?.data?.data?.posts.length - 1]}
       />
-      <InformationDisclosurePage    news={dataAnnounce?.data?.data?.announce}
-        url="/tin-tuc/tin-dau-gia/"/>
+      <NewsContentPage
+        news={dataAnnounce?.data?.data?.announce}
+        url="/tin-tuc/cong-bo-thong-tin/"
+      />
     </div>
   );
 };
