@@ -27,14 +27,14 @@ const Support = ({ data }: Props) => {
         <div className="flex flex-col gap-6 md:flex-row lg:gap-10 lg2:gap-20 xl:grid xl:grid-cols-[600px,auto]">
           <div data-aos="fade-up" data-aos-delay="200">
             <h3 className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[56px]">
-              <span className="text-[#01C159]">{data.title[0].title}</span>{' '}
-              {data.title[1].title}
+              <span className="text-[#01C159]">{data?.title[0]?.title}</span>{' '}
+              {data?.title[1].title}
             </h3>
             <p className="mt-3 text-[14px] font-medium leading-[22px] text-[#000] lg:mt-3 lg:text-base lg:leading-[28px] lg2:mt-8 lg2:text-[18px]">
-              {data.sub_title}
+              {data?.sub_title}
             </p>
             <div className="mt-6 flex flex-col gap-5 lg:mt-[60px] lg:gap-[70px]">
-              {data.questions.map(({ question }: any, index: number) => {
+              {data?.questions.map(({ question }: any, index: number) => {
                 return (
                   <div key={index} className="relative flex gap-3 lg:gap-5">
                     <div className="flex h-10 w-10 min-w-10 items-center justify-center rounded-[10px] bg-[#F3F3FB] lg:h-[50px] lg:w-[50px] lg:min-w-[50px]">
@@ -49,14 +49,14 @@ const Support = ({ data }: Props) => {
                     </div>
                     <div className={`flex flex-col`}>
                       <span className="mr-8 text-sm font-semibold leading-normal text-[#15171E] lg:text-base lg:leading-[24px] lg2:text-[30px] lg2:leading-9">
-                        {question.ask}
+                        {question?.ask}
                       </span>
                       <div
                         className={`grid overflow-hidden text-sm font-medium leading-[28px] text-[#535662] transition-all duration-500 ease-in-out lg:text-base lg2:text-[18px] ${openItemId === index ? 'mt-2 grid-rows-[1fr] opacity-100 lg:mt-4' : 'mt-0 grid-rows-[0fr] opacity-0'} `}
                       >
                         <p
                           dangerouslySetInnerHTML={{
-                            __html: render && question.answer,
+                            __html: render && question?.answer,
                           }}
                           className="overflow-hidden"
                         ></p>
@@ -87,18 +87,18 @@ const Support = ({ data }: Props) => {
               <div className="absolute inset-0 -z-10 h-full w-full rounded-[12px] bg-[#F3F3FB] lg:rounded-3xl"></div>
               <div className="relative h-[260px] w-[240px] lg2:h-[330px] lg2:w-[303px] 3xl:h-[350px] 3xl:w-[324px]">
                 <NextImg
-                  src={process.env.REACT_APP_IMG_URL + data.card_cover.cover}
+                  src={process.env.REACT_APP_IMG_URL + data?.card_cover?.cover}
                   alt="Capi"
                   objectFit="cover"
                   className=""
                 />
               </div>
               <p className="mb-5 mt-5 text-[14px] font-semibold leading-[22px] text-[#535662] lg:mt-[52px] lg:text-base lg:leading-[28px] lg2:mb-[50px] lg2:text-[18px]">
-                {data.card_cover.text}
+                {data?.card_cover?.text}
               </p>
               <Link href={data.card_cover.cta.url}>
                 <button className="btn active !bg-[#014227] !text-[#02E56A]">
-                  {data.card_cover.cta.text}
+                  {data?.card_cover?.cta?.text}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"

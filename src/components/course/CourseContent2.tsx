@@ -19,18 +19,18 @@ const CourseContent2 = ({ data }: Props) => {
           data-aos-delay="200"
         >
           <span className="text-[14px] font-medium leading-[22px] text-[#FF6D00] lg:text-[16px] lg2:text-[18px] xl:leading-[40px]">
-            {data.tag}
+            {data?.tag}
           </span>
           <h2 className="mb-3 mt-2 text-[20px] font-bold text-[#141414] lg:text-[24px] lg2:mb-5 lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[54px]">
-            {data.title}
+            {data?.title}
           </h2>
           <p className="text-[14px] font-medium leading-[28px] text-[#111013] lg:text-[16px] lg2:text-[18px]">
-            {data.sub_title}
+            {data?.sub_title}
           </p>
         </div>
         <div className="mt-6 lg:mt-10 2xl:mt-20">
           <div className="flex flex-col gap-3 md:grid md:grid-cols-3 lg:gap-6 2xl:gap-10">
-            {data.list.map(({ item }: any, index: number) => {
+            {data?.list?.map(({ item }: any, index: number) => {
               const delay = ((index % 3) + 1) * 200;
 
               return (

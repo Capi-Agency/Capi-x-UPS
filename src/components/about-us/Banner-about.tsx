@@ -7,7 +7,6 @@ type Props = {
 };
 
 const BannerAbout = ({ data }: Props) => {
-  // console.log('🚀 ~ BannerAbout ~ data:', data);
   return (
     <>
       <div className="bg-[#00D763] pb-10 pt-16 md:pt-12 lg:pb-[60px] lg:pt-[76px] xl:pb-[70px] 3xl:pt-[100px]">

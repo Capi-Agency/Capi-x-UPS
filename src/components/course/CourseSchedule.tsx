@@ -48,7 +48,7 @@ const CourseSchedule = (props: Props) => {
       case 1:
         return (
           <div>
-            {contentData.map((item, index) => {
+            {contentData?.map((item, index) => {
               const delay = ((index % 3) + 1) * 200;
               return (
                 <div
@@ -157,7 +157,7 @@ const CourseSchedule = (props: Props) => {
       case 2:
         return (
           <div>
-            {contentData.map((item, index) => (
+            {contentData?.map((item, index) => (
               <div
                 key={index}
                 className={`w-full grid-cols-12 gap-10 border-[#60606B] border-opacity-65 py-5 lg:grid lg:py-6 ${
@@ -259,7 +259,7 @@ const CourseSchedule = (props: Props) => {
       case 3:
         return (
           <div>
-            {contentData.map((item, index) => (
+            {contentData?.map((item, index) => (
               <div
                 key={index}
                 className={`w-full grid-cols-12 gap-10 border-[#60606B] border-opacity-65 py-5 lg:grid lg:py-6 ${
@@ -361,7 +361,7 @@ const CourseSchedule = (props: Props) => {
       case 4:
         return (
           <div>
-            {contentData.map((item, index) => (
+            {contentData?.map((item, index) => (
               <div
                 key={index}
                 className={`w-full grid-cols-12 gap-10 border-[#60606B] border-opacity-65 py-5 lg:grid lg:py-6 ${

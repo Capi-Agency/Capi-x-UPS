@@ -26,8 +26,8 @@ const ContentTech = ({ data }: Props) => {
               #datatracking app
             </p>
             <p className="text-[20px] font-bold text-[#141414] lg:w-[90%] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[56px]">
-              {data.title[0].text} <br className="hidden lg:block" />
-              {data.title[1].text}
+              {data?.title[0].text} <br className="hidden lg:block" />
+              {data?.title[1].text}
             </p>
             <p className="mt-2 text-[14px] leading-[22px] text-[#111013] lg:mt-6 lg:text-base lg2:text-[18px] lg2:leading-[28px] xl:leading-[30px]">
               {data?.sub_title}

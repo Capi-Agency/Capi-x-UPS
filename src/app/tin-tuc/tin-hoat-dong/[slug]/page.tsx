@@ -1,6 +1,6 @@
 import NewsDetail from '@/components/news/NewsDetail';
-import { fnGetNewDetail } from '@/services/news';
 import { Metadata, ResolvingMetadata } from 'next';
+import { fnGetListNews, fnGetNewDetail } from '@/services/news';
 import React from 'react';
 
 type Props = {
@@ -12,9 +12,18 @@ type Props = {
 const ChiTietTinTucHd = async ({ params }: Props) => {
   const { slug } = params;
   const data = await fnGetNewDetail(slug);
+  const related = await fnGetListNews(
+    1,
+    4,
+    data?.data?.data?.posts_by_id?.raw_content?.categories[0].category?.slug,
+  );
   return (
     <>
-      <NewsDetail data={data?.data?.data?.posts_by_id?.raw_content} />
+      <NewsDetail
+        data={data?.data?.data?.posts_by_id?.raw_content}
+        related={related?.data?.data?.posts}
+        url="/tin-tuc/tin-hoat-dong/"
+      />
     </>
   );
 };

@@ -13,7 +13,7 @@ const TagsPage = ({ data }: Props) => {
       data-aos="fade-up"
       data-aos-delay="200"
     >
-      {data.map(({ tag }: any, index: number) => (
+      {data?.map(({ tag }: any, index: number) => (
         <Link href={tag.url} key={index}>
           <p
             key={index}

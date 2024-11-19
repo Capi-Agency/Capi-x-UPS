@@ -17,7 +17,7 @@ const CourseBanner = ({ data }: Props) => {
             data-aos-delay="200"
           >
             <NextImg
-              src={process.env.REACT_APP_IMG_URL + data.cover}
+              src={process.env.REACT_APP_IMG_URL + data?.cover}
               alt="Capi"
               objectFit="contain"
               className=""
@@ -29,16 +29,16 @@ const CourseBanner = ({ data }: Props) => {
             data-aos-delay="600"
           >
             <span className="text-[14px] font-bold text-[#0C1C28] lg:text-base lg2:text-lg">
-              {data.content.text}
+              {data?.content?.text}
             </span>
             <p className="text-[14px] text-[#0C1C28] lg:text-base lg2:text-lg">
-              {data.content.addres}
+              {data?.content?.addres}
             </p>
             <h1 className="my-1 text-[32px] font-bold -tracking-[1.6px] text-[#0C1C28] lg:my-2 lg:text-[40px] lg2:text-[52px] 2xl:text-[60px] 3xl:text-[80px]">
-              {data.title}
+              {data?.title}
             </h1>
             <h3 className="text-[20px] font-bold text-[#0C1C28] md:w-[85%] lg:text-[24px] lg2:text-[32px] 2xl:w-full 2xl:text-[40px] 2xl:leading-[54px] 3xl:text-[48px] 3xl:leading-[56px]">
-              {data.sub_title}
+              {data?.sub_title}
             </h3>
             <div className="mt-6 grid grid-cols-3 gap-3 lg:gap-6 lg2:mt-20 2xl:mt-[94px] 2xl:gap-10">
               <div className="flex items-end bg-[#FF6D00] p-5 lg:p-6">
@@ -59,7 +59,7 @@ const CourseBanner = ({ data }: Props) => {
               <div className="flex flex-col gap-2 border-t border-[#60606B] pt-3 lg:pt-4 lg2:pt-6">
                 <p>
                   <span className="text-[20px] font-bold leading-none tracking-[0.4px] text-[#0C1C28] lg:text-[24px] lg2:text-[40px]">
-                    {data.total.video_count}
+                    {data?.total?.video_count}
                   </span>
                   <span className="text-[20px] font-bold leading-none text-[#0C1C28] lg:text-[24px] lg2:text-[32px]">
                     +
@@ -72,7 +72,7 @@ const CourseBanner = ({ data }: Props) => {
               <div className="flex flex-col gap-2 border-t border-[#60606B] pt-3 lg:pt-4 lg2:pt-6">
                 <p>
                   <span className="text-[20px] font-bold leading-none tracking-[0.4px] text-[#0C1C28] lg:text-[24px] lg2:text-[40px]">
-                    {data.total.content_count}
+                    {data?.total?.content_count}
                   </span>
                   <span className="text-[20px] font-bold leading-none text-[#0C1C28] lg:text-[24px] lg2:text-[32px]">
                     +

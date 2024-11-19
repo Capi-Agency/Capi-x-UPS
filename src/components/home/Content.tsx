@@ -28,15 +28,15 @@ const Content = ({ data }: Props) => {
               <span
                 className="text-[20px] font-bold leading-normal text-[#FFF] lg:text-[24px] lg:leading-[40px] lg2:text-[32px] 2xl:text-[38px] 2xl:leading-[48px] 3xl:text-[40px] 3xl:leading-[50px]"
                 dangerouslySetInnerHTML={{
-                  __html: render && data.card1.content_card.title,
+                  __html: render && data?.card1?.content_card?.title,
                 }}
               ></span>
               <span className="text-[14px] font-medium leading-[22px] text-[#FFF] lg:text-[18px] lg:leading-[28px]">
-                {data.card1.content_card.sub_title}
+                {data?.card1?.content_card?.sub_title}
               </span>
             </div>
             <div className="flex gap-5 md:gap-3 lg:gap-6">
-              {data.card1.chats.map(({ chat }: any, index: number) => {
+              {data?.card1?.chats.map(({ chat }: any, index: number) => {
                 return (
                   <Link
                     href={chat.url}
@@ -45,17 +45,17 @@ const Content = ({ data }: Props) => {
                   >
                     <div className="relative h-10 w-10 lg:h-[50px] lg:w-[50px]">
                       <NextImg
-                        src={process.env.REACT_APP_IMG_URL + chat.icon}
+                        src={process.env.REACT_APP_IMG_URL + chat?.icon}
                         alt="Capi"
                         objectFit="cover"
                       />
                     </div>
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-bold leading-normal text-[#FFF]">
-                        {chat.title}
+                        {chat?.title}
                       </span>
                       <span className="text-xs font-medium leading-normal text-[#FFF]">
-                        {chat.total}
+                        {chat?.total}
                       </span>
                     </div>
                   </Link>
@@ -70,10 +70,10 @@ const Content = ({ data }: Props) => {
           >
             <div className="flex flex-col gap-1">
               <span className="text-[20px] font-bold leading-normal text-[#111013] lg:text-[24px] lg:leading-[40px] lg2:text-[32px] 2xl:text-[38px] 2xl:leading-[48px] 3xl:text-[40px] 3xl:leading-[50px]">
-                {data.card2.content_card.title}
+                {data?.card2?.content_card?.title}
               </span>
               <span className="text-sm font-medium text-[#111013] lg:text-[18px] lg:leading-[28px]">
-                {data.card2.content_card.sub_title}
+                {data?.card2?.content_card?.sub_title}
               </span>
             </div>
           </div>
@@ -94,7 +94,7 @@ const Content = ({ data }: Props) => {
               </div>
               <h3
                 dangerouslySetInnerHTML={{
-                  __html: data.card3.content_card.title,
+                  __html: data?.card3?.content_card?.title,
                 }}
                 className="mb-2 mt-3 text-[20px] font-bold leading-normal text-[#014227] lg:mb-3 lg:mt-6 lg:text-[24px] lg:leading-[40px] lg2:text-[32px] 2xl:mb-4 2xl:mt-8 2xl:text-[38px] 2xl:leading-[48px] 3xl:text-[40px] 3xl:leading-[50px]"
               >
@@ -102,16 +102,16 @@ const Content = ({ data }: Props) => {
               </h3>
               <span
                 dangerouslySetInnerHTML={{
-                  __html: data.card3.content_card.sub_title,
+                  __html: data?.card3?.content_card?.sub_title,
                 }}
                 className="text-[14px] font-medium leading-[22px] text-[#126240] lg:text-base lg:leading-[28px] lg2:text-[18px]"
               >
                 {/* {data.card3.content_card.sub_title} */}
               </span>
             </div>
-            <Link href={data.card3.cta.url}>
+            <Link href={data?.card3?.cta?.url}>
               <button className="btn active mt-3 flex items-center !bg-[#FFF] !text-[#014227] md:mt-6 lg:mt-12 2xl:mt-[42px] 3xl:mt-[70px]">
-                {data.card3.cta.content_cta}
+                {data?.card3?.cta?.content_cta}
                 <div className="relative h-4 w-4 lg:h-6 lg:w-6">
                   <NextImg
                     src="/assets/icons/UPs.svg"

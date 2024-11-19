@@ -10,7 +10,7 @@ const CourseActicle = ({ data }: Props) => {
   return (
     <div className="mx-auto mt-10 md:max-w-[520px] lg:mt-[60px] lg:max-w-[700px] lg2:mt-20 lg2:max-w-[820px] xl:max-w-[900px] 2xl:max-w-[1024px]">
       <div className="grid grid-rows-3">
-        {data.question.map(({ item }: any, index: any) => {
+        {data?.question?.map(({ item }: any, index: any) => {
           const delay = ((index % 3) + 1) * 200;
           return (
             <a

@@ -8,7 +8,6 @@ type Props = {
 };
 
 const SlideHome = ({ data }: Props) => {
-  // console.log('🚀 ~ SlideHome ~ data:', data);
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);

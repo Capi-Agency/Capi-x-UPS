@@ -9,7 +9,7 @@ const Technology = ({ data }: Props) => {
   return (
     <div className="custom-container">
       <div className="mt-6 grid grid-rows-3 gap-3 md:grid-cols-3 md:grid-rows-none lg:mt-[30px] lg:gap-[30px]">
-        {data.map(({ item }: any, index: number) => {
+        {data?.map(({ item }: any, index: number) => {
           const delay = ((index % 3) + 1) * 200;
           return (
             <div

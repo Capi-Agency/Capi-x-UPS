@@ -9,9 +9,9 @@ type Props = {
 const NewsContentPage = ({ news, url }: Props) => {
   return (
     <div>
-      <div className="custom-container mx-auto mt-9 lg:mt-12 lg2:mt-14 2xl:mt-16 3xl:!max-w-[calc(1280px+48px)]">
+      <div className="custom-container mx-auto mt-6 lg:mt-7 xl:mt-8 2xl:mt-9 3xl:mt-12 3xl:!max-w-[calc(1280px+48px)]">
         <section>
-          <div className="scrollbar-hidden mb-4 flex items-center gap-3 overflow-x-auto whitespace-nowrap lg:mb-6 lg:gap-4 2xl:mb-8 3xl:mb-10">
+          <div className="scrollbar-hidden mb-5 flex items-center gap-3 overflow-x-auto whitespace-nowrap lg:mb-6 lg:gap-4 2xl:mb-8 3xl:mb-10">
             <div>
               <h4
                 className={`flex items-center gap-3 text-sm font-bold text-[#0C1C28] underline lg:gap-4 lg:text-base`}

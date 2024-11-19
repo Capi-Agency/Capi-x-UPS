@@ -72,7 +72,7 @@ const AppStock = ({ data }: Props) => {
             data-aos-delay="200"
           >
             <NextImg
-              src={process.env.REACT_APP_IMG_URL + data.cover}
+              src={process.env.REACT_APP_IMG_URL + data?.cover}
               alt="Capi"
               objectFit="cover"
               className="object-left-top"

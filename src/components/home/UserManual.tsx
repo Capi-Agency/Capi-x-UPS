@@ -9,7 +9,6 @@ type Props = {
 };
 
 const UserManual = ({ data }: Props) => {
-  // console.log('🚀 ~ UserManual ~ data:', data);
   const apps = [
     { id: 1, name: 'Nền tảng Website' },
     { id: 2, name: 'Nền tảng App Di động' },

@@ -92,7 +92,7 @@ const ReviewTech = ({ data }: Props) => {
           }}
           className="mySwiper"
         >
-          {data.map(({ item }: any, index: any) => {
+          {data?.map(({ item }: any, index: any) => {
             const delay = ((index % 3) + 1) * 200;
             return (
               <SwiperSlide

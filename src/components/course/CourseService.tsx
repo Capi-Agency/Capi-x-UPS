@@ -19,14 +19,14 @@ const CourseService = ({ data }: Props) => {
             data-aos-delay="200"
           >
             <h3 className="text-[20px] font-bold text-[#FFF] lg:text-[32px] lg2:text-[40px] lg2:leading-[54px]">
-              {data.title}
+              {data?.title}
             </h3>
             <p className="mb-5 mt-4 text-[14px] font-medium leading-[22px] text-[#FFF] lg:mb-10 lg:text-base lg2:text-[18px] lg2:leading-[28px]">
-              {data.sub_title}
+              {data?.sub_title}
             </p>
-            <Link href={data.cta.url}>
+            <Link href={data?.cta?.url}>
               <button className="btn active">
-                {data.cta.text}
+                {data?.cta?.text}
                 <div className="relative h-4 w-4 lg:h-6 lg:w-6">
                   <NextImg
                     src="/assets/icons/UPs.svg"
@@ -43,7 +43,7 @@ const CourseService = ({ data }: Props) => {
             data-aos-delay="600"
           >
             <NextImg
-              src={process.env.REACT_APP_IMG_URL + data.cover}
+              src={process.env.REACT_APP_IMG_URL + data?.cover}
               alt="Capi"
               objectFit="cover"
               className="object-left"

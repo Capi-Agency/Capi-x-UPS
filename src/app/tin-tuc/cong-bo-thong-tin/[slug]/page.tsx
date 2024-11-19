@@ -1,6 +1,6 @@
 import NewsDetail from '@/components/news/NewsDetail';
-import { fnGetAnnounceDetail } from '@/services/announce';
 import { Metadata, ResolvingMetadata } from 'next';
+import { fnGetAnnounceDetail, fnGetListAnnounce } from '@/services/announce';
 import React from 'react';
 
 type Props = {
@@ -12,9 +12,18 @@ type Props = {
 const ChiTietTinTucCb = async ({ params }: Props) => {
   const { slug } = params;
   const data = await fnGetAnnounceDetail(slug);
+  const related = await fnGetListAnnounce(
+    1,
+    4,
+    data?.data?.data?.posts_by_id?.raw_content?.categories[0].category?.slug,
+  );
   return (
     <>
-      <NewsDetail data={data?.data?.data?.announce_by_id?.raw_content} />
+      <NewsDetail
+        data={data?.data?.data?.announce_by_id?.raw_content}
+        related={related?.data?.data?.posts}
+        url="/tin-tuc/cong-bo-thong-tin/"
+      />
     </>
   );
 };

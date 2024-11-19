@@ -5,107 +5,11 @@ import Link from 'next/link';
 
 type Props = {
   data: any;
+  related?: any;
+  url?: any;
 };
-const news = [
-  {
-    id: 1,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 2,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 3,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 4,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 5,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 6,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 7,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 8,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 9,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 10,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 11,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-  {
-    id: 12,
-    date: 'Ngày 26, 2023',
-    readTime: '9 phút đọc',
-    title:
-      'Nóng: Thần đồng pickleball Quang Dương đánh bại VĐV số 1 thế giới theo kịch bản khó tin, ngạo nghễ đi sâu tại giải đấu danh tiếng',
-    imgSrc: '/assets/image/news.jpg',
-  },
-];
-const NewsDetail = ({ data }: Props) => {
-  console.log('🚀 ~ NewsDetail ~ data:', data);
+
+const NewsDetail = ({ data, related, url }: Props) => {
   const [render, setRender] = useState(false);
 
   useEffect(() => {
@@ -113,9 +17,9 @@ const NewsDetail = ({ data }: Props) => {
   }, []);
   return (
     <div>
-      <section className="custom-container mt-16 3xl:!max-w-[calc(1280px+48px)]">
+      <section className="custom-container mt-8 md:mt-10 lg:mt-12 xl:mt-14 3xl:mt-16 3xl:!max-w-[calc(1280px+48px)]">
         <div
-          className="relative h-[400px] w-full"
+          className="relative h-[180px] w-full md:h-[260px] lg:h-[302px] lg2:h-[360px] 2xl:h-[400px]"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -127,13 +31,13 @@ const NewsDetail = ({ data }: Props) => {
           />
         </div>
       </section>
-      <section className="custom-container mt-10 2xl:!max-w-[calc(1120px+48px)]">
-        <div className="grid grid-cols-[auto,260px] gap-[60px]">
+      <section className="custom-container mt-5 lg:mt-7 lg:!max-w-[896px+48px] lg2:mt-9 lg2:!max-w-[1008px+48px] 2xl:mt-10 2xl:!max-w-[calc(1120px+48px)]">
+        <div className="flex flex-col gap-6 md:grid md:grid-cols-[auto,260px] lg:gap-8 lg2:gap-12 2xl:gap-[60px]">
           <div data-aos="fade-up" data-aos-delay="200">
-            <h1 className="text-[32px] font-semibold leading-[40px] text-[#15171E]">
+            <h1 className="text-[18px] font-semibold text-[#15171E] md:text-[20px] lg:text-[28px] lg2:text-[32px] lg2:leading-[40px]">
               {data.title}
             </h1>
-            <div className="mb-8 mt-[18px] flex items-center gap-4">
+            {/* <div className="mb-8 mt-[18px] flex items-center gap-4">
               <span className="text-base font-bold text-[#525358]">
                 Tin cổ đông
               </span>
@@ -154,18 +58,34 @@ const NewsDetail = ({ data }: Props) => {
               <span className="text-base font-bold text-[#525358]">
                 Báo cáo tài chính
               </span>
-            </div>
+            </div> */}
             <div
               dangerouslySetInnerHTML={{
                 __html: render && data?.content,
               }}
+              className="mt-5 lg:mt-8 lg2:mt-10"
             ></div>
-            <div className="mt-[18px] w-full rounded-[20px] border border-[#ECECEC] bg-[#F6F6F7] p-5">
+            {data?.files &&
+              data?.files.map((file: any, index: number) => {
+                return (
+                  <Link
+                    key={index}
+                    href={
+                      process.env.REACT_APP_IMG_URL + file?.directus_files_id?.id
+                    }
+                    className="mt-3 flex items-center justify-center underline"
+                  >
+                    <span>Xem tài liệu: {file.directus_files_id?.title}</span>
+                  </Link>
+                );
+              })}
+
+            <div className="mt-5 w-full rounded-[20px] border border-[#ECECEC] bg-[#F6F6F7] p-5">
               <div className="mb-5">
                 <p className="text-base font-medium text-[#535662]">
                   Giúp chúng tôi cải thiện hướng dẫn này
                 </p>
-                <p className="text-[32px] font-semibold text-black">
+                <p className="text-[20px] font-semibold text-black lg:text-[28px] lg2:text-[32px]">
                   Chấm điểm độ hữu dụng của bài viết
                 </p>
               </div>
@@ -182,35 +102,35 @@ const NewsDetail = ({ data }: Props) => {
                 </div>
               </div>
             </div>
-            <p className="mt-[30px] text-center text-base font-medium text-[#535662]">
+            <p className="mt-4 text-center text-sm font-medium text-[#535662] md:mt-5 md:text-base lg:mt-6 lg2:mt-[30px]">
               Cập nhật mới nhất: {data?.date_published}
             </p>
           </div>
           <div data-aos="fade-up" data-aos-delay="600">
-            <h4 className="mb-5 text-[18px] font-medium text-[#15171E]">
+            <h4 className="mb-3 text-base font-medium text-[#15171E] xl:mb-5 xl:text-[18px]">
               Thẻ bài viết
             </h4>
             <ul>
-              <li className="border-b border-[#E7E9EF] py-3 text-[18px] font-medium text-[#15171E]">
+              <li className="border-b border-[#E7E9EF] py-3 text-base font-medium text-[#15171E] xl:text-[18px]">
                 <Link href={`#`}>Báo cáo ngày</Link>
               </li>
-              <li className="border-b border-[#E7E9EF] py-3 text-[18px] font-medium text-[#15171E]">
+              <li className="border-b border-[#E7E9EF] py-3 text-base font-medium text-[#15171E] xl:text-[18px]">
                 <Link href={`#`}>Phân tích từ UPS</Link>
               </li>
-              <li className="border-b border-[#E7E9EF] py-3 text-[18px] font-medium text-[#15171E]">
+              <li className="border-b border-[#E7E9EF] py-3 text-base font-medium text-[#15171E] xl:text-[18px]">
                 <Link href={`#`}>Sản phẩm đầu tư mới</Link>
               </li>
-              <li className="border-b border-[#E7E9EF] py-3 text-[18px] font-medium text-[#15171E]">
-                <Link href={`/gioi-thieu`}>Về UPS</Link>
+              <li className="border-b border-[#E7E9EF] py-3 text-base font-medium text-[#15171E] xl:text-[18px]">
+                <Link href={`#`}>Về UPS</Link>
               </li>
-              <li className="border-b border-[#E7E9EF] py-3 text-[18px] font-medium text-[#15171E]">
+              <li className="border-b border-[#E7E9EF] py-3 text-base font-medium text-[#15171E] xl:text-[18px]">
                 <Link href={`#`}>Sự kiện doanh nghiệp</Link>
               </li>
-              <li className="border-b border-[#E7E9EF] py-3 text-[18px] font-medium text-[#15171E]">
+              <li className="border-b border-[#E7E9EF] py-3 text-base font-medium text-[#15171E] xl:text-[18px]">
                 <Link href={`#`}>Nội bộ UPS</Link>
               </li>
             </ul>
-            <div className="mt-[40px] rounded-[10px] border border-[#C1C7DD] bg-[#F3F5FB] p-[16px]">
+            <div className="mt-5 rounded-[10px] border border-[#C1C7DD] bg-[#F3F5FB] p-[16px] lg:mt-7 lg2:mt-9 2xl:mt-[40px]">
               <h5 className="font-hanken-grotesk mb-[8px] text-[16px] font-bold leading-normal text-[#15171E]">
                 Tôi muốn đọc nhiều hơn
               </h5>
@@ -221,11 +141,11 @@ const NewsDetail = ({ data }: Props) => {
               <form action="">
                 <input
                   type="text"
-                  className="my-[16px] w-full rounded-[8px] bg-[#ECEEF4] px-[10px] py-[8px] backdrop-blur-[20px]"
+                  className="my-[16px] w-full rounded-[8px] bg-[#ECEEF4] px-[10px] py-[8px] text-sm backdrop-blur-[20px] placeholder:text-sm"
                   placeholder="abc@email.com"
                   required
                 />
-                <div className="hidden xl:inline-flex">
+                <div className="inline-block">
                   <Link
                     href="/"
                     className="btn group bg-[#15171E] text-[#02E56A]"
@@ -256,53 +176,78 @@ const NewsDetail = ({ data }: Props) => {
         </div>
       </section>
       {/* Cùng chuyên mục */}
-      <section className="custom-container mt-[60px] 3xl:!max-w-[calc(1280px+48px)]">
-        <h2
-          className="text-[40px] font-bold text-[#0C1C28]"
+      {related && (
+        <section className="custom-container mt-7 lg2:mt-10 xl:mt-12 2xl:mt-[52px] 3xl:mt-[60px] 3xl:!max-w-[calc(1280px+48px)]">
+          <h2
+            className="mb-5 text-[20px] font-bold text-[#0C1C28] lg:mb-[30px] lg:text-[24px] lg2:mb-10 lg2:text-[32px] 2xl:text-[38px] 3xl:text-[40px]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Cùng chuyên mục
+          </h2>
+
+          <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-4 lg:gap-y-6 lg2:gap-x-5 2xl:gap-x-8 2xl:gap-y-10">
+            {related.map((newItem: any, index: number) => {
+              const delay = ((index % 4) + 1) * 200;
+              return (
+                <Link
+                  href={`${url}${newItem?.short_content?.slug}`}
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={delay}
+                  className="group"
+                >
+                  <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
+                    <NextImg
+                      src={
+                        process.env.REACT_APP_IMG_URL +
+                        newItem?.short_content?.cover?.id
+                      }
+                      alt="Capi"
+                      objectFit="cover"
+                      className="rounded-[16px] transition-all duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                  <span className="mb-1 mt-2 inline-block text-xs font-medium leading-[16px] tracking-[0.14] lg:mb-2 lg:mt-4 lg:text-sm 2xl:mb-3 3xl:mt-5">
+                    {newItem?.short_content?.date_published}
+                  </span>
+                  <p className="line-clamp-3 h-[60px] text-sm font-semibold text-[#15171E] lg:h-[72px] lg:text-base lg2:text-[18px]">
+                    {newItem?.short_content?.title}
+                  </p>
+                  <div className="mt-2 flex items-center gap-2 lg:mt-3 2xl:mt-4">
+                    <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
+                      App Mobile
+                    </button>
+                    <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
+                      Trải nghiệm
+                    </button>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      )}
+      {data?.tags.length > 0 && (
+        <div
+          className="custom-container mt-10 flex flex-wrap items-center justify-center gap-6 lg:mt-[60px] lg:gap-10 xl:mt-20 2xl:mb-[-60px] 2xl:mt-[100px] 3xl:mt-[140px]"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Cùng chuyên mục
-        </h2>
-
-        <div className="mt-10 grid grid-cols-4 gap-x-8 gap-y-10">
-          {news.slice(0, 4).map((newItem, index) => {
-            const delay = ((index % 4) + 1) * 200;
+          {data?.tags?.map(({ tag }: any, index: number) => {
             return (
-              <Link
-                href={'/tin-tuc/chi-tiet-tin-tuc'}
-                key={newItem.id}
-                className="group"
-                data-aos="fade-up"
-                data-aos-delay={delay}
-              >
-                <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
-                  <NextImg
-                    src={newItem.imgSrc}
-                    alt="Capi"
-                    objectFit="cover"
-                    className="rounded-[16px] transition-all duration-300 group-hover:scale-110"
-                  />
-                </div>
-                <span className="mb-3 mt-8 inline-block text-sm font-medium leading-[16px] tracking-[0.14]">
-                  {newItem.date} · {newItem.readTime}
-                </span>
-                <p className="line-clamp-3 text-[18px] font-semibold text-[#15171E]">
-                  {newItem.title}
+              <Link href={tag.slug} key={index}>
+                <p
+                  key={index}
+                  className="text-sm font-bold leading-normal text-[#15171E] lg:text-[16px]"
+                >
+                  {tag.title}
                 </p>
-                <div className="mt-4 flex items-center gap-2">
-                  <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-[14px] font-medium leading-normal text-[#111013]">
-                    App Mobile
-                  </button>
-                  <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-[14px] font-medium leading-normal text-[#111013]">
-                    Trải nghiệm
-                  </button>
-                </div>
               </Link>
             );
           })}
         </div>
-      </section>
+      )}
     </div>
   );
 };

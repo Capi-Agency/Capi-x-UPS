@@ -15,11 +15,11 @@ const PartnerStock = ({ data }: Props) => {
           data-aos-delay="200"
         >
           <h3 className="w-[90%] text-[20px] font-bold text-[#111013] lg:text-[32px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[54px]">
-            {data.title[0].text}{' '}
-            <span className="text-[#00D763]">{data.title[1].text}</span>
+            {data?.title[0].text}{' '}
+            <span className="text-[#00D763]">{data?.title[1].text}</span>
           </h3>
           <p className="w-[90%] text-[14px] font-medium leading-[22px] text-[#111013] lg:text-[18px] lg:leading-[18px]">
-            {data.sub_title}
+            {data?.sub_title}
           </p>
         </div>
         <div
@@ -27,7 +27,7 @@ const PartnerStock = ({ data }: Props) => {
           data-aos="fade-up"
           data-aos-delay="600"
         >
-          {data.logos.map((logo: any, index: number) => (
+          {data?.logos.map((logo: any, index: number) => (
             <div key={index}>
               <img
                 src={process.env.REACT_APP_IMG_URL + logo.image}

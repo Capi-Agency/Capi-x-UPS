@@ -8,7 +8,7 @@ type Props = {
 const DirectorAbout = ({ data }: Props) => {
   return (
     <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
-      {data.map(({ item }: any, index: number) => {
+      {data?.map(({ item }: any, index: number) => {
         return (
           <div
             key={index}

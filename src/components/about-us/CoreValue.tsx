@@ -17,11 +17,11 @@ const CoreValue = ({ data }: Props) => {
         >
           <div>
             <span className="text-[14px] font-bold leading-[40px] text-[#111013] md:text-[20px] lg:text-[30px] 2xl:text-[32px]">
-              {data.section_content.title}
+              {data?.section_content?.title}
             </span>
             <div className="my-3 h-[1px] w-full bg-[#60606B] md:my-2 lg:my-4 lg:mb-8"></div>
             <p className="text-[14px] font-medium leading-[28px] text-[#111013] lg:text-[18px]">
-              {data.section_content.sub_title}
+              {data?.section_content?.sub_title}
             </p>
           </div>
           <div className="relative mt-10 h-[200px] w-[186px] lg:mt-0 lg:h-[250px] lg:w-[233px]">
@@ -34,7 +34,7 @@ const CoreValue = ({ data }: Props) => {
         </div>
         <div data-aos="fade-up" data-aos-delay="600">
           <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:gap-x-6 md:gap-y-6 lg:gap-x-[30px] lg:gap-y-[50px]">
-            {data.list.map(({ item }: any, index: number) => (
+            {data?.list?.map(({ item }: any, index: number) => (
               <div key={index} className="col-span-1">
                 <span className="text-[14px] font-medium leading-[40px] text-[#111013] lg:text-[18px]">
                   #{index + 1}

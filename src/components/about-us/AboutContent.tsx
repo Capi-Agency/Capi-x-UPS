@@ -16,10 +16,10 @@ const AboutContent = ({ data }: Props) => {
             data-aos-delay="200"
           >
             <span className="text-[14px] font-semibold uppercase leading-normal text-[#00D763] lg:text-base lg2:text-[18px] 3xl:text-2xl">
-              {data.card_left.title}
+              {data?.card_left?.title}
             </span>
             <p className="text-[20px] font-bold text-[#141414] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[54px]">
-              {data.card_left.content}
+              {data?.card_left?.content}
             </p>
           </div>
           <div
@@ -37,10 +37,10 @@ const AboutContent = ({ data }: Props) => {
               </div>
             </div>
             <p className="mb-4 mt-3 text-[14px] font-medium leading-[22px] tracking-[0.28px] text-[#FFF] lg:mt-[32px] lg:text-base lg:tracking-[0.4px] lg2:text-[18px] lg2:leading-[28px] 3xl:text-[20px] 3xl:leading-[30px]">
-              {data.card_right.content}
+              {data?.card_right?.content}
             </p>
             <span className="text-[14px] font-semibold uppercase text-[#00D763] lg:text-base lg2:text-[18px] lg2:leading-[28px] 3xl:text-2xl 3xl:leading-normal">
-              {data.card_right.title}
+              {data?.card_right?.title}
             </span>
           </div>
         </div>
