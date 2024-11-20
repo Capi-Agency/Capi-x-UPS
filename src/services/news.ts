@@ -58,3 +58,22 @@ export const fnGetNewDetail = async (slug: string) => {
 
   return await httpRequest.post(``, { query });
 };
+
+export const fnGetCateAndTags = async () => {
+  let query = `
+    query {
+      a_tags {
+        slug
+        title
+        raw
+      }
+      a_categories {
+        slug
+        title
+        raw
+      }
+    }
+  `;
+
+  return await httpRequest.post(``, { query });
+};
