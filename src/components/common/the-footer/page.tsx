@@ -20,6 +20,7 @@ const TheFooter = (props: Props) => {
             className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-10 lg:flex lg:gap-4"
             data-aos="fade-up"
             data-aos-delay="200"
+             data-aos-duration="800"
           >
             <span className="w-[90%] text-[20px] font-bold text-[#FFF] lg:w-[85%] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:w-[70%] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[56px]">
               <span className="text-[#02E56A]">
@@ -37,6 +38,7 @@ const TheFooter = (props: Props) => {
             className="grid md:grid-cols-2 md:gap-10 lg:grid-cols-[auto,230px] lg:gap-[50px]"
             data-aos="fade-up"
             data-aos-delay="400"
+             data-aos-duration="800"
           >
             <div className="flex flex-col">
               <p className="mb-3 border-b border-[#8C9AA4] pb-3 text-[14px] font-medium leading-[22px] text-[#8C9AA4] lg:mb-4 lg:pb-4 lg:text-base lg:leading-[28px] lg2:text-[18px]">
@@ -108,10 +110,11 @@ const TheFooter = (props: Props) => {
         className="h-[1px] w-full bg-[#014227]"
         data-aos="fade-up"
         data-aos-delay="200"
+         data-aos-duration="800"
       ></div>
       <div className="custom-container pb-10 pt-6 md:py-10 lg:pb-[50px] xl:py-[70px] 3xl:py-[120px]">
         <div className="gap-5 lg:grid lg:grid-cols-[25%,75%] xl:grid-cols-[32%,68%]">
-          <div className="" data-aos="fade-up" data-aos-delay="200">
+          <div className="" data-aos="fade-up" data-aos-delay="200"  data-aos-duration="800">
             <Link
               href="/"
               aria-label="Ups"
@@ -132,6 +135,7 @@ const TheFooter = (props: Props) => {
             className="flex flex-col gap-10 lg:gap-[70px]"
             data-aos="fade-up"
             data-aos-delay="400"
+             data-aos-duration="800"
           >
             <div className="mt-10 grid grid-cols-2 gap-x-3 gap-y-6 lg:mt-0 lg:flex lg:justify-between">
               <div>

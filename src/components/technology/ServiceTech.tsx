@@ -14,6 +14,7 @@ const ServiceTech = ({ data }: Props) => {
           className="mb-5 mt-6 flex flex-col px-5 md:mt-0 md:place-self-end md:px-0 lg:mb-[50px]"
           data-aos="fade-up"
           data-aos-delay="200"
+           data-aos-duration="800"
         >
           <h4 className="text-[20px] font-bold text-[#FFF] lg:text-[32px] lg:leading-[46px] lg2:text-[40px] xl:leading-[54px]">
             {data?.title}
@@ -62,6 +63,7 @@ const ServiceTech = ({ data }: Props) => {
           className="relative h-[316px] w-full md:h-[380px] lg:h-[450px] lg2:h-[600px] 2xl:h-[700px] 3xl:h-[790px]"
           data-aos="fade-up"
           data-aos-delay="200"
+           data-aos-duration="800"
         >
           <NextImg
             src={process.env.REACT_APP_IMG_URL + data.cover}

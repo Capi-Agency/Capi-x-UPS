@@ -22,6 +22,7 @@ const NewsDetail = ({ data, related, url }: Props) => {
           className="relative h-[180px] w-full md:h-[260px] lg:h-[302px] lg2:h-[360px] 2xl:h-[400px]"
           data-aos="fade-up"
           data-aos-delay="200"
+          data-aos-duration="800"
         >
           <NextImg
             src={process.env.REACT_APP_IMG_URL + data?.cover?.id}
@@ -33,7 +34,7 @@ const NewsDetail = ({ data, related, url }: Props) => {
       </section>
       <section className="custom-container mt-5 lg:mt-7 lg:!max-w-[896px+48px] lg2:mt-9 lg2:!max-w-[1008px+48px] 2xl:mt-10 2xl:!max-w-[calc(1120px+48px)]">
         <div className="flex flex-col gap-6 md:grid md:grid-cols-[auto,260px] lg:gap-8 lg2:gap-12 2xl:gap-[60px]">
-          <div data-aos="fade-up" data-aos-delay="200">
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
             <h1 className="text-[18px] font-semibold text-[#15171E] md:text-[20px] lg:text-[28px] lg2:text-[32px] lg2:leading-[40px]">
               {data.title}
             </h1>
@@ -71,7 +72,8 @@ const NewsDetail = ({ data, related, url }: Props) => {
                   <Link
                     key={index}
                     href={
-                      process.env.REACT_APP_IMG_URL + file?.directus_files_id?.id
+                      process.env.REACT_APP_IMG_URL +
+                      file?.directus_files_id?.id
                     }
                     className="mt-3 flex items-center justify-center underline"
                   >
@@ -106,7 +108,7 @@ const NewsDetail = ({ data, related, url }: Props) => {
               Cập nhật mới nhất: {data?.date_published}
             </p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="600">
+          <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
             <h4 className="mb-3 text-base font-medium text-[#15171E] xl:mb-5 xl:text-[18px]">
               Thẻ bài viết
             </h4>
@@ -182,19 +184,21 @@ const NewsDetail = ({ data, related, url }: Props) => {
             className="mb-5 text-[20px] font-bold text-[#0C1C28] lg:mb-[30px] lg:text-[24px] lg2:mb-10 lg2:text-[32px] 2xl:text-[38px] 3xl:text-[40px]"
             data-aos="fade-up"
             data-aos-delay="200"
+            data-aos-duration="800"
           >
             Cùng chuyên mục
           </h2>
 
           <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-4 lg:gap-y-6 lg2:gap-x-5 2xl:gap-x-8 2xl:gap-y-10">
             {related.map((newItem: any, index: number) => {
-              const delay = ((index % 4) + 1) * 200;
+              const delay = 200;
               return (
                 <Link
                   href={`${url}${newItem?.short_content?.slug}`}
                   key={index}
                   data-aos="fade-up"
                   data-aos-delay={delay}
+                  data-aos-duration="800"
                   className="group"
                 >
                   <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
@@ -233,6 +237,7 @@ const NewsDetail = ({ data, related, url }: Props) => {
           className="custom-container mt-10 flex flex-wrap items-center justify-center gap-6 lg:mt-[60px] lg:gap-10 xl:mt-20 2xl:mb-[-60px] 2xl:mt-[100px] 3xl:mt-[140px]"
           data-aos="fade-up"
           data-aos-delay="200"
+          data-aos-duration="800"
         >
           {data?.tags?.map(({ tag }: any, index: number) => {
             return (

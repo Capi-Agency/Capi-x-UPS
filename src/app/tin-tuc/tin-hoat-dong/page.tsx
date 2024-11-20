@@ -2,12 +2,13 @@ import HeaderNews from '@/components/news/HeaderNews';
 import NewsBanner from '@/components/news/NewsBanner';
 import React from 'react';
 import NewsContentPage from '@/components/news/NewsContentPage';
-import { fnGetListNews } from '@/services/news';
+import { fnGetCateAndTags, fnGetListNews } from '@/services/news';
 
 type Props = {};
 
 const TinHoatDong = async (props: Props) => {
   const data = await fnGetListNews(1, 12);
+  const dataCateAndTags = await fnGetCateAndTags();
   return (
     <div>
       <HeaderNews />
@@ -17,6 +18,7 @@ const TinHoatDong = async (props: Props) => {
       <NewsContentPage
         news={data?.data?.data?.posts}
         url="/tin-tuc/tin-hoat-dong/"
+        dataCateAndTags={dataCateAndTags?.data?.data}
       />
     </div>
   );

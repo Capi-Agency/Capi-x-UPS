@@ -13,6 +13,7 @@ const CoreValue = ({ data }: Props) => {
         <div
           data-aos="fade-up"
           data-aos-delay="200"
+           data-aos-duration="800"
           className="flex flex-col justify-between"
         >
           <div>
@@ -32,7 +33,7 @@ const CoreValue = ({ data }: Props) => {
             />
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-delay="600">
+        <div data-aos="fade-up" data-aos-delay="600"  data-aos-duration="800">
           <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:gap-x-6 md:gap-y-6 lg:gap-x-[30px] lg:gap-y-[50px]">
             {data?.list?.map(({ item }: any, index: number) => (
               <div key={index} className="col-span-1">

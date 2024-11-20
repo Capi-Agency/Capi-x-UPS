@@ -1,66 +1,53 @@
 'use client';
 import Link from 'next/link';
 import NextImg from '../common/next-img';
+import { useState } from 'react';
 type Props = {
   news: any;
   url: any;
+  dataCateAndTags: any;
 };
 
-const NewsContentPage = ({ news, url }: Props) => {
+const NewsContentPage = ({ news, url, dataCateAndTags }: Props) => {
+  console.log('🚀 ~ NewsContentPage ~ news:', news);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const handleCategoryClick = (cate: any) => {
+    setSelectedCategory(cate);
+  };
   return (
     <div>
       <div className="custom-container mx-auto mt-6 lg:mt-7 xl:mt-8 2xl:mt-9 3xl:mt-12 3xl:!max-w-[calc(1280px+48px)]">
         <section>
           <div className="scrollbar-hidden mb-5 flex items-center gap-3 overflow-x-auto whitespace-nowrap lg:mb-6 lg:gap-4 2xl:mb-8 3xl:mb-10">
-            <div>
-              <h4
-                className={`flex items-center gap-3 text-sm font-bold text-[#0C1C28] underline lg:gap-4 lg:text-base`}
-              >
-                Tin cổ đông
-                <div className={`size-1 rounded-full bg-black`}></div>
-              </h4>
-            </div>
-            <div>
-              <h4
-                className={`flex items-center gap-3 text-sm font-bold text-[#525358] lg:gap-4 lg:text-base`}
-              >
-                Báo cáo tài chính
-                <div className={`size-1 rounded-full bg-black`}></div>
-              </h4>
-            </div>
-            <div>
-              <h4
-                className={`flex items-center gap-3 text-sm font-bold text-[#525358] lg:gap-4 lg:text-base`}
-              >
-                Quan hệ cổ đông
-                <div className={`size-1 rounded-full bg-black`}></div>
-              </h4>
-            </div>
-            <div>
-              <h4
-                className={`flex items-center gap-3 text-sm font-bold text-[#525358] lg:gap-4 lg:text-base`}
-              >
-                Thông tin Quản trị
-                <div className={`size-1 rounded-full bg-black`}></div>
-              </h4>
-            </div>
-            <div>
-              <h4
-                className={`flex items-center gap-3 text-sm font-bold text-[#525358] lg:gap-4 lg:text-base`}
-              >
-                Báo cáo thường niên
-              </h4>
-            </div>
+            {dataCateAndTags?.a_categories?.map((cate: any, index: number) => (
+              <div key={index} className="flex items-center gap-3 lg:gap-4">
+                <h4
+                  className={`cursor-pointer text-sm font-bold lg:text-base ${
+                    selectedCategory === cate
+                      ? 'text-[#0C1C28] underline'
+                      : 'text-[#525358]'
+                  }`}
+                  onClick={() => handleCategoryClick(cate)}
+                >
+                  {cate.title}
+                </h4>
+                <div
+                  className={`size-1 rounded-full bg-black ${index === dataCateAndTags.a_categories.length - 1 ? 'hidden' : 'block'}`}
+                />
+              </div>
+            ))}
           </div>
           <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-4 lg:gap-y-6 lg2:gap-x-5 2xl:gap-x-8 2xl:gap-y-10">
             {news?.map((newItem: any, index: any) => {
-              const delay = ((index % 4) + 1) * 200;
+              const delay = 200;
               return (
                 <Link
                   href={`${url}${newItem?.short_content?.slug}`}
                   key={index}
                   data-aos="fade-up"
                   data-aos-delay={delay}
+                  data-aos-duration="800"
                   className="group"
                 >
                   <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
@@ -97,6 +84,7 @@ const NewsContentPage = ({ news, url }: Props) => {
           className="btn mx-auto mt-[18px] bg-[#15171E] font-bold text-[#FFF] lg:mt-6 lg2:mt-7 2xl:mt-8 3xl:mt-[60px]"
           data-aos="fade-up"
           data-aos-delay="200"
+          data-aos-duration="800"
         >
           Tải thêm
           <svg
@@ -116,6 +104,27 @@ const NewsContentPage = ({ news, url }: Props) => {
           </svg>
         </button>
       </div>
+      {dataCateAndTags?.a_tags.length > 0 && (
+        <div
+          className="custom-container mt-10 flex flex-wrap items-center justify-center gap-6 lg:mt-[60px] lg:gap-10 xl:mt-20 2xl:mb-[-60px] 2xl:mt-[100px] 3xl:mt-[140px]"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
+          {dataCateAndTags?.a_tags?.map((tag: any, index: number) => {
+            return (
+              <Link href={tag.slug} key={index}>
+                <p
+                  key={index}
+                  className="text-sm font-bold leading-normal text-[#15171E] lg:text-[16px]"
+                >
+                  {tag.title}
+                </p>
+              </Link>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };

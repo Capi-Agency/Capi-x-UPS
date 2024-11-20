@@ -39,13 +39,14 @@ const NewsAction = ({ news, url, title }: Props) => {
       </div>
       <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-4 lg:gap-y-6 lg2:gap-x-5 2xl:gap-x-8 2xl:gap-y-10">
         {news?.map((newItem: any, index: any) => {
-          const delay = ((index % 4) + 1) * 200;
+          const delay = 200;
           return (
             <Link
               href={`${url}${newItem?.short_content?.slug}`}
               key={index}
               data-aos="fade-up"
               data-aos-delay={delay}
+              data-aos-duration="800"
               className="group"
             >
               <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">

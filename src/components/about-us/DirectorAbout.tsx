@@ -1,11 +1,16 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NextImg from '../common/next-img';
 
 type Props = {
   data: any;
 };
 const DirectorAbout = ({ data }: Props) => {
+  const [render, setRender] = useState(false);
+
+  useEffect(() => {
+    setRender(true);
+  }, []);
   return (
     <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
       {data?.map(({ item }: any, index: number) => {
@@ -22,6 +27,7 @@ const DirectorAbout = ({ data }: Props) => {
               }`}
               data-aos="fade-up"
               data-aos-delay="200"
+              data-aos-duration="800"
             >
               <NextImg
                 src={process.env.REACT_APP_IMG_URL + item.cover}
@@ -36,6 +42,7 @@ const DirectorAbout = ({ data }: Props) => {
               }`}
               data-aos="fade-up"
               data-aos-delay="600"
+              data-aos-duration="800"
             >
               <span className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] 2xl:leading-[40px] 3xl:text-[40px] 3xl:leading-[54px]">
                 {item.profile.name}
@@ -43,8 +50,13 @@ const DirectorAbout = ({ data }: Props) => {
               <p className="my-2 text-[14px] font-bold uppercase leading-[22px] tracking-[0.28px] text-[#161519] md:text-[16px] lg:my-4 lg:leading-[26px] lg:tracking-[0.32px]">
                 {item.profile.position}
               </p>
-              <p className="text-[14px] font-medium leading-[22px] text-[#111013] lg:text-[18px] lg:leading-[26px]">
-                {item.profile.description}
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: render && item?.profile?.description,
+                }}
+                className="text-[14px] font-medium leading-[22px] text-[#111013] lg:text-[18px] lg:leading-[26px]"
+              >
+                {/* {item?.profile?.description} */}
               </p>
             </div>
           </div>

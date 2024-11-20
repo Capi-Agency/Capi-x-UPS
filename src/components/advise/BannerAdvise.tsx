@@ -11,6 +11,7 @@ const BannerAdvise = (props: Props) => {
           className="absolute bottom-[60px] left-[60px]"
           data-aos="fade-up"
           data-aos-delay="200"
+           data-aos-duration="800"
         >
           <span className="leading- text-[18px] font-medium text-[#F51666]">
             #UPS
@@ -48,6 +49,7 @@ const BannerAdvise = (props: Props) => {
           className="relative -mb-6 h-[693px] w-[782px]"
           data-aos="fade-up"
           data-aos-delay="600"
+           data-aos-duration="800"
         >
           <NextImg
             src="/assets/image/banner-tuvan.png"

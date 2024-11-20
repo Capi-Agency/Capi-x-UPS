@@ -18,7 +18,7 @@ const ServiceAdvise = (props: Props) => {
   return (
     <div className="custom-container mt-[160px]">
       <div className="relative overflow-hidden rounded-[40px] bg-[#4C35F5] p-[60px]">
-        <div data-aos="fade-up" data-aos-delay="200">
+        <div data-aos="fade-up" data-aos-delay="200"  data-aos-duration="800">
           <h3 className="text-[32px] font-medium text-[#FFF]">
             Hỗ trợ doanh nghiệp <br />
             các vấn đề thường niên
@@ -55,6 +55,7 @@ const ServiceAdvise = (props: Props) => {
           className="absolute right-0 top-0"
           data-aos="fade-up"
           data-aos-delay="600"
+           data-aos-duration="800"
         >
           <div className="relative h-[422px] w-[515px]">
             <NextImg

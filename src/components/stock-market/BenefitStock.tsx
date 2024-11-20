@@ -14,6 +14,7 @@ const BenefitStock = ({ data }: Props) => {
           className="flex flex-col text-center"
           data-aos="fade-up"
           data-aos-delay="200"
+           data-aos-duration="800"
         >
           <span className="text-base font-medium leading-[24px] text-[#A66CFF] lg2:text-[18px] lg2:leading-[40px]">
             {data?.tag}
@@ -35,6 +36,7 @@ const BenefitStock = ({ data }: Props) => {
                 className={`flex flex-col gap-3 md:gap-2 lg2:gap-4 2xl:gap-5`}
                 data-aos="fade-up"
                 data-aos-delay={delay}
+                 data-aos-duration="800"
               >
                 <div className="relative mx-auto size-[100px] md:size-20 lg:size-[120px] lg2:size-[160px] xl:size-[180px] 2xl:size-[200px] 3xl:size-[220px]">
                   <NextImg
@@ -63,6 +65,7 @@ const BenefitStock = ({ data }: Props) => {
           className="btn mx-auto !bg-[#D0F500]"
           data-aos="fade-up"
           data-aos-delay="200"
+           data-aos-duration="800"
         >
           Mở tài khoản ngay
           <div className="relative h-4 w-4 lg:h-6 lg:w-6">

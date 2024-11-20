@@ -50,7 +50,7 @@ const cardsData = [
 const NetworkAdvise = (props: Props) => {
   return (
     <div className="custom-container mt-[120px]">
-      <div className="text-center" data-aos="fade-up" data-aos-delay="200">
+      <div className="text-center" data-aos="fade-up" data-aos-delay="200"  data-aos-duration="800">
         <h3 className="text-[40px] font-semibold text-[#1D1E22]">
           Cổ phần hóa và phát hành chứng khoán
         </h3>
@@ -111,6 +111,7 @@ const NetworkAdvise = (props: Props) => {
                   onMouseLeave={handleMouseLeave}
                   data-aos="fade-up"
                   data-aos-delay={delay}
+                   data-aos-duration="800"
                 >
                   <div className="relative h-[303px] w-full">
                     <NextImg src={card.imgSrc} alt="Capi" objectFit="contain" />

@@ -8,8 +8,13 @@ type Props = {
 
 const NewsBanner = ({ dataNew }: Props) => {
   return (
-    <div className="custom-container 3xl:!max-w-[calc(1280px+48px)]">
-      <div className="mt-[18px] flex flex-col-reverse md:grid md:grid-cols-[46%,auto] lg:mt-6 lg2:mt-7 2xl:mt-8 3xl:mt-[60px]">
+    <div className="custom-container overflow-hidden 3xl:!max-w-[calc(1280px+48px)]">
+      <div
+        className="mt-[18px] flex flex-col-reverse md:grid md:grid-cols-[46%,auto] lg:mt-6 lg2:mt-7 2xl:mt-8 3xl:mt-[60px]"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="800"
+      >
         <div className="flex flex-col gap-2 rounded-b-[20px] rounded-tl-none bg-[#15171E] p-5 text-[#FFF] md:gap-3 md:rounded-l-[20px] md:rounded-br-none lg:gap-6 lg:px-[34px] lg:py-8 lg2:px-10 lg2:py-8 2xl:px-11 2xl:py-[34px] 3xl:gap-9 3xl:px-[50px] 3xl:py-11">
           <div className="relative h-[26px] w-[60px] lg:h-[32px] lg:w-[73px] 2xl:h-[48px] 2xl:w-[111px]">
             <NextImg

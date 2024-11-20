@@ -72,6 +72,7 @@ const ContentAdvise = (props: Props) => {
               )}
               data-aos="fade-up"
               data-aos-delay={delay}
+               data-aos-duration="800"
             >
               <div>
                 {item.titles.map((title) => (

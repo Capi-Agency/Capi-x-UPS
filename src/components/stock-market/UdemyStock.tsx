@@ -15,6 +15,7 @@ const UdemyStock = ({ data }: Props) => {
           className="relative flex h-[234px] w-[240px] place-content-start justify-start md:h-[276px] md:w-[273px] lg:h-[320px] lg:w-[340px] lg2:h-[400px] lg2:w-[430px] 2xl:w-[482px] 3xl:w-[564px]"
           data-aos="fade-up"
           data-aos-delay="200"
+           data-aos-duration="800"
         >
           <NextImg
             src={process.env.REACT_APP_IMG_URL + data?.cover}
@@ -23,7 +24,7 @@ const UdemyStock = ({ data }: Props) => {
             className=""
           />
         </div>
-        <div className="flex flex-col" data-aos="fade-up" data-aos-delay="600">
+        <div className="flex flex-col" data-aos="fade-up" data-aos-delay="600"  data-aos-duration="800">
           <span className="text-[14px] font-medium text-[#FFF] lg:text-base lg:leading-[40px] lg2:text-[18px]">
             {data?.tag}
           </span>

@@ -3,15 +3,16 @@ import NewsContent from '@/components/news/NewsContent';
 import NewsBanner from '@/components/news/NewsBanner';
 import NewsService from '@/components/news/NewsService';
 import { fnGetListAnnounce } from '@/services/announce';
-import { fnGetListNews } from '@/services/news';
+import { fnGetCateAndTags, fnGetListNews } from '@/services/news';
 import React from 'react';
+import TagNews from '@/components/news/TagNews';
 
 type Props = {};
 
 const NewsPage = async (props: Props) => {
   const data = await fnGetListNews(1, 12);
   const dataAnnounce = await fnGetListAnnounce(1, 4);
-
+  const dataCateAndTags = await fnGetCateAndTags();
   return (
     <div className="">
       <>
@@ -35,6 +36,7 @@ const NewsPage = async (props: Props) => {
           news={dataAnnounce?.data?.data?.announce}
           url="/tin-tuc/cong-bo-thong-tin/"
         />
+        <TagNews dataCateAndTags={dataCateAndTags?.data?.data} />
       </>
     </div>
   );

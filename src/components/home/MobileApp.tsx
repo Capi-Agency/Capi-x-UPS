@@ -18,6 +18,7 @@ const MobileApp = ({ data }: Props) => {
               className="flex flex-col gap-5 md:my-auto lg:gap-8"
               data-aos="fade-up"
               data-aos-delay="100"
+               data-aos-duration="800"
             >
               <div className="flex flex-col gap-1">
                 <div className="relative h-[32px] w-[73px] lg:h-[48px] lg:w-[111px]">
@@ -87,6 +88,7 @@ const MobileApp = ({ data }: Props) => {
               className="relative mt-10 h-[390px] w-full sm:h-[470px] md:pt-[141%] lg:mt-0"
               data-aos="fade-up"
               data-aos-delay="400"
+               data-aos-duration="800"
             >
               <NextImg
                 src={process.env.REACT_APP_IMG_URL + data.cover}

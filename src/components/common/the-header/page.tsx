@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import { CaretDownIcon } from '@radix-ui/react-icons';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import NextImg from '../next-img';
@@ -28,7 +27,6 @@ const TheHeader = () => {
     setActiveIndex(index);
   };
 
-  const [openMenu, setOpenMenu] = useState(false);
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -645,7 +643,7 @@ const TheHeader = () => {
                     aria-label="Mở tài khoản ngay"
                     title="Mở tài khoản ngay"
                   >
-                    <button className={`btn active !bg-[${bgBtn}]`}>
+                    <button className={`btn active bg-[${bgBtn}]`}>
                       Mở tài khoản ngay
                       <div className="relative h-6 w-6">
                         <NextImg
@@ -666,7 +664,7 @@ const TheHeader = () => {
                     aria-label="Mở tài khoản ngay"
                     title="Mở tài khoản ngay"
                   >
-                    <button className={`btn active !bg-[${bgBtn}]`}>
+                    <button className={`btn active bg-[${bgBtn}]`}>
                       Mở tài khoản ngay
                       <div className="relative h-4 w-4 lg:h-6 lg:w-6">
                         <NextImg
@@ -716,7 +714,7 @@ const TheHeader = () => {
                   <button
                     aria-label="Open Menu"
                     title="Open Menu"
-                    className="duration-100000 -mr-1 rounded p-2 transition ease-in focus:outline-none"
+                    className="-mr-1 rounded p-2 transition duration-1000 ease-in focus:outline-none"
                     onClick={() => setIsMenuOpen(true)}
                   >
                     <svg
