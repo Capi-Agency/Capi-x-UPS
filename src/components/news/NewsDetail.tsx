@@ -36,7 +36,7 @@ const NewsDetail = ({ data, related, url }: Props) => {
         <div className="flex flex-col gap-6 md:grid md:grid-cols-[auto,260px] lg:gap-8 lg2:gap-12 2xl:gap-[60px]">
           <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
             <h1 className="text-[18px] font-semibold text-[#15171E] md:text-[20px] lg:text-[28px] lg2:text-[32px] lg2:leading-[40px]">
-              {data.title}
+              {data?.title}
             </h1>
             {/* <div className="mb-8 mt-[18px] flex items-center gap-4">
               <span className="text-base font-bold text-[#525358]">
@@ -75,6 +75,7 @@ const NewsDetail = ({ data, related, url }: Props) => {
                       process.env.REACT_APP_IMG_URL +
                       file?.directus_files_id?.id
                     }
+                    target="_blank"
                     className="mt-3 flex items-center justify-center underline"
                   >
                     <span>Xem tài liệu: {file.directus_files_id?.title}</span>

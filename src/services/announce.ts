@@ -6,7 +6,8 @@ export const  fnGetListAnnounce=async(
     categorySlug: string | null = null,
     tagSlug: string | null = null,
     date: string | null = null,
-    keyword: string | null = null
+    keyword: string | null = null,
+    sort:any=true
 ) =>{
     let filterConditions = [];
 
@@ -30,7 +31,7 @@ export const  fnGetListAnnounce=async(
 
     let query = `
         query {
-            announce (page: ${page}, limit: ${limit}, sort: "-date_published" ${filterString ? `, ${filterString}` : ""}) {
+            announce (page: ${page}, limit: ${limit}, sort: "${sort==true?"-date_published":"date_published"}" ${filterString ? `, ${filterString}` : ""}) {
                 short_content
             }
             announce_aggregated ${filterString ? `(${filterString})` : ""} {

@@ -30,7 +30,7 @@ const TinHoatDong = (props: Props) => {
           keyword,
         );
 
-        setData(data);
+        await setData(data?.data?.data?.posts);
       } catch (error) {
         console.error('Error', error);
       }
@@ -38,18 +38,19 @@ const TinHoatDong = (props: Props) => {
   }, [currentPage, slugCate, slugTag, date, keyword]);
 
   return (
-    <div>
+    <>
       <HeaderNews />
-      <NewsBanner dataNew={data?.data?.data?.posts[0]} />
+      {data && <NewsBanner dataNew={data[0]} />}
+
       <NewsContentPage
-        news={data?.data?.data?.posts}
+        news={data}
         url="/tin-tuc/tin-hoat-dong/"
         dataCateAndTags={dataCateAndTags?.data?.data}
         slugCate={setSlugCate}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
       />
-    </div>
+    </>
   );
 };
 

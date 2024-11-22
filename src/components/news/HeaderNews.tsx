@@ -1,13 +1,20 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import NextImg from '../common/next-img';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-
-const HeaderNews = ({dataNew}:any) => {
+interface Props {
+  dataNew?: any;
+  setTextValue?: any;
+  setSort?: any;
+}
+const HeaderNews = ({ dataNew, setTextValue, setSort }: Props) => {
   const pathname = usePathname();
-
+  const handleSelect = (value: any) => {
+    if (value == '1') setSort(true);
+    if (value == '2') setSort(false);
+  };
   return (
     <div className="custom-container mt-10 lg:mt-12 xl:mt-14 2xl:mt-16 3xl:mt-[75px] 3xl:!max-w-[calc(1280px+48px)]">
       <div className="mb-[5px] flex items-center justify-between lg:mb-2 2xl:mb-4 3xl:mb-5">
@@ -47,6 +54,7 @@ const HeaderNews = ({dataNew}:any) => {
           <form className="relative flex-1">
             <input
               type="text"
+              onChange={(e) => setTextValue(e.target.value)}
               placeholder="Tìm kiếm..."
               className={`w-full rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-2 pl-3 text-xs font-medium text-[#525358] outline-none transition-all duration-300 ease-in-out placeholder:text-xs placeholder:font-medium placeholder:leading-none placeholder:text-[#525358] lg:w-[250px] lg:text-sm lg:placeholder:text-sm`}
             />
@@ -98,7 +106,10 @@ const HeaderNews = ({dataNew}:any) => {
             </div>
 
             <div className="relative flex cursor-pointer items-center gap-2 rounded-[6px] bg-[rgba(144,145,156,0.08)]">
-              <select className="block cursor-pointer appearance-none bg-transparent py-2 pl-3 pr-7 text-xs font-medium text-[#525358] focus:outline-none lg:text-sm">
+              <select
+                className="block cursor-pointer appearance-none bg-transparent py-2 pl-3 pr-7 text-xs font-medium text-[#525358] focus:outline-none lg:text-sm"
+                onChange={(e) => handleSelect(e.target.value)}
+              >
                 <option value="1">Mới nhất</option>
                 <option value="2">Cũ nhất</option>
               </select>

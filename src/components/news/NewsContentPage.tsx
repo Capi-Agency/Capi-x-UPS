@@ -9,6 +9,7 @@ type Props = {
   slugCate?: any;
   currentPage?: any;
   setCurrentPage?: any;
+  length?:any
 };
 
 const NewsContentPage = ({
@@ -18,8 +19,8 @@ const NewsContentPage = ({
   slugCate,
   currentPage,
   setCurrentPage,
+  length=12
 }: Props) => {
-  console.log('🚀 ~ news:', news);
   return (
     <div>
       <div className="custom-container mx-auto mt-6 lg:mt-7 xl:mt-8 2xl:mt-9 3xl:mt-12 3xl:!max-w-[calc(1280px+48px)]">
@@ -84,7 +85,7 @@ const NewsContentPage = ({
           </div>
         </section>
         <button
-          className={`btn mx-auto mt-[18px] bg-[#15171E] font-bold text-[#FFF] lg:mt-6 lg2:mt-7 2xl:mt-8 3xl:mt-[60px] ${news?.length < 12 ? 'hidden' : ''}`}
+          className={`btn mx-auto mt-[18px] bg-[#15171E] font-bold text-[#FFF] lg:mt-6 lg2:mt-7 2xl:mt-8 3xl:mt-[60px] ${length < 12 ? 'hidden' : ''}`}
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="700"

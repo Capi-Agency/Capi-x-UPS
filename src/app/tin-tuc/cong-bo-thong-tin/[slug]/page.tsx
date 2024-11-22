@@ -12,6 +12,7 @@ type Props = {
 const ChiTietTinTucCb = async ({ params }: Props) => {
   const { slug } = params;
   const data = await fnGetAnnounceDetail(slug);
+
   const related = await fnGetListAnnounce(
     1,
     4,
