@@ -15,7 +15,7 @@ const FeeStock = ({ data }: Props) => {
           className="flex flex-col gap-3 md:gap-4 lg2:gap-5 2xl:gap-6"
           data-aos="fade-up"
           data-aos-delay="200"
-           data-aos-duration="800"
+          data-aos-duration="700"
         >
           <div>
             <span className="text-base font-medium leading-[40px] text-[#1B180E] lg2:text-[18px]">
@@ -48,7 +48,7 @@ const FeeStock = ({ data }: Props) => {
                 className={`flex flex-col gap-6 rounded-[15px] p-6 shadow-[3px_10px_20px_0px_rgba(0,0,0,0.02)] lg2:p-10 ${index === 0 ? 'bg-[#F3F1EB] text-[#1A1711]' : 'bg-[#1A1711] text-[#FFF]'} `}
                 data-aos="fade-up"
                 data-aos-delay="400"
-                 data-aos-duration="800"
+                data-aos-duration="700"
                 key={index}
               >
                 <div>

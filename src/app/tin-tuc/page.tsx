@@ -18,7 +18,7 @@ const NewsPage = async (props: Props) => {
       <>
         <HeaderNews />
         <NewsBanner
-          dataNew={data?.data?.data?.posts[data?.data?.data?.posts.length - 1]}
+          dataNew={data?.data?.data?.posts[0]}
         />
         <NewsContent
           title="Tin hoạt động"

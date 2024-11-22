@@ -6,15 +6,20 @@ type Props = {
   news: any;
   url: any;
   dataCateAndTags: any;
+  slugCate?: any;
+  currentPage?: any;
+  setCurrentPage?: any;
 };
 
-const NewsContentPage = ({ news, url, dataCateAndTags }: Props) => {
-  console.log('🚀 ~ NewsContentPage ~ news:', news);
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
-  const handleCategoryClick = (cate: any) => {
-    setSelectedCategory(cate);
-  };
+const NewsContentPage = ({
+  news,
+  url,
+  dataCateAndTags,
+  slugCate,
+  currentPage,
+  setCurrentPage,
+}: Props) => {
+  console.log('🚀 ~ news:', news);
   return (
     <div>
       <div className="custom-container mx-auto mt-6 lg:mt-7 xl:mt-8 2xl:mt-9 3xl:mt-12 3xl:!max-w-[calc(1280px+48px)]">
@@ -24,11 +29,9 @@ const NewsContentPage = ({ news, url, dataCateAndTags }: Props) => {
               <div key={index} className="flex items-center gap-3 lg:gap-4">
                 <h4
                   className={`cursor-pointer text-sm font-bold lg:text-base ${
-                    selectedCategory === cate
-                      ? 'text-[#0C1C28] underline'
-                      : 'text-[#525358]'
+                    index ? 'text-[#525358]' : 'text-[#0C1C28] underline'
                   }`}
-                  onClick={() => handleCategoryClick(cate)}
+                  onClick={() => slugCate(cate?.slug)}
                 >
                   {cate.title}
                 </h4>
@@ -47,7 +50,7 @@ const NewsContentPage = ({ news, url, dataCateAndTags }: Props) => {
                   key={index}
                   data-aos="fade-up"
                   data-aos-delay={delay}
-                  data-aos-duration="800"
+                  data-aos-duration="700"
                   className="group"
                 >
                   <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
@@ -81,10 +84,11 @@ const NewsContentPage = ({ news, url, dataCateAndTags }: Props) => {
           </div>
         </section>
         <button
-          className="btn mx-auto mt-[18px] bg-[#15171E] font-bold text-[#FFF] lg:mt-6 lg2:mt-7 2xl:mt-8 3xl:mt-[60px]"
+          className={`btn mx-auto mt-[18px] bg-[#15171E] font-bold text-[#FFF] lg:mt-6 lg2:mt-7 2xl:mt-8 3xl:mt-[60px] ${news?.length < 12 ? 'hidden' : ''}`}
           data-aos="fade-up"
           data-aos-delay="200"
-          data-aos-duration="800"
+          data-aos-duration="700"
+          onClick={() => setCurrentPage(currentPage + 1)}
         >
           Tải thêm
           <svg
@@ -109,11 +113,11 @@ const NewsContentPage = ({ news, url, dataCateAndTags }: Props) => {
           className="custom-container mt-10 flex flex-wrap items-center justify-center gap-6 lg:mt-[60px] lg:gap-10 xl:mt-20 2xl:mb-[-60px] 2xl:mt-[100px] 3xl:mt-[140px]"
           data-aos="fade-up"
           data-aos-delay="200"
-          data-aos-duration="800"
+          data-aos-duration="700"
         >
           {dataCateAndTags?.a_tags?.map((tag: any, index: number) => {
             return (
-              <Link href={tag.slug} key={index}>
+              <Link href={`#`} key={index}>
                 <p
                   key={index}
                   className="text-sm font-bold leading-normal text-[#15171E] lg:text-[16px]"

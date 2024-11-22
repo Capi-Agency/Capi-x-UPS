@@ -72,7 +72,7 @@ const ContentAdvise = (props: Props) => {
               )}
               data-aos="fade-up"
               data-aos-delay={delay}
-               data-aos-duration="800"
+              data-aos-duration="700"
             >
               <div>
                 {item.titles.map((title) => (
@@ -93,7 +93,7 @@ const ContentAdvise = (props: Props) => {
               <div>
                 <button
                   className={cn(
-                    'text-base font-bold lg:no-underline underline',
+                    'text-base font-bold underline lg:no-underline',
                     index === items.length - 1
                       ? 'link-effect'
                       : 'link-effect-b',

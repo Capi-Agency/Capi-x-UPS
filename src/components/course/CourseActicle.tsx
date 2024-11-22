@@ -21,7 +21,7 @@ const CourseActicle = ({ data }: Props) => {
               } `}
               data-aos="fade-up"
               data-aos-delay={delay}
-               data-aos-duration="800"
+              data-aos-duration="700"
             >
               <div className="flex items-center gap-3 lg:gap-5">
                 <div className="relative h-[24px] w-[24px] min-w-6">
@@ -51,7 +51,7 @@ const CourseActicle = ({ data }: Props) => {
         className="btn active1 mx-auto mt-6 !bg-[#15171E] !text-[#FFF] lg:mt-[50px]"
         data-aos="fade-up"
         data-aos-delay="400"
-         data-aos-duration="800"
+        data-aos-duration="700"
       >
         Xem tất cả bài viết
         <svg

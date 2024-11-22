@@ -27,7 +27,7 @@ const DirectorAbout = ({ data }: Props) => {
               }`}
               data-aos="fade-up"
               data-aos-delay="200"
-              data-aos-duration="800"
+              data-aos-duration="700"
             >
               <NextImg
                 src={process.env.REACT_APP_IMG_URL + item.cover}
@@ -42,7 +42,7 @@ const DirectorAbout = ({ data }: Props) => {
               }`}
               data-aos="fade-up"
               data-aos-delay="600"
-              data-aos-duration="800"
+              data-aos-duration="700"
             >
               <span className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] 2xl:leading-[40px] 3xl:text-[40px] 3xl:leading-[54px]">
                 {item.profile.name}

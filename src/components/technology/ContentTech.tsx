@@ -12,7 +12,7 @@ const ContentTech = ({ data }: Props) => {
     <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
       <div className="rounded-[12px] bg-[#F3F3FB] px-6 py-5 lg:rounded-[24px] lg:px-10 lg:py-10 lg2:px-[60px] lg2:py-[60px] 2xl:py-[80px]">
         <div className="flex flex-col gap-10 md:grid md:grid-cols-[346px,auto] lg2:grid-cols-[435px,auto] 2xl:grid-cols-[520px,auto] 3xl:gap-14">
-          <div data-aos="fade-up" data-aos-delay="200"  data-aos-duration="800">
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#111013] drop-shadow filter lg:h-[60px] lg:w-[60px]">
               <div className="relative h-4 w-4 rounded-full lg:h-[24px] lg:w-[24px]">
                 <NextImg
@@ -54,7 +54,7 @@ const ContentTech = ({ data }: Props) => {
           <div
             data-aos="fade-up"
             data-aos-delay="600"
-             data-aos-duration="800"
+            data-aos-duration="700"
             className="place-content-end"
           >
             <div className="relative h-[184px] w-full rounded-full lg:h-[274px] lg2:h-[328px] 2xl:h-[374px] 3xl:h-[464px]">
@@ -76,7 +76,7 @@ const ContentTech = ({ data }: Props) => {
                   className="flex flex-col justify-between gap-3 border-t border-[#60606B] pt-6 opacity-[0.65] lg:gap-4 lg:pt-8 lg2:pt-10 2xl:pt-12"
                   data-aos="fade-up"
                   data-aos-delay={delay}
-                   data-aos-duration="800"
+                  data-aos-duration="700"
                 >
                   <div className="flex flex-row items-center gap-3 lg:flex-col lg:items-start lg:gap-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF] lg:h-[50px] lg:w-[50px] lg2:h-[60px] lg2:w-[60px]">

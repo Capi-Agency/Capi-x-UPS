@@ -16,7 +16,7 @@ const BannerStock = ({ data }: Props) => {
             className="absolute inset-0"
             data-aos="fade-up"
             data-aos-delay="200"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <div className="relative mx-auto w-full md:h-[340px] lg:h-[400px] lg2:h-[460px] xl:h-[500px] 2xl:h-[585px] 3xl:h-[658px]">
               <NextImg
@@ -27,7 +27,12 @@ const BannerStock = ({ data }: Props) => {
               />
             </div>
           </div>
-          <div className="text-center" data-aos="fade-up" data-aos-delay="400"  data-aos-duration="800">
+          <div
+            className="text-center"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="700"
+          >
             <h1 className="font-bold text-[#D0F500] md:text-[40px] md:leading-[46px] lg2:text-[48px] lg2:leading-[54px] xl:text-[54px] xl:leading-[62px] 2xl:text-[60px] 2xl:leading-[68px] 3xl:text-[72px] 3xl:leading-[80px]">
               {data?.title}
             </h1>
@@ -50,7 +55,7 @@ const BannerStock = ({ data }: Props) => {
             className="mt-5 text-center"
             data-aos="fade-up"
             data-aos-delay="400"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <h1 className="text-[32px] font-bold text-[#D0F500]">
               {' '}
@@ -63,7 +68,7 @@ const BannerStock = ({ data }: Props) => {
           className="mx-auto mt-10 text-center lg:mt-[60px]"
           data-aos="fade-up"
           data-aos-delay="200"
-           data-aos-duration="800"
+          data-aos-duration="700"
         >
           <p className="mx-auto w-full text-sm font-bold text-[#FFF] md:w-[582px] lg:w-[665px] lg:text-base">
             {data?.content}

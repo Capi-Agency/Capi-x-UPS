@@ -12,7 +12,11 @@ type Props = {
 const Banner = ({ data }: Props) => {
   return (
     <div className="relative mx-auto mt-[-15px] bg-[linear-gradient(180deg,#0E1A0D_82%,#060B06_100%)] pt-20 lg:pt-16 2xl:pt-[90px] 3xl:pt-[100px]">
-      <div className="custom-container flex justify-center" data-aos="fade-up"  data-aos-duration="800">
+      <div
+        className="custom-container flex justify-center"
+        data-aos="fade-up"
+        data-aos-duration="700"
+      >
         <div className="mx-auto flex flex-col items-center justify-center">
           <div className="relative h-10 w-10 md:h-[56px] md:w-[56px]">
             <NextImg
@@ -56,7 +60,7 @@ const Banner = ({ data }: Props) => {
       <div
         className="mx-auto mt-6 flex max-w-full flex-col items-center gap-4 px-0 md:mt-10 md:max-w-[700px] md:flex-row md:gap-6 md:px-6 lg:mt-[50px] lg:max-w-[870px] lg:px-0 xl:max-w-[1130px] 2xl:mt-[60px] 2xl:max-w-[1390px] 2xl:gap-9 3xl:mt-[70px]"
         data-aos="fade-up"
-         data-aos-duration="800"
+        data-aos-duration="700"
       >
         <p className="text-sm font-medium text-[#FFF] md:w-20 md:min-w-20 lg:w-[110px] lg:min-w-[110px] lg:text-xl">
           Top đầu tư của tuần
@@ -141,7 +145,7 @@ const Banner = ({ data }: Props) => {
           ))}
         </Swiper>
       </div> */}
-      <div data-aos="fade-up"  data-aos-duration="800">
+      <div data-aos="fade-up" data-aos-duration="700">
         <MarqueeDemo data={data} />
       </div>
     </div>

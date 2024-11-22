@@ -17,7 +17,7 @@ const CourseContent2 = ({ data }: Props) => {
           className="mt-16 lg:mt-10 2xl:mt-20"
           data-aos="fade-up"
           data-aos-delay="200"
-           data-aos-duration="800"
+          data-aos-duration="700"
         >
           <span className="text-[14px] font-medium leading-[22px] text-[#FF6D00] lg:text-[16px] lg2:text-[18px] xl:leading-[40px]">
             {data?.tag}
@@ -40,7 +40,7 @@ const CourseContent2 = ({ data }: Props) => {
                   className="flex flex-col justify-between gap-10 rounded-[12px] bg-[#FFF1DD] p-5 transition-all duration-300 ease-in hover:bg-[#FFAD36] md:gap-6 lg:rounded-2xl lg:p-[30px] lg2:gap-10 lg2:p-10 2xl:gap-6"
                   data-aos="fade-up"
                   data-aos-delay={delay}
-                   data-aos-duration="800"
+                  data-aos-duration="700"
                 >
                   <div>
                     <h4 className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg:leading-[40px] lg2:text-[30px] 2xl:text-[32px]">

@@ -16,7 +16,7 @@ const AppStock = ({ data }: Props) => {
             className="mb-5 flex flex-col px-5 md:place-self-end md:px-0 lg:mb-6 lg2:mb-[50px]"
             data-aos="fade-up"
             data-aos-delay="200"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <h4 className="text-[20px] font-bold text-[#000] lg:text-[32px] lg:leading-[46px] lg2:text-[40px] xl:leading-[54px]">
               {data?.title}
@@ -71,7 +71,7 @@ const AppStock = ({ data }: Props) => {
             className="relative h-[356px] w-full md:h-[380px] lg:h-[460px] lg2:h-[600px] 2xl:h-[700px] 3xl:h-[790px]"
             data-aos="fade-up"
             data-aos-delay="200"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <NextImg
               src={process.env.REACT_APP_IMG_URL + data?.cover}

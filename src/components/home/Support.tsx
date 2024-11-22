@@ -25,7 +25,7 @@ const Support = ({ data }: Props) => {
     <div className="custom-container">
       <div className="mx-auto mt-10 max-w-[1120px] lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
         <div className="flex flex-col gap-6 md:flex-row lg:gap-10 lg2:gap-20 xl:grid xl:grid-cols-[600px,auto]">
-          <div data-aos="fade-up" data-aos-delay="200"  data-aos-duration="800">
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
             <h3 className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[56px]">
               <span className="text-[#01C159]">{data?.title[0]?.title}</span>{' '}
               {data?.title[1].title}
@@ -82,7 +82,7 @@ const Support = ({ data }: Props) => {
               })}
             </div>
           </div>
-          <div data-aos="fade-up" data-aos-delay="400"  data-aos-duration="800">
+          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">
             <div className="relative p-5 lg:p-6 lg2:p-[50px] 3xl:p-[60px]">
               <div className="absolute inset-0 -z-10 h-full w-full rounded-[12px] bg-[#F3F3FB] lg:rounded-3xl"></div>
               <div className="relative h-[260px] w-[240px] lg2:h-[330px] lg2:w-[303px] 3xl:h-[350px] 3xl:w-[324px]">

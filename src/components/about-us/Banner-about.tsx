@@ -15,7 +15,7 @@ const BannerAbout = ({ data }: Props) => {
             className="w-full md:w-[55%] lg2:w-[50%]"
             data-aos="fade-up"
             data-aos-delay="200"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <div className="2xl-h-[520px] z-1 relative h-[240px] w-full sm:h-[261px] md:h-[320px] lg:h-[430px] xl:h-[450px] 3xl:h-[550px]">
               <NextImg
@@ -30,7 +30,7 @@ const BannerAbout = ({ data }: Props) => {
             className="right-6 z-10 flex flex-col items-end justify-end self-end text-right md:absolute"
             data-aos="fade-up"
             data-aos-delay="400"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <h1 className="font-hanken-grotesk text-right text-[32px] font-bold tracking-[-0.64px] text-[#0F1B0E] md:text-[40px] md:tracking-[-0.8px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-1.08px] lg2:text-[64px] lg2:leading-[80px] lg2:tracking-[-1.28px] xl:text-[70px] xl:leading-[86px] xl:tracking-[-1.4px] 2xl:text-[80px] 2xl:leading-[96px] 2xl:tracking-[-1.6px] 3xl:text-[100px] 3xl:leading-[120px] 3xl:tracking-[-2px]">
               {data.titles.title.map(({ text }: any, index: number) => {
@@ -64,7 +64,7 @@ const BannerAbout = ({ data }: Props) => {
             className="w-full border-t-[1px] border-[#000] pt-3 md:pt-6 lg:w-[400px] lg:pt-[40px]"
             data-aos="fade-up"
             data-aos-delay="400"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <p className="text-[14px] font-medium leading-[22px] text-[#074E28] lg:text-[20px] lg:leading-[28px]">
               {data.sub_title}
@@ -74,7 +74,7 @@ const BannerAbout = ({ data }: Props) => {
             className="hidden cursor-pointer lg:block"
             data-aos="fade-up"
             data-aos-delay="600"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <i>
               <svg

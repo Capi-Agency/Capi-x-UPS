@@ -14,7 +14,7 @@ const PartnerTech = ({ data }: Props) => {
           className="flex flex-col gap-2"
           data-aos="fade-up"
           data-aos-delay="200"
-           data-aos-duration="800"
+          data-aos-duration="700"
         >
           <h3 className="w-[90%] text-[20px] font-bold text-[#111013] lg:text-[32px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[54px]">
             {data?.title[0].text}{' '}
@@ -28,7 +28,7 @@ const PartnerTech = ({ data }: Props) => {
           className="grid grid-cols-3 items-center justify-start gap-x-6 gap-y-10 lg:grid-cols-4 lg:gap-x-10 lg:gap-y-[50px]"
           data-aos="fade-up"
           data-aos-delay="600"
-           data-aos-duration="800"
+          data-aos-duration="700"
         >
           {data?.logos?.map((logo: any, index: number) => (
             <div key={index}>

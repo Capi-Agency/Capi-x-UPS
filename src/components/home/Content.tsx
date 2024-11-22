@@ -23,7 +23,7 @@ const Content = ({ data }: Props) => {
             className="flex w-full flex-col justify-between rounded-[12px] bg-[url('/assets/image/bg-card.png')] bg-cover bg-center p-5 lg:rounded-3xl lg2:p-8 xl:p-10"
             data-aos="fade-up"
             data-aos-delay="200"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <div className="flex flex-col gap-1 md:gap-2 lg:gap-3 2xl:gap-4">
               <span
@@ -68,7 +68,7 @@ const Content = ({ data }: Props) => {
             className="flex w-full items-end rounded-[12px] bg-[url('/assets/image/bg-card2.png')] bg-cover bg-center p-5 lg:rounded-3xl lg2:p-8 xl:p-10"
             data-aos="fade-up"
             data-aos-delay="400"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <div className="flex flex-col gap-1">
               <span className="text-[20px] font-bold leading-normal text-[#111013] lg:text-[24px] lg:leading-[40px] lg2:text-[32px] 2xl:text-[38px] 2xl:leading-[48px] 3xl:text-[40px] 3xl:leading-[50px]">
@@ -83,7 +83,7 @@ const Content = ({ data }: Props) => {
             className="relative flex flex-col justify-between rounded-[12px] bg-[#00D763] p-5 lg:rounded-3xl lg2:p-8 xl:p-10"
             data-aos="fade-up"
             data-aos-delay="600"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <div>
               <div className="flex h-10 w-10 items-center justify-center rounded-[10px] bg-[#014227] lg:h-[60px] lg:w-[60px] lg:rounded-[20px] lg2:h-20 lg2:w-20">

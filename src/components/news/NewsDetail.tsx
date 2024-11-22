@@ -22,7 +22,7 @@ const NewsDetail = ({ data, related, url }: Props) => {
           className="relative h-[180px] w-full md:h-[260px] lg:h-[302px] lg2:h-[360px] 2xl:h-[400px]"
           data-aos="fade-up"
           data-aos-delay="200"
-          data-aos-duration="800"
+          data-aos-duration="700"
         >
           <NextImg
             src={process.env.REACT_APP_IMG_URL + data?.cover?.id}
@@ -34,7 +34,7 @@ const NewsDetail = ({ data, related, url }: Props) => {
       </section>
       <section className="custom-container mt-5 lg:mt-7 lg:!max-w-[896px+48px] lg2:mt-9 lg2:!max-w-[1008px+48px] 2xl:mt-10 2xl:!max-w-[calc(1120px+48px)]">
         <div className="flex flex-col gap-6 md:grid md:grid-cols-[auto,260px] lg:gap-8 lg2:gap-12 2xl:gap-[60px]">
-          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
             <h1 className="text-[18px] font-semibold text-[#15171E] md:text-[20px] lg:text-[28px] lg2:text-[32px] lg2:leading-[40px]">
               {data.title}
             </h1>
@@ -108,7 +108,7 @@ const NewsDetail = ({ data, related, url }: Props) => {
               Cập nhật mới nhất: {data?.date_published}
             </p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
+          <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="700">
             <h4 className="mb-3 text-base font-medium text-[#15171E] xl:mb-5 xl:text-[18px]">
               Thẻ bài viết
             </h4>
@@ -184,7 +184,7 @@ const NewsDetail = ({ data, related, url }: Props) => {
             className="mb-5 text-[20px] font-bold text-[#0C1C28] lg:mb-[30px] lg:text-[24px] lg2:mb-10 lg2:text-[32px] 2xl:text-[38px] 3xl:text-[40px]"
             data-aos="fade-up"
             data-aos-delay="200"
-            data-aos-duration="800"
+            data-aos-duration="700"
           >
             Cùng chuyên mục
           </h2>
@@ -198,7 +198,7 @@ const NewsDetail = ({ data, related, url }: Props) => {
                   key={index}
                   data-aos="fade-up"
                   data-aos-delay={delay}
-                  data-aos-duration="800"
+                  data-aos-duration="700"
                   className="group"
                 >
                   <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
@@ -237,11 +237,11 @@ const NewsDetail = ({ data, related, url }: Props) => {
           className="custom-container mt-10 flex flex-wrap items-center justify-center gap-6 lg:mt-[60px] lg:gap-10 xl:mt-20 2xl:mb-[-60px] 2xl:mt-[100px] 3xl:mt-[140px]"
           data-aos="fade-up"
           data-aos-delay="200"
-          data-aos-duration="800"
+          data-aos-duration="700"
         >
           {data?.tags?.map(({ tag }: any, index: number) => {
             return (
-              <Link href={tag.slug} key={index}>
+              <Link href={`#`} key={index}>
                 <p
                   key={index}
                   className="text-sm font-bold leading-normal text-[#15171E] lg:text-[16px]"

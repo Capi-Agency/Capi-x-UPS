@@ -20,7 +20,12 @@ const NewsService = (props: Props) => {
             className=""
           />
         </div>
-        <div className="flex flex-col" data-aos="fade-up" data-aos-delay="600"  data-aos-duration="800">
+        <div
+          className="flex flex-col"
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="700"
+        >
           <span className="text-[14px] font-medium text-[#FFF] lg:text-base lg:leading-[40px] lg2:text-[18px]">
             #trungtamdaotao
           </span>

@@ -15,7 +15,7 @@ const Chungchi = ({ data }: Props) => {
             className="flex flex-col gap-6"
             data-aos="fade-up"
             data-aos-delay="200"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <h3 className="text-[20px] font-bold text-[#FFF] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[56px]">
               {data?.titles[0].title} <br /> {data?.titles[1].title}
@@ -28,7 +28,7 @@ const Chungchi = ({ data }: Props) => {
             className="mt-2 justify-self-end md:mt-0 md:place-self-end"
             data-aos="fade-up"
             data-aos-delay="600"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <p className="text-[14px] font-medium leading-[22px] text-[#FFF] lg:text-base lg:leading-[28px] lg2:text-[18px]">
               Bạn muốn tìm hiểu thêm?

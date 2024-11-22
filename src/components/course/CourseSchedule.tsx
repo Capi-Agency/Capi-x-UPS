@@ -60,7 +60,7 @@ const CourseSchedule = (props: Props) => {
                   } `}
                   data-aos="fade-up"
                   data-aos-delay={delay}
-                   data-aos-duration="800"
+                  data-aos-duration="700"
                 >
                   <div className="col-span-4 mb-6 flex items-center justify-between gap-4 md:mb-0 md:items-start">
                     <p className="text-sm font-bold leading-[27px] tracking-[0.328px] text-[#0C1C28] md:text-base">
@@ -473,7 +473,7 @@ const CourseSchedule = (props: Props) => {
         onValueChange={handleScheduleClick}
         data-aos="fade-up"
         data-aos-delay="200"
-         data-aos-duration="800"
+        data-aos-duration="700"
       >
         <div>
           <span className="text-[14px] font-medium leading-[22px] text-[#FF6D00] lg:text-[16px] lg:leading-[40px] lg2:text-[18px]">

@@ -18,7 +18,7 @@ const ReviewTech = ({ data }: Props) => {
             className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[30px]"
             data-aos="fade-up"
             data-aos-delay="200"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             Đánh giá từ khách hàng
           </h4>
@@ -26,7 +26,7 @@ const ReviewTech = ({ data }: Props) => {
             className="float-right hidden items-center gap-2 md:flex"
             data-aos="fade-up"
             data-aos-delay="400"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <button
               id="prevBtn"
@@ -105,7 +105,7 @@ const ReviewTech = ({ data }: Props) => {
                   className={`flex flex-col justify-between rounded-[16px] bg-[rgba(144,145,156,0.08)] p-5 lg:p-10`}
                   data-aos="fade-up"
                   data-aos-delay={delay}
-                   data-aos-duration="800"
+                  data-aos-duration="700"
                 >
                   <div className="flex items-center gap-4">
                     <div className="relative h-[56px] w-[56px] rounded-full">

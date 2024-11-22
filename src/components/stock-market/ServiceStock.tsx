@@ -17,7 +17,7 @@ const ServiceStock = ({ data }: Props) => {
               className="p-5 md:py-0 md:pl-5 md:pr-0 lg:pl-10 lg2:pl-[50px]"
               data-aos="fade-up"
               data-aos-delay="200"
-               data-aos-duration="800"
+              data-aos-duration="700"
             >
               <h3 className="text-[20px] font-bold text-[#FFF] lg:text-[32px] lg2:text-[40px] lg2:leading-[54px]">
                 {data?.title}
@@ -43,7 +43,7 @@ const ServiceStock = ({ data }: Props) => {
               className="relative w-full pt-[55%] md:h-[256px] md:w-[390px] lg:h-[340px] lg:w-[500px] lg2:h-[380px] lg2:w-[638px] 2xl:w-[700px]"
               data-aos="fade-up"
               data-aos-delay="600"
-               data-aos-duration="800"
+              data-aos-duration="700"
             >
               <NextImg
                 src={process.env.REACT_APP_IMG_URL + data?.cover}

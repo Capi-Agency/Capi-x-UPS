@@ -11,7 +11,12 @@ type Props = {
 const CourseContent = ({ data }: Props) => {
   return (
     <div className="custom-container mt-10 lg:mt-[60px] lg2:mt-20 2xl:mt-[100px] 3xl:!max-w-[1280px]">
-      <div className="flex flex-col" data-aos="fade-up" data-aos-delay="200"  data-aos-duration="800">
+      <div
+        className="flex flex-col"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="700"
+      >
         <span className="text-[14px] font-medium leading-[22px] text-[#FF6D00] lg:text-[16px] lg2:text-[18px] xl:leading-[40px]">
           {data?.tag}
         </span>
@@ -38,7 +43,7 @@ const CourseContent = ({ data }: Props) => {
               )}
               data-aos="fade-up"
               data-aos-delay={delay}
-               data-aos-duration="800"
+              data-aos-duration="700"
             >
               <div className="">
                 <h4 className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg:leading-[40px] lg2:text-[30px] 2xl:text-[32px]">

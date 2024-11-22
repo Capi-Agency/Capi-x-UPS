@@ -15,7 +15,7 @@ const CourseBanner = ({ data }: Props) => {
             className="relative w-full pt-[85%] md:h-[300px] lg:h-[380px] lg2:h-[460px] 2xl:h-[560px] 3xl:h-[661px]"
             data-aos="fade-up"
             data-aos-delay="200"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <NextImg
               src={process.env.REACT_APP_IMG_URL + data?.cover}
@@ -28,7 +28,7 @@ const CourseBanner = ({ data }: Props) => {
             className="mt-10 md:mt-0 lg:justify-self-end"
             data-aos="fade-up"
             data-aos-delay="600"
-             data-aos-duration="800"
+            data-aos-duration="700"
           >
             <span className="text-[14px] font-bold text-[#0C1C28] lg:text-base lg2:text-lg">
               {data?.content?.text}

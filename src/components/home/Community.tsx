@@ -145,7 +145,7 @@ const Community = (props: Props) => {
         className="flex flex-col text-center"
         data-aos="fade-up"
         data-aos-delay="200"
-         data-aos-duration="800"
+        data-aos-duration="700"
       >
         <div className="relative mx-auto h-[32px] w-[74px] lg:h-[40px] lg:w-[92px] lg2:h-[48px] lg2:w-[111px]">
           <NextImg
@@ -253,7 +253,7 @@ const Community = (props: Props) => {
         className="relative mt-10 block w-full pt-[22%] xl:mt-[50px] 3xl:mt-20 3xl:hidden"
         data-aos="fade-up"
         data-aos-delay="200"
-         data-aos-duration="800"
+        data-aos-duration="700"
       >
         <NextImg
           src="/assets/image/Frame 1597881493.png"

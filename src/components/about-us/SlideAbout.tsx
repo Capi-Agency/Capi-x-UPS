@@ -75,7 +75,7 @@ const SlideAbout = ({ data }: Props) => {
                 onMouseLeave={handleMouseLeave}
                 data-aos="fade-up"
                 data-aos-delay={delay}
-                 data-aos-duration="800"
+                data-aos-duration="700"
               >
                 <div className="flex flex-col gap-2">
                   <span className="text-[14px] font-medium leading-[22px] text-[#FFF] lg:text-base lg:leading-[28px] lg2:text-[18px]">
@@ -108,7 +108,7 @@ const SlideAbout = ({ data }: Props) => {
         className="custom-container mt-6 flex items-center justify-end gap-2 lg:mt-10"
         data-aos="fade-up"
         data-aos-delay="200"
-         data-aos-duration="800"
+        data-aos-duration="700"
       >
         <button
           id="prevBtn"

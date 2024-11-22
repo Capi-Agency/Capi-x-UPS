@@ -19,7 +19,7 @@ const ServiceAbout = ({ data }: Props) => {
                 className="text-[20px] font-bold leading-normal text-[#FFF] lg:text-[24px] lg2:text-[30px]"
                 data-aos="fade-up"
                 data-aos-delay="200"
-                 data-aos-duration="800"
+                data-aos-duration="700"
               >
                 Dịch vụ chứng khoán
               </span>
@@ -27,7 +27,7 @@ const ServiceAbout = ({ data }: Props) => {
                 className="flex cursor-pointer items-center gap-2"
                 data-aos="fade-up"
                 data-aos-delay="400"
-                 data-aos-duration="800"
+                data-aos-duration="700"
               >
                 <button className="text-nowrap text-[14px] font-medium leading-[22px] text-[#FFF] lg:text-[18px] lg:leading-[28px]">
                   Xem tất cả
@@ -46,7 +46,7 @@ const ServiceAbout = ({ data }: Props) => {
               className="mb-6 mt-3 h-[1px] w-full bg-[#60606B] lg:mb-10 lg:mt-5"
               data-aos="fade-up"
               data-aos-delay="200"
-               data-aos-duration="800"
+              data-aos-duration="700"
             ></div>
           </div>
           <div className="sm:container-slide lg:custom-container">

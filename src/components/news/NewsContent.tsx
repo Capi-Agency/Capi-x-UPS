@@ -46,7 +46,7 @@ const NewsAction = ({ news, url, title }: Props) => {
               key={index}
               data-aos="fade-up"
               data-aos-delay={delay}
-              data-aos-duration="800"
+              data-aos-duration="700"
               className="group"
             >
               <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
