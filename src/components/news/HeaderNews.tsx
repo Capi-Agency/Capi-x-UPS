@@ -5,11 +5,14 @@ import Link from 'next/link';
 import NextImg from '../common/next-img';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 interface Props {
-  dataNew?: any;
   setTextValue?: any;
   setSort?: any;
 }
-const HeaderNews = ({ dataNew, setTextValue, setSort }: Props) => {
+const HeaderNews = ({ setTextValue, setSort }: Props) => {
+  // const [isOpen, setIsOpen] = useState(false);
+  // const toggleMenu = () => {
+  //   setIsOpen(!isOpen);
+  // };
   const pathname = usePathname();
   const handleSelect = (value: any) => {
     if (value == '1') setSort(true);
@@ -22,8 +25,8 @@ const HeaderNews = ({ dataNew, setTextValue, setSort }: Props) => {
           Tin tức UPS
         </h1>
       </div>
-      <div className="scrollbar-hidden flex flex-col justify-between gap-3 overflow-x-auto whitespace-nowrap lg:flex-row lg:items-center lg:gap-0">
-        <div className="flex items-center gap-3 md:gap-4 lg:gap-6 2xl:gap-8 3xl:gap-10">
+      <div className="flex flex-col justify-between gap-3 lg2:flex-row lg2:items-center lg2:gap-0">
+        <div className="scrollbar-hidden flex items-center gap-3 overflow-x-auto whitespace-nowrap md:gap-4 lg:gap-6 2xl:gap-8 3xl:gap-10">
           <Link
             href="/tin-tuc"
             className={`py-[7px] text-base font-bold leading-normal text-[#525358] transition-all duration-150 ease-in-out lg:text-[18px] ${pathname === '/tin-tuc' ? 'border-b border-[#E50261] text-[#15171E]' : ''}`}
@@ -51,7 +54,7 @@ const HeaderNews = ({ dataNew, setTextValue, setSort }: Props) => {
         </div>
 
         <div className="flex items-center justify-between gap-3">
-          <form className="relative flex-1">
+          <form className="relative flex-1 lg:flex-none">
             <input
               type="text"
               onChange={(e) => setTextValue(e.target.value)}
@@ -86,13 +89,13 @@ const HeaderNews = ({ dataNew, setTextValue, setSort }: Props) => {
               </i>
             </button>
           </form>
-          <div className="hidden items-center gap-3 2xl:flex">
-            <div className="relative cursor-pointer rounded-[6px] bg-[rgba(144,145,156,0.08)]">
+          <div className="flex items-center gap-3">
+            {/* <div className="relative cursor-pointer rounded-[6px] bg-[rgba(144,145,156,0.08)]">
               <select className="block cursor-pointer appearance-none bg-transparent py-2 pl-3 pr-7 text-xs font-medium text-[#525358] focus:outline-none lg:text-sm">
                 <option value="1">Tất cả danh mục</option>
                 <option value="2">Tin hoạt động</option>
                 <option value="3">Tin đấu giá</option>
-                <option value="5">Công bố thông tin</option>
+                <option value="4">Công bố thông tin</option>
               </select>
               <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
                 <div className="relative h-[6px] w-[10px]">
@@ -103,7 +106,11 @@ const HeaderNews = ({ dataNew, setTextValue, setSort }: Props) => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
+            <input
+              type="date"
+              className={`hidden cursor-pointer rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-2 text-xs font-medium text-[#525358] focus:outline-none md:block lg:text-sm ${pathname === '/tin-tuc/cong-bo-thong-tin' ? 'block' : 'hidden'}`}
+            />
 
             <div className="relative flex cursor-pointer items-center gap-2 rounded-[6px] bg-[rgba(144,145,156,0.08)]">
               <select
@@ -124,91 +131,67 @@ const HeaderNews = ({ dataNew, setTextValue, setSort }: Props) => {
               </div>
             </div>
           </div>
-          <div className="block 2xl:hidden">
-            <DropdownMenu.Root>
-              <DropdownMenu.Trigger asChild className="focus:outline-none">
-                <button
-                  className="flex items-center gap-2 rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-1 text-xs font-medium text-[#525358] lg:py-[6px] lg:text-sm"
-                  aria-label="Filter options"
+          {/* <div className="group relative">
+            <div className={`block 2xl:hidden`}>
+              <button
+                onClick={toggleMenu}
+                className="flex items-center gap-2 rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-1 text-xs font-medium text-[#525358] outline-none lg:py-[6px] lg:text-sm"
+              >
+                <i>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                  >
+                    <path
+                      d="M18.8188 2.5H5.18117C3.442 2.5 2.40466 4.41555 3.36937 5.84564L9.09107 13.3274C9.56799 14.0344 9.82249 14.8651 9.82249 15.7148V21.4219C9.82249 22.3805 10.9952 22.8605 11.6811 22.1827L13.8586 20.0307C14.0628 19.829 14.1775 19.5553 14.1775 19.2699V15.7148C14.1775 14.8651 14.432 14.0344 14.9089 13.3274L20.6306 5.84564C21.5953 4.41555 20.558 2.5 18.8188 2.5Z"
+                      stroke="#161519"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </i>{' '}
+                Lọc
+              </button>
+
+              <div
+                className={`${isOpen ? 'absolute right-0 top-full z-50 block min-w-[100px] rounded-md bg-white p-2 shadow-lg group-hover:block' : 'hidden'} `}
+              >
+                <div
+                  className={`${pathname === '/tin-tuc/cong-bo-thong-tin' ? 'block' : 'hidden'}`}
                 >
-                  <i>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                    >
-                      <path
-                        d="M18.8188 2.5H5.18117C3.442 2.5 2.40466 4.41555 3.36937 5.84564L9.09107 13.3274C9.56799 14.0344 9.82249 14.8651 9.82249 15.7148V21.4219C9.82249 22.3805 10.9952 22.8605 11.6811 22.1827L13.8586 20.0307C14.0628 19.829 14.1775 19.5553 14.1775 19.2699V15.7148C14.1775 14.8651 14.432 14.0344 14.9089 13.3274L20.6306 5.84564C21.5953 4.41555 20.558 2.5 18.8188 2.5Z"
-                        stroke="#161519"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </i>{' '}
-                  Lọc
-                </button>
-              </DropdownMenu.Trigger>
+                  <div className="px-2 pb-2 text-xs font-medium text-black lg:text-sm">
+                    Chọn ngày
+                  </div>
+                  <input
+                    type="date"
+                    className={`cursor-pointer rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-2 text-xs font-medium text-[#525358] focus:outline-none lg:text-sm`}
+                  />
+                </div>
 
-              <DropdownMenu.Portal>
-                <DropdownMenu.Content className="min-w-[220px] rounded-md bg-white pt-2 shadow-lg">
-                  {/* Category Filter */}
-                  <DropdownMenu.Label className="px-2 pb-2 text-xs font-medium text-black lg:text-sm">
-                    Danh mục
-                  </DropdownMenu.Label>
-                  <DropdownMenu.RadioGroup>
-                    <DropdownMenu.RadioItem
-                      value="all"
-                      className="flex items-center px-3 py-2 text-xs font-medium text-[#525358] outline-none hover:bg-black hover:text-white lg:text-sm"
-                    >
-                      Tất cả danh mục
-                    </DropdownMenu.RadioItem>
-                    <DropdownMenu.RadioItem
-                      value="activity"
-                      className="flex items-center px-3 py-2 text-xs font-medium text-[#525358] outline-none hover:bg-black hover:text-white lg:text-sm"
-                    >
-                      Tin hoạt động
-                    </DropdownMenu.RadioItem>
-                    <DropdownMenu.RadioItem
-                      value="auction"
-                      className="flex items-center px-3 py-2 text-xs font-medium text-[#525358] outline-none hover:bg-black hover:text-white lg:text-sm"
-                    >
-                      Tin đấu giá
-                    </DropdownMenu.RadioItem>
-                    <DropdownMenu.RadioItem
-                      value="announcement"
-                      className="flex items-center px-3 py-2 text-xs font-medium text-[#525358] outline-none hover:bg-black hover:text-white lg:text-sm"
-                    >
-                      Công bố thông tin
-                    </DropdownMenu.RadioItem>
-                  </DropdownMenu.RadioGroup>
-
-                  {/* Order Filter */}
-                  <DropdownMenu.Label className="p-2 px-2 pt-3 text-xs font-medium text-black lg:text-sm">
-                    Sắp xếp
-                  </DropdownMenu.Label>
-                  <DropdownMenu.RadioGroup>
-                    <DropdownMenu.RadioItem
-                      value="latest"
-                      className="flex items-center px-3 py-2 text-xs font-medium text-[#525358] outline-none hover:bg-black hover:text-white lg:text-sm"
-                    >
-                      Mới nhất
-                    </DropdownMenu.RadioItem>
-                    <DropdownMenu.RadioItem
-                      value="oldest"
-                      className="flex items-center rounded-b-md px-3 py-2 text-xs font-medium text-[#525358] outline-none hover:bg-black hover:text-white lg:text-sm"
-                    >
-                      Cũ nhất
-                    </DropdownMenu.RadioItem>
-                  </DropdownMenu.RadioGroup>
-
-                  <DropdownMenu.Arrow className="fill-white" />
-                </DropdownMenu.Content>
-              </DropdownMenu.Portal>
-            </DropdownMenu.Root>
-          </div>
+                <div className="p-2 px-2 pt-3 text-xs font-medium text-black lg:text-sm">
+                  Sắp xếp
+                </div>
+                <div>
+                  <div
+                    onClick={() => handleSelect('1')}
+                    className="flex cursor-pointer items-center rounded-md px-3 py-2 text-xs font-medium text-[#525358] outline-none hover:bg-black hover:text-white lg:text-sm"
+                  >
+                    Mới nhất
+                  </div>
+                  <div
+                    onClick={() => handleSelect('2')}
+                    className="flex cursor-pointer items-center rounded-md px-3 py-2 text-xs font-medium text-[#525358] outline-none hover:bg-black hover:text-white lg:text-sm"
+                  >
+                    Cũ nhất
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> */}
         </div>
       </div>
     </div>

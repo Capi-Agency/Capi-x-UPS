@@ -16,7 +16,8 @@ const TinDauGia = (props: Props) => {
   const [keyword, setKeyword] = useState<any>('');
   const [dataAnnounce, setDataAnnounce] = useState<any>([]);
   const [dataCateAndTags, setDataCateAndTags] = useState<any>(null);
-
+  const [length, setLength] = useState<any>();
+  const [sort, setSort] = useState<any>(true);
   useEffect(() => {
     (async () => {
       try {
@@ -29,27 +30,52 @@ const TinDauGia = (props: Props) => {
           slugTag,
           date,
           keyword,
+          sort,
         );
 
-        setDataAnnounce([
-          ...dataAnnounceRes?.data?.data?.announce,
-          ...dataAnnounce,
-        ]);
+        setDataAnnounce([...dataAnnounceRes?.data?.data?.announce]);
+        setLength(dataAnnounceRes?.data?.data?.announce?.length);
       } catch (error) {
         console.error('Error', error);
       }
     })();
-  }, [currentPage, slugCate, slugTag, date, keyword]);
+  }, [slugCate, slugTag, date, keyword, sort]);
+  useEffect(() => {
+    (async () => {
+      try {
+        const dataAnnounceRes = await fnGetListAnnounce(
+          Number(currentPage),
+          12,
+          slugCate,
+          slugTag,
+          date,
+          keyword,
+          sort,
+        );
+
+        setDataAnnounce([
+          ...dataAnnounce,
+          ...dataAnnounceRes?.data?.data?.announce,
+        ]);
+        setLength(dataAnnounceRes?.data?.data?.announce?.length);
+      } catch (error) {
+        console.error('Error', error);
+      }
+    })();
+  }, [currentPage]);
   return (
     <div>
-      <HeaderNews />
-      <NewsBanner dataNew={dataAnnounce[0]} />
+      <HeaderNews setTextValue={setKeyword} setSort={setSort} />
+      {dataAnnounce.length != 0 && (
+        <NewsBanner dataNew={dataAnnounce[0]} url="tin-dau-gia/" />
+      )}
       <NewsContentPage
         news={dataAnnounce}
-        url="/tin-tuc/cong-bo-thong-tin/"
+        url="/tin-tuc/tin-dau-gia/"
         dataCateAndTags={dataCateAndTags?.data?.data}
         slugCate={setSlugCate}
         currentPage={currentPage}
+        length={length}
         setCurrentPage={setCurrentPage}
       />
     </div>

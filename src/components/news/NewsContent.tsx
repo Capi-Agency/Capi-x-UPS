@@ -37,47 +37,55 @@ const NewsAction = ({ news, url, title }: Props) => {
           </button>
         </Link>
       </div>
-      <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-4 lg:gap-y-6 lg2:gap-x-5 2xl:gap-x-8 2xl:gap-y-10">
-        {news?.map((newItem: any, index: any) => {
-          const delay = 200;
-          return (
-            <Link
-              href={`${url}${newItem?.short_content?.slug}`}
-              key={index}
-              data-aos="fade-up"
-              data-aos-delay={delay}
-              data-aos-duration="700"
-              className="group"
-            >
-              <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
-                <NextImg
-                  src={
-                    process.env.REACT_APP_IMG_URL +
-                    newItem?.short_content?.cover?.id
-                  }
-                  alt="Capi"
-                  objectFit="cover"
-                  className="rounded-[16px] transition-all duration-300 group-hover:scale-110"
-                />
-              </div>
-              <span className="mb-1 mt-2 inline-block text-xs font-medium leading-[16px] tracking-[0.14] lg:mb-2 lg:mt-4 lg:text-sm 2xl:mb-3 3xl:mt-5">
-                {newItem?.short_content?.date_published}
-              </span>
-              <p className="line-clamp-3 h-[60px] text-sm font-semibold text-[#15171E] lg:h-[72px] lg:text-base lg2:text-[18px]">
-                {newItem?.short_content?.title}
-              </p>
-              <div className="mt-2 flex items-center gap-2 lg:mt-3 2xl:mt-4">
-                <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
-                  App Mobile
-                </button>
-                <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
-                  Trải nghiệm
-                </button>
-              </div>
-            </Link>
-          );
-        })}
-      </div>
+      {news && news.length > 0 ? (
+        <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-4 lg:gap-y-6 lg2:gap-x-5 2xl:gap-x-8 2xl:gap-y-10">
+          {news?.map((newItem: any, index: any) => {
+            const delay = 200;
+            return (
+              <Link
+                href={`${url}${newItem?.short_content?.slug}`}
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={delay}
+                data-aos-duration="700"
+                className="group"
+              >
+                <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
+                  <NextImg
+                    src={
+                      process.env.REACT_APP_IMG_URL +
+                      newItem?.short_content?.cover?.id
+                    }
+                    alt="Capi"
+                    objectFit="cover"
+                    className="rounded-[16px] transition-all duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <span className="mb-1 mt-2 inline-block text-xs font-medium leading-[16px] tracking-[0.14] lg:mb-2 lg:mt-4 lg:text-sm 2xl:mb-3 3xl:mt-5">
+                  {newItem?.short_content?.date_published}
+                </span>
+                <p className="line-clamp-3 h-[60px] text-sm font-semibold text-[#15171E] lg:h-[72px] lg:text-base lg2:text-[18px]">
+                  {newItem?.short_content?.title}
+                </p>
+                <div className="mt-2 flex items-center gap-2 lg:mt-3 2xl:mt-4">
+                  <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
+                    App Mobile
+                  </button>
+                  <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
+                    Trải nghiệm
+                  </button>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      ) : (
+        <div>
+          <p className="text-sm font-medium text-[#8C9AA4] lg:text-base">
+            Không có dữ liệu
+          </p>
+        </div>
+      )}
     </section>
   );
 };

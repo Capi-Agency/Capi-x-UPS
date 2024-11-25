@@ -9,7 +9,7 @@ type Props = {
   slugCate?: any;
   currentPage?: any;
   setCurrentPage?: any;
-  length?:any
+  length?: any;
 };
 
 const NewsContentPage = ({
@@ -19,70 +19,88 @@ const NewsContentPage = ({
   slugCate,
   currentPage,
   setCurrentPage,
-  length=12
+  length = 12,
 }: Props) => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const handleCategoryClick = (index: number, slug: string) => {
+    setActiveIndex(index);
+    slugCate(slug);
+  };
+
   return (
     <div>
       <div className="custom-container mx-auto mt-6 lg:mt-7 xl:mt-8 2xl:mt-9 3xl:mt-12 3xl:!max-w-[calc(1280px+48px)]">
         <section>
           <div className="scrollbar-hidden mb-5 flex items-center gap-3 overflow-x-auto whitespace-nowrap lg:mb-6 lg:gap-4 2xl:mb-8 3xl:mb-10">
-            {dataCateAndTags?.a_categories?.map((cate: any, index: number) => (
-              <div key={index} className="flex items-center gap-3 lg:gap-4">
-                <h4
-                  className={`cursor-pointer text-sm font-bold lg:text-base ${
-                    index ? 'text-[#525358]' : 'text-[#0C1C28] underline'
-                  }`}
-                  onClick={() => slugCate(cate?.slug)}
-                >
-                  {cate.title}
-                </h4>
-                <div
-                  className={`size-1 rounded-full bg-black ${index === dataCateAndTags.a_categories.length - 1 ? 'hidden' : 'block'}`}
-                />
-              </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-4 lg:gap-y-6 lg2:gap-x-5 2xl:gap-x-8 2xl:gap-y-10">
-            {news?.map((newItem: any, index: any) => {
-              const delay = 200;
+            {dataCateAndTags?.a_categories?.map((cate: any, index: number) => {
               return (
-                <Link
-                  href={`${url}${newItem?.short_content?.slug}`}
-                  key={index}
-                  data-aos="fade-up"
-                  data-aos-delay={delay}
-                  data-aos-duration="700"
-                  className="group"
-                >
-                  <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
-                    <NextImg
-                      src={
-                        process.env.REACT_APP_IMG_URL +
-                        newItem?.short_content?.cover?.id
-                      }
-                      alt="Capi"
-                      objectFit="cover"
-                      className="rounded-[16px] transition-all duration-300 group-hover:scale-110"
-                    />
-                  </div>
-                  <span className="mb-1 mt-2 inline-block text-xs font-medium leading-[16px] tracking-[0.14] lg:mb-2 lg:mt-4 lg:text-sm 2xl:mb-3 3xl:mt-5">
-                    {newItem?.short_content?.date_published}
-                  </span>
-                  <p className="line-clamp-3 h-[60px] text-sm font-semibold text-[#15171E] lg:h-[72px] lg:text-base lg2:text-[18px]">
-                    {newItem?.short_content?.title}
-                  </p>
-                  <div className="mt-2 flex items-center gap-2 lg:mt-3 2xl:mt-4">
-                    <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
-                      App Mobile
-                    </button>
-                    <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
-                      Trải nghiệm
-                    </button>
-                  </div>
-                </Link>
+                <div key={index} className="flex items-center gap-3 lg:gap-4">
+                  <h4
+                    className={`cursor-pointer text-sm font-bold lg:text-base ${
+                      activeIndex === index
+                        ? 'text-[#0C1C28] underline'
+                        : 'text-[#525358]'
+                    }`}
+                    onClick={() => handleCategoryClick(index, cate?.slug)}
+                  >
+                    {cate.title}
+                  </h4>
+                  <div
+                    className={`size-1 rounded-full bg-black ${index === dataCateAndTags.a_categories.length - 1 ? 'hidden' : 'block'}`}
+                  />
+                </div>
               );
             })}
           </div>
+          {news && news.length > 0 ? (
+            <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-4 lg:gap-x-4 lg:gap-y-6 lg2:gap-x-5 2xl:gap-x-8 2xl:gap-y-10">
+              {news?.map((newItem: any, index: any) => {
+                const delay = 200;
+                return (
+                  <Link
+                    href={`${url}${newItem?.short_content?.slug}`}
+                    key={index}
+                    data-aos="fade-up"
+                    data-aos-delay={delay}
+                    data-aos-duration="700"
+                    className="group"
+                  >
+                    <div className="relative h-[165px] w-full overflow-hidden rounded-[16px] md:h-[171px] lg:h-[224px] lg2:h-[265px] 2xl:h-[296px]">
+                      <NextImg
+                        src={
+                          process.env.REACT_APP_IMG_URL +
+                          newItem?.short_content?.cover?.id
+                        }
+                        alt="Capi"
+                        objectFit="cover"
+                        className="rounded-[16px] transition-all duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <span className="mb-1 mt-2 inline-block text-xs font-medium leading-[16px] tracking-[0.14] lg:mb-2 lg:mt-4 lg:text-sm 2xl:mb-3 3xl:mt-5">
+                      {newItem?.short_content?.date_published}
+                    </span>
+                    <p className="line-clamp-3 h-[60px] text-sm font-semibold text-[#15171E] lg:h-[72px] lg:text-base lg2:text-[18px]">
+                      {newItem?.short_content?.title}
+                    </p>
+                    <div className="mt-2 flex items-center gap-2 lg:mt-3 2xl:mt-4">
+                      <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
+                        App Mobile
+                      </button>
+                      <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-xs font-medium leading-normal text-[#111013] lg:text-sm">
+                        Trải nghiệm
+                      </button>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          ) : (
+            <div>
+              <p className="text-sm font-medium text-[#8C9AA4] lg:text-base">
+                Không có dữ liệu
+              </p>
+            </div>
+          )}
         </section>
         <button
           className={`btn mx-auto mt-[18px] bg-[#15171E] font-bold text-[#FFF] lg:mt-6 lg2:mt-7 2xl:mt-8 3xl:mt-[60px] ${length < 12 ? 'hidden' : ''}`}

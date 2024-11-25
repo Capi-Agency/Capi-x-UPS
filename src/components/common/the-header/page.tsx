@@ -83,11 +83,7 @@ const TheHeader = () => {
               <NavigationMenu.List className="hidden items-center space-x-5 xl:flex 2xl:space-x-8">
                 <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(0)}>
                   <NavigationMenu.Trigger>
-                    <div
-                      aria-label="Our product"
-                      title="Our product"
-                      className="flex items-center gap-[10px] text-base font-bold text-gray-100"
-                    >
+                    <div className="flex items-center gap-[10px] text-base font-bold text-gray-100">
                       Sản phẩm
                       <span className="me-2 rounded-[10px] bg-[#AD02C9] px-2 py-1 text-sm font-bold uppercase text-white">
                         NEW
@@ -211,12 +207,7 @@ const TheHeader = () => {
 
                 <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(1)}>
                   <NavigationMenu.Trigger>
-                    <Link
-                      href=""
-                      aria-label="Invest with UPS"
-                      title="Invest with UPS"
-                      className="font-bold text-gray-100"
-                    >
+                    <Link href="" className="font-bold text-gray-100">
                       Đầu tư cùng UPS
                     </Link>
                   </NavigationMenu.Trigger>
@@ -337,11 +328,7 @@ const TheHeader = () => {
 
                 <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(2)}>
                   <Link href="/nen-tang-cong-nghe">
-                    <div
-                      aria-label="Technology platform"
-                      title="Technology platform"
-                      className="font-bold text-gray-100"
-                    >
+                    <div className="font-bold text-gray-100">
                       Nền tảng công nghệ
                     </div>
                   </Link>
@@ -349,11 +336,7 @@ const TheHeader = () => {
 
                 <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(3)}>
                   <Link href="/tin-tuc">
-                    <div
-                      aria-label="News"
-                      title="News"
-                      className="font-bold text-gray-100"
-                    >
+                    <div className="font-bold text-gray-100">
                       Tin tức
                       <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1 text-sm">
                         4
@@ -365,13 +348,7 @@ const TheHeader = () => {
                 <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(4)}>
                   <NavigationMenu.Trigger>
                     <Link href="/gioi-thieu">
-                      <div
-                        aria-label="About us"
-                        title="About us"
-                        className="font-bold text-gray-100"
-                      >
-                        Về UPS
-                      </div>
+                      <div className="font-bold text-gray-100">Về UPS</div>
                     </Link>
                   </NavigationMenu.Trigger>
                   <NavigationMenu.Content className="absolute left-0 top-0 w-full data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
@@ -552,13 +529,7 @@ const TheHeader = () => {
 
                 <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(5)}>
                   <Link href="">
-                    <div
-                      aria-label="Price list"
-                      title="Price list"
-                      className="font-bold text-gray-100"
-                    >
-                      Bảng giá
-                    </div>
+                    <div className="font-bold text-gray-100">Bảng giá</div>
                   </Link>
                 </NavigationMenu.Item>
                 <NavigationMenu.Indicator className="top-full z-10 flex h-2.5 items-end justify-center overflow-hidden transition-[width,transform_250ms_ease] data-[state=hidden]:animate-fadeOut data-[state=visible]:animate-fadeIn">
@@ -569,8 +540,8 @@ const TheHeader = () => {
                 <div>
                   <Link
                     href="/"
-                    aria-label="Notification"
-                    title="Notification"
+                    aria-label="Thông báo"
+                    title="Thông báo"
                     className="font-bold text-gray-100"
                   >
                     <i>
@@ -606,8 +577,8 @@ const TheHeader = () => {
                 </div>
                 <div>
                   <div
-                    aria-label="Search"
-                    title="Search"
+                    aria-label="Tìm kiếm"
+                    title="Tìm kiếm"
                     className="cursor-pointer font-bold text-gray-100"
                   >
                     <i>
@@ -677,8 +648,8 @@ const TheHeader = () => {
                   </Link>
                   <Link
                     href="/"
-                    aria-label="Notification"
-                    title="Notification"
+                    aria-label="Thông báo"
+                    title="Thông báo"
                     className="font-bold text-gray-100"
                   >
                     <i>
@@ -767,7 +738,7 @@ const TheHeader = () => {
 
         {/* Mobile */}
         {isMenuOpen && (
-          <div className="fixed left-0 top-0 h-full w-full overflow-y-scroll bg-[#0F1B0E]">
+          <div className="fixed left-0 top-0 h-full w-full overflow-y-scroll bg-white">
             <div className="h-full w-full overflow-y-auto rounded border bg-[#0F1B0E] px-6 py-5">
               <div className="mb-4 flex items-center justify-between">
                 <div>

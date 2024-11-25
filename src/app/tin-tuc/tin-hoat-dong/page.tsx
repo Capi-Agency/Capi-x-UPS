@@ -13,42 +13,69 @@ const TinHoatDong = (props: Props) => {
   const [slugTag, setSlugTag] = useState<any>('');
   const [date, setDate] = useState<any>();
   const [keyword, setKeyword] = useState<any>('');
-  const [data, setData] = useState<any>(null);
+  const [dataNews, setDataNews] = useState<any>([]);
   const [dataCateAndTags, setDataCateAndTags] = useState<any>(null);
+  const [length, setLength] = useState<any>();
+  const [sort, setSort] = useState<any>(true);
 
   useEffect(() => {
     (async () => {
       try {
         const dataCateAndTags = await fnGetCateAndTags();
         setDataCateAndTags(dataCateAndTags);
-        const data = await fnGetListNews(
+        const dataNewsRes = await fnGetListNews(
           Number(currentPage),
           12,
           slugCate,
           slugTag,
           date,
           keyword,
+          sort,
         );
 
-        await setData(data?.data?.data?.posts);
+        setDataNews([...dataNewsRes?.data?.data?.posts]);
+        setLength(dataNewsRes?.data?.data?.posts?.length);
       } catch (error) {
         console.error('Error', error);
       }
     })();
-  }, [currentPage, slugCate, slugTag, date, keyword]);
+  }, [slugCate, slugTag, date, keyword, sort]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const dataNewsRes = await fnGetListNews(
+          Number(currentPage),
+          12,
+          slugCate,
+          slugTag,
+          date,
+          keyword,
+          sort,
+        );
+        setDataNews([...dataNews, ...dataNewsRes?.data?.data?.posts]);
+        setLength(dataNewsRes?.data?.data?.announce?.length);
+      } catch (error) {
+        console.error('Error', error);
+      }
+    })();
+  }, [currentPage]);
 
   return (
     <>
-      <HeaderNews />
-      {data && <NewsBanner dataNew={data[0]} />}
+      <HeaderNews setTextValue={setKeyword} setSort={setSort} />
+      {dataNews.length != 0 && (
+        <NewsBanner dataNew={dataNews[0]} url="tin-hoat-dong/" />
+      )}
 
       <NewsContentPage
-        news={data}
+        news={dataNews}
         url="/tin-tuc/tin-hoat-dong/"
         dataCateAndTags={dataCateAndTags?.data?.data}
         slugCate={setSlugCate}
-        setCurrentPage={setCurrentPage}
         currentPage={currentPage}
+        length={length}
+        setCurrentPage={setCurrentPage}
       />
     </>
   );

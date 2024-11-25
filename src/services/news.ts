@@ -7,6 +7,7 @@ export const fnGetListNews = async (
   tagSlug: string | null = null,
   date: string | null = null,
   keyword: string | null = null,
+  sort: any = true,
 ) => {
   let filterConditions = [];
 
@@ -34,7 +35,7 @@ export const fnGetListNews = async (
 
   let query = `
         query {
-            posts (page: ${page}, limit: ${limit}, sort: "-date_published" ${filterString ? `, ${filterString}` : ''}) {
+            posts (page: ${page}, limit: ${limit}, sort: "${sort == true ? '-date_published' : 'date_published'}" ${filterString ? `, ${filterString}` : ''}) {
                 short_content
             }
             posts_aggregated ${filterString ? `(${filterString})` : ''} {

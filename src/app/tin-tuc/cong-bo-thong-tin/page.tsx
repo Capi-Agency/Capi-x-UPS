@@ -19,8 +19,6 @@ const CongBoThongTin = (props: Props) => {
   const [length, setLength] = useState<any>();
   const [sort, setSort] = useState<any>(true);
   useEffect(() => {
-    console.log(sort);
-    
     (async () => {
       try {
         const dataCateAndTags = await fnGetCateAndTags();

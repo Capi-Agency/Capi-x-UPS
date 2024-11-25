@@ -475,9 +475,7 @@ const MenuMobile = ({ handleClose }: Props) => (
                 </i>
 
                 <div className="ml-5">
-                  <p className="text-left text-base font-semibold text-gray-100">
-                    Tin UPS
-                  </p>
+                  <p className="text-sm font-semibold text-gray-100">Tin UPS</p>
                   <p className="text-left text-sm font-medium text-gray-100">
                     Các thông tin công bố từ UPS
                   </p>
@@ -527,7 +525,7 @@ const MenuMobile = ({ handleClose }: Props) => (
               </i>
 
               <div className="ml-5">
-                <p className="text-base font-semibold text-gray-100">
+                <p className="text-sm font-semibold text-gray-100">
                   Gia nhập UPS
                 </p>
                 <p className="text-sm font-medium text-gray-100">
