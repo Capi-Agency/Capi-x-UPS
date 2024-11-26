@@ -67,7 +67,7 @@ const TinDauGia = (props: Props) => {
     <div>
       <HeaderNews setTextValue={setKeyword} setSort={setSort} />
       {dataAnnounce.length != 0 && (
-        <NewsBanner dataNew={dataAnnounce[0]} url="tin-dau-gia/" />
+        <NewsBanner dataNew={dataAnnounce[0]} url="/tin-tuc/tin-dau-gia/" />
       )}
       <NewsContentPage
         news={dataAnnounce}

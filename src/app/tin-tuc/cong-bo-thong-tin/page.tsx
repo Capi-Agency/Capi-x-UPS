@@ -18,6 +18,7 @@ const CongBoThongTin = (props: Props) => {
   const [dataCateAndTags, setDataCateAndTags] = useState<any>(null);
   const [length, setLength] = useState<any>();
   const [sort, setSort] = useState<any>(true);
+
   useEffect(() => {
     (async () => {
       try {
@@ -65,9 +66,16 @@ const CongBoThongTin = (props: Props) => {
   }, [currentPage]);
   return (
     <div>
-      <HeaderNews setTextValue={setKeyword} setSort={setSort} />
+      <HeaderNews
+        setTextValue={setKeyword}
+        setSort={setSort}
+        setDate={setDate}
+      />
       {dataAnnounce.length != 0 && (
-        <NewsBanner dataNew={dataAnnounce[0]} url="cong-bo-thong-tin/" />
+        <NewsBanner
+          dataNew={dataAnnounce[0]}
+          url="/tin-tuc/cong-bo-thong-tin/"
+        />
       )}
       <NewsContentPage
         news={dataAnnounce}

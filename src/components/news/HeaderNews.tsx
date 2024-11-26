@@ -7,8 +7,9 @@ import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 interface Props {
   setTextValue?: any;
   setSort?: any;
+  setDate?: any
 }
-const HeaderNews = ({ setTextValue, setSort }: Props) => {
+const HeaderNews = ({ setTextValue, setSort, setDate }: Props) => {
   // const [isOpen, setIsOpen] = useState(false);
   // const toggleMenu = () => {
   //   setIsOpen(!isOpen);
@@ -29,25 +30,25 @@ const HeaderNews = ({ setTextValue, setSort }: Props) => {
         <div className="scrollbar-hidden flex items-center gap-3 overflow-x-auto whitespace-nowrap md:gap-4 lg:gap-6 2xl:gap-8 3xl:gap-10">
           <Link
             href="/tin-tuc"
-            className={`py-[7px] text-base font-bold leading-normal text-[#525358] transition-all duration-150 ease-in-out lg:text-[18px] ${pathname === '/tin-tuc' ? 'border-b border-[#E50261] text-[#15171E]' : ''}`}
+            className={`py-[7px] text-base font-bold leading-normal transition-all duration-150 ease-in-out lg:text-[18px] ${pathname === '/tin-tuc' ? 'border-b border-[#E50261] text-[#15171E]' : 'text-[#525358]'}`}
           >
             Tất cả
           </Link>
           <Link
             href="/tin-tuc/tin-hoat-dong"
-            className={`py-[7px] text-base font-bold leading-normal text-[#525358] transition-all duration-150 ease-in-out lg:text-[18px] ${pathname === '/tin-tuc/tin-hoat-dong' ? 'border-b border-[#E50261] text-[#15171E]' : ''}`}
+            className={`py-[7px] text-base font-bold leading-normal transition-all duration-150 ease-in-out lg:text-[18px] ${pathname === '/tin-tuc/tin-hoat-dong' ? 'border-b border-[#E50261] text-[#15171E]' : 'text-[#525358]'}`}
           >
             Tin hoạt động
           </Link>
           <Link
             href="/tin-tuc/tin-dau-gia"
-            className={`py-[7px] text-base font-bold leading-normal text-[#525358] transition-all duration-150 ease-in-out lg:text-[18px] ${pathname === '/tin-tuc/tin-dau-gia' ? 'border-b border-[#E50261] text-[#15171E]' : ''}`}
+            className={`py-[7px] text-base font-bold leading-normal transition-all duration-150 ease-in-out lg:text-[18px] ${pathname === '/tin-tuc/tin-dau-gia' ? 'border-b border-[#E50261] text-[#15171E]' : 'text-[#525358]'}`}
           >
             Tin đấu giá
           </Link>
           <Link
             href="/tin-tuc/cong-bo-thong-tin"
-            className={`py-[7px] text-base font-bold leading-normal text-[#525358] transition-all duration-150 ease-in-out lg:text-[18px] ${pathname === '/tin-tuc/cong-bo-thong-tin' ? 'border-b border-[#E50261] text-[#15171E]' : ''}`}
+            className={`py-[7px] text-base font-bold leading-normal transition-all duration-150 ease-in-out lg:text-[18px] ${pathname === '/tin-tuc/cong-bo-thong-tin' ? 'border-b border-[#E50261] text-[#15171E]' : 'text-[#525358]'}`}
           >
             Công bố thông tin
           </Link>
@@ -59,9 +60,9 @@ const HeaderNews = ({ setTextValue, setSort }: Props) => {
               type="text"
               onChange={(e) => setTextValue(e.target.value)}
               placeholder="Tìm kiếm..."
-              className={`w-full rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-2 pl-3 text-xs font-medium text-[#525358] outline-none transition-all duration-300 ease-in-out placeholder:text-xs placeholder:font-medium placeholder:leading-none placeholder:text-[#525358] lg:w-[250px] lg:text-sm lg:placeholder:text-sm`}
+              className={`w-full rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-2 pl-3 text-xs font-medium text-[#525358] outline-none transition-all duration-300 ease-in-out placeholder:text-xs placeholder:font-medium placeholder:leading-none placeholder:text-[#525358] lg:w-[300px] lg:text-sm lg:placeholder:text-sm lg2:w-[250px]`}
             />
-            <button className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer">
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer">
               <i>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +88,7 @@ const HeaderNews = ({ setTextValue, setSort }: Props) => {
                   />
                 </svg>
               </i>
-            </button>
+            </div>
           </form>
           <div className="flex items-center gap-3">
             {/* <div className="relative cursor-pointer rounded-[6px] bg-[rgba(144,145,156,0.08)]">
@@ -109,7 +110,8 @@ const HeaderNews = ({ setTextValue, setSort }: Props) => {
             </div> */}
             <input
               type="date"
-              className={`hidden cursor-pointer rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-2 text-xs font-medium text-[#525358] focus:outline-none md:block lg:text-sm ${pathname === '/tin-tuc/cong-bo-thong-tin' ? 'block' : 'hidden'}`}
+              onChange={(e) => setDate(e.target.value)}
+              className={`hidden cursor-pointer rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-2 text-xs font-medium text-[#525358] focus:outline-none lg:text-sm ${pathname === '/tin-tuc/cong-bo-thong-tin' ? 'md:block' : ''}`}
             />
 
             <div className="relative flex cursor-pointer items-center gap-2 rounded-[6px] bg-[rgba(144,145,156,0.08)]">

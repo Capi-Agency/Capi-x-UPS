@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 type Props = {
   dataNew?: any;
-  url?:string
+  url?: string;
 };
 
-const NewsBanner = ({ dataNew, url='tin-hoat-dong/' }: Props) => {
+const NewsBanner = ({ dataNew, url }: Props) => {
   return (
     <div className="custom-container overflow-hidden 3xl:!max-w-[calc(1280px+48px)]">
       <div
@@ -35,7 +35,7 @@ const NewsBanner = ({ dataNew, url='tin-hoat-dong/' }: Props) => {
               {dataNew?.short_content?.blurb}
             </p>
           </div>
-          <Link href={url+dataNew?.short_content?.slug}>
+          <Link href={url + dataNew?.short_content?.slug}>
             <button className="flex items-center gap-2 text-sm font-bold lg:gap-3 lg:text-base">
               Xem chi tiết
               <i>

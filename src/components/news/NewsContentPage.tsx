@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import NextImg from '../common/next-img';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 type Props = {
   news: any;
   url: any;
@@ -25,8 +25,8 @@ const NewsContentPage = ({
   const handleCategoryClick = (index: number, slug: string) => {
     setActiveIndex(index);
     slugCate(slug);
+    setCurrentPage(1);
   };
-
   return (
     <div>
       <div className="custom-container mx-auto mt-6 lg:mt-7 xl:mt-8 2xl:mt-9 3xl:mt-12 3xl:!max-w-[calc(1280px+48px)]">

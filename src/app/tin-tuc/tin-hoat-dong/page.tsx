@@ -65,7 +65,7 @@ const TinHoatDong = (props: Props) => {
     <>
       <HeaderNews setTextValue={setKeyword} setSort={setSort} />
       {dataNews.length != 0 && (
-        <NewsBanner dataNew={dataNews[0]} url="tin-hoat-dong/" />
+        <NewsBanner dataNew={dataNews[0]} url="/tin-tuc/tin-hoat-dong/" />
       )}
 
       <NewsContentPage
