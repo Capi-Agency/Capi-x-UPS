@@ -99,8 +99,7 @@ const TheFooter = (props: Props) => {
                 </div>
               </button>
               <p className="mt-6 hidden text-[16px] font-medium leading-[24px] text-[#6E767C] md:block">
-                Cảm ơn bạn đã tới với nền tảng giao dịch chứng khoán <br /> UP
-                Securities
+                Cảm ơn bạn đã tới với nền tảng giao dịch chứng khoán UP
               </p>
             </div>
           </div>

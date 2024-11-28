@@ -94,7 +94,6 @@ const imgDataMobile: ImgData[] = [
 ];
 
 const Community = ({ data }: Props) => {
-  console.log('🚀 ~ Community ~ data:', data);
   const [imgData, setImgData] = useState(imgDataDesktop);
   const imgRef = useRef<HTMLDivElement[]>([]);
   const triggerRef = useRef<HTMLDivElement>(null);
