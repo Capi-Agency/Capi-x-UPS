@@ -19,13 +19,13 @@ const NewsDetail = ({ data, related, url }: Props) => {
     <div>
       <section className="custom-container mt-8 md:mt-10 lg:mt-12 xl:mt-14 3xl:mt-16 3xl:!max-w-[calc(1280px+48px)]">
         <div
-          className="relative h-[180px] w-full md:h-[260px] lg:h-[302px] lg2:h-[360px] 2xl:h-[400px]"
+          className="relative w-full pt-[60%] md:pt-[50%] xl:pt-[40%] 3xl:pt-[36%]"
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="700"
         >
           <NextImg
-            src={process.env.REACT_APP_IMG_URL + data?.cover?.id}
+            src={process.env.REACT_APP_IMG_URL + data?.thumbnail?.id}
             alt="Capi"
             objectFit="cover"
             className="rounded-[20px]"

@@ -26,7 +26,7 @@ const Banner = ({ data }: Props) => {
             />
           </div>
           <p className="pt-2 text-center text-[14px] font-medium leading-normal text-[#FFF] md:pt-[16px] lg:text-base">
-            UP Securities
+            Công ty Cổ phần Chứng khoán UP
           </p>
           <h1 className="mt-[14px] text-center text-[32px] font-bold leading-normal -tracking-[0.64px] text-[#FFF] md:text-[40px] md:tracking-[-0.8px] lg:text-[46px] lg:leading-[52px] lg:tracking-[-0.92px] xl:text-[56px] xl:leading-[62px] xl:tracking-[-1.12px] 2xl:text-[66px] 2xl:leading-[72px] 2xl:tracking-[-1.32px] 3xl:text-[76px] 3xl:leading-[82px] 3xl:tracking-[-1.52px]">
             {data?.title?.map((item: any, index: number) => {
@@ -68,7 +68,7 @@ const Banner = ({ data }: Props) => {
         <div className="scrollbar-hidden flex max-w-full items-center gap-3 overflow-x-auto whitespace-nowrap md:gap-6 lg:px-0 xl:gap-9">
           {data?.top_user.map(({ item }: any, index: number) => (
             <div
-              className={`flex items-center gap-3 md:gap-5 ${index === 0 ? 'ml-6 md:ml-auto' : ''}`}
+              className={`flex items-center gap-3 md:gap-5 ${index === 0 ? 'ml-6 md:ml-auto' : ''} ${index === data?.top_user.length - 1 ? 'mr-6 md:ml-auto' : ''}`}
               key={index}
             >
               <div className="relative h-10 w-10 lg:h-[54px] lg:w-[54px]">

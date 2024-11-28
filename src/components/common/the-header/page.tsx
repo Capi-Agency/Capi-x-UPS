@@ -52,6 +52,10 @@ const TheHeader = () => {
         setBgColor('border-b-[1px] border-[#D0F500] bg-black');
         setbgBtn('#D0F500');
         break;
+      case '/bieu-phi':
+        setBgColor('border-b-[1px] border-[#D0F500] bg-black');
+        setbgBtn('#D0F500');
+        break;
       default:
         setBgColor('bg-[#0F1B0E]');
         setbgBtn('#02E56A');
@@ -614,7 +618,7 @@ const TheHeader = () => {
                     aria-label="Mở tài khoản ngay"
                     title="Mở tài khoản ngay"
                   >
-                    <button className={`btn active bg-[${bgBtn}]`}>
+                    <button className={`btn active !bg-[${bgBtn}]`}>
                       Mở tài khoản ngay
                       <div className="relative h-6 w-6">
                         <NextImg
@@ -635,7 +639,7 @@ const TheHeader = () => {
                     aria-label="Mở tài khoản ngay"
                     title="Mở tài khoản ngay"
                   >
-                    <button className={`btn active bg-[${bgBtn}]`}>
+                    <button className={`btn active !bg-[${bgBtn}]`}>
                       Mở tài khoản ngay
                       <div className="relative h-4 w-4 lg:h-6 lg:w-6">
                         <NextImg

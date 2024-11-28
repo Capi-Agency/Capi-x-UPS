@@ -35,7 +35,9 @@ export default async function HomePage() {
               {datasection.mobile_app && (
                 <MobileApp data={datasection.mobile_app} />
               )}
-              {datasection.ups_cong_dong && <Community />}
+              {datasection.ups_cong_dong && (
+                <Community data={datasection.ups_cong_dong} />
+              )}
               {datasection.ups_question && (
                 <Support data={datasection.ups_question} />
               )}

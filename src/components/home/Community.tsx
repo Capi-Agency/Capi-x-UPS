@@ -3,7 +3,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import NextImg from '../common/next-img';
 import { gsap } from 'gsap';
 
-type Props = {};
+type Props = {
+  data: any;
+};
 type ImgData = {
   size: number;
   imgUrl: string;
@@ -91,20 +93,9 @@ const imgDataMobile: ImgData[] = [
   },
 ];
 
-const Community = (props: Props) => {
+const Community = ({ data }: Props) => {
+  console.log('🚀 ~ Community ~ data:', data);
   const [imgData, setImgData] = useState(imgDataDesktop);
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setImgData(window.innerWidth < 768 ? imgDataMobile : imgDataDesktop);
-  //   };
-
-  //   handleResize();
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, [imgDataDesktop, imgDataMobile]);
   const imgRef = useRef<HTMLDivElement[]>([]);
   const triggerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -156,8 +147,8 @@ const Community = (props: Props) => {
           />
         </div>
         <span className="mt-2 text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[56px]">
-          Tham gia ngay cộng đồng <br />
-          <span className="text-[#02E56A]">Nhà đầu tư UPS</span>
+          {data[0].title} <br />
+          <span className="text-[#02E56A]">{data[1].title}</span>
         </span>
         <div className="mx-auto mt-6 grid grid-cols-2 gap-4 lg:mt-10 lg:grid-cols-4">
           <div className="flex h-10 w-[140px] cursor-pointer items-center gap-3 rounded-xl bg-[#002013] pl-[14px]">

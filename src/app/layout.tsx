@@ -29,7 +29,9 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <TheHeader />
-          <div className="pt-12 md:pt-14 lg:pt-[70px]">{children}</div>
+          <div className="pt-[45px] md:pt-14 lg:pt-16 xl:pt-[70px]">
+            {children}
+          </div>
           <TheFooter />
         </ThemeProvider>
       </body>

@@ -52,7 +52,7 @@ const FeeStock = ({ data }: Props) => {
                 key={index}
               >
                 <div>
-                  <span className="text-base font-medium xl:leading-[24px] 2xl:text-[18px] 2xl:leading-[40px]">
+                  <span className="text-xs font-medium md:text-sm lg:text-base xl:leading-[24px] 2xl:text-[18px] 2xl:leading-[40px]">
                     {item.name}
                   </span>
                   <h3 className="mt-2 text-[20px] font-bold md:mt-[14px] lg:text-[30px] lg2:text-[40px] lg2:leading-[46px] 2xl:mt-4 2xl:text-[60px] 2xl:leading-[63px] 2xl:tracking-[-2.7px]">

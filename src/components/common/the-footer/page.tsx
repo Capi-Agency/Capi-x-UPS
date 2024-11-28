@@ -13,7 +13,7 @@ const TheFooter = (props: Props) => {
     AOS.init({ once: true });
   }, []);
   return (
-    <div className="relative mt-10 bg-[#0F1B0E] text-[#FFF] lg:mt-[60px] xl:mt-20 2xl:mt-[160px]">
+    <div className="relative mt-10 bg-[#0F1B0E] text-[#FFF] lg:mt-[60px] lg2:mt-20 xl:mt-[100px] 2xl:mt-[120px] 3xl:mt-[160px]">
       <div className="custom-container pb-6 pt-10 md:py-10 lg2:pb-[52px] lg2:pt-[50px] xl:pt-[70px] 3xl:pb-[72px] 3xl:pt-[120px]">
         <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[40%,60%] lg:gap-0 lg2:grid-cols-[45%,55%] 2xl:grid-cols-[50%,50%]">
           <div
@@ -41,10 +41,10 @@ const TheFooter = (props: Props) => {
             data-aos-duration="700"
           >
             <div className="flex flex-col">
-              <p className="mb-3 border-b border-[#8C9AA4] pb-3 text-[14px] font-medium leading-[22px] text-[#8C9AA4] lg:mb-4 lg:pb-4 lg:text-base lg:leading-[28px] lg2:text-[18px]">
+              {/* <p className="mb-3 border-b border-[#8C9AA4] pb-3 text-[14px] font-medium leading-[22px] text-[#8C9AA4] lg:mb-4 lg:pb-4 lg:text-base lg:leading-[28px] lg2:text-[18px]">
                 UPS là công ty chứng khoán đột phá dành cho thế hệ mới, nơi công
                 nghệ và tư duy đổi mới, sáng tạo hợp nhất để đem lại trải
-              </p>
+              </p> */}
               <div className="flex flex-col gap-[6px]">
                 <div className="flex items-center gap-[6px]">
                   <div className="relative h-[19px] w-[19px]">
