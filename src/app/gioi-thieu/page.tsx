@@ -6,6 +6,7 @@ import DirectorAbout from '@/components/about-us/DirectorAbout';
 import ServiceAbout from '@/components/about-us/ServiceAbout';
 import Support from '@/components/home/Support';
 import { fnGetPage } from '@/services/page';
+import { Metadata, ResolvingMetadata } from 'next';
 
 type Props = {};
 
@@ -47,3 +48,17 @@ const GioiThieu = async () => {
 };
 
 export default GioiThieu;
+export async function generateMetadata(
+  { params, searchParams }: any,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  // read route params
+  return {
+    title: 'Giới thiệu UPS',
+    description:
+      'UPS hướng đến mục tiêu trở thành một điểm tựa vững chắc khuyến khích người trẻ tự tin khám phá thế giới tài chính.',
+    openGraph: {
+      images: ['/assets/icons/logo-bt.svg'],
+    },
+  };
+}

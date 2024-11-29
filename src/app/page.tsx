@@ -9,6 +9,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { fnGetHomePage } from '@/services/page';
 import UdemyHome from '@/components/home/Udemy';
+import { Metadata, ResolvingMetadata } from 'next';
 
 export default async function HomePage() {
   const data = await fnGetHomePage();
@@ -46,4 +47,17 @@ export default async function HomePage() {
         })}
     </div>
   );
+}
+export async function generateMetadata(
+  { params, searchParams }: any,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  // read route params
+  return {
+    title: 'Trang chủ UPS',
+    description: 'Công ty Cổ phần Chứng khoán UP',
+    openGraph: {
+      images: ['/assets/icons/logo-bt.svg'],
+    },
+  };
 }

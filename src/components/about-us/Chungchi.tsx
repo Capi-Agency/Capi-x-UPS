@@ -30,7 +30,7 @@ const Chungchi = ({ data }: Props) => {
             data-aos-delay="600"
             data-aos-duration="700"
           >
-            <p className="text-[14px] font-medium leading-[22px] text-[#FFF] lg:text-base lg:leading-[28px] lg2:text-[18px]">
+            <p className="text-right text-[14px] font-medium leading-[22px] text-[#FFF] lg:text-base lg:leading-[28px] lg2:text-[18px]">
               Bạn muốn tìm hiểu thêm?
             </p>
             <Link href={data?.cta?.url}>

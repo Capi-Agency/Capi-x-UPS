@@ -5,6 +5,7 @@ import ReviewTech from '@/components/technology/ReviewTech';
 import ServiceTech from '@/components/technology/ServiceTech';
 import Technology from '@/components/technology/Technology';
 import { fnGetPage } from '@/services/page';
+import { Metadata, ResolvingMetadata } from 'next';
 import React from 'react';
 
 type Props = {};
@@ -42,3 +43,16 @@ const TechnologyPlatform = async (props: Props) => {
 };
 
 export default TechnologyPlatform;
+export async function generateMetadata(
+  { params, searchParams }: any,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  // read route params
+  return {
+    title: 'Nền tảng công nghệ UPS',
+    description: 'Siêu ứng dụng đầu tư tích hợp cho mọi nhu cầu của bạn',
+    openGraph: {
+      images: ['/assets/icons/logo-bt.svg'],
+    },
+  };
+}

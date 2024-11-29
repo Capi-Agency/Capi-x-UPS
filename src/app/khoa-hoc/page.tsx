@@ -5,6 +5,7 @@ import CourseSchedule from '@/components/course/CourseSchedule';
 import CourseService from '@/components/course/CourseService';
 import TagsPage from '@/components/tags/page';
 import { fnGetPage } from '@/services/page';
+import { Metadata, ResolvingMetadata } from 'next';
 import React from 'react';
 
 type Props = {};
@@ -38,3 +39,17 @@ const CoursePage = async (props: Props) => {
 };
 
 export default CoursePage;
+export async function generateMetadata(
+  { params, searchParams }: any,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  // read route params
+  return {
+    title: 'Chứng khoán UPS',
+    description:
+      'Tham gia giao dịch Cổ phiếu là giải pháp đơn giản và dễ dàng giúp bạn hiện thực hóa ước mơ tăng trưởng tài chính và chinh phục những đỉnh cao cuộc sống.',
+    openGraph: {
+      images: ['/assets/icons/logo-bt.svg'],
+    },
+  };
+}

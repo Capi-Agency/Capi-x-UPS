@@ -297,6 +297,9 @@ const TheFooter = (props: Props) => {
               Điều khoản & Quyền hạn
             </span>
             <span className="text-sm font-medium leading-normal text-[rgba(255,255,255,0.79)]">
+              Chính sách bảo mật
+            </span>
+            <span className="text-sm font-medium leading-normal text-[rgba(255,255,255,0.79)]">
               Trung tâm hỗ trợ khách hàng
             </span>
           </div>

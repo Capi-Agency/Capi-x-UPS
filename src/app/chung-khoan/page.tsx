@@ -6,6 +6,7 @@ import PartnerStock from '@/components/stock-market/PartnerStock';
 import ServiceStock from '@/components/stock-market/ServiceStock';
 import UdemyStock from '@/components/stock-market/UdemyStock';
 import { fnGetPage } from '@/services/page';
+import { Metadata, ResolvingMetadata } from 'next';
 import React from 'react';
 
 type Props = {};
@@ -44,3 +45,17 @@ const ChungKhoan = async (props: Props) => {
 };
 
 export default ChungKhoan;
+export async function generateMetadata(
+  { params, searchParams }: any,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  // read route params
+  return {
+    title: 'Chứng khoán UPS',
+    description:
+      'Tham gia giao dịch Cổ phiếu là giải pháp đơn giản và dễ dàng giúp bạn hiện thực hóa ước mơ tăng trưởng tài chính và chinh phục những đỉnh cao cuộc sống.',
+    openGraph: {
+      images: ['/assets/icons/logo-bt.svg'],
+    },
+  };
+}

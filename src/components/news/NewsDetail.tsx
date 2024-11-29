@@ -10,6 +10,7 @@ type Props = {
 };
 
 const NewsDetail = ({ data, related, url }: Props) => {
+  console.log("🚀 ~ NewsDetail ~ data:", data)
   const [render, setRender] = useState(false);
 
   useEffect(() => {
