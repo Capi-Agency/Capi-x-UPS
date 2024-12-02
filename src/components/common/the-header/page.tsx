@@ -48,7 +48,7 @@ const TheHeader = () => {
         setBgColor('bg-[#080F25]');
         setbgBtn('#02E56A');
         break;
-      case '/chung-khoan':
+      case '/co-phieu':
         setBgColor('border-b-[1px] border-[#D0F500] bg-black');
         setbgBtn('#D0F500');
         break;
@@ -101,7 +101,7 @@ const TheHeader = () => {
                             Khách hàng cá nhân
                           </h3>
                         </li>
-                        <Link href="/chung-khoan" className="flex items-center gap-5">
+                        <Link href="/co-phieu" className="flex items-center gap-5">
                           <div className="relative h-6 w-6">
                             <NextImg
                               src="/assets/icons/icon-nav1.svg"

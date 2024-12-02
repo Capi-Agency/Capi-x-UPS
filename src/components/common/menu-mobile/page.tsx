@@ -31,7 +31,7 @@ const MenuMobile = ({ handleClose }: Props) => (
                 </h3>
               </li>
               <Link
-                href="/chung-khoan"
+                href="/co-phieu"
                 className="flex items-center gap-5"
                 onClick={handleClose}
               >
@@ -475,7 +475,11 @@ const MenuMobile = ({ handleClose }: Props) => (
               </div>
             </Link>
 
-            <Link href="/tuyen-dung" className="flex items-center" onClick={handleClose}>
+            <Link
+              href="/tuyen-dung"
+              className="flex items-center"
+              onClick={handleClose}
+            >
               <i className="inline-flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

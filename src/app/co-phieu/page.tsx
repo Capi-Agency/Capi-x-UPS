@@ -51,7 +51,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   // read route params
   return {
-    title: 'Chứng khoán UPS',
+    title: 'Cổ phiếu UPS',
     description:
       'Tham gia giao dịch Cổ phiếu là giải pháp đơn giản và dễ dàng giúp bạn hiện thực hóa ước mơ tăng trưởng tài chính và chinh phục những đỉnh cao cuộc sống.',
     openGraph: {

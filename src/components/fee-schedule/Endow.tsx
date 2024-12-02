@@ -34,12 +34,13 @@ const EndowFeeSchedule = (props: Props) => {
           const delay = ((index % 3) + 1) * 200;
           return (
             <div
-              className="group"
               data-aos="fade-up"
               data-aos-delay={delay}
               data-aos-duration="700"
             >
-              <div className="flex flex-col gap-4 rounded-[15px] bg-[#F3F1EB] p-4 text-[#1A1711] shadow-[3px_10px_20px_0px_rgba(0,0,0,0.02)] group-hover:bg-[#1A1711] group-hover:bg-gradient-to-b group-hover:from-[#FDF2CB] group-hover:to-[#DABB6B] group-hover:text-[#4E3A06] lg:p-6 lg2:p-8 xl:p-10">
+              <div
+                className={`flex flex-col gap-4 rounded-[15px] bg-[#F3F1EB] p-4 text-[#1A1711] shadow-[3px_10px_20px_0px_rgba(0,0,0,0.02)] lg:p-6 lg2:p-8 xl:p-10 ${index === 1 ? 'bg-[#1A1711] bg-gradient-to-b from-[#FDF2CB] to-[#DABB6B] text-[#4E3A06]' : ''}`}
+              >
                 <div>
                   <span className="text-sm font-medium lg:text-base xl:leading-[24px] 2xl:text-[18px] 2xl:leading-[40px]">
                     {data.tag}
@@ -56,12 +57,9 @@ const EndowFeeSchedule = (props: Props) => {
                   {data.description}
                 </p>
                 <div className="flex flex-col gap-2">
-                  {data.features.map((item, index) => {
+                  {data.features.map((item, i) => {
                     return (
-                      <div
-                        className="flex items-center gap-1 lg:gap-2"
-                        key={index}
-                      >
+                      <div className="flex items-center gap-1 lg:gap-2" key={i}>
                         <i>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +71,7 @@ const EndowFeeSchedule = (props: Props) => {
                             <g clipPath="url(#clip0_4708_45419)">
                               <path
                                 d="M6.7498 12.1492L3.5998 8.99922L2.5498 10.0492L6.7498 14.2492L15.7498 5.24922L14.6998 4.19922L6.7498 12.1492Z"
-                                className="fill-[#099746] group-hover:fill-[#403109]"
+                                className={`${index === 1 ? 'fill-[#403109]' : 'fill-[#099746]'}`}
                               />
                             </g>
                             <defs>
