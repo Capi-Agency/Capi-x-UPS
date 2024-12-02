@@ -182,7 +182,7 @@ const UserManual = ({ data }: Props) => {
                     <span className="font-bold leading-[140%] -tracking-[0.42px] text-[#FFF] md:text-sm lg:text-base">
                       Hành trình của bạn
                     </span>
-                    <TooltipProgress percentage={93} />
+                    <TooltipProgress percentage={94} />
                   </div>
                   <p className="text-sm leading-[27px%] -tracking-[0.32px] text-[#FFF] lg:text-base">
                     Chào mừng bạn đã tới UPS, tạo tài khoản ngay để không bỏ lỡ
@@ -283,7 +283,7 @@ const UserManual = ({ data }: Props) => {
                     <span className="font-bold leading-[140%] -tracking-[0.42px] text-[#FFF] md:text-sm lg:text-base">
                       Hành trình của bạn
                     </span>
-                    <TooltipProgress percentage={93} />
+                    <TooltipProgress percentage={95} />
                   </div>
                   <p className="text-sm leading-[27px%] -tracking-[0.32px] text-[#FFF] lg:text-base">
                     Chào mừng bạn đã tới UPS, tạo tài khoản ngay để không bỏ lỡ
@@ -384,7 +384,7 @@ const UserManual = ({ data }: Props) => {
                     <span className="font-bold leading-[140%] -tracking-[0.42px] text-[#FFF] md:text-sm lg:text-base">
                       Hành trình của bạn
                     </span>
-                    <TooltipProgress percentage={93} />
+                    <TooltipProgress percentage={100} />
                   </div>
                   <p className="text-sm leading-[27px%] -tracking-[0.32px] text-[#FFF] lg:text-base">
                     Chào mừng bạn đã tới UPS, tạo tài khoản ngay để không bỏ lỡ

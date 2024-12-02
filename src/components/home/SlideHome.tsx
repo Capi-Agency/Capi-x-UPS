@@ -10,7 +10,26 @@ type Props = {
 const SlideHome = ({ data }: Props) => {
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handlePrev = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
+  const handleNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
+
+  const handlePaginationClick = (index: number) => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slideTo(index);
+      setActiveIndex(index);
+    }
+  };
+
   return (
     <div
       className="custom-container mt-6 md:mt-10 lg:mt-11 xl:mt-16 2xl:mt-20 3xl:mt-[120px]"
@@ -57,20 +76,7 @@ const SlideHome = ({ data }: Props) => {
         <button
           id="prevBtn"
           className="group absolute -left-8 top-1/2 z-[10] hidden -translate-y-1/2 rounded-full bg-[#02E56A] p-6 hover:bg-[#15171E] lg2:block"
-          onClick={() => {
-            if (swiperRef.current && swiperRef.current.swiper) {
-              if (!isAnimating) {
-                setIsAnimating(true);
-                swiperRef.current.swiper.slidePrev();
-                setActiveIndex(
-                  (prevIndex) => (prevIndex - 1 + data.length) % data.length,
-                );
-                setTimeout(() => {
-                  setIsAnimating(false);
-                }, 800);
-              }
-            }
-          }}
+          onClick={handlePrev}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -89,19 +95,7 @@ const SlideHome = ({ data }: Props) => {
         <button
           id="nextBtn"
           className="group absolute -right-8 top-1/2 z-[10] hidden -translate-y-1/2 rounded-full bg-[#02E56A] p-6 hover:bg-[#15171E] lg2:block"
-          onClick={() => {
-            if (swiperRef.current && swiperRef.current.swiper) {
-              if (!isAnimating) {
-                setIsAnimating(true);
-                swiperRef.current.swiper.slideNext();
-                setActiveIndex((prevIndex) => (prevIndex + 1) % data.length);
-
-                setTimeout(() => {
-                  setIsAnimating(false);
-                }, 800);
-              }
-            }
-          }}
+          onClick={handleNext}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -126,12 +120,7 @@ const SlideHome = ({ data }: Props) => {
                   ? 'bg-[#15171E]'
                   : 'bg-[rgba(255,255,255,0.50)]'
               }`}
-              onClick={() => {
-                if (swiperRef.current) {
-                  swiperRef.current.swiper.slideTo(index);
-                  setActiveIndex(index);
-                }
-              }}
+              onClick={() => handlePaginationClick(index)}
             />
           ))}
         </div>

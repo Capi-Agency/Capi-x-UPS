@@ -121,7 +121,6 @@ const TheFooter = (props: Props) => {
           >
             <Link
               href="/"
-              aria-label="Ups"
               title="Ups"
               className="inline-flex items-center"
             >

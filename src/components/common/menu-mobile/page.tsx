@@ -13,8 +13,7 @@ const MenuMobile = ({ handleClose }: Props) => (
       <Accordion.Item value="item-1">
         <Accordion.Trigger>
           <p
-            aria-label="Our product"
-            title="Our product"
+            title="Sản phẩm"
             className="flex items-center gap-[10px] text-sm font-bold text-gray-100"
           >
             Sản phẩm
@@ -32,7 +31,7 @@ const MenuMobile = ({ handleClose }: Props) => (
                 </h3>
               </li>
               <Link
-                href="/"
+                href="/chung-khoan"
                 className="flex items-center gap-5"
                 onClick={handleClose}
               >
@@ -91,7 +90,7 @@ const MenuMobile = ({ handleClose }: Props) => (
                 </div>
               </Link>
               <Link
-                href="/"
+                href="/bieu-phi"
                 className="flex items-center gap-5"
                 onClick={handleClose}
               >
@@ -120,7 +119,7 @@ const MenuMobile = ({ handleClose }: Props) => (
 
                 <div className="flex flex-col gap-5 py-5">
                   <Link
-                    href="/"
+                    href="#"
                     className="flex items-center"
                     onClick={handleClose}
                   >
@@ -143,7 +142,7 @@ const MenuMobile = ({ handleClose }: Props) => (
                   </Link>
 
                   <Link
-                    href="/"
+                    href="/tin-tuc/tin-dau-gia"
                     className="flex items-center"
                     onClick={handleClose}
                   >
@@ -180,7 +179,7 @@ const MenuMobile = ({ handleClose }: Props) => (
                       Web Trading
                     </Link>
                     <Link
-                      href="/"
+                      href="#"
                       className="flex h-[38px] w-full items-center rounded-[10px] bg-[#F1F1F1] px-3 text-sm font-semibold text-[rgba(0,0,0,0.79)]"
                       onClick={handleClose}
                     >
@@ -197,8 +196,7 @@ const MenuMobile = ({ handleClose }: Props) => (
       <Accordion.Item value="item-2">
         <Accordion.Trigger>
           <p
-            aria-label="Invest with UPS"
-            title="Invest with UPS"
+            title="Đầu tư cùng UPS"
             className="text-sm font-bold text-gray-100"
           >
             Đầu tư cùng UPS
@@ -206,7 +204,7 @@ const MenuMobile = ({ handleClose }: Props) => (
         </Accordion.Trigger>
         <Accordion.Content>
           <div className="flex flex-col gap-5 p-3">
-            <Link href="/" className="flex items-center" onClick={handleClose}>
+            <Link href="#" className="flex items-center" onClick={handleClose}>
               <i className="inline-flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -266,7 +264,7 @@ const MenuMobile = ({ handleClose }: Props) => (
               </div>
             </Link>
 
-            <Link href="/" className="flex items-center" onClick={handleClose}>
+            <Link href="#" className="flex items-center" onClick={handleClose}>
               <i className="inline-flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -323,9 +321,8 @@ const MenuMobile = ({ handleClose }: Props) => (
         <Accordion.Trigger>
           <Link
             href="/nen-tang-cong-nghe"
-            aria-label="Technology platform"
             onClick={handleClose}
-            title="Technology platform"
+            title="Nền tảng công nghệ"
             className="text-sm font-bold text-gray-100"
           >
             Nền tảng công nghệ
@@ -336,8 +333,7 @@ const MenuMobile = ({ handleClose }: Props) => (
         <Accordion.Trigger>
           <Link
             href="/tin-tuc"
-            aria-label="News"
-            title="News"
+            title="Tin tức"
             className="text-sm font-bold text-gray-100"
             onClick={handleClose}
           >
@@ -350,11 +346,7 @@ const MenuMobile = ({ handleClose }: Props) => (
       </Accordion.Item>
       <Accordion.Item value="item-5">
         <Accordion.Trigger>
-          <p
-            aria-label="About us"
-            title="About us"
-            className="text-sm font-bold text-gray-100"
-          >
+          <p title="Giới thiệu" className="text-sm font-bold text-gray-100">
             Về UPS
           </p>
         </Accordion.Trigger>
@@ -483,7 +475,7 @@ const MenuMobile = ({ handleClose }: Props) => (
               </div>
             </Link>
 
-            <Link href="/" className="flex items-center" onClick={handleClose}>
+            <Link href="/tuyen-dung" className="flex items-center" onClick={handleClose}>
               <i className="inline-flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -539,9 +531,8 @@ const MenuMobile = ({ handleClose }: Props) => (
       <Accordion.Item value="item-6">
         <Accordion.Trigger>
           <Link
-            href="/"
-            aria-label="Price list"
-            title="Price list"
+            href="#"
+            title="Bảng giá"
             className="text-sm font-bold text-gray-100"
             onClick={handleClose}
           >
@@ -550,12 +541,7 @@ const MenuMobile = ({ handleClose }: Props) => (
         </Accordion.Trigger>
       </Accordion.Item>
       <li>
-        <a
-          href="/"
-          className=""
-          aria-label="Mở tài khoản ngay"
-          title="Mở tài khoản ngay"
-        >
+        <a href="/" className="" title="Mở tài khoản ngay">
           <button className="btn active">
             Mở tài khoản ngay
             <div className="relative h-4 w-4 lg:h-6 lg:w-6">

@@ -71,7 +71,6 @@ const TheHeader = () => {
             <div className="relative flex items-center justify-between">
               <Link
                 href="/"
-                aria-label="Ups"
                 title="Ups"
                 className="inline-flex items-center"
               >
@@ -102,7 +101,7 @@ const TheHeader = () => {
                             Khách hàng cá nhân
                           </h3>
                         </li>
-                        <Link href="/" className="flex items-center gap-5">
+                        <Link href="/chung-khoan" className="flex items-center gap-5">
                           <div className="relative h-6 w-6">
                             <NextImg
                               src="/assets/icons/icon-nav1.svg"
@@ -119,7 +118,10 @@ const TheHeader = () => {
                             </span>
                           </div>
                         </Link>
-                        <Link href="/" className="flex items-center gap-5">
+                        <Link
+                          href="/bieu-phi"
+                          className="flex items-center gap-5"
+                        >
                           <div className="relative h-6 w-6">
                             <NextImg
                               src="/assets/icons/icon-nav5.svg"
@@ -144,7 +146,7 @@ const TheHeader = () => {
                           </p>
 
                           <div className="flex flex-col gap-5 py-5">
-                            <Link href="/" className="flex items-center">
+                            <Link href="#" className="flex items-center">
                               <div className="relative h-6 w-6">
                                 <NextImg
                                   src="/assets/icons/icon-nav6.svg"
@@ -163,7 +165,10 @@ const TheHeader = () => {
                               </div>
                             </Link>
 
-                            <Link href="/" className="flex items-center">
+                            <Link
+                              href="/tin-tuc/tin-dau-gia"
+                              className="flex items-center"
+                            >
                               <div className="relative h-6 w-6">
                                 <NextImg
                                   src="/assets/icons/icon-nav7.svg"
@@ -196,7 +201,7 @@ const TheHeader = () => {
                                 Web Trading
                               </Link>
                               <Link
-                                href="/"
+                                href="#"
                                 className="flex h-[38px] w-[80%] items-center rounded-[10px] bg-[#F1F1F1] px-3 text-sm font-semibold text-[rgba(0,0,0,0.79)]"
                               >
                                 App Trading
@@ -217,7 +222,7 @@ const TheHeader = () => {
                   </NavigationMenu.Trigger>
                   <NavigationMenu.Content className="absolute left-0 top-0 w-full data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
                     <div className="flex w-[400px] flex-col gap-5 px-6 py-5">
-                      <Link href="/" className="flex items-center">
+                      <Link href="#" className="flex items-center">
                         <i className="inline-flex items-center justify-center">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -277,7 +282,7 @@ const TheHeader = () => {
                         </div>
                       </Link>
 
-                      <Link href="/" className="flex items-center">
+                      <Link href="#" className="flex items-center">
                         <i className="inline-flex items-center justify-center">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -477,7 +482,7 @@ const TheHeader = () => {
                         </div>
                       </Link>
 
-                      <Link href="/" className="flex items-center">
+                      <Link href="/tuyen-dung" className="flex items-center">
                         <i className="inline-flex items-center justify-center">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -532,7 +537,7 @@ const TheHeader = () => {
                 </NavigationMenu.Item>
 
                 <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(5)}>
-                  <Link href="">
+                  <Link href="#">
                     <div className="font-bold text-gray-100">Bảng giá</div>
                   </Link>
                 </NavigationMenu.Item>
@@ -543,8 +548,7 @@ const TheHeader = () => {
               <ul className="hidden items-center space-x-5 xl:flex 2xl:space-x-8">
                 <div>
                   <Link
-                    href="/"
-                    aria-label="Thông báo"
+                    href="#"
                     title="Thông báo"
                     className="font-bold text-gray-100"
                   >
@@ -581,7 +585,6 @@ const TheHeader = () => {
                 </div>
                 <div>
                   <div
-                    aria-label="Tìm kiếm"
                     title="Tìm kiếm"
                     className="cursor-pointer font-bold text-gray-100"
                   >
@@ -615,7 +618,6 @@ const TheHeader = () => {
                   <Link
                     href="/"
                     className=""
-                    aria-label="Mở tài khoản ngay"
                     title="Mở tài khoản ngay"
                   >
                     <button className={`btn active !bg-[${bgBtn}]`}>
@@ -636,7 +638,6 @@ const TheHeader = () => {
                   <Link
                     href="/"
                     className="hidden md:block"
-                    aria-label="Mở tài khoản ngay"
                     title="Mở tài khoản ngay"
                   >
                     <button className={`btn active !bg-[${bgBtn}]`}>
@@ -651,8 +652,7 @@ const TheHeader = () => {
                     </button>
                   </Link>
                   <Link
-                    href="/"
-                    aria-label="Thông báo"
+                    href="#"
                     title="Thông báo"
                     className="font-bold text-gray-100"
                   >
@@ -687,8 +687,7 @@ const TheHeader = () => {
                     </i>
                   </Link>
                   <button
-                    aria-label="Open Menu"
-                    title="Open Menu"
+                    title="Mở menu"
                     className="-mr-1 rounded p-2 transition duration-1000 ease-in focus:outline-none"
                     onClick={() => setIsMenuOpen(true)}
                   >
@@ -748,7 +747,6 @@ const TheHeader = () => {
                 <div>
                   <Link
                     href="/"
-                    aria-label="Ups"
                     title="Ups"
                     className="inline-flex items-center"
                   >
@@ -764,8 +762,7 @@ const TheHeader = () => {
                 </div>
                 <div>
                   <button
-                    aria-label="Close Menu"
-                    title="Close Menu"
+                    title="Đóng menu"
                     className="-mr-2 -mt-2 rounded p-2 transition duration-200 focus:outline-none"
                     onClick={() => setIsMenuOpen(false)}
                   >
