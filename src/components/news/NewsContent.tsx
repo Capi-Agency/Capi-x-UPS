@@ -7,7 +7,7 @@ type Props = {
   title?: string;
 };
 
-const NewsAction = ({ news, url, title }: Props) => {
+const NewsContent = ({ news, url, title }: Props) => {
   return (
     <section className="custom-container mt-9 lg:mt-12 lg2:mt-14 2xl:mt-16 3xl:mt-20 3xl:!max-w-[calc(1280px+48px)]">
       <div className="mb-4 flex items-center justify-between lg:mb-6 2xl:mb-8 3xl:mb-10">
@@ -90,4 +90,4 @@ const NewsAction = ({ news, url, title }: Props) => {
   );
 };
 
-export default NewsAction;
+export default NewsContent;

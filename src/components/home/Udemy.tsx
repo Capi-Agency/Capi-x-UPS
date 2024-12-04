@@ -11,7 +11,7 @@ const UdemyHome = ({ data }: Props) => {
   return (
     <div className="custom-container">
       {/*  section 2*/}
-      <div className="relative mt-10 flex flex-col gap-5 overflow-hidden rounded-[16px] bg-[#150900] p-5 md:grid md:grid-cols-[auto,52%] md:items-center md:gap-10 md:px-5 md:py-0 lg:mt-[60px] lg:gap-14 lg:rounded-[40px] lg:px-10 lg2:gap-20 lg2:px-[50px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
+      <div className="relative mt-10 flex flex-col gap-5 overflow-hidden rounded-[16px] bg-[#150900] p-5 md:grid md:grid-cols-[auto,52%] md:items-center md:gap-10 md:px-5 md:py-0 lg:mt-[60px] lg:grid-cols-[auto,55%] lg:gap-14 lg:rounded-[40px] lg:px-10 lg2:grid-cols-[auto,52%] lg2:gap-16 lg2:px-[50px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
         <div
           className="relative flex h-[234px] w-[240px] place-content-start justify-start md:h-[276px] md:w-[273px] lg:h-[320px] lg:w-[340px] lg2:h-[400px] lg2:w-[430px] 2xl:w-[482px] 3xl:w-[564px]"
           data-aos="fade-up"

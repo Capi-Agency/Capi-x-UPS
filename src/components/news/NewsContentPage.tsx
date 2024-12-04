@@ -23,9 +23,9 @@ const NewsContentPage = ({
 }: Props) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const handleCategoryClick = (index: number, slug: string) => {
+    setCurrentPage(1);
     setActiveIndex(index);
     slugCate(slug);
-    setCurrentPage(1);
   };
   return (
     <div>

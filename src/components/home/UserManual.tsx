@@ -68,11 +68,11 @@ const UserManual = ({ data }: Props) => {
               data-aos-duration="700"
             >
               <div className="rounded-2xl bg-[#0F1B0E] sm:p-5 lg2:p-8 2xl:p-10">
-                <div className="relative mx-auto w-full rounded-br-2xl sm:w-[calc(100%-64px)] md:h-[200px] lg:w-[calc(100%-48px)] lg2:h-[281px] lg2:w-full 3xl:h-[321px]">
+                <div className="relative mx-auto w-full rounded-br-2xl md:h-[200px] lg2:h-[290px] lg2:w-full 3xl:h-[344px]">
                   <NextImg
                     src="/assets/icons/illustration-2.svg"
                     alt="Capi"
-                    objectFit="cover"
+                    objectFit="contain"
                     className=""
                   />
                 </div>
@@ -169,11 +169,11 @@ const UserManual = ({ data }: Props) => {
               data-aos-duration="700"
             >
               <div className="rounded-2xl bg-[#0F1B0E] sm:p-5 lg2:p-8 2xl:p-10">
-                <div className="relative mx-auto w-full rounded-br-2xl sm:w-[calc(100%-64px)] md:h-[200px] lg:w-[calc(100%-48px)] lg2:h-[281px] lg2:w-full 3xl:h-[321px]">
+                <div className="relative mx-auto w-full rounded-br-2xl md:h-[200px] lg2:h-[290px] lg2:w-full 3xl:h-[344px]">
                   <NextImg
                     src="/assets/icons/illustration-2.svg"
                     alt="Capi"
-                    objectFit="cover"
+                    objectFit="contain"
                     className=""
                   />
                 </div>
@@ -182,7 +182,7 @@ const UserManual = ({ data }: Props) => {
                     <span className="font-bold leading-[140%] -tracking-[0.42px] text-[#FFF] md:text-sm lg:text-base">
                       Hành trình của bạn
                     </span>
-                    <TooltipProgress percentage={94} />
+                    <TooltipProgress percentage={93} />
                   </div>
                   <p className="text-sm leading-[27px%] -tracking-[0.32px] text-[#FFF] lg:text-base">
                     Chào mừng bạn đã tới UPS, tạo tài khoản ngay để không bỏ lỡ
@@ -270,11 +270,11 @@ const UserManual = ({ data }: Props) => {
               data-aos-duration="700"
             >
               <div className="rounded-2xl bg-[#0F1B0E] sm:p-5 lg2:p-8 2xl:p-10">
-                <div className="relative mx-auto w-full rounded-br-2xl sm:w-[calc(100%-64px)] md:h-[200px] lg:w-[calc(100%-48px)] lg2:h-[281px] lg2:w-full 3xl:h-[321px]">
+                <div className="relative mx-auto w-full rounded-br-2xl md:h-[200px] lg2:h-[290px] lg2:w-full 3xl:h-[344px]">
                   <NextImg
                     src="/assets/icons/illustration-2.svg"
                     alt="Capi"
-                    objectFit="cover"
+                    objectFit="contain"
                     className=""
                   />
                 </div>
@@ -283,7 +283,7 @@ const UserManual = ({ data }: Props) => {
                     <span className="font-bold leading-[140%] -tracking-[0.42px] text-[#FFF] md:text-sm lg:text-base">
                       Hành trình của bạn
                     </span>
-                    <TooltipProgress percentage={95} />
+                    <TooltipProgress percentage={93} />
                   </div>
                   <p className="text-sm leading-[27px%] -tracking-[0.32px] text-[#FFF] lg:text-base">
                     Chào mừng bạn đã tới UPS, tạo tài khoản ngay để không bỏ lỡ
@@ -371,11 +371,11 @@ const UserManual = ({ data }: Props) => {
               data-aos-duration="700"
             >
               <div className="rounded-2xl bg-[#0F1B0E] sm:p-5 lg2:p-8 2xl:p-10">
-                <div className="relative mx-auto w-full rounded-br-2xl sm:w-[calc(100%-64px)] md:h-[200px] lg:w-[calc(100%-48px)] lg2:h-[281px] lg2:w-full 3xl:h-[321px]">
+                <div className="relative mx-auto w-full rounded-br-2xl md:h-[200px] lg2:h-[290px] lg2:w-full 3xl:h-[344px]">
                   <NextImg
                     src="/assets/icons/illustration-2.svg"
                     alt="Capi"
-                    objectFit="cover"
+                    objectFit="contain"
                     className=""
                   />
                 </div>
@@ -384,7 +384,7 @@ const UserManual = ({ data }: Props) => {
                     <span className="font-bold leading-[140%] -tracking-[0.42px] text-[#FFF] md:text-sm lg:text-base">
                       Hành trình của bạn
                     </span>
-                    <TooltipProgress percentage={100} />
+                    <TooltipProgress percentage={93} />
                   </div>
                   <p className="text-sm leading-[27px%] -tracking-[0.32px] text-[#FFF] lg:text-base">
                     Chào mừng bạn đã tới UPS, tạo tài khoản ngay để không bỏ lỡ

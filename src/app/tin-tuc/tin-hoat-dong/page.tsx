@@ -44,17 +44,19 @@ const TinHoatDong = (props: Props) => {
   useEffect(() => {
     (async () => {
       try {
-        const dataNewsRes = await fnGetListNews(
-          Number(currentPage),
-          12,
-          slugCate,
-          slugTag,
-          date,
-          keyword,
-          sort,
-        );
-        setDataNews([...dataNews, ...dataNewsRes?.data?.data?.posts]);
-        setLength(dataNewsRes?.data?.data?.announce?.length);
+        if (currentPage !== 1) {
+          const dataNewsRes = await fnGetListNews(
+            Number(currentPage),
+            12,
+            slugCate,
+            slugTag,
+            date,
+            keyword,
+            sort,
+          );
+          setDataNews([...dataNews, ...dataNewsRes?.data?.data?.posts]);
+          setLength(dataNewsRes?.data?.data?.posts?.length);
+        }
       } catch (error) {
         console.error('Error', error);
       }
@@ -63,7 +65,11 @@ const TinHoatDong = (props: Props) => {
 
   return (
     <>
-      <HeaderNews setTextValue={setKeyword} setSort={setSort} />
+      <HeaderNews
+        setTextValue={setKeyword}
+        setSort={setSort}
+        setCurrentPage={setCurrentPage}
+      />
       {dataNews.length != 0 && (
         <NewsBanner dataNew={dataNews[0]} url="/tin-tuc/tin-hoat-dong/" />
       )}

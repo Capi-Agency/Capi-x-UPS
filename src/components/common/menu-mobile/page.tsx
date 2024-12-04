@@ -334,11 +334,11 @@ const MenuMobile = ({ handleClose }: Props) => (
           <Link
             href="/tin-tuc"
             title="Tin tức"
-            className="text-sm font-bold text-gray-100"
+            className="flex items-center gap-[10px] font-bold text-gray-100"
             onClick={handleClose}
           >
             Tin tức
-            <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1">
+            <span className="flex items-center justify-center rounded-full bg-[#E50261] px-2 py-1 text-sm">
               4
             </span>
           </Link>

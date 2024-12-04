@@ -1,5 +1,6 @@
 import React from 'react';
 import NextImg from '../common/next-img';
+import ButtonEffect from '../common/button-position-aware/page';
 
 type Props = {};
 

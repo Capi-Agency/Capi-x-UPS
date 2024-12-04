@@ -7,15 +7,22 @@ import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 interface Props {
   setTextValue?: any;
   setSort?: any;
-  setDate?: any
+  setDate?: any;
+  setCurrentPage: any;
 }
-const HeaderNews = ({ setTextValue, setSort, setDate }: Props) => {
+const HeaderNews = ({
+  setTextValue,
+  setSort,
+  setDate,
+  setCurrentPage,
+}: Props) => {
   // const [isOpen, setIsOpen] = useState(false);
   // const toggleMenu = () => {
   //   setIsOpen(!isOpen);
   // };
   const pathname = usePathname();
   const handleSelect = (value: any) => {
+    setCurrentPage(1);
     if (value == '1') setSort(true);
     if (value == '2') setSort(false);
   };
@@ -58,7 +65,10 @@ const HeaderNews = ({ setTextValue, setSort, setDate }: Props) => {
           <form className="relative flex-1 lg:flex-none">
             <input
               type="text"
-              onChange={(e) => setTextValue(e.target.value)}
+              onChange={(e) => {
+                setCurrentPage(1);
+                setTextValue(e.target.value);
+              }}
               placeholder="Tìm kiếm..."
               className={`w-full rounded-[6px] bg-[rgba(144,145,156,0.08)] px-3 py-2 pl-3 text-xs font-medium text-[#525358] outline-none transition-all duration-300 ease-in-out placeholder:text-xs placeholder:font-medium placeholder:leading-none placeholder:text-[#525358] lg:w-[300px] lg:text-sm lg:placeholder:text-sm lg2:w-[250px]`}
             />
@@ -117,7 +127,9 @@ const HeaderNews = ({ setTextValue, setSort, setDate }: Props) => {
             <div className="relative flex cursor-pointer items-center gap-2 rounded-[6px] bg-[rgba(144,145,156,0.08)]">
               <select
                 className="block cursor-pointer appearance-none bg-transparent py-2 pl-3 pr-7 text-xs font-medium text-[#525358] focus:outline-none lg:text-sm"
-                onChange={(e) => handleSelect(e.target.value)}
+                onChange={(e) => {
+                  handleSelect(e.target.value);
+                }}
               >
                 <option value="1">Mới nhất</option>
                 <option value="2">Cũ nhất</option>

@@ -69,11 +69,7 @@ const TheHeader = () => {
         <div className={bgColor + ` rounded-b-[24px]`}>
           <div className="mx-auto px-6 py-3 sm:max-w-full md:px-10 md:py-4 xl:max-w-[1280px] xl:px-0 xl:py-[20px] 2xl:max-w-[1440px] 3xl:max-w-[1600px]">
             <div className="relative flex items-center justify-between">
-              <Link
-                href="/"
-                title="Ups"
-                className="inline-flex items-center"
-              >
+              <Link href="/" title="Ups" className="inline-flex items-center">
                 <div className="relative h-[29px] w-[133px] rounded-br-2xl lg:h-[44px] lg:w-[184px]">
                   <NextImg
                     src="/assets/icons/logo-ups.svg"
@@ -93,7 +89,7 @@ const TheHeader = () => {
                       </span>
                     </div>
                   </NavigationMenu.Trigger>
-                  <NavigationMenu.Content className="absolute left-0 top-0 w-full data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
+                  <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl shadow-2xl data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
                     <div className="grid w-[690px] grid-cols-2 gap-10 px-6 py-5">
                       <ul className="flex flex-col gap-4">
                         <li>
@@ -101,7 +97,10 @@ const TheHeader = () => {
                             Khách hàng cá nhân
                           </h3>
                         </li>
-                        <Link href="/co-phieu" className="flex items-center gap-5">
+                        <Link
+                          href="/co-phieu"
+                          className="flex items-center gap-5"
+                        >
                           <div className="relative h-6 w-6">
                             <NextImg
                               src="/assets/icons/icon-nav1.svg"
@@ -220,7 +219,7 @@ const TheHeader = () => {
                       Đầu tư cùng UPS
                     </Link>
                   </NavigationMenu.Trigger>
-                  <NavigationMenu.Content className="absolute left-0 top-0 w-full data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
+                  <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl shadow-2xl data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
                     <div className="flex w-[400px] flex-col gap-5 px-6 py-5">
                       <Link href="#" className="flex items-center">
                         <i className="inline-flex items-center justify-center">
@@ -345,9 +344,9 @@ const TheHeader = () => {
 
                 <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(3)}>
                   <Link href="/tin-tuc">
-                    <div className="font-bold text-gray-100">
+                    <div className="flex items-center gap-[10px] font-bold text-gray-100">
                       Tin tức
-                      <span className="ml-[10px] rounded-full bg-[#E50261] px-2 py-1 text-sm">
+                      <span className="flex items-center justify-center rounded-full bg-[#E50261] px-2 py-1 text-sm">
                         4
                       </span>
                     </div>
@@ -360,8 +359,8 @@ const TheHeader = () => {
                       <div className="font-bold text-gray-100">Về UPS</div>
                     </Link>
                   </NavigationMenu.Trigger>
-                  <NavigationMenu.Content className="absolute left-0 top-0 w-full data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
-                    <div className="flex w-[400px] flex-col gap-5 px-6 py-5">
+                  <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl shadow-2xl data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
+                    <div className="flex w-[300px] flex-col gap-5 px-6 py-5">
                       <Link href="/gioi-thieu" className="flex items-center">
                         <i className="inline-flex items-center justify-center">
                           <svg
@@ -615,11 +614,7 @@ const TheHeader = () => {
                   </div>
                 </div>
                 <li>
-                  <Link
-                    href="/"
-                    className=""
-                    title="Mở tài khoản ngay"
-                  >
+                  <Link href="/" className="" title="Mở tài khoản ngay">
                     <button className={`btn active !bg-[${bgBtn}]`}>
                       Mở tài khoản ngay
                       <div className="relative h-6 w-6">
@@ -734,7 +729,7 @@ const TheHeader = () => {
                 },
               )}
             >
-              <NavigationMenu.Viewport className="relative mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-[20px] bg-white transition-[width,_height] duration-300 data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn sm:w-[var(--radix-navigation-menu-viewport-width)]" />
+              <NavigationMenu.Viewport className="relative mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-visible rounded-[20px] bg-white transition-[width,_height] duration-300 data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn sm:w-[var(--radix-navigation-menu-viewport-width)]" />
             </div>
           </div>
         </div>
