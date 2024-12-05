@@ -70,6 +70,7 @@ const CongBoThongTin = (props: Props) => {
         setTextValue={setKeyword}
         setSort={setSort}
         setDate={setDate}
+        setCurrentPage={setCurrentPage}
       />
       {dataAnnounce.length != 0 && (
         <NewsBanner

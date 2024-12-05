@@ -70,7 +70,11 @@ const NewsPage = (props: Props) => {
   return (
     <div className="">
       <>
-        <HeaderNews setTextValue={setKeyword} setSort={setSort} />
+        <HeaderNews
+          setTextValue={setKeyword}
+          setSort={setSort}
+          setCurrentPage={setCurrentPage}
+        />
         {dataNews.length != 0 && (
           <NewsBanner dataNew={dataNews[0]} url="/tin-tuc/tin-hoat-dong/" />
         )}

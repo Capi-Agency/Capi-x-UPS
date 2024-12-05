@@ -65,7 +65,11 @@ const TinDauGia = (props: Props) => {
   }, [currentPage]);
   return (
     <div>
-      <HeaderNews setTextValue={setKeyword} setSort={setSort} />
+      <HeaderNews
+        setTextValue={setKeyword}
+        setSort={setSort}
+        setCurrentPage={setCurrentPage}
+      />
       {dataAnnounce.length != 0 && (
         <NewsBanner dataNew={dataAnnounce[0]} url="/tin-tuc/tin-dau-gia/" />
       )}
