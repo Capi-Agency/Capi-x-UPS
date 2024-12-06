@@ -6,6 +6,7 @@ import Link from 'next/link';
 import NextImg from '../next-img';
 import MenuMobile from '@/components/common/menu-mobile/page';
 import { usePathname } from 'next/navigation';
+import ButtonGetApp from '../btn-get-app/page';
 
 const TheHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,6 +61,9 @@ const TheHeader = () => {
   return (
     <>
       <NavigationMenu.Root className="fixed z-[999] w-full">
+        {/* tải app */}
+        <ButtonGetApp />
+    
         <div className={bgColor + ` rounded-b-[24px]`}>
           <div className="mx-auto px-6 py-3 sm:max-w-full md:px-10 md:py-4 xl:max-w-[1280px] xl:px-0 xl:py-[20px] 2xl:max-w-[1440px] 3xl:max-w-[1600px]">
             <div className="relative flex items-center justify-between">

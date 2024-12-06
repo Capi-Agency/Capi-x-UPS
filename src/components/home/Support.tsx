@@ -47,7 +47,7 @@ const Support = ({ data }: Props) => {
                         />
                       </div>
                     </div>
-                    <div className={`flex flex-col`}>
+                    <div className={`flex flex-col cursor-pointer`} onClick={() => handleOpenItem(index)}>
                       <span className="mr-8 text-sm font-semibold leading-normal text-[#15171E] lg:text-base lg:leading-[24px] lg2:text-[30px] lg2:leading-9">
                         {question?.ask}
                       </span>
@@ -67,7 +67,7 @@ const Support = ({ data }: Props) => {
                         className={`relative h-6 w-6 transform cursor-pointer duration-300 ease-in-out lg:h-[32px] lg:w-[32px] ${
                           openItemId === index ? '' : 'rotate-180'
                         }`}
-                        onClick={() => handleOpenItem(index)}
+                        
                       >
                         <NextImg
                           src="/assets/icons/chevron-down.svg"
