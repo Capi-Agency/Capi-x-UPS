@@ -83,7 +83,7 @@ const TheHeader = () => {
                       </span>
                     </div>
                   </NavigationMenu.Trigger>
-                  <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl shadow-2xl data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
+                  <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl sm:w-auto">
                     <div className="grid w-[690px] grid-cols-2 gap-10 px-6 py-5">
                       <ul className="flex flex-col gap-4">
                         <li>
@@ -234,7 +234,7 @@ const TheHeader = () => {
                       Đầu tư cùng UPS
                     </Link>
                   </NavigationMenu.Trigger>
-                  <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl shadow-2xl data-[motion=from-end]:animate-enterFromRight data-[motion=to-end]:animate-exitToRight sm:w-auto">
+                  <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl sm:w-auto">
                     <div className="flex w-[400px] flex-col gap-5 px-6 py-5">
                       <Link href="#" className="flex items-center">
                         <i className="inline-flex items-center justify-center">
@@ -355,7 +355,7 @@ const TheHeader = () => {
                       <div className="font-bold text-gray-100">Về UPS</div>
                     </Link>
                   </NavigationMenu.Trigger>
-                  <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl shadow-2xl data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
+                  <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl sm:w-auto">
                     <div className="flex w-[300px] flex-col gap-5 px-6 py-5">
                       <Link href="/gioi-thieu" className="flex items-center">
                         <i className="inline-flex items-center justify-center">
@@ -723,7 +723,7 @@ const TheHeader = () => {
                 },
               )}
             >
-              <NavigationMenu.Viewport className="relative mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-visible rounded-[20px] bg-white transition-[width,_height] duration-300 data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn sm:w-[var(--radix-navigation-menu-viewport-width)]" />
+              <NavigationMenu.Viewport className="relative mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-[20px] bg-white shadow-2xl transition-[width,_height] duration-300 data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn sm:w-[var(--radix-navigation-menu-viewport-width)]" />
             </div>
           </div>
         </div>
