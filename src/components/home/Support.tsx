@@ -36,18 +36,21 @@ const Support = ({ data }: Props) => {
             <div className="mt-6 flex flex-col gap-5 lg:mt-[60px] lg:gap-[70px]">
               {data?.questions.map(({ question }: any, index: number) => {
                 return (
-                  <div key={index} className="relative flex gap-3 lg:gap-5">
+                  <div
+                    key={index}
+                    className="relative flex cursor-pointer gap-3 lg:gap-5"
+                    onClick={() => handleOpenItem(index)}
+                  >
                     <div className="flex h-10 w-10 min-w-10 items-center justify-center rounded-[10px] bg-[#F3F3FB] lg:h-[50px] lg:w-[50px] lg:min-w-[50px]">
                       <div className="relative h-[19px] w-[19px] lg:h-[24px] lg:w-[24px]">
                         <NextImg
                           src="/assets/icons/document-text.svg"
                           alt="Capi"
                           objectFit="cover"
-                          className=""
                         />
                       </div>
                     </div>
-                    <div className={`flex flex-col cursor-pointer`} onClick={() => handleOpenItem(index)}>
+                    <div className={`flex flex-col`}>
                       <span className="mr-8 text-sm font-semibold leading-normal text-[#15171E] lg:text-base lg:leading-[24px] lg2:text-[30px] lg2:leading-9">
                         {question?.ask}
                       </span>
@@ -67,7 +70,6 @@ const Support = ({ data }: Props) => {
                         className={`relative h-6 w-6 transform cursor-pointer duration-300 ease-in-out lg:h-[32px] lg:w-[32px] ${
                           openItemId === index ? '' : 'rotate-180'
                         }`}
-                        
                       >
                         <NextImg
                           src="/assets/icons/chevron-down.svg"
