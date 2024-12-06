@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import NextImg from '../common/next-img';
+import Link from 'next/link';
 
 type Props = {
   data: any;
@@ -61,17 +62,25 @@ const BenefitStock = ({ data }: Props) => {
             );
           })}
         </div>
-        <button
-          className="btn mx-auto !bg-[#D0F500]"
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-duration="700"
+        <Link
+          href={`https://onboarding.upstock.com.vn/index.html#/./open-account/check-info`}
         >
-          Mở tài khoản ngay
-          <div className="relative h-4 w-4 lg:h-6 lg:w-6">
-            <NextImg src="/assets/icons/UPs.svg" alt="Capi" objectFit="cover" />
-          </div>
-        </button>
+          <button
+            className="btn mx-auto !bg-[#D0F500]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="700"
+          >
+            Mở tài khoản ngay
+            <div className="relative h-4 w-4 lg:h-6 lg:w-6">
+              <NextImg
+                src="/assets/icons/UPs.svg"
+                alt="Capi"
+                objectFit="cover"
+              />
+            </div>
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import NextImg from '../common/next-img';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -30,7 +31,7 @@ const Jobstrategy = (props: Props) => {
         'Luôn dẫn đầu xu hướng, tạo ra sáng kiến giúp trải nghiệm đầu tư dễ dàng và thú vị.',
     },
   ];
-  
+
   return (
     <div className="mb-[160px] mt-[60px] bg-[#0F1B0E]">
       <div className="custom-container">
@@ -49,16 +50,20 @@ const Jobstrategy = (props: Props) => {
                 Kiến tạo một môi trường làm việc chuyên nghiệp không những cho
                 doanh nghiệp mà còn cho chính nhân viên.
               </p>
-              <button className="btn active">
-                Mở tài khoản ngay
-                <div className="relative h-6 w-6">
-                  <NextImg
-                    src="/assets/icons/UPs.svg"
-                    alt="Capi"
-                    objectFit="cover"
-                  />
-                </div>
-              </button>
+              <Link
+                href={`https://onboarding.upstock.com.vn/index.html#/./open-account/check-info`}
+              >
+                <button className="btn active">
+                  Mở tài khoản ngay
+                  <div className="relative h-6 w-6">
+                    <NextImg
+                      src="/assets/icons/UPs.svg"
+                      alt="Capi"
+                      objectFit="cover"
+                    />
+                  </div>
+                </button>
+              </Link>
             </div>
           </div>
           {/* col-right */}

@@ -1,5 +1,6 @@
 import React from 'react';
 import NextImg from '../common/next-img';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -28,12 +29,20 @@ const BannerFeeSchedule = (props: Props) => {
           đồng cùng UPS!
         </p>
         <div className="my-4 h-[1px] w-[262px] bg-[#60606B] opacity-65 md:w-[370px] lg:my-6 lg2:my-[30px] 2xl:my-10"></div>
-        <button className="btn !bg-[#D0F500]">
-          Mở tài khoản ngay
-          <div className="relative h-4 w-4 lg:h-6 lg:w-6">
-            <NextImg src="/assets/icons/UPs.svg" alt="Capi" objectFit="cover" />
-          </div>
-        </button>
+        <Link
+          href={`https://onboarding.upstock.com.vn/index.html#/./open-account/check-info`}
+        >
+          <button className="btn !bg-[#D0F500]">
+            Mở tài khoản ngay
+            <div className="relative h-4 w-4 lg:h-6 lg:w-6">
+              <NextImg
+                src="/assets/icons/UPs.svg"
+                alt="Capi"
+                objectFit="cover"
+              />
+            </div>
+          </button>
+        </Link>
       </div>
     </div>
   );

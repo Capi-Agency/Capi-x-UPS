@@ -1,5 +1,6 @@
 import React from 'react';
 import NextImg from '../common/next-img';
+import Link from 'next/link';
 
 type Props = {};
 const datas = [
@@ -70,16 +71,20 @@ const ExpenseFeeSchedule = (props: Props) => {
             của công ty đó. Người mua cổ phiếu sẽ trở thành cổ đông của công ty
             phát hành.
           </p>
-          <button className="btn !bg-[#D0F500]">
-            Mở tài khoản ngay
-            <div className="relative h-4 w-4 lg:h-6 lg:w-6">
-              <NextImg
-                src="/assets/icons/UPs.svg"
-                alt="Capi"
-                objectFit="cover"
-              />
-            </div>
-          </button>
+          <Link
+            href={`https://onboarding.upstock.com.vn/index.html#/./open-account/check-info`}
+          >
+            <button className="btn !bg-[#D0F500]">
+              Mở tài khoản ngay
+              <div className="relative h-4 w-4 lg:h-6 lg:w-6">
+                <NextImg
+                  src="/assets/icons/UPs.svg"
+                  alt="Capi"
+                  objectFit="cover"
+                />
+              </div>
+            </button>
+          </Link>
         </div>
         <div
           className="flex flex-col"

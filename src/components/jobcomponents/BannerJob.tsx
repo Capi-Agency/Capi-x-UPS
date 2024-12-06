@@ -1,6 +1,7 @@
 'use client';
 import React, { useRef, useState } from 'react';
 import NextImg from '../common/next-img';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -66,27 +67,31 @@ const BannerJob = (props: Props) => {
                 nhiều giá trị phát triển bền vững, tạo sự gắn kết.
               </p>
               <div className="block">
-                <button className="btn bg-black text-white">
-                  Mở tài khoản ngay
-                  <div className="relative h-4 w-4 lg:h-6 lg:w-6">
-                    <i>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M18.7594 5.98952C18.7594 5.7906 18.6804 5.59984 18.5398 5.45919C18.3991 5.31853 18.2083 5.23952 18.0094 5.23952L9.42515 5.23952C9.01093 5.23952 8.67515 5.5753 8.67515 5.98952C8.67515 6.40373 9.01093 6.73952 9.42515 6.73952L16.1992 6.73952L5.45855 17.4802C5.16566 17.7731 5.16566 18.2479 5.45855 18.5408C5.75145 18.8337 6.22632 18.8337 6.51921 18.5408L17.2594 7.80062V14.5738C17.2594 14.988 17.5952 15.3238 18.0094 15.3238C18.4236 15.3238 18.7594 14.988 18.7594 14.5738L18.7594 5.98952Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </i>
-                  </div>
-                </button>
+                <Link
+                  href={`https://onboarding.upstock.com.vn/index.html#/./open-account/check-info`}
+                >
+                  <button className="btn bg-black text-white">
+                    Mở tài khoản ngay
+                    <div className="relative h-4 w-4 lg:h-6 lg:w-6">
+                      <i>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M18.7594 5.98952C18.7594 5.7906 18.6804 5.59984 18.5398 5.45919C18.3991 5.31853 18.2083 5.23952 18.0094 5.23952L9.42515 5.23952C9.01093 5.23952 8.67515 5.5753 8.67515 5.98952C8.67515 6.40373 9.01093 6.73952 9.42515 6.73952L16.1992 6.73952L5.45855 17.4802C5.16566 17.7731 5.16566 18.2479 5.45855 18.5408C5.75145 18.8337 6.22632 18.8337 6.51921 18.5408L17.2594 7.80062V14.5738C17.2594 14.988 17.5952 15.3238 18.0094 15.3238C18.4236 15.3238 18.7594 14.988 18.7594 14.5738L18.7594 5.98952Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </i>
+                    </div>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

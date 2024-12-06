@@ -87,7 +87,10 @@ const TheFooter = (props: Props) => {
                 </div>
               </div>
             </div>
-            <div className="mt-10 md:mt-0">
+            <Link
+              href={`https://onboarding.upstock.com.vn/index.html#/./open-account/check-info`}
+              className="mt-10 md:mt-0"
+            >
               <button className="btn active">
                 Mở tài khoản ngay
                 <div className="relative h-4 w-4 lg:h-6 lg:w-6">
@@ -101,7 +104,7 @@ const TheFooter = (props: Props) => {
               <p className="mt-6 hidden text-[16px] font-medium leading-[24px] text-[#6E767C] md:block">
                 Cảm ơn bạn đã tới với nền tảng giao dịch chứng khoán UP
               </p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

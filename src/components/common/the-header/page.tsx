@@ -610,7 +610,7 @@ const TheHeader = () => {
                   </div>
                 </div>
                 <li>
-                  <Link href="/" className="" title="Mở tài khoản ngay">
+                  <Link href="https://onboarding.upstock.com.vn/index.html#/./open-account/check-info" className="" title="Mở tài khoản ngay">
                     <button className={`btn active !bg-[${bgBtn}]`}>
                       Mở tài khoản ngay
                       <div className="relative h-6 w-6">
@@ -627,7 +627,7 @@ const TheHeader = () => {
               <div className="xl:hidden">
                 <div className="flex items-center gap-4">
                   <Link
-                    href="/"
+                    href="https://onboarding.upstock.com.vn/index.html#/./open-account/check-info"
                     className="hidden md:block"
                     title="Mở tài khoản ngay"
                   >

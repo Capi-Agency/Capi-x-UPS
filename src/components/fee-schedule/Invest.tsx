@@ -1,6 +1,7 @@
 import React from 'react';
 import NextImg from '../common/next-img';
 import ButtonEffect from '../common/button-position-aware/page';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -26,16 +27,20 @@ const InvestFeeSchedule = (props: Props) => {
             phiếu đến quỹ mở, giúp bạn quản lý tài sản dễ dàng, hiệu quả và
             thông minh hơn bao giờ hết.
           </p>
-          <button className="btn !bg-[#D0F500]">
-            Mở tài khoản ngay
-            <div className="relative h-4 w-4 lg:h-6 lg:w-6">
-              <NextImg
-                src="/assets/icons/UPs.svg"
-                alt="Capi"
-                objectFit="cover"
-              />
-            </div>
-          </button>
+          <Link
+            href={`https://onboarding.upstock.com.vn/index.html#/./open-account/check-info`}
+          >
+            <button className="btn !bg-[#D0F500]">
+              Mở tài khoản ngay
+              <div className="relative h-4 w-4 lg:h-6 lg:w-6">
+                <NextImg
+                  src="/assets/icons/UPs.svg"
+                  alt="Capi"
+                  objectFit="cover"
+                />
+              </div>
+            </button>
+          </Link>
         </div>
         <div
           className="relative w-full pt-[86%] md:h-[290px] md:pt-0 lg:h-[396px] lg2:h-[458px] 2xl:h-[556px] 3xl:h-[592px]"

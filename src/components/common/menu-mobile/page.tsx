@@ -10,8 +10,8 @@ type Props = {
 const MenuMobile = ({ handleClose }: Props) => (
   <Accordion.Root type="single" collapsible>
     <ul className="mt-7 flex flex-col gap-8">
-      <Accordion.Item value="item-1">
-        <Accordion.Trigger>
+      <AccordionItem value="item-1">
+        <AccordionTrigger>
           <p
             title="Sản phẩm"
             className="flex items-center gap-[10px] text-sm font-bold text-gray-100"
@@ -21,8 +21,8 @@ const MenuMobile = ({ handleClose }: Props) => (
               NEW
             </span>
           </p>
-        </Accordion.Trigger>
-        <Accordion.Content>
+        </AccordionTrigger>
+        <AccordionContent>
           <div className="flex flex-col gap-5 p-3">
             <ul className="flex flex-col gap-4">
               <li>
@@ -211,19 +211,19 @@ const MenuMobile = ({ handleClose }: Props) => (
               </div>
             </div>
           </div>
-        </Accordion.Content>
-      </Accordion.Item>
+        </AccordionContent>
+      </AccordionItem>
 
-      <Accordion.Item value="item-2">
-        <Accordion.Trigger>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>
           <p
             title="Đầu tư cùng UPS"
             className="text-sm font-bold text-gray-100"
           >
             Đầu tư cùng UPS
           </p>
-        </Accordion.Trigger>
-        <Accordion.Content>
+        </AccordionTrigger>
+        <AccordionContent>
           <div className="flex flex-col gap-5 p-3">
             <Link href="#" className="flex items-center" onClick={handleClose}>
               <i className="inline-flex items-center justify-center">
@@ -335,15 +335,15 @@ const MenuMobile = ({ handleClose }: Props) => (
               </div>
             </Link>
           </div>
-        </Accordion.Content>
-      </Accordion.Item>
-      <Accordion.Item value="item-4">
-        <Accordion.Trigger>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-4">
+        <AccordionTrigger>
           <p title="Giới thiệu" className="text-sm font-bold text-gray-100">
             Về UPS
           </p>
-        </Accordion.Trigger>
-        <Accordion.Content>
+        </AccordionTrigger>
+        <AccordionContent>
           <div className="flex flex-col gap-5 p-3">
             <Link
               href="/gioi-thieu"
@@ -523,10 +523,10 @@ const MenuMobile = ({ handleClose }: Props) => (
               </div>
             </Link>
           </div>
-        </Accordion.Content>
-      </Accordion.Item>
-      <Accordion.Item value="item-6">
-        <Accordion.Trigger>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-6">
+        <AccordionTrigger>
           <Link
             href="#"
             title="Bảng giá"
@@ -535,10 +535,14 @@ const MenuMobile = ({ handleClose }: Props) => (
           >
             Bảng giá
           </Link>
-        </Accordion.Trigger>
-      </Accordion.Item>
+        </AccordionTrigger>
+      </AccordionItem>
       <li>
-        <a href="/" className="" title="Mở tài khoản ngay">
+        <Link
+          href="https://onboarding.upstock.com.vn/index.html#/./open-account/check-info"
+          className=""
+          title="Mở tài khoản ngay"
+        >
           <button className="btn active">
             Mở tài khoản ngay
             <div className="relative h-4 w-4 lg:h-6 lg:w-6">
@@ -549,7 +553,7 @@ const MenuMobile = ({ handleClose }: Props) => (
               />
             </div>
           </button>
-        </a>
+        </Link>
       </li>
     </ul>
   </Accordion.Root>
@@ -559,7 +563,7 @@ const AccordionItem = React.forwardRef(
   ({ children, className, ...props }: any, forwardedRef) => (
     <Accordion.Item
       className={cn(
-        'focus-within:shadow-mauve12 mt-px overflow-hidden first:mt-0 first:rounded-t last:rounded-b focus-within:relative focus-within:z-10 focus-within:shadow-[0_0_0_2px]',
+        'mt-px overflow-hidden first:mt-0 focus-within:relative focus-within:z-10',
         className,
       )}
       {...props}
@@ -574,10 +578,7 @@ const AccordionTrigger = React.forwardRef(
   ({ children, className, ...props }: any, forwardedRef) => (
     <Accordion.Header className="flex">
       <Accordion.Trigger
-        className={cn(
-          'text-violet11 shadow-mauve6 hover:bg-mauve2 group flex h-[45px] flex-1 cursor-default items-center justify-between bg-white px-5 text-[15px] leading-none shadow-[0_1px_0] outline-none',
-          className,
-        )}
+        className={cn('group', className)}
         {...props}
         ref={forwardedRef}
       >
@@ -591,13 +592,13 @@ const AccordionContent = React.forwardRef(
   ({ children, className, ...props }: any, forwardedRef) => (
     <Accordion.Content
       className={cn(
-        'bg-mauve2 text-mauve11 overflow-hidden text-[15px] data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown',
+        'overflow-hidden data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown',
         className,
       )}
       {...props}
       ref={forwardedRef}
     >
-      <div className="px-5 py-[15px]">{children}</div>
+      <div className="">{children}</div>
     </Accordion.Content>
   ),
 );
