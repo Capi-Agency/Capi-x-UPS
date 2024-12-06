@@ -251,4 +251,14 @@
   .link-effect-b:hover {
     background-size: 100% 100%;
   }
+  .gradient1 {
+    background: radial-gradient(
+      287.1% 60.61% at 60.21% 40%,
+      #00f5c8 0%,
+      #764bf8 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

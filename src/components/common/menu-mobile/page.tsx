@@ -16,7 +16,7 @@ const MenuMobile = ({ handleClose }: Props) => (
             title="Sản phẩm"
             className="flex items-center gap-[10px] text-sm font-bold text-gray-100"
           >
-            Sản phẩm
+            Sản phẩm - Dịch vụ
             <span className="me-2 rounded-[10px] bg-[#AD02C9] px-2 py-1 text-xs font-bold uppercase text-gray-100">
               NEW
             </span>
@@ -133,14 +133,35 @@ const MenuMobile = ({ handleClose }: Props) => (
 
                     <div className="ml-5">
                       <p className="text-sm font-semibold text-gray-100">
-                        Dịch vụ Ngân hàng đầu tư
+                        Tư vấn tài chính
                       </p>
                       <p className="text-sm font-medium text-gray-100">
                         Cùng doanh nghiệp phát triển bền vững
                       </p>
                     </div>
                   </Link>
+                  <Link
+                    href="/nen-tang-cong-nghe"
+                    className="flex items-center"
+                    onClick={handleClose}
+                  >
+                    <div className="relative h-6 w-6">
+                      <NextImg
+                        src="/assets/icons/icon-nav8.svg"
+                        alt="UPS"
+                        objectFit="cover"
+                      />
+                    </div>
 
+                    <div className="ml-5">
+                      <p className="text-sm font-semibold text-gray-100">
+                        Nền tảng công nghệ
+                      </p>
+                      <p className="text-sm font-medium text-gray-100">
+                        Vượt trội, nhanh chóng, dễ dàng
+                      </p>
+                    </div>
+                  </Link>
                   <Link
                     href="/tin-tuc/tin-dau-gia"
                     className="flex items-center"
@@ -316,35 +337,7 @@ const MenuMobile = ({ handleClose }: Props) => (
           </div>
         </Accordion.Content>
       </Accordion.Item>
-
-      <Accordion.Item value="item-3">
-        <Accordion.Trigger>
-          <Link
-            href="/nen-tang-cong-nghe"
-            onClick={handleClose}
-            title="Nền tảng công nghệ"
-            className="text-sm font-bold text-gray-100"
-          >
-            Nền tảng công nghệ
-          </Link>
-        </Accordion.Trigger>
-      </Accordion.Item>
       <Accordion.Item value="item-4">
-        <Accordion.Trigger>
-          <Link
-            href="/tin-tuc"
-            title="Tin tức"
-            className="flex items-center gap-[10px] font-bold text-gray-100"
-            onClick={handleClose}
-          >
-            Tin tức
-            <span className="flex items-center justify-center rounded-full bg-[#E50261] px-2 py-1 text-sm">
-              4
-            </span>
-          </Link>
-        </Accordion.Trigger>
-      </Accordion.Item>
-      <Accordion.Item value="item-5">
         <Accordion.Trigger>
           <p title="Giới thiệu" className="text-sm font-bold text-gray-100">
             Về UPS

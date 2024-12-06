@@ -5,31 +5,27 @@ type Props = {};
 
 const BannerFeeSchedule = (props: Props) => {
   return (
-    <div className="rounded-b-[20px] bg-[#000] pb-10 pt-[50px] md:rounded-b-[24px] md:pb-[60px] md:pt-20 lg:rounded-b-[28px] lg:pt-[90px] lg2:rounded-b-[32px] lg2:pt-[115px] xl:pb-[80px] xl:pt-[140px] 2xl:rounded-b-[40px] 2xl:pb-[100px] 3xl:pb-[120px] 3xl:pt-[180px]">
+    <div className="rounded-b-[20px] bg-[#000] pb-10 pt-[50px] md:rounded-b-[24px] md:pb-[60px] md:pt-20 lg:rounded-b-[28px] lg:pt-[90px] lg2:rounded-b-[32px] lg2:pt-[115px] xl:pb-[80px] xl:pt-[140px] 2xl:rounded-b-[40px] 2xl:pb-[100px] 3xl:pb-[120px] 3xl:pt-[160px]">
       <div
         className="custom-container flex flex-col items-center justify-center"
         data-aos="fade-up"
         data-aos-delay="200"
         data-aos-duration="700"
       >
-        <div className="flex flex-col items-center gap-6 md:flex-row md:items-end lg:gap-[34px] lg2:gap-[46px] xl:gap-[48px] 2xl:gap-[58px] 3xl:gap-[62px]">
-          <span className="text-[32px] font-medium leading-[30px] text-[#FFF] md:text-[40px] md:leading-[116px] lg:text-[48px] lg:leading-[134px] lg2:text-[54px] lg2:leading-[129px] xl:text-[60px] xl:leading-[144px] 2xl:text-[72px] 2xl:leading-[165px] 3xl:text-[96px] 3xl:leading-[176px]">
-            Với
-          </span>
-          <div className="relative h-[131px] w-[255px] md:h-[156px] md:w-[303px] lg:h-[178px] lg:w-[345px] lg2:h-[202px] lg2:w-[391px] xl:h-[221px] xl:w-[427px] 2xl:h-[247px] 2xl:w-[477px] 3xl:h-[269px] 3xl:w-[519px]">
-            <NextImg
-              src="/assets/image/banner-bieu-phi.png"
-              alt="Ups"
-              className=""
-              objectFit="cover"
-            />
-          </div>
-          <span className="text-[32px] font-medium leading-[30px] text-[#FFF] md:text-[40px] md:leading-[116px] lg:text-[48px] lg:leading-[134px] lg2:text-[54px] lg2:leading-[129px] xl:text-[60px] xl:leading-[144px] 2xl:text-[72px] 2xl:leading-[165px] 3xl:text-[96px] 3xl:leading-[176px]">
-            lãi suất
-          </span>
+        <p className="mb-[28px] text-[32px] font-medium text-[#FFF] md:text-[40px] md:leading-[46px] lg:mb-[32px] lg2:mb-[38px] lg2:text-[54px] lg2:leading-[62px] xl:mb-[42px] xl:text-[60px] xl:leading-[68px] 2xl:mb-[52px] 2xl:text-[76px] 2xl:leading-[106px] 3xl:mb-[62px] 3xl:text-[96px]">
+          Giao dịch
+        </p>
+        <div className="relative w-full pt-[19.5%] sm:h-[60px] sm:w-[310px] sm:pt-0 md:h-[100px] md:w-[516px] lg:h-[120px] lg:w-[619px] lg2:h-[150px] lg2:w-[774px] xl:h-[170px] xl:w-[877px] 2xl:h-[194px] 2xl:w-[1000px] 3xl:h-[233px] 3xl:w-[1200px]">
+          <NextImg
+            src="/assets/image/banner-bieu-phi.png"
+            alt="Ups"
+            className=""
+            objectFit="cover"
+          />
         </div>
-        <p className="mt-[18px] px-10 text-center text-base font-bold text-[#FFF] md:px-0 lg:mt-6 lg:text-[18px] lg2:mt-[36px] lg2:text-[20px] xl:text-[24px] xl:tracking-[-0.6px] 2xl:mt-[48px] 3xl:mt-[50px]">
-          Áp dụng trên tài khoản tiền gửi của Nhà đầu tư từ ngày 15/02/2019
+        <p className="mt-10 px-10 text-center text-base font-bold text-[#FFF] md:px-0 lg:mt-[50px] lg:text-[18px] lg2:mt-[60px] lg2:text-[20px] xl:mt-[70px] xl:text-[24px] xl:tracking-[-0.6px] 3xl:mt-20">
+          Tham gia ngay hôm nay để trải nghiệm giao dịch chứng khoán với phí 0
+          đồng cùng UPS!
         </p>
         <div className="my-4 h-[1px] w-[262px] bg-[#60606B] opacity-65 md:w-[370px] lg:my-6 lg2:my-[30px] 2xl:my-10"></div>
         <button className="btn !bg-[#D0F500]">

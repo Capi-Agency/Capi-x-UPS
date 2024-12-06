@@ -8,6 +8,10 @@ type Props = {};
 const Test = (props: Props) => {
   return (
     <div className="mt-20 text-center">
+      <p className="gradient1 mb-10 text-6xl font-bold leading-[68px]">
+        Kết nối cùng UPS ngay <br />
+        hôm nay!
+      </p>
       <ButtonPositionAware text="Mở tài khoản ngay" bgHover="#D0F500" />
       <GlareCard>
         <div

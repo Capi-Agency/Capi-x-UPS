@@ -119,11 +119,7 @@ const TheFooter = (props: Props) => {
             data-aos-delay="200"
             data-aos-duration="700"
           >
-            <Link
-              href="/"
-              title="Ups"
-              className="inline-flex items-center"
-            >
+            <Link href="/" title="Ups" className="inline-flex items-center">
               <div className="relative h-10 w-[167px] rounded-br-2xl lg:h-[44px] lg:w-[184px]">
                 <NextImg
                   src="/assets/icons/logo-ups.svg"
@@ -286,7 +282,7 @@ const TheFooter = (props: Props) => {
         </div>
       </div>
       <div className="bg-[#060B06]">
-        <div className="custom-container flex flex-col items-center justify-between py-5 md:flex-row xl:py-[30px]">
+        <div className="custom-container flex flex-col items-center justify-between py-5 lg:flex-row xl:py-[30px]">
           <p className="text-sm font-medium leading-normal text-[rgba(255,255,255,0.79)]">
             © 2024 <span className="text-[#02E56A]"> UP Securities</span>. All
             right reserved
