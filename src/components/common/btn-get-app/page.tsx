@@ -1,18 +1,40 @@
 'use client';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NextImg from '../next-img';
 
 type Props = {};
 
 const ButtonGetApp = (props: Props) => {
   const [isOpen, setOpen] = useState(true);
+  const [url, setUrl] = useState<any>('#');
+  useEffect(() => {
+    (() => {
+      const userAgent =
+        navigator.userAgent || (window as any).opera || navigator.vendor;
+
+      // Kiểm tra hệ điều hành Android
+      if (/android/i.test(userAgent)) {
+        setUrl(
+          'https://play.google.com/store/apps/details?id=com.facebook.katana&hl=vi&pli=1',
+        );
+        return;
+      }
+      // Kiểm tra hệ điều hành iOS
+      if (/iPhone|iPad|iPod/i.test(userAgent)) {
+        setUrl('https://apps.apple.com/vn/app/facebook/id284882215?l=vi');
+
+        return;
+      }
+    })();
+  }, []);
+
   return (
-    <div className={`block bg-[#EEF] shadow-md xl:hidden`}>
+    <div className={`block bg-[#EEF] shadow-md md:hidden`}>
       {isOpen ? (
-        <div className="p-2 md:p-[18px] lg:p-6">
+        <div className="p-2">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 md:w-auto md:gap-3 lg:gap-[14px]">
+            <div className="flex items-center gap-2">
               <button onClick={() => setOpen(false)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -30,8 +52,8 @@ const ButtonGetApp = (props: Props) => {
                   />
                 </svg>
               </button>
-              <div className="flex size-[60px] min-w-[60px] items-center justify-center rounded-[12px] bg-[#FFF] md:size-[80px] lg:size-[100px]">
-                <div className="relative h-[36px] w-[42px] md:h-[37px] md:w-[62px] lg:h-[60px] lg:w-[82px]">
+              <div className="flex size-[60px] min-w-[60px] items-center justify-center rounded-[12px] bg-[#FFF]">
+                <div className="relative h-[36px] w-[42px]">
                   <NextImg
                     src="/assets/image/logo-getapp.png"
                     alt="UPS"
@@ -41,21 +63,17 @@ const ButtonGetApp = (props: Props) => {
                 </div>
               </div>
               <div>
-                <p className="text-[20px] font-bold text-[#000] md:text-[24px] lg:text-[28px]">
+                <p className="text-[20px] font-bold text-[#000]">
                   Up Securities
                 </p>
-                <p className="text-sm font-medium text-[#000] md:text-[20px] lg:text-[26px]">
+                <p className="text-sm font-medium text-[#000]">
                   Đặt dịch vụ tiện lợi,
-                  <br className="block md:hidden" /> chỉ với 1 chạm!
+                  <br /> chỉ với 1 chạm!
                 </p>
               </div>
             </div>
-            <Link
-              href="https://play.google.com/store/apps/details?id=com.facebook.katana&hl=vi&pli=1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="flex h-[30px] items-center text-nowrap rounded-[8px] bg-[#02E56A] px-[9px] text-sm font-bold text-[#15171E] md:h-[50px] md:rounded-[16px] md:px-6 md:text-[18px]">
+            <Link href={url} target="_blank" rel="noopener noreferrer">
+              <button className="flex h-[30px] items-center text-nowrap rounded-[8px] bg-[#02E56A] px-[9px] text-sm font-bold text-[#15171E]">
                 Tải App Ngay!
               </button>
             </Link>
