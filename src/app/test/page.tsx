@@ -1,10 +1,43 @@
 import ButtonPositionAware from '@/components/common/button-position-aware/page';
 import NextImg from '@/components/common/next-img';
 import { GlareCard } from '@/components/ui/glare-card';
+import { MagicCard } from '@/components/ui/magic-card';
+import { AnimatedTestimonials } from '@/components/ui/slide-animation';
 import React from 'react';
 
 type Props = {};
-
+const courses = [
+  {
+    title: 'Đầu tư là gì?',
+    description:
+      'Creating a higher spacing and how people move through a unique and impactful campaign.',
+    imageSrc: '/assets/image/card-course1.svg',
+  },
+  {
+    title: 'Cổ phiếu là gì?',
+    description:
+      'Creating a higher spacing and how people move through a unique and impactful campaign.',
+    imageSrc: '/assets/image/card-course2.svg',
+  },
+  {
+    title: 'Ban kiếm tiền như thế nào?',
+    description:
+      'Creating a higher spacing and how people move through a unique and impactful campaign.',
+    imageSrc: '/assets/image/card-course3.svg',
+  },
+  {
+    title: 'Phân tích cơ bản từ A-Z',
+    description:
+      'Creating a higher spacing and how people move through a unique and impactful campaign.',
+    imageSrc: '/assets/image/card-course1.svg',
+  },
+  {
+    title: 'Chiến lược giao dịch tối ưu',
+    description:
+      'Creating a higher spacing and how people move through a unique and impactful campaign.',
+    imageSrc: '/assets/image/card-course1.svg',
+  },
+];
 const Test = (props: Props) => {
   return (
     <div className="mt-20 text-center">
@@ -28,6 +61,9 @@ const Test = (props: Props) => {
           />
         </div>
       </GlareCard>
+      <div className="mt-10">
+        <AnimatedTestimonials testimonials={courses} />
+      </div>
     </div>
   );
 };

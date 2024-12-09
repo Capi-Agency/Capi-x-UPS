@@ -82,7 +82,7 @@
   }
 
   .btn.active {
-    @apply relative flex h-[42px] w-auto items-center gap-2 rounded-[12px] bg-[#02e56a] pl-4 pr-3 text-sm font-bold text-[#15171E] duration-200 after:absolute after:bottom-[0] after:left-0 after:z-[-1] after:h-full after:w-full after:translate-x-0 after:translate-y-0 after:rounded-[16px] after:bg-[#00813B] after:transition-all after:content-[''] hover:bg-[#02E56A] hover:text-black hover:after:translate-x-[-2px] hover:after:translate-y-[3px] md:pl-6 lg:h-[50px] lg:rounded-[16px] lg:pr-4 lg:text-base;
+    @apply relative flex h-[42px] w-auto items-center gap-2 rounded-[12px] bg-[#02e56a] pl-4 pr-3 text-sm font-bold text-[#15171E] duration-200 after:absolute after:bottom-[0] after:left-0 after:z-[-1] after:h-full after:w-full after:translate-x-0 after:translate-y-0 after:rounded-[16px] after:bg-[#00813B] after:transition-all after:content-[''] hover:bg-[#02E56A] hover:after:translate-x-[-2px] hover:after:translate-y-[3px] md:pl-6 lg:h-[50px] lg:rounded-[16px] lg:pr-4 lg:text-base;
   }
 
   .custom-container {
