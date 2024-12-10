@@ -186,28 +186,6 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                                 </p>
                               </div>
                             </Link>
-
-                            <Link
-                              href="/tin-tuc/tin-dau-gia"
-                              className="flex items-center"
-                            >
-                              <div className="relative h-6 w-6">
-                                <NextImg
-                                  src="/assets/icons/icon-nav7.svg"
-                                  alt="UPS"
-                                  objectFit="cover"
-                                />
-                              </div>
-
-                              <div className="ml-5">
-                                <p className="text-base font-semibold text-[#000]">
-                                  Tin đấu giá
-                                </p>
-                                <p className="text-sm font-medium text-[rgba(0,0,0,0.68)]">
-                                  Bản tin đấu giá tại UPS
-                                </p>
-                              </div>
-                            </Link>
                           </div>
                           <div className="w-full">
                             <p className="text-left text-2xl font-semibold text-[#014227]">
@@ -244,7 +222,7 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                   </NavigationMenu.Trigger>
                   <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl sm:w-auto">
                     <div className="flex w-[400px] flex-col gap-5 px-6 py-5">
-                      <Link href="#" className="flex items-center">
+                      <Link href="/khoa-hoc" className="flex items-center">
                         <i className="inline-flex items-center justify-center">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -296,10 +274,10 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
 
                         <div className="ml-5">
                           <p className="text-base font-semibold text-[#000]">
-                            Nhận định thị trường
+                            Trung tâm đào tạo
                           </p>
                           <p className="text-sm font-medium text-[rgba(0,0,0,0.68)]">
-                            Báo cáo phân tích nhanh nhất cùng UPS
+                            {/* Báo cáo phân tích nhanh nhất cùng UPS */}
                           </p>
                         </div>
                       </Link>

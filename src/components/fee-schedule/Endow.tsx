@@ -37,6 +37,7 @@ const EndowFeeSchedule = (props: Props) => {
               data-aos="fade-up"
               data-aos-delay={delay}
               data-aos-duration="700"
+              key={index}
             >
               <div
                 className={`flex flex-col gap-4 rounded-[15px] bg-[#F3F1EB] p-4 text-[#1A1711] shadow-[3px_10px_20px_0px_rgba(0,0,0,0.02)] lg:p-6 lg2:p-8 xl:p-10 ${index === 1 ? 'bg-[#1A1711] bg-gradient-to-b from-[#FDF2CB] to-[#DABB6B] text-[#4E3A06]' : ''}`}

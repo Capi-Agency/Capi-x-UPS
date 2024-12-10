@@ -11,7 +11,7 @@ const config = {
   prefix: '',
   theme: {
     screens: {
-      sm: '375px',
+      sm: '390px',
       md: '768px',
       lg: '1024px',
       lg2: '1280px',

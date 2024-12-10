@@ -6,7 +6,6 @@ import TheFooter from '@/components/common/the-footer/page';
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(true);
-  console.log("🚀 ~ MainLayout ~ isOpen:", isOpen)
   return (
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <TheHeader isOpen={isOpen} setIsOpen={setIsOpen} />

@@ -162,28 +162,6 @@ const MenuMobile = ({ handleClose }: Props) => (
                       </p>
                     </div>
                   </Link>
-                  <Link
-                    href="/tin-tuc/tin-dau-gia"
-                    className="flex items-center"
-                    onClick={handleClose}
-                  >
-                    <div className="relative h-6 w-6">
-                      <NextImg
-                        src="/assets/icons/icon-nav7.svg"
-                        alt="UPS"
-                        objectFit="cover"
-                      />
-                    </div>
-
-                    <div className="ml-5">
-                      <p className="text-sm font-semibold text-gray-100">
-                        Tin đấu giá
-                      </p>
-                      <p className="text-sm font-medium text-gray-100">
-                        Bản tin đấu giá tại UPS
-                      </p>
-                    </div>
-                  </Link>
                 </div>
                 <div className="w-full">
                   <p className="text-left text-sm font-semibold text-gray-100">
@@ -225,7 +203,11 @@ const MenuMobile = ({ handleClose }: Props) => (
         </AccordionTrigger>
         <AccordionContent>
           <div className="flex flex-col gap-5 p-3">
-            <Link href="#" className="flex items-center" onClick={handleClose}>
+            <Link
+              href="/khoa-hoc"
+              className="flex items-center"
+              onClick={handleClose}
+            >
               <i className="inline-flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -277,10 +259,10 @@ const MenuMobile = ({ handleClose }: Props) => (
 
               <div className="ml-5">
                 <p className="text-sm font-semibold text-gray-100">
-                  Nhận định thị trường
+                  Trung tâm đào tạo
                 </p>
                 <p className="text-sm font-medium text-gray-100">
-                  Báo cáo phân tích nhanh nhất cùng UPS
+                  {/* Báo cáo phân tích nhanh nhất cùng UPS */}
                 </p>
               </div>
             </Link>
