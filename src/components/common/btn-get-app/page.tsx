@@ -3,10 +3,11 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import NextImg from '../next-img';
 
-type Props = {};
-
-const ButtonGetApp = (props: Props) => {
-  const [isOpen, setOpen] = useState(true);
+interface ButtonGetAppProps {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const ButtonGetApp = ({ isOpen, setIsOpen }: ButtonGetAppProps) => {
   const [url, setUrl] = useState<any>('#');
   useEffect(() => {
     (() => {
@@ -35,7 +36,7 @@ const ButtonGetApp = (props: Props) => {
         <div className="p-2">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <button onClick={() => setOpen(false)}>
+              <button onClick={() => setIsOpen(false)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

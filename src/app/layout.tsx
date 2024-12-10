@@ -2,10 +2,8 @@ import type { Metadata } from 'next';
 
 import './globals.css';
 
-import { ThemeProvider } from '@/providers/theme-provider';
 import { SETTINGS } from '@/utils/settings';
-import TheHeader from '@/components/common/the-header/page';
-import TheFooter from '@/components/common/the-footer/page';
+import MainLayout from './MainLayout';
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -27,13 +25,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <link rel="icon" href="/assets/logo/favicon.svg" sizes="any" />
       <body>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <TheHeader />
-          <div className="pt-[45px] md:pt-14 lg:pt-16 xl:pt-[70px]">
-            {children}
-          </div>
-          <TheFooter />
-        </ThemeProvider>
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );
