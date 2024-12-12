@@ -334,8 +334,15 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                     </div>
                   </NavigationMenu.Content>
                 </NavigationMenu.Item>
-
                 <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(2)}>
+                  <Link
+                    href="/nen-tang-cong-nghe"
+                    className="font-bold text-gray-100"
+                  >
+                    Nền tảng công nghệ
+                  </Link>
+                </NavigationMenu.Item>
+                <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(3)}>
                   <NavigationMenu.Trigger>
                     <Link href="/gioi-thieu">
                       <div className="font-bold text-gray-100">Về UPS</div>
@@ -517,14 +524,14 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                   </NavigationMenu.Content>
                 </NavigationMenu.Item>
 
-                <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(3)}>
+                <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(4)}>
                   <Link href="#">
                     <div className="font-bold text-gray-100">Bảng giá</div>
                   </Link>
                 </NavigationMenu.Item>
-                <NavigationMenu.Indicator className="top-full z-10 flex h-2.5 items-end justify-center overflow-hidden transition-[width,transform_250ms_ease] data-[state=hidden]:animate-fadeOut data-[state=visible]:animate-fadeIn">
+                {/* <NavigationMenu.Indicator className="top-full z-10 flex h-2.5 items-end justify-center overflow-hidden transition-[width,transform_250ms_ease] data-[state=hidden]:animate-fadeOut data-[state=visible]:animate-fadeIn">
                   <div className="relative top-[70%] size-2.5 rotate-45 rounded-tl-sm bg-white" />
-                </NavigationMenu.Indicator>
+                </NavigationMenu.Indicator> */}
               </NavigationMenu.List>
               <ul className="hidden items-center space-x-5 xl:flex 2xl:space-x-8">
                 <div>
@@ -706,10 +713,11 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
               className={cn(
                 'perspective-[1600px] absolute top-[59px] -translate-x-1/2',
                 {
-                  'left-[38%] 3xl:left-[40%]': activeIndex === 0,
-                  'left-[51%] 2xl:left-[50%]': activeIndex === 1,
-                  'left-[59%] 2xl:left-[58%] 3xl:left-[56%]': activeIndex === 2,
-                  'left-[57%]': activeIndex === 3,
+                  'left-[35%]': activeIndex === 0,
+                  'left-[46%]': activeIndex === 1,
+                  'opacity-0': activeIndex === 2,
+                  'left-[61%]': activeIndex === 3,
+                  'left-[62%]': activeIndex === 4,
                 },
               )}
             >

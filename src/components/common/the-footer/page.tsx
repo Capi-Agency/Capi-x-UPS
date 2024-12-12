@@ -153,6 +153,14 @@ const TheFooter = (props: Props) => {
                       href="/"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
+                      Cổ phiếu
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                    >
                       Ưu đãi
                     </a>
                   </li>
@@ -179,7 +187,7 @@ const TheFooter = (props: Props) => {
                       href="/"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
-                      Dịch vụ Ngân hàng đầu tư
+                      Tư vấn tài chính
                     </a>
                   </li>
                   <li>
@@ -205,7 +213,7 @@ const TheFooter = (props: Props) => {
                       href="/"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
-                      Nhận định thị trường
+                      Bản tin thị trường
                     </a>
                   </li>
                   <li>
@@ -213,7 +221,15 @@ const TheFooter = (props: Props) => {
                       href="/"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
-                      Hướng dẫn sử dụng
+                      Báo cáo
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                    >
+                      Trung tâm kiến thức
                     </a>
                   </li>
                 </ul>
@@ -231,7 +247,15 @@ const TheFooter = (props: Props) => {
                       href="/"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
-                      Công bố thông tin
+                      Về chúng tôi
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                    >
+                      Tin UPS
                     </a>
                   </li>
                   <li>
