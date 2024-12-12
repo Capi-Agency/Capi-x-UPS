@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
@@ -20,12 +20,18 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
   const handleClose = () => {
     setIsMenuOpen(false);
   };
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [leftPosition, setLeftPosition] = useState(0);
+
+  const menuItemsRef = useRef<(HTMLLIElement | null)[]>([]);
 
   const handleMouseEnter = (index: number) => {
-    setActiveIndex(index);
+    const item = menuItemsRef.current[index];
+    if (item) {
+      const rect = item.getBoundingClientRect();
+      const itemWidth = rect.width;
+      setLeftPosition(rect.left + itemWidth / 2);
+    }
   };
-
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -81,8 +87,11 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                   />
                 </div>
               </Link>
-              <NavigationMenu.List className="ml-20 hidden items-center space-x-5 xl:flex 2xl:space-x-8">
-                <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(0)}>
+              <NavigationMenu.List className="hidden items-center justify-center gap-5 xl:flex 2xl:gap-8">
+                <NavigationMenu.Item
+                  ref={(el: any) => (menuItemsRef.current[0] = el)}
+                  onMouseEnter={() => handleMouseEnter(0)}
+                >
                   <NavigationMenu.Trigger>
                     <div className="flex items-center gap-[10px] text-base font-bold text-gray-100">
                       Sản phẩm - Dịch vụ
@@ -214,7 +223,10 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                   </NavigationMenu.Content>
                 </NavigationMenu.Item>
 
-                <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(1)}>
+                <NavigationMenu.Item
+                  ref={(el: any) => (menuItemsRef.current[1] = el)}
+                  onMouseEnter={() => handleMouseEnter(1)}
+                >
                   <NavigationMenu.Trigger>
                     <Link href="" className="font-bold text-gray-100">
                       Đầu tư cùng UPS
@@ -334,7 +346,7 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                     </div>
                   </NavigationMenu.Content>
                 </NavigationMenu.Item>
-                <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(2)}>
+                <NavigationMenu.Item>
                   <Link
                     href="/nen-tang-cong-nghe"
                     className="font-bold text-gray-100"
@@ -342,7 +354,10 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                     Nền tảng công nghệ
                   </Link>
                 </NavigationMenu.Item>
-                <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(3)}>
+                <NavigationMenu.Item
+                  ref={(el: any) => (menuItemsRef.current[2] = el)}
+                  onMouseEnter={() => handleMouseEnter(2)}
+                >
                   <NavigationMenu.Trigger>
                     <Link href="/gioi-thieu">
                       <div className="font-bold text-gray-100">Về UPS</div>
@@ -524,14 +539,14 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                   </NavigationMenu.Content>
                 </NavigationMenu.Item>
 
-                <NavigationMenu.Item onMouseEnter={() => handleMouseEnter(4)}>
+                <NavigationMenu.Item>
                   <Link href="#">
                     <div className="font-bold text-gray-100">Bảng giá</div>
                   </Link>
                 </NavigationMenu.Item>
-                {/* <NavigationMenu.Indicator className="top-full z-10 flex h-2.5 items-end justify-center overflow-hidden transition-[width,transform_250ms_ease] data-[state=hidden]:animate-fadeOut data-[state=visible]:animate-fadeIn">
+                <NavigationMenu.Indicator className="top-full z-10 flex h-2.5 items-end justify-center overflow-hidden transition-[width,transform_250ms_ease] data-[state=hidden]:animate-fadeOut data-[state=visible]:animate-fadeIn">
                   <div className="relative top-[70%] size-2.5 rotate-45 rounded-tl-sm bg-white" />
-                </NavigationMenu.Indicator> */}
+                </NavigationMenu.Indicator>
               </NavigationMenu.List>
               <ul className="hidden items-center space-x-5 xl:flex 2xl:space-x-8">
                 <div>
@@ -710,18 +725,13 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
               </div>
             </div>
             <div
-              className={cn(
-                'perspective-[1600px] absolute top-[59px] -translate-x-1/2',
-                {
-                  'left-[35%]': activeIndex === 0,
-                  'left-[46%]': activeIndex === 1,
-                  'opacity-0': activeIndex === 2,
-                  'left-[61%]': activeIndex === 3,
-                  'left-[62%]': activeIndex === 4,
-                },
-              )}
+              className="perspective-[2000px] absolute top-[69px] flex w-fit transition-all duration-300"
+              style={{
+                left: `${leftPosition}px`,
+                transform: 'translateX(-50%)',
+              }}
             >
-              <NavigationMenu.Viewport className="relative mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-[20px] bg-white shadow-2xl transition-[width,_height] duration-300 data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn sm:w-[var(--radix-navigation-menu-viewport-width)]" />
+              <NavigationMenu.Viewport className="relative h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden text-nowrap rounded-[16px] bg-white text-white transition-all duration-300 after:absolute after:left-0 after:top-0 after:h-[8px] after:w-full after:-translate-y-full data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn sm:w-[var(--radix-navigation-menu-viewport-width)]" />
             </div>
           </div>
         </div>
