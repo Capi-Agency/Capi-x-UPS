@@ -120,7 +120,7 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                             />
                           </div>
                           <div className="flex flex-col gap-1">
-                            <span className="text-base font-semibold">
+                            <span className="text-base font-semibold text-[#000]">
                               Cổ phiếu
                             </span>
                             <span className="text-sm font-medium text-[rgba(0,0,0,0.68)]">
@@ -140,7 +140,7 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                             />
                           </div>
                           <div className="flex flex-col gap-1">
-                            <span className="text-base font-semibold">
+                            <span className="text-base font-semibold text-[#000]">
                               Biểu phí giao dịch
                             </span>
                             <span className="text-sm font-medium text-[rgba(0,0,0,0.68)]">
@@ -731,7 +731,7 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                 transform: 'translateX(-50%)',
               }}
             >
-              <NavigationMenu.Viewport className="relative h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden text-nowrap rounded-[16px] bg-white text-white transition-all duration-300 after:absolute after:left-0 after:top-0 after:h-[8px] after:w-full after:-translate-y-full data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn sm:w-[var(--radix-navigation-menu-viewport-width)]" />
+              <NavigationMenu.Viewport className="relative h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden text-nowrap rounded-3xl bg-white text-white shadow-2xl transition-all duration-300 data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn sm:w-[var(--radix-navigation-menu-viewport-width)]" />
             </div>
           </div>
         </div>

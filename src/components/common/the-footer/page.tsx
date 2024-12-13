@@ -158,7 +158,7 @@ const TheFooter = (props: Props) => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="#"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Ưu đãi
@@ -192,7 +192,7 @@ const TheFooter = (props: Props) => {
                   </li>
                   <li>
                     <a
-                      href="/tin-dau-gia"
+                      href="/tin-tuc/tin-dau-gia"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Tin đấu giá
@@ -210,7 +210,7 @@ const TheFooter = (props: Props) => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="#"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Bản tin thị trường
@@ -218,7 +218,7 @@ const TheFooter = (props: Props) => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="#"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Báo cáo
@@ -226,7 +226,7 @@ const TheFooter = (props: Props) => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="#"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Trung tâm kiến thức
@@ -252,7 +252,7 @@ const TheFooter = (props: Props) => {
                   </li>
                   <li>
                     <a
-                      href="/tun-tuc"
+                      href="/tin-tuc"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Tin UPS
