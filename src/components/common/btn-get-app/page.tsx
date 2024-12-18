@@ -17,13 +17,13 @@ const ButtonGetApp = ({ isOpen, setIsOpen }: ButtonGetAppProps) => {
       // Kiểm tra hệ điều hành Android
       if (/android/i.test(userAgent)) {
         setUrl(
-          'https://play.google.com/store/apps/details?id=com.facebook.katana&hl=vi&pli=1',
+          'https://play.google.com/store/apps/details?id=com.bolt.upstock',
         );
         return;
       }
       // Kiểm tra hệ điều hành iOS
       if (/iPhone|iPad|iPod/i.test(userAgent)) {
-        setUrl('https://apps.apple.com/vn/app/facebook/id284882215?l=vi');
+        setUrl('https://apps.apple.com/vn/app/upstock/id6738768610?l=vi');
 
         return;
       }
