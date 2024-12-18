@@ -319,6 +319,17 @@ const MenuMobile = ({ handleClose }: Props) => (
           </div>
         </AccordionContent>
       </AccordionItem>
+      <AccordionItem value="item-6">
+        <AccordionTrigger>
+          <Link
+            href="/nen-tang-cong-nghe"
+            className="text-sm font-bold text-gray-100"
+            onClick={handleClose}
+          >
+            Nền tảng công nghệ
+          </Link>
+        </AccordionTrigger>
+      </AccordionItem>
       <AccordionItem value="item-4">
         <AccordionTrigger>
           <p title="Giới thiệu" className="text-sm font-bold text-gray-100">

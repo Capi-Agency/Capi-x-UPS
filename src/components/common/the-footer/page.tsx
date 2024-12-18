@@ -150,7 +150,15 @@ const TheFooter = (props: Props) => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/co-phieu"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                    >
+                      Cổ phiếu
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Ưu đãi
@@ -158,7 +166,7 @@ const TheFooter = (props: Props) => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/bieu-phi"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Biểu phí giao dịch
@@ -176,15 +184,15 @@ const TheFooter = (props: Props) => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/tu-van"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
-                      Dịch vụ Ngân hàng đầu tư
+                      Tư vấn tài chính
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/tin-tuc/tin-dau-gia"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Tin đấu giá
@@ -202,18 +210,26 @@ const TheFooter = (props: Props) => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="#"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
-                      Nhận định thị trường
+                      Bản tin thị trường
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="#"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
-                      Hướng dẫn sử dụng
+                      Báo cáo
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                    >
+                      Trung tâm kiến thức
                     </a>
                   </li>
                 </ul>
@@ -228,15 +244,23 @@ const TheFooter = (props: Props) => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/gioi-thieu"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
-                      Công bố thông tin
+                      Về chúng tôi
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/tin-tuc"
+                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                    >
+                      Tin UPS
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/tuyen-dung"
                       className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Gia nhập UPS
