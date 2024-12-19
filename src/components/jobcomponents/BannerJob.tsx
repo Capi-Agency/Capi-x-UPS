@@ -54,9 +54,9 @@ const BannerJob = (props: Props) => {
         {/* content */}
         <div>
           {/* lớp phủ */}
-          <div className="absolute left-[50%] top-[11.5%] z-[1] flex h-[750px] w-[750px] items-center justify-center rounded-[50%] bg-[#02E56A] px-[156px] mix-blend-darken"></div>
+          <div className="absolute left-[50%] top-[11.8%] z-[1] flex h-[750px] w-[750px] items-center justify-center rounded-[50%] bg-[#02E56A] px-[156px] mix-blend-darken"></div>
           {/* content */}
-          <div className="absolute left-[50%] top-[11.5%] z-[1] flex h-[750px] w-[750px] items-center justify-center rounded-[50%] px-[156px]">
+          <div className="absolute left-[50%] top-[11.8%] z-[1] flex h-[750px] w-[750px] items-center justify-center rounded-[50%] px-[156px]">
             <div className="flex flex-col gap-[24px]">
               <h1 className="font-hanken text-[60px] font-bold leading-[normal] text-white">
                 Kiến tạo sự nghiệp bên vững vẹn toàn

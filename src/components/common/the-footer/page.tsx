@@ -115,7 +115,7 @@ const TheFooter = (props: Props) => {
         data-aos-duration="700"
       ></div>
       <div className="custom-container pb-10 pt-6 md:py-10 lg:pb-[50px] xl:py-[70px] 3xl:py-[120px]">
-        <div className="gap-5 lg:grid lg:grid-cols-[25%,75%] xl:grid-cols-[32%,68%]">
+        <div className="lg:grid lg:grid-cols-[25%,75%] xl:grid-cols-[32%,68%]">
           <div
             className=""
             data-aos="fade-up"
