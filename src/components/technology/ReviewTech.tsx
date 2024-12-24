@@ -54,15 +54,21 @@ const ReviewTech = (props: Props) => {
   return (
     <div className="mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
       <div className="custom-container 3xl:!max-w-[calc(1280px+48px)]">
-        <div
-          className="mb-6 flex items-center justify-between border-[#60606B] md:border-b md:pb-5 lg:mb-10"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <h4 className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[30px]">
+        <div className="mb-6 flex items-center justify-between border-[#60606B] md:border-b md:pb-5 lg:mb-10">
+          <h4
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="700"
+            className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[30px]"
+          >
             Đánh giá từ khách hàng
           </h4>
-          <div className="float-right hidden items-center gap-2 md:flex">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="700"
+            className="float-right hidden items-center gap-2 md:flex"
+          >
             <button
               id="prevBtn"
               className="group flex h-[28px] w-[42px] items-center justify-center rounded-full bg-[#EAD498] hover:bg-[#15171E]"
@@ -128,10 +134,9 @@ const ReviewTech = (props: Props) => {
             },
           }}
           className="mySwiper"
-          data-aos="fade-up"
-          data-aos-delay="200"
         >
           {articles.map((article, index) => {
+            const delay = ((index % 3) + 1) * 200;
             return (
               <SwiperSlide
                 key={index}
@@ -141,6 +146,9 @@ const ReviewTech = (props: Props) => {
                 )}
               >
                 <div
+                  data-aos="fade-up"
+                  data-aos-delay={delay}
+                  data-aos-duration="700"
                   className={`flex flex-col justify-between rounded-[16px] bg-[rgba(251,245,229,0.70)] p-5 lg:p-10`}
                 >
                   <div className="flex items-center gap-4">
@@ -187,7 +195,12 @@ const ReviewTech = (props: Props) => {
         </Swiper>
       </div>
 
-      <div className="custom-container mt-6 flex items-center gap-2 md:hidden">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="700"
+        className="custom-container mt-6 flex items-center gap-2 md:hidden"
+      >
         <button
           id="prevBtn"
           className="group flex h-[28px] w-[42px] items-center justify-center rounded-full bg-[#EAD498] hover:bg-[#15171E]"

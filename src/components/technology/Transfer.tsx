@@ -7,7 +7,12 @@ const Transfer = (props: Props) => {
   return (
     <section className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[120px] 3xl:!max-w-[calc(1280px+48px)]">
       <div className="flex w-full flex-col gap-3 md:grid md:grid-cols-2 lg:gap-4 xl:gap-5 2xl:gap-6">
-        <div className="relative col-span-1 overflow-hidden rounded-[16px] bg-[#1d1d1f] lg:rounded-[24px] xl:rounded-[32px] 2xl:rounded-[40px]">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="700"
+          className="relative col-span-1 overflow-hidden rounded-[16px] bg-[#1d1d1f] lg:rounded-[24px] xl:rounded-[32px] 2xl:rounded-[40px]"
+        >
           <div className="flex w-full flex-col gap-1 px-4 pt-4 lg:p-6 xl:gap-2 xl:p-[30px] 2xl:p-10">
             <div className="text-xl font-semibold text-[#F3F3FB] md:text-2xl lg:text-[30px] xl:text-[40px] 2xl:text-5xl">
               Chuyển khoản CK
@@ -27,7 +32,12 @@ const Transfer = (props: Props) => {
           </div>
         </div>
 
-        <div className="relative col-span-1 overflow-hidden rounded-[16px] bg-[#F7F7F7] bg-gradient-to-b from-[rgba(230,206,141,0)] to-[rgba(230,206,141,0.4)] lg:rounded-[24px] xl:rounded-[32px] 2xl:rounded-[40px]">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="700"
+          className="relative col-span-1 overflow-hidden rounded-[16px] bg-[#F7F7F7] bg-gradient-to-b from-[rgba(230,206,141,0)] to-[rgba(230,206,141,0.4)] lg:rounded-[24px] xl:rounded-[32px] 2xl:rounded-[40px]"
+        >
           <div className="flex w-full flex-col gap-1 p-4 lg:p-6 xl:gap-2 xl:p-[30px] 2xl:p-10">
             <div className="text-xl font-semibold text-[#31270b] md:text-2xl lg:text-[30px] xl:text-[40px] 2xl:text-5xl">
               Tài sản
@@ -46,7 +56,12 @@ const Transfer = (props: Props) => {
           </div>
         </div>
 
-        <div className="col-span-2 rounded-[16px] bg-[#FBF5E5] lg:rounded-[24px] xl:rounded-[32px] 2xl:rounded-[40px]">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="700"
+          className="col-span-2 rounded-[16px] bg-[#FBF5E5] lg:rounded-[24px] xl:rounded-[32px] 2xl:rounded-[40px]"
+        >
           <div className="flex flex-col-reverse justify-between overflow-hidden md:flex-row md:gap-0 3xl:gap-[54px]">
             <div className="relative mx-auto h-[250px] w-[294px] md:-bottom-7 md:h-[240px] md:w-[346px] md:pt-0 lg:-bottom-10 lg:ml-7 lg:h-[345px] lg:w-[498px] lg2:-bottom-12 lg2:ml-20 lg2:h-[405px] lg2:w-[590px] xl:h-[420px] xl:w-[610px] 2xl:-bottom-16 2xl:h-[475px] 2xl:w-[670px] 3xl:h-[500px]">
               <NextImg

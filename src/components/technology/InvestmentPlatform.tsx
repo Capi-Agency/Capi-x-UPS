@@ -6,15 +6,22 @@ type Props = {};
 const InvestmentPlatform = (props: Props) => {
   return (
     <section className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[120px] 3xl:!max-w-[calc(1280px+48px)]">
-      <h1 className="text-center text-[20px] font-bold text-[#141414] lg:text-[30px] xl:text-[40px] 2xl:text-[48px]">
-        Nền tảng đầu tư <br />
-        xây dựng theo{' '}
-        <span className="text-[#D1AB47]">tiêu chuẩn toàn cầu</span>
-      </h1>
+      <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
+        <h1 className="text-center text-[20px] font-bold text-[#141414] lg:text-[30px] xl:text-[40px] 2xl:text-[48px]">
+          Nền tảng đầu tư <br />
+          xây dựng theo{' '}
+          <span className="text-[#D1AB47]">tiêu chuẩn toàn cầu</span>
+        </h1>
+      </div>
 
       <div className="mt-6 flex flex-col gap-3 md:grid md:grid-cols-[auto,236px] lg:grid-cols-[auto,310px] lg:gap-4 xl:mt-[50px] xl:grid-cols-[auto,380px] xl:gap-6 2xl:mt-[60px]">
         {/* First Card */}
-        <div className="rounded-[16px] bg-[#FBF5E5] px-5 py-5 md:p-9 lg:rounded-[24px] lg:px-[55px] lg:py-[42px] xl:px-[77px] xl:py-[50px] 2xl:px-[88px] 3xl:px-20 3xl:py-[60px]">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="700"
+          className="rounded-[16px] bg-[#FBF5E5] px-5 py-5 md:p-9 lg:rounded-[24px] lg:px-[55px] lg:py-[42px] xl:px-[77px] xl:py-[50px] 2xl:px-[88px] 3xl:px-20 3xl:py-[60px]"
+        >
           <h4 className="text-center text-[20px] font-bold text-[#141414] lg:text-[24px] xl:text-[32px]">
             Giao dịch trực tuyến <br className="block md:hidden" />
             <span className="text-[#D1AB47]">nhanh chóng</span>
@@ -28,7 +35,12 @@ const InvestmentPlatform = (props: Props) => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 lg:gap-4 xl:gap-6">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="700"
+          className="flex flex-col gap-3 lg:gap-4 xl:gap-6"
+        >
           {/* Second Card 1 */}
           <div className="flex flex-col items-center justify-center rounded-[16px] bg-[#1D1D1F] py-[120px] text-center md:py-[55px] lg:rounded-[24px] lg:py-20 xl:py-[87px] 2xl:py-[100px]">
             <span className="text-sm font-medium text-[rgba(255,255,255,0.50)]">

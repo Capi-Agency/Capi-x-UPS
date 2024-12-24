@@ -7,7 +7,12 @@ const ValueTech = (props: Props) => {
   return (
     <section className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[120px] 3xl:!max-w-[calc(1280px+48px)]">
       <div className="flex w-full flex-col items-start gap-6 text-black md:flex-row 2xl:gap-10">
-        <div className="xl:[496px] w-full md:w-[294px] lg:w-[398px] 2xl:w-[560px]">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="700"
+          className="xl:[496px] w-full md:w-[294px] lg:w-[398px] 2xl:w-[560px]"
+        >
           <div className="flex w-full flex-col gap-4 xl:gap-5 2xl:gap-6">
             <div className="text-xl font-bold leading-[1.3] text-[#141414] lg:text-[30px] xl:text-[40px] 2xl:text-5xl 3xl:leading-[54px]">
               Trao niềm tin <br />
@@ -44,7 +49,12 @@ const ValueTech = (props: Props) => {
 
         <div className="grid w-full flex-1 grid-cols-1 gap-6 md:h-[256px] md:grid-cols-2 md:gap-3 lg:h-[320px] lg:gap-4 xl:h-[376px] xl:gap-6 2xl:h-[432px] 2xl:gap-[30px]">
           {/* First Box */}
-          <div className="col-span-1 rounded-[15px] bg-[#FBF5E5] p-6 xl:p-10">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="700"
+            className="col-span-1 rounded-[15px] bg-[#FBF5E5] p-6 xl:p-10"
+          >
             <div className="flex flex-col gap-3 lg:gap-5 xl:gap-6">
               <div className="space-y-3 lg:space-y-4">
                 <div className="text-sm font-medium text-[#1A1711] lg:text-base 2xl:text-lg 3xl:leading-[40px]">
@@ -116,7 +126,12 @@ const ValueTech = (props: Props) => {
           </div>
 
           {/* Second Box */}
-          <div className="col-span-1 rounded-[15px] bg-[#1D1D1F] p-6 shadow-[3px_15px_20px_0px_rgba(0,0,0,0.08)] xl:p-10">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-duration="700"
+            className="col-span-1 rounded-[15px] bg-[#1D1D1F] p-6 shadow-[3px_15px_20px_0px_rgba(0,0,0,0.08)] xl:p-10"
+          >
             <div className="flex flex-col gap-3 lg:gap-5 xl:gap-6">
               <div className="space-y-3 lg:space-y-4">
                 <div className="text-sm font-medium text-white lg:text-base 2xl:text-lg 3xl:leading-[40px]">

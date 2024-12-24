@@ -8,7 +8,12 @@ const Performance = (props: Props) => {
     <section className="mt-10 overflow-hidden bg-[#1D1D1F] lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[120px]">
       <div className="custom-container justify-between pb-10 xl:pb-[60px] 2xl:pb-20 3xl:!max-w-[calc(1280px+48px)]">
         <div className="flex flex-col-reverse gap-12 md:grid md:grid-cols-[381px,auto] md:gap-[10px] lg:grid-cols-[500px,auto] lg:gap-[45px] xl:gap-[53px] 2xl:gap-[132px] 3xl:gap-[105px]">
-          <div className="mt-10 xl:mt-[60px] 2xl:mt-20">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="700"
+            className="mt-10 xl:mt-[60px] 2xl:mt-20"
+          >
             <span className="text-sm font-medium text-[#FFF] lg:text-base xl:text-[18px] xl:leading-[40px]">
               #datatracking app
             </span>
@@ -40,7 +45,12 @@ const Performance = (props: Props) => {
               </svg>
             </button>
           </div>
-          <div className="relative hidden h-full w-full pt-[75%] md:block md:pt-0 lg:-right-5 lg2:-right-24 xl:-right-16 2xl:-right-20">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-duration="700"
+            className="relative hidden h-full w-full pt-[75%] md:block md:pt-0 lg:-right-5 lg2:-right-24 xl:-right-16 2xl:-right-20"
+          >
             <NextImg
               src="/assets/image/ntcn3.png"
               alt="UPS"
@@ -51,7 +61,11 @@ const Performance = (props: Props) => {
 
         <div className="mt-10 lg2:mt-[120px]">
           <div className="flex flex-col gap-6 md:grid md:grid-cols-[196px,auto] md:gap-[56px] lg:grid-cols-[416px,auto] lg:gap-10 xl:grid-cols-[500px,auto] 2xl:gap-[120px]">
-            <div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="700"
+            >
               <span className="text-sm font-medium leading-[24px] text-[#FFF] lg:text-base lg:leading-[40px] xl:text-[18px]">
                 #datatracking app
               </span>
@@ -61,7 +75,12 @@ const Performance = (props: Props) => {
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 md:gap-10">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="600"
+              data-aos-duration="700"
+              className="grid gap-6 md:grid-cols-2 md:gap-10"
+            >
               <div className="flex flex-col gap-4 2xl:ml-10">
                 <div className="flex items-center gap-3 2xl:gap-4">
                   <i>

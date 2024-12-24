@@ -8,13 +8,18 @@ type Props = {};
 const BannerTech = () => {
   return (
     <section
-      className="bg-gradient-radial -mt-4 from-[#837848] to-[#000]"
+      className="-mt-4"
       style={{
         background:
           'radial-gradient(29.93% 48.26% at 50% 53.95%, #837848 0%, #000 100%)',
       }}
     >
-      <div className="custom-container pb-7 pt-16 md:pb-5 lg:pt-[70px] xl:pt-20 2xl:pb-9 3xl:!max-w-[calc(1440px+48px)] 3xl:pb-11">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="700"
+        className="custom-container pb-7 pt-16 md:pb-5 lg:pt-[70px] xl:pt-20 2xl:pb-9 3xl:!max-w-[calc(1440px+48px)] 3xl:pb-11"
+      >
         <div className="flex flex-col items-center justify-center">
           <div>
             <p className="text-center text-[30px] font-bold leading-normal tracking-[-0.88px] text-[#FFF] lg:text-[40px] xl:text-[44px]">

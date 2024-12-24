@@ -7,7 +7,12 @@ const AppTech = (props: Props) => {
   return (
     <div className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[120px] 3xl:!max-w-[calc(1280px+48px)]">
       <div className="flex flex-col gap-8 overflow-hidden rounded-[12px] bg-[#1D1D1F] md:grid md:grid-cols-[292px,auto] md:gap-6 md:rounded-[24px] md:pl-6 lg:grid-cols-[334px,auto] lg:gap-16 lg:pl-[30px] lg2:grid-cols-[440px,auto] lg2:pl-10 xl:gap-11 xl:pl-[50px] 2xl:gap-[130px] 2xl:pl-[60px] 3xl:gap-[100px] 3xl:pl-[70px]">
-        <div className="mt-6 flex flex-col px-5 md:mb-5 md:mt-0 md:place-self-end md:px-0 lg:mb-[50px]">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="700"
+          className="mt-6 flex flex-col px-5 md:mb-5 md:mt-0 md:place-self-end md:px-0 lg:mb-[50px]"
+        >
           <h4 className="text-[20px] font-bold text-[#FFF] lg:text-[32px] lg:leading-[46px] lg2:text-[40px] xl:leading-[54px]">
             Hơn cả một <br /> trải nghiệm đầu tư
           </h4>
@@ -52,7 +57,12 @@ const AppTech = (props: Props) => {
             </div>
           </div>
         </div>
-        <div className="relative w-full pt-[80%] md:mr-6 md:mt-[60px] md:h-[305px] md:pt-0 lg:mr-[50px] lg:h-[420px] lg:w-[460px] lg2:mr-[60px] lg2:h-[470px] lg2:w-[517px] xl:-bottom-2 xl:mr-[70px] xl:h-[490px] 2xl:bottom-0 2xl:mr-20 2xl:h-[520px] 2xl:w-[570px] 3xl:mr-[90px] 3xl:h-[542px] 3xl:w-[578px]">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="700"
+          className="relative w-full pt-[80%] md:mr-6 md:mt-[60px] md:h-[305px] md:pt-0 lg:mr-[50px] lg:h-[420px] lg:w-[460px] lg2:mr-[60px] lg2:h-[470px] lg2:w-[517px] xl:-bottom-2 xl:mr-[70px] xl:h-[490px] 2xl:bottom-0 2xl:mr-20 2xl:h-[520px] 2xl:w-[570px] 3xl:mr-[90px] 3xl:h-[542px] 3xl:w-[578px]"
+        >
           <NextImg
             src="/assets/image/nen-tang-4.png"
             alt="Capi"
