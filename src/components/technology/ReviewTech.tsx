@@ -126,11 +126,11 @@ const ReviewTech = (props: Props) => {
             },
             768: {
               slidesPerView: 2.6,
-              spaceBetween: 12,
+              spaceBetween: 24,
             },
             0: {
-              slidesPerView: 1.4,
-              spaceBetween: 12,
+              slidesPerView: 1.3,
+              spaceBetween: 24,
             },
           }}
           className="mySwiper !px-6 lg:!px-0"
