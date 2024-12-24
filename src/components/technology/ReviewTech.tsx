@@ -52,7 +52,7 @@ const ReviewTech = (props: Props) => {
     },
   ];
   return (
-    <div className="mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[120px]">
+    <div className="mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
       <div className="custom-container 3xl:!max-w-[calc(1280px+48px)]">
         <div
           className="mb-6 flex items-center justify-between border-[#60606B] md:border-b md:pb-5 lg:mb-10"
@@ -137,11 +137,10 @@ const ReviewTech = (props: Props) => {
                 key={index}
                 className={cn(
                   index === 0 ? 'ml-6 lg:ml-0' : '',
-                  index === articles.length - 1 ? '!mr-6 lg:mr-0' : '',
+                  index === articles.length - 1 ? 'mr-6 lg:mr-0' : '',
                 )}
               >
                 <div
-                  key={index}
                   className={`flex flex-col justify-between rounded-[16px] bg-[rgba(251,245,229,0.70)] p-5 lg:p-10`}
                 >
                   <div className="flex items-center gap-4">

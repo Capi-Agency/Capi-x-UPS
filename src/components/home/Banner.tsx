@@ -68,7 +68,7 @@ const Banner = ({ data }: Props) => {
         <div className="scrollbar-hidden flex max-w-full items-center gap-3 overflow-x-auto whitespace-nowrap md:gap-6 lg:px-0 xl:gap-9">
           {data?.top_user.map(({ item }: any, index: number) => (
             <div
-              className={`flex items-center gap-3 md:gap-5 ${index === 0 ? 'ml-6 md:ml-auto' : ''} ${index === data?.top_user.length - 1 ? 'mr-6 md:ml-auto' : ''}`}
+              className={`flex items-center gap-3 md:gap-5 ${index === 0 ? 'ml-6 md:ml-auto' : ''} ${index === data?.top_user.length - 1 ? 'mr-6 md:mr-auto' : ''}`}
               key={index}
             >
               <div className="relative h-10 w-10 lg:h-[54px] lg:w-[54px]">
