@@ -45,6 +45,9 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
   }, [isMenuOpen]);
   useEffect(() => {
     switch (pathname) {
+      case '/nen-tang-cong-nghe':
+        setBgColor('bg-[#000]');
+        break;
       case '/khoa-hoc':
         setBgColor('bg-[#1B0C01]');
         setbgBtn('#02E56A');
