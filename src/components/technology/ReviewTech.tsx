@@ -133,17 +133,17 @@ const ReviewTech = (props: Props) => {
               spaceBetween: 12,
             },
           }}
-          className="mySwiper"
+          className="mySwiper !px-6 lg:!px-0"
         >
           {articles.map((article, index) => {
             const delay = ((index % 3) + 1) * 200;
             return (
               <SwiperSlide
                 key={index}
-                className={cn(
-                  index === 0 ? 'ml-6 lg:ml-0' : '',
-                  index === articles.length - 1 ? 'mr-6 lg:mr-0' : '',
-                )}
+                // className={cn(
+                //   index === 0 ? 'ml-6 lg:ml-0' : '',
+                //   index === articles.length - 1 ? 'mr-6 lg:mr-0' : '',
+                // )}
               >
                 <div
                   data-aos="fade-up"
