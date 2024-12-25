@@ -116,13 +116,17 @@ const ReviewTech = (props: Props) => {
         <Swiper
           ref={swiperRef}
           breakpoints={{
-            1920: {
+            1600: {
               slidesPerView: 3,
-              spaceBetween: 30,
+              spaceBetween: 40,
             },
             1280: {
               slidesPerView: 3,
               spaceBetween: 24,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 16,
             },
             768: {
               slidesPerView: 2.6,
@@ -143,7 +147,7 @@ const ReviewTech = (props: Props) => {
                   data-aos="fade-up"
                   data-aos-delay={delay}
                   data-aos-duration="700"
-                  className={`flex flex-col justify-between rounded-[16px] bg-[rgba(251,245,229,0.70)] p-5 lg:p-10`}
+                  className={`flex flex-col justify-between rounded-[16px] bg-[rgba(251,245,229,0.70)] p-5 lg2:p-[30px] 2xl:p-10`}
                 >
                   <div className="flex items-center gap-4">
                     <div className="relative h-[56px] w-[56px] rounded-full">

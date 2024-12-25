@@ -16,16 +16,20 @@ const SlideAbout = ({ data }: Props) => {
       <Swiper
         ref={swiperRef}
         breakpoints={{
-          1024: {
+          1280: {
             slidesPerView: 4,
             spaceBetween: 20,
           },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
           768: {
-            slidesPerView: 3.2,
+            slidesPerView: 3,
             spaceBetween: 16,
           },
           0: {
-            slidesPerView: 1.8,
+            slidesPerView: 1.6,
             spaceBetween: 12,
           },
         }}
@@ -66,7 +70,7 @@ const SlideAbout = ({ data }: Props) => {
             <SwiperSlide key={index}>
               <div
                 ref={cardRef}
-                className={`card relative flex h-[320px] flex-col justify-between overflow-hidden rounded-[12px] bg-[#161519] p-5 lg:h-[400px] lg:rounded-[16px] lg:p-6 2xl:h-[430px] 2xl:p-[32px]`}
+                className={`card relative flex h-[320px] flex-col justify-between overflow-hidden rounded-[12px] bg-[#161519] p-5 lg:h-[400px] lg:rounded-[16px] lg2:p-6 2xl:h-[430px] 2xl:p-[32px]`}
                 onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}

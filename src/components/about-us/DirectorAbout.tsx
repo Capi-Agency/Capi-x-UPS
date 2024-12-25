@@ -37,7 +37,7 @@ const DirectorAbout = ({ data }: Props) => {
               />
             </div>
             <div
-              className={`rounded-[12px] bg-[#F3F3FB] p-5 pb-[20%] lg:rounded-[24px] lg:p-10 ${
+              className={`rounded-[12px] bg-[#F3F3FB] p-5 lg:rounded-[24px] lg:p-10 ${
                 index % 2 !== 0 ? 'lg:order-1' : 'order-2'
               }`}
               data-aos="fade-up"
