@@ -19,10 +19,9 @@ const ValueTech = (props: Props) => {
               Nhận giá trị
             </div>
             <div className="w-full text-sm font-medium text-[#111013] lg:text-base xl:text-lg 2xl:w-[86%]">
-              Cổ phiếu là chứng chỉ do công ty cổ phần phát hành, bút toán ghi
-              sổ hoặc dữ liệu điện tử xác nhận quyền sở hữu một hoặc một số cổ
-              phần của công ty đó. Người mua cổ phiếu sẽ trở thành cổ đông của
-              công ty phát hành.
+              Ứng dụng chứng khoán UPS mang đến trải nghiệm giao dịch nhanh
+              chóng, an toàn và tiện lợi chưa từng có. Với nhiều ưu đãi hấp dẫn,
+              đầu tư trở nên dễ dàng hơn bao giờ hết.
             </div>
             <div>
               <button className="btn bg-gradient-to-b from-[#FDF2CB] to-[#DABB6B]">
@@ -66,7 +65,7 @@ const ValueTech = (props: Props) => {
               </div>
 
               <div className="text-sm font-medium text-[#1A1711] md:min-h-[50px] lg:text-base 2xl:min-h-[56px] 2xl:text-lg">
-                Tạo tài khoản eKYC chỉ 30 giây
+                Tạo tài khoản eKYC đơn giản, nhanh chóng
               </div>
 
               <div className="flex w-full flex-col gap-2">
@@ -146,7 +145,7 @@ const ValueTech = (props: Props) => {
               </div>
 
               <div className="text-sm font-medium text-white md:min-h-[50px] lg:text-base 2xl:min-h-[56px] 2xl:text-lg">
-                Lãi suất cho vay trong hạn
+                Lãi suất cho vay hấp dẫn, linh hoạt
               </div>
 
               <div className="flex w-full flex-col gap-2">

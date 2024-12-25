@@ -15,11 +15,11 @@ const Transfer = (props: Props) => {
         >
           <div className="flex w-full flex-col gap-1 px-4 pt-4 lg:p-6 xl:gap-2 xl:p-[30px] 2xl:p-10">
             <div className="text-xl font-semibold text-[#F3F3FB] md:text-2xl lg:text-[30px] xl:text-[40px] 2xl:text-5xl">
-              Chuyển khoản CK
+              Chuyển tiền 24/7
             </div>
-            <div className="w-full text-sm font-medium text-[#B3B3B3] lg:text-base xl:w-[90%] 3xl:w-[80%]">
-              Xác minh giao dịch nhanh chóng, báo cáo giao dịch chi tiết và lịch
-              sử giao dịch đầy đủ.
+            <div className="w-full text-sm font-medium text-[#B3B3B3] lg:text-base xl:w-[90%] 3xl:w-[85%]">
+              Bảo mật, nhanh chóng và an toàn tuyệt đối. Tiết kiệm thời gian,
+              bảo vệ tài sản của bạn.
             </div>
           </div>
 
@@ -76,8 +76,8 @@ const Transfer = (props: Props) => {
                 Thị trường
               </div>
               <div className="w-full text-start text-sm font-medium text-[#666] md:text-end lg:text-base">
-                Dễ dàng vẽ đường xu hướng, xác định điểm hỗ trợ/kháng cự và đưa
-                ra quyết định đầu tư chính xác.
+                Công cụ phân tích kỹ thuật, biểu đồ đa dạng hỗ trợ Nhà đầu tư
+                đưa ra quyết định nhanh chóng
               </div>
             </div>
           </div>

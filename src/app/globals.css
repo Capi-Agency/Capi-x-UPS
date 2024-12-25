@@ -89,10 +89,6 @@
     @apply mx-6 w-full max-w-[calc(100%-48px)] px-0 sm:mx-auto md:max-w-[calc(720px+48px)] md:px-6 lg:max-w-[calc(944px+48px)] lg2:max-w-[calc(1120px+48px)] xl:max-w-[calc(1120px+48px)] 2xl:max-w-[calc(1280px+48px)] 3xl:max-w-[calc(1440px+48px)] !important;
   }
 
-  .container-slide {
-    @apply mx-0 w-full max-w-[calc(100%)] px-0 md:mx-auto lg:max-w-[calc(944px+48px)] lg:px-6 lg2:max-w-[calc(1120px+48px)] xl:max-w-[calc(1120px+48px)] 2xl:max-w-[calc(1280px+48px)] 3xl:max-w-[calc(1440px+48px)] !important;
-  }
-
   .bg-radial-gradient {
     box-sizing: border-box;
     background-size: cover;

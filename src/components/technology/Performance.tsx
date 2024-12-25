@@ -23,8 +23,8 @@ const Performance = (props: Props) => {
               mọi nhu cầu của bạn
             </h4>
             <p className="my-2 mb-4 text-sm font-medium leading-[28px] text-[#FFF] lg:my-4 lg:w-[80%] lg:text-base xl:my-6 xl:w-full xl:text-[18px] 2xl:my-8">
-              Bạn có thể đầu tư chứng khoán, quỹ, tiền điện tử và nhiều hơn nữa,
-              tất cả chỉ trong một ứng dụng.
+              Bạn có thể đầu tư chứng khoán, quỹ và nhiều hơn nữa, tất cả chỉ
+              trong một ứng dụng.
             </p>
             <button className="btn bg-gradient-to-b from-[#FDF2CB] to-[#DABB6B]">
               Khám phá ngay

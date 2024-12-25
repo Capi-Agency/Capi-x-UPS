@@ -29,7 +29,7 @@ const SlideAbout = ({ data }: Props) => {
             spaceBetween: 12,
           },
         }}
-        className="mySwiper"
+        className="mySwiper !px-6 lg:!px-0"
       >
         {data?.map(({ item }: any, index: number) => {
           const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -63,10 +63,7 @@ const SlideAbout = ({ data }: Props) => {
           };
           const delay = ((index % 4) + 1) * 200;
           return (
-            <SwiperSlide
-              key={index}
-              className={`${index === 0 ? 'ml-6 lg:ml-auto' : ''}`}
-            >
+            <SwiperSlide key={index}>
               <div
                 ref={cardRef}
                 className={`card relative flex h-[320px] flex-col justify-between overflow-hidden rounded-[12px] bg-[#161519] p-5 lg:h-[400px] lg:rounded-[16px] lg:p-6 2xl:h-[430px] 2xl:p-[32px]`}

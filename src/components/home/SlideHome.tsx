@@ -59,7 +59,7 @@ const SlideHome = ({ data }: Props) => {
             return (
               <SwiperSlide key={index}>
                 <Link href={slide?.image_ads.url}>
-                  <div className="relative h-[342px] w-full md:h-[360px] lg:h-[400px] lg2:h-[440px] 2xl:h-[500px] 3xl:h-[560px]">
+                  <div className="relative w-full pt-[80%] md:h-[360px] md:pt-0 lg:h-[400px] lg2:h-[440px] 2xl:h-[500px] 3xl:h-[560px]">
                     <NextImg
                       src={
                         process.env.REACT_APP_IMG_URL + slide?.image_ads.cover

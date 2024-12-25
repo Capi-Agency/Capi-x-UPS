@@ -17,7 +17,7 @@ const CoreValue = ({ data }: Props) => {
           className="flex flex-col justify-between"
         >
           <div>
-            <span className="text-[14px] font-bold leading-[40px] text-[#111013] md:text-[20px] lg:text-[30px] 2xl:text-[32px]">
+            <span className="text-[20px] font-bold leading-[40px] text-[#111013] lg:text-[30px] 2xl:text-[32px]">
               {data?.section_content?.title}
             </span>
             <div className="my-3 h-[1px] w-full bg-[#60606B] md:my-2 lg:my-4 lg:mb-8"></div>

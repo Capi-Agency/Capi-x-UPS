@@ -49,7 +49,7 @@ const ServiceAbout = ({ data }: Props) => {
               data-aos-duration="700"
             ></div>
           </div>
-          <div className="sm:container-slide lg:custom-container">
+          <div className="lg:custom-container">
             <SlideAbout data={data} />
           </div>
         </div>

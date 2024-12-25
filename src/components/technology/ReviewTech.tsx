@@ -112,7 +112,7 @@ const ReviewTech = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="container-slide lg:custom-container 3xl:!max-w-[calc(1280px+48px)]">
+      <div className="lg:custom-container 3xl:!max-w-[calc(1280px+48px)]">
         <Swiper
           ref={swiperRef}
           breakpoints={{
@@ -138,13 +138,7 @@ const ReviewTech = (props: Props) => {
           {articles.map((article, index) => {
             const delay = ((index % 3) + 1) * 200;
             return (
-              <SwiperSlide
-                key={index}
-                // className={cn(
-                //   index === 0 ? 'ml-6 lg:ml-0' : '',
-                //   index === articles.length - 1 ? 'mr-6 lg:mr-0' : '',
-                // )}
-              >
+              <SwiperSlide key={index}>
                 <div
                   data-aos="fade-up"
                   data-aos-delay={delay}
