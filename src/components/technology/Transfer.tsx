@@ -22,7 +22,7 @@ const Transfer = (props: Props) => {
             </div>
           </div>
 
-          <div className="relative h-[310px] w-full md:-top-12 md:h-full lg:-top-16 lg2:-top-[88px] xl:-top-28 2xl:-top-32">
+          <div className="relative h-[310px] w-full md:-top-10 md:h-full lg:-top-16 lg2:-top-[88px] xl:-top-20 2xl:-top-28">
             <NextImg
               src="/assets/image/nen-tang-1.png"
               alt="UPS"
