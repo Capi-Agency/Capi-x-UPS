@@ -18,8 +18,7 @@ const Transfer = (props: Props) => {
               Chuyển tiền 24/7
             </div>
             <div className="w-full text-sm font-medium text-[#B3B3B3] lg:text-base xl:w-[90%] 3xl:w-[85%]">
-              Bảo mật, nhanh chóng và an toàn tuyệt đối. Tiết kiệm thời gian,
-              bảo vệ tài sản của bạn.
+              Bảo mật, tiện lợi và nhanh chóng
             </div>
           </div>
 
