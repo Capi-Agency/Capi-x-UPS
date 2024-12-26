@@ -7,6 +7,7 @@ import NextImg from '../next-img';
 import MenuMobile from '@/components/common/menu-mobile/page';
 import { usePathname } from 'next/navigation';
 import ButtonGetApp from '../btn-get-app/page';
+import { CaretDownIcon } from '@radix-ui/react-icons';
 
 interface TheHeaderProps {
   isOpen: boolean;
@@ -47,6 +48,7 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
     switch (pathname) {
       case '/nen-tang-cong-nghe':
         setBgColor('bg-[#000]');
+        setbgBtn('#02E56A');
         break;
       case '/khoa-hoc':
         setBgColor('bg-[#1B0C01]');
@@ -95,13 +97,29 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                   ref={(el: any) => (menuItemsRef.current[0] = el)}
                   onMouseEnter={() => handleMouseEnter(0)}
                 >
-                  <NavigationMenu.Trigger>
+                  <NavigationMenu.Trigger className="group flex items-center xl:gap-[6px] 2xl:gap-2">
                     <div className="flex items-center gap-[10px] text-base font-bold text-gray-100">
                       Sản phẩm - Dịch vụ
-                      <span className="me-2 rounded-[10px] bg-[#AD02C9] px-2 py-1 text-sm font-bold uppercase text-white">
+                      <span className="rounded-[10px] bg-[#AD02C9] px-2 py-1 text-sm font-bold uppercase text-white">
                         NEW
                       </span>
                     </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      className="transition-all duration-300 ease-in-out group-data-[state=open]:-rotate-180 xl:size-5 2xl:size-6"
+                    >
+                      <path
+                        d="M6.5 9L12.5 15L18.5 9"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   </NavigationMenu.Trigger>
                   <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl sm:w-auto">
                     <div className="grid w-[690px] grid-cols-2 gap-10 px-6 py-5">
@@ -230,10 +248,26 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                   ref={(el: any) => (menuItemsRef.current[1] = el)}
                   onMouseEnter={() => handleMouseEnter(1)}
                 >
-                  <NavigationMenu.Trigger>
-                    <Link href="" className="font-bold text-gray-100">
+                  <NavigationMenu.Trigger className="group flex items-center xl:gap-[6px] 2xl:gap-2">
+                    <Link href="#" className="font-bold text-gray-100">
                       Đầu tư cùng UPS
                     </Link>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      className="transition-all duration-300 ease-in-out group-data-[state=open]:-rotate-180 xl:size-5 2xl:size-6"
+                    >
+                      <path
+                        d="M6.5 9L12.5 15L18.5 9"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   </NavigationMenu.Trigger>
                   <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl sm:w-auto">
                     <div className="flex w-[400px] flex-col gap-5 px-6 py-5">
@@ -361,10 +395,26 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                   ref={(el: any) => (menuItemsRef.current[2] = el)}
                   onMouseEnter={() => handleMouseEnter(2)}
                 >
-                  <NavigationMenu.Trigger>
+                  <NavigationMenu.Trigger className="group flex items-center xl:gap-[6px] 2xl:gap-2">
                     <Link href="/gioi-thieu">
                       <div className="font-bold text-gray-100">Về UPS</div>
                     </Link>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      className="transition-all duration-300 ease-in-out group-data-[state=open]:-rotate-180 xl:size-5 2xl:size-6"
+                    >
+                      <path
+                        d="M6.5 9L12.5 15L18.5 9"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   </NavigationMenu.Trigger>
                   <NavigationMenu.Content className="absolute left-0 top-0 w-full rounded-3xl sm:w-auto">
                     <div className="flex w-[300px] flex-col gap-5 px-6 py-5">
