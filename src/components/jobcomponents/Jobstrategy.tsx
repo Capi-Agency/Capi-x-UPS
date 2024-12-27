@@ -8,19 +8,13 @@ const Jobstrategy = (props: Props) => {
   const lists = [
     {
       icon: '/assets/icons/personalcard.svg',
-      title: 'Tuyển dụng',
+      title: 'Thu hút và giữ chân nhân tài',
       description:
         'Luôn dẫn đầu xu hướng, tạo ra sáng kiến giúp trải nghiệm đầu tư dễ dàng và thú vị.',
     },
     {
       icon: '/assets/icons/status-up.svg',
       title: 'Đào tạo và phát triển',
-      description:
-        'Luôn dẫn đầu xu hướng, tạo ra sáng kiến giúp trải nghiệm đầu tư dễ dàng và thú vị.',
-    },
-    {
-      icon: '/assets/icons/note-2.svg',
-      title: 'Đánh giá hiệu quả',
       description:
         'Luôn dẫn đầu xu hướng, tạo ra sáng kiến giúp trải nghiệm đầu tư dễ dàng và thú vị.',
     },
@@ -33,29 +27,31 @@ const Jobstrategy = (props: Props) => {
   ];
 
   return (
-    <div className="mb-[160px] mt-[60px] bg-[#0F1B0E]">
+    <div className="mt-6 bg-[#0F1B0E] md:mt-8 lg:mt-10 2xl:mt-[60px]">
       <div className="custom-container">
-        <div className="flex gap-[240px] py-[120px]">
+        <div className="grid gap-10 py-6 md:grid-cols-[284px,auto] md:gap-[60px] md:py-10 lg:grid-cols-[364px,auto] lg:gap-20 lg:py-[60px] lg2:grid-cols-[452px,auto] lg2:gap-[100px] lg2:py-20 2xl:grid-cols-[481px,auto] 2xl:gap-[120px] 2xl:py-[100px] 3xl:grid-cols-[520px,auto] 3xl:gap-[240px] 3xl:py-[120px]">
           {/* col-left */}
           <div className="">
             <div className="">
-              <h6 className="font-hanken text-[14px] font-medium uppercase leading-[21px] text-white">
+              <h6 className="text-[14px] font-medium uppercase leading-[21px] text-[#FFF]">
                 Chiến lược nhân sự
               </h6>
-              <div className="my-[16px] border-t"></div>
-              <h2 className="font-hanken text-[48px] font-bold leading-[54px] text-white">
-                Vì một tương lại bền vững của bạn
+              <div className="my-3 border-t border-[#60606B] md:my-2 lg:my-3 2xl:my-[16px]"></div>
+              <h2 className="text-[20px] font-bold text-[#FFF] md:text-[24px] lg:text-[32px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[48px] 2xl:leading-[54px]">
+                Kết nối tài năng,
+                <br className="hidden md:block" /> phát triển bền vững,
+                <br className="hidden md:block" /> vun đắp hạnh phúc
               </h2>
-              <p className="my-[32px] font-hanken text-[18px] font-normal leading-[28px] text-[#F9F9F9]">
-                Kiến tạo một môi trường làm việc chuyên nghiệp không những cho
-                doanh nghiệp mà còn cho chính nhân viên.
+              <p className="my-3 text-[18px] text-sm font-normal text-[#A6A6A6] md:my-6 md:text-base lg:leading-[28px] lg2:my-7 2xl:my-[32px]">
+                UPS tin rằng, bằng việc đầu tư vào con người, chúng tôi sẽ xây
+                dựng được một đội ngũ nhân sự vững mạnh, giàu năng lực và đầy
+                nhiệt huyết, góp phần vào sự phát triển bền vững của công ty
+                trong 5 năm tới và xa hơn nữa
               </p>
-              <Link
-                href={`https://onboarding.upstock.com.vn/index.html#/./open-account/check-info`}
-              >
+              <Link href={`#`}>
                 <button className="btn active">
-                  Mở tài khoản ngay
-                  <div className="relative h-6 w-6">
+                  Gia nhập UPS
+                  <div className="relative size-4 lg:size-6">
                     <NextImg
                       src="/assets/icons/UPs.svg"
                       alt="Capi"
@@ -67,32 +63,106 @@ const Jobstrategy = (props: Props) => {
             </div>
           </div>
           {/* col-right */}
-          <div className="flex flex-col gap-[60px]">
+          <div className="flex flex-col gap-5 md:gap-6 lg:gap-[30px] lg2:gap-[60px]">
             <div>
-              <p className="font-hanken text-[18px] font-normal leading-[28px] text-[#F9F9F9]">
-                Chúng tôi tin rằng nhân sự là cốt lõi của mọi doanh nghiệp và là
-                tiền đề của thành công, vì vậy chúng tôi chú trọng vào việc tìm
-                kiếm những nhân sự nhiệt huyết và năng động, đặc biệt trong lĩnh
-                vực chứng khoán
+              <p className="text-sm text-[#F9F9F9] md:text-base lg:text-lg">
+                Chúng tôi tin rằng con người là cốt lõi của mọi doanh nghiệp và
+                là tiền đề của thành công, vì vậy chúng tôi chú trọng vào việc
+                tìm kiếm những tài năng trẻ, nhiệt huyết và đam mê phát triển
+                trong lĩnh vực chứng khoán, đầu tư.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-x-[40px] gap-y-[60px]">
-              {lists &&
-                lists.map((item: any, index: any) => {
-                  return (
-                    <div key={index} className="text-start">
-                      <div className="relative h-[32px] w-[32px]">
-                        <NextImg src={item.icon} alt="capi" />
-                      </div>
-                      <p className="pb-[8px] pt-[16px] font-hanken text-[20px] font-semibold leading-[32px] text-white">
-                        {item.title}
-                      </p>
-                      <p className="font-hanken text-[16px] font-normal leading-[24px] text-[#91929B]">
-                        {item.description}
-                      </p>
-                    </div>
-                  );
-                })}
+            <div className="flex grid-cols-2 flex-col gap-x-6 gap-y-5 md:grid md:gap-y-6 lg:gap-x-[40px] lg:gap-y-[30px] 3xl:gap-y-[60px]">
+              <div>
+                <div className="relative size-6 md:size-8">
+                  <NextImg src="/assets/icons/personalcard.svg" alt="ups" />
+                </div>
+                <p className="pt-2 text-[20px] font-semibold leading-[32px] text-white md:pb-2 md:pt-4 md:text-[18px] md:leading-[28px] lg:text-[20px]">
+                  Thu hút và giữ chân nhân tài
+                </p>
+                <ul className="">
+                  <li className="flex">
+                    <span className="m-[10px] size-1 min-w-1 bg-[#A6A6A6]"></span>
+                    <p className="text-sm text-[#91929B] md:text-base">
+                      Xây dựng thương hiệu nhà tuyển dụng hấp dẫn
+                    </p>
+                  </li>
+                  <li className="flex">
+                    <span className="m-[10px] size-1 min-w-1 bg-[#A6A6A6]"></span>
+                    <p className="text-sm text-[#91929B] md:text-base">
+                      Mở rộng mạng lưới kết nối
+                    </p>
+                  </li>
+                  <li className="flex">
+                    <span className="m-[10px] size-1 min-w-1 bg-[#A6A6A6]"></span>
+                    <p className="text-sm text-[#91929B] md:text-base">
+                      Cung cấp chế độ đãi ngộ cạnh tranh
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div className="relative size-6 md:size-8">
+                  <NextImg src="/assets/icons/status-up.svg" alt="ups" />
+                </div>
+                <p className="pt-2 text-[20px] font-semibold leading-[32px] text-white md:pb-2 md:pt-4 md:text-[18px] md:leading-[28px] lg:text-[20px]">
+                  Phát triển năng lực nhân viên
+                </p>
+                <ul className="">
+                  <li className="flex">
+                    <span className="m-[10px] size-1 min-w-1 bg-[#A6A6A6]"></span>
+                    <p className="text-sm text-[#91929B] md:text-base">
+                      Đầu tư vào đạo tạo và phát triển
+                    </p>
+                  </li>
+                  <li className="flex">
+                    <span className="m-[10px] size-1 min-w-1 bg-[#A6A6A6]"></span>
+                    <p className="text-sm text-[#91929B] md:text-base">
+                      Khuyến khích học tập và phát triển cá nhân
+                    </p>
+                  </li>
+                  <li className="flex">
+                    <span className="m-[10px] size-1 min-w-1 bg-[#A6A6A6]"></span>
+                    <p className="text-sm text-[#91929B] md:text-base">
+                      Thúc đẩy sự sáng tạo và đổi mới
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-span-2">
+                <div className="relative size-6 md:size-8">
+                  <NextImg src="/assets/icons/card-coin.svg" alt="ups" />
+                </div>
+                <p className="pt-2 text-[20px] font-semibold leading-[32px] text-white md:pb-2 md:pt-4 md:text-[18px] md:leading-[28px] lg:text-[20px]">
+                  Xây dựng môi trường làm việc hạnh phúc và bền vững
+                </p>
+                <ul className="">
+                  <li className="flex">
+                    <span className="m-[10px] size-1 min-w-1 bg-[#A6A6A6]"></span>
+                    <p className="text-sm text-[#91929B] md:text-base">
+                      Thúc đấy sự cân bằng giữa công việc và cuộc sống
+                    </p>
+                  </li>
+                  <li className="flex">
+                    <span className="m-[10px] size-1 min-w-1 bg-[#A6A6A6]"></span>
+                    <p className="text-sm text-[#91929B] md:text-base">
+                      Xây dựng văn hoá doanh nghiệp tích cực
+                    </p>
+                  </li>
+                  <li className="flex">
+                    <span className="m-[10px] size-1 min-w-1 bg-[#A6A6A6]"></span>
+                    <p className="text-sm text-[#91929B] md:text-base">
+                      Chú trọng đến sức khoẻ và tinh thần của nhân viên
+                    </p>
+                  </li>
+                  <li className="flex">
+                    <span className="m-[10px] size-1 min-w-1 bg-[#A6A6A6]"></span>
+                    <p className="text-sm text-[#91929B] md:text-base">
+                      Đóng góp cho cộng đồng
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

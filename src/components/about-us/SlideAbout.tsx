@@ -9,6 +9,7 @@ type Props = {
 };
 
 const SlideAbout = ({ data }: Props) => {
+  console.log('🚀 ~ SlideAbout ~ data:', data);
   const swiperRef = useRef<any>(null);
 
   return (
@@ -83,7 +84,13 @@ const SlideAbout = ({ data }: Props) => {
                     {item.service}
                   </span>
                   <h4 className="text-[20px] font-bold text-[#FFF] lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] 3xl:leading-[40px]">
-                    {item.title}
+                    {item.title.map(({ text }: any, index: any) => {
+                      return (
+                        <p key={index}>
+                          {text} <br />
+                        </p>
+                      );
+                    })}
                   </h4>
                 </div>
                 <p className="text-[14px] font-medium leading-[22px] text-[#FFF] lg:text-base lg:leading-[28px] lg2:text-[18px]">

@@ -1,5 +1,3 @@
-<svg width="29" height="27" viewBox="0 0 29 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="FlagBanner">
-<path id="Vector" d="M1.625 25.375V1.75H27.5L20.75 10.1875L27.5 18.625H1.625" stroke="#111013" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-</g>
+<svg width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.1875 31.8125V1.625H34.25L25.625 12.4062L34.25 23.1875H1.1875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

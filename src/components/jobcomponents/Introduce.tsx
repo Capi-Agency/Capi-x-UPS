@@ -11,8 +11,8 @@ const Introduce = (props: Props) => {
     },
     {
       icon: '/assets/icons/FlagBannerJB.svg',
-      count: '35',
-      description: 'designers and developers',
+      count: '28',
+      description: 'awards for digital innovation',
     },
   ];
   return (
@@ -25,20 +25,23 @@ const Introduce = (props: Props) => {
                 key={index}
                 className={`px-[40px] py-[50px] ${index == 0 ? 'bg-[#0AB358]' : 'bg-[#0F1B0E]'}`}
               >
-                <div className='flex items-center justify-start gap-2'>
+                <div className="flex items-center justify-start gap-2">
                   <img
                     src={item.icon}
                     alt={`icon-${index}`}
                     className="h-[32px] w-[32px]"
                   />
-                  <div className="text-[40px] font-bold text-white">
-                    {item.count}
+                  <div className="flex items-center gap-[6px]">
+                    <p className="text-[40px] font-bold text-white">
+                      {item.count}
+                    </p>
+                    <span className="text-[28px] font-bold text-white">+</span>
                   </div>
                 </div>
                 <div className="text-[20px] font-medium text-white">
                   {item.description}
                 </div>
-              </div> 
+              </div>
             );
           })}
       </div>

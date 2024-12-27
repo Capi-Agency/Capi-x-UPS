@@ -5,93 +5,127 @@ type Props = {};
 const Recruitment = (props: Props) => {
   const lists = [
     {
-      title: 'Insights & Strategy',
+      title: 'Môi giới chứng khoán',
       description:
-        'Strategy is a forward-looking plan for your brands behavior.',
+        'Kết nối người mua/bán chứng khoán, tư vấn đầu tư, thực hiện giao dịch.',
       request: [
-        '  Research & Data',
-        ' Branding & Positioning',
-        ' Business Consulting',
-        ' Go To Market',
-        ' Innovation',
-        ' SEO / SEM',
+        'Chuyên viên môi giới',
+        'Trưởng phòng môi giới',
+        'Chuyên viên Phân tích Đầu tư',
       ],
     },
     {
-      title: 'Insights & Strategy',
-      description:
-        'Strategy is a forward-looking plan for your brands behavior.',
+      title: 'Tư vấn đầu tư',
+      description: 'Cung cấp lời khuyên và giải pháp đầu tư tài chính.',
       request: [
-        ' Research & Data',
-        'Branding & Positioning',
-        'Business Consulting',
-        'Go To Market',
-        'Innovation',
-        ' SEO / SEM',
+        'Chuyên viên Tư vấn Đầu tư',
+        'Quản lý Danh mục đầu tư',
+        'Chuyên gia Hoạch địch Tài chính',
       ],
     },
     {
-      title: 'Insights & Strategy',
+      title: 'Phân tích tài chính',
       description:
-        'Strategy is a forward-looking plan for your brands behavior.',
+        'Phân tích dữ liệu tài chính, đánh giá tình hình doanh nghiệp, dự đoán thị trường.',
       request: [
-        '  Research & Data',
-        ' Branding & Positioning',
-        'Business Consulting',
-        ' Go To Market',
-        ' Innovation',
-        ' SEO / SEM',
+        'Chuyên viên phân tích tài chính',
+        'Chuyên viên phân tích đầu tư',
+        'Chuyên viên phân tích rủi ro',
       ],
     },
     {
-      title: 'Insights & Strategy',
+      title: 'Công nghệ thông tin',
       description:
-        'Strategy is a forward-looking plan for your brands behavior.',
+        'Phát triển, vận hành và bảo trì hệ thống công nghệ thông tin.',
+      request: ['Lập trình viên', 'Kỹ sư hệ thống', 'Chuyên viên an ninh mạng'],
+    },
+    {
+      title: 'Marketing & Truyền thông',
+      description: 'Quảng bá thương hiệu, sản phẩm và dịch vụ',
       request: [
-        ' Research & Data',
-        ' Branding & Positioning',
-        ' Business Consulting',
-        ' Go To Market',
-        ' Innovation',
-        ' SEO / SEM',
+        'Chuyên viên Marketing',
+        'Chuyên viên Digital Marketing',
+        'Chuyên viên Quan hệ công chúng',
       ],
+    },
+    {
+      title: 'Hành chính nhân sự',
+      description: 'Quản lý nhân sự và hành chính văn phòng.',
+      request: [
+        'Chuyên viên Tuyển dụng',
+        'Chuyên viên Đào tạo',
+        'Chuyên viên Quản lý Nhân sự',
+      ],
+    },
+    {
+      title: 'Tài chính kế toán',
+      description: 'Quản lý tài chính và kế toán, lập báo cáo',
+      request: [
+        'Kế toán viên',
+        'Kiểm toán viên nội bộ',
+        'Chuyên viên Phân tích Tài chính',
+      ],
+    },
+    {
+      title: 'Phát triển sản phẩm',
+      description: 'Phát triển sản phẩm dịch vụ tài chính mới.',
+      request: [
+        'Chuyên viên Phát triển Sản phẩm',
+        'Quản lý sản phẩm',
+        'Chuyên viên Nghiên cứu Thị trường',
+      ],
+    },
+    {
+      title: 'Pháp chế và KSNB',
+      description: 'Đảm bảo tuân thủ pháp luật và quy định, quản lý rủi ro.',
+      request: [
+        'Chuyên viên Pháp chế',
+        'Chuyên viên Kiếm soát Nội bộ',
+        'Chuyên viên Tuân thủ',
+      ],
+    },
+    {
+      title: 'Trợ lý, Thư ký',
+      description: 'Hỗ trợ quản lý trong công việc hành chính.',
+      request: ['Trợ lý Ban Giám Đốc', 'Thư ký Văn phòng'],
     },
   ];
   return (
-    <div className="custom-container my-[100px]">
+    <div className="custom-container mt-10 md:mt-16 lg2:mt-[90px] 2xl:mt-[110px] 3xl:mt-[140px]">
       {/* title */}
-      <div className="grid grid-cols-2 gap-10">
+      <div className="flex grid-cols-2 flex-col gap-3 md:grid md:gap-10">
         <div className="flex flex-col gap-2">
-          <h5 className="font-hanken-grotesk text-sm font-medium uppercase leading-[21px] text-[#604D3C]">
+          <h5 className="text-sm font-medium uppercase leading-[21px] text-[#604D3C]">
             03 // SERVICES
           </h5>
-          <h3 className="font-hanken-grotesk text-4xl font-bold leading-[54px] text-[#111013]">
+          <h3 className="text-[20px] font-bold text-[#111013] md:text-[24px] lg:text-[32px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[54px]">
             Vị trí tuyển dụng
           </h3>
         </div>
         <div>
-          <p className="font-hanken-grotesk text-base font-normal leading-[28px] text-[#161519]">
-            We are passionate to create deeply connected brands, services, and
-            campaigns to enable stable and successful relationships between
-            businesses owners and our customers.
+          <p className="text-sm font-normal text-[#161519] md:text-base lg:text-[18px] lg:leading-[28px]">
+            Mục tiêu của chúng tôi là kiến tạo những mối quan hệ bền vững và
+            thành công giữa doanh nghiệp và khách hàng. Chúng tôi tập trung vào
+            việc xây dựng các thương hiệu, dịch vụ và chiến dịch tạo ra giá trị
+            lâu dài.
           </p>
         </div>
       </div>
       {/* list */}
-      <div className="grid grid-cols-4 gap-10 pt-[60px]">
+      <div className="mt-6 flex grid-cols-4 flex-col gap-y-6 md:mt-10 md:grid md:gap-x-5 md:gap-y-10 lg:gap-x-6 lg2:gap-x-8 xl:mt-[60px] 2xl:gap-x-10 2xl:gap-y-16 3xl:gap-y-24">
         {lists.map((item, index) => (
-          <div key={index} className="rounded-lg p-8 ">
-            <h4 className="text-[26px] font-medium leading-[108%] text-[#1A1B1F]">
+          <div key={index} className="rounded-lg">
+            <h4 className="text-[20px] font-semibold text-[#1A1B1F] md:text-[18px] lg:text-[24px] lg2:text-[26px] lg2:leading-[108%]">
               {item.title}
             </h4>
-            <p className="text-[16px] font-normal leading-[24px] text-[#161519] pt-[10px]">
+            <p className="pt-1 text-sm font-medium leading-[24px] text-[#161519] md:pt-2 lg:text-[16px] lg2:pt-[10px]">
               {item.description}
             </p>
-            <ul className="space-y-2 pt-[30px]">
+            <ul className="space-y-2 pt-2 md:pt-6 lg2:pt-[30px]">
               {item.request.map((req, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <span className="text-[#604D3C]">–</span>
-                  <span className="text-[18px] font-medium leading-[28px] text-[#1A1B1F]">
+                  <span className="text-sm font-medium text-[#1A1B1F] lg:text-base lg:leading-[28px] lg2:text-[18px]">
                     {req}
                   </span>
                 </li>
