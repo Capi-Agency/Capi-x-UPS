@@ -195,27 +195,6 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                                 </p>
                               </div>
                             </Link>
-                            <Link
-                              href="/nen-tang-cong-nghe"
-                              className="flex items-center"
-                            >
-                              <div className="relative h-6 w-6">
-                                <NextImg
-                                  src="/assets/icons/icon-nav8.svg"
-                                  alt="UPS"
-                                  objectFit="cover"
-                                />
-                              </div>
-
-                              <div className="ml-5">
-                                <p className="text-base font-semibold text-[#000]">
-                                  Nền tảng công nghệ
-                                </p>
-                                <p className="text-sm font-medium text-[rgba(0,0,0,0.68)]">
-                                  Vượt trội, nhanh chóng, dễ dàng
-                                </p>
-                              </div>
-                            </Link>
                           </div>
                           <div className="w-full">
                             <p className="text-left text-2xl font-semibold text-[#014227]">

@@ -140,28 +140,6 @@ const MenuMobile = ({ handleClose }: Props) => (
                       </p>
                     </div>
                   </Link>
-                  <Link
-                    href="/nen-tang-cong-nghe"
-                    className="flex items-center"
-                    onClick={handleClose}
-                  >
-                    <div className="relative h-6 w-6">
-                      <NextImg
-                        src="/assets/icons/icon-nav8.svg"
-                        alt="UPS"
-                        objectFit="cover"
-                      />
-                    </div>
-
-                    <div className="ml-5">
-                      <p className="text-sm font-semibold text-gray-100">
-                        Nền tảng công nghệ
-                      </p>
-                      <p className="text-sm font-medium text-gray-100">
-                        Vượt trội, nhanh chóng, dễ dàng
-                      </p>
-                    </div>
-                  </Link>
                 </div>
                 <div className="w-full">
                   <p className="text-left text-sm font-semibold text-gray-100">
