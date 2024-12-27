@@ -262,7 +262,7 @@ const MenuMobile = ({ handleClose }: Props) => (
                   Trung tâm đào tạo
                 </p>
                 <p className="text-sm font-medium text-gray-100">
-                  {/* Báo cáo phân tích nhanh nhất cùng UPS */}
+                  Trung tâm đào tạo và chia sẻ kiến thức
                 </p>
               </div>
             </Link>
