@@ -41,7 +41,7 @@ const CustomerReviews = (props: Props) => {
             Từ UPS với <span className="text-[#E50261]">Sự yêu thương</span>
           </h2>
         </div>
-        <div className="flex grid-cols-3 flex-col gap-7 md:grid md:gap-[30px] lg:gap-[35px] 2xl:gap-10 3xl:gap-[120px]">
+        <div className="flex grid-cols-3 flex-col items-start gap-7 md:grid md:gap-[30px] lg:gap-[35px] 2xl:gap-10 3xl:gap-[120px]">
           {lists &&
             lists.map((item: any, index: any) => {
               return (
@@ -57,17 +57,17 @@ const CustomerReviews = (props: Props) => {
                       className="rounded-full"
                     />
                   </div>
-                  <div className="rounded-[5px] bg-[rgba(144,145,156,0.15)] px-[8px] py-[4px]">
+                  <div className="rounded-[5px] bg-[rgba(144,145,156,0.15)] px-[8px] py-[4px] text-sm font-medium">
                     {item.tag}
                   </div>
-                  <p className="line-clamp-[9] text-center text-sm font-normal leading-[28px] text-[#283742] lg:text-base lg2:text-[18px]">
+                  <p className="text-center text-sm font-normal leading-[28px] text-[#283742] lg:text-base lg2:text-[18px]">
                     {item.content}
                   </p>
-                  <div className="flex flex-col items-center justify-center">
-                    <p className="text-sm font-semibold text-[#283742] md:text-base lg:text-[18px] lg2:leading-[24px]">
+                  <div className="flex flex-col items-center justify-center md:mt-1">
+                    <p className="text-sm font-bold text-[#283742] md:text-base lg:text-[18px] lg2:leading-[24px]">
                       {item.name}
                     </p>
-                    <p className="font-semibold leading-6 text-[#60606B] md:text-sm lg:text-base">
+                    <p className="text-sm text-[#60606B] lg:text-base lg:leading-6">
                       {item.position}
                     </p>
                   </div>
