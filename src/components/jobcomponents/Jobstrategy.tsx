@@ -42,7 +42,7 @@ const Jobstrategy = (props: Props) => {
                 <br className="hidden md:block" /> phát triển bền vững,
                 <br className="hidden md:block" /> vun đắp hạnh phúc
               </h2>
-              <p className="my-3 text-[18px] text-sm font-normal text-[#A6A6A6] md:my-6 md:text-base lg:leading-[28px] lg2:my-7 2xl:my-[32px]">
+              <p className="my-3 text-sm font-normal text-[#A6A6A6] md:my-6 md:text-base lg:text-[18px] lg:leading-[28px] lg2:my-7 2xl:my-[32px]">
                 UPS tin rằng, bằng việc đầu tư vào con người, chúng tôi sẽ xây
                 dựng được một đội ngũ nhân sự vững mạnh, giàu năng lực và đầy
                 nhiệt huyết, góp phần vào sự phát triển bền vững của công ty
@@ -65,7 +65,7 @@ const Jobstrategy = (props: Props) => {
           {/* col-right */}
           <div className="flex flex-col gap-5 md:gap-6 lg:gap-[30px] lg2:gap-[60px]">
             <div>
-              <p className="text-sm text-[#F9F9F9] md:text-base lg:text-lg">
+              <p className="text-sm text-[#A6A6A6] md:text-base lg:text-lg">
                 Chúng tôi tin rằng con người là cốt lõi của mọi doanh nghiệp và
                 là tiền đề của thành công, vì vậy chúng tôi chú trọng vào việc
                 tìm kiếm những tài năng trẻ, nhiệt huyết và đam mê phát triển

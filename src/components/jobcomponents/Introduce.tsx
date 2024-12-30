@@ -16,7 +16,7 @@ const Introduce = (props: Props) => {
     },
   ];
   return (
-    <div className="-mb-10 flex w-full items-end justify-end bg-[url('/assets/image/sectionJob.png')] bg-cover bg-center pt-[75%] md:h-[420px] md:pt-0 lg:-mb-[60px] lg:h-[560px] lg2:-mb-20 lg2:h-[680px] xl:-mb-[100px] 2xl:-mb-[120px] 3xl:-mb-[160px]">
+    <div className="-mb-10 flex w-full items-end justify-end bg-[url('/assets/image/SectionJob.png')] bg-cover bg-center pt-[75%] md:h-[420px] md:pt-0 lg:-mb-[60px] lg:h-[560px] lg2:-mb-20 lg2:h-[680px] xl:-mb-[100px] 2xl:-mb-[120px] 3xl:-mb-[160px]">
       <div className="custom-conatiner flex items-end justify-end md:pr-10 lg2:pr-20 xl:pr-[160px] 3xl:pr-[240px]">
         {items &&
           items.map((item: any, index: any) => {

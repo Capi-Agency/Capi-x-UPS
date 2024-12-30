@@ -101,7 +101,7 @@ const TheFooter = (props: Props) => {
                   />
                 </div>
               </button>
-              <p className="mt-6 hidden text-[16px] font-medium leading-[24px] text-[#6E767C] md:block">
+              <p className="mt-6 hidden text-sm font-medium text-[#6E767C] md:block lg:text-base">
                 Cảm ơn bạn đã tới với nền tảng giao dịch chứng khoán UP
               </p>
             </Link>
