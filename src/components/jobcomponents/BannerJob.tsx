@@ -20,7 +20,12 @@ const BannerJob = (props: Props) => {
     }
   };
   return (
-    <div className="relative z-0 mx-auto mt-11 md:mt-[52px] lg:mt-[60px] 2xl:mt-20">
+    <div
+      className="relative z-0 mx-auto mt-11 md:mt-[52px] lg:mt-[60px] 2xl:mt-20"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="700"
+    >
       <div className="custom-container">
         {/* video */}
         <div className="md:rounded-r-0 group relative w-full rounded-l-[16px] rounded-r-[16px] bg-black pt-[40%] md:h-[440px] md:w-[500px] md:pt-0 lg:h-[540px] lg:w-[674px] lg:rounded-l-[20px] lg2:h-[620px] lg2:w-[810px] lg2:rounded-l-[24px] xl:h-[660px] xl:w-[790px] 2xl:h-[700px] 2xl:w-[925px] 3xl:h-[750px] 3xl:w-[1068px]">

@@ -20,10 +20,14 @@ const Introduce = (props: Props) => {
       <div className="custom-conatiner flex items-end justify-end md:pr-10 lg2:pr-20 xl:pr-[160px] 3xl:pr-[240px]">
         {items &&
           items.map((item: any, index: any) => {
+            const delay = (index + 1) * 200;
             return (
               <div
                 key={index}
                 className={`p-5 md:px-[50px] md:py-5 lg:py-10 ${index == 0 ? 'bg-[#0AB358]' : 'bg-[#0F1B0E]'}`}
+                data-aos="fade-up"
+                data-aos-delay={delay}
+                data-aos-duration="700"
               >
                 <div className="flex items-center justify-start gap-1 md:gap-2">
                   <img

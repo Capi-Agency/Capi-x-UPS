@@ -31,7 +31,12 @@ const Jobstrategy = (props: Props) => {
       <div className="custom-container">
         <div className="grid gap-10 py-6 md:grid-cols-[284px,auto] md:gap-[60px] md:py-10 lg:grid-cols-[364px,auto] lg:gap-20 lg:py-[60px] lg2:grid-cols-[452px,auto] lg2:gap-[100px] lg2:py-20 2xl:grid-cols-[481px,auto] 2xl:gap-[120px] 2xl:py-[100px] 3xl:grid-cols-[520px,auto] 3xl:gap-[240px] 3xl:py-[120px]">
           {/* col-left */}
-          <div className="">
+          <div
+            className=""
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="700"
+          >
             <div className="">
               <h6 className="text-[14px] font-medium uppercase leading-[21px] text-[#FFF]">
                 Chiến lược nhân sự
@@ -63,7 +68,12 @@ const Jobstrategy = (props: Props) => {
             </div>
           </div>
           {/* col-right */}
-          <div className="flex flex-col gap-5 md:gap-6 lg:gap-[30px] lg2:gap-[60px]">
+          <div
+            className="flex flex-col gap-5 md:gap-6 lg:gap-[30px] lg2:gap-[60px]"
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-duration="700"
+          >
             <div>
               <p className="text-sm text-[#A6A6A6] md:text-base lg:text-lg">
                 Chúng tôi tin rằng con người là cốt lõi của mọi doanh nghiệp và

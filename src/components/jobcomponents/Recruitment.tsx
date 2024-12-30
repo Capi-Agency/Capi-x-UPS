@@ -93,7 +93,12 @@ const Recruitment = (props: Props) => {
   return (
     <div className="custom-container mt-10 md:mt-16 lg2:mt-[90px] 2xl:mt-[110px] 3xl:mt-[140px]">
       {/* title */}
-      <div className="flex grid-cols-2 flex-col gap-3 md:grid md:gap-10">
+      <div
+        className="flex grid-cols-2 flex-col gap-3 md:grid md:gap-10"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="700"
+      >
         <div className="flex flex-col gap-2">
           <h5 className="text-sm font-medium uppercase leading-[21px] text-[#604D3C]">
             03 // SERVICES
@@ -112,7 +117,12 @@ const Recruitment = (props: Props) => {
         </div>
       </div>
       {/* list */}
-      <div className="mt-6 flex grid-cols-4 flex-col gap-y-6 md:mt-10 md:grid md:gap-x-5 md:gap-y-10 lg:gap-x-6 lg2:gap-x-8 xl:mt-[60px] 2xl:gap-x-10 2xl:gap-y-16 3xl:gap-y-24">
+      <div
+        className="mt-6 flex grid-cols-4 flex-col gap-y-6 md:mt-10 md:grid md:gap-x-5 md:gap-y-10 lg:gap-x-6 lg2:gap-x-8 xl:mt-[60px] 2xl:gap-x-10 2xl:gap-y-16 3xl:gap-y-24"
+        data-aos="fade-up"
+        data-aos-delay="600"
+        data-aos-duration="700"
+      >
         {lists.map((item, index) => (
           <div key={index} className="rounded-lg">
             <h4 className="text-[20px] font-semibold text-[#1A1B1F] md:text-[18px] lg:text-[24px] lg2:text-[26px] lg2:leading-[108%]">

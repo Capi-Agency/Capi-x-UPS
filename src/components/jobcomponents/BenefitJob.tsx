@@ -38,18 +38,27 @@ const BenefitJob = (props: Props) => {
   ];
   return (
     <div className="custom-container mt-10 lg:mt-[60px] lg2:mt-[100px] 2xl:mt-[120px] 3xl:mt-[160px]">
-      <h1 className="text-[20px] font-bold text-[#000] md:text-[24px] lg:text-[32px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[48px] 2xl:leading-[54px]">
+      <h1
+        className="text-[20px] font-bold text-[#000] md:text-[24px] lg:text-[32px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[48px] 2xl:leading-[54px]"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="700"
+      >
         Điều tuyệt vời khi bạn
         <br />
         <span className="text-[#E50261]">Gia nhập UPS</span>
       </h1>
       <div className="mt-4 flex grid-cols-3 flex-col gap-3 md:mt-5 md:grid md:gap-4 lg:mt-10 lg:gap-6 xl:gap-8 2xl:mt-[60px] 3xl:gap-10">
         {lists.map((item: any, index: any) => {
+          const delay = (index + 1) * 200;
           return (
             <div
               key={index}
               className={`flex flex-col justify-end gap-[16px] rounded-2xl bg-cover bg-center bg-no-repeat p-[16px] pt-[40%] md:h-[250px] md:pt-0 lg:h-[320px] lg2:h-[360px] 2xl:h-[400px] 3xl:h-[430px] ${index === 0 ? 'col-span-2' : 'col-span-1'}`}
               style={{ backgroundImage: `url('${item.cover}')` }}
+              data-aos="fade-up"
+              data-aos-delay={delay}
+              data-aos-duration="700"
             >
               <div className="rounded-[12px] bg-[rgba(0,0,0,0.5)] p-3 lg:px-[24px] lg:py-[20px]">
                 <h3 className="text-[20px] font-semibold text-white md:text-[18px] lg:text-[24px] 2xl:text-[28px] 3xl:text-[32px] 3xl:leading-[40px]">

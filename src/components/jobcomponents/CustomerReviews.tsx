@@ -33,7 +33,12 @@ const CustomerReviews = (props: Props) => {
   return (
     <div className="mt-10 bg-[#F2F2F8] py-10 lg:py-[60px] lg2:mt-[60px] 2xl:mt-20 2xl:py-20 3xl:mt-[120px] 3xl:py-[100px]">
       <div className="custom-container">
-        <div className="pb-8 text-center">
+        <div
+          className="pb-8 text-center"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="700"
+        >
           <h5 className="pb-2 text-center text-[14px] font-medium uppercase leading-[150%] text-[#604D3C]">
             Nhân viên đánh giá
           </h5>
@@ -44,10 +49,14 @@ const CustomerReviews = (props: Props) => {
         <div className="flex grid-cols-3 flex-col items-start gap-7 md:grid md:gap-[30px] lg:gap-[35px] 2xl:gap-10 3xl:gap-[120px]">
           {lists &&
             lists.map((item: any, index: any) => {
+              const delay = (index + 1) * 200;
               return (
                 <div
                   key={index}
                   className="flex flex-col items-center justify-center gap-3 md:gap-[14px] lg:gap-4"
+                  data-aos="fade-up"
+                  data-aos-delay={delay}
+                  data-aos-duration="700"
                 >
                   <div className="relative h-[56px] w-[56px] rounded-full">
                     <NextImg

@@ -11,7 +11,7 @@ type Props = {
 };
 const Banner = ({ data }: Props) => {
   return (
-    <div className="relative mx-auto mt-[-15px] bg-[linear-gradient(180deg,#0E1A0D_82%,#060B06_100%)] pt-20 lg:pt-16 2xl:pt-[90px] 3xl:pt-[100px]">
+    <div className="relative mx-auto mt-[-15px] bg-[linear-gradient(180deg,#0E1A0D_82%,#060B06_100%)] pt-[70px] lg:pt-16 2xl:pt-[90px] 3xl:pt-[100px]">
       <div className="custom-container flex justify-center">
         <div className="mx-auto flex flex-col items-center justify-center">
           <div className="relative h-10 w-10 md:h-[56px] md:w-[56px]">

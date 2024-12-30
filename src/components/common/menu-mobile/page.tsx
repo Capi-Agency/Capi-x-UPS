@@ -21,7 +21,26 @@ const MenuMobile = ({ handleClose }: Props) => (
               NEW
             </span>
           </p>
+          <i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              className="transition-all duration-300 ease-in-out group-data-[state=open]:-rotate-180"
+            >
+              <path
+                d="M5 8L10 13L15 8"
+                stroke="white"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </i>
         </AccordionTrigger>
+
         <AccordionContent>
           <div className="flex flex-col gap-5 p-3">
             <ul className="flex flex-col gap-4">
@@ -178,6 +197,24 @@ const MenuMobile = ({ handleClose }: Props) => (
           >
             Đầu tư cùng UPS
           </p>
+          <i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              className="transition-all duration-300 ease-in-out group-data-[state=open]:-rotate-180"
+            >
+              <path
+                d="M5 8L10 13L15 8"
+                stroke="white"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </i>
         </AccordionTrigger>
         <AccordionContent>
           <div className="flex flex-col gap-5 p-3">
@@ -297,7 +334,7 @@ const MenuMobile = ({ handleClose }: Props) => (
           </div>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-6">
+      <AccordionItem value="item-3">
         <AccordionTrigger>
           <Link
             href="/nen-tang-cong-nghe"
@@ -313,6 +350,24 @@ const MenuMobile = ({ handleClose }: Props) => (
           <p title="Giới thiệu" className="text-sm font-bold text-gray-100">
             Về UPS
           </p>
+          <i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              className="transition-all duration-300 ease-in-out group-data-[state=open]:-rotate-180"
+            >
+              <path
+                d="M5 8L10 13L15 8"
+                stroke="white"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </i>
         </AccordionTrigger>
         <AccordionContent>
           <div className="flex flex-col gap-5 p-3">
@@ -496,7 +551,7 @@ const MenuMobile = ({ handleClose }: Props) => (
           </div>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-6">
+      <AccordionItem value="item-5">
         <AccordionTrigger>
           <Link
             href="#"
@@ -547,9 +602,9 @@ const AccordionItem = React.forwardRef(
 
 const AccordionTrigger = React.forwardRef(
   ({ children, className, ...props }: any, forwardedRef) => (
-    <Accordion.Header className="flex">
+    <Accordion.Header className="flex w-full">
       <Accordion.Trigger
-        className={cn('group', className)}
+        className={cn('group flex w-full justify-between', className)}
         {...props}
         ref={forwardedRef}
       >
