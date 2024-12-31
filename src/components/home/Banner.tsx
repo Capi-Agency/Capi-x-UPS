@@ -8,8 +8,9 @@ import MarqueeDemo from './Marquee';
 
 type Props = {
   data: any;
+  stocks: any;
 };
-const Banner = ({ data }: Props) => {
+const Banner = ({ data, stocks }: Props) => {
   return (
     <div className="relative mx-auto mt-[-15px] bg-[linear-gradient(180deg,#0E1A0D_82%,#060B06_100%)] pt-[70px] lg:pt-16 2xl:pt-[90px] 3xl:pt-[100px]">
       <div className="custom-container flex justify-center">
@@ -138,7 +139,7 @@ const Banner = ({ data }: Props) => {
         </Swiper>
       </div> */}
       <div>
-        <MarqueeDemo data={data} />
+        <MarqueeDemo data={data} stocks={stocks} />
       </div>
     </div>
   );

@@ -9,7 +9,6 @@ type Props = {
 };
 
 const SlideAbout = ({ data }: Props) => {
-  console.log('🚀 ~ SlideAbout ~ data:', data);
   const swiperRef = useRef<any>(null);
 
   return (

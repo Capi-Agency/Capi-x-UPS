@@ -10,17 +10,22 @@ import 'aos/dist/aos.css';
 import { fnGetHomePage } from '@/services/page';
 import UdemyHome from '@/components/home/Udemy';
 import { Metadata, ResolvingMetadata } from 'next';
+import { getStock } from '@/services/stock';
 
 export default async function HomePage() {
   const data = await fnGetHomePage();
+  const stocks = await getStock();
   const dataHome = data?.data?.data?.pages_by_id?.raw_content;
+
   return (
     <div>
       {dataHome &&
         dataHome?.contents.map((datasection: any, index: number) => {
           return (
             <div key={index}>
-              {datasection.banner && <Banner data={datasection.banner} />}
+              {datasection.banner && (
+                <Banner data={datasection.banner} stocks={stocks} />
+              )}
               {datasection.ads_images && (
                 <SlideHome data={datasection.ads_images} />
               )}

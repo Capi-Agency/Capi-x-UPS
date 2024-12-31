@@ -1,9 +1,10 @@
 import { cn } from '@/lib/utils';
 import Marquee from '@/components/ui/marquee';
 import { useRef, useState } from 'react';
-
+import { getStockName } from '@/utils/utils';
 type Props = {
   data: any;
+  stocks: any;
 };
 
 const ReviewCard = (item: any) => {
@@ -56,38 +57,21 @@ const ReviewCard = (item: any) => {
           <img
             className="h-8 w-8 rounded-full lg:h-[60px] lg:w-[60px]"
             alt=""
-            src={process.env.REACT_APP_IMG_URL + item.logo}
+            src={`/assets/image/${item?.sym}.svg`}
           />
           <div className="flex flex-col">
             <p className="text-xs font-medium text-[#8D9595] group-hover/card:text-white lg:text-base">
-              {item.name}
+              {getStockName(item?.sym)}
             </p>
           </div>
         </div>
         <div>
           <span
-            className={`font-hanken-grotesk mt-2 flex items-start text-base font-medium leading-normal ${item.status === 'up' ? 'text-[#075728] group-hover/card:text-[#05BE5A]' : 'text-[#E8053B] opacity-60 group-hover/card:opacity-100'} lg:text-2xl lg2:text-3xl`}
+            className={`font-hanken-grotesk mt-2 flex items-start text-base font-medium leading-normal text-[#075728] group-hover/card:text-[#05BE5A] lg:text-2xl lg2:text-3xl`}
           >
-            {item.count}{' '}
-            {item.status === 'up' ? (
-              <i className="mt-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="h-4 w-4 lg:h-6 lg:w-6"
-                  fill="none"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M18.7595 5.98952C18.7595 5.7906 18.6805 5.59984 18.5398 5.45919C18.3991 5.31853 18.2084 5.23952 18.0095 5.23952L9.42519 5.23952C9.01098 5.23952 8.67519 5.5753 8.67519 5.98952C8.67519 6.40373 9.01098 6.73952 9.42519 6.73952L16.1993 6.73952L5.4586 17.4802C5.16571 17.7731 5.16571 18.2479 5.4586 18.5408C5.75149 18.8337 6.22637 18.8337 6.51926 18.5408L17.2595 7.80062V14.5738C17.2595 14.988 17.5953 15.3238 18.0095 15.3238C18.4237 15.3238 18.7595 14.988 18.7595 14.5738L18.7595 5.98952Z"
-                    fill="#075728"
-                    className={`group-hover/card:fill-[#05BE5A]`}
-                  />
-                </svg>
-              </i>
+            {item?.avePrice}{' '}
+            {/* {item.status === 'up' ? (
+              ""
             ) : (
               <i className="mt-1">
                 <svg
@@ -107,7 +91,25 @@ const ReviewCard = (item: any) => {
                   />
                 </svg>
               </i>
-            )}
+            )} */}
+            <i className="mt-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="h-4 w-4 lg:h-6 lg:w-6"
+                fill="none"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M18.7595 5.98952C18.7595 5.7906 18.6805 5.59984 18.5398 5.45919C18.3991 5.31853 18.2084 5.23952 18.0095 5.23952L9.42519 5.23952C9.01098 5.23952 8.67519 5.5753 8.67519 5.98952C8.67519 6.40373 9.01098 6.73952 9.42519 6.73952L16.1993 6.73952L5.4586 17.4802C5.16571 17.7731 5.16571 18.2479 5.4586 18.5408C5.75149 18.8337 6.22637 18.8337 6.51926 18.5408L17.2595 7.80062V14.5738C17.2595 14.988 17.5953 15.3238 18.0095 15.3238C18.4237 15.3238 18.7595 14.988 18.7595 14.5738L18.7595 5.98952Z"
+                  fill="#075728"
+                  className={`group-hover/card:fill-[#05BE5A]`}
+                />
+              </svg>
+            </i>
           </span>
         </div>
         <div
@@ -126,9 +128,9 @@ const ReviewCard = (item: any) => {
   );
 };
 
-const MarqueeDemo = ({ data }: Props) => {
-  const firstRow = data.stocks.slice(0, data.stocks.length / 2);
-  const secondRow = data.stocks.slice(data.stocks.length / 2);
+const MarqueeDemo = ({ data, stocks }: Props) => {
+  // const firstRow = data.stocks.slice(0, data.stocks.length / 2);
+  // const secondRow = data.stocks.slice(data.stocks.length / 2);
 
   return (
     <div className="relative mt-[30px] flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-lg md:mt-10 md:shadow-xl lg:mt-8 lg2:mt-10 xl:mt-[52px] 2xl:mt-20 3xl:mt-[100px]">
@@ -137,9 +139,9 @@ const MarqueeDemo = ({ data }: Props) => {
         className="pb-3 [--duration:20s] lg:pb-5 xl:pb-6"
         repeat={10}
       >
-        {firstRow.map(({ item }: any, index: number) => (
-          <ReviewCard key={index} {...item} />
-        ))}
+        {stocks?.map((item: any, index: number) => {
+          return <ReviewCard key={index} {...item} />;
+        })}
       </Marquee>
       <Marquee
         reverse
@@ -147,7 +149,7 @@ const MarqueeDemo = ({ data }: Props) => {
         className="!md:mb-10 mb-[22px] [--duration:20s] lg:mb-12 lg2:mb-8 xl:mb-[34px] 2xl:mb-11 3xl:mb-[54px]"
         repeat={10}
       >
-        {secondRow.map(({ item }: any, index: number) => (
+        {stocks?.map((item: any, index: number) => (
           <ReviewCard key={index} {...item} />
         ))}
       </Marquee>
