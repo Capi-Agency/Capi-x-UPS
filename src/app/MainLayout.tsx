@@ -10,7 +10,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <TheHeader isOpen={isOpen} setIsOpen={setIsOpen} />
       <div
-        className={`${isOpen ? 'pt-[130px]' : 'pt-[45px]'} md:pt-14 lg:pt-16 xl:pt-[70px]`}
+        className={`${isOpen ? 'pt-[110px]' : 'pt-[45px]'} md:pt-14 lg:pt-16 xl:pt-[70px]`}
       >
         {children}
       </div>
