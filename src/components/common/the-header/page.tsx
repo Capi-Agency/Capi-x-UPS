@@ -17,6 +17,8 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [bgColor, setBgColor] = useState('#0E1A0D');
   const [bgBtn, setbgBtn] = useState('#02E56A');
+  const [colorText, setcolorText] = useState('#15171E');
+  const [fillIcon, setFillIcon] = useState('#014227');
   const pathname = usePathname();
   const handleClose = () => {
     setIsMenuOpen(false);
@@ -46,6 +48,12 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
   }, [isMenuOpen]);
   useEffect(() => {
     switch (pathname) {
+      case '/uu-dai':
+        setBgColor('bg-[#130007]');
+        setbgBtn('#F51666');
+        setcolorText('#FFF');
+        setFillIcon('#FFF');
+        break;
       case '/nen-tang-cong-nghe':
         setBgColor('bg-[#000]');
         setbgBtn('#02E56A');
@@ -54,6 +62,7 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
         setBgColor('bg-[#1B0C01]');
         setbgBtn('#02E56A');
         break;
+
       case '/tu-van':
         setBgColor('bg-[#080F25]');
         setbgBtn('#02E56A');
@@ -69,6 +78,8 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
       default:
         setBgColor('bg-[#0F1B0E]');
         setbgBtn('#02E56A');
+        setcolorText('#15171E');
+        setFillIcon('#014227');
         break;
     }
   }, [pathname]);
@@ -305,7 +316,7 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                             Trung tâm đào tạo
                           </p>
                           <p className="text-sm font-medium text-[rgba(0,0,0,0.68)]">
-                          Trung tâm đào tạo và chia sẻ kiến thức
+                            Trung tâm đào tạo và chia sẻ kiến thức
                           </p>
                         </div>
                       </Link>
@@ -655,15 +666,25 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                     className=""
                     title="Mở tài khoản ngay"
                   >
-                    <button className={`btn active !bg-[${bgBtn}]`}>
+                    <button
+                      className={`btn active !bg-[${bgBtn}] !text-[${colorText}]`}
+                    >
                       Mở tài khoản ngay
-                      <div className="relative h-6 w-6">
-                        <NextImg
-                          src="/assets/icons/UPs.svg"
-                          alt="Capi"
-                          objectFit="cover"
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        className="size-4 lg:size-6"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.7589 5.98952C18.7589 5.7906 18.6799 5.59984 18.5393 5.45919C18.3986 5.31853 18.2078 5.23952 18.0089 5.23952L9.42466 5.23952C9.01045 5.23952 8.67466 5.5753 8.67466 5.98952C8.67466 6.40373 9.01045 6.73952 9.42466 6.73952L16.1987 6.73952L5.45807 17.4802C5.16517 17.7731 5.16517 18.2479 5.45807 18.5408C5.75096 18.8337 6.22583 18.8337 6.51873 18.5408L17.2589 7.80062V14.5738C17.2589 14.988 17.5947 15.3238 18.0089 15.3238C18.4231 15.3238 18.7589 14.988 18.7589 14.5738L18.7589 5.98952Z"
+                          fill={`${fillIcon}`}
                         />
-                      </div>
+                      </svg>
                     </button>
                   </Link>
                 </li>
@@ -675,15 +696,25 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                     className="hidden md:block"
                     title="Mở tài khoản ngay"
                   >
-                    <button className={`btn active !bg-[${bgBtn}]`}>
+                    <button
+                      className={`btn active !bg-[${bgBtn}] !text-[${colorText}]`}
+                    >
                       Mở tài khoản ngay
-                      <div className="relative h-4 w-4 lg:h-6 lg:w-6">
-                        <NextImg
-                          src="/assets/icons/UPs.svg"
-                          alt="Capi"
-                          objectFit="cover"
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        className="size-4 lg:size-6"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.7589 5.98952C18.7589 5.7906 18.6799 5.59984 18.5393 5.45919C18.3986 5.31853 18.2078 5.23952 18.0089 5.23952L9.42466 5.23952C9.01045 5.23952 8.67466 5.5753 8.67466 5.98952C8.67466 6.40373 9.01045 6.73952 9.42466 6.73952L16.1987 6.73952L5.45807 17.4802C5.16517 17.7731 5.16517 18.2479 5.45807 18.5408C5.75096 18.8337 6.22583 18.8337 6.51873 18.5408L17.2589 7.80062V14.5738C17.2589 14.988 17.5947 15.3238 18.0089 15.3238C18.4231 15.3238 18.7589 14.988 18.7589 14.5738L18.7589 5.98952Z"
+                          fill={`${fillIcon}`}
                         />
-                      </div>
+                      </svg>
                     </button>
                   </Link>
                   <Link

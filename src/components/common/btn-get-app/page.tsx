@@ -34,7 +34,7 @@ const ButtonGetApp = ({ isOpen, setIsOpen }: ButtonGetAppProps) => {
     <div className={`block bg-[#EEF] shadow-md md:hidden`}>
       {isOpen ? (
         <div className="px-4 py-3">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <button onClick={() => setIsOpen(false)}>
                 <svg

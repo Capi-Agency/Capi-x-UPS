@@ -51,7 +51,7 @@ const Support = ({ data }: Props) => {
                       </div>
                     </div>
                     <div className={`flex flex-col`}>
-                      <span className="mr-8 text-sm font-semibold leading-normal text-[#15171E] lg:text-base lg:leading-[24px] lg2:text-[30px] lg2:leading-9">
+                      <span className="mr-[54px] text-sm font-semibold leading-normal text-[#15171E] lg:mr-[62px] lg:text-base lg:leading-[24px] lg2:text-[30px] lg2:leading-9">
                         {question?.ask}
                       </span>
                       <div
