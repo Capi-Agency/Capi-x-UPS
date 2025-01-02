@@ -676,9 +676,7 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                     className=""
                     title="Mở tài khoản ngay"
                   >
-                    <button
-                      className={`btn active !bg-[${bgBtn}] !text-[${colorText}]`}
-                    >
+                    <button className={`btn bg-[${bgBtn}] text-[${colorText}]`}>
                       Mở tài khoản ngay
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -706,9 +704,7 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
                     className="hidden md:block"
                     title="Mở tài khoản ngay"
                   >
-                    <button
-                      className={`btn active !bg-[${bgBtn}] !text-[${colorText}]`}
-                    >
+                    <button className={`btn bg-[${bgBtn}] text-[${colorText}]`}>
                       Mở tài khoản ngay
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

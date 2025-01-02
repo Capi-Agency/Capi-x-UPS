@@ -48,7 +48,7 @@ const CourseActicle = ({ data }: Props) => {
         })}
       </div>
       <button
-        className="btn active1 mx-auto mt-6 !bg-[#15171E] !text-[#FFF] lg:mt-[50px]"
+        className="btn mx-auto mt-6 bg-[#15171E] text-[#FFF] lg:mt-[50px]"
         data-aos="fade-up"
         data-aos-delay="400"
         data-aos-duration="700"
