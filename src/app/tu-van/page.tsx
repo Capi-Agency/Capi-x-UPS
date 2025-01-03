@@ -13,10 +13,10 @@ const AdvisePage = (props: Props) => {
   return (
     <div>
       <BannerAdvise />
-      <NetworkAdvise />
+      {/* <NetworkAdvise /> */}
       <ServiceAdvise />
-      <EvaluateAdvise />
-      <ContentAdvise />
+      {/* <EvaluateAdvise />
+      <ContentAdvise /> */}
       <LogoAdvise />
     </div>
   );
