@@ -8,48 +8,173 @@ type Props = {
   data: any;
 };
 
-const UserManual = ({ data }: Props) => {
-  const apps = [
-    { id: 1, name: 'Nền tảng Website' },
-    { id: 2, name: 'Nền tảng App Di động' },
-    { id: 3, name: 'Nạp tiền đầu tư' },
-    { id: 4, name: 'Đặt lệnh đầu tư' },
-  ];
+const apps = [
+  {
+    id: 1,
+    name: 'Nền tảng Website',
+    appIcon: '/assets/icons/illustration-1.svg',
+    stepTitle: 'Dễ dàng tham dự.',
+    steps: [
+      {
+        icon: '/assets/icons/vantay.svg',
+        title: '1. Tạo tài khoản tức thì với UPS',
+        description: (
+          <>
+            <span className="font-bold">UPS</span> giúp bạn trở thành nhà đầu tư
+            ngay chỉ với 3 bước ngay trên thiết bị của bạn.
+            <span className="font-bold"> Tới trang tạo tài khoản.</span>
+          </>
+        ),
+      },
+      {
+        icon: '/assets/icons/TreeStructure.svg',
+        title: '2. Nạp tiền đầu tư',
+        description: (
+          <>
+            Thao tác nạp tiền nhanh chóng vào tài khoản đầu tư chỉ với 1 bước
+            đơn giản ngay trên{' '}
+            <span className="font-bold">trang nạp tiền đầu tư.</span>
+          </>
+        ),
+      },
+      {
+        icon: '/assets/icons/FlagBanner.svg',
+        title: '3. Đặt lệnh đầu tư',
+        description: (
+          <>
+            Bắt đầu mua bán các sản phẩm cổ phiếu mà bạn yêu thích.{' '}
+            <span className="font-bold">Tới trang đặt lệnh đầu tư.</span>
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Nền tảng App Di động',
+    appIcon: '/assets/icons/illustration-3.svg',
+    stepTitle: 'Tiện lợi sử dụng.',
+    steps: [
+      {
+        icon: '/assets/icons/vantay.svg',
+        title: '1. Cập nhật thông tin thị trường',
+        description: (
+          <>
+            Không bỏ lỡ bất kỳ cơ hội đầu tư nào với tính năng{' '}
+            <span className="font-bold">
+              cập nhật thông tin thị trường tức thời.
+            </span>
+          </>
+        ),
+      },
+      {
+        icon: '/assets/icons/TreeStructure.svg',
+        title: '2. Giao diện trực quan, dễ sử dụng',
+        description: (
+          <>
+            Trải nghiệm giao dịch mượt mà với giao diện trực quan, được thiết kế{' '}
+            <span className="font-bold">tối ưu hóa cho mọi thao tác.</span>
+          </>
+        ),
+      },
+      {
+        icon: '/assets/icons/FlagBanner.svg',
+        title: '3. Quản lý danh mục đầu tư',
+        description: (
+          <>
+            Xây dựng và tối đa hóa lợi nhuận đầu tư một cách{' '}
+            <span className="font-bold">linh hoạt</span>, đáp ứng mọi nhu cầu
+            đầu tư.
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Nộp tiền đầu tư',
+    appIcon: '/assets/icons/illustration-2.svg',
+    stepTitle: 'Đa dạng phương thức.',
+    steps: [
+      {
+        icon: '/assets/icons/vantay.svg',
+        title: '1. Nộp tiền nhanh qua tài khoản định danh',
+        description: (
+          <>
+            Tiết kiệm thời gian với tính năng nộp tiền nhanh qua tài khoản định
+            danh, giúp bạn bắt đầu{' '}
+            <span className="font-bold">giao dịch ngay lập tức.</span>
+          </>
+        ),
+      },
+      {
+        icon: '/assets/icons/TreeStructure.svg',
+        title: '2. Nộp tiền thông thường',
+        description: (
+          <>
+            Nộp tiền <span className="font-bold">an toàn và bảo mật, </span>
+            tuân thủ các quy định của pháp luật.
+          </>
+        ),
+      },
+      {
+        icon: '/assets/icons/FlagBanner.svg',
+        title: '3. Nộp tiền bằng QR code',
+        description: (
+          <>
+            Trải nghiệm nộp tiền{' '}
+            <span className="font-bold">mượt mà, nhanh chóng </span>với tính
+            năng quét mã QR thông minh.
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: 'Đặt lệnh đầu tư',
+    appIcon: '/assets/icons/illustration-4.svg',
+    stepTitle: 'Đặt lệnh nhanh chóng.',
+    steps: [
+      {
+        icon: '/assets/icons/vantay.svg',
+        title: '1. Thời gian giao dịch',
+        description: (
+          <>
+            <span className="font-bold">
+              Tiết kiệm thời gian, tối đa hóa lợi nhuận
+            </span>{' '}
+            giúp bạn nắm bắt cơ hội đầu tư ngay khi thị trường có biến động.
+          </>
+        ),
+      },
+      {
+        icon: '/assets/icons/TreeStructure.svg',
+        title: '2. Các loại lệnh giao dịch',
+        description: (
+          <>
+            Mang đến chiến lược đầu tư khác nhau,{' '}
+            <span className="font-bold">phù hợp</span> với từng phong cách và
+            mục tiêu của nhà đầu tư.
+          </>
+        ),
+      },
+      {
+        icon: '/assets/icons/FlagBanner.svg',
+        title: '3. Phương thức giao dịch',
+        description: (
+          <>
+            Trải nghiệm phương thức giao dịch{' '}
+            <span className="font-bold">mượt mà, nhanh chóng</span> giúp bạn nắm
+            bắt cơ hội đầu tư ngay tức thì.
+          </>
+        ),
+      },
+    ],
+  },
+];
 
-  const steps = [
-    {
-      icon: '/assets/icons/vantay.svg',
-      title: '1. Tạo tài khoản tức thì với UPS',
-      description: (
-        <>
-          <span className="font-bold">UPS</span> giúp bạn trở thành nhà đầu tư
-          ngay chỉ với 3 bước ngay trên thiết bị của bạn.
-          <span className="font-bold"> Tới trang tạo tài khoản</span>
-        </>
-      ),
-    },
-    {
-      icon: '/assets/icons/TreeStructure.svg',
-      title: '2. Nạp tiền đầu tư',
-      description: (
-        <>
-          Thao tác nạp tiền nhanh chóng vào tài khoản đầu tư chỉ với 1 bước đơn
-          giản ngay trên{' '}
-          <span className="font-bold">trang nạp tiền đầu tư</span>
-        </>
-      ),
-    },
-    {
-      icon: '/assets/icons/FlagBanner.svg',
-      title: '3. Đặt lệnh đầu tư',
-      description: (
-        <>
-          Bắt đầu mua bán các sản phẩm cổ phiếu mà bạn yêu thích.{' '}
-          <span className="font-bold">Tới trang đặt lệnh đầu tư</span>
-        </>
-      ),
-    },
-  ];
+const UserManual = ({ data }: Props) => {
   const [currentApp, setCurrentApp] = useState<number>(apps[0].id);
 
   const handleAppClick = (value: string) => {
@@ -57,415 +182,107 @@ const UserManual = ({ data }: Props) => {
   };
 
   const renderApp = () => {
-    switch (currentApp) {
-      case 1:
-        return (
-          <>
-            <div
-              className="hidden flex-col gap-6 md:col-span-1 md:flex lg:col-span-3"
-              data-aos="fade-up"
-              data-aos-delay="400"
-              data-aos-duration="700"
-            >
-              <div className="rounded-2xl bg-[#0F1B0E] sm:p-5 lg2:p-8 2xl:p-10">
-                <div className="relative mx-auto w-full rounded-br-2xl md:h-[200px] lg2:h-[290px] lg2:w-full 3xl:h-[344px]">
-                  <NextImg
-                    src="/assets/icons/illustration-2.svg"
-                    alt="Capi"
-                    objectFit="contain"
-                    className=""
-                  />
-                </div>
-                <div className="mt-5 flex flex-col gap-5">
-                  <div className="flex flex-col gap-2">
-                    <span className="font-bold leading-[140%] -tracking-[0.42px] text-[#FFF] md:text-sm lg:text-base">
-                      Hành trình của bạn
-                    </span>
-                    <TooltipProgress percentage={93} />
-                  </div>
-                  <p className="text-sm leading-[27px%] -tracking-[0.32px] text-[#FFF] lg:text-base">
-                    Chào mừng bạn đã tới UPS, tạo tài khoản ngay để không bỏ lỡ
-                    cơ hội đầu tư.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-2xl bg-[#0F1B0E] py-5 sm:px-5 lg2:px-8 2xl:px-10">
-                <p className="leading-[27px] tracking-[0.32px] text-[#FFF] md:text-sm lg:text-base">
-                  Hoặc đăng ký qua{' '}
-                  <span className="font-bold text-[#02E56A]">Tổng đài UPS</span>
-                </p>
-              </div>
+    const currentAppData = apps.find((app) => app.id === currentApp);
+
+    if (!currentAppData || !currentAppData.steps) return null;
+    return (
+      <>
+        <div
+          className="hidden flex-col gap-6 md:col-span-1 md:flex lg:col-span-3"
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="700"
+        >
+          <div className="rounded-2xl bg-[#0F1B0E] sm:p-5 lg2:p-8 2xl:p-10">
+            <div className="relative mx-auto w-full rounded-br-2xl md:h-[200px] lg2:h-[290px] lg2:w-full 3xl:h-[344px]">
+              <NextImg
+                src={`${currentAppData?.appIcon}`}
+                alt="Capi"
+                objectFit="contain"
+                className=""
+              />
             </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="600"
-              data-aos-duration="700"
-              className="md:col-span-2 lg:col-span-3"
-            >
-              <span className="hidden font-bold leading-normal text-[#111013] md:block md:text-[24px] lg2:text-[30px]">
-                Dễ dàng tham dự.
-              </span>
-              <div className="flex flex-col md:grid md:grid-cols-3 md:gap-5 lg:flex lg:flex-col">
-                {steps.map((step, index) => (
-                  <div key={index}>
-                    <div className="mt-6 flex flex-row items-center gap-4 md:flex-col md:items-start lg:mt-5 lg2:mt-6 3xl:mt-8">
-                      <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#F3F3FB] lg:h-[50px] lg:w-[50px] lg2:h-[60px] lg2:w-[60px]">
-                        <div
-                          className={`relative w-9 lg2:h-6 ${
-                            index === 0 ? 'h-5' : 'h-4'
-                          }`}
-                        >
-                          <NextImg
-                            src={step.icon}
-                            alt="Capi"
-                            objectFit="contain"
-                          />
-                        </div>
-                      </div>
-                      <span className="text-[14px] font-bold text-[#111013] md:text-base lg:leading-[30px] lg2:text-[20px]">
-                        {step.title}
-                      </span>
-                    </div>
-                    <p className="mt-4 text-[14px] leading-[28px] tracking-[0.36px] text-[#111013] md:text-base lg:mt-2 lg2:text-[18px]">
-                      {step.description}
-                    </p>
-                  </div>
-                ))}
+            <div className="mt-5 flex flex-col gap-5">
+              <div className="flex flex-col gap-2">
+                <span className="font-bold leading-[140%] -tracking-[0.42px] text-[#FFF] md:text-sm lg:text-base">
+                  Hành trình của bạn
+                </span>
+                <TooltipProgress percentage={93} />
               </div>
-              <div className="mt-6 flex flex-col gap-3 md:hidden">
-                <p className="text-[14px] tracking-[0.28px] text-[#161519]">
-                  Tìm kiểu thêm các hướng dẫn khác của{' '}
-                  <span className="font-bold">UPS</span>
-                </p>
-                <div>
-                  <button className="btn active !bg-[#014227] !text-[#02E56A]">
-                    Hướng dẫn khác
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      className="h-4 w-4 lg:h-6 lg:w-6"
+              <p className="text-sm leading-[27px%] -tracking-[0.32px] text-[#FFF] lg:text-base">
+                Chào mừng bạn đã tới UPS, tạo tài khoản ngay để không bỏ lỡ cơ
+                hội đầu tư.
+              </p>
+            </div>
+          </div>
+          <div className="rounded-2xl bg-[#0F1B0E] py-5 sm:px-5 lg2:px-8 2xl:px-10">
+            <p className="leading-[27px] tracking-[0.32px] text-[#FFF] md:text-sm lg:text-base">
+              Hoặc đăng ký qua{' '}
+              <span className="font-bold text-[#02E56A]">Tổng đài UPS</span>
+            </p>
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="700"
+          className="md:col-span-2 lg:col-span-3"
+        >
+          <span className="hidden font-bold leading-normal text-[#111013] md:block md:text-[24px] lg2:text-[30px]">
+            {currentAppData?.stepTitle}
+          </span>
+          <div className="flex flex-col md:grid md:grid-cols-3 md:gap-5 lg:flex lg:flex-col">
+            {currentAppData?.steps.map((step, index) => (
+              <div key={index}>
+                <div className="mt-6 flex flex-row items-center gap-4 md:flex-col md:items-start lg:mt-5 lg2:mt-6 3xl:mt-8">
+                  <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#F3F3FB] lg:h-[50px] lg:w-[50px] lg2:h-[60px] lg2:w-[60px]">
+                    <div
+                      className={`relative w-9 lg2:h-6 ${
+                        index === 0 ? 'h-5' : 'h-4'
+                      }`}
                     >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M18.7595 5.98943C18.7595 5.79051 18.6804 5.59975 18.5398 5.4591C18.3991 5.31844 18.2084 5.23943 18.0095 5.23943L9.42518 5.23943C9.01096 5.23943 8.67518 5.57521 8.67518 5.98943C8.67518 6.40364 9.01096 6.73943 9.42518 6.73943L16.1992 6.73943L5.45858 17.4801C5.16569 17.773 5.16569 18.2478 5.45858 18.5407C5.75148 18.8336 6.22635 18.8336 6.51925 18.5407L17.2595 7.80053V14.5737C17.2595 14.9879 17.5952 15.3237 18.0095 15.3237C18.4237 15.3237 18.7595 14.9879 18.7595 14.5737L18.7595 5.98943Z"
-                        fill="#02E56A"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </>
-        );
-      case 2:
-        return (
-          <>
-            <div
-              className="hidden flex-col gap-6 md:col-span-1 md:flex lg:col-span-3"
-              data-aos="fade-up"
-              data-aos-delay="400"
-              data-aos-duration="700"
-            >
-              <div className="rounded-2xl bg-[#0F1B0E] sm:p-5 lg2:p-8 2xl:p-10">
-                <div className="relative mx-auto w-full rounded-br-2xl md:h-[200px] lg2:h-[290px] lg2:w-full 3xl:h-[344px]">
-                  <NextImg
-                    src="/assets/icons/illustration-2.svg"
-                    alt="Capi"
-                    objectFit="contain"
-                    className=""
-                  />
-                </div>
-                <div className="mt-5 flex flex-col gap-5">
-                  <div className="flex flex-col gap-2">
-                    <span className="font-bold leading-[140%] -tracking-[0.42px] text-[#FFF] md:text-sm lg:text-base">
-                      Hành trình của bạn
-                    </span>
-                    <TooltipProgress percentage={93} />
-                  </div>
-                  <p className="text-sm leading-[27px%] -tracking-[0.32px] text-[#FFF] lg:text-base">
-                    Chào mừng bạn đã tới UPS, tạo tài khoản ngay để không bỏ lỡ
-                    cơ hội đầu tư.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-2xl bg-[#0F1B0E] py-5 sm:px-5 lg2:px-8 2xl:px-10">
-                <p className="leading-[27px] tracking-[0.32px] text-[#FFF] md:text-sm lg:text-base">
-                  Hoặc đăng ký qua{' '}
-                  <span className="font-bold text-[#02E56A]">Tổng đài UPS</span>
-                </p>
-              </div>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="600"
-              data-aos-duration="700"
-              className="md:col-span-2 lg:col-span-3"
-            >
-              <span className="hidden font-bold leading-normal text-[#111013] md:block md:text-[24px] lg2:text-[30px]">
-                Dễ dàng tham dự.
-              </span>
-              <div className="flex flex-col md:grid md:grid-cols-3 md:gap-5 lg:flex lg:flex-col">
-                {steps.map((step, index) => (
-                  <div key={index}>
-                    <div className="mt-6 flex flex-row items-center gap-4 md:flex-col md:items-start lg:mt-5 lg2:mt-6 3xl:mt-8">
-                      <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#F3F3FB] lg:h-[50px] lg:w-[50px] lg2:h-[60px] lg2:w-[60px]">
-                        <div
-                          className={`relative w-9 lg2:h-6 ${
-                            index === 0 ? 'h-5' : 'h-4'
-                          }`}
-                        >
-                          <NextImg
-                            src={step.icon}
-                            alt="Capi"
-                            objectFit="contain"
-                          />
-                        </div>
-                      </div>
-                      <span className="text-[14px] font-bold text-[#111013] md:text-base lg:leading-[30px] lg2:text-[20px]">
-                        {step.title}
-                      </span>
+                      <NextImg src={step?.icon} alt="Capi" objectFit="contain" />
                     </div>
-                    <p className="mt-4 text-[14px] leading-[28px] tracking-[0.36px] text-[#111013] md:text-base lg:mt-2 lg2:text-[18px]">
-                      {step.description}
-                    </p>
                   </div>
-                ))}
-              </div>
-              <div className="mt-6 flex flex-col gap-3 md:hidden">
-                <p className="text-[14px] tracking-[0.28px] text-[#161519]">
-                  Tìm kiểu thêm các hướng dẫn khác của{' '}
-                  <span className="font-bold">UPS</span>
-                </p>
-                <div>
-                  <button className="btn active !bg-[#014227] !text-[#02E56A]">
-                    Hướng dẫn khác
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      className="h-4 w-4 lg:h-6 lg:w-6"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M18.7595 5.98943C18.7595 5.79051 18.6804 5.59975 18.5398 5.4591C18.3991 5.31844 18.2084 5.23943 18.0095 5.23943L9.42518 5.23943C9.01096 5.23943 8.67518 5.57521 8.67518 5.98943C8.67518 6.40364 9.01096 6.73943 9.42518 6.73943L16.1992 6.73943L5.45858 17.4801C5.16569 17.773 5.16569 18.2478 5.45858 18.5407C5.75148 18.8336 6.22635 18.8336 6.51925 18.5407L17.2595 7.80053V14.5737C17.2595 14.9879 17.5952 15.3237 18.0095 15.3237C18.4237 15.3237 18.7595 14.9879 18.7595 14.5737L18.7595 5.98943Z"
-                        fill="#02E56A"
-                      />
-                    </svg>
-                  </button>
+                  <span className="text-[14px] font-bold text-[#111013] md:text-base lg:leading-[30px] lg2:text-[20px]">
+                    {step?.title}
+                  </span>
                 </div>
+                <p className="mt-4 text-[14px] leading-[28px] tracking-[0.36px] text-[#111013] md:text-base lg:mt-2 lg2:text-[18px]">
+                  {step?.description}
+                </p>
               </div>
-            </div>
-          </>
-        );
-      case 3:
-        return (
-          <>
-            <div
-              className="hidden flex-col gap-6 md:col-span-1 md:flex lg:col-span-3"
-              data-aos="fade-up"
-              data-aos-delay="400"
-              data-aos-duration="700"
-            >
-              <div className="rounded-2xl bg-[#0F1B0E] sm:p-5 lg2:p-8 2xl:p-10">
-                <div className="relative mx-auto w-full rounded-br-2xl md:h-[200px] lg2:h-[290px] lg2:w-full 3xl:h-[344px]">
-                  <NextImg
-                    src="/assets/icons/illustration-2.svg"
-                    alt="Capi"
-                    objectFit="contain"
-                    className=""
+            ))}
+          </div>
+          <div className="mt-6 flex flex-col gap-3 md:hidden">
+            <p className="text-[14px] tracking-[0.28px] text-[#161519]">
+              Tìm kiểu thêm các hướng dẫn khác của{' '}
+              <span className="font-bold">UPS</span>
+            </p>
+            <div>
+              <button className="btn active !bg-[#014227] !text-[#02E56A]">
+                Hướng dẫn khác
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-4 w-4 lg:h-6 lg:w-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M18.7595 5.98943C18.7595 5.79051 18.6804 5.59975 18.5398 5.4591C18.3991 5.31844 18.2084 5.23943 18.0095 5.23943L9.42518 5.23943C9.01096 5.23943 8.67518 5.57521 8.67518 5.98943C8.67518 6.40364 9.01096 6.73943 9.42518 6.73943L16.1992 6.73943L5.45858 17.4801C5.16569 17.773 5.16569 18.2478 5.45858 18.5407C5.75148 18.8336 6.22635 18.8336 6.51925 18.5407L17.2595 7.80053V14.5737C17.2595 14.9879 17.5952 15.3237 18.0095 15.3237C18.4237 15.3237 18.7595 14.9879 18.7595 14.5737L18.7595 5.98943Z"
+                    fill="#02E56A"
                   />
-                </div>
-                <div className="mt-5 flex flex-col gap-5">
-                  <div className="flex flex-col gap-2">
-                    <span className="font-bold leading-[140%] -tracking-[0.42px] text-[#FFF] md:text-sm lg:text-base">
-                      Hành trình của bạn
-                    </span>
-                    <TooltipProgress percentage={93} />
-                  </div>
-                  <p className="text-sm leading-[27px%] -tracking-[0.32px] text-[#FFF] lg:text-base">
-                    Chào mừng bạn đã tới UPS, tạo tài khoản ngay để không bỏ lỡ
-                    cơ hội đầu tư.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-2xl bg-[#0F1B0E] py-5 sm:px-5 lg2:px-8 2xl:px-10">
-                <p className="leading-[27px] tracking-[0.32px] text-[#FFF] md:text-sm lg:text-base">
-                  Hoặc đăng ký qua{' '}
-                  <span className="font-bold text-[#02E56A]">Tổng đài UPS</span>
-                </p>
-              </div>
+                </svg>
+              </button>
             </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="600"
-              data-aos-duration="700"
-              className="md:col-span-2 lg:col-span-3"
-            >
-              <span className="hidden font-bold leading-normal text-[#111013] md:block md:text-[24px] lg2:text-[30px]">
-                Dễ dàng tham dự.
-              </span>
-              <div className="flex flex-col md:grid md:grid-cols-3 md:gap-5 lg:flex lg:flex-col">
-                {steps.map((step, index) => (
-                  <div key={index}>
-                    <div className="mt-6 flex flex-row items-center gap-4 md:flex-col md:items-start lg:mt-5 lg2:mt-6 3xl:mt-8">
-                      <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#F3F3FB] lg:h-[50px] lg:w-[50px] lg2:h-[60px] lg2:w-[60px]">
-                        <div
-                          className={`relative w-9 lg2:h-6 ${
-                            index === 0 ? 'h-5' : 'h-4'
-                          }`}
-                        >
-                          <NextImg
-                            src={step.icon}
-                            alt="Capi"
-                            objectFit="contain"
-                          />
-                        </div>
-                      </div>
-                      <span className="text-[14px] font-bold text-[#111013] md:text-base lg:leading-[30px] lg2:text-[20px]">
-                        {step.title}
-                      </span>
-                    </div>
-                    <p className="mt-4 text-[14px] leading-[28px] tracking-[0.36px] text-[#111013] md:text-base lg:mt-2 lg2:text-[18px]">
-                      {step.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 flex flex-col gap-3 md:hidden">
-                <p className="text-[14px] tracking-[0.28px] text-[#161519]">
-                  Tìm kiểu thêm các hướng dẫn khác của{' '}
-                  <span className="font-bold">UPS</span>
-                </p>
-                <div>
-                  <button className="btn active !bg-[#014227] !text-[#02E56A]">
-                    Hướng dẫn khác
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      className="h-4 w-4 lg:h-6 lg:w-6"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M18.7595 5.98943C18.7595 5.79051 18.6804 5.59975 18.5398 5.4591C18.3991 5.31844 18.2084 5.23943 18.0095 5.23943L9.42518 5.23943C9.01096 5.23943 8.67518 5.57521 8.67518 5.98943C8.67518 6.40364 9.01096 6.73943 9.42518 6.73943L16.1992 6.73943L5.45858 17.4801C5.16569 17.773 5.16569 18.2478 5.45858 18.5407C5.75148 18.8336 6.22635 18.8336 6.51925 18.5407L17.2595 7.80053V14.5737C17.2595 14.9879 17.5952 15.3237 18.0095 15.3237C18.4237 15.3237 18.7595 14.9879 18.7595 14.5737L18.7595 5.98943Z"
-                        fill="#02E56A"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </>
-        );
-      case 4:
-        return (
-          <>
-            <div
-              className="hidden flex-col gap-6 md:col-span-1 md:flex lg:col-span-3"
-              data-aos="fade-up"
-              data-aos-delay="400"
-              data-aos-duration="700"
-            >
-              <div className="rounded-2xl bg-[#0F1B0E] sm:p-5 lg2:p-8 2xl:p-10">
-                <div className="relative mx-auto w-full rounded-br-2xl md:h-[200px] lg2:h-[290px] lg2:w-full 3xl:h-[344px]">
-                  <NextImg
-                    src="/assets/icons/illustration-2.svg"
-                    alt="Capi"
-                    objectFit="contain"
-                    className=""
-                  />
-                </div>
-                <div className="mt-5 flex flex-col gap-5">
-                  <div className="flex flex-col gap-2">
-                    <span className="font-bold leading-[140%] -tracking-[0.42px] text-[#FFF] md:text-sm lg:text-base">
-                      Hành trình của bạn
-                    </span>
-                    <TooltipProgress percentage={93} />
-                  </div>
-                  <p className="text-sm leading-[27px%] -tracking-[0.32px] text-[#FFF] lg:text-base">
-                    Chào mừng bạn đã tới UPS, tạo tài khoản ngay để không bỏ lỡ
-                    cơ hội đầu tư.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-2xl bg-[#0F1B0E] py-5 sm:px-5 lg2:px-8 2xl:px-10">
-                <p className="leading-[27px] tracking-[0.32px] text-[#FFF] md:text-sm lg:text-base">
-                  Hoặc đăng ký qua{' '}
-                  <span className="font-bold text-[#02E56A]">Tổng đài UPS</span>
-                </p>
-              </div>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="600"
-              data-aos-duration="700"
-              className="md:col-span-2 lg:col-span-3"
-            >
-              <span className="hidden font-bold leading-normal text-[#111013] md:block md:text-[24px] lg2:text-[30px]">
-                Dễ dàng tham dự.
-              </span>
-              <div className="flex flex-col md:grid md:grid-cols-3 md:gap-5 lg:flex lg:flex-col">
-                {steps.map((step, index) => (
-                  <div key={index}>
-                    <div className="mt-6 flex flex-row items-center gap-4 md:flex-col md:items-start lg:mt-5 lg2:mt-6 3xl:mt-8">
-                      <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#F3F3FB] lg:h-[50px] lg:w-[50px] lg2:h-[60px] lg2:w-[60px]">
-                        <div
-                          className={`relative w-9 lg2:h-6 ${
-                            index === 0 ? 'h-5' : 'h-4'
-                          }`}
-                        >
-                          <NextImg
-                            src={step.icon}
-                            alt="Capi"
-                            objectFit="contain"
-                          />
-                        </div>
-                      </div>
-                      <span className="text-[14px] font-bold text-[#111013] md:text-base lg:leading-[30px] lg2:text-[20px]">
-                        {step.title}
-                      </span>
-                    </div>
-                    <p className="mt-4 text-[14px] leading-[28px] tracking-[0.36px] text-[#111013] md:text-base lg:mt-2 lg2:text-[18px]">
-                      {step.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 flex flex-col gap-3 md:hidden">
-                <p className="text-[14px] tracking-[0.28px] text-[#161519]">
-                  Tìm kiểu thêm các hướng dẫn khác của{' '}
-                  <span className="font-bold">UPS</span>
-                </p>
-                <div>
-                  <button className="btn active !bg-[#014227] !text-[#02E56A]">
-                    Hướng dẫn khác
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      className="h-4 w-4 lg:h-6 lg:w-6"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M18.7595 5.98943C18.7595 5.79051 18.6804 5.59975 18.5398 5.4591C18.3991 5.31844 18.2084 5.23943 18.0095 5.23943L9.42518 5.23943C9.01096 5.23943 8.67518 5.57521 8.67518 5.98943C8.67518 6.40364 9.01096 6.73943 9.42518 6.73943L16.1992 6.73943L5.45858 17.4801C5.16569 17.773 5.16569 18.2478 5.45858 18.5407C5.75148 18.8336 6.22635 18.8336 6.51925 18.5407L17.2595 7.80053V14.5737C17.2595 14.9879 17.5952 15.3237 18.0095 15.3237C18.4237 15.3237 18.7595 14.9879 18.7595 14.5737L18.7595 5.98943Z"
-                        fill="#02E56A"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </>
-        );
-      default:
-        return null;
-    }
+          </div>
+        </div>
+      </>
+    );
   };
+
   return (
     <>
       <div className="bg-[linear-gradient(180deg,#FFF_0%,#F3F3FB_100%)] py-10 lg:py-[60px] xl:py-20 2xl:py-[100px] 3xl:py-[160px]">

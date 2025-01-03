@@ -7,7 +7,7 @@ type Props = {};
 
 const BannerAdvise = (props: Props) => {
   const videoRef = useRef<any>(null);
-  const [isPlaying, setPlay] = useState<boolean>(false);
+  const [isPlaying, setPlay] = useState<boolean>(true);
   const handleVideo = () => {
     if (isPlaying == true) {
       videoRef.current.pause();
@@ -42,7 +42,7 @@ const BannerAdvise = (props: Props) => {
         data-aos-duration="700"
         className="h-full w-full md:absolute md:left-0 md:top-0"
       >
-        <div className="custom-container_uu_dai flex h-full max-w-[calc(100%-0px)] flex-col items-stretch justify-end md:flex-row">
+        <div className="custom-container_uu_dai flex h-full flex-col items-stretch justify-end md:flex-row">
           <div className="flex h-full w-full flex-col justify-center gap-3 bg-black/80 px-6 py-10 md:w-[342px] md:gap-2 md:px-8 md:py-0 lg:w-[452px] lg:gap-[10px] lg:px-10 lg2:w-[492px] xl:w-[522px] xl:px-[60px] 2xl:w-[532px]">
             <button
               className="size-fit rounded-full shadow-[0px_0px_0px_12px_rgba(144,145,156,0.20)]"
