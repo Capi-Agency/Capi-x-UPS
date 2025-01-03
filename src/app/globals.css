@@ -217,38 +217,16 @@
     display: inline-block;
     position: relative;
     transition: background-size 0.8s ease;
-    background-image: linear-gradient(180deg, transparent 95%, #fff 0);
+    background-image: linear-gradient(
+      180deg,
+      transparent 95%,
+      var(--link-color, #9babb6) 0
+    );
     background-repeat: no-repeat;
     background-size: 0 100%;
   }
 
   .link-effect:hover {
-    background-size: 100% 100%;
-  }
-
-  .link-effect-g {
-    display: inline-block;
-    position: relative;
-    transition: background-size 0.8s ease;
-    background-image: linear-gradient(180deg, transparent 95%, #9babb6 0);
-    background-repeat: no-repeat;
-    background-size: 0 100%;
-  }
-
-  .link-effect-g:hover {
-    background-size: 100% 100%;
-  }
-
-  .link-effect-b {
-    display: inline-block;
-    position: relative;
-    transition: background-size 0.8s ease;
-    background-image: linear-gradient(180deg, transparent 95%, #080808 0);
-    background-repeat: no-repeat;
-    background-size: 0 100%;
-  }
-
-  .link-effect-b:hover {
     background-size: 100% 100%;
   }
   .gradient1 {

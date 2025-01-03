@@ -1,70 +1,115 @@
 import React from 'react';
 import NextImg from '../common/next-img';
+import { cn } from '@/lib/utils';
 
 type Props = {};
+const items = [
+  {
+    titles: ['Dịch vụ', 'Thị trường vốn', '(ECM)'],
+    items: [
+      'Tư vấn toàn diện về phát hành và pháp lý',
+      'Hỗ trợ huy động vốn hiệu quả',
+      'Bảo lãnh phát hành chuyên nghiệp',
+    ],
+    imgSrc: '/assets/image/tv-card1.png',
+  },
+  {
+    titles: ['Dịch vụ', 'Thị trường nợ', '(DCM)'],
+    items: [
+      'Tư vấn phát hành trái phiếu toàn diện',
+      'Hỗ trợ phân phối và khảo sát nhu cầu thị trường',
+      'Bảo lãnh phát hành trái phiếu',
+    ],
+    imgSrc: '/assets/image/tv-card2.png',
+  },
+  {
+    titles: ['Tư vấn', 'M&A'],
+    items: [
+      'Hỗ trợ chuyên sâu trong đàm phán và pháp lý',
+      'Khai thác cơ hội đầu tư đa dạng',
+      'Dịch vụ M&A toàn diện',
+    ],
+    imgSrc: '/assets/image/tv-card3.png',
+  },
+  {
+    titles: ['Tư vấn', 'Tài chính doanh nghiệp'],
+    items: [
+      'Tư vấn phát hành công cụ nợ',
+      'Dịch vụ tư vấn cổ phần hóa',
+      'Hỗ trợ niêm yết',
+    ],
+    imgSrc: '/assets/image/tv-card4.png',
+  },
+];
 
 const ServiceAdvise = (props: Props) => {
   return (
-    <div className="custom-container my-10 lg:my-[60px] lg2:my-[80px] xl:my-[100px] 3xl:my-[120px]">
-      <div
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="700"
-        className="relative flex w-full flex-col items-center gap-5 overflow-hidden rounded-[12px] bg-black p-0 md:flex-row md:gap-0 md:rounded-[20px] md:p-[44px_38px] lg:rounded-[24px] lg:p-[42px] lg2:rounded-[32px] lg2:p-[55px_50px] 2xl:rounded-[40px]"
-      >
-        <div
-          data-aos="fade-up"
-          data-aos-delay="400"
-          data-aos-duration="700"
-          className="flex w-full basis-full flex-col gap-5 p-5 md:basis-5/12 md:gap-10 md:p-0 lg:basis-[40%] lg2:basis-4/12 2xl:basis-[28%] 3xl:basis-[24%]"
-        >
-          <div className="space-y-2 md:space-y-4">
-            <div className="text-xl font-bold text-white md:text-2xl lg:text-[32px] lg:leading-[1.3] lg2:text-[40px]">
-              Tìm kiếm đối tác <br className="hidden md:block" />
-              đồng hành?
-            </div>
-            <div className="text-sm font-medium leading-[1.58] text-white md:text-base lg:text-lg">
-              Đừng chần chờ, hãy để UPS đồng hành cùng doanh nghiệp của bạn
-            </div>
-          </div>
-
-          <button className="btn w-fit bg-[#00D7B0] text-sm text-black lg:text-lg">
-            Liên hệ tư vấn
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="size-4 lg:size-6"
-              fill="none"
+    <div className="custom-container mt-10 lg:mt-[60px] lg2:mt-20 2xl:mt-[100px] 3xl:mt-[120px]">
+      <div className="text-center">
+        <h2 className="text-[20px] font-semibold text-[#1D1E22] md:text-[24px] lg:text-[32px] lg2:text-[40px]">
+          Dịch vụ cốt lõi đối tác xứng tầm <br /> Giải pháp chiến lược cho doanh
+          nghiệp phát triển bền vững
+        </h2>
+        <p className="mt-3 text-sm font-medium text-[#535662] md:text-[16px]">
+          Hỗ trợ từ thoái vốn, M&A đến niêm yết và giao dịch chứng khoán.
+        </p>
+      </div>
+      <div className="mt-6 flex grid-cols-2 flex-col md:mt-8 md:grid lg:mt-10 lg2:mt-[60px]">
+        {items.map((item, index) => {
+          const delay = ((index % 4) + 1) * 200;
+          return (
+            <div
+              key={index}
+              className={cn(
+                'flex flex-col rounded-[12px] p-5 md:rounded-[20px] lg:rounded-[24px] lg:p-10 lg2:rounded-[32px] lg2:p-[50px] 2xl:rounded-[40px] 2xl:p-[60px] 3xl:p-16',
+                index === items.length - 1
+                  ? 'bg-[#01372E] text-[#FFF]'
+                  : 'bg-[#FFF] text-[#020D31]',
+                index === 0 && 'bg-[#F3F3F3]',
+              )}
+              data-aos="fade-up"
+              data-aos-delay={delay}
+              data-aos-duration="700"
             >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M18.7589 5.98952C18.7589 5.7906 18.6799 5.59984 18.5393 5.45919C18.3986 5.31853 18.2078 5.23952 18.0089 5.23952L9.42466 5.23952C9.01045 5.23952 8.67466 5.5753 8.67466 5.98952C8.67466 6.40373 9.01045 6.73952 9.42466 6.73952L16.1987 6.73952L5.45807 17.4802C5.16517 17.7731 5.16517 18.2479 5.45807 18.5408C5.75096 18.8337 6.22583 18.8337 6.51873 18.5408L17.2589 7.80062V14.5738C17.2589 14.988 17.5947 15.3238 18.0089 15.3238C18.4231 15.3238 18.7589 14.988 18.7589 14.5738L18.7589 5.98952Z"
-                fill="black"
-              />
-            </svg>
-          </button>
-        </div>
+              <div className="">
+                {item.titles.map((title) => (
+                  <p className="inline text-[20px] font-semibold md:block lg:text-[24px] lg2:text-[28px]">
+                    {title}{' '}
+                  </p>
+                ))}
+              </div>
 
-        <div
-          data-aos="fade-up"
-          data-aos-delay="600"
-          data-aos-duration="700"
-          className="relative h-[240px] w-[342px] md:absolute md:right-[20px] md:top-[28px] md:block md:h-[279px] md:w-[359px] lg:right-[42px] lg:top-[19px] lg:h-[358px] lg:w-[460px] lg2:right-[63px] lg2:top-[15px] lg2:h-[424px] lg2:w-[544px] 2xl:right-[63px] 2xl:top-[-5px] 2xl:h-[463px] 2xl:w-[594px]"
-        >
-          <div className="absolute left-0 top-0 h-[266px] w-full md:h-full">
-            <div className="relative h-full w-full">
-              <NextImg
-                src="/assets/image/services_advise_image.png"
-                alt="UPS"
-                objectFit="cover"
-                className=""
-              />
+              <div className="mt-3 flex flex-col gap-[6px] md:mt-6 lg:mt-8 lg2:mt-10">
+                {item.items.map((subItem, subIndex) => (
+                  <div key={subIndex} className="flex items-center gap-3">
+                    <div className="size-2 min-h-2 min-w-2 rotate-45 bg-[#00D7B0]"></div>
+                    <span className="text-sm font-medium lg:text-base">
+                      {subItem}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-3 md:mt-6 lg:mt-8 lg2:mt-10">
+                <button
+                  className={cn(
+                    'lg:link-effect text-sm font-bold text-[#00D7B0] underline lg:text-base lg:no-underline',
+                  )}
+                  style={{ '--link-color': '#00D7B0' } as React.CSSProperties}
+                >
+                  Xem thêm
+                </button>
+              </div>
+              <div className="relative mt-5 h-[190px] w-full md:h-[215px] lg:mt-10 lg:h-[273px] lg2:h-[345px] xl:h-[356px] 2xl:h-[424px]">
+                <NextImg
+                  src={item.imgSrc}
+                  alt="Capi"
+                  objectFit="contain"
+                  className="object-right"
+                />
+              </div>
             </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </div>
   );

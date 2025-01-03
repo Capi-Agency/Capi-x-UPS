@@ -68,10 +68,10 @@ const TheHeader = ({ isOpen, setIsOpen }: TheHeaderProps) => {
         break;
 
       case '/tu-van':
-        setBgColor('bg-[#080F25]');
-        setbgBtn('#02E56A');
-        setcolorText('#15171E');
-        setFillIcon('#014227');
+        setBgColor('bg-[#000]');
+        setbgBtn('#00D7B0');
+        setcolorText('#000');
+        setFillIcon('#000');
         break;
       case '/co-phieu':
         setBgColor('border-b-[1px] border-[#D0F500] bg-black');

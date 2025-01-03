@@ -49,7 +49,7 @@ const ReviewCard = ({ img }: { img: string }) => {
         <div className="flex flex-row items-center gap-5">
           <img
             alt=""
-            className="h-[56px] cursor-pointer object-contain grayscale transition-all duration-200 hover:grayscale-0"
+            className="h-10 cursor-pointer object-contain grayscale transition-all duration-200 hover:grayscale-0 lg:h-[50px] lg2:h-[56px]"
             src={img}
           />
         </div>
@@ -60,8 +60,8 @@ const ReviewCard = ({ img }: { img: string }) => {
 
 export function MarqueEvaluate() {
   return (
-    <div className="relative mt-[112px] flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee className="[--duration:20s] [--gap:3rem] pb-8" repeat={10}>
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+      <Marquee className="pb-8 [--duration:20s] [--gap:3rem]" repeat={10}>
         {firstRow.map((review) => (
           <ReviewCard key={review.id} {...review} />
         ))}

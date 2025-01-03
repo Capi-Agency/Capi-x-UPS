@@ -250,7 +250,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/co-phieu"
-                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Cổ phiếu
                     </a>
@@ -258,7 +258,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="#"
-                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Ưu đãi
                     </a>
@@ -266,7 +266,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/bieu-phi"
-                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Biểu phí giao dịch
                     </a>
@@ -284,7 +284,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/tu-van"
-                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Tư vấn tài chính
                     </a>
@@ -292,7 +292,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/tin-tuc/tin-dau-gia"
-                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Tin đấu giá
                     </a>
@@ -310,7 +310,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="#"
-                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Bản tin thị trường
                     </a>
@@ -318,7 +318,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="#"
-                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Báo cáo
                     </a>
@@ -326,7 +326,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="#"
-                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Trung tâm kiến thức
                     </a>
@@ -344,7 +344,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/gioi-thieu"
-                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Về chúng tôi
                     </a>
@@ -352,7 +352,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/tin-tuc"
-                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Tin UPS
                     </a>
@@ -360,7 +360,7 @@ const TheFooter = (props: Props) => {
                   <li>
                     <a
                       href="/tuyen-dung"
-                      className="link-effect-g text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
+                      className="link-effect text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Gia nhập UPS
                     </a>

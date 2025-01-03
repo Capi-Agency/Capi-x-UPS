@@ -28,6 +28,7 @@ const BannerAdvise = (props: Props) => {
         className="h-full w-full object-cover"
         muted
         loop
+        autoPlay
         ref={videoRef}
       >
         <source src="/assets/image/video_job.mp4" type="video/mp4" />
