@@ -129,27 +129,28 @@ const ReviewCard = (item: any) => {
 };
 
 const MarqueeDemo = ({ data, stocks }: Props) => {
-  // const firstRow = data.stocks.slice(0, data.stocks.length / 2);
-  // const secondRow = data.stocks.slice(data.stocks.length / 2);
+
+  const firstRow = stocks.slice(0, 14);
+  const secondRow = stocks.slice(15, stocks.length);
 
   return (
     <div className="relative mt-[30px] flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-lg md:mt-10 md:shadow-xl lg:mt-8 lg2:mt-10 xl:mt-[52px] 2xl:mt-20 3xl:mt-[100px]">
       <Marquee
         pauseOnHover
-        className="pb-3 [--duration:20s] lg:pb-5 xl:pb-6"
+        className="pb-3 [--duration:100s] lg:pb-5 xl:pb-6"
         repeat={10}
       >
-        {stocks?.map((item: any, index: number) => {
+        {firstRow?.map((item: any, index: number) => {
           return <ReviewCard key={index} {...item} />;
         })}
       </Marquee>
       <Marquee
         reverse
         pauseOnHover
-        className="!md:mb-10 mb-[22px] [--duration:20s] lg:mb-12 lg2:mb-8 xl:mb-[34px] 2xl:mb-11 3xl:mb-[54px]"
+        className="!md:mb-10 mb-[22px] [--duration:100s] lg:mb-12 lg2:mb-8 xl:mb-[34px] 2xl:mb-11 3xl:mb-[54px]"
         repeat={10}
       >
-        {stocks?.map((item: any, index: number) => (
+        {secondRow?.map((item: any, index: number) => (
           <ReviewCard key={index} {...item} />
         ))}
       </Marquee>
