@@ -45,8 +45,13 @@ const items = [
 const ServiceAdvise = (props: Props) => {
   return (
     <div className="custom-container mt-10 lg:mt-[60px] lg2:mt-20 2xl:mt-[100px] 3xl:mt-[120px]">
-      <div className="text-center">
-        <h2 className="text-[20px] font-semibold text-[#1D1E22] md:text-[24px] lg:text-[32px] lg2:text-[40px]">
+      <div
+        className="text-center"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="700"
+      >
+        <h2 className="text-[20px] font-semibold leading-[1.3] text-[#1D1E22] md:text-[24px] lg:text-[32px] lg2:text-[40px]">
           Dịch vụ cốt lõi đối tác xứng tầm <br /> Giải pháp chiến lược cho doanh
           nghiệp phát triển bền vững
         </h2>

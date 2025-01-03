@@ -325,7 +325,7 @@ const TheFooter = (props: Props) => {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/khoa-hoc"
                       className="link-effect text-[14px] font-medium leading-normal text-[#9BABB6] lg:text-base"
                     >
                       Trung tâm kiến thức

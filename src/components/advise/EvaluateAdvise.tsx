@@ -9,7 +9,7 @@ const EvaluateAdvise = (props: Props) => {
     <div className="mt-10 bg-[#000] lg:mt-[60px] lg2:mt-20 xl:mt-[100px] 3xl:mt-[120px]">
       <div className="custom-container py-10 lg:py-[60px] lg2:py-20 xl:py-[100px] 3xl:py-[120px]">
         <div className="flex flex-col gap-[30px] md:grid md:grid-cols-[auto,384px] lg:grid-cols-[auto,520px] lg2:grid-cols-[auto,638px] 2xl:grid-cols-[auto,778px] 3xl:grid-cols-[auto,938px]">
-          <div>
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
             <div className="rounded-[12px] bg-[#131414] py-[30px] md:py-5 lg:rounded-[24px] lg:py-8 lg2:rounded-[32px] lg2:py-10 2xl:py-[52px]">
               <div className="relative mx-auto h-[44px] w-[200px] lg2:h-[56px] lg2:w-[246px]">
                 <NextImg
@@ -36,9 +36,9 @@ const EvaluateAdvise = (props: Props) => {
               </div>
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="700">
             <div className="rounded-[12px] bg-[#131414] py-5 md:rounded-[20px] lg:rounded-[24px] lg:py-8 lg2:rounded-[32px] lg2:py-10">
-              <div className="mb-5 px-5 text-right md:mb-6 lg:mb-[88px] lg:px-8 lg2:mb-[102px] lg2:px-10 2xl:mb-[112px]">
+              <div className="mb-16 px-5 text-right md:mb-6 lg:mb-[88px] lg:px-8 lg2:mb-[102px] lg2:px-10 2xl:mb-[112px]">
                 <span className="text-[18px] font-medium leading-[28px] text-[#00E7FF]">
                   Đối tác
                 </span>
