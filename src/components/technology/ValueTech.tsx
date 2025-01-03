@@ -1,9 +1,19 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 import NextImg from '../common/next-img';
+import Link from 'next/link';
 
-type Props = {};
+type Props = {
+  data: any;
+};
 
-const ValueTech = (props: Props) => {
+const ValueTech = ({ data }: Props) => {
+  const [render, setRender] = useState(false);
+
+  useEffect(() => {
+    setRender(true);
+  }, []);
+
   return (
     <section className="custom-container mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[120px] 3xl:!max-w-[calc(1280px+48px)]">
       <div className="flex w-full flex-col items-start gap-6 text-black md:flex-row 2xl:gap-10">
@@ -15,17 +25,18 @@ const ValueTech = (props: Props) => {
         >
           <div className="flex w-full flex-col gap-4 xl:gap-5 2xl:gap-6">
             <div className="text-xl font-bold leading-[1.3] text-[#141414] lg:text-[30px] xl:text-[40px] 2xl:text-5xl 3xl:leading-[54px]">
-              Trao niềm tin <br />
-              Nhận giá trị
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: render && data?.title,
+                }}
+              ></span>
             </div>
             <div className="w-full text-sm font-medium text-[#111013] lg:text-base xl:text-lg 2xl:w-[86%]">
-              Ứng dụng chứng khoán UPS mang đến trải nghiệm giao dịch nhanh
-              chóng, an toàn và tiện lợi chưa từng có. Với nhiều ưu đãi hấp dẫn,
-              đầu tư trở nên dễ dàng hơn bao giờ hết.
+              {data?.sub_title}
             </div>
-            <div>
+            <Link href={data?.cta?.url}>
               <button className="btn bg-gradient-to-b from-[#FDF2CB] to-[#DABB6B]">
-                Khám phá ngay
+                {data?.cta?.text}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -42,7 +53,7 @@ const ValueTech = (props: Props) => {
                   />
                 </svg>
               </button>
-            </div>
+            </Link>
           </div>
         </div>
 
@@ -57,69 +68,35 @@ const ValueTech = (props: Props) => {
             <div className="flex flex-col gap-3 lg:gap-5 xl:gap-6">
               <div className="space-y-3 lg:space-y-4">
                 <div className="text-sm font-medium text-[#1A1711] lg:text-base 2xl:text-lg 3xl:leading-[40px]">
-                  Mở tài khoản
+                  {data?.card_1?.hashtag}
                 </div>
                 <div className="text-xl font-bold text-[#1A1711] lg:text-[30px] xl:text-[40px] 2xl:text-6xl">
-                  Miễn phí
+                  {data?.card_1?.title}
                 </div>
               </div>
 
               <div className="text-sm font-medium text-[#1A1711] md:min-h-[50px] lg:text-base 2xl:min-h-[56px] 2xl:text-lg">
-                Tạo tài khoản eKYC đơn giản, nhanh chóng
+                {data?.card_1?.sub_title}
               </div>
 
               <div className="flex w-full flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <div className="relative size-4 xl:size-[18px]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                    >
-                      <g clipPath="url(#clip0_5941_98349)">
-                        <path
-                          d="M6.7498 12.1492L3.5998 8.99922L2.5498 10.0492L6.7498 14.2492L15.7498 5.24922L14.6998 4.19922L6.7498 12.1492Z"
-                          fill="#1A1711"
+                {data?.card_1?.item_list?.map(({ item }: any, index: any) => {
+                  return (
+                    <div className="flex items-center gap-2" key={index}>
+                      <div className="relative size-4 xl:size-[18px]">
+                        <NextImg
+                          src={process.env.REACT_APP_IMG_URL + item?.icon}
+                          alt="UPS"
+                          className="object-cover"
                         />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_5941_98349">
-                          <rect width="18" height="18" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
+                      </div>
 
-                  <div className="text-sm font-normal text-[#1A1711] lg:text-base 2xl:text-lg">
-                    Giao dịch nhanh chóng
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <div className="relative size-4 xl:size-[18px]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                    >
-                      <g clipPath="url(#clip0_5941_98349)">
-                        <path
-                          d="M6.7498 12.1492L3.5998 8.99922L2.5498 10.0492L6.7498 14.2492L15.7498 5.24922L14.6998 4.19922L6.7498 12.1492Z"
-                          fill="#1A1711"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_5941_98349">
-                          <rect width="18" height="18" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-
-                  <div className="text-sm font-normal text-[#1A1711] lg:text-base 2xl:text-lg">
-                    Cá nhân hóa
-                  </div>
-                </div>
+                      <div className="text-sm font-normal text-[#1A1711] lg:text-base 2xl:text-lg">
+                        {item?.title}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -134,71 +111,38 @@ const ValueTech = (props: Props) => {
             <div className="flex flex-col gap-3 lg:gap-5 xl:gap-6">
               <div className="space-y-3 lg:space-y-4">
                 <div className="text-sm font-medium text-white lg:text-base 2xl:text-lg 3xl:leading-[40px]">
-                  Giao dịch ký quỹ
+                  {data?.card_2?.hashtag}
                 </div>
                 <div className="text-xl font-bold text-white lg:text-[30px] xl:text-[40px] 2xl:text-6xl">
-                  12%
+                  {data?.card_2?.title}
                   <span className="text-sm font-bold text-white lg:text-2xl xl:text-[32px]">
-                    /năm
+                    {data?.card_2?.title_highlight}
                   </span>
                 </div>
               </div>
 
               <div className="text-sm font-medium text-white md:min-h-[50px] lg:text-base 2xl:min-h-[56px] 2xl:text-lg">
-                Lãi suất cho vay hấp dẫn, linh hoạt
+                {data?.card_2?.sub_title}
               </div>
 
               <div className="flex w-full flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <div className="relative size-4 xl:size-[18px]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                    >
-                      <g clipPath="url(#clip0_5941_98349)">
-                        <path
-                          d="M6.7498 12.1492L3.5998 8.99922L2.5498 10.0492L6.7498 14.2492L15.7498 5.24922L14.6998 4.19922L6.7498 12.1492Z"
-                          fill="#E8D193"
+                {data?.card_2?.item_list?.map(({ item }: any, index: any) => {
+                  return (
+                    <div className="flex items-center gap-2" key={index}>
+                      <div className="relative size-4 xl:size-[18px]">
+                        <NextImg
+                          src={process.env.REACT_APP_IMG_URL + item?.icon}
+                          alt="UPS"
+                          className="object-cover"
                         />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_5941_98349">
-                          <rect width="18" height="18" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
+                      </div>
 
-                  <div className="text-sm font-normal text-white lg:text-base 2xl:text-lg">
-                    Tối ưu hoá dòng tiền
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="relative size-4 xl:size-[18px]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                    >
-                      <g clipPath="url(#clip0_5941_98349)">
-                        <path
-                          d="M6.7498 12.1492L3.5998 8.99922L2.5498 10.0492L6.7498 14.2492L15.7498 5.24922L14.6998 4.19922L6.7498 12.1492Z"
-                          fill="#E8D193"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_5941_98349">
-                          <rect width="18" height="18" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-
-                  <div className="text-sm font-normal text-white lg:text-base 2xl:text-lg">
-                    Chiến lược đầu tư linh hoạt
-                  </div>
-                </div>
+                      <div className="text-sm font-normal text-white lg:text-base 2xl:text-lg">
+                        {item?.title}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

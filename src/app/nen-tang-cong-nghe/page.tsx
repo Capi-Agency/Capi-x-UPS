@@ -12,15 +12,33 @@ import React from 'react';
 type Props = {};
 
 const TechnologyPlatform = async (props: Props) => {
+  const data = await fnGetPage('nen-tang-cong-nghe-AJ');
+  const dataTech = data?.data?.data?.pages_by_id?.raw_content;
+  console.log('🚀 ~ TechnologyPlatform ~ dataTech:', dataTech);
   return (
     <div>
-      <BannerTech />
-      <InvestmentPlatform />
-      <Performance />
-      <Transfer />
-      <ValueTech />
-      <AppTech />
-      <ReviewTech />
+      {dataTech &&
+        dataTech?.contents.map((datasection: any, index: number) => {
+          return (
+            <div key={index}>
+              {datasection.banner && <BannerTech data={datasection.banner} />}
+              {datasection.investment_platform && (
+                <InvestmentPlatform data={datasection.investment_platform} />
+              )}
+              {datasection.performance && (
+                <Performance data={datasection.performance} />
+              )}
+              {datasection.transfer && <Transfer data={datasection.transfer} />}
+              {datasection.value_tech && (
+                <ValueTech data={datasection.value_tech} />
+              )}
+              {datasection.app_tech && <AppTech data={datasection.app_tech} />}
+              {datasection.review_tech && (
+                <ReviewTech data={datasection.review_tech} />
+              )}
+            </div>
+          );
+        })}
     </div>
   );
 };

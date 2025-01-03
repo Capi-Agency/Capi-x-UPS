@@ -5,52 +5,12 @@ import 'swiper/css';
 import NextImg from '../common/next-img';
 import { cn } from '@/lib/utils';
 
-type Props = {};
+type Props = {
+  data: any;
+};
 
-const ReviewTech = (props: Props) => {
+const ReviewTech = ({ data }: Props) => {
   const swiperRef = useRef<any>(null);
-  const articles = [
-    {
-      author: 'Colin Lucido',
-      date: '26 Tháng 3, 2023 · 9 phút trước',
-      title: 'Ứng dụng tuyệt vời cho người mới',
-      description:
-        'Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này',
-      avatar: '/assets/image/avatar.jpg',
-    },
-    {
-      author: 'Colin Lucido',
-      date: '26 Tháng 3, 2023 · 9 phút trước',
-      title: 'Ứng dụng tuyệt vời cho người mới',
-      description:
-        'Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này',
-      avatar: '/assets/image/avatar.jpg',
-    },
-    {
-      author: 'Colin Lucido',
-      date: '26 Tháng 3, 2023 · 9 phút trước',
-      title: 'Ứng dụng tuyệt vời cho người mới',
-      description:
-        'Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này',
-      avatar: '/assets/image/avatar.jpg',
-    },
-    {
-      author: 'Colin Lucido',
-      date: '26 Tháng 3, 2023 · 9 phút trước',
-      title: 'Ứng dụng tuyệt vời cho người mới',
-      description:
-        'Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này',
-      avatar: '/assets/image/avatar.jpg',
-    },
-    {
-      author: 'Colin Lucido',
-      date: '26 Tháng 3, 2023 · 9 phút trước',
-      title: 'Ứng dụng tuyệt vời cho người mới',
-      description:
-        'Chỉ mất 5 phút tải nhưng tôi thực sự ấn tượng về trải nghiệm sử dụng này',
-      avatar: '/assets/image/avatar.jpg',
-    },
-  ];
   return (
     <div className="mt-10 lg:mt-[60px] xl:mt-20 2xl:mt-[100px] 3xl:mt-[160px]">
       <div className="custom-container 3xl:!max-w-[calc(1280px+48px)]">
@@ -61,7 +21,7 @@ const ReviewTech = (props: Props) => {
             data-aos-duration="700"
             className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[30px]"
           >
-            Đánh giá từ khách hàng
+            {data?.title}
           </h4>
           <div
             data-aos="fade-up"
@@ -139,7 +99,7 @@ const ReviewTech = (props: Props) => {
           }}
           className="mySwiper !px-6 lg:!px-0"
         >
-          {articles.map((article, index) => {
+          {data?.item_list?.map(({ item }: any, index: any) => {
             const delay = ((index % 3) + 1) * 200;
             return (
               <SwiperSlide key={index}>
@@ -152,8 +112,8 @@ const ReviewTech = (props: Props) => {
                   <div className="flex items-center gap-4">
                     <div className="relative h-[56px] w-[56px] rounded-full">
                       <NextImg
-                        src={article.avatar}
-                        alt={article.author}
+                        src={process.env.REACT_APP_IMG_URL + item.avatar}
+                        alt="UPS"
                         objectFit="cover"
                         className="rounded-full"
                       />
@@ -163,19 +123,19 @@ const ReviewTech = (props: Props) => {
                         Viết bởi
                       </span>
                       <span className="text-[14px] font-bold leading-normal text-[#111013] lg:text-base lg2:text-[22px]">
-                        {article.author}
+                        {item.author}
                       </span>
                     </div>
                   </div>
                   <div className="mt-[60px]">
                     <span className="text-[14px] font-medium leading-[22px] tracking-[0.14px] text-[#161519] lg:leading-[16px]">
-                      {article.date}
+                      {item.date}
                     </span>
                     <p className="my-2 text-[20px] font-bold text-[#000] lg:my-4 lg:text-[24px] lg2:text-[30px] 2xl:text-[32px] 2xl:leading-[40px]">
-                      {article.title}
+                      {item.title}
                     </p>
                     <p className="text-[14px] font-medium leading-[22px] text-[#111013] lg:text-base lg:leading-[28px] lg2:text-[18px]">
-                      {article.description}
+                      {item.description}
                     </p>
                     <div className="mt-2 flex items-center gap-2 lg:mt-4">
                       <button className="rounded-[8px] bg-[rgba(144,145,156,0.15)] px-2 py-[5px] text-[14px] font-medium leading-normal text-[#111013]">

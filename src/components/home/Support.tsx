@@ -27,8 +27,8 @@ const Support = ({ data }: Props) => {
         <div className="flex flex-col gap-6 md:flex-row lg:gap-10 lg2:gap-20 xl:grid xl:grid-cols-[600px,auto]">
           <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
             <h3 className="text-[20px] font-bold text-[#111013] lg:text-[24px] lg2:text-[40px] lg2:leading-[46px] 2xl:text-[44px] 2xl:leading-[52px] 3xl:text-[48px] 3xl:leading-[56px]">
-              <span className="text-[#01C159]">{data?.title[0]?.title}</span>{' '}
-              {data?.title[1].title}
+              <span className="text-[#01C159]">{data?.title}</span>{' '}
+              {data?.title_highlight}
             </h3>
             <p className="mt-3 text-[14px] font-medium leading-[22px] text-[#000] lg:mt-3 lg:text-base lg:leading-[28px] lg2:mt-8 lg2:text-[18px]">
               {data?.sub_title}
